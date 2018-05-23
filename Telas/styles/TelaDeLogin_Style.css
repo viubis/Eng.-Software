@@ -52,7 +52,7 @@
 }
 body
 {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Axure Handwriting', sans-serif;
     font-size: 14px;
     font-weight: 400;
     background: #FFFFFF;
@@ -73,7 +73,7 @@ ul
 }
 p
 {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Axure Handwriting', sans-serif;
     font-size: 14px;
     line-height: 1.7;
     font-weight: 400;
@@ -130,7 +130,7 @@ h4{font-size: 18px;}
 h5{font-size: 14px;}
 h1, h2, h3, h4, h5, h6
 {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Axure Handwriting', sans-serif;
     font-weight: 500;
     -webkit-font-smoothing: antialiased;
     -webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -517,12 +517,12 @@ section
 }
 
 .logo_icon{
-    margin: 0px 20px 0px -190px;
+    margin: 0px 20px 0px -290px;
     display: block;
     width: 1800px;
     height: 150px;
     background: #000000;
-    padding: 10px 50px 20px 189px;
+    padding: 10px 80px 20px 287px;
     /*border-bottom: 50px;*/
 
 }
@@ -3582,23 +3582,24 @@ select option
 }
 
 .imgLogin{
-    margin: -140px 0px 0px -200px;
+    margin: -100px 0px 0px -200px;
     display: block;
     width: 1800px;
     height: 150px;
     padding: 1px 50px 20px 189px;
     /*border-bottom: 50px;*/
+
 }
 
 .letraLogin h3{
     /*text-align: center;*/
-    /*font-family: 'Rubik', sans-serif;*/
+    font-family: 'Axure Handwriting', sans-serif;
     /*font-size: 8px;*/
     font-size: 25px;
     font-weight: 300;
     line-height: 56px;
-    padding: 1px 10px 110px 70px;
-    margin: -135px 0px 0px 0px;
+    padding: 1px 10px 110px 80px;
+    margin: -145px 0px 0px 0px;
     color: #000;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
@@ -3611,21 +3612,14 @@ select option
 /*Bloquinho do form*/
 .login-clean form {
     max-width:400px;
-    max-height: 1000px;
+    max-height: 400px;
     width:90%;
-    margin: 100px 100px 100px 100px;
-    background-color:#ffcd00;
+    margin: 100px 100px 100px 190px;
+    /*background-color:#f1f7fc;*/
     padding:50px;
-    border-radius:2px;
+    /*border-radius:2px;*/
     color:#505e6c;
-    box-shadow:1px 1px 5px rgba(0,0,0,0.1);
-}
-
-.login-clean .illustration {
-    text-align:center;
-    padding:0 0 20px;
-    font-size:100px;
-    color:rgb(244,71,107);
+    /*box-shadow:1px 1px 5px rgba(0,0,0,0.1);*/
 }
 
 /*Caixa de texto de email e senha*/
@@ -3639,18 +3633,20 @@ select option
     outline:none;
     color:inherit;
     text-indent:8px;
+    margin-top: -40px;
+    margin-bottom: 70px;
     height:42px;
     width: 300px;
 }
 
 .login-clean form .btn-primary {
-    background:#f4476b;
+    background: #08c8b0;
     border:none;
     border-radius:4px;
-    padding:11px;
+    padding:5px;
     text-align: center;
     box-shadow:none;
-    margin: 26px 100px 100px 100px;
+    margin: -26px 100px 100px 100px;
     text-shadow:none;
     height: 40px;
     width: 100px;
@@ -3658,7 +3654,7 @@ select option
 }
 
 .login-clean form .btn-primary:hover, .login-clean form .btn-primary:active {
-    background:#eb3b60;
+    background:#ffcd00;
 }
 
 .login-clean form .btn-primary:active {
@@ -3669,6 +3665,7 @@ select option
     display:block;
     text-align:center;
     font-size:13px;
+    margin-top: -30px;
     color:#6f7a85;
     opacity:0.9;
     text-decoration:none;
@@ -3711,6 +3708,134 @@ element.style {
     --breakpoint-xl:1200px;
     --font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     --font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+html {
+    font-family:sans-serif;
+    line-height:1.15;
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
+    -ms-overflow-style:scrollbar;
+    -webkit-tap-highlight-color:transparent;
+}
+
+.login-clean-direita {
+    background:#f1f7fc;
+    padding:40px;
+}
+
+.login-clean-direita h2{
+    text-align: center;
+}
+
+.imgLogin-direita img{
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.imgLogin-direita{
+    margin: -790px 0px 0px -200px;
+    display: block;
+    width: 1800px;
+    height: 150px;
+    padding: 1px 50px 20px 189px;
+    /*border-bottom: 50px;*/
+
+}
+
+.letraLogin-direita h3{
+    /*text-align: center;*/
+    font-family: 'Axure Handwriting', sans-serif;
+    /*font-size: 8px;*/
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 56px;
+    padding: 1px 10px 110px 80px;
+    margin: -145px 0px 0px 1px;
+    color: #000;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+
+}
+
+/*Bloquinho do form*/
+.login-clean-direita form {
+    max-width:400px;
+    max-height: 400px;
+    width:90%;
+    margin: 112px 100px 100px 900px;
+    /*background-color:#f1f7fc;*/
+    padding:50px;
+    /*border-radius:2px;*/
+    color:#505e6c;
+    /*box-shadow:1px 1px 5px rgba(0,0,0,0.1);*/
+}
+
+/*Caixa de texto de email e senha*/
+.login-clean-direita form .form-control {
+    background:#f7f9fc;
+    border:none;
+    text-align: left;
+    border-bottom:1px solid #dfe7f1;
+    border-radius:0;
+    box-shadow:none;
+    outline:none;
+    color:inherit;
+    text-indent:8px;
+    margin-top: -40px;
+    margin-bottom: 70px;
+    height:42px;
+    width: 300px;
+}
+
+.login-clean-direita form .btn-primary {
+    background: #08c8b0;
+    border:none;
+    border-radius:4px;
+    padding:5px;
+    text-align: center;
+    box-shadow:none;
+    margin: -26px 100px 100px 100px;
+    text-shadow:none;
+    height: 40px;
+    width: 100px;
+    outline:none !important;
+}
+
+.login-clean-direita form .btn-primary:hover, .login-clean form .btn-primary:active {
+    background:#ffcd00;
+}
+
+.login-clean-direita form .btn-primary:active {
+    transform:translateY(1px);
+}
+
+.login-clean-direita form .forgot {
+    display:block;
+    text-align:center;
+    font-size:13px;
+    margin-top: -30px;
+    color:#6f7a85;
+    opacity:0.9;
+    text-decoration:none;
+}
+
+.login-clean-direita form .forgot:hover, .login-clean form .forgot:active {
+    opacity:1;
+    text-decoration:none;
+}
+
+element.style {
+}
+
+tracinho.traco{
+    align-items: center;
+    width: 10px;
+    size: 20px;
+    color: black;
 }
 
 html {
