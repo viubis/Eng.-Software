@@ -483,8 +483,9 @@ section
 }
 .top_bar_user a
 {
+	font-family: 'Axure Handwriting', sans-serif; /*Modificado*/
 	font-size: 16px;
-	font-weight: 300;
+	font-weight: 600;
 	line-height: 56px;
 	color: #000;
 	-webkit-transition: all 200ms ease;
@@ -521,6 +522,7 @@ section
 }
 .logo_container
 {
+	/*background-color: #000000;*/
 	height: 175px;
 }
 .logo
@@ -820,8 +822,9 @@ select option
 }
 .cart_text a
 {
+	font-family: 'Axure Handwriting', sans-serif;
 	font-size: 18px;
-	font-weight: 400;
+	font-weight: 600;
 	color: #000000;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -954,9 +957,10 @@ select option
 }
 .cat_menu li a
 {
+	/*font-family: 'Axure Handwriting', sans-serif;*/
 	display: block;
 	position: relative;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 300;
 	color: #000000;
 	line-height: 46px;
