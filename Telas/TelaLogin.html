@@ -1,143 +1,189 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <title>MineApple</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="OneTech shop project">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-    <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-    <link rel="stylesheet" type="text/css" href="plugins/slick-1.8.0/slick.css">
-    <link rel="stylesheet" type="text/css" href="styles/TelaDeLogin_Style.css">
-    <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+<html lang="en">
 
-</head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MineApple</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+<link rel="stylesheet" href="styles/bootstrap4/bootstrap.min.css">
+<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+<link rel="stylesheet" href="styles/tela_de_login_style.css">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
+<!--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
+<![endif]-->
+
+<!-- Favicon and touch icons -->
+<link rel="shortcut icon" href="images/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icon-144.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icon-114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icon-72.png">
+<link rel="apple-touch-icon-precomposed" href="images/icon-16.png">
+
+
+<head></head>
 
 <body>
-
-<div class="super_container">
-
-    <!-- Header -->
-
-    <header class="header">
-
-        <!--&lt;!&ndash; Top Bar &ndash;&gt;-->
-
-        <!--<div class="top_bar">-->
-            <!--<div class="container">-->
-                <!--<div class="row">-->
-                    <!--<div class="col d-flex flex-row">-->
-                        <!--<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="images/phone.png" alt=""></div>+55 075 1234-5678</div>-->
-                        <!--<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="images/mail.png" alt=""></div><a href="mailto:mineapple@gmail.com">mineapple@gmail.com</a></div>-->
-                        <!--<div class="top_bar_content ml-auto">-->
-                            <!--<div class="top_bar_user">-->
-                                <!--<div class="user_icon"><img src="images/iconUser.png" alt=""></div>-->
-                                <!--<div><a href="#">Login</a></div>-->
-                                <!--<div><a href="#">Cadastre-se</a></div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-
-        <!-- Header Main -->
-
-        <div class="header_main">
-            <div class="container">
-                <div class="row">
-
-                    <!-- Logo -->
-                    <div class="col-lg-2 col-sm-3 col-3 order-1">
-                        <div class="logo_container">
-                            <div class = "logo_icon"><img src = "images/logoSite.png" alt=""></div>
-                        </div>
-                    </div>
-        </div>
-            </div>
-        </div>
-
-        <!-- Formulário de login -->
-
-
-
-        <div class="login-clean">
-            <form method="post">
-                <div class="nominho"><h3>Já é nosso cliente?</h3></div>
-                <div class="imgLogin"><img src="images/iconUser.png" alt="" ></div>
-                <div class="letraLogin"><h3>Acesse sua conta</h3></div>
-                <!--<hr size = 7>-->
-                <div class="form-group"><input type="email" name="email" placeholder="Email" class="form-control" /></div>
-                <div class="form-group"><input type="password" name="password" placeholder="Senha" class="form-control" /></div>
-                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Entrar</button>
-                </div><a href="#" class="forgot">Esqueceu sua senha?</a></form>
-
-                <aside>
-                    <div class="linha"><img src="images/linha.png" alt="" >
-                        <button class="botaofacebook" type="submit"><a href="#"><i class="fab fa-facebook-f"></i><h3>Acessar com o facebook</h3></a></button>
-                        <button class="botaogoogle" type="submit"><a href="#"><i class="fab fa-google-plus-g"></i><h3>Acessar com o Google+</h3></a></button>
-                    </div>
-                </aside>
-
-            <aside class="login-clean-direita">
-                <form method="post">
-                    <div class="nominho2"><h3>Novo aqui?</h3></div>
-                    <div class="imgLogin-direita"><img src="images/iconUser2.png" alt="" ></div>
-                    <div class="letraLogin-direita"><h3>Cadastre-se</h3></div>
-                    <div class="form-group"><input type="email" name="email" placeholder="Email" class="form-control" /></div>
-                    <div class="form-group"><input type="password" name="password" placeholder="Senha" class="form-control" /></div>
-                    <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Cadastrar</button></div>
-                    <a href="#" class="forgot">Esqueceu sua senha?</a></form>
-
-            </aside>
-
-        </div>
-
-    <!-- Copyright -->
-
-    <div class="copyright">
+<!-- Top content -->
+<div class="top-content">
+    <div class = "logo_icon"><img src = "images/logoSite.png" alt=""></div>
+    <div class="inner-bg">
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col-sm-8 col-sm-offset-2 text">
 
-                    <div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
-                        <div class="copyright_content"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart" aria-hidden="true"></i> pela <a href="#" target="_blank">Weiche Technologie</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    <!--<h1><strong>Bootstrap</strong> Login &amp; Register Forms</h1>-->
+                    <!--<div class="description">-->
+                    <!--<p>-->
+                    <!--This is a free responsive <strong>"login and register forms"</strong> template made with Bootstrap. -->
+                    <!--Download it on <a href="http://azmind.com" target="_blank"><strong>AZMIND</strong></a>, -->
+                    <!--customize and use it as you like!-->
+                    <!--</p>-->
+                    <!--</div>-->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+
+                    <div class="form-box">
+                        <div class="form-top">
+                            <div class="form-top-left">
+                                <h3>Já é nosso cliente?</h3>
+                                <p>Acesse sua conta</p>
+                            </div>
+                            <div class="form-top-right">
+                                <i class="fa fa-user"></i>
+                            </div>
                         </div>
-                        <div class="logos ml-sm-auto">
-                            <ul class="logos_list">
-                                <li><a href="#"><img src="images/logos_1.png" alt=""></a></li>
-                                <li><a href="#"><img src="images/logos_2.png" alt=""></a></li>
-                                <li><a href="#"><img src="images/logos_3.png" alt=""></a></li>
-                                <li><a href="#"><img src="images/logos_4.png" alt=""></a></li>
-                            </ul>
+                        <div class="form-bottom">
+                            <form role="form" action="" method="post" class="login-form">
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-email">Email</label>
+                                    <input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-password">Password</label>
+                                    <input type="password" name="form-password" placeholder="Senha..." class="form-password form-control" id="form-password">
+                                </div>
+                                <button type="submit" class="btn">Login</button>
+                            </form>
                         </div>
+                    </div>
+
+                    <div class="social-login">
+                        <h3>...ou entre com:</h3>
+                        <div class="social-login-buttons">
+                            <a class="btn btn-link-2" href="#">
+                                <i class="fa fa-facebook"></i> Facebook
+                            </a>
+                            <a class="btn btn-link-2" href="#">
+                                <i class="fa fa-google-plus"></i> Google +
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-1 middle-border"></div>
+                <div class="col-sm-1"></div>
+
+                <div class="col-sm-5">
+
+                    <div class="form-box">
+                        <div class="form-top">
+                            <div class="form-top-left">
+                                <h3>Novo aqui?</h3>
+                                <p>Cadastre-se</p>
+                            </div>
+                            <div class="form-top-right">
+                                <i class="fa fa-user-plus"></i>
+                            </div>
+                        </div>
+                        <div class="form-bottom">
+                            <form role="form" action="" method="post" class="registration-form">
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-email">Email</label>
+                                    <input type="text" name="form-email" placeholder="Email... " class="form-email form-control" id="form-email2" >
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-password">Password</label>
+                                    <input type="password" name="form-password" placeholder="Senha..." class="form-password form-control" id="form-password2">
+                                </div>
+                                <button type="submit" class="btn">Cadastrar</button>
+                            </form>
+                        </div>
+                        <div class="social-login">
+                            <h3>...ou cadastre-se com:</h3>
+                            <div class="social-login-buttons">
+                                <a class="btn btn-link-2" href="#">
+                                    <i class="fa fa-facebook"></i> Facebook
+                                </a>
+                                <a class="btn btn-link-2" href="#">
+                                    <i class="fa fa-google-plus"></i> Google +
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!--&lt;!&ndash; Footer &ndash;&gt;-->
+<!--<footer>-->
+<!--<div class="container">-->
+<!--<div class="row">-->
+<!---->
+<!--<div class="col-sm-8 col-sm-offset-2">-->
+<!--<div class="footer-border"></div>-->
+<!--<p>Made by Anli Zaimi at <a href="http://azmind.com" target="_blank"><strong>AZMIND</strong></a> -->
+<!--having a lot of fun. <i class="fa fa-smile-o"></i></p>-->
+<!--</div>-->
+<!---->
+<!--</div>-->
+<!--</div>-->
+<!--</footer>-->
+
+<!-- Copyright -->
+
+<div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
+                    <div class="copyright_content"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart" aria-hidden="true"></i> pela <a href="#" target="_blank">Weiche Technologie</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </header>
 </div>
 
-
+<!-- Javascript -->
+<!--<script src="assets/js/jquery-1.11.1.min.js"></script>-->
 <script src="js/jquery-3.3.1.min.js"></script>
-<script src="styles/bootstrap4/popper.js"></script>
 <script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/greensock/TweenMax.min.js"></script>
-<script src="plugins/greensock/TimelineMax.min.js"></script>
-<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="plugins/greensock/animation.gsap.min.js"></script>
-<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="plugins/slick-1.8.0/slick.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="js/custom.js"></script>
+<script src="js/jquery.backstretch.min.js"></script>
+<script src="js/script_tela_login.js"></script>
+
+<!--[if lt IE 10]>
+<script src="js/placeholder_tela_de_login.js"></script>
+<![endif]-->
+
 </body>
 
 </html>
