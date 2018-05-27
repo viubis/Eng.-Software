@@ -1,0 +1,3 @@
+Telas/
+.gitignore.txt
+README.md
