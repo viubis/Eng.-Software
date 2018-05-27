@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/bootstrap4/bootstrap.min.css">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
           type='text/css'>
-    <link rel="stylesheet" href="styles/cadastro_de_produtor_style.css">
+    <link rel="stylesheet" href="styles/formularios_style.css">
 
     <!-- Favicon and touch icons -->
     <link rel="shortcut icon" href="images/favicon.png">
@@ -54,44 +54,44 @@
                             </div>
                             <div class="form-bottom">
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-email">Email</label>
+                                    <label class="sr-only" for="email">Email</label>
                                     <input type="email" name="form-email" placeholder="Email..."
                                            class="form-first-name form-control" required id="email">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-senha">Senha</label>
+                                    <label class="sr-only" for="senha">Senha</label>
                                     <input type="password" minlength="8" name="form-senha" placeholder="Senha..."
                                            class="form-first-name form-control" required id="senha">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-confirmacao-senha">Confirmação de senha</label>
+                                    <label class="sr-only" for="confSenha">Confirmação de senha</label>
                                     <input type="password" minlength="8" name="form-confirmacao-senha" placeholder="Confirmação de senha..."
                                            class="form-first-name form-control"  data-match="#senha" required id="confSenha">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-razao-social">Razão social</label>
+                                    <label class="sr-only" for="razaoSocial">Razão social</label>
                                     <input type="text" name="form-razao-social" placeholder="Razão social..."
                                            class="form-first-name form-control" required id="razaoSocial">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-cnpj">CNPJ</label>
+                                    <label class="sr-only" for="cnpj">CNPJ</label>
                                     <input type="text" name="form-cnpj" placeholder="CNPJ..."
                                            class="form-last-name form-control" required id="cnpj">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-nome-fantasia">Nome fantasia</label>
+                                    <label class="sr-only" for="nomeFantasia">Nome fantasia</label>
                                     <input type="text" name="form-nome-fantasia" placeholder="Nome fantasia..."
                                            class="form-first-name form-control" required id="nomeFantasia">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-telefone">Telefone Comercial</label>
+                                    <label class="sr-only" for="telefoneComercial">Telefone Comercial</label>
                                     <input type="tel" name="form-telefone" placeholder="Telefone Comercial..."
                                            class="form-first-name form-control" required id="telefoneComercial">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-valor">Valor mínimo para frete grátis</label>
+                                    <label class="sr-only" for="valorMinimo">Valor mínimo para frete grátis</label>
                                     <input type="number" min="1" max="999" name="form-valor" placeholder="Valor mínimo para frete grátis..."
-                                           class="form-first-name form-control" id="valorMinimo">
+                                           class="form-first-name form-control" required id="valorMinimo">
                                 </div>
                                 <button type="button" class="btn btn-next">Próximo</button>
                             </div>
@@ -109,32 +109,32 @@
                             </div>
                             <div class="form-bottom">
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-cep">CEP</label>
+                                    <label class="sr-only" for="CEP">CEP</label>
                                     <input type="text" name="form-cep" placeholder="CEP"
                                            class="form-first-name form-control" required id="CEP">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-rua">Rua</label>
+                                    <label class="sr-only" for="Rua">Rua</label>
                                     <input type="text" name="form-rua" placeholder="Rua"
                                            class="form-first-name form-control" required id="Rua">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-numero">Número</label>
+                                    <label class="sr-only" for="Número">Número</label>
                                     <input type="number" min="1" name="form-numero" placeholder="Número"
                                            class="form-first-name form-control" id="Número">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-complemento">Complemento</label>
+                                    <label class="sr-only" for="Complemento">Complemento</label>
                                     <input type="text" name="form-complemento" placeholder="Complemento"
                                            class="form-first-name form-control" id="Complemento">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-estado">Estado</label>
+                                    <label class="sr-only" for="estado">Estado</label>
                                     <input type="text" name="form-estado" placeholder="Estado"
                                            class="form-first-name form-control" id="estado">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-cidade">Cidade</label>
+                                    <label class="sr-only" for="cidade">Cidade</label>
                                     <input type="text" name="form-cidade" placeholder="Cidade"
                                            class="form-first-name form-control" id="cidade">
                                 </div>
@@ -155,17 +155,17 @@
                             </div>
                             <div class="form-bottom">
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-id-banco">ID do banco</label>
+                                    <label class="sr-only" for="idBanco">ID do banco</label>
                                     <input type="text" name="form-id-banco" placeholder="ID do banco"
                                            class="form-facebook form-control" required id="idBanco">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-numero-conta">Número da conta</label>
+                                    <label class="sr-only" for="numeroConta">Número da conta</label>
                                     <input type="text" name="form-numero-conta" placeholder="Número da conta"
                                            class="form-facebook form-control" required id="numeroConta">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-agencia">Agência</label>
+                                    <label class="sr-only" for="agencia">Agência</label>
                                     <input type="text" name="form-agencia" placeholder="Agência"
                                            class="form-facebook form-control" required id="agencia">
                                 </div>
@@ -214,7 +214,6 @@
 <script src="js/retina-1.1.0.min.js"></script>
 <script src="js/script_tela_cadastro_produtor.js"></script>
 <script src="js/validator.min.js"></script>
-
 <!--[if lt IE 10]>
 <script src="js/placeholder_tela_cadastro_produtor.js"></script>
 <![endif]-->
