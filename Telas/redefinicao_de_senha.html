@@ -40,7 +40,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-6 offset-lg-3 form-box">
-                    <form role="form" action="" method="post" class="registration-form">
+                    <form role="form" action="" method="post" data-toggle="validator" class="registration-form">
 
                         <fieldset>
                             <div class="form-top">
@@ -53,19 +53,19 @@
                             </div>
                             <div class="form-bottom">
                                 <div class="form-group">
-                                    <label class="sr-only" for="senha">Razão social</label>
+                                    <label class="sr-only" for="senhaAtual">Senha Atual</label>
                                     <input type="password" name="senhaAtual" placeholder="Senha atual..."
-                                           class="form-first-name form-control" id="senha">
+                                           class="form-first-name form-control" required id="senha">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="senha">Razão social</label>
-                                    <input type="password" name="Novasenha" placeholder="Nova senha..."
-                                           class="form-first-name form-control" id="senhaN">
+                                    <label class="sr-only" for="senhaNova">Nova Senha</label>
+                                    <input type="password" name="senhaNova" placeholder="Nova senha..."
+                                           class="form-first-name form-control" required id="senhaNova">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="senha">Razão social</label>
+                                    <label class="sr-only" for="Confsenha">Confirmação da Senha</label>
                                     <input type="password" name="Confsenha" placeholder="Confirmação da senha..."
-                                           class="form-first-name form-control" id="senhaConf">
+                                           class="form-first-name form-control" required data-match="#senhaNova" id="senhaConf">
                                 </div>
                                 <button type="submit" class="btn">Alterar</button>
                             </div>
@@ -103,6 +103,7 @@
 <script src="js/jquery.backstretch.min.js"></script>
 <script src="js/retina-1.1.0.min.js"></script>
 <script src="js/script_tela_cadastro_produtor.js"></script>
+<script src="js/validator.min.js"></script>
 
 <!--[if lt IE 10]>
 <script src="js/placeholder_tela_cadastro_produtor.js"></script>
