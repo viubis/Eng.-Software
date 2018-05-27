@@ -147,7 +147,7 @@ h6::selection
 }
 .form-control
 {
-    color: #db5246;
+    color: #8f8f8f;
 }
 section
 {
@@ -1247,7 +1247,7 @@ select option
 .banner_price
 {
     font-size: 30px;
-    color: #df3b3b;
+    color: #8f8f8f;
     margin-top: 87px;
 }
 .banner_price span
@@ -1401,7 +1401,7 @@ select option
 {
     font-size: 24px;
     font-weight: 500;
-    color: #df3b3b;
+    color: #8f8f8f;
 }
 .available
 {
@@ -1545,7 +1545,7 @@ select option
 }
 .deals_slider_nav:active i
 {
-    color: #df3b3b;
+    color: #8f8f8f;
 }
 .deals_slider_prev
 {
@@ -1699,7 +1699,7 @@ select option
 }
 .product_price.discount
 {
-    color: #df3b3b;
+    color: #8f8f8f;
 }
 .product_price span
 {
@@ -1942,7 +1942,7 @@ select option
 }
 .product_fav.active i
 {
-    color: red;
+    color: #8f8f8f;
 }
 .product_item:hover .product_fav
 {
@@ -1991,7 +1991,7 @@ select option
 .product_discount
 {
     display: none;
-    background: #df3b3b;
+    background: #8f8f8f;
     visibility: hidden;
     opacity: 0;
 }
@@ -2471,7 +2471,7 @@ select option
 .arrivals_single_marks .product_discount
 {
     display: block;
-    background: #df3b3b;
+    background: #8f8f8f;
     visibility: visible;
     opacity: 1;
 }
@@ -2519,7 +2519,7 @@ select option
 }
 .product_fav.active i
 {
-    color: red;
+    color: #8f8f8f;
 }
 
 /*********************************
@@ -2632,7 +2632,7 @@ select option
 }
 .bestsellers_item.discount .bestsellers_price
 {
-    color: #df3b3b;
+    color: #8f8f8f;
 }
 .bestsellers_price span
 {
@@ -2668,7 +2668,7 @@ select option
 .bestsellers_fav i
 {
     font-size: 13px;
-    color: #df3b3b;
+    color: #8f8f8f;
 }
 .bestsellers_marks
 {
@@ -2690,7 +2690,7 @@ select option
 }
 .bestsellers_discount
 {
-    background: #df3b3b;
+    background: #8f8f8f;
 }
 .bestsellers_item.discount .bestsellers_discount,
 .bestsellers_item.is_new .bestsellers_new
@@ -3001,7 +3001,7 @@ select option
 }
 .trends_fav.active i
 {
-    color: red;
+    color: #8f8f8f;
 }
 .trends_item:hover .trends_fav
 {
@@ -3028,7 +3028,7 @@ select option
 }
 .trends_discount
 {
-    background: #df3b3b;
+    background: #8f8f8f;
 }
 .trends_item.discount .trends_discount,
 .trends_item.is_new .trends_new
@@ -3248,7 +3248,7 @@ select option
 }
 .viewed_item.discount .viewed_price
 {
-    color: #df3b3b;
+    color: #8f8f8f;
 }
 .viewed_price span
 {
@@ -3307,7 +3307,7 @@ select option
 }
 .item_discount
 {
-    background: #df3b3b;
+    background: #8f8f8f;
     margin-right: 5px;
 }
 .item_new
