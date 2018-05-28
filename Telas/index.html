@@ -15,6 +15,13 @@
     <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
     <link rel="stylesheet" type="text/css" href="styles/responsive.css">
 
+
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icon-144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icon-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icon-72.png">
+    <link rel="apple-touch-icon-precomposed" href="images/icon-16.png">
+
 </head>
 
 <body>
@@ -52,7 +59,8 @@
                     <!-- Logo -->
                     <div class="col-lg-4 col-sm-3 col-3 order-1">
                         <div class="logo_container">
-                            <div class="logo_icon"><img src="images/logoSite.png" alt=""></div>
+                            <div class="logo_icon"><img src="images/logoSite.png" class="img-fluid" alt=""></div>
+
                         </div>
                     </div>
 
@@ -64,6 +72,7 @@
                                     <form action="#" class="header_search_form clearfix">
                                         <input type="search" required="required" class="header_search_input"
                                                placeholder="Pesquisar produtos...">
+
                                         <div class="custom_dropdown">
                                             <div class="custom_dropdown_list">
                                                 <span class="custom_dropdown_placeholder clc">Categorias</span>
@@ -78,6 +87,7 @@
                                                 </ul>
                                             </div>
                                         </div>
+
                                         <button type="submit" class="header_search_button trans_300" value="Submit"><img
                                                 src="images/search.png" alt=""></button>
                                     </form>
@@ -250,74 +260,26 @@
                             <div class="page_menu_search">
                                 <form action="#">
                                     <input type="search" required="required" class="page_menu_search_input"
-                                           placeholder="Search for products...">
+                                           placeholder="Pesquisar produtos...">
                                 </form>
                             </div>
                             <ul class="page_menu_nav">
-                                <li class="page_menu_item has-children">
-                                    <a href="#">Language<i class="fa fa-angle-down"></i></a>
-                                    <ul class="page_menu_selection">
-                                        <li><a href="#">English<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Italian<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Spanish<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Japanese<i class="fa fa-angle-down"></i></a></li>
-                                    </ul>
-                                </li>
-                                <li class="page_menu_item has-children">
-                                    <a href="#">Currency<i class="fa fa-angle-down"></i></a>
-                                    <ul class="page_menu_selection">
-                                        <li><a href="#">US Dollar<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">EUR Euro<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">GBP British Pound<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">JPY Japanese Yen<i class="fa fa-angle-down"></i></a></li>
-                                    </ul>
+
+                                <li class="page_menu_item">
+                                    <a href="#">Inicio<i class="fa fa-angle-down"></i></a>
                                 </li>
                                 <li class="page_menu_item">
-                                    <a href="#">Home<i class="fa fa-angle-down"></i></a>
+                                    <a href="#">Produtos<i class="fa fa-angle-down"></i></a>
                                 </li>
-                                <li class="page_menu_item has-children">
-                                    <a href="#">Super Deals<i class="fa fa-angle-down"></i></a>
-                                    <ul class="page_menu_selection">
-                                        <li><a href="#">Super Deals<i class="fa fa-angle-down"></i></a></li>
-                                        <li class="page_menu_item has-children">
-                                            <a href="#">Menu Item<i class="fa fa-angle-down"></i></a>
-                                            <ul class="page_menu_selection">
-                                                <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                                <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                                <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                                <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                    </ul>
+                                <li class="page_menu_item">
+                                    <a href="#">Sobre<i class="fa fa-angle-down"></i></a>
                                 </li>
-                                <li class="page_menu_item has-children">
-                                    <a href="#">Featured Brands<i class="fa fa-angle-down"></i></a>
-                                    <ul class="page_menu_selection">
-                                        <li><a href="#">Featured Brands<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                    </ul>
+                                <li class="page_menu_item">
+                                    <a href="#">Fale Conosco<i class="fa fa-angle-down"></i></a>
                                 </li>
-                                <li class="page_menu_item has-children">
-                                    <a href="#">Trending Styles<i class="fa fa-angle-down"></i></a>
-                                    <ul class="page_menu_selection">
-                                        <li><a href="#">Trending Styles<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                    </ul>
-                                </li>
-                                <li class="page_menu_item"><a href="blog.html">blog<i class="fa fa-angle-down"></i></a>
-                                </li>
-                                <li class="page_menu_item"><a href="fale_conosco.html">contact<i
-                                        class="fa fa-angle-down"></i></a></li>
                             </ul>
 
-                            <div class="menu_contact">
+                           <!-- <div class="menu_contact">
                                 <div class="menu_contact_item">
                                     <div class="menu_contact_icon"><img src="images/phone_white.png" alt=""></div>
                                     +38 068 005 3570
@@ -325,7 +287,7 @@
                                 <div class="menu_contact_item">
                                     <div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div>
                                     <a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
