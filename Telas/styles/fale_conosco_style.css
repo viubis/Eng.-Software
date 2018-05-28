@@ -35,7 +35,7 @@
 }
 
 body {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Axure Handwriting', sans-serif;
     font-size: 14px;
     font-weight: 400;
     background: #FFFFFF;
@@ -56,7 +56,7 @@ ul {
 }
 
 p {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Axure Handwriting', sans-serif;
     font-size: 14px;
     line-height: 1.7;
     font-weight: 400;
@@ -128,7 +128,7 @@ h5 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Axure Handwriting', sans-serif;
     font-weight: 500;
     -webkit-font-smoothing: antialiased;
     -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
@@ -803,7 +803,7 @@ select option {
     right: 0;
     width: 50px;
     height: 100%;
-    background: #0e8ce4;
+    background: #08c8b0;
     border: none;
     outline: none;
     cursor: pointer;
@@ -930,7 +930,7 @@ select option {
 .cat_menu_container {
     width: 293px;
     height: 100%;
-    background: #0e8ce4;
+    background: #08c8b0;
     padding-left: 35px;
     cursor: pointer;
     z-index: 1;
@@ -966,7 +966,7 @@ select option {
     font-size: 18px;
     font-weight: 400;
     color: #FFFFFF;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     margin-left: 20px;
 }
 
