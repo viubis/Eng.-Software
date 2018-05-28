@@ -143,8 +143,8 @@
 
                                             <div class="form-row">
                                                 <div class="col-md-12 mb-3">
-                                                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Categoria</label>
-                                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref2">
+                                                    <label class="my-1 mr-2" for="categorias">Categoria</label>
+                                                    <select class="custom-select my-1 mr-sm-2" id="categorias">
                                                         <option value="Cereais">Cereais</option>
                                                         <option value="Frutas">Frutas</option>
                                                         <option value="Legumes">Legumes</option>
@@ -158,31 +158,31 @@
 
                                             <div class="form-row">
                                                 <div class="col-md-6 mb-3">
-                                                    <label class="sr-only" for="form-first-name">Nome</label>
+                                                    <label class="sr-only" for="nome">Nome</label>
                                                     <input type="text" name="form-first-name" placeholder="Nome do Produto..."
                                                            class="form-first-name form-control" id="nome">
                                                 </div>
                                                 <div class="col-md-6 mb-3">
-                                                    <label class="sr-only" for="form-first-name">Quantidade produzida por dia</label>
-                                                    <input type="text" name="form-first-name" placeholder="Quantidade produzida por dia..."
+                                                    <label class="sr-only" for="qtd">Quantidade produzida por dia</label>
+                                                    <input type="number" min="1" max="999" name="form-first-name" placeholder="Quantidade produzida por dia..."
                                                            class="form-first-name form-control" id="qtd">
                                                 </div>
                                             </div>
 
                                             <div class="form-row">
                                                 <div class="col-md-6 mb-3">
-                                                    <label class="sr-only" for="form-first-name">Quantidade mínima por assinatura</label>
-                                                    <input type="text" name="form-first-name" placeholder="Quantidade mínima de produtos por assinatura..."
+                                                    <label class="sr-only" for="qtdmin">Quantidade mínima por assinatura</label>
+                                                    <input type="number" min="1" max="999" name="form-first-name" placeholder="Quantidade mínima de produtos por assinatura..."
                                                            class="form-first-name form-control" id="qtdmin">
                                                 </div>
                                                 <div class="col-md-4 mb-3">
-                                                    <label class="sr-only" for="form-first-name">Valor máximo de frete</label>
-                                                    <input type="text" name="form-first-name" placeholder="Valor máximo de frete..."
+                                                    <label class="sr-only" for="frete">Valor máximo de frete</label>
+                                                    <input type="number" min="1" max="999" name="form-first-name" placeholder="Valor máximo de frete..."
                                                            class="form-first-name form-control" id="frete">
                                                 </div>
                                                 <div class="col-md-2 mb-3">
-                                                    <label class="sr-only" for="form-first-name">Valor</label>
-                                                    <input type="text" name="form-first-name" placeholder="Valor..."
+                                                    <label class="sr-only" for="valor">Valor</label>
+                                                    <input type="number" min="1" max="999" name="form-first-name" placeholder="Valor..."
                                                            class="form-first-name form-control" id="valor">
                                                 </div>
                                             </div>
@@ -196,7 +196,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-2 offset-2 mb-3">
-                                                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Dias para entrega</label>
+                                                    <label class="my-1 mr-2" for="diasEntrega">Dias para entrega</label>
                                                 </div>
                                                 <div class="col-md-3 mb-3">
                                                     <div class="form-group">
@@ -253,8 +253,8 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div id="botao">
-                                                <button type="submit" class="btn">Cadastrar</button>
+                                            <div >
+                                                <button type="button" class="btn btn-next">Cadastrar</button>
                                             </div>
                                         </fieldset>
                                     </form>
