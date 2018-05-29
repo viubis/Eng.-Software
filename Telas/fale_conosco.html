@@ -25,8 +25,8 @@
 <div class="super_container">
 
     <!-- Header -->
-
     <header class="header">
+
 
         <!-- Top Bar -->
 
@@ -34,22 +34,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col d-flex flex-row">
-                        <div class="top_bar_contact_item">
-                            <div class="top_bar_icon">
-                                <i class="fa fa-mobile-alt fa-2x" style="padding-top: 10px; color: #08c8b0"></i></div>
-                                +55 075 1234 5678
-                        </div>
-                        <div class="top_bar_contact_item">
-                            <div class="top_bar_icon">
-                                <!--<img src="images/mail.png" alt=""></div>-->
-                            <i class="far fa-envelope fa-2x" style="padding-top: 10px; color: #08c8b0"></i></div>
-                            <a href="mailto:mineapple@gmail.com">mineapple@gmail.com</a></div>
-
                         <div class="top_bar_content ml-auto">
                             <div class="top_bar_user">
                                 <div class="user_icon"><img src="images/user.svg" alt=""></div>
-                                <div><a href="#">Register</a></div>
-                                <div><a href="#">Sign in</a></div>
+                                <div><a href="#">Cadastrar</a></div>
+                                <div><a href="#">Login</a></div>
                             </div>
                         </div>
                     </div>
@@ -64,20 +53,22 @@
                 <div class="row">
 
                     <!-- Logo -->
-                    <div class="col-lg-2 col-sm-3 col-3 order-1">
+                    <div class="col-lg-4 col-sm-3 col-3 order-1">
                         <div class="logo_container">
-                            <div class="logo"><a href="#">OneTech</a></div>
+                            <div class="logo_icon"><img src="images/logoSite.png" class="img-fluid" alt=""></div>
+
                         </div>
                     </div>
 
-                    <!-- Search -->
+                    <!-- Search  6 col 12 ord 2 order 3-->
                     <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
                         <div class="header_search">
                             <div class="header_search_content">
                                 <div class="header_search_form_container">
                                     <form action="#" class="header_search_form clearfix">
                                         <input type="search" required="required" class="header_search_input"
-                                               placeholder="Busque por produtos...">
+                                               placeholder="Pesquisar produtos...">
+
                                         <div class="custom_dropdown">
                                             <div class="custom_dropdown_list">
                                                 <span class="custom_dropdown_placeholder clc">Todas as categorias</span>
@@ -94,9 +85,9 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <button type="submit" class="header_search_button trans_300" value="Submit">
-                                            <i class="fas fa-search fa-2x" style="color: #FFFFFF"></i>
-                                        </button>
+
+                                        <button type="submit" class="header_search_button trans_300" value="Submit"><img
+                                                src="images/search.png" alt=""></button>
                                     </form>
                                 </div>
                             </div>
@@ -104,28 +95,30 @@
                     </div>
 
                     <!-- Wishlist -->
-                    <div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
+                    <div class="col-lg-2 col-9 order-lg-3 order-2 text-lg-left text-right">
                         <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
-                            <!--<div class="wishlist d-flex flex-row align-items-center justify-content-end">-->
-                                <!--<div class="wishlist_icon"><img src="images/heart.png" alt=""></div>-->
-                                <!--<div class="wishlist_content">-->
-                                    <!--<div class="wishlist_text"><a href="#">Wishlist</a></div>-->
-                                    <!--<div class="wishlist_count">115</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
+                            <!-- <div class="wishlist d-flex flex-row align-items-center justify-content-end">
+                                <div class="wishlist_icon"><img src="images/heart.png" alt=""></div>
+                                <div class="wishlist_content">
+                                    <div class="wishlist_text"><a href="#">Favoritos</a></div>
+                                    <div class="wishlist_count">0</div>
+                                </div>
+                            </div> -->
 
                             <!-- Cart -->
                             <div class="cart">
                                 <div class="cart_container d-flex flex-row align-items-center justify-content-end">
                                     <div class="cart_icon">
-                                        <!--<img src="images/cart.png" alt="">-->
-                                        <i class="fa fa-shopping-basket fa-3x"></i>
-                                        <div class="cart_count"><span>10</span></div>
+                                        <a href="#">
+                                            <i class="fa fa-shopping-basket fa-3x" style="color: #000000"></i>
+                                        </a>
+                                        <!--<img src="images/carrinho.png" alt="">-->
+                                        <div class="cart_count"><span>0</span></div>
                                     </div>
-                                    <div class="cart_content">
-                                        <!--<div class="cart_text"><a href="#">Cart</a></div>-->
-                                        <!--<div class="cart_price">R$35</div>-->
-                                    </div>
+                                    <!--<div class="cart_content">-->
+                                    <!--<div class="cart_text"><a href="#">Minha cesta</a></div>-->
+                                    <!--&lt;!&ndash; <div class="cart_price">0</div>  Modificado &ndash;&gt;-->
+                                    <!--</div>-->
                                 </div>
                             </div>
                         </div>
@@ -152,101 +145,72 @@
                                 </div>
 
                                 <ul class="cat_menu">
-                                    <li><a href="#">Cereais <i class="fas fa-chevron-right ml-auto"></i></a>
-                                    </li>
-                                    <li><a href="#">Frutas <i class="fas fa-chevron-right"></i></a></li>
-                                    <li><a href="#">Legumes <i class="fas fa-chevron-right"></i></a></li>
-                                    <!--<li class="hassubs">-->
-                                        <!--<a href="#">Legumes<i class="fas fa-chevron-right"></i></a>-->
-                                        <!--<ul>-->
-                                            <!--<li class="hassubs">-->
-                                                <!--<a href="#">Menu Item<i class="fas fa-chevron-right"></i></a>-->
-                                                <!--<ul>-->
-                                                    <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a>-->
-                                                    <!--</li>-->
-                                                    <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a>-->
-                                                    <!--</li>-->
-                                                    <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a>-->
-                                                    <!--</li>-->
-                                                    <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a>-->
-                                                    <!--</li>-->
-                                                <!--</ul>-->
-                                            <!--</li>-->
-                                            <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
-                                            <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
-                                            <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
-                                        <!--</ul>-->
-                                    <!--</li>-->
-                                    <li><a href="#">Leguminosas <i class="fas fa-chevron-right"></i></a></li>
-                                    <li><a href="#">Raízes <i class="fas fa-chevron-right"></i></a></li>
-                                    <li><a href="#">Tubérculos <i class="fas fa-chevron-right"></i></a></li>
-                                    <li><a href="#">Verduras <i class="fas fa-chevron-right"></i></a></li>
+                                    <li><a href="#">Cereais <i class="fas fa-chevron-right ml-auto"></i></a></li>
+                                    <li><a href="#">Frutas<i class="fas fa-chevron-right"></i></a></li>
+                                    <li><a href="#">Legumes<i class="fas fa-chevron-right"></i></a></li>
+                                    <li><a href="#">Leguminosas<i class="fas fa-chevron-right"></i></a></li>
+                                    <li><a href="#">Raízes<i class="fas fa-chevron-right"></i></a></li>
+                                    <li><a href="#">Tubérculos<i class="fas fa-chevron-right"></i></a></li>
+                                    <li><a href="#">Verduras<i class="fas fa-chevron-right"></i></a></li>
+
                                 </ul>
                             </div>
 
                             <!-- Main Nav Menu -->
 
-                            <!--<div class="main_nav_menu ml-auto">-->
-                                <!--<ul class="standard_dropdown main_nav_dropdown">-->
-                                    <!--<li><a href="index.html">Home<i class="fas fa-chevron-down"></i></a></li>-->
-                                    <!--<li class="hassubs">-->
-                                        <!--<a href="#">Super Deals<i class="fas fa-chevron-down"></i></a>-->
-                                        <!--<ul>-->
-                                            <!--<li>-->
-                                                <!--<a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>-->
-                                                <!--<ul>-->
-                                                    <!--<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>-->
-                                                    <!--</li>-->
-                                                    <!--<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>-->
-                                                    <!--</li>-->
-                                                    <!--<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>-->
-                                                    <!--</li>-->
-                                                <!--</ul>-->
-                                            <!--</li>-->
-                                            <!--<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>-->
-                                            <!--<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>-->
-                                            <!--<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>-->
-                                        <!--</ul>-->
-                                    <!--</li>-->
-                                    <!--<li class="hassubs">-->
-                                        <!--<a href="#">Featured Brands<i class="fas fa-chevron-down"></i></a>-->
-                                        <!--<ul>-->
-                                            <!--<li>-->
-                                                <!--<a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>-->
-                                                <!--<ul>-->
-                                                    <!--<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>-->
-                                                    <!--</li>-->
-                                                    <!--<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>-->
-                                                    <!--</li>-->
-                                                    <!--<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>-->
-                                                    <!--</li>-->
-                                                <!--</ul>-->
-                                            <!--</li>-->
-                                            <!--<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>-->
-                                            <!--<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>-->
-                                            <!--<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>-->
-                                        <!--</ul>-->
-                                    <!--</li>-->
-                                    <!--<li class="hassubs">-->
-                                        <!--<a href="#">Pages<i class="fas fa-chevron-down"></i></a>-->
-                                        <!--<ul>-->
-                                            <!--<li><a href="shop.html">Shop<i class="fas fa-chevron-down"></i></a></li>-->
-                                            <!--<li><a href="product.html">Product<i class="fas fa-chevron-down"></i></a>-->
-                                            <!--</li>-->
-                                            <!--<li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>-->
-                                            <!--<li><a href="blog_single.html">Blog Post<i class="fas fa-chevron-down"></i></a>-->
-                                            <!--</li>-->
-                                            <!--<li><a href="regular.html">Regular Post<i-->
-                                                    <!--class="fas fa-chevron-down"></i></a></li>-->
-                                            <!--<li><a href="cart.html">Cart<i class="fas fa-chevron-down"></i></a></li>-->
-                                            <!--<li><a href="fale_conosco.html">Contact<i class="fas fa-chevron-down"></i></a>-->
-                                            <!--</li>-->
-                                        <!--</ul>-->
-                                    <!--</li>-->
-                                    <!--<li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>-->
-                                    <!--<li><a href="fale_conosco.html">Contact<i class="fas fa-chevron-down"></i></a></li>-->
-                                <!--</ul>-->
-                            <!--</div>-->
+                            <div class="main_nav_menu ml-auto">
+                                <ul class="standard_dropdown main_nav_dropdown">
+                                    <li><a href="#">Inicio<i class="fas fa-chevron-down"></i></a></li>
+                                    <!--<li><a href="#">Produtos<i class="fas fa-chevron-down"></i></a></li>-->
+                                    <!-- <li class="hassubs">
+                                        <a href="#">Produtos<i class="fas fa-chevron-down"></i></a>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>
+                                                    <ul>
+                                                        <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                                        <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                                        <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                            </ul>
+                                        </li>
+                                         <li class="hassubs">
+                                            <a href="#">Destaques<i class="fas fa-chevron-down"></i></a>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>
+                                                    <ul>
+                                                        <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                                        <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                                        <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="hassubs">
+                                            <a href="#">Pages<i class="fas fa-chevron-down"></i></a>
+                                            <ul>
+                                                <li><a href="shop.html">Shop<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="product.html">Product<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="blog_single.html">Blog Post<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="regular.html">Regular Post<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="cart.html">Cart<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="fale_conosco.html">Contact<i class="fas fa-chevron-down"></i></a></li>
+                                            </ul>
+                                        </li> -->
+                                    <li><a href="blog.html">Sobre<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="fale_conosco.html">Fale Conosco<i class="fas fa-chevron-down"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
 
                             <!-- Menu Trigger -->
 
@@ -278,85 +242,34 @@
                             <div class="page_menu_search">
                                 <form action="#">
                                     <input type="search" required="required" class="page_menu_search_input"
-                                           placeholder="Search for products...">
+                                           placeholder="Pesquisar produtos...">
                                 </form>
                             </div>
                             <ul class="page_menu_nav">
-                                <li class="page_menu_item has-children">
-                                    <a href="#">Language<i class="fa fa-angle-down"></i></a>
-                                    <ul class="page_menu_selection">
-                                        <li><a href="#">English<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Italian<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Spanish<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Japanese<i class="fa fa-angle-down"></i></a></li>
-                                    </ul>
-                                </li>
-                                <li class="page_menu_item has-children">
-                                    <a href="#">Currency<i class="fa fa-angle-down"></i></a>
-                                    <ul class="page_menu_selection">
-                                        <li><a href="#">US Dollar<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">EUR Euro<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">GBP British Pound<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">JPY Japanese Yen<i class="fa fa-angle-down"></i></a></li>
-                                    </ul>
+
+                                <li class="page_menu_item">
+                                    <a href="#">Inicio<i class="fa fa-angle-down"></i></a>
                                 </li>
                                 <li class="page_menu_item">
-                                    <a href="index.html">Home<i class="fa fa-angle-down"></i></a>
+                                    <a href="#">Produtos<i class="fa fa-angle-down"></i></a>
                                 </li>
-                                <li class="page_menu_item has-children">
-                                    <a href="#">Super Deals<i class="fa fa-angle-down"></i></a>
-                                    <ul class="page_menu_selection">
-                                        <li><a href="#">Super Deals<i class="fa fa-angle-down"></i></a></li>
-                                        <li class="page_menu_item has-children">
-                                            <a href="#">Menu Item<i class="fa fa-angle-down"></i></a>
-                                            <ul class="page_menu_selection">
-                                                <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                                <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                                <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                                <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                    </ul>
+                                <li class="page_menu_item">
+                                    <a href="#">Sobre<i class="fa fa-angle-down"></i></a>
                                 </li>
-                                <li class="page_menu_item has-children">
-                                    <a href="#">Featured Brands<i class="fa fa-angle-down"></i></a>
-                                    <ul class="page_menu_selection">
-                                        <li><a href="#">Featured Brands<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                    </ul>
+                                <li class="page_menu_item">
+                                    <a href="#">Fale Conosco<i class="fa fa-angle-down"></i></a>
                                 </li>
-                                <li class="page_menu_item has-children">
-                                    <a href="#">Trending Styles<i class="fa fa-angle-down"></i></a>
-                                    <ul class="page_menu_selection">
-                                        <li><a href="#">Trending Styles<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                        <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                                    </ul>
-                                </li>
-                                <li class="page_menu_item"><a href="blog.html">blog<i class="fa fa-angle-down"></i></a>
-                                </li>
-                                <li class="page_menu_item"><a href="fale_conosco.html">contact<i
-                                        class="fa fa-angle-down"></i></a></li>
                             </ul>
 
-                            <div class="menu_contact">
-                                <div class="menu_contact_item">
-                                    <div class="menu_contact_icon">
-                                        <!--<img src="images/phone_white.png" alt="">-->
-                                        <i class="fa fa-mobile-alt fa-2x"></i>
-                                    </div>
-                                    +55 075 1234 5678
-                                </div>
-                                <div class="menu_contact_item">
-                                    <div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div>
-                                    <a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>
-                            </div>
+                            <!-- <div class="menu_contact">
+                                 <div class="menu_contact_item">
+                                     <div class="menu_contact_icon"><img src="images/phone_white.png" alt=""></div>
+                                     +38 068 005 3570
+                                 </div>
+                                 <div class="menu_contact_item">
+                                     <div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div>
+                                     <a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>
+                             </div>-->
                         </div>
                     </div>
                 </div>
@@ -394,10 +307,13 @@
                         <!-- Contact Item -->
                         <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
                             <!--<div class="contact_info_image"><img src="images/contact_3.png" alt=""></div>-->
-                            <div class="mapMarker"><i class="fa fa-map-marker-alt fa-3x" style="color: #08c8b0"></i></div>
+                            <div class="mapMarker"><i class="fa fa-map-marker-alt fa-3x" style="color: #08c8b0"></i>
+                            </div>
                             <div class="contact_info_content">
                                 <div class="contact_info_title">Endereço</div>
-                                <div class="contact_info_text">Rua Itamar de Carvalho, 271, Feira de Santana, Bahia, BR</div>
+                                <div class="contact_info_text">Rua Itamar de Carvalho, 271, Feira de Santana, Bahia,
+                                    BR
+                                </div>
                             </div>
                         </div>
 
@@ -419,9 +335,11 @@
                         <form action="#" id="contact_form">
                             <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
                                 <input type="text" id="contact_form_name" class="contact_form_name input_field"
-                                       placeholder="Seu nome" required="required" data-error="É obrigatório informar seu nome.">
+                                       placeholder="Seu nome" required="required"
+                                       data-error="É obrigatório informar seu nome.">
                                 <input type="email" id="contact_form_email" class="contact_form_email input_field"
-                                       placeholder="Seu email" required="required" data-error="É obrigatório informar seu email.">
+                                       placeholder="Seu email" required="required"
+                                       data-error="É obrigatório informar seu email.">
                                 <input type="tel" id="contact_form_phone" class="contact_form_phone input_field"
                                        placeholder="Seu número de telefone">
                             </div>
@@ -445,37 +363,37 @@
     <!-- Map -->
 
     <!--<div class="contact_map">-->
-        <!--<div id="google_map" class="google_map">-->
-            <!--<div class="map_container">-->
-                <!--<div id="map"></div>-->
-            <!--</div>-->
-        <!--</div>-->
+    <!--<div id="google_map" class="google_map">-->
+    <!--<div class="map_container">-->
+    <!--<div id="map"></div>-->
+    <!--</div>-->
+    <!--</div>-->
     <!--</div>-->
 
     <!-- Newsletter -->
 
     <!--<div class="newsletter">-->
-        <!--<div class="container">-->
-            <!--<div class="row">-->
-                <!--<div class="col">-->
-                    <!--<div class="newsletter_container d-flex flex-lg-row flex-column align-items-lg-center align-items-center justify-content-lg-start justify-content-center">-->
-                        <!--<div class="newsletter_title_container">-->
-                            <!--<div class="newsletter_icon"><img src="images/send.png" alt=""></div>-->
-                            <!--<div class="newsletter_title">Sign up for Newsletter</div>-->
-                            <!--<div class="newsletter_text"><p>...and receive %20 coupon for first shopping.</p></div>-->
-                        <!--</div>-->
-                        <!--<div class="newsletter_content clearfix">-->
-                            <!--<form action="#" class="newsletter_form">-->
-                                <!--<input type="email" class="newsletter_input" required="required"-->
-                                       <!--placeholder="Enter your email address">-->
-                                <!--<button class="newsletter_button">Subscribe</button>-->
-                            <!--</form>-->
-                            <!--<div class="newsletter_unsubscribe_link"><a href="#">unsubscribe</a></div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
+    <!--<div class="container">-->
+    <!--<div class="row">-->
+    <!--<div class="col">-->
+    <!--<div class="newsletter_container d-flex flex-lg-row flex-column align-items-lg-center align-items-center justify-content-lg-start justify-content-center">-->
+    <!--<div class="newsletter_title_container">-->
+    <!--<div class="newsletter_icon"><img src="images/send.png" alt=""></div>-->
+    <!--<div class="newsletter_title">Sign up for Newsletter</div>-->
+    <!--<div class="newsletter_text"><p>...and receive %20 coupon for first shopping.</p></div>-->
+    <!--</div>-->
+    <!--<div class="newsletter_content clearfix">-->
+    <!--<form action="#" class="newsletter_form">-->
+    <!--<input type="email" class="newsletter_input" required="required"-->
+    <!--placeholder="Enter your email address">-->
+    <!--<button class="newsletter_button">Subscribe</button>-->
+    <!--</form>-->
+    <!--<div class="newsletter_unsubscribe_link"><a href="#">unsubscribe</a></div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
     <!--</div>-->
 
     <!-- Footer -->
@@ -570,12 +488,12 @@
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </div>
                         <!--<div class="logos ml-sm-auto">-->
-                            <!--<ul class="logos_list">-->
-                                <!--<li><a href="#"><img src="images/logos_1.png" alt=""></a></li>-->
-                                <!--<li><a href="#"><img src="images/logos_2.png" alt=""></a></li>-->
-                                <!--<li><a href="#"><img src="images/logos_3.png" alt=""></a></li>-->
-                                <!--<li><a href="#"><img src="images/logos_4.png" alt=""></a></li>-->
-                            <!--</ul>-->
+                        <!--<ul class="logos_list">-->
+                        <!--<li><a href="#"><img src="images/logos_1.png" alt=""></a></li>-->
+                        <!--<li><a href="#"><img src="images/logos_2.png" alt=""></a></li>-->
+                        <!--<li><a href="#"><img src="images/logos_3.png" alt=""></a></li>-->
+                        <!--<li><a href="#"><img src="images/logos_4.png" alt=""></a></li>-->
+                        <!--</ul>-->
                         <!--</div>-->
                     </div>
                 </div>
