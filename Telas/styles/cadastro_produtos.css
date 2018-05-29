@@ -3788,6 +3788,7 @@ Form elements
 input[type="text"],
 input[type="password"],
 input[type="number"],
+input[type="tel"],
 textarea,
 textarea.form-control {
     height: 50px;
@@ -3824,6 +3825,7 @@ textarea.form-control {
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="number"]:focus,
+input[type="tel"]:focus,
 textarea:focus,
 textarea.form-control:focus {
     outline: 0;
@@ -3931,7 +3933,7 @@ footer {
 }
 
 label{
-    font-size: 15px;
+    font-size: 16px;
 }
 
 input{
@@ -3955,6 +3957,26 @@ input.form-control textarea{
     -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 
+}
+
+
+
+.form-check-label[type="lab1"]{
+    padding-right: 40px;
+    padding-left: 0px;
+
+}
+
+.form-row[type="row1"]{
+    text-align: left;
+    text-indent: 2px;
+    padding-left: 15px;
+    font-weight: 200;
+    padding-bottom: 50px;
 
 
 }
+.form-row[type="ent"]{
+    text-align: left;
+}
+
