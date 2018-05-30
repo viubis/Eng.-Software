@@ -22,6 +22,7 @@ a, a:hover, a:focus {
     transition: all .3s;
 }
 
+
 h1, h2 {
     margin-top: 10px;
     font-size: 38px;
@@ -206,6 +207,10 @@ ul.navbar-nav {
     padding-top: 40px;
     /*margin-left: 300px;*/
 }
+
+#logos_list {list-style: none}
+
+li{list-style:none}
 
 .form-top {
     overflow: hidden;
