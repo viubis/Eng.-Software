@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Mineapple shop project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!--<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="styles/bootstrap4.1/css/bootstrap.min.css">-->
     <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
@@ -163,9 +165,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
-                    <div class="contact_form_title">Meus dados</div>
+                    <div class="contact_form_title">Meus dados </div>
                     <form>
-                        <label class="my-0 mr-2" style="font-size: 20px">Dados da conta </label>
+                        <label class="my-0 mr-2" style="font-size: 20px">Dados da conta <i class="fa fa-at"></i> </label>
                         <div  class="pb-0" id="line"></div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
@@ -179,7 +181,7 @@
                         </div>
 
 
-                        <label class="my-0 mr-2" style="font-size: 20px">Dados pessoais </label>
+                        <label class="my-0 mr-2" style="font-size: 20px">Dados pessoais <i class="fa fa-user-circle"></i> </label>
                         <div  class="pb-0" id="line"></div>
                         <div class="form-group">
                             <label for="nomeFantasia">Nome fantasia</label>
@@ -203,11 +205,31 @@
 
 
 
-                        <label class="my-0 mr-2" style="font-size: 20px">Contas bancárias </label>
+                        <label class="my-0 mr-2" style="font-size: 20px">Contas bancárias <i class="fa fa-credit-card"></i></label>
                         <div  class="pb-0" id="line"></div>
                         <div class="form-row">
                             <div class="form-group  col-md-6">
-                                <input type="text" readonly class="form-control-plaintext" id="conta" value="Nome do banco">
+                                <p style="color: #000000; font-size: 15px">Nome do banco</p>
+                                <p style="color: #000000; font-size: 15px; margin-top: -15px">Número da conta</p>
+                            </div>
+                            <div class="form-group  col-md-3">
+                                <a href="#" >Excluir</a>
+                            </div>
+                            <div class="form-group  col-md-3">
+                                <a href="#" >Adicionar conta</a>
+                            </div>
+                        </div>
+
+
+                        <label class="my-0 mr-2" style="font-size: 20px">Endereço <i class="fas fa-map-marker-alt"></i></label>
+                        <div  class="pb-0" id="line"></div>
+                        <div class="form-row">
+                            <div class="form-group  col-md-6">
+                                <p style="color: #000000; font-size: 15px">Nome da rua, bairro, número</p>
+                                <p style="color: #000000; font-size: 15px; margin-top: -15px">Cep, estado, cidade</p>
+                            </div>
+                            <div class="form-group  col-md-6">
+                                <a href="#" >Alterar</a>
                             </div>
                         </div>
 
@@ -216,6 +238,7 @@
                 </div>
             </div>
         </div>
+
         <!--  <div class="inner-bg">-->
         <!--<div class="container">-->
         <!--<div class="row">-->
