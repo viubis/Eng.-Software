@@ -160,128 +160,183 @@
     <!--<section>-->
 
     <div class="top-content">
-        <!--  <div class="inner-bg">-->
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
-                    <div class="contact_form_container">
-                        <div class="contact_form_title">Meus dados</div>
-                        <form role="form" action="" method="post" class="registration-form">
-                            <fieldset>
-                                <label class="my-0 mr-2">Dados da conta </label>
-                                <div  class="pb-0" id="line"></div>
-                                <div class="form-bottom">
-                                    <div class="form-group">
-                                        <label class="my-0 mr-2">Email</label>
-                                        <input type="email" name="form-first-name" placeholder="Email"
-                                               class="form-first-name form-control" required id="email">
-                                        <!--<label class="my-0 mr-2">Modificar </label>-->
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="my-1 mr-2" for="senha">Senha</label>
-                                        <input type="password" min="8" name="form-first-name"
-                                               placeholder="Senha"
-                                               class="form-first-name form-control" id="senha">
-                                    </div>
-                                </div>
+                    <div class="contact_form_title">Meus dados</div>
+                    <form>
+                        <label class="my-0 mr-2" style="font-size: 20px">Dados da conta </label>
+                        <div  class="pb-0" id="line"></div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Senha</label>
+                                <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+                            </div>
+                        </div>
 
-                                <label class="my-0 mr-2">Dados pessoais </label>
-                                <div  class="pb-0" id="line"></div>
-                                <div class="form-bottom">
-                                    <div class="form-group">
-                                        <label class="my-0 mr-2">Nome fantasia</label>
-                                        <input type="text" name="form-first-name" placeholder="Nome fantasia"
-                                               class="form-first-name form-control" required id="Nomefantasia">
-                                        <!--<label class="my-0 mr-2">Modificar </label>-->
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="my-1 mr-2" for="razaoSocial">Razão social</label>
-                                        <input type="text" name="form-first-name"
-                                               placeholder="Razao Social"
-                                               class="form-first-name form-control" id="razaoSocial">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="my-1 mr-2" for="cnpj">CNPJ</label>
-                                        <input type="text" name="form-first-name"
-                                               placeholder="CNPJ"
-                                               class="form-first-name form-control" id="cnpj">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="my-1 mr-2" for="TelefoneComercial">Telefone Comercial</label>
-                                        <input type="tel" name="form-first-name"
-                                               placeholder="Telefone Comercial"
-                                               class="form-first-name form-control" id="TelefoneComercial">
-                                    </div>
-                                </div>
 
-                                <label class="my-0 mr-2">Contas bancárias </label>
-                                <div  class="pb-0" id="line"></div>
-                                <div class="form-bottom">
-                                    <!--<div class="form-group">-->
-                                        <!--<label class="my-0 mr-2">Nome fantasia</label>-->
-                                        <!--<input type="text" name="form-first-name" placeholder="Nome fantasia"-->
-                                               <!--class="form-first-name form-control" required id="Nomefantasia">-->
-                                        <!--&lt;!&ndash;<label class="my-0 mr-2">Modificar </label>&ndash;&gt;-->
-                                    <!--</div>-->
-                                    <!--<div class="form-group">-->
-                                        <!--<label class="my-1 mr-2" for="razaoSocial">Razão social</label>-->
-                                        <!--<input type="text" name="form-first-name"-->
-                                               <!--placeholder="Razao Social"-->
-                                               <!--class="form-first-name form-control" id="razaoSocial">-->
-                                    <!--</div>-->
-                                    <!--<div class="form-group">-->
-                                        <!--<label class="my-1 mr-2" for="cnpj">CNPJ</label>-->
-                                        <!--<input type="text" name="form-first-name"-->
-                                               <!--placeholder="CNPJ"-->
-                                               <!--class="form-first-name form-control" id="cnpj">-->
-                                    <!--</div>-->
-                                    <!--<div class="form-group">-->
-                                        <!--<label class="my-1 mr-2" for="TelefoneComercial">Telefone Comercial</label>-->
-                                        <!--<input type="tel" name="form-first-name"-->
-                                               <!--placeholder="Telefone Comercial"-->
-                                               <!--class="form-first-name form-control" id="TelefoneComercial">-->
-                                    <!--</div>-->
-                                </div>
+                        <label class="my-0 mr-2" style="font-size: 20px">Dados pessoais </label>
+                        <div  class="pb-0" id="line"></div>
+                        <div class="form-group">
+                            <label for="nomeFantasia">Nome fantasia</label>
+                            <input type="text" class="form-control" id="nomeFantasia" placeholder="Nome fantasia">
+                        </div>
+                        <div class="form-group">
+                            <label for="razaoSocial">Razão Social</label>
+                            <input type="text" class="form-control" id="razaoSocial"
+                                   placeholder="Razão social">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="cnpj">CNPJ</label>
+                                <input type="text" class="form-control" id="cnpj" placeholder="Cnpj">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="telefoneComercial">Telefone comercial</label>
+                                <input type="text" class="form-control" id="telefoneComercial" placeholder="Telefone Comercial">
+                            </div>
+                        </div>
 
-                                <label class="my-0 mr-2">Endereço</label>
-                                <div  class="pb-0" id="line"></div>
-                                <div class="form-bottom">
-                                    <!--<div class="form-group">-->
-                                        <!--<label class="my-0 mr-2">Nome fantasia</label>-->
-                                        <!--<input type="text" name="form-first-name" placeholder="Nome fantasia"-->
-                                               <!--class="form-first-name form-control" required id="Nomefantasia">-->
-                                        <!--&lt;!&ndash;<label class="my-0 mr-2">Modificar </label>&ndash;&gt;-->
-                                    <!--</div>-->
-                                    <!--<div class="form-group">-->
-                                        <!--<label class="my-1 mr-2" for="razaoSocial">Razão social</label>-->
-                                        <!--<input type="text" name="form-first-name"-->
-                                               <!--placeholder="Razao Social"-->
-                                               <!--class="form-first-name form-control" id="razaoSocial">-->
-                                    <!--</div>-->
-                                    <!--<div class="form-group">-->
-                                        <!--<label class="my-1 mr-2" for="cnpj">CNPJ</label>-->
-                                        <!--<input type="text" name="form-first-name"-->
-                                               <!--placeholder="CNPJ"-->
-                                               <!--class="form-first-name form-control" id="cnpj">-->
-                                    <!--</div>-->
-                                    <!--<div class="form-group">-->
-                                        <!--<label class="my-1 mr-2" for="TelefoneComercial">Telefone Comercial</label>-->
-                                        <!--<input type="tel" name="form-first-name"-->
-                                               <!--placeholder="Telefone Comercial"-->
-                                               <!--class="form-first-name form-control" id="TelefoneComercial">-->
-                                    <!--</div>-->
-                                </div>
 
-                                <!--<div>-->
-                                    <!--<button type="button" class="btn btn-next">Salvar</button>-->
-                                <!--</div>-->
-                            </fieldset>
-                        </form>
-                    </div>
+
+                        <label class="my-0 mr-2" style="font-size: 20px">Contas bancárias </label>
+                        <div  class="pb-0" id="line"></div>
+                        <div class="form-row">
+                            <div class="form-group  col-md-6">
+                                <input type="text" readonly class="form-control-plaintext" id="conta" value="Nome do banco">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                    </form>
                 </div>
             </div>
         </div>
-        <!-- </div>-->
+        <!--  <div class="inner-bg">-->
+        <!--<div class="container">-->
+        <!--<div class="row">-->
+        <!--<div class="col-lg-10 offset-lg-1">-->
+        <!--<div class="contact_form_container">-->
+        <!--<div class="contact_form_title">Meus dados</div>-->
+        <!--<form role="form" action="" method="post" class="registration-form">-->
+        <!--<fieldset>-->
+        <!--<label class="my-0 mr-2">Dados da conta </label>-->
+        <!--<div  class="pb-0" id="line"></div>-->
+        <!--<div class="form-bottom">-->
+        <!--<div class="form-group">-->
+        <!--<label class="my-0 mr-2">Email</label>-->
+        <!--<input type="email" name="form-first-name" placeholder="Email"-->
+        <!--class="form-first-name form-control" required id="email">-->
+        <!--&lt;!&ndash;<label class="my-0 mr-2">Modificar </label>&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div class="form-group">-->
+        <!--<label class="my-1 mr-2" for="senha">Senha</label>-->
+        <!--<input type="password" min="8" name="form-first-name"-->
+        <!--placeholder="Senha"-->
+        <!--class="form-first-name form-control" id="senha">-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <!--<label class="my-0 mr-2">Dados pessoais </label>-->
+        <!--<div  class="pb-0" id="line"></div>-->
+        <!--<div class="form-bottom">-->
+        <!--<div class="form-group">-->
+        <!--<label class="my-0 mr-2">Nome fantasia</label>-->
+        <!--<input type="text" name="form-first-name" placeholder="Nome fantasia"-->
+        <!--class="form-first-name form-control" required id="Nomefantasia">-->
+        <!--&lt;!&ndash;<label class="my-0 mr-2">Modificar </label>&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div class="form-group">-->
+        <!--<label class="my-1 mr-2" for="razaoSocial">Razão social</label>-->
+        <!--<input type="text" name="form-first-name"-->
+        <!--placeholder="Razao Social"-->
+        <!--class="form-first-name form-control" id="razaoSocial">-->
+        <!--</div>-->
+        <!--<div class="form-group">-->
+        <!--<label class="my-1 mr-2" for="cnpj">CNPJ</label>-->
+        <!--<input type="text" name="form-first-name"-->
+        <!--placeholder="CNPJ"-->
+        <!--class="form-first-name form-control" id="cnpj">-->
+        <!--</div>-->
+        <!--<div class="form-group">-->
+        <!--<label class="my-1 mr-2" for="TelefoneComercial">Telefone Comercial</label>-->
+        <!--<input type="tel" name="form-first-name"-->
+        <!--placeholder="Telefone Comercial"-->
+        <!--class="form-first-name form-control" id="TelefoneComercial">-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <!--<label class="my-0 mr-2">Contas bancárias </label>-->
+        <!--<div  class="pb-0" id="line"></div>-->
+        <!--<div class="form-bottom">-->
+        <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+        <!--&lt;!&ndash;<label class="my-0 mr-2">Nome fantasia</label>&ndash;&gt;-->
+        <!--&lt;!&ndash;<input type="text" name="form-first-name" placeholder="Nome fantasia"&ndash;&gt;-->
+        <!--&lt;!&ndash;class="form-first-name form-control" required id="Nomefantasia">&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash;<label class="my-0 mr-2">Modificar </label>&ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+        <!--&lt;!&ndash;<label class="my-1 mr-2" for="razaoSocial">Razão social</label>&ndash;&gt;-->
+        <!--&lt;!&ndash;<input type="text" name="form-first-name"&ndash;&gt;-->
+        <!--&lt;!&ndash;placeholder="Razao Social"&ndash;&gt;-->
+        <!--&lt;!&ndash;class="form-first-name form-control" id="razaoSocial">&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+        <!--&lt;!&ndash;<label class="my-1 mr-2" for="cnpj">CNPJ</label>&ndash;&gt;-->
+        <!--&lt;!&ndash;<input type="text" name="form-first-name"&ndash;&gt;-->
+        <!--&lt;!&ndash;placeholder="CNPJ"&ndash;&gt;-->
+        <!--&lt;!&ndash;class="form-first-name form-control" id="cnpj">&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+        <!--&lt;!&ndash;<label class="my-1 mr-2" for="TelefoneComercial">Telefone Comercial</label>&ndash;&gt;-->
+        <!--&lt;!&ndash;<input type="tel" name="form-first-name"&ndash;&gt;-->
+        <!--&lt;!&ndash;placeholder="Telefone Comercial"&ndash;&gt;-->
+        <!--&lt;!&ndash;class="form-first-name form-control" id="TelefoneComercial">&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--</div>-->
+
+        <!--<label class="my-0 mr-2">Endereço</label>-->
+        <!--<div  class="pb-0" id="line"></div>-->
+        <!--<div class="form-bottom">-->
+        <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+        <!--&lt;!&ndash;<label class="my-0 mr-2">Nome fantasia</label>&ndash;&gt;-->
+        <!--&lt;!&ndash;<input type="text" name="form-first-name" placeholder="Nome fantasia"&ndash;&gt;-->
+        <!--&lt;!&ndash;class="form-first-name form-control" required id="Nomefantasia">&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash;<label class="my-0 mr-2">Modificar </label>&ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+        <!--&lt;!&ndash;<label class="my-1 mr-2" for="razaoSocial">Razão social</label>&ndash;&gt;-->
+        <!--&lt;!&ndash;<input type="text" name="form-first-name"&ndash;&gt;-->
+        <!--&lt;!&ndash;placeholder="Razao Social"&ndash;&gt;-->
+        <!--&lt;!&ndash;class="form-first-name form-control" id="razaoSocial">&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+        <!--&lt;!&ndash;<label class="my-1 mr-2" for="cnpj">CNPJ</label>&ndash;&gt;-->
+        <!--&lt;!&ndash;<input type="text" name="form-first-name"&ndash;&gt;-->
+        <!--&lt;!&ndash;placeholder="CNPJ"&ndash;&gt;-->
+        <!--&lt;!&ndash;class="form-first-name form-control" id="cnpj">&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+        <!--&lt;!&ndash;<label class="my-1 mr-2" for="TelefoneComercial">Telefone Comercial</label>&ndash;&gt;-->
+        <!--&lt;!&ndash;<input type="tel" name="form-first-name"&ndash;&gt;-->
+        <!--&lt;!&ndash;placeholder="Telefone Comercial"&ndash;&gt;-->
+        <!--&lt;!&ndash;class="form-first-name form-control" id="TelefoneComercial">&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash;<div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<button type="button" class="btn btn-next">Salvar</button>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--</fieldset>-->
+        <!--</form>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
     </div>
 
     <!--</section>-->
