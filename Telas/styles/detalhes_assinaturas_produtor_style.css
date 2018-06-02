@@ -3943,6 +3943,7 @@ footer {
 
 label{
     font-size: 16px;
+
 }
 
 input{
@@ -3973,6 +3974,7 @@ input.form-control textarea{
 .form-check-label[type="lab1"]{
     padding-right: 40px;
     padding-left: 0px;
+    font-size: 12px;
 
 }
 
@@ -3995,13 +3997,70 @@ input.form-control textarea{
 }
 
 .form-row#espac, .form-row.espac1{
-    padding-top: 50px;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 
 .form-row#imagem{
     align-content: center;
 }
 
+.form-row#espac2{
+    padding-left: 10px;
+
+
+}
+
 .text-center#imagem{
     padding-top: 40px;
 }
+
+.imagem{
+    padding-top: 2px;
+    padding-left: 10px;
+
+}
+
+.texto{
+    padding-top: 5px ;
+    padding-left: 10px;
+}
+
+
+.containerInfosProdutos{
+    width: 100%;
+    padding-left: 50px;
+    margin-left: 0px;
+    padding-top: 50px;
+}
+
+
+.subcontainerProduto1{
+
+    background-color: rgba(255,255,255,0.0);
+}
+
+.subcontainerProduto2{
+
+    background-color: rgba(255,255,255,0.0);
+}
+
+.row#backColor{
+    background-color: #fefefe;
+    padding-top: 20px;
+    box-shadow: 1px 2px 1px 2px #d7d7d7;
+}
+
+.endereco{
+    padding-top: 50px;
+    padding-left: 0px;
+
+}
+
+.detalhes{
+
+}
+
+
+
+
