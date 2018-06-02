@@ -165,6 +165,8 @@
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="contact_form_title">Minha reputação</div>
+                    <div  class="pb-0" id="line"></div>
+                    <div class="form-group">
                     <form>
                         <fieldset>
                            <!-- <div class="form-row">
@@ -185,149 +187,65 @@
 
                             <div class="form-row" id="espac2">
                                 <div class="form-group col-md-3">
-                                    <label for="nomeprod">Avaliação média com base nos clientes: </label>
-                                </div>
-
-                            </div>
-
-
-
-                            <!-- A imagem tem q ser um retorno do banco de dados --
-                            <div class="form-row" id="imagem">
-                                    <img src="images/imagemProduto.png" class="rounded float-left" alt="Responsive image">
-                            </div>-->
-                            <div class="text-center" id="imagem">
-                                <img src="images/imagemdoProduto.png" class="rounded" alt="Responsive image">
-                            </div>
-
-
-                            <div class="form-row" id="espac">
-                                <div class="form-group col-md-6">
-                                    <label for="nomeprod">Produto </label>
-                                    <input type="text" class="form-control" id="nomeprod" placeholder="Nome do produto">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="freq">Tipo de embalagem </label>
-                                    <input type="text" class="form-control" placeholder="Tipo de embalagem">
-                                </div>
-
-                            </div>
-
-
-                            <div class="form-row" id="espac1">
-                                <div class="form-group col-md-6">
-                                    <label for="freq">Frequência de entrega </label>
-                                    <input type="number" min="1" max="999" name="form-valor"
-                                               class="form-control" id="freq" placeholder="Frequência de entrega por semana">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="quant">Quantidade</label>
-                                    <input type="number" min="1" max="999" name="form-valor" class="form-control" id="quant" placeholder="Quantidade">
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <label for="quant">Valor</label>
-                                    <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name"
-                                           placeholder="Valor"
-                                           class="form-first-name form-control" id="valor">
-                                   <!-- <input type="number" min="1" max="999" name="form-valor" class="form-control" id="quant" placeholder="Quantidade">-->
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label for="quant">Frete</label>
-                                    <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name"
-                                           placeholder="Frete"
-                                           class="form-first-name form-control" id="frete">
-                                    <!-- <input type="number" min="1" max="999" name="form-valor" class="form-control" id="quant" placeholder="Quantidade">-->
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label for="quant">Valor Total</label>
-                                    <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name"
-                                           placeholder="Valor Total"
-                                           class="form-first-name form-control" id="valortot">
-                                    <!-- <input type="number" min="1" max="999" name="form-valor" class="form-control" id="quant" placeholder="Quantidade">-->
-                                </div>
-                            </div>
-
-                            <div class="form-row" type="ent">
-                                <div class="col-md-12 mb-3">
-                                    <label class="my-1 mr-2" for="diasEntrega">Dias de entrega</label>
-                                </div>
-                            </div>
-                            <div class="form-row" type="row1">
-                                <div class="col-md-12 mb-3">
-                                    <div class="form-group">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" value="" id="segunda"
-                                                   value="option1" required>
-                                            <label class="form-check-label" type="lab1" for="inlineCheckbox1">
-                                                Segunda-feira
-                                            </label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" value="" id="terca"
-                                                   value="option2" required>
-                                            <label class="form-check-label" type="lab1" for="inlineCheckbox1">
-                                                Terça-feira
-                                            </label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" value="" id="quarta"
-                                                   value="option3" required>
-                                            <label class="form-check-label" type="lab1" for="inlineCheckbox1">
-                                                Quarta-feira
-                                            </label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" value="" id="quinta"
-                                                   value="option4" required>
-                                            <label class="form-check-label" type="lab1" for="inlineCheckbox1">
-                                                Quinta-feira
-                                            </label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" value="" id="sexta"
-                                                   value="option5" required>
-                                            <label class="form-check-label" type="lab1" for="inlineCheckbox1">
-                                                Sexta-feira
-                                            </label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" value="" id="sabado"
-                                                   value="option6" required>
-                                            <label class="form-check-label" type="lab1" for="inlineCheckbox1">
-                                                Sábado
-                                            </label>
-                                        </div>
-
+                                    <label class="my-0 mr-2" style="font-size: 20px">Avaliação média com base nos clientes: </label>
+                                    <ul class="star_reputacao">
+                                            <div class="starsreputacao">
+                                                <div class="row">
+                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li> </div>
+                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
+                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
+                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
+                                                    <div class="col"> <li><a href="#"><img src="images/star0.png" alt=""></a></li></div>
+                                                
+                                            </div>
                                     </div>
-                                </div>
-                            </div>
 
-                           <!-- <div class="form-row">
-                                <figure class="figure">
-                                    <img src="..." class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-                                    <figcaption class="figure-caption">A caption for the above image.</figcaption>
-                                </figure>
                             </div>
-                            <!--
-                            <div class="form-row">
-                                <img src="..." class="rounded float-left" alt="Responsive image">
-                            </div>-->
-
-
-                            <label class="my-0 mr-2" style="font-size: 20px">Endereço <i class="fas fa-map-marker-alt"></i></label>
-                            <div  class="pb-0" id="line"></div>
-                            <div class="form-row">
-                                <div class="form-group  col-md-12">
-                                    <p style="color: #000000; font-size: 15px">Nome da rua, bairro, número</p>
-                                    <p style="color: #000000; font-size: 15px; margin-top: -15px">Cep, estado, cidade</p>
-                                </div>
-                                <div class="form-group  col-md-6">
-                                    <a href="#" >Voltar</a>
-                                </div>
+                           
+                               
+                                </ul>
+                                
                             </div>
+                            <div class="form-group"></div>
+                                    <label for="Avaliacao">Avaliações:</label>
+                            </div>
+                            <ul class="star_reputacao">
+                                    <div class="starsreputacao">
+                                        <div class="row">
+                                            <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li> </div>
+                                            <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
+                                            <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
+                                            <div class="col"> <li><a href="#"><img src="images/star0.png" alt=""></a></li></div>
+                                            <div class="col"> <li><a href="#"><img src="images/star0.png" alt=""></a></li></div>
+                                        
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                    <input type="text" class="form-control" id="nomeCliente" placeholder="Nome cliente">
+                             </div>
+                             <label for="assinatura">Assinatura:</label>
+                             <div class="form-group">
+                                    <input type="text" class="form-control" id="produtos" placeholder="Produtos selecionados">
+                             </div>
+
+                             <ul class="star_reputacao">
+                                    <div class="starsreputacao">
+                                        <div class="row">
+                                            <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li> </div>
+                                            <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
+                                            <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
+                                            <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
+                                            <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
+                                        
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                    <input type="text" class="form-control" id="nomeCliente" placeholder="Nome cliente">
+                             </div>
+                             <label for="assinatura">Assinatura:</label>
+                             <div class="form-group">
+                                    <input type="text" class="form-control" id="produtos" placeholder="Produtos selecionados">
+                             </div>
 
 
                         </fieldset>
