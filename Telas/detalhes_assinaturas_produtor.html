@@ -227,24 +227,29 @@
                                         </div>
                                     </div>
                                     <div class="form-row">
-                                        <div class="form-group col-md-4">
+                                        <div class="form-group col-md-6 ">
                                             <label for="quant">Valor</label>
                                             <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name" placeholder="Valor"
                                                    class="form-first-name form-control" id="valor">
                                                         <!-- <input type="number" min="1" max="999" name="form-valor" class="form-control" id="quant" placeholder="Quantidade">-->
                                         </div>
+
+
+                                        <!--
                                         <div class="form-group col-md-4">
                                             <label for="quant">Frete</label>
                                             <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name" placeholder="Frete"
                                                    class="form-first-name form-control" id="frete">
                                                         <!-- <input type="number" min="1" max="999" name="form-valor" class="form-control" id="quant" placeholder="Quantidade">-->
-                                        </div>
+                                       <!-- </div>
                                         <div class="form-group col-md-4">
                                             <label for="quant">Valor Total</label>
                                             <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name" placeholder="Valor Total"
                                                    class="form-first-name form-control" id="valortot">
                                                         <!-- <input type="number" min="1" max="999" name="form-valor" class="form-control" id="quant" placeholder="Quantidade">-->
-                                        </div>
+                                       <!-- </div>-->
+
+
                                     </div>
                                     <div class="form-row" type="ent">
                                         <div class="col-md-12 mb-3">
@@ -302,7 +307,23 @@
                 <div class="col-lg-12">
                     <form>
                         <fieldset class="endereco">
-                            <label class="my-0 mr-2" style="font-size: 20px">Endereço <i class="fas fa-map-marker-alt"></i></label>
+
+                            <label class="my-0 mr-2" style="font-size: 20px">Total <i class="fa fa-calculator"></i> </label>
+                            <div  class="pb-0" id="line"></div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6 ">
+                                    <label for="inputEmail4">Frete</label>
+                                    <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name" placeholder="Frete"
+                                           class="form-first-name form-control" id="frete">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Valor Total</label>
+                                    <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name" placeholder="Valor Total"
+                                           class="form-first-name form-control" id="valortot">
+                                </div>
+                            </div>
+
+                            <label class="my-0 mr-2" style="font-size: 20px" id="end">Endereço <i class="fas fa-map-marker-alt"></i></label>
                             <div  class="pb-0" id="line"></div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
@@ -311,7 +332,7 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="form-group  col-md-6">
+                                <div class="form-group col-md-6">
                                     <a href="#" >Voltar</a>
                                 </div>
                             </div>
