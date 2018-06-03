@@ -3853,6 +3853,8 @@ textarea:-ms-input-placeholder, textarea.form-control:-ms-input-placeholder {
     height: 30px;
 }
 
+
+
 input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder, textarea.form-control::-webkit-input-placeholder {
     color: #888;
@@ -3985,6 +3987,13 @@ input.form-control textarea{
 
 
 }
+
+.row#backColor{
+    background-color: #fefefe;
+    padding-top: 20px;
+    box-shadow: 1px 2px 1px 2px #d7d7d7;
+}
+
 .form-row[type="ent"]{
     text-align: left;
 }
