@@ -147,22 +147,25 @@
                     <div class="contact_form_title">Gerenciamento de usuário</div>
                     <form>
                         <div class="form-row">
-                            <label class="sr-only" for="selecionarConsumidor">Selecione um consumidor... </label>
-                            <select class="form-control" id="selecionarConsumidor" style="margin-bottom: 20px">
-                                <option disabled selected> Selecione um consumidor...</option>
+                            <label class="sr-only" for="selecionarProdutor">Selecione um produtor... </label>
+                            <select class="form-control" id="selecionarProdutor" style="margin-bottom: 20px">
+                                <option disabled selected> Selecione um produtor...</option>
                             </select>
                         </div>
+
                         <div class="form-group" align="right" style="margin-top: -14px">
                             <a href="#">Ver todos</a>
                         </div>
-                        <label class="my-0 mr-2" style="font-size: 20px">Usuário <i class="fa fa-at"></i>consumidor
-                        </label>
+
+                        <label class="my-0 mr-2" style="font-size: 20px">Usuário <i
+                                class="fa fa-at"></i>produtor</label>
+
                         <div class="pb-0" id="line"></div>
+
                         <div class="form-row">
                             <div class="form-group col-md-2">
                                 <i class="fa fa-user-circle fa-8x"></i>
                             </div>
-
                             <div class="form-group col-md-10">
                                 <div class="row">
                                     <div class="form-group col-md-3" style="margin-right: -20px">
@@ -183,31 +186,73 @@
                                                placeholder="CNPJ" disabled>
                                     </div>
                                 </div>
-                            </div>
-
-                                <div class="form-group">
-                                    <input id="userBloqueado" name="userBloqueado" type="checkbox" value="nao">
-                                    <label for="userBloqueado">Acesso negado a plataforma</label>
+                                <div class="row">
+                                    <div class="form-group col-md-3" style="margin-right: -30px">
+                                        <label for="listaProdutos" class="col-form-label">Lista de produtos</label>
+                                    </div>
+                                    <div class="form-group col-md-5">
+                                        <select multiple class="form-control" size="2" id="listaProdutos">
+                                            <option disabled>Produto 1</option>
+                                            <option disabled>Produto 2</option>
+                                            <option disabled>Produto 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-3" style="margin-right: -5px">
+                                        <label for="listaProdutos" class="col-form-label">Histórico de
+                                            avaliações</label>
+                                    </div>
+                                    <div class="form-group col-md-5" style="margin-top: 10px;">
+                                        <div class="row" style="margin-bottom: 10px">
+                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
+                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
+                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
+                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
+                                            <i class="far fa-star" style="color: yellow; margin-right: 5px"></i>
+                                        </div>
+                                        <div class="row" style="margin-bottom: 10px">
+                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
+                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
+                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
+                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
+                                            <i class="far fa-star" style="color: yellow; margin-right: 5px"></i>
+                                        </div>
+                                        <div class="row" style="margin-bottom: 10px">
+                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
+                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
+                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
+                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
+                                            <i class="far fa-star" style="color: yellow; margin-right: 5px"></i>
+                                            <div class="row" align="right" style="margin-top: 15px">
+                                                <a href="#">Ver todos</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="form-group  col-md-10">
-                                    <label class="my-0 mr-2" style="font-size: 20px">Categoria </label>
-                                </div>
-                                <div class="form-group  col-md-2" align="right">
-                                    <!--                                <button type="submit" class="btn btn-primary">Atualizar</button>-->
-                                    <a href="#">Atualizar</a>
-                                </div>
+                            <div class="form-group">
+                                <input id="userBloqueado" name="userBloqueado" type="checkbox" value="nao">
+                                <label for="userBloqueado">Acesso negado a plataforma</label>
                             </div>
-                            <div class="pb-0" id="line" style="margin-top: -15px"></div>
-                            <div class="form-row">
-                                <div class="form-group  col-md-6">
-                                    <p style="color: #000000; font-size: 15px">Atual: consumidor</p>
-                                </div>
-                                <div class="form-group  col-md-3">
-                                    <a href="#">Alterar para produtor</a>
-                                </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group  col-md-10">
+                                <label class="my-0 mr-2" style="font-size: 20px">Categoria </label>
                             </div>
+                            <div class="form-group  col-md-2" align="right">
+                                <a href="#">Atualizar</a>
+                            </div>
+                        </div>
+                        <div class="pb-0" id="line" style="margin-top: -15px"></div>
+                        <div class="form-row">
+                            <div class="form-group  col-md-6">
+                                <p style="color: #000000; font-size: 15px">Atual: produtor</p>
+                            </div>
+                            <div class="form-group  col-md-3">
+                                <a href="#">Alterar para produtor</a>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -292,20 +337,19 @@
             </div>
         </div>
     </div>
-</div>
 
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="styles/bootstrap4/popper.js"></script>
-<script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/greensock/TweenMax.min.js"></script>
-<script src="plugins/greensock/TimelineMax.min.js"></script>
-<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="plugins/greensock/animation.gsap.min.js"></script>
-<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="plugins/slick-1.8.0/slick.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="js/custom.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="styles/bootstrap4/popper.js"></script>
+    <script src="styles/bootstrap4/bootstrap.min.js"></script>
+    <script src="plugins/greensock/TweenMax.min.js"></script>
+    <script src="plugins/greensock/TimelineMax.min.js"></script>
+    <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+    <script src="plugins/greensock/animation.gsap.min.js"></script>
+    <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+    <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+    <script src="plugins/slick-1.8.0/slick.js"></script>
+    <script src="plugins/easing/easing.js"></script>
+    <script src="js/custom.js"></script>
 </body>
 
 </html>
