@@ -120,7 +120,6 @@
                                 </form>
                             </div>
                             <ul class="page_menu_nav">
-
                                 <li class="page_menu_item">
                                     <a href="#">Meus Dados<i class="fa fa-angle-down"></i></a>
                                 </li>
@@ -137,16 +136,6 @@
                                     <a href="#">Reputação<i class="fa fa-angle-down"></i></a>
                                 </li>
                             </ul>
-
-                            <!-- <div class="menu_contact">
-                                 <div class="menu_contact_item">
-                                     <div class="menu_contact_icon"><img src="images/phone_white.png" alt=""></div>
-                                     +38 068 005 3570
-                                 </div>
-                                 <div class="menu_contact_item">
-                                     <div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div>
-                                     <a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>
-                             </div>-->
                         </div>
                     </div>
                 </div>
@@ -165,220 +154,190 @@
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="contact_form_title">Minha reputação</div>
-                    <div  class="pb-0" id="line"></div>
+                    <div class="pb-0" id="line"></div>
                     <div class="form-group">
-                    <form>
-                        <fieldset>
-                           <!-- <div class="form-row">
-                                <div class="col-md-1 mb-3">
-                                    <label class="linhaassinaturas" type="nomenumero" for="inputnumero">Número</label>
-                                </div>
-                                <div class="col-md-2 mb-3">
-                                    <input type="text" class="form-control" placeholder="número">
-                                </div>
-                                <div class="col-md-1 offset-1 mb-3">
-                                    <label class="linhaassinaturas" type="nomenumero" for="inputcliente">Cliente </label>
-                                </div>
-                                <div class="col-md-7 mb-3">
-                                    <input type="text" class="form-control" placeholder="nome do cliente">
-                                </div>
-                            </div>
-                            <div  class="pb-0" id="linha"></div>-->
+                        <form>
+                            <fieldset>
+                                <div class="form-row" id="espac2">
 
-                            <div class="form-row" id="espac2">
-                                
-                                    <label class="Avaliacao" style="font-size: 25px">Avaliação média com base nos clientes: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                    <label class="Avaliacao" style="font-size: 25px">Avaliação média com base nos
+                                        clientes: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                                     <div class="form-group col-md-4">
-                                    <ul class="star_reputacao">
-                                            <div class="starsreputacao">
-                                                <div class="row">
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li> </div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star0.png" alt=""></a></li></div>
-                                                
-                                            </div>
+                                        <ul class="star_reputacao" style="display: inline-block">
+                                            <li><a href="#"><img src="images/star1.png" alt=""></a></li>
+                                        </ul>
+                                        <ul class="star_reputacao" style="display: inline-block">
+                                            <li><a href="#"><img src="images/star1.png" alt=""></a></li>
+                                        </ul>
+                                        <ul class="star_reputacao" style="display: inline-block">
+                                            <li><a href="#"><img src="images/star1.png" alt=""></a></li>
+                                        </ul>
+                                        <ul class="star_reputacao" style="display: inline-block">
+                                            <li><a href="#"><img src="images/star1.png" alt=""></a></li>
+                                        </ul>
+                                        <ul class="star_reputacao" style="display: inline-block">
+                                            <li><a href="#"><img src="images/star0.png" alt=""></a></li>
+                                        </ul>
                                     </div>
-                                
-                            </div>
-                            <br /><br />
-                           
-                               
-                                </ul>
-                                
-                            </div>
-                            
-                            <div class="container">
-                                <label class="Avaliacao" style="font-size: 19px">Avaliações:</label>
-                            </div>
+                                    <br/><br/>
+                                </div>
+
                                 <div class="container">
-                                <div class="form-group col-md-4">  
-                                <ul class="star_reputacao">
-                                            <div class="starsreputacao">
-                                                <div class="row">
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li> </div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star0.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star0.png" alt=""></a></li></div>
-                                                
-                                            </div>
+                                    <label class="Avaliacao" style="font-size: 19px">Avaliações:</label>
+                                </div>
+                                <div class="container">
+                                    <div class="form-group col-md-4">
+                                        <ul class="star_reputacao" style="display: inline-block">
+                                            <li><a href="#"><img src="images/star1.png" alt=""></a></li>
+                                        </ul>
+                                        <ul class="star_reputacao" style="display: inline-block">
+                                            <li><a href="#"><img src="images/star1.png" alt=""></a></li>
+                                        </ul>
+                                        <ul class="star_reputacao" style="display: inline-block">
+                                            <li><a href="#"><img src="images/star1.png" alt=""></a></li>
+                                        </ul>
+                                        <ul class="star_reputacao" style="display: inline-block">
+                                            <li><a href="#"><img src="images/star0.png" alt=""></a></li>
+                                        </ul>
+                                        <ul class="star_reputacao" style="display: inline-block">
+                                            <li><a href="#"><img src="images/star0.png" alt=""></a></li>
+                                        </ul>
                                     </div>
-                                </div>  
-                            </div>        
-                            <label for="nomeCliente">Nome do cliente</label>
-                            <div class="form-group">
+                                </div>
+                                <label for="nomeCliente">Nome do cliente</label>
+                                <div class="form-group">
                                     <input type="text" class="form-control" id="nomeCliente" placeholder="Nome cliente">
-                             </div>
-                             <label for="assinatura">Assinatura:</label>
-                             <div class="form-group">
-                                    <input type="text" class="form-control" id="produtos" placeholder="Produtos selecionados">
-                             </div>
-                            </div> 
+                                </div>
+                                <label for="assinatura">Assinatura:</label>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="produtos"
+                                           placeholder="Produtos selecionados">
+                                </div>
 
-                             <div class="container">
-                                <div class="form-group col-md-4">  
-                                 <ul class="star_reputacao">
-                                        <div class="starsreputacao">
-                                            <div class="row">
-                                                <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li> </div>
-                                                <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                
-                                            </div>
-                                     </div>
+                                <div class="container">
+                                    <div class="form-group col-md-4">
+                                        <ul class="star_reputacao" style="display: inline-block">
+                                            <li><a href="#"><img src="images/star1.png" alt=""></a></li>
+                                        </ul>
+                                        <ul class="star_reputacao" style="display: inline-block">
+                                            <li><a href="#"><img src="images/star1.png" alt=""></a></li>
+                                        </ul>
+                                        <ul class="star_reputacao" style="display: inline-block">
+                                            <li><a href="#"><img src="images/star1.png" alt=""></a></li>
+                                        </ul>
+                                        <ul class="star_reputacao" style="display: inline-block">
+                                            <li><a href="#"><img src="images/star0.png" alt=""></a></li>
+                                        </ul>
+                                        <ul class="star_reputacao" style="display: inline-block">
+                                            <li><a href="#"><img src="images/star0.png" alt=""></a></li>
+                                        </ul>
                                     </div>
-                            </div>   
-                            <label for="nomeCliente">Nome do cliente</label>     
-                            <div class="form-group">
+                                </div>
+                                <label for="nomeCliente">Nome do cliente</label>
+                                <div class="form-group">
                                     <input type="text" class="form-control" id="nomeCliente" placeholder="Nome cliente">
-                             </div>
-                             <label for="assinatura">Assinatura:</label>
-                             <div class="form-group">
-                                    <input type="text" class="form-control" id="produtos" placeholder="Produtos selecionados">
-                             </div>
-                            </div>
-
-
-                        </fieldset>
-
-
-
-
-
-
-
-
-
-                       <!--     <div class="form-group col-md-2">
-                                <label for="inputNome">Cliente</label>
-                            </div>
-                            <div class="form-group col-md-5">
-                                <input type="email" class="form-control" id="nomecliente" placeholder="nome do cliente">
-                            </div>-->
-
-                    </form>
+                                </div>
+                                <label for="assinatura">Assinatura:</label>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="produtos"
+                                           placeholder="Produtos selecionados">
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
+        <!-- Footer -->
 
+        <footer class="footer">
+            <div class="container">
+                <div class="row" id="linha">
 
-
-    <!-- Footer -->
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row" id="linha">
-
-                <div class="col-lg-3 footer_col">
-                    <div class="footer_column footer_contact">
-                        <div class="logo_container">
-                            <div class="logo"><a href="#">Mineapple</a></div>
+                    <div class="col-lg-3 footer_col">
+                        <div class="footer_column footer_contact">
+                            <div class="logo_container">
+                                <div class="logo"><a href="#">Mineapple</a></div>
+                            </div>
+                            <div class="footer_title">Tem uma dúvida? Mande-nos um email!</div>
+                            <div class="footer_phone">mineapple@gmail.com</div>
+                            <div class="footer_contact_text">
+                                <p>Feira de Santana</p>
+                                <p>Bahia, BR</p>
+                            </div>
+                            <div class="footer_social">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-google"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="footer_title">Tem uma dúvida? Mande-nos um email!</div>
-                        <div class="footer_phone">mineapple@gmail.com</div>
-                        <div class="footer_contact_text">
-                            <p>Feira de Santana</p>
-                            <p>Bahia, BR</p>
-                        </div>
-                        <div class="footer_social">
-                            <ul>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-google"></i></a></li>
-                                <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <div class="footer_column">
+                            <div class="footer_title">Serviços</div>
+                            <ul class="footer_list">
+                                <li><a href="#">Minha conta</a></li>
+                                <li><a href="#">Pedidos</a></li>
+                                <li><a href="#">Lista de Desejos</a></li>
+                                <li><a href="#">Atendimento ao cliente</a></li>
+
                             </ul>
                         </div>
                     </div>
+
                 </div>
-
-                <div class="col-lg-2">
-                    <div class="footer_column">
-                        <div class="footer_title">Serviços</div>
-                        <ul class="footer_list">
-                            <li><a href="#">Minha conta</a></li>
-                            <li><a href="#">Pedidos</a></li>
-                            <li><a href="#">Lista de Desejos</a></li>
-                            <li><a href="#">Atendimento ao cliente</a></li>
-
-                        </ul>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <!-- Copyright -->
+        <!-- Copyright -->
 
-    <div class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col">
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
 
-                    <div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
-                        <div class="copyright_content">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                            Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
-                                                                                      aria-hidden="true"></i> pela <a
-                                href="#" target="_blank">Weiche Technologie</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </div>
-                        <div class="logos ml-sm-auto">
-                            <ul class="logos_list">
-                                <li><a href="#"><img src="images/logos_1.png" alt=""></a></li>
-                                <li><a href="#"><img src="images/logos_2.png" alt=""></a></li>
-                                <li><a href="#"><img src="images/logos_3.png" alt=""></a></li>
-                                <li><a href="#"><img src="images/logos_4.png" alt=""></a></li>
-                            </ul>
+                        <div
+                            class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
+                            <div class="copyright_content">
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                                Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
+                                                                                          aria-hidden="true"></i> pela
+                                <a
+                                    href="#" target="_blank">Weiche Technologie</a>
+                            </div>
+                            <div class="logos ml-sm-auto">
+                                <ul class="logos_list">
+                                    <li><a href="#"><img src="images/logos_1.png" alt=""></a></li>
+                                    <li><a href="#"><img src="images/logos_2.png" alt=""></a></li>
+                                    <li><a href="#"><img src="images/logos_3.png" alt=""></a></li>
+                                    <li><a href="#"><img src="images/logos_4.png" alt=""></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="styles/bootstrap4/popper.js"></script>
-<script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/greensock/TweenMax.min.js"></script>
-<script src="plugins/greensock/TimelineMax.min.js"></script>
-<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="plugins/greensock/animation.gsap.min.js"></script>
-<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="plugins/slick-1.8.0/slick.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="js/custom.js"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="styles/bootstrap4/popper.js"></script>
+        <script src="styles/bootstrap4/bootstrap.min.js"></script>
+        <script src="plugins/greensock/TweenMax.min.js"></script>
+        <script src="plugins/greensock/TimelineMax.min.js"></script>
+        <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+        <script src="plugins/greensock/animation.gsap.min.js"></script>
+        <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+        <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+        <script src="plugins/slick-1.8.0/slick.js"></script>
+        <script src="plugins/easing/easing.js"></script>
+        <script src="js/custom.js"></script>
 </body>
 
 </html>

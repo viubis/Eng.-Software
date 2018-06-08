@@ -55,7 +55,7 @@
                                     <input type="password" name="form-password" placeholder="Senha..."
                                            class="form-password form-control" minlength="8" id="form-password">
                                     <div style="text-align: right">
-                                        <a href="esqueci_minha_senha.html" style="color:#FFFFFF; font-size: 14px">Esqueci
+                                        <a href="#" style="color:#FFFFFF; font-size: 14px">Esqueci
                                             minha senha</a>
                                     </div>
                                 </div>
@@ -108,7 +108,7 @@
 
                                     </div>
                                 </div>
-                                <a href="tipo_de_cadastro_a_realizar.html">
+                                <a href="#">
                                     <button type="button" class="btn">Cadastrar</button>
                                 </a>
                             </form>
@@ -139,7 +139,8 @@
         <div class="row">
             <div class="col-sm-6 offset-lg-3">
 
-                <div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
+                <div
+                    class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                     <div class="copyright_content">
                         Copyright &copy;<script>document.write(new Date().getFullYear());</script>
                         Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"

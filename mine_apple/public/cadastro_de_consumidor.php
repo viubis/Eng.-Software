@@ -71,7 +71,7 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="form-first-name">First name</label>
                                     <input type="email" name="form-email" placeholder="Email..."
-                                           class="form-first-name form-control" id="form-first-name2">
+                                           class="form-first-name form-control" required id="form-first-name2">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="senha">Senha</label>
@@ -80,23 +80,15 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="confSenha">Confirmação de senha</label>
-                                    <input type="password" minlength="8" name="form-confirmacao-senha" placeholder="Confirmação de senha..."
-                                           class="form-first-name form-control"  data-match="#senha" required id="confSenha">
+                                    <input type="password" minlength="8" name="form-confirmacao-senha"
+                                           placeholder="Confirmação de senha..."
+                                           class="form-first-name form-control" data-match="#senha" required
+                                           id="confSenha">
                                 </div>
-
-<!--
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">Feminino</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">Masculino</label>
-                                </div>
--->
                                 <div class="form-group">
-                                    <label>Sexo  </label>
-                                    <select class="custom-select my-1 mr-sm-2" id="sexo">
+                                    <label class="sr-only" for="sexo">Sexo</label>
+                                    <select class="form-control" id="sexo" required>
+                                        <option disabled selected> Sexo</option>
                                         <option value="feminino">Feminino</option>
                                         <option value="masculino">Masculino</option>
                                     </select>
@@ -138,19 +130,15 @@
                                            class="form-first-name form-control" id="Complemento">
                                 </div>
                                 <div class="form-group">
-                                    <!-- <label class="sr-only" for="form-first-name">Estado</label>
-                                    <input type="text" name="form-first-name" placeholder="Estado"
-                                           class="form-first-name form-control" id="estado"> -->
-                                           <select class="form-control" id="estados">
-                                            <option value=""></option>
-                                            </select>
+                                    <label class="sr-only" for="estados">Estados</label>
+                                    <select class="form-control" id="estados">
+                                        <option value=""></option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
-                                    <!-- <label class="sr-only" for="form-first-name">Cidade</label>
-                                    <input type="text" name="form-first-name" placeholder="Cidade"
-                                           class="form-first-name form-control" id="cidade"> -->
-                                           <select class="form-control" id="cidades">
-                                        </select>
+                                    <label class="sr-only" for="cidades">Cidades</label>
+                                    <select class="form-control" id="cidades">
+                                    </select>
                                 </div>
                                 <button type="button" class="btn btn-previous">Anterior</button>
                                 <button type="button" class="btn btn-next">Próximo</button>
@@ -168,15 +156,30 @@
                                 </div>
                             </div>
                             <div class="form-bottom">
-                                <div class="form-group">
-                                    <label class="sr-only" for="form-first-name">Nome do titular</label>
-                                    <input type="text" name="form-facebook" placeholder="Nome do Titular"
-                                           class="form-facebook form-control" id="idnome">
+                                <div class="logoscartoes">
+                                    <ul class="logos_list" style="display: inline-block">
+                                        <li><a href="#"><img src="images/logos_1.png" alt=""></a></li>
+                                    </ul>
+                                    <ul class="logos_list" style="display: inline-block">
+                                        <li><a href="#"><img src="images/logos_2.png" alt=""></a></li>
+                                    </ul>
+                                    <ul class="logos_list" style="display: inline-block">
+                                        <li><a href="#"><img src="images/logos_3.png" alt=""></a></li>
+                                    </ul>
+                                    <ul class="logos_list" style="display: inline-block">
+                                        <li><a href="#"><img src="images/logos_4.png" alt=""></a></li>
+                                    </ul>
+                                    <ul class="logos_list" style="display: inline-block">
+                                        <li><a href="#"><img src="images/logos_5.png" alt=""></a></li>
+                                    </ul>
+                                    <ul class="logos_list" style="display: inline-block">
+                                        <li><a href="#"><img src="images/logos_6.png" alt=""></a></li>
+                                    </ul>
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-first-name">Sobrenome titular</label>
-                                    <input type="text" name="form-facebook" placeholder="Sobrenome do titular"
-                                           class="form-facebook form-control" id="idsobre">
+                                    <label class="sr-only" for="form-first-name">Nome do titular</label>
+                                    <input type="text" name="form-facebook" placeholder="Nome do Titular do cartão"
+                                           class="form-facebook form-control" id="idnome">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="form-first-name">Número do cartão</label>
@@ -188,24 +191,10 @@
                                     <input type="text" name="form-facebook" placeholder="Validade"
                                            class="form-facebook form-control" id="validade">
                                 </div>
-
-                                <div class="logoscartoes">
-                                    <ul class="logos_list">
-                                        <div class="row">
-                                            <div class="col"> <li><a href="#"><img src="images/logos_1.png" alt=""></a></li> </div>
-                                            <div class="col"> <li><a href="#"><img src="images/logos_2.png" alt=""></a></li></div>
-                                            <div class="col"> <li><a href="#"><img src="images/logos_3.png" alt=""></a></li></div>
-                                            <div class="col"> <li><a href="#"><img src="images/logos_4.png" alt=""></a></li></div>
-                                            <div class="col"> <li><a href="#"><img src="images/logos_5.png" alt=""></a></li></div>
-                                            <div class="col"> <li><a href="#"><img src="images/logos_6.png" alt=""></a></li></div>
-                                        
-                                    </div>
-                                    </ul>
-                                </div>
-
                                 <div class="form-group">
-                                    <label>Tipo de cartão </label>
-                                    <select class="custom-select my-1 mr-sm-2" id="tipo">
+                                    <label class="sr-only" for="tipo">Tipo de cartão </label>
+                                    <select class="form-control" id="tipo">
+                                        <option selected disabled>Tipo de cartão</option>
                                         <option value="credito">Crédito</option>
                                         <option value="debito">Débito</option>
                                     </select>
@@ -234,7 +223,8 @@
         <div class="row">
             <div class="col-sm-6 offset-lg-3">
 
-                <div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
+                <div
+                    class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                     <div class="copyright_content">
                         Copyright &copy;<script>document.write(new Date().getFullYear());</script>
                         Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"

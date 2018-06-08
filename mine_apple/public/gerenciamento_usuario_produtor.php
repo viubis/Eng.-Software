@@ -317,12 +317,10 @@
                     <div
                         class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                         <div class="copyright_content">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             Copyright &copy;<script>document.write(new Date().getFullYear());</script>
                             Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
                                                                                       aria-hidden="true"></i> pela <a
                                 href="#" target="_blank">Weiche Technologie</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </div>
                         <div class="logos ml-sm-auto">
                             <ul class="logos_list">

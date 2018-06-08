@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <title>Mineapple</title>
     <meta charset="utf-8">
@@ -29,26 +29,6 @@
 
     <!-- Header -->
     <header class="header">
-
-
-        <!-- Top Bar -->
-
-        <!--  <div class="top_bar">
-              <div class="container">
-                  <div class="row">
-                      <div class="col d-flex flex-row">
-                          <div class="top_bar_content ml-auto">
-                              <div class="top_bar_user">
-                                  <div class="user_icon"><img src="images/user.svg" alt=""></div>
-                                  <div><a href="#">Cadastrar</a></div>
-                                  <div><a href="#">Login</a></div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>-->
-
         <!-- Header Main -->
 
         <div class="header_main">
@@ -156,16 +136,6 @@
                                     <a href="#">Reputação<i class="fa fa-angle-down"></i></a>
                                 </li>
                             </ul>
-
-                            <!-- <div class="menu_contact">
-                                 <div class="menu_contact_item">
-                                     <div class="menu_contact_icon"><img src="images/phone_white.png" alt=""></div>
-                                     +38 068 005 3570
-                                 </div>
-                                 <div class="menu_contact_item">
-                                     <div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div>
-                                     <a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>
-                             </div>-->
                         </div>
                     </div>
                 </div>
@@ -212,13 +182,13 @@
                                     </div>
 
                                     <div class="col-md-6 mb-3">
-                                        <label class="my-1 mr-2" for="categorias">Tipo de embalagem </label>
+                                        <label class="my-1 mr-2" for="Unidade">Tipo de embalagem </label>
                                         <select class="custom-select my-1 mr-sm-2" id="Unidade">
                                             <option value="Cereais">Unidade</option>
                                             <option value="Frutas">Caixa</option>
                                             <option value="Legumes">Litro</option>
                                             <option value="Leguminosas">Quilo</option>
-                                            <option value="Leguminosas">Duzia</option>
+                                            <option value="Leguminosas">Dúzia</option>
                                         </select>
                                     </div>
                                 </div>
@@ -254,7 +224,6 @@
                                     </div>
                                     <div class="col-md-2 mb-3">
                                         <label class="sr-only" for="valor">Valor</label>
-                                        <!--<input type="tel" required="required" maxlength="15" name="form-first-name" pattern="([0-9]{1,3}\.)?[0-9]{1,3},[0-9]{2}$" placeholder="Valor..." />-->
                                         <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name"
                                                placeholder="Valor..."
                                                class="form-first-name form-control" id="valor">
@@ -264,8 +233,6 @@
                                 <div class="form-row">
                                     <div class="col-md-12 mb-3">
                                         <div class="form-group">
-                                            <!--<label for="comment">Descrição</label>
-                                            <!--<textarea class="form-control" rows="5" id="comment"></textarea>-->
                                             <textarea class="form-control" rows="5" id="comment" name="form-first-name"
                                                       placeholder="Descrição do produto... "></textarea>
                                         </div>
@@ -281,44 +248,44 @@
                                     <div class="col-md-12 mb-3">
                                         <div class="form-group">
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" value="" id="segunda"
+                                                <input class="form-check-input" type="checkbox" id="segunda"
                                                        value="option1" required>
-                                                <label class="form-check-label" type="lab1" for="inlineCheckbox1">
+                                                <label class="form-check-label" type="lab1" for="segunda">
                                                     Segunda-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" value="" id="terca"
+                                                <input class="form-check-input" type="checkbox" id="terca"
                                                        value="option2" required>
-                                                <label class="form-check-label" type="lab1" for="inlineCheckbox1">
+                                                <label class="form-check-label" type="lab1" for="terca">
                                                     Terça-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" value="" id="quarta"
+                                                <input class="form-check-input" type="checkbox" id="quarta"
                                                        value="option3" required>
-                                                <label class="form-check-label" type="lab1" for="inlineCheckbox1">
+                                                <label class="form-check-label" type="lab1" for="quarta">
                                                     Quarta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" value="" id="quinta"
+                                                <input class="form-check-input" type="checkbox" id="quinta"
                                                        value="option4" required>
-                                                <label class="form-check-label" type="lab1" for="inlineCheckbox1">
+                                                <label class="form-check-label" type="lab1" for="quinta">
                                                     Quinta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" value="" id="sexta"
+                                                <input class="form-check-input" type="checkbox" id="sexta"
                                                        value="option5" required>
-                                                <label class="form-check-label" type="lab1" for="inlineCheckbox1">
+                                                <label class="form-check-label" type="lab1" for="sexta">
                                                     Sexta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" value="" id="sabado"
+                                                <input class="form-check-input" type="checkbox" id="sabado"
                                                        value="option6" required>
-                                                <label class="form-check-label" type="lab1" for="inlineCheckbox1">
+                                                <label class="form-check-label" type="lab1" for="sabado">
                                                     Sábado
                                                 </label>
                                             </div>
@@ -335,10 +302,7 @@
                 </div>
             </div>
         </div>
-        <!-- </div>-->
     </div>
-
-    <!--</section>-->
 
     <!-- Footer -->
 
@@ -393,7 +357,8 @@
             <div class="row">
                 <div class="col">
 
-                    <div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
+                    <div
+                        class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                         <div class="copyright_content">
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             Copyright &copy;<script>document.write(new Date().getFullYear());</script>

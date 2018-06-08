@@ -11,8 +11,6 @@
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
 <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="styles/bootstrap4/bootstrap.min.css">
-<!--<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"-->
-<!--type='text/css'>-->
 <link rel="stylesheet" href="styles/cadastro_a_realizar_style.css">
 
 <!-- Favicon and touch icons -->
@@ -67,7 +65,7 @@
                                         recebidas e muito mais!
                                     </h3>
                                 </div>
-                                <a href="cadastro_de_produtor.html">
+                                <a href="#">
                                     <button type="button" class="btn">Cadastrar-me como produtor!</button>
                                 </a>
                             </form>
@@ -112,7 +110,7 @@
                                         produtores que fazem entregas em sua região e muito mais!
                                     </h3>
                                 </div>
-                                <a href="cadastro_de_consumidor.html">
+                                <a href="#">
                                     <button type="button" class="btn">Cadastrar-me como consumidor!</button>
                                 </a>
                             </form>
@@ -129,7 +127,8 @@
         <div class="row">
             <div class="col-sm-6 offset-lg-3">
 
-                <div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
+                <div
+                    class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                     <div class="copyright_content">
                         Copyright &copy;<script>document.write(new Date().getFullYear());</script>
                         Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"

@@ -65,8 +65,10 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="confSenha">Confirmação de senha</label>
-                                    <input type="password" minlength="8" name="form-confirmacao-senha" placeholder="Confirmação de senha..."
-                                           class="form-first-name form-control"  data-match="#senha" required id="confSenha">
+                                    <input type="password" minlength="8" name="form-confirmacao-senha"
+                                           placeholder="Confirmação de senha..."
+                                           class="form-first-name form-control" data-match="#senha" required
+                                           id="confSenha">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="razaoSocial">Razão social</label>
@@ -90,7 +92,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="valorMinimo">Valor mínimo para frete grátis</label>
-                                    <input type="number" min="1" max="999" name="form-valor" placeholder="Valor mínimo para frete grátis..."
+                                    <input type="number" min="1" max="999" name="form-valor"
+                                           placeholder="Valor mínimo para frete grátis..."
                                            class="form-first-name form-control" required id="valorMinimo">
                                 </div>
                                 <button type="button" class="btn btn-next">Próximo</button>
@@ -129,21 +132,17 @@
                                            class="form-first-name form-control" id="Complemento">
                                 </div>
                                 <div class="form-group">
-                                    <!-- <label class="sr-only" for="estado">Estado</label>
-                                    <input type="text" name="form-estado" placeholder="Estado"
-                                           class="form-first-name form-control" id="estado"> -->
-                                           <select class="form-control" id="estados">
-                                            <option value=""></option>
-                                            </select>
-                                           
+                                    <label class="sr-only" for="estados">Estados</label>
+                                    <select class="form-control" id="estados">
+                                        <option value=""></option>
+                                    </select>
+
                                 </div>
                                 <div class="form-group">
-                                    <!-- <label class="sr-only" for="cidade">Cidade</label>
-                                    <input type="text" name="form-cidade" placeholder="Cidade"
-                                           class="form-first-name form-control" id="cidade"> -->
-                                           <select class="form-control" id="cidades">
-                                        </select>
-                                          
+                                    <label class="sr-only" for="cidades">Cidades</label>
+                                    <select class="form-control" id="cidades">
+                                    </select>
+
                                 </div>
                                 <button type="button" class="btn btn-previous">Anterior</button>
                                 <button type="button" class="btn btn-next">Próximo</button>
@@ -200,7 +199,8 @@
         <div class="row">
             <div class="col-sm-6 offset-lg-3">
 
-                <div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
+                <div
+                    class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                     <div class="copyright_content">
                         Copyright &copy;<script>document.write(new Date().getFullYear());</script>
                         Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"

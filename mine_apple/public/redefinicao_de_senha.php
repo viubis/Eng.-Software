@@ -65,7 +65,8 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="senhaConf">Confirmação da Senha</label>
                                     <input type="password" name="Confsenha" placeholder="Confirmação da senha..."
-                                           class="form-first-name form-control" required data-match="#senhaNova" id="senhaConf">
+                                           class="form-first-name form-control" required data-match="#senhaNova"
+                                           id="senhaConf">
                                 </div>
                                 <button type="submit" class="btn">Alterar</button>
                             </div>
@@ -84,7 +85,8 @@
         <div class="row">
             <div class="col-sm-6 offset-lg-3">
 
-                <div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
+                <div
+                    class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                     <div class="copyright_content">
                         Copyright &copy;<script>document.write(new Date().getFullYear());</script>
                         Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"

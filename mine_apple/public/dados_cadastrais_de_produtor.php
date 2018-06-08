@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Mineapple shop project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
@@ -137,16 +138,6 @@
                                     <a href="#">Reputação<i class="fa fa-angle-down"></i></a>
                                 </li>
                             </ul>
-
-                            <!-- <div class="menu_contact">
-                                 <div class="menu_contact_item">
-                                     <div class="menu_contact_icon"><img src="images/phone_white.png" alt=""></div>
-                                     +38 068 005 3570
-                                 </div>
-                                 <div class="menu_contact_item">
-                                     <div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div>
-                                     <a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>
-                             </div>-->
                         </div>
                     </div>
                 </div>
@@ -163,10 +154,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
-                    <div class="contact_form_title">Meus dados </div>
+                    <div class="contact_form_title">Meus dados</div>
                     <form>
-                        <label class="my-0 mr-2" style="font-size: 20px">Dados da conta <i class="fa fa-at"></i> </label>
-                        <div  class="pb-0" id="line"></div>
+                        <label class="my-0 mr-2" style="font-size: 20px">Dados da conta <i class="fa fa-at"></i>
+                        </label>
+                        <div class="pb-0" id="line"></div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Email</label>
@@ -179,8 +171,9 @@
                         </div>
 
 
-                        <label class="my-0 mr-2" style="font-size: 20px">Dados pessoais <i class="fa fa-user-circle"></i> </label>
-                        <div  class="pb-0" id="line"></div>
+                        <label class="my-0 mr-2" style="font-size: 20px">Dados pessoais <i
+                                class="fa fa-user-circle"></i> </label>
+                        <div class="pb-0" id="line"></div>
                         <div class="form-group">
                             <label for="nomeFantasia">Nome fantasia</label>
                             <input type="text" class="form-control" id="nomeFantasia" placeholder="Nome fantasia">
@@ -197,37 +190,38 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="telefoneComercial">Telefone comercial</label>
-                                <input type="text" class="form-control" id="telefoneComercial" placeholder="Telefone Comercial">
+                                <input type="text" class="form-control" id="telefoneComercial"
+                                       placeholder="Telefone Comercial">
                             </div>
                         </div>
 
 
-
-                        <label class="my-0 mr-2" style="font-size: 20px">Contas bancárias <i class="fa fa-credit-card"></i></label>
-                        <div  class="pb-0" id="line"></div>
+                        <label class="my-0 mr-2" style="font-size: 20px">Contas bancárias <i
+                                class="fa fa-credit-card"></i></label>
+                        <div class="pb-0" id="line"></div>
                         <div class="form-row">
                             <div class="form-group  col-md-6">
                                 <p style="color: #000000; font-size: 15px">Nome do banco</p>
                                 <p style="color: #000000; font-size: 15px; margin-top: -15px">Número da conta</p>
                             </div>
                             <div class="form-group  col-md-3">
-                                <a href="#" >Excluir</a>
+                                <a href="#">Excluir</a>
                             </div>
                             <div class="form-group  col-md-3">
-                                <a href="#" >Adicionar conta</a>
+                                <a href="#">Adicionar conta</a>
                             </div>
                         </div>
 
 
                         <label class="my-0 mr-2" style="font-size: 20px">Endereço <i class="fas fa-map-marker-alt"></i></label>
-                        <div  class="pb-0" id="line"></div>
+                        <div class="pb-0" id="line"></div>
                         <div class="form-row">
                             <div class="form-group  col-md-6">
                                 <p style="color: #000000; font-size: 15px">Nome da rua, bairro, número</p>
                                 <p style="color: #000000; font-size: 15px; margin-top: -15px">Cep, estado, cidade</p>
                             </div>
                             <div class="form-group  col-md-6">
-                                <a href="#" >Alterar</a>
+                                <a href="#">Alterar</a>
                             </div>
                         </div>
 
@@ -237,8 +231,6 @@
             </div>
         </div>
     </div>
-
-    <!--</section>-->
 
     <!-- Footer -->
 
@@ -293,14 +285,13 @@
             <div class="row">
                 <div class="col">
 
-                    <div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
+                    <div
+                        class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                         <div class="copyright_content">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             Copyright &copy;<script>document.write(new Date().getFullYear());</script>
                             Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
                                                                                       aria-hidden="true"></i> pela <a
                                 href="#" target="_blank">Weiche Technologie</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </div>
                         <div class="logos ml-sm-auto">
                             <ul class="logos_list">

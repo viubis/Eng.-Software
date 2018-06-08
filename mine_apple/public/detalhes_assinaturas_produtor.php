@@ -137,16 +137,6 @@
                                     <a href="#">Reputação<i class="fa fa-angle-down"></i></a>
                                 </li>
                             </ul>
-
-                            <!-- <div class="menu_contact">
-                                 <div class="menu_contact_item">
-                                     <div class="menu_contact_icon"><img src="images/phone_white.png" alt=""></div>
-                                     +38 068 005 3570
-                                 </div>
-                                 <div class="menu_contact_item">
-                                     <div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div>
-                                     <a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>
-                             </div>-->
                         </div>
                     </div>
                 </div>
@@ -168,12 +158,14 @@
                             <div class="form-row" id="espac">
                                 <div class="form-group col-md-3">
                                     <label for="nomeprod">Número da assinatura </label>
-                                    <input type="number" min="1" max="999" name="form-valor" class="form-control" id="numero"
+                                    <input type="number" min="1" max="999" name="form-valor" class="form-control"
+                                           id="numero"
                                            placeholder="Número" disabled>
                                 </div>
                                 <div class="form-group col-md-7">
                                     <label for="freq">Cliente</label>
-                                    <input type="text" class="form-control" id="nomeCliente" placeholder="Nome do Cliente" disabled>
+                                    <input type="text" class="form-control" id="nomeCliente"
+                                           placeholder="Nome do Cliente" disabled>
                                 </div>
                             </div>
                         </fieldset>
@@ -187,161 +179,157 @@
     <div class="containerInfosProdutos">
         <div class="container">
             <div class="row" id="backColor">
-                    <div class="col-sm-4">
-                        <div class="subcontainerProduto1">
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <div class="texto">
-                                        <input type="text" class="form-control" id="numprod" placeholder="Nº produto" disabled>
-                                    </div>
+                <div class="col-sm-4">
+                    <div class="subcontainerProduto1">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <div class="texto">
+                                    <input type="text" class="form-control" id="numprod" placeholder="Nº produto"
+                                           disabled>
                                 </div>
                             </div>
-                            <div class="imagem">
-                                <div class="imagemProduto"><img src="images/imagemProduto.png" alt="Responsive image"></div>
-                            </div>
+                        </div>
+                        <div class="imagem">
+                            <div class="imagemProduto"><img src="images/imagemProduto.png" alt="Responsive image"></div>
                         </div>
                     </div>
-                    <div class="col-sm-8">
-                        <div class="subcontainerProduto2 ">
-                            <form>
-                                <fieldset>
-                                    <div class="form-row" >
-                                        <div class="form-group col-md-6">
-                                            <label for="nomeprod">Produto </label>
-                                            <input type="text" class="form-control" id="nomeprod1" placeholder="Nome do produto" disabled>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="freq">Tipo de embalagem </label>
-                                            <input type="text" class="form-control" placeholder="Tipo de embalagem" disabled>
-                                        </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="subcontainerProduto2 ">
+                        <form>
+                            <fieldset>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="nomeprod">Produto </label>
+                                        <input type="text" class="form-control" id="nomeprod1"
+                                               placeholder="Nome do produto" disabled>
                                     </div>
-                                    <div class="form-row" id="espac1">
-                                        <div class="form-group col-md-6">
-                                            <label for="freq">Frequência de entrega </label>
-                                            <input type="number" min="1" max="999" name="form-valor"
-                                                   class="form-control" id="freq" placeholder="Frequência de entrega por semana" disabled>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="quant">Quantidade</label>
-                                            <input type="number" min="1" max="999" name="form-valor" class="form-control" id="quant" placeholder="Quantidade" disabled>
-                                        </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="freq">Tipo de embalagem </label>
+                                        <input type="text" class="form-control" placeholder="Tipo de embalagem"
+                                               disabled>
                                     </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6 ">
-                                            <label for="quant">Valor</label>
-                                            <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name" placeholder="Valor"
-                                                   class="form-first-name form-control" id="valor" disabled>
-                                                        <!-- <input type="number" min="1" max="999" name="form-valor" class="form-control" id="quant" placeholder="Quantidade">-->
-                                        </div>
-
-
-                                        <!--
-                                        <div class="form-group col-md-4">
-                                            <label for="quant">Frete</label>
-                                            <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name" placeholder="Frete"
-                                                   class="form-first-name form-control" id="frete">
-                                                        <!-- <input type="number" min="1" max="999" name="form-valor" class="form-control" id="quant" placeholder="Quantidade">-->
-                                       <!-- </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="quant">Valor Total</label>
-                                            <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name" placeholder="Valor Total"
-                                                   class="form-first-name form-control" id="valortot">
-                                                        <!-- <input type="number" min="1" max="999" name="form-valor" class="form-control" id="quant" placeholder="Quantidade">-->
-                                       <!-- </div>-->
-
-
+                                </div>
+                                <div class="form-row" id="espac1">
+                                    <div class="form-group col-md-6">
+                                        <label for="freq">Frequência de entrega </label>
+                                        <input type="number" min="1" max="999" name="form-valor"
+                                               class="form-control" id="freq"
+                                               placeholder="Frequência de entrega por semana" disabled>
                                     </div>
-                                    <div class="form-row" type="ent">
-                                        <div class="col-md-12 mb-3">
-                                            <label class="my-1 mr-2" for="diasEntrega">Dias de entrega</label>
-                                        </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="quant">Quantidade</label>
+                                        <input type="number" min="1" max="999" name="form-valor" class="form-control"
+                                               id="quant" placeholder="Quantidade" disabled>
                                     </div>
-                                    <div class="form-row" type="row1">
-                                        <div class="col-md-12 mb-3">
-                                            <div class="form-group">
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" value="" id="segunda" value="option1" disabled>
-                                                    <label class="form-check-label" type="lab1" for="inlineCheckbox1">
-                                                        Segunda-feira
-                                                    </label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" value="" id="terca" value="option2" disabled>
-                                                    <label class="form-check-label" type="lab1" for="inlineCheckbox1">
-                                                        Terça-feira
-                                                    </label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" value="" id="quarta" value="option3" disabled>
-                                                    <label class="form-check-label" type="lab1" for="inlineCheckbox1">
-                                                        Quarta-feira
-                                                    </label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" value="" id="quinta" value="option4" disabled>
-                                                    <label class="form-check-label" type="lab1" for="inlineCheckbox1">
-                                                        Quinta-feira
-                                                    </label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" value="" id="sexta" value="option5" disabled>
-                                                    <label class="form-check-label" type="lab1" for="inlineCheckbox1">
-                                                        Sexta-feira
-                                                    </label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" value="" id="sabado" value="option6" disabled>
-                                                    <label class="form-check-label" type="lab1" for="inlineCheckbox1">
-                                                        Sábado
-                                                    </label>
-                                                </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6 ">
+                                        <label for="quant">Valor</label>
+                                        <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name"
+                                               placeholder="Valor"
+                                               class="form-first-name form-control" id="valor" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-row" type="ent">
+                                    <div class="col-md-12 mb-3">
+                                        <label class="my-1 mr-2" for="diasEntrega">Dias de entrega</label>
+                                    </div>
+                                </div>
+                                <div class="form-row" type="row1">
+                                    <div class="col-md-12 mb-3">
+                                        <div class="form-group">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="segunda"
+                                                       value="option1" disabled>
+                                                <label class="form-check-label" type="lab1" for="segunda">
+                                                    Segunda-feira
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="terca"
+                                                       value="option2" disabled>
+                                                <label class="form-check-label" type="lab1" for="terca">
+                                                    Terça-feira
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="quarta"
+                                                       value="option3" disabled>
+                                                <label class="form-check-label" type="lab1" for="quarta">
+                                                    Quarta-feira
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="quinta"
+                                                       value="option4" disabled>
+                                                <label class="form-check-label" type="lab1" for="quinta">
+                                                    Quinta-feira
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="sexta"
+                                                       value="option5" disabled>
+                                                <label class="form-check-label" type="lab1" for="sexta">
+                                                    Sexta-feira
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="sabado"
+                                                       value="option6" disabled>
+                                                <label class="form-check-label" type="lab1" for="sabado">
+                                                    Sábado
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
-                                </fieldset>
-                            </form>
-                        </div>
+                                </div>
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-lg-12">
-                    <form>
-                        <fieldset class="endereco">
+            <div class="col-lg-12">
+                <form>
+                    <fieldset class="endereco">
 
-                            <label class="my-0 mr-2" style="font-size: 20px">Total <i class="fa fa-calculator"></i> </label>
-                            <div  class="pb-0" id="line"></div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6 ">
-                                    <label for="inputEmail4">Frete</label>
-                                    <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name" placeholder="Frete"
-                                           class="form-first-name form-control" id="frete" disabled>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="inputPassword4">Valor Total</label>
-                                    <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name" placeholder="Valor Total"
-                                           class="form-first-name form-control" id="valortot" disabled>
-                                </div>
+                        <label class="my-0 mr-2" style="font-size: 20px">Total <i class="fa fa-calculator"></i> </label>
+                        <div class="pb-0" id="line"></div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6 ">
+                                <label for="inputEmail4">Frete</label>
+                                <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name"
+                                       placeholder="Frete"
+                                       class="form-first-name form-control" id="frete" disabled>
                             </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Valor Total</label>
+                                <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name"
+                                       placeholder="Valor Total"
+                                       class="form-first-name form-control" id="valortot" disabled>
+                            </div>
+                        </div>
 
-                            <label class="my-0 mr-2" style="font-size: 20px" id="end">Endereço <i class="fas fa-map-marker-alt"></i></label>
-                            <div  class="pb-0" id="line"></div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <p style="color: #000000; font-size: 15px">Nome da rua, bairro, número</p>
-                                    <p style="color: #000000; font-size: 15px; margin-top: -15px">Cep, estado, cidade</p>
-                                </div>
+                        <label class="my-0 mr-2" style="font-size: 20px" id="end">Endereço <i
+                                class="fas fa-map-marker-alt"></i></label>
+                        <div class="pb-0" id="line"></div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <p style="color: #000000; font-size: 15px">Nome da rua, bairro, número</p>
+                                <p style="color: #000000; font-size: 15px; margin-top: -15px">Cep, estado, cidade</p>
                             </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <a href="#" >Voltar</a>
-                                </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <a href="#">Voltar</a>
                             </div>
-                        </fieldset>
-                    </form>
-                </div>
+                        </div>
+                    </fieldset>
+                </form>
             </div>
         </div>
-
+    </div>
 
 
     <!-- Footer -->
@@ -397,14 +385,13 @@
             <div class="row">
                 <div class="col">
 
-                    <div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
+                    <div
+                        class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                         <div class="copyright_content">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             Copyright &copy;<script>document.write(new Date().getFullYear());</script>
                             Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
                                                                                       aria-hidden="true"></i> pela <a
                                 href="#" target="_blank">Weiche Technologie</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </div>
                         <div class="logos ml-sm-auto">
                             <ul class="logos_list">

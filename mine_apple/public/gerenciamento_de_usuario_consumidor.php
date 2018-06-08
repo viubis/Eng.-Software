@@ -185,29 +185,29 @@
                                 </div>
                             </div>
 
-                                <div class="form-group">
-                                    <input id="userBloqueado" name="userBloqueado" type="checkbox" value="nao">
-                                    <label for="userBloqueado">Acesso negado a plataforma</label>
-                                </div>
+                            <div class="form-group">
+                                <input id="userBloqueado" name="userBloqueado" type="checkbox" value="nao">
+                                <label for="userBloqueado">Acesso negado a plataforma</label>
                             </div>
-                            <div class="form-row">
-                                <div class="form-group  col-md-10">
-                                    <label class="my-0 mr-2" style="font-size: 20px">Categoria </label>
-                                </div>
-                                <div class="form-group  col-md-2" align="right">
-                                    <!--                                <button type="submit" class="btn btn-primary">Atualizar</button>-->
-                                    <a href="#">Atualizar</a>
-                                </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group  col-md-10">
+                                <label class="my-0 mr-2" style="font-size: 20px">Categoria </label>
                             </div>
-                            <div class="pb-0" id="line" style="margin-top: -15px"></div>
-                            <div class="form-row">
-                                <div class="form-group  col-md-6">
-                                    <p style="color: #000000; font-size: 15px">Atual: consumidor</p>
-                                </div>
-                                <div class="form-group  col-md-3">
-                                    <a href="#">Alterar para produtor</a>
-                                </div>
+                            <div class="form-group  col-md-2" align="right">
+                                <!--                                <button type="submit" class="btn btn-primary">Atualizar</button>-->
+                                <a href="#">Atualizar</a>
                             </div>
+                        </div>
+                        <div class="pb-0" id="line" style="margin-top: -15px"></div>
+                        <div class="form-row">
+                            <div class="form-group  col-md-6">
+                                <p style="color: #000000; font-size: 15px">Atual: consumidor</p>
+                            </div>
+                            <div class="form-group  col-md-3">
+                                <a href="#">Alterar para produtor</a>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -272,12 +272,10 @@
                     <div
                         class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                         <div class="copyright_content">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             Copyright &copy;<script>document.write(new Date().getFullYear());</script>
                             Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
                                                                                       aria-hidden="true"></i> pela <a
                                 href="#" target="_blank">Weiche Technologie</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </div>
                         <div class="logos ml-sm-auto">
                             <ul class="logos_list">

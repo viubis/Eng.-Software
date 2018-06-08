@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <title>Mineapple</title>
     <meta charset="utf-8">
@@ -40,7 +40,7 @@
                     <div class="col d-flex flex-row">
                         <div class="top_bar_content ml-auto">
                             <div class="top_bar_user">
-                                <div class="user_icon"><img src="images/user.svg" alt=""></div>
+                                <div class="user_icon"><img src="images/iconUser.png" alt=""></div>
                                 <div><a href="#">Cadastrar</a></div>
                                 <div><a href="#">Login</a></div>
                             </div>
@@ -101,13 +101,6 @@
                     <!-- Wishlist -->
                     <div class="col-lg-2 col-9 order-lg-3 order-2 text-lg-left text-right">
                         <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
-                            <!-- <div class="wishlist d-flex flex-row align-items-center justify-content-end">
-                                <div class="wishlist_icon"><img src="images/heart.png" alt=""></div>
-                                <div class="wishlist_content">
-                                    <div class="wishlist_text"><a href="#">Favoritos</a></div>
-                                    <div class="wishlist_count">0</div>
-                                </div>
-                            </div> -->
 
                             <!-- Cart -->
                             <div class="cart">
@@ -116,13 +109,8 @@
                                         <a href="#">
                                             <i class="fa fa-shopping-basket fa-3x" style="color: #000000"></i>
                                         </a>
-                                        <!--<img src="images/carrinho.png" alt="">-->
                                         <div class="cart_count"><span>0</span></div>
                                     </div>
-                                    <!--<div class="cart_content">-->
-                                        <!--<div class="cart_text"><a href="#">Minha cesta</a></div>-->
-                                        <!--&lt;!&ndash; <div class="cart_price">0</div>  Modificado &ndash;&gt;-->
-                                    <!--</div>-->
                                 </div>
                             </div>
                         </div>
@@ -165,53 +153,8 @@
                             <div class="main_nav_menu ml-auto">
                                 <ul class="standard_dropdown main_nav_dropdown">
                                     <li><a href="#">Inicio<i class="fas fa-chevron-down"></i></a></li>
-                                    <!--<li><a href="#">Produtos<i class="fas fa-chevron-down"></i></a></li>-->
-                                    <!-- <li class="hassubs">
-                                        <a href="#">Produtos<i class="fas fa-chevron-down"></i></a>
-                                            <ul>
-                                                <li>
-                                                    <a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>
-                                                    <ul>
-                                                        <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-                                                        <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-                                                        <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-                                            </ul>
-                                        </li>
-                                         <li class="hassubs">
-                                            <a href="#">Destaques<i class="fas fa-chevron-down"></i></a>
-                                            <ul>
-                                                <li>
-                                                    <a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>
-                                                    <ul>
-                                                        <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-                                                        <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-                                                        <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="hassubs">
-                                            <a href="#">Pages<i class="fas fa-chevron-down"></i></a>
-                                            <ul>
-                                                <li><a href="shop.html">Shop<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="product.html">Product<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="blog_single.html">Blog Post<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="regular.html">Regular Post<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="cart.html">Cart<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="fale_conosco.html">Contact<i class="fas fa-chevron-down"></i></a></li>
-                                            </ul>
-                                        </li> -->
-                                    <li><a href="blog.html">Sobre<i class="fas fa-chevron-down"></i></a></li>
-                                    <li><a href="fale_conosco.html">Fale Conosco<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="#">Sobre<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="#">Fale Conosco<i class="fas fa-chevron-down"></i></a></li>
                                 </ul>
                             </div>
 
@@ -263,16 +206,6 @@
                                     <a href="#">Fale Conosco<i class="fa fa-angle-down"></i></a>
                                 </li>
                             </ul>
-
-                           <!-- <div class="menu_contact">
-                                <div class="menu_contact_item">
-                                    <div class="menu_contact_icon"><img src="images/phone_white.png" alt=""></div>
-                                    +38 068 005 3570
-                                </div>
-                                <div class="menu_contact_item">
-                                    <div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div>
-                                    <a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>
-                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -287,13 +220,11 @@
         <div class="banner_background" style="background-image:url(images/banner_background.jpg)"></div>
         <div class="container fill_height">
             <div class="row fill_height">
-                <div class="banner_product_image"><img src="images/banner_product.jpg" alt=""></div>
+                <div class="banner_product_image"><img src="images/banner_product.png" alt=""></div>
                 <div class="col-lg-5 offset-lg-4 fill_height">
                     <div class="banner_content">
-                        <!-- <h1 class="banner_text"></h1> -->
                         <div class="banner_price"><span></span></div>
                         <div class="banner_product_name"></div>
-                        <!--<div class="button banner_button"><a href="#">Comprar</a></div> -->
                     </div>
                 </div>
             </div>
@@ -325,7 +256,6 @@
                                     <div class="deals_content">
                                         <div class="deals_info_line d-flex flex-row justify-content-start">
                                             <div class="deals_item_category"><a href="#">Frutas</a></div>
-                                            <!--<div class="deals_item_price_a ml-auto">$300</div>-->
                                         </div>
                                         <div class="deals_info_line d-flex flex-row justify-content-start">
                                             <div class="deals_item_name">Abacaxi</div>
@@ -338,7 +268,8 @@
                                             </div>
                                             <div class="available_bar"><span style="width:17%"></span></div>
                                         </div>
-                                        <div class="deals_timer d-flex flex-row align-items-center justify-content-start">
+                                        <div
+                                            class="deals_timer d-flex flex-row align-items-center justify-content-start">
                                             <div class="deals_timer_title_container">
                                                 <div class="deals_timer_title">Ande logo</div>
                                                 <div class="deals_timer_subtitle">Oferta acaba em:</div>
@@ -369,7 +300,6 @@
                                     <div class="deals_content">
                                         <div class="deals_info_line d-flex flex-row justify-content-start">
                                             <div class="deals_item_category"><a href="#">Frutas</a></div>
-                                            <!--<div class="deals_item_price_a ml-auto">$300</div>-->
                                         </div>
                                         <div class="deals_info_line d-flex flex-row justify-content-start">
                                             <div class="deals_item_name">Maçã</div>
@@ -382,7 +312,8 @@
                                             </div>
                                             <div class="available_bar"><span style="width:17%"></span></div>
                                         </div>
-                                        <div class="deals_timer d-flex flex-row align-items-center justify-content-start">
+                                        <div
+                                            class="deals_timer d-flex flex-row align-items-center justify-content-start">
                                             <div class="deals_timer_title_container">
                                                 <div class="deals_timer_title">Ande logo</div>
                                                 <div class="deals_timer_subtitle">Oferta acaba em:</div>
@@ -413,7 +344,6 @@
                                     <div class="deals_content">
                                         <div class="deals_info_line d-flex flex-row justify-content-start">
                                             <div class="deals_item_category"><a href="#">Frutas</a></div>
-                                            <!--<div class="deals_item_price_a ml-auto">$300</div>-->
                                         </div>
                                         <div class="deals_info_line d-flex flex-row justify-content-start">
                                             <div class="deals_item_name">Laranja</div>
@@ -426,7 +356,8 @@
                                             </div>
                                             <div class="available_bar"><span style="width:17%"></span></div>
                                         </div>
-                                        <div class="deals_timer d-flex flex-row align-items-center justify-content-start">
+                                        <div
+                                            class="deals_timer d-flex flex-row align-items-center justify-content-start">
                                             <div class="deals_timer_title_container">
                                                 <div class="deals_timer_title">Ande logo</div>
                                                 <div class="deals_timer_subtitle">Oferta acaba em:</div>
@@ -480,22 +411,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/banana.jpg" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 7,00<span>duzia</span></div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Banana</a></div>
+                                                    <div><a href="#">Banana</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Adicionar ao Carrinho</button>
                                                 </div>
@@ -511,22 +447,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/cenoura1.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 3,00<span>Kg</span></div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Cenoura</a></div>
+                                                    <div><a href="#">Cenoura</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button active">Adicionar ao carrinho
                                                     </button>
@@ -543,22 +484,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/pera.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 1,00<span>unid.</span></div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Pêra</a></div>
+                                                    <div><a href="#">Pêra</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
@@ -574,22 +520,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/abobora.jpg" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 5,00<span>unid.</span></div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Abóbora</a></div>
+                                                    <div><a href="#">Abóbora</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
@@ -605,22 +556,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/batata-inglesa.jpg" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 3,00<span>Kg</span></div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Batata inglesa</a></div>
+                                                    <div><a href="#">Batata inglesa</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
@@ -636,22 +592,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/chuchu.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 2,00<span>Kg</span></div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Chuchu</a></div>
+                                                    <div><a href="#">Chuchu</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
@@ -667,22 +628,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/pimentao.jpg" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 1,00<span>unid.</span></div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Pimentão Vermelho</a></div>
+                                                    <div><a href="#">Pimentão Vermelho</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
@@ -698,22 +664,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/tomate.jpg" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 4,00<span>Kg</span></div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Tomate</a></div>
+                                                    <div><a href="#">Tomate</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
@@ -729,22 +700,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_1.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -760,22 +736,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_2.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -791,22 +772,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_3.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -822,22 +808,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_4.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -853,22 +844,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_5.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -884,22 +880,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_6.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -915,22 +916,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_7.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -946,22 +952,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_8.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -986,22 +997,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_1.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">$225<span>$300</span></div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1017,22 +1033,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_2.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Apple iPod shuffle</a></div>
+                                                    <div><a href="#">Apple iPod shuffle</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button active">Add to Cart</button>
                                                 </div>
@@ -1048,22 +1069,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_3.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Sony MDRZX310W</a></div>
+                                                    <div><a href="#">Sony MDRZX310W</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1079,22 +1105,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_4.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">$225<span>$300</span></div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">LUNA Smartphone</a></div>
+                                                    <div><a href="#">LUNA Smartphone</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1110,22 +1141,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_5.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Canon STM Kit...</a></div>
+                                                    <div><a href="#">Canon STM Kit...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1141,22 +1177,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_6.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Samsung J330F...</a></div>
+                                                    <div><a href="#">Samsung J330F...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1172,22 +1213,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_7.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Lenovo IdeaPad</a></div>
+                                                    <div><a href="#">Lenovo IdeaPad</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1203,22 +1249,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_8.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Digitus EDNET...</a></div>
+                                                    <div><a href="#">Digitus EDNET...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1234,22 +1285,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_1.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1265,22 +1321,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_2.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1296,22 +1357,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_3.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1327,22 +1393,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_4.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1358,22 +1429,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_5.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1389,22 +1465,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_6.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1420,22 +1501,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_7.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1451,22 +1537,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_8.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1491,22 +1582,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_1.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">$225<span>$300</span></div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1522,22 +1618,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_2.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Apple iPod shuffle</a></div>
+                                                    <div><a href="#">Apple iPod shuffle</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button active">Add to Cart</button>
                                                 </div>
@@ -1553,22 +1654,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_3.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Sony MDRZX310W</a></div>
+                                                    <div><a href="#">Sony MDRZX310W</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1584,22 +1690,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_4.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">$225<span>$300</span></div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">LUNA Smartphone</a></div>
+                                                    <div><a href="#">LUNA Smartphone</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1615,22 +1726,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_5.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Canon STM Kit...</a></div>
+                                                    <div><a href="#">Canon STM Kit...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1646,22 +1762,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_6.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Samsung J330F...</a></div>
+                                                    <div><a href="#">Samsung J330F...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1677,22 +1798,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_7.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Lenovo IdeaPad</a></div>
+                                                    <div><a href="#">Lenovo IdeaPad</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1708,22 +1834,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_8.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Digitus EDNET...</a></div>
+                                                    <div><a href="#">Digitus EDNET...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1739,22 +1870,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_1.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1770,22 +1906,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_2.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1801,22 +1942,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_3.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1832,22 +1978,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_4.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1863,22 +2014,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_5.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1894,22 +2050,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_6.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1925,22 +2086,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_7.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1956,22 +2122,27 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="images/featured_8.png" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
-                                                    <div><a href="product.html">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
+                                                        <label class="sr-only" for="pc1">Product color 1</label>
                                                         <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83">
+                                                               style="background:#b19c83" id="pc1">
+                                                        <label class="sr-only" for="pc2">Product color 2</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#000000">
+                                                               style="background:#000000" id="pc2">
+                                                        <label class="sr-only" for="pc3">Product color 3</label>
                                                         <input type="radio" name="product_color"
-                                                               style="background:#999999">
+                                                               style="background:#999999" id="pc3">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -2023,7 +2194,8 @@
 
                             <!-- Popular Categories Item -->
                             <div class="owl-item">
-                                <div class="popular_category d-flex flex-column align-items-center justify-content-center">
+                                <div
+                                    class="popular_category d-flex flex-column align-items-center justify-content-center">
                                     <div class="popular_category_image"><img src="images/popular_1.png" alt=""></div>
                                     <div class="popular_category_text">Frutas</div>
                                 </div>
@@ -2031,7 +2203,8 @@
 
                             <!-- Popular Categories Item -->
                             <div class="owl-item">
-                                <div class="popular_category d-flex flex-column align-items-center justify-content-center">
+                                <div
+                                    class="popular_category d-flex flex-column align-items-center justify-content-center">
                                     <div class="popular_category_image"><img src="images/popular_2.png" alt=""></div>
                                     <div class="popular_category_text">Legumes</div>
                                 </div>
@@ -2039,7 +2212,8 @@
 
                             <!-- Popular Categories Item -->
                             <div class="owl-item">
-                                <div class="popular_category d-flex flex-column align-items-center justify-content-center">
+                                <div
+                                    class="popular_category d-flex flex-column align-items-center justify-content-center">
                                     <div class="popular_category_image"><img src="images/popular_3.png" alt=""></div>
                                     <div class="popular_category_text">Tubérculos</div>
                                 </div>
@@ -2047,7 +2221,8 @@
 
                             <!-- Popular Categories Item -->
                             <div class="owl-item">
-                                <div class="popular_category d-flex flex-column align-items-center justify-content-center">
+                                <div
+                                    class="popular_category d-flex flex-column align-items-center justify-content-center">
                                     <div class="popular_category_image"><img src="images/popular_4.png" alt=""></div>
                                     <div class="popular_category_text">Leguminosas</div>
                                 </div>
@@ -2055,7 +2230,8 @@
 
                             <!-- Popular Categories Item -->
                             <div class="owl-item">
-                                <div class="popular_category d-flex flex-column align-items-center justify-content-center">
+                                <div
+                                    class="popular_category d-flex flex-column align-items-center justify-content-center">
                                     <div class="popular_category_image"><img src="images/popular_5.png" alt=""></div>
                                     <div class="popular_category_text">Cereais</div>
                                 </div>
@@ -2102,11 +2278,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item discount">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/abacate.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Fruta</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Abacate</a></div>
+                                            <div class="bestsellers_name"><a href="#">Abacate</a></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
                                             <div class="bestsellers_price discount">R$ 2,50<span>Kg</span></div>
@@ -2121,11 +2298,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item discount">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/morango.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Fruta</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Morango</a></div>
+                                            <div class="bestsellers_name"><a href="#">Morango</a></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
                                             <div class="bestsellers_price discount">R$ 8,99<span>bandeja</span></div>
@@ -2140,11 +2318,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/uva-verde.jpg" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Fruta</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Uva Verde</a></div>
+                                            <div class="bestsellers_name"><a href="#">Uva Verde</a></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
                                             <div class="bestsellers_price discount">R$ 3,00<span>Kg</span></div>
@@ -2159,11 +2338,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/banana.jpg" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Fruta</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Banana</a></div>
+                                            <div class="bestsellers_name"><a href="#">Banana</a></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
                                             <div class="bestsellers_price discount">R$ 7,00<span>duzia</span></div>
@@ -2178,11 +2358,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item discount">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/abobora.jpg" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Legume</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Abóbora</a></div>
+                                            <div class="bestsellers_name"><a href="#">Abóbora</a></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
                                             <div class="bestsellers_price discount">R$ 5,00<span>unid</span></div>
@@ -2197,11 +2378,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/couve-flor.jpg" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Hortaliça</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Couve-flor</a></div>
+                                            <div class="bestsellers_name"><a href="#">Couve-flor</a></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
                                             <div class="bestsellers_price discount">R$ 6,00<span>unid</span></div>
@@ -2216,11 +2398,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item discount">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/chuchu.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Verdura</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Chuchu</a></div>
+                                            <div class="bestsellers_name"><a href="#">Chuchu</a></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
                                             <div class="bestsellers_price discount">R$ 2,00<span>Kg</span></div>
@@ -2235,11 +2418,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item discount">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/amora.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Fruta</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Amora</a></div>
+                                            <div class="bestsellers_name"><a href="#">Amora</a></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
                                             <div class="bestsellers_price discount">R$ 10,00<span>Kg</span></div>
@@ -2254,11 +2438,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/berinjela.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Legume</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Berinjela</a></div>
+                                            <div class="bestsellers_name"><a href="#">Berinjela</a></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
                                             <div class="bestsellers_price discount">R$ 3,99<span>Kg</span></div>
@@ -2273,11 +2458,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/beterraba.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Raiz</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Beterraba</a></div>
+                                            <div class="bestsellers_name"><a href="#">Beterraba</a></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
                                             <div class="bestsellers_price discount">R$ 4,99<span>Kg</span></div>
@@ -2292,11 +2478,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item discount">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/brocolis.jpg" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Hortaliça</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Brócolis</a></div>
+                                            <div class="bestsellers_name"><a href="#">Brócolis</a></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
                                             <div class="bestsellers_price discount">R$ 10,00<span>unid.</span></div>
@@ -2311,11 +2498,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/inhame.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Raiz</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Inhame</a></div>
+                                            <div class="bestsellers_name"><a href="#">Inhame</a></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
                                             <div class="bestsellers_price discount">R$ 5,00<span>Kg</span></div>
@@ -2339,11 +2527,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item discount">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/morango.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Frutas</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Morango</a></div>
+                                            <div class="bestsellers_name"><a href="#">Morango</a></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
                                             <div class="bestsellers_price discount">R$ 8,99<span>bandeja</span></div>
@@ -2358,11 +2547,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item discount">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_2.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2378,11 +2568,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_3.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2398,11 +2589,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_4.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2418,11 +2610,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item discount">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_5.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2438,11 +2631,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_6.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2458,11 +2652,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item discount">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_1.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2478,11 +2673,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item discount">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_2.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2498,11 +2694,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_3.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2518,11 +2715,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_4.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2538,11 +2736,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item discount">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_5.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2558,11 +2757,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_6.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2587,11 +2787,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item discount">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_1.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2607,11 +2808,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item discount">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_2.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2627,11 +2829,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_3.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2647,11 +2850,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_4.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2667,11 +2871,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item discount">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_5.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2687,11 +2892,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_6.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2707,11 +2913,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item discount">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_1.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2727,11 +2934,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item discount">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_2.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2747,11 +2955,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_3.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2767,11 +2976,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_4.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2787,11 +2997,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item discount">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/best_5.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2807,11 +3018,12 @@
 
                                 <!-- Best Sellers Item -->
                                 <div class="bestsellers_item">
-                                    <div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
                                         <div class="bestsellers_image"><img src="images/abacaxi.png" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
                                             </div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
@@ -2833,14 +3045,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Adverts -->
-
-
-    <!-- Trends -->
-
-
-    <!-- Reviews -->
 
 
     <!-- Recently Viewed -->
@@ -2865,7 +3069,8 @@
 
                             <!-- Recently Viewed Item -->
                             <div class="owl-item">
-                                <div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                <div
+                                    class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
                                     <div class="viewed_image"><img src="images/banana.jpg" alt=""></div>
                                     <div class="viewed_content text-center">
                                         <div class="viewed_price">R$ 7,00<span>duzia</span></div>
@@ -2880,7 +3085,8 @@
 
                             <!-- Recently Viewed Item -->
                             <div class="owl-item">
-                                <div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+                                <div
+                                    class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
                                     <div class="viewed_image"><img src="images/abacaxi.png" alt=""></div>
                                     <div class="viewed_content text-center">
                                         <div class="viewed_price">R$ 3,00</div>
@@ -2895,7 +3101,8 @@
 
                             <!-- Recently Viewed Item -->
                             <div class="owl-item">
-                                <div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+                                <div
+                                    class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
                                     <div class="viewed_image"><img src="images/tomate.jpg" alt=""></div>
                                     <div class="viewed_content text-center">
                                         <div class="viewed_price">R$ 4,00</div>
@@ -2910,7 +3117,8 @@
 
                             <!-- Recently Viewed Item -->
                             <div class="owl-item">
-                                <div class="viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+                                <div
+                                    class="viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
                                     <div class="viewed_image"><img src="images/pimentao.jpg" alt=""></div>
                                     <div class="viewed_content text-center">
                                         <div class="viewed_price">R$ 1,00</div>
@@ -2925,7 +3133,8 @@
 
                             <!-- Recently Viewed Item -->
                             <div class="owl-item">
-                                <div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                <div
+                                    class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
                                     <div class="viewed_image"><img src="images/abobora.jpg" alt=""></div>
                                     <div class="viewed_content text-center">
                                         <div class="viewed_price">R$ 5,00<span>unid.</span></div>
@@ -2940,7 +3149,8 @@
 
                             <!-- Recently Viewed Item -->
                             <div class="owl-item">
-                                <div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+                                <div
+                                    class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
                                     <div class="viewed_image"><img src="images/pera.png" alt=""></div>
                                     <div class="viewed_content text-center">
                                         <div class="viewed_price">R$ 1,00</div>
@@ -2952,34 +3162,6 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Brands -->
-
-
-    <!-- Newsletter -->
-
-    <!--div class="newsletter">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="newsletter_container d-flex flex-lg-row flex-column align-items-lg-center align-items-center justify-content-lg-start justify-content-center">
-                        <div class="newsletter_title_container">
-                            <div class="newsletter_icon"><img src="images/send.png" alt=""></div>
-                            <div class="newsletter_title">Sign up for Newsletter</div>
-                            <div class="newsletter_text"><p>...and receive %20 coupon for first shopping.</p></div>
-                        </div>
-                        <div class="newsletter_content clearfix">
-                            <form action="#" class="newsletter_form">
-                                <input type="email" class="newsletter_input" required="required" placeholder="Enter your email address">
-                                <button class="newsletter_button">Subscribe</button>
-                            </form>
-                            <div class="newsletter_unsubscribe_link"><a href="#">unsubscribe</a></div>
                         </div>
                     </div>
                 </div>
@@ -3015,36 +3197,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!--div class="col-lg-2 offset-lg-2">
-                    <div class="footer_column">
-                        <div class="footer_title">Find it Fast</div>
-                        <ul class="footer_list">
-                            <li><a href="#">Computers & Laptops</a></li>
-                            <li><a href="#">Cameras & Photos</a></li>
-                            <li><a href="#">Hardware</a></li>
-                            <li><a href="#">Smartphones & Tablets</a></li>
-                            <li><a href="#">TV & Audio</a></li>
-                        </ul>
-                        <div class="footer_subtitle">Gadgets</div>
-                        <ul class="footer_list">
-                            <li><a href="#">Car Electronics</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-2">
-                    <div class="footer_column">
-                        <ul class="footer_list footer_list_2">
-                            <li><a href="#">Video Games & Consoles</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="#">Cameras & Photos</a></li>
-                            <li><a href="#">Hardware</a></li>
-                            <li><a href="#">Computers & Laptops</a></li>
-                        </ul>
-                    </div>
-                </div-->
-
                 <div class="col-lg-2">
                     <div class="footer_column">
                         <div class="footer_title">Serviços</div>
@@ -3069,14 +3221,13 @@
             <div class="row">
                 <div class="col">
 
-                    <div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
+                    <div
+                        class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                         <div class="copyright_content">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             Copyright &copy;<script>document.write(new Date().getFullYear());</script>
                             Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
                                                                                       aria-hidden="true"></i> pela <a
                                 href="#" target="_blank">Weiche Technologie</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </div>
                         <div class="logos ml-sm-auto">
                             <ul class="logos_list">
