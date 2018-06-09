@@ -27,7 +27,7 @@
 
 @media only screen and (max-width: 1600px)
 {
-	
+
 }
 
 /************
@@ -36,7 +36,7 @@
 
 @media only screen and (max-width: 1440px)
 {
-	
+
 }
 
 /************
@@ -45,7 +45,7 @@
 
 @media only screen and (max-width: 1380px)
 {
-	
+
 }
 
 /************
@@ -54,7 +54,7 @@
 
 @media only screen and (max-width: 1280px)
 {
-	
+
 }
 
 /************
@@ -112,7 +112,7 @@
 
 @media only screen and (max-width: 1100px)
 {
-	
+
 }
 
 /************
@@ -121,7 +121,7 @@
 
 @media only screen and (max-width: 1024px)
 {
-	
+
 }
 
 /************
@@ -283,7 +283,7 @@
 
 @media only screen and (max-width: 959px)
 {
-	
+
 }
 
 /************
@@ -292,7 +292,7 @@
 
 @media only screen and (max-width: 880px)
 {
-	
+
 }
 
 /************
@@ -301,7 +301,7 @@
 
 @media only screen and (max-width: 768px)
 {
-	
+
 }
 
 /************
@@ -361,13 +361,13 @@
 	}
 	.banner_2_image
 	{
-		position: relative; 
-		top: auto; 
-		-webkit-transform: none; 
-		-moz-transform: none; 
-		-ms-transform: none; 
-		-o-transform: none; 
-		transform: none; 
+		position: relative;
+		top: auto;
+		-webkit-transform: none;
+		-moz-transform: none;
+		-ms-transform: none;
+		-o-transform: none;
+		transform: none;
 	}
 	.banner_2_dots
 	{
@@ -563,7 +563,7 @@
 	{
 		top: 13px;
 	}
-	.banner_product_name 
+	.banner_product_name
 	{
 		font-size: 13px;
 	}
@@ -672,13 +672,13 @@
 	{
 		position: relative;
 		width: 40px;
-		top: auto; 
-		-webkit-transform: translate(-50%, 0px); 
-		-moz-transform: translate(-50%, 0px); 
-		-ms-transform: translate(-50%, 0px); 
-		-o-transform: translate(-50%, 0px); 
-		transform: translate(-50%, 0px); 
-		left: 50%; 
+		top: auto;
+		-webkit-transform: translate(-50%, 0px);
+		-moz-transform: translate(-50%, 0px);
+		-ms-transform: translate(-50%, 0px);
+		-o-transform: translate(-50%, 0px);
+		transform: translate(-50%, 0px);
+		left: 50%;
 		margin-bottom: 20px;
 	}
 	.newsletter_button
@@ -725,9 +725,9 @@
 	.newsletter_input::-moz-placeholder
 	{
 		font-size: 13px;
-	} 
+	}
 	.newsletter_input:-ms-input-placeholder
-	{ 
+	{
 		font-size: 13px;
 	}
 	.newsletter_input::input-placeholder
@@ -788,7 +788,7 @@
 
 @media only screen and (max-width: 539px)
 {
-	
+
 }
 
 /************
@@ -797,7 +797,7 @@
 
 @media only screen and (max-width: 480px)
 {
-	
+
 }
 
 /************
@@ -806,7 +806,7 @@
 
 @media only screen and (max-width: 479px)
 {
-	
+
 }
 
 /************
@@ -815,5 +815,5 @@
 
 @media only screen and (max-width: 400px)
 {
-	
+
 }

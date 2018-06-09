@@ -57,9 +57,9 @@
                 <div class="row">
 
                     <!-- Logo -->
-                    <div class="col-lg-4 col-sm-3 col-3 order-1">
+                    <div class="col-lg-4 col-sm-3 col-3 order-1 pt-3 pb-0">
                         <div class="logo_container">
-                            <div class="logo_icon"><img src="images/logoSite.png" class="img-fluid" alt=""></div>
+                            <div class="logo_icon"><img src="images/logoSite2.png" class="img-fluid" alt=""></div>
 
                         </div>
                     </div>
@@ -99,9 +99,8 @@
                     </div>
 
                     <!-- Wishlist -->
-                    <div class="col-lg-2 col-9 order-lg-3 order-2 text-lg-left text-right">
+                    <div class="col-lg-2 col-9 order-lg-3 order-2 text-lg-left text-right pb-0 pt-0">
                         <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
-
                             <!-- Cart -->
                             <div class="cart">
                                 <div class="cart_container d-flex flex-row align-items-center justify-content-end">
@@ -192,12 +191,8 @@
                                 </form>
                             </div>
                             <ul class="page_menu_nav">
-
                                 <li class="page_menu_item">
                                     <a href="#">Inicio<i class="fa fa-angle-down"></i></a>
-                                </li>
-                                <li class="page_menu_item">
-                                    <a href="#">Produtos<i class="fa fa-angle-down"></i></a>
                                 </li>
                                 <li class="page_menu_item">
                                     <a href="#">Sobre<i class="fa fa-angle-down"></i></a>
@@ -216,19 +211,43 @@
 
     <!-- Banner -->
 
-    <div class="banner">
-        <div class="banner_background" style="background-image:url(images/banner_background.jpg)"></div>
-        <div class="container fill_height">
-            <div class="row fill_height">
-                <div class="banner_product_image"><img src="images/banner_product.png" alt=""></div>
-                <div class="col-lg-5 offset-lg-4 fill_height">
-                    <div class="banner_content">
-                        <div class="banner_price"><span></span></div>
-                        <div class="banner_product_name"></div>
-                    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 100%; height: 400px; overflow: hidden">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="images/banner_background.jpg" alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Produto 1</h5>
+                    <p>Valor do produto 1</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/banner_background.jpg" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Produto 2</h5>
+                    <p>Valor do produto 2</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/banner_background.jpg" alt="Third slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Produto 3</h5>
+                    <p>Valor do produto 3</p>
                 </div>
             </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
     </div>
 
     <!-- Characteristics -->
@@ -422,17 +441,6 @@
                                                     <div><a href="#">Banana</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Adicionar ao Carrinho</button>
                                                 </div>
                                             </div>
@@ -458,17 +466,6 @@
                                                     <div><a href="#">Cenoura</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button active">Adicionar ao carrinho
                                                     </button>
                                                 </div>
@@ -495,17 +492,6 @@
                                                     <div><a href="#">Pêra</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
@@ -531,17 +517,6 @@
                                                     <div><a href="#">Abóbora</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
@@ -567,17 +542,6 @@
                                                     <div><a href="#">Batata inglesa</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
@@ -603,17 +567,6 @@
                                                     <div><a href="#">Chuchu</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
@@ -639,17 +592,6 @@
                                                     <div><a href="#">Pimentão Vermelho</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
@@ -675,17 +617,6 @@
                                                     <div><a href="#">Tomate</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
@@ -711,17 +642,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -747,17 +667,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -783,17 +692,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -819,17 +717,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -855,17 +742,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -891,17 +767,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -927,17 +792,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -963,17 +817,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1008,17 +851,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1044,17 +876,6 @@
                                                     <div><a href="#">Apple iPod shuffle</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button active">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1080,17 +901,6 @@
                                                     <div><a href="#">Sony MDRZX310W</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1116,17 +926,6 @@
                                                     <div><a href="#">LUNA Smartphone</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1152,17 +951,6 @@
                                                     <div><a href="#">Canon STM Kit...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1188,17 +976,6 @@
                                                     <div><a href="#">Samsung J330F...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1224,17 +1001,6 @@
                                                     <div><a href="#">Lenovo IdeaPad</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1260,17 +1026,6 @@
                                                     <div><a href="#">Digitus EDNET...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1296,17 +1051,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1332,17 +1076,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1368,17 +1101,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1404,17 +1126,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1440,17 +1151,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1476,17 +1176,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1512,17 +1201,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1548,17 +1226,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1593,17 +1260,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1629,17 +1285,6 @@
                                                     <div><a href="#">Apple iPod shuffle</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button active">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1665,17 +1310,6 @@
                                                     <div><a href="#">Sony MDRZX310W</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1701,17 +1335,6 @@
                                                     <div><a href="#">LUNA Smartphone</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1737,17 +1360,6 @@
                                                     <div><a href="#">Canon STM Kit...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1773,17 +1385,6 @@
                                                     <div><a href="#">Samsung J330F...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1809,17 +1410,6 @@
                                                     <div><a href="#">Lenovo IdeaPad</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1845,17 +1435,6 @@
                                                     <div><a href="#">Digitus EDNET...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1881,17 +1460,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1917,17 +1485,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1953,17 +1510,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -1989,17 +1535,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -2025,17 +1560,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -2061,17 +1585,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -2097,17 +1610,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -2133,17 +1635,6 @@
                                                     <div><a href="#">Huawei MediaPad...</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <div class="product_color">
-                                                        <label class="sr-only" for="pc1">Product color 1</label>
-                                                        <input type="radio" checked name="product_color"
-                                                               style="background:#b19c83" id="pc1">
-                                                        <label class="sr-only" for="pc2">Product color 2</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#000000" id="pc2">
-                                                        <label class="sr-only" for="pc3">Product color 3</label>
-                                                        <input type="radio" name="product_color"
-                                                               style="background:#999999" id="pc3">
-                                                    </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
@@ -3256,6 +2747,9 @@
 <script src="plugins/slick-1.8.0/slick.js"></script>
 <script src="plugins/easing/easing.js"></script>
 <script src="js/custom.js"></script>
+
+
+
 </body>
 
 </html>
