@@ -24,8 +24,8 @@ class CreateProdutoTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('categoria_id');
-            $table->integer('produtor_id');
+            $table->integer('categoria_id')->unsigned();
+            $table->integer('produtor_id')->unsigned();
             $table->string('nome');
             $table->string('descricao')->nullable();
             $table->double('valor');

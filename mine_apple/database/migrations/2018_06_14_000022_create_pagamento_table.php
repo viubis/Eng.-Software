@@ -24,10 +24,10 @@ class CreatePagamentoTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('consumidor_id');
-            $table->integer('compra_id');
-            $table->integer('assinatura_id');
-            $table->integer('cartao_id');
+            $table->integer('consumidor_id')->unsigned();
+            $table->integer('compra_id')->unsigned();
+            $table->integer('assinatura_id')->unsigned();
+            $table->integer('cartao_id')->unsigned();
             $table->date('data');
             $table->time('hora');
             $table->double('valor');

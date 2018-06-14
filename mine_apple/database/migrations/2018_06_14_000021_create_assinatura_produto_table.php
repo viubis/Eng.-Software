@@ -24,11 +24,11 @@ class CreateAssinaturaProdutoTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('assinatura_id');
-            $table->integer('compra_id');
-            $table->integer('consumidor_id');
-            $table->integer('produto_id');
-            $table->integer('categoria_id');
-            $table->integer('produtor_id');
+            $table->integer('compra_id')->unsigned();
+            $table->integer('consumidor_id')->unsigned();
+            $table->integer('produto_id')->unsigned();
+            $table->integer('categoria_id')->unsigned();
+            $table->integer('produtor_id')->unsigned();
             $table->integer('quantidade');
             $table->integer('frequencia');
             $table->boolean('seg');

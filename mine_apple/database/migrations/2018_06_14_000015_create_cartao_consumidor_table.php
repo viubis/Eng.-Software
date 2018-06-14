@@ -24,7 +24,7 @@ class CreateCartaoConsumidorTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('cartao_id');
-            $table->integer('consumidor_id');
+            $table->integer('consumidor_id')->unsigned();
 
             $table->index(["cartao_id"], 'fk_cartao_consumidor_cartao1_idx');
 
