@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace mine_apple\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\Event' => [
-            'App\Listeners\EventListener',
+        'mine_apple\Events\Event' => [
+            'mine_apple\Listeners\EventListener',
         ],
     ];
 
