@@ -1,14 +1,12 @@
 <?php
 
-namespace App;
+namespace mine_apple;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Banco extends Model
 {
-    protected $tabela = 'banco';
-    protected$campos = [
-    	'id',
-    	'nome'
-    ];
+    protected $table = 'banco';
+    protected $guarded = ['id'];
+    public $timestamps = false;
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace mine_apple\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
