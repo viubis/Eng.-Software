@@ -6,10 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cidade extends Model
 {
-    protected $tabela = 'cidade';
-    protected$campos = [
-    	'idCidade',
-        'nome',
-        'sigla'
-    ];
+    protected $table = 'cidade';
+    protected $guarded = ['id'];
+    public $timestamps = false;
 }

@@ -6,9 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Administrador extends Model
 {
-    protected $tabela = 'administrador';
-    protected$campos = [
-    	'id',
-    	'nome'
-    ];
+    protected $table = 'administrador';
+    protected $guarded = ['id'];
+    public $timestamps = false;
 }

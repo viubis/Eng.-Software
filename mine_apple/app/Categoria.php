@@ -6,9 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Categoria extends Model
 {
-    protected $tabela = 'categoria';
-    protected$campos = [
-    	'id',
-    	'nome'
-    ];
+    protected $table = 'categoria';
+    protected $guarded = ['id'];
+    public $timestamps = false;
 }

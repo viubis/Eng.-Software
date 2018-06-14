@@ -1,6 +1,6 @@
 <?php
 
-namespace mine_apple;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 

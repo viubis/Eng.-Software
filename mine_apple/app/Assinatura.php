@@ -1,12 +1,14 @@
-<?php namespace mine_apple;
+<?php 
+
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Assinatura extends Model {
-
-    protected $tabel = 'assinatura';
-    public $timestamps = false
+class Assinatura extends Model 
+{
+    protected $table = 'assinatura';
     protected $guarded = ['id'];
+    public $timestamps = false;
 
     public function produtor() {
     	return $this->hasOne('App/Pordutor', 'foreign_key');
@@ -23,5 +25,4 @@ class Assinatura extends Model {
     public function avaliacao() {
     	return $this->hasMany('App/Avaliacao', 'foreign_key');
     }	
-
 }
