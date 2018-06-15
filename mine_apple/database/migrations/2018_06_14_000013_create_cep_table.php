@@ -24,8 +24,8 @@ class CreateCepTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('cidade_id');
-            $table->integer('estado_id');
+            $table->integer('cidade_id')->unsigned();
+            $table->integer('estado_id')->unsigned();
             $table->string('numero');
 
             $table->index(["cidade_id", "estado_id"], 'fk_cep_cidade1_idx');

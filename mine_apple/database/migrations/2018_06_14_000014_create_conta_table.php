@@ -24,8 +24,8 @@ class CreateContaTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('banco_id');
-            $table->integer('produtor_id');
+            $table->integer('banco_id')->unsigned();
+            $table->integer('produtor_id')->unsigned();
             $table->integer('numero');
             $table->integer('agencia');
             $table->integer('digito');

@@ -24,11 +24,11 @@ class CreateCompraTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('consumidor_id');
-            $table->integer('endereco_id');
-            $table->integer('cep_id');
-            $table->integer('cidade_id');
-            $table->integer('estado_id');
+            $table->integer('consumidor_id')->unsigned();
+            $table->integer('endereco_id')->unsigned();
+            $table->integer('cep_id')->unsigned();
+            $table->integer('cidade_id')->unsigned();
+            $table->integer('estado_id')->unsigned();
             $table->date('data');
             $table->double('valor');
             $table->double('frete');

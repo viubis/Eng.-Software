@@ -24,7 +24,7 @@ class CreateLogTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('usuario_id');
+            $table->integer('usuario_id')->unsigned();
             $table->date('data');
             $table->time('hora');
             $table->string('operacao');

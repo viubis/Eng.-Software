@@ -24,10 +24,10 @@ class CreateConsumidorEnderecoTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('consumidor_id');
-            $table->integer('endereco_id');
-            $table->integer('cep_id');
-            $table->integer('cidade_id');
-            $table->integer('estado_id');
+            $table->integer('endereco_id')->unsigned();
+            $table->integer('cep_id')->unsigned();
+            $table->integer('cidade_id')->unsigned();
+            $table->integer('estado_id')->unsigned();
 
             $table->index(["endereco_id", "cep_id", "cidade_id", "estado_id"], 'fk_consumidor_endereco_endereco1_idx');
 

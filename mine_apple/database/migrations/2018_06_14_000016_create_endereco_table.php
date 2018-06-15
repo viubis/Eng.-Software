@@ -24,9 +24,9 @@ class CreateEnderecoTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('cep_id');
-            $table->integer('cidade_id');
-            $table->integer('estado_id');
+            $table->integer('cep_id')->unsigned();
+            $table->integer('cidade_id')->unsigned();
+            $table->integer('estado_id')->unsigned();
             $table->string('rua');
             $table->string('numero');
             $table->string('complemento')->nullable();

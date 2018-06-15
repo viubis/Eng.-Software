@@ -24,8 +24,8 @@ class CreateAvaliacaoTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('consumidor_id');
-            $table->integer('compra_id');
-            $table->integer('assinatura_id');
+            $table->integer('compra_id')->unsigned();
+            $table->integer('assinatura_id')->unsigned();
             $table->double('nota');
             $table->string('comentario')->nullable();
         });

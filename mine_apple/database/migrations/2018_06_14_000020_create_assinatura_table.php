@@ -24,9 +24,9 @@ class CreateAssinaturaTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('compra_id');
-            $table->integer('consumidor_id');
-            $table->integer('produtor_id');
+            $table->integer('compra_id')->unsigned();
+            $table->integer('consumidor_id')->unsigned();
+            $table->integer('produtor_id')->unsigned();
             $table->double('valor');
             $table->double('frete');
             $table->string('notaFiscal');

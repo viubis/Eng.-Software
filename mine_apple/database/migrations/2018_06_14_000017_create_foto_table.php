@@ -24,9 +24,9 @@ class CreateFotoTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('produto_id');
-            $table->integer('categoria_id');
-            $table->integer('produtor_id');
+            $table->integer('produto_id')->unsigned();
+            $table->integer('categoria_id')->unsigned();
+            $table->integer('produtor_id')->unsigned();
             $table->string('path');
 
             $table->index(["produto_id", "categoria_id", "produtor_id"], 'fk_foto_produto1_idx');
