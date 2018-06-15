@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
-use App\Usuario; 
+use mine_apple\User; 
 class UsuarioTableSeeder extends Seeder
 {
     /**
@@ -12,9 +12,10 @@ class UsuarioTableSeeder extends Seeder
      */
     public function run()
     {
-        Usuario::create([
+        User::create([
+		'name' => 'exemplo',
 		'email' => 'exemplo@exemplo.com',
-		'senha' => bcrypt('12345678'),
+		'password' => bcrypt('12345678'),
 		]);
     }
 }
