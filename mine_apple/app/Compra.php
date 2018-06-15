@@ -1,12 +1,14 @@
-<?php namespace mine_apple;
+<?php 
+
+namespace mine_apple;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Compra extends Model {
-
-    protected $tabel = 'compra';
-    public $timestamps = false
+class Compra extends Model 
+{
+    protected $table = 'compra';
     protected $guarded = ['id'];
+    public $timestamps = false;
 
     public function consumidor() {
     	return $this->hasOne('App/Consumidor', 'foreign_key');
@@ -19,5 +21,4 @@ class Compra extends Model {
     public function endereco() {
     	return $this->hasOne('App/Endereco', 'foreign_key');
     }
-
 }

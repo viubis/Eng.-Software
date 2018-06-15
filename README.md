@@ -1,11 +1,8 @@
 "# Eng.-Software" 
 
-"# model em mine_apple/app/"
+"# Projeto -> mine_apple"
+"# Models -> mine_apple/app" 
+"# Controllers -> mine_apple/app/Http/Controllers" 
+"# Views -> mine_apple/resources/views" 
 
-"# controller em mine_apple/app/Http/Controllers/"
-
-"# view em mine_apple/resources/views/"
-
-"# index esta em mine_apple/public/"
-
-"# arquivo esta em mine_apple/db/"
+"# Banco de dados -> banco_dados" 
