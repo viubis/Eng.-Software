@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console;
+namespace mine_apple\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
