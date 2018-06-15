@@ -1,12 +1,14 @@
-<?php namespace mine_apple;
+<?php 
+
+namespace mine_apple;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Pagamento extends Model {
-
-    protected $tabel = 'pagamento';
-    public $timestamps = false
+class Pagamento extends Model 
+{
+    protected $table = 'pagamento';
     protected $guarded = ['id'];
+    public $timestamps = false;
 
     public function cartao() {
     	return $this->hasOne('App/Cartao', 'foreign_key');
@@ -15,5 +17,4 @@ class Pagamento extends Model {
     public function assinatura() {
     	return $this->hasOne('App/Assinatura', 'foreign_key');
     }
-
 }
