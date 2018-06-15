@@ -8,4 +8,9 @@ class Produtor extends Model
 {
     protected $table = 'produtor';
     public $timestamps = false;
+
+    public function usuario()
+    {
+    return $this->belongsTo( related: 'mine_apple/Usuario', foreignKey: 'id');
+    }
 }
