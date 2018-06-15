@@ -7,6 +7,36 @@ use Illuminate\Http\Request;
 
 class VisitanteController extends Controller
 {
+   /*public function getInicio()
+   {
+        return redirect()->route('home');
+   }
+
+   public function getProdutos()
+   {
+        return redirect()->route('produtos');
+   }
+
+   public function getSobre()
+   {
+        return redirect()->route('sobre');
+   }
+
+   public function getContato()
+   {
+        return redirect()->route('contato');
+   }
+
+   public function getLogin()
+   {
+        return redirect()->route('login');
+   }
+
+   public function getCadastro()
+   {
+        return redirect()->route('cadastro');
+   }*/
+
     /**
      * Display a listing of the resource.
      *
