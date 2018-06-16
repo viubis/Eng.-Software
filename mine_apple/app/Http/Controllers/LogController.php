@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace mine_apple\Http\Controllers;
 
 use App\Log;
 use Illuminate\Http\Request;
