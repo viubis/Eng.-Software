@@ -10,11 +10,19 @@ class CreateCartaoTable extends Migration
     {
         Schema::create('cartao', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('numero')->unique();
+            $table->integer('consumidor_id')->unsigned();
+            $table->string('numero');
             $table->string('titular');
             $table->date('validade');
-            $table->integer('codigo');
+            $table->string('codigo');
             $table->enum('tipo', ['c', 'd']);
+
+            $table->index('consumidor_id', 'fk_cartao_consumidor_idx');
+
+            $table->foreign('consumidor_id', 'fk_cartao_consumidor_idx')
+                ->references('usuario_id')->on('consumidor')
+                ->onDelete('no action')
+                ->onUpdate('no action');
 
             $table->engine = 'InnoDB';
         });

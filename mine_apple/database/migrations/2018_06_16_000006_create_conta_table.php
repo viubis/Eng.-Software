@@ -12,7 +12,7 @@ class CreateContaTable extends Migration
             $table->increments('id');
             $table->integer('banco_id')->unsigned();
             $table->integer('produtor_id')->unsigned();
-            $table->integer('numero');
+            $table->string('numero');
             $table->integer('agencia');
             $table->integer('digito');
 

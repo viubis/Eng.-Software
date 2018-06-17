@@ -16,7 +16,7 @@ class CreatePagamentoTable extends Migration
             $table->time('hora');
             $table->double('valor');
 
-            $table->index('cartao_id', 'fk_pagamento_cartao1_idx');
+            $table->index('cartao_id', 'fk_pagamento_cartao_idx');
             $table->index('assinatura_id', 'fk_pagamento_assinatura_idx');
 
             $table->foreign('cartao_id', 'fk_pagamento_cartao_idx')
