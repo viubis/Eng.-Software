@@ -2,7 +2,7 @@
 
 namespace mine_apple\Http\Controllers;
 
-use App\Produto;
+use mine_apple\Produto;
 use Illuminate\Http\Request;
 
 class ProdutoController extends Controller
@@ -24,7 +24,7 @@ class ProdutoController extends Controller
      */
     public function create()
     {
-        //
+        return view('cadastro_de_produtos');
     }
 
     /**
@@ -35,7 +35,32 @@ class ProdutoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+	if ($request->hasFile('filename'))
+	{
+		$file = $request->file('filename');
+		$name = time().$file->getClientOriginalName();
+		$file->move(public_path().'images/, $name');
+	}
+        $produto = new Produto;
+	$produto->nome = $request->get('nome');
+	$produto->descricao = $request->get('descricao');
+	$produto->valor = $request->get('valor');
+	$produto->minPorAssinatura = $request->get('minPorAssinatura');
+	$produto->maxPorDia = $request->get('maxPorDia');
+	$produto->freteMax = $request->get('freteMax');
+	$produto->seg = $request->get('seg');
+	$produto->ter = $request->get('ter');
+	$produto->qua = $request->get('qua');
+	$produto->qui = $request->get('qui');
+	$produto->sex = $request->get('sex');
+	$produto->sab = $request->get('sab');
+	$produto->dom = $request->get('dom');
+	$produto->nome_foto = $name;
+	$produto->save();
+
+	return redirect('produto')->with('success', 'Information has been added');
+	
     }
 
     /**
