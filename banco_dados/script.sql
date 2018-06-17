@@ -78,16 +78,16 @@ CREATE TABLE IF NOT EXISTS `mine_apple`.`conta` (
   `agencia` INT NOT NULL,
   `digito` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_conta_produtor_idx` (`produtor_id` ASC),
   INDEX `fk_conta_banco_idx` (`banco_id` ASC),
-  CONSTRAINT `fk_conta_produtor`
-    FOREIGN KEY (`produtor_id`)
-    REFERENCES `mine_apple`.`produtor` (`usuario_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+  INDEX `fk_conta_produtor_idx` (`produtor_id` ASC),
   CONSTRAINT `fk_conta_banco`
     FOREIGN KEY (`banco_id`)
     REFERENCES `mine_apple`.`banco` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_conta_produtor`
+    FOREIGN KEY (`produtor_id`)
+    REFERENCES `mine_apple`.`produtor` (`usuario_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -119,16 +119,16 @@ CREATE TABLE IF NOT EXISTS `mine_apple`.`produto` (
   `sab` TINYINT(1) NOT NULL,
   `dom` TINYINT(1) NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_produto_produtor_idx` (`produtor_id` ASC),
   INDEX `fk_produto_categoria_idx` (`categoria_id` ASC),
-  CONSTRAINT `fk_produto_produtor`
-    FOREIGN KEY (`produtor_id`)
-    REFERENCES `mine_apple`.`produtor` (`usuario_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+  INDEX `fk_produto_produtor_idx` (`produtor_id` ASC),
   CONSTRAINT `fk_produto_categoria`
     FOREIGN KEY (`categoria_id`)
     REFERENCES `mine_apple`.`categoria` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_produto_produtor`
+    FOREIGN KEY (`produtor_id`)
+    REFERENCES `mine_apple`.`produtor` (`usuario_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -324,8 +324,8 @@ CREATE TABLE IF NOT EXISTS `mine_apple`.`consumidor_endereco` (
   `consumidor_id` INT NOT NULL,
   `endereco_id` INT NOT NULL,
   PRIMARY KEY (`consumidor_id`, `endereco_id`),
-  INDEX `fk_consumidor_endereco_endereco_idx` (`endereco_id` ASC),
   INDEX `fk_consumidor_endereco_consumidor_idx` (`consumidor_id` ASC),
+  INDEX `fk_consumidor_endereco_endereco_idx` (`endereco_id` ASC),
   CONSTRAINT `fk_consumidor_endereco_consumidor`
     FOREIGN KEY (`consumidor_id`)
     REFERENCES `mine_apple`.`consumidor` (`usuario_id`)
@@ -343,8 +343,8 @@ CREATE TABLE IF NOT EXISTS `mine_apple`.`cartao_consumidor` (
   `cartao_id` INT NOT NULL,
   `consumidor_id` INT NOT NULL,
   PRIMARY KEY (`cartao_id`, `consumidor_id`),
-  INDEX `fk_cartao_consumidor_consumidor_idx` (`consumidor_id` ASC),
   INDEX `fk_cartao_consumidor_cartao_idx` (`cartao_id` ASC),
+  INDEX `fk_cartao_consumidor_consumidor_idx` (`consumidor_id` ASC),
   CONSTRAINT `fk_cartao_consumidor_cartao`
     FOREIGN KEY (`cartao_id`)
     REFERENCES `mine_apple`.`cartao` (`id`)
@@ -371,6 +371,7 @@ CREATE TABLE IF NOT EXISTS `mine_apple`.`assinatura_produto` (
   `sab` TINYINT(1) NOT NULL,
   `dom` TINYINT(1) NOT NULL,
   PRIMARY KEY (`assinatura_id`, `produto_id`),
+  INDEX `fk_assinatura_produto_assinatura_idx` (`assinatura_id` ASC),
   INDEX `fk_assinatura_produto_produto_idx` (`produto_id` ASC),
   CONSTRAINT `fk_assinatura_produto_assinatura`
     FOREIGN KEY (`assinatura_id`)
