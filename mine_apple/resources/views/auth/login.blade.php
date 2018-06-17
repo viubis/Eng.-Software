@@ -8,10 +8,10 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-<link rel="stylesheet" href="styles/bootstrap4/bootstrap.min.css">
+<link rel="stylesheet" href={{asset('css/bootstrap4/bootstrap.min.css')}}>
 <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
       type='text/css'>
-<link rel="stylesheet" href="styles/tela_de_login_style.css">
+<link rel="stylesheet" href={{asset('css/tela_de_login_style.css')}}>
 
 <!-- Favicon and touch icons -->
 <link rel="shortcut icon" href="images/favicon.png">
@@ -155,11 +155,11 @@
 
 <!-- Javascript -->
 
-<script src="{{resource_path('views/js/jquery-3.3.1.min.js')}}"></script>
-<script src="{{resource_path('views/js/popper.min.js')}}"></script>
-<script src="{{resource_path('views/styles/bootstrap4/bootstrap.min.js')}}"></script>
-<script src="{{resource_path('views/js/jquery.backstretch.min.js')}}"></script>
-<script src="{{resource_path('views/js/script_tela_login.js')}}"></script>
+<script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
+<script src="{{asset('js/popper.min.js')}}"></script>
+<script src="{{asset('css/bootstrap4/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/jquery.backstretch.min.js')}}"></script>
+<script src="{{asset('js/script_tela_login.js')}}"></script>
 
 <!--[if lt IE 10]>
 <script src="js/placeholder_tela_de_login.js"></script>
