@@ -13,6 +13,10 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             UsuarioTableSeeder::class,
+<<<<<<< HEAD
+=======
+            //EstadoTableSeeder::class,
+>>>>>>> master
         ]);
     }
 }
