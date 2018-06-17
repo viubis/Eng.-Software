@@ -43,7 +43,7 @@
                             </div>
                         </div>
                         <div class="form-bottom">
-                            <form method="POST" action="{{ route('login') }}" class="login-form">
+                            <form name="login" method="POST" action="{{ route('login') }}" class="login-form">
 			@csrf
                                 <div class="form-group">
                                     <label class="sr-only" for="form-email">Email</label>
@@ -94,23 +94,38 @@
                             </div>
                         </div>
                         <div class="form-bottom">
-                            <form method="POST" action="{{ route('register') }}" class="registration-form">
+                            <form name="register"  method="POST" action="{{ route('register') }}" class="registration-form">
+				@csrf
+				<div class="form-group">
+                                    <label class="sr-only" for="name-email">Nome</label>
+                                    <input id="name1" type="text" name="name" placeholder="Nome... "
+                                           class="form-email form-control">
+                                </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="form-email">Email</label>
-                                    <input id="email" type="email" name="form-email" placeholder="Email... "
+                                    <input id="email1" type="email" name="email" placeholder="Email... "
                                            class="form-email form-control" id="form-email2">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="form-password">Password</label>
-                                    <input id="password" type="password" name="form-password" placeholder="Senha..."
-                                           class="form-password form-control" minlength="8" id="form-password2">
-                                    <div style="padding-bottom: 31px">
+                                    <input id="password1" type="password" name="password" placeholder="Senha..."
+                                           class="form-password form-control" minlength="8" id="form-password2" required>
+                                    <!-- <div style="padding-bottom: 31px">
 
-                                    </div>
+                                    </div> -->
                                 </div>
-                                <a href="#">
-                                    <button type="button" class="btn">Cadastrar</button>
-                                </a>
+
+				<div class="form-group">
+                                    <label class="sr-only" for="form-password">Password</label>
+                                    <input id="password1" type="password" name="password_confirmation" placeholder="Senha..."
+                                           class="form-password form-control" minlength="8" id="form-password2" required>
+                                    <!-- <div style="padding-bottom: 31px">
+
+                                    </div> -->
+                                </div>
+                               
+                                    <button type="submit" class="btn">Cadastrar</button>
+                                
                             </form>
                         </div>
                         <div class="social-login">
