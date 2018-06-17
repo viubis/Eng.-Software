@@ -4,19 +4,10 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     *
-     * @return void
-     */
     public function run()
     {
         $this->call([
             UsuarioTableSeeder::class,
-<<<<<<< HEAD
-=======
-            //EstadoTableSeeder::class,
->>>>>>> master
         ]);
     }
 }

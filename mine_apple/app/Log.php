@@ -10,9 +10,8 @@ class Log extends Model
     protected $guarded = ['id'];
     public $timestamps = false;
 
-    public function usuario ()
+    public function usuario()
     {
-      return $this->belongsTo( related: 'mine_apple/Usuario', foreignKey: 'id');
+        return $this->belongsTo('mine_apple\Usuario', 'usuario_id');
     }
-
 }

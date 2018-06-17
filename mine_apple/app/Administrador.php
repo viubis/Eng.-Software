@@ -7,6 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Administrador extends Model
 {
     protected $table = 'administrador';
-    protected $guarded = ['id'];
+    protected $primaryKey = 'usuario_id';
+    protected $fillable = ['nome'];
     public $timestamps = false;
+
+    public function usuario()
+    {
+        return $this->belongsTo('mine_apple\Usuario', 'usuario_id');
+    }
 }
