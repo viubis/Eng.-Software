@@ -40,7 +40,7 @@ Route::resources([
 	'pagamento'		=> 'PagamentoController',
 	'produto'		=> 'ProdutoController',
 	'produtor'		=> 'ProdutorController',
-	'usuario'		=> 'UsuárioController',
+	'usuario'		=> 'UsuarioController',
 	'visitante'		=> 'VisitanteController'
 ]);
 
