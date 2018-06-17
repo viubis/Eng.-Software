@@ -14,4 +14,19 @@ class Produtor extends Model
     {
         return $this->belongsTo('mine_apple\Usuario', 'usuario_id');
     }
+
+    public function contas()
+    {
+        return $this->hasMany('mine_apple\Conta', 'produtor_id');
+    }
+
+    public function produtos()
+    {
+        return $this->hasMany('mine_apple\Produto', 'produtor_id');
+    }
+
+    public function assinaturas()
+    {
+        return $this->hasMany('mine_apple\Assinatura', 'produtor_id');
+    }
 }

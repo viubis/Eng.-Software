@@ -14,4 +14,14 @@ class Consumidor extends Model
     {
         return $this->belongsTo('mine_apple\Usuario', 'usuario_id');
     }
+
+    public function enderecos()
+    {
+        return $this->hasMany('mine_apple\Endereco', 'consumidor_id');
+    }
+
+    public function cartoes()
+    {
+        return $this->hasMany('mine_apple\Cartao', 'consumidor_id');
+    }
 }

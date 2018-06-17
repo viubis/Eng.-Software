@@ -8,7 +8,7 @@ class Administrador extends Model
 {
     protected $table = 'administrador';
     protected $primaryKey = 'usuario_id';
-    protected $fillable = ['nome'];
+    protected $fillable = ['usuario_id', 'nome'];
     public $timestamps = false;
 
     public function usuario()

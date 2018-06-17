@@ -30,4 +30,14 @@ class Cartao extends Model
     {
         $this->attributes['codigo'] = Crypt::encryptString($codigo);
     }
+
+    public function consumidor()
+    {
+        return $this->belongsTo('mine_apple\Consumidor', 'consumidor_id', 'usuario_id');
+    }
+
+    public function pagamentos()
+    {
+        return $this->hasMany('mine_apple\Pagamento', 'cartao_id');
+    }
 }
