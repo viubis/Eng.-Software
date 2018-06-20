@@ -170,7 +170,7 @@
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
                                         <label class="my-1 mr-2" for="categorias">Categoria </label>
-                                        <select class="custom-select my-1 mr-sm-2" id="categorias">
+                                        <select name="categoria" class="custom-select my-1 mr-sm-2" id="categorias">
                                             <option value="Cereais">Cereais</option>
                                             <option value="Frutas">Frutas</option>
                                             <option value="Legumes">Legumes</option>
@@ -183,12 +183,12 @@
 
                                     <div class="col-md-6 mb-3">
                                         <label class="my-1 mr-2" for="Unidade">Tipo de embalagem </label>
-                                        <select class="custom-select my-1 mr-sm-2" id="Unidade">
-                                            <option value="Cereais">Unidade</option>
-                                            <option value="Frutas">Caixa</option>
-                                            <option value="Legumes">Litro</option>
-                                            <option value="Leguminosas">Quilo</option>
-                                            <option value="Leguminosas">Dúzia</option>
+                                        <select name="unidade" class="custom-select my-1 mr-sm-2" id="Unidade">
+                                            <option value="Unidade">Unidade</option>
+                                            <option value="Caixa">Caixa</option>
+                                            <option value="Litro">Litro</option>
+                                            <option value="Quilo">Quilo</option>
+                                            <option value="Dúzia">Dúzia</option>
                                         </select>
                                     </div>
                                 </div>
