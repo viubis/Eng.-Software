@@ -6,21 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Mineapple shop project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap4/bootstrap.min.css')}}">
     <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-    <link rel="stylesheet" type="text/css" href="plugins/slick-1.8.0/slick.css">
-    <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-    <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/animate.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('plugins/slick-1.8.0/slick.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/main_styles.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/responsive.css')}}">
 
 
     <link rel="shortcut icon" href="images/favicon.png">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icon-144.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icon-114.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icon-72.png">
-    <link rel="apple-touch-icon-precomposed" href="images/icon-16.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('images/icon-144.png')}}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset('images/icon-114.png')}}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{asset('images/icon-72.png')}}">
+    <link rel="apple-touch-icon-precomposed" href="{{asset('images/icon-16.png')}}">
 
 </head>
 
@@ -40,9 +40,9 @@
                     <div class="col d-flex flex-row">
                         <div class="top_bar_content ml-auto">
                             <div class="top_bar_user">
-                                <div class="user_icon"><img src="images/iconUser.png" alt=""></div>
-                                <div><a href="#">Cadastrar</a></div>
-                                <div><a href="#">Login</a></div>
+                                <div class="user_icon"><img src="{{asset('images/iconUser.png')}}" alt=""></div>
+                                <div><a href="/login">Cadastrar</a></div>
+                                <div><a href="/login">Login</a></div>
                             </div>
                         </div>
                     </div>
@@ -59,7 +59,7 @@
                     <!-- Logo -->
                     <div class="col-lg-4 col-sm-3 col-3 order-1 pt-3 pb-0">
                         <div class="logo_container">
-                            <div class="logo_icon"><img src="images/logoSite2.png" class="img-fluid" alt=""></div>
+                            <div class="logo_icon"><img src="{{asset('images/logoSite2.png')}}" class="img-fluid" alt=""></div>
 
                         </div>
                     </div>
@@ -219,21 +219,21 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="images/banner_background.jpg" alt="First slide">
+                <img class="d-block w-100" src="{{asset('images/banner_background.jpg')}}" alt="First slide">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Produto 1</h5>
                     <p>Valor do produto 1</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="images/banner_background.jpg" alt="Second slide">
+                <img class="d-block w-100" src="{{asset('images/banner_background.jpg')}}" alt="Second slide">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Produto 2</h5>
                     <p>Valor do produto 2</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="images/banner_background.jpg" alt="Third slide">
+                <img class="d-block w-100" src="{{asset('images/banner_background.jpg')}}" alt="Third slide">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Produto 3</h5>
                     <p>Valor do produto 3</p>
@@ -271,7 +271,7 @@
 
                                 <!-- Deals Item -->
                                 <div class="owl-item deals_item">
-                                    <div class="deals_image"><img src="images/abacaxi.png" alt=""></div>
+                                    <div class="deals_image"><img src="{{asset('images/abacaxi.png')}}" alt=""></div>
                                     <div class="deals_content">
                                         <div class="deals_info_line d-flex flex-row justify-content-start">
                                             <div class="deals_item_category"><a href="#">Frutas</a></div>
@@ -315,7 +315,7 @@
 
                                 <!-- Deals Item -->
                                 <div class="owl-item deals_item">
-                                    <div class="deals_image"><img src="images/maça.png" alt=""></div>
+                                    <div class="deals_image"><img src="{{asset('images/maça.png')}}" alt=""></div>
                                     <div class="deals_content">
                                         <div class="deals_info_line d-flex flex-row justify-content-start">
                                             <div class="deals_item_category"><a href="#">Frutas</a></div>
@@ -359,7 +359,7 @@
 
                                 <!-- Deals Item -->
                                 <div class="owl-item deals_item">
-                                    <div class="deals_image"><img src="images/laranja-laranja.jpg" alt=""></div>
+                                    <div class="deals_image"><img src="{{asset('images/laranja-laranja.jpg')}}" alt=""></div>
                                     <div class="deals_content">
                                         <div class="deals_info_line d-flex flex-row justify-content-start">
                                             <div class="deals_item_category"><a href="#">Frutas</a></div>
@@ -434,7 +434,7 @@
                                             class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/banana.jpg" alt=""></div>
+                                                <img src="{{asset('images/banana.jpg')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 7,00<span>duzia</span></div>
                                                 <div class="product_name">
@@ -459,7 +459,7 @@
                                             class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/cenoura1.png" alt=""></div>
+                                                <img src="{{asset('images/cenoura1.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 3,00<span>Kg</span></div>
                                                 <div class="product_name">
@@ -485,7 +485,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/pera.png" alt=""></div>
+                                                <img src="{{asset('images/pera.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 1,00<span>unid.</span></div>
                                                 <div class="product_name">
@@ -510,7 +510,7 @@
                                             class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/abobora.jpg" alt=""></div>
+                                                <img src="{{asset('images/abobora.jpg')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 5,00<span>unid.</span></div>
                                                 <div class="product_name">
@@ -535,7 +535,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/batata-inglesa.jpg" alt=""></div>
+                                                <img src="{{asset('images/batata-inglesa.jpg')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 3,00<span>Kg</span></div>
                                                 <div class="product_name">
@@ -610,7 +610,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/tomate.jpg" alt=""></div>
+                                                <img src="{{asset('images/tomate.jpg')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 4,00<span>Kg</span></div>
                                                 <div class="product_name">
@@ -635,7 +635,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_1.png" alt=""></div>
+                                                <img src="{{asset('images/featured_1.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
@@ -660,7 +660,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_2.png" alt=""></div>
+                                                <img src="{{asset('images/featured_2.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -685,7 +685,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_3.png" alt=""></div>
+                                                <img src="{{asset('images/featured_3.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -710,7 +710,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_4.png" alt=""></div>
+                                                <img src="{{asset('images/featured_4.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
@@ -735,7 +735,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_5.png" alt=""></div>
+                                                <img src="{{asset('images/featured_5.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
@@ -760,7 +760,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_6.png" alt=""></div>
+                                                <img src="{{asset('images/featured_6.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -785,7 +785,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_7.png" alt=""></div>
+                                                <img src="{{asset('images/featured_7.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -810,416 +810,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_8.png" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$225</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="featured_slider_dots_cover"></div>
-                            </div>
-
-                            <!-- Product Panel -->
-
-                            <div class="product_panel panel">
-                                <div class="featured_slider slider">
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_1.png" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price discount">$225<span>$300</span></div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount">-25%</li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_2.png" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$379</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Apple iPod shuffle</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button active">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_3.png" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$379</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Sony MDRZX310W</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_4.png" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price discount">$225<span>$300</span></div>
-                                                <div class="product_name">
-                                                    <div><a href="#">LUNA Smartphone</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount">-25%</li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_5.png" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$225</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Canon STM Kit...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_6.png" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$379</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Samsung J330F...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_7.png" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$379</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Lenovo IdeaPad</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount">-25%</li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_8.png" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$225</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Digitus EDNET...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_1.png" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$225</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_2.png" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$379</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_3.png" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$379</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_4.png" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$225</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_5.png" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$225</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_6.png" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$379</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_7.png" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$379</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_8.png" alt=""></div>
+                                                <img src="{{asset('images/featured_8.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
@@ -1253,7 +844,7 @@
                                             class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_1.png" alt=""></div>
+                                                <img src="{{asset('images/featured_1.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">$225<span>$300</span></div>
                                                 <div class="product_name">
@@ -1278,7 +869,7 @@
                                             class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_2.png" alt=""></div>
+                                                <img src="{{asset('images/featured_2.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -1303,7 +894,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_3.png" alt=""></div>
+                                                <img src="{{asset('images/featured_3.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -1328,7 +919,7 @@
                                             class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_4.png" alt=""></div>
+                                                <img src="{{asset('images/featured_4.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">$225<span>$300</span></div>
                                                 <div class="product_name">
@@ -1353,7 +944,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_5.png" alt=""></div>
+                                                <img src="{{asset('images/featured_5.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
@@ -1378,7 +969,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_6.png" alt=""></div>
+                                                <img src="{{asset('images/featured_6.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -1403,7 +994,7 @@
                                             class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_7.png" alt=""></div>
+                                                <img src="{{asset('images/featured_7.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -1428,7 +1019,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_8.png" alt=""></div>
+                                                <img src="{{asset('images/featured_8.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
@@ -1453,7 +1044,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_1.png" alt=""></div>
+                                                <img src="{{asset('images/featured_1.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
@@ -1478,7 +1069,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_2.png" alt=""></div>
+                                                <img src="{{asset('images/featured_2.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -1503,7 +1094,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_3.png" alt=""></div>
+                                                <img src="{{asset('images/featured_3.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -1528,7 +1119,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_4.png" alt=""></div>
+                                                <img src="{{asset('images/featured_4.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
@@ -1553,7 +1144,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_5.png" alt=""></div>
+                                                <img src="{{asset('images/featured_5.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
@@ -1578,7 +1169,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_6.png" alt=""></div>
+                                                <img src="{{asset('images/featured_6.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -1603,7 +1194,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_7.png" alt=""></div>
+                                                <img src="{{asset('images/featured_7.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -1628,7 +1219,416 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/featured_8.png" alt=""></div>
+                                                <img src="{{asset('images/featured_8.png')}}" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$225</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="featured_slider_dots_cover"></div>
+                            </div>
+
+                            <!-- Product Panel -->
+
+                            <div class="product_panel panel">
+                                <div class="featured_slider slider">
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_1.png')}}" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price discount">$225<span>$300</span></div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount">-25%</li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_2.png')}}" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$379</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Apple iPod shuffle</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button active">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_3.png')}}" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$379</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Sony MDRZX310W</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_4.png')}}" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price discount">$225<span>$300</span></div>
+                                                <div class="product_name">
+                                                    <div><a href="#">LUNA Smartphone</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount">-25%</li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_5.png')}}" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$225</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Canon STM Kit...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_6.png')}}" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$379</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Samsung J330F...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_7.png')}}" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$379</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Lenovo IdeaPad</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount">-25%</li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_8.png')}}" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$225</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Digitus EDNET...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_1.png')}}" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$225</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_2.png')}}" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$379</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_3.png')}}" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$379</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_4.png')}}" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$225</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_5.png')}}" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$225</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_6.png')}}" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$379</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_7.png')}}" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$379</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_8.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
@@ -1687,7 +1687,7 @@
                             <div class="owl-item">
                                 <div
                                     class="popular_category d-flex flex-column align-items-center justify-content-center">
-                                    <div class="popular_category_image"><img src="images/popular_1.png" alt=""></div>
+                                    <div class="popular_category_image"><img src="{{asset('images/popular_1.png')}}" alt=""></div>
                                     <div class="popular_category_text">Frutas</div>
                                 </div>
                             </div>
@@ -1696,7 +1696,7 @@
                             <div class="owl-item">
                                 <div
                                     class="popular_category d-flex flex-column align-items-center justify-content-center">
-                                    <div class="popular_category_image"><img src="images/popular_2.png" alt=""></div>
+                                    <div class="popular_category_image"><img src="{{asset('images/popular_2.png')}}" alt=""></div>
                                     <div class="popular_category_text">Legumes</div>
                                 </div>
                             </div>
@@ -1705,7 +1705,7 @@
                             <div class="owl-item">
                                 <div
                                     class="popular_category d-flex flex-column align-items-center justify-content-center">
-                                    <div class="popular_category_image"><img src="images/popular_3.png" alt=""></div>
+                                    <div class="popular_category_image"><img src="{{asset('images/popular_3.png')}}" alt=""></div>
                                     <div class="popular_category_text">Tubérculos</div>
                                 </div>
                             </div>
@@ -1714,7 +1714,7 @@
                             <div class="owl-item">
                                 <div
                                     class="popular_category d-flex flex-column align-items-center justify-content-center">
-                                    <div class="popular_category_image"><img src="images/popular_4.png" alt=""></div>
+                                    <div class="popular_category_image"><img src="{{asset('images/popular_4.png')}}" alt=""></div>
                                     <div class="popular_category_text">Leguminosas</div>
                                 </div>
                             </div>
@@ -1723,7 +1723,7 @@
                             <div class="owl-item">
                                 <div
                                     class="popular_category d-flex flex-column align-items-center justify-content-center">
-                                    <div class="popular_category_image"><img src="images/popular_5.png" alt=""></div>
+                                    <div class="popular_category_image"><img src="{{asset('images/popular_5.png')}}" alt=""></div>
                                     <div class="popular_category_text">Cereais</div>
                                 </div>
                             </div>
@@ -1771,7 +1771,7 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/abacate.png" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/abacate.png')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Fruta</a></div>
                                             <div class="bestsellers_name"><a href="#">Abacate</a></div>
@@ -1791,7 +1791,7 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/morango.png" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/morango.png')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Fruta</a></div>
                                             <div class="bestsellers_name"><a href="#">Morango</a></div>
@@ -1811,7 +1811,7 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/uva-verde.jpg" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/uva-verde.jpg')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Fruta</a></div>
                                             <div class="bestsellers_name"><a href="#">Uva Verde</a></div>
@@ -1831,7 +1831,7 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/banana.jpg" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/banana.jpg')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Fruta</a></div>
                                             <div class="bestsellers_name"><a href="#">Banana</a></div>
@@ -1851,7 +1851,7 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/abobora.jpg" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/abobora.jpg')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Legume</a></div>
                                             <div class="bestsellers_name"><a href="#">Abóbora</a></div>
@@ -1871,7 +1871,7 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/couve-flor.jpg" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/couve-flor.jpg')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Hortaliça</a></div>
                                             <div class="bestsellers_name"><a href="#">Couve-flor</a></div>
@@ -1891,7 +1891,7 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/chuchu.png" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/chuchu.png')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Verdura</a></div>
                                             <div class="bestsellers_name"><a href="#">Chuchu</a></div>
@@ -1911,7 +1911,7 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/amora.png" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/amora.png')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Fruta</a></div>
                                             <div class="bestsellers_name"><a href="#">Amora</a></div>
@@ -1931,7 +1931,7 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/berinjela.png" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/berinjela.png')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Legume</a></div>
                                             <div class="bestsellers_name"><a href="#">Berinjela</a></div>
@@ -1951,7 +1951,7 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/beterraba.png" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/beterraba.png')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Raiz</a></div>
                                             <div class="bestsellers_name"><a href="#">Beterraba</a></div>
@@ -1971,7 +1971,7 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/brocolis.jpg" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/brocolis.jpg')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Hortaliça</a></div>
                                             <div class="bestsellers_name"><a href="#">Brócolis</a></div>
@@ -1991,7 +1991,7 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/inhame.png" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/inhame.png')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Raiz</a></div>
                                             <div class="bestsellers_name"><a href="#">Inhame</a></div>
@@ -2020,7 +2020,7 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/morango.png" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/morango.png')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Frutas</a></div>
                                             <div class="bestsellers_name"><a href="#">Morango</a></div>
@@ -2040,7 +2040,7 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_2.png" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_2.png')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
@@ -2061,7 +2061,7 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_3.png" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_3.png')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
@@ -2082,133 +2082,7 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_4.png" alt=""></div>
-                                        <div class="bestsellers_content">
-                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
-                                            </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating">
-                                                <i></i><i></i><i></i><i></i><i></i></div>
-                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
-                                    <ul class="bestsellers_marks">
-                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Best Sellers Item -->
-                                <div class="bestsellers_item discount">
-                                    <div
-                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_5.png" alt=""></div>
-                                        <div class="bestsellers_content">
-                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
-                                            </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating">
-                                                <i></i><i></i><i></i><i></i><i></i></div>
-                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
-                                    <ul class="bestsellers_marks">
-                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Best Sellers Item -->
-                                <div class="bestsellers_item">
-                                    <div
-                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_6.png" alt=""></div>
-                                        <div class="bestsellers_content">
-                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
-                                            </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating">
-                                                <i></i><i></i><i></i><i></i><i></i></div>
-                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
-                                    <ul class="bestsellers_marks">
-                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Best Sellers Item -->
-                                <div class="bestsellers_item discount">
-                                    <div
-                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_1.png" alt=""></div>
-                                        <div class="bestsellers_content">
-                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
-                                            </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating">
-                                                <i></i><i></i><i></i><i></i><i></i></div>
-                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
-                                    <ul class="bestsellers_marks">
-                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Best Sellers Item -->
-                                <div class="bestsellers_item discount">
-                                    <div
-                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_2.png" alt=""></div>
-                                        <div class="bestsellers_content">
-                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
-                                            </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating">
-                                                <i></i><i></i><i></i><i></i><i></i></div>
-                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
-                                    <ul class="bestsellers_marks">
-                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Best Sellers Item -->
-                                <div class="bestsellers_item">
-                                    <div
-                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_3.png" alt=""></div>
-                                        <div class="bestsellers_content">
-                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
-                                            </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating">
-                                                <i></i><i></i><i></i><i></i><i></i></div>
-                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
-                                    <ul class="bestsellers_marks">
-                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Best Sellers Item -->
-                                <div class="bestsellers_item">
-                                    <div
-                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_4.png" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_4.png')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
@@ -2229,7 +2103,7 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_5.png" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_5.png')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
@@ -2250,7 +2124,133 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_6.png" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_6.png')}}" alt=""></div>
+                                        <div class="bestsellers_content">
+                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
+                                            </div>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i></div>
+                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+                                    <ul class="bestsellers_marks">
+                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
+                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Best Sellers Item -->
+                                <div class="bestsellers_item discount">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_1.png')}}" alt=""></div>
+                                        <div class="bestsellers_content">
+                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
+                                            </div>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i></div>
+                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+                                    <ul class="bestsellers_marks">
+                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
+                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Best Sellers Item -->
+                                <div class="bestsellers_item discount">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_2.png')}}" alt=""></div>
+                                        <div class="bestsellers_content">
+                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
+                                            </div>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i></div>
+                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+                                    <ul class="bestsellers_marks">
+                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
+                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Best Sellers Item -->
+                                <div class="bestsellers_item">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_3.png')}}" alt=""></div>
+                                        <div class="bestsellers_content">
+                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
+                                            </div>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i></div>
+                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+                                    <ul class="bestsellers_marks">
+                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
+                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Best Sellers Item -->
+                                <div class="bestsellers_item">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_4.png')}}" alt=""></div>
+                                        <div class="bestsellers_content">
+                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
+                                            </div>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i></div>
+                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+                                    <ul class="bestsellers_marks">
+                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
+                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Best Sellers Item -->
+                                <div class="bestsellers_item discount">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_5.png')}}" alt=""></div>
+                                        <div class="bestsellers_content">
+                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
+                                            </div>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i></div>
+                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+                                    <ul class="bestsellers_marks">
+                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
+                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Best Sellers Item -->
+                                <div class="bestsellers_item">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_6.png')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
@@ -2280,7 +2280,7 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_1.png" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_1.png')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
@@ -2301,7 +2301,7 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_2.png" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_2.png')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
@@ -2322,7 +2322,7 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_3.png" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_3.png')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
@@ -2343,133 +2343,7 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_4.png" alt=""></div>
-                                        <div class="bestsellers_content">
-                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
-                                            </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating">
-                                                <i></i><i></i><i></i><i></i><i></i></div>
-                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
-                                    <ul class="bestsellers_marks">
-                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Best Sellers Item -->
-                                <div class="bestsellers_item discount">
-                                    <div
-                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_5.png" alt=""></div>
-                                        <div class="bestsellers_content">
-                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
-                                            </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating">
-                                                <i></i><i></i><i></i><i></i><i></i></div>
-                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
-                                    <ul class="bestsellers_marks">
-                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Best Sellers Item -->
-                                <div class="bestsellers_item">
-                                    <div
-                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_6.png" alt=""></div>
-                                        <div class="bestsellers_content">
-                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
-                                            </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating">
-                                                <i></i><i></i><i></i><i></i><i></i></div>
-                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
-                                    <ul class="bestsellers_marks">
-                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Best Sellers Item -->
-                                <div class="bestsellers_item discount">
-                                    <div
-                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_1.png" alt=""></div>
-                                        <div class="bestsellers_content">
-                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
-                                            </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating">
-                                                <i></i><i></i><i></i><i></i><i></i></div>
-                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
-                                    <ul class="bestsellers_marks">
-                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Best Sellers Item -->
-                                <div class="bestsellers_item discount">
-                                    <div
-                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_2.png" alt=""></div>
-                                        <div class="bestsellers_content">
-                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
-                                            </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating">
-                                                <i></i><i></i><i></i><i></i><i></i></div>
-                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
-                                    <ul class="bestsellers_marks">
-                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Best Sellers Item -->
-                                <div class="bestsellers_item">
-                                    <div
-                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_3.png" alt=""></div>
-                                        <div class="bestsellers_content">
-                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
-                                            </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating">
-                                                <i></i><i></i><i></i><i></i><i></i></div>
-                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
-                                    <ul class="bestsellers_marks">
-                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Best Sellers Item -->
-                                <div class="bestsellers_item">
-                                    <div
-                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_4.png" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_4.png')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
@@ -2490,7 +2364,7 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/best_5.png" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_5.png')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
@@ -2511,7 +2385,133 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="images/abacaxi.png" alt=""></div>
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_6.png')}}" alt=""></div>
+                                        <div class="bestsellers_content">
+                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
+                                            </div>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i></div>
+                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+                                    <ul class="bestsellers_marks">
+                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
+                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Best Sellers Item -->
+                                <div class="bestsellers_item discount">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_1.png')}}" alt=""></div>
+                                        <div class="bestsellers_content">
+                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
+                                            </div>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i></div>
+                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+                                    <ul class="bestsellers_marks">
+                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
+                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Best Sellers Item -->
+                                <div class="bestsellers_item discount">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_2.png')}}" alt=""></div>
+                                        <div class="bestsellers_content">
+                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
+                                            </div>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i></div>
+                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+                                    <ul class="bestsellers_marks">
+                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
+                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Best Sellers Item -->
+                                <div class="bestsellers_item">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_3.png')}}" alt=""></div>
+                                        <div class="bestsellers_content">
+                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
+                                            </div>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i></div>
+                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+                                    <ul class="bestsellers_marks">
+                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
+                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Best Sellers Item -->
+                                <div class="bestsellers_item">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_4.png')}}" alt=""></div>
+                                        <div class="bestsellers_content">
+                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
+                                            </div>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i></div>
+                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+                                    <ul class="bestsellers_marks">
+                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
+                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Best Sellers Item -->
+                                <div class="bestsellers_item discount">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                        <div class="bestsellers_image"><img src="{{asset('images/best_5.png')}}" alt=""></div>
+                                        <div class="bestsellers_content">
+                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
+                                            <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
+                                            </div>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i></div>
+                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+                                    <ul class="bestsellers_marks">
+                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
+                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Best Sellers Item -->
+                                <div class="bestsellers_item">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                        <div class="bestsellers_image"><img src="{{asset('images/abacaxi.png')}}" alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="#">Xiaomi Redmi Note 4</a>
@@ -2562,7 +2562,7 @@
                             <div class="owl-item">
                                 <div
                                     class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                    <div class="viewed_image"><img src="images/banana.jpg" alt=""></div>
+                                    <div class="viewed_image"><img src="{{asset('images/banana.jpg')}}" alt=""></div>
                                     <div class="viewed_content text-center">
                                         <div class="viewed_price">R$ 7,00<span>duzia</span></div>
                                         <div class="viewed_name"><a href="#">Banana</a></div>
@@ -2578,7 +2578,7 @@
                             <div class="owl-item">
                                 <div
                                     class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                                    <div class="viewed_image"><img src="images/abacaxi.png" alt=""></div>
+                                    <div class="viewed_image"><img src="{{asset('images/abacaxi.png')}}" alt=""></div>
                                     <div class="viewed_content text-center">
                                         <div class="viewed_price">R$ 3,00</div>
                                         <div class="viewed_name"><a href="#">Abacaxi</a></div>
@@ -2594,7 +2594,7 @@
                             <div class="owl-item">
                                 <div
                                     class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                                    <div class="viewed_image"><img src="images/tomate.jpg" alt=""></div>
+                                    <div class="viewed_image"><img src="{{asset('images/tomate.jpg')}}" alt=""></div>
                                     <div class="viewed_content text-center">
                                         <div class="viewed_price">R$ 4,00</div>
                                         <div class="viewed_name"><a href="#">Tomate</a></div>
@@ -2610,7 +2610,7 @@
                             <div class="owl-item">
                                 <div
                                     class="viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-                                    <div class="viewed_image"><img src="images/pimentao.jpg" alt=""></div>
+                                    <div class="viewed_image"><img src="{{asset('images/pimentao.jpg')}}" alt=""></div>
                                     <div class="viewed_content text-center">
                                         <div class="viewed_price">R$ 1,00</div>
                                         <div class="viewed_name"><a href="#">Pimentão Vermelho</a></div>
@@ -2626,7 +2626,7 @@
                             <div class="owl-item">
                                 <div
                                     class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                    <div class="viewed_image"><img src="images/abobora.jpg" alt=""></div>
+                                    <div class="viewed_image"><img src="{{asset('images/abobora.jpg')}}" alt=""></div>
                                     <div class="viewed_content text-center">
                                         <div class="viewed_price">R$ 5,00<span>unid.</span></div>
                                         <div class="viewed_name"><a href="#">Abóbora</a></div>
@@ -2642,7 +2642,7 @@
                             <div class="owl-item">
                                 <div
                                     class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                                    <div class="viewed_image"><img src="images/pera.png" alt=""></div>
+                                    <div class="viewed_image"><img src="{{asset('images/pera.png')}}" alt=""></div>
                                     <div class="viewed_content text-center">
                                         <div class="viewed_price">R$ 1,00</div>
                                         <div class="viewed_name"><a href="#">Pêra</a></div>
@@ -2722,10 +2722,10 @@
                         </div>
                         <div class="logos ml-sm-auto">
                             <ul class="logos_list">
-                                <li><a href="#"><img src="images/logos_1.png" alt=""></a></li>
-                                <li><a href="#"><img src="images/logos_2.png" alt=""></a></li>
-                                <li><a href="#"><img src="images/logos_3.png" alt=""></a></li>
-                                <li><a href="#"><img src="images/logos_4.png" alt=""></a></li>
+                                <li><a href="#"><img src="{{asset('images/logos_1.png')}}" alt=""></a></li>
+                                <li><a href="#"><img src="{{asset('images/logos_2.png')}}" alt=""></a></li>
+                                <li><a href="#"><img src="{{asset('images/logos_3.png')}}" alt=""></a></li>
+                                <li><a href="#"><img src="{{asset('images/logos_4.png')}}" alt=""></a></li>
                             </ul>
                         </div>
                     </div>
@@ -2735,18 +2735,18 @@
     </div>
 </div>
 
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="styles/bootstrap4/popper.js"></script>
-<script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/greensock/TweenMax.min.js"></script>
-<script src="plugins/greensock/TimelineMax.min.js"></script>
-<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="plugins/greensock/animation.gsap.min.js"></script>
-<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="plugins/slick-1.8.0/slick.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="js/custom.js"></script>
+<script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
+<script src="{{asset('css/bootstrap4/popper.js')}}"></script>
+<script src="{{asset('css/bootstrap4/bootstrap.min.js')}}"></script>
+<script src="{{asset('plugins/greensock/TweenMax.min.js')}}"></script>
+<script src="{{asset('plugins/greensock/TimelineMax.min.js')}}"></script>
+<script src="{{asset('plugins/scrollmagic/ScrollMagic.min.js')}}"></script>
+<script src="{{asset('plugins/greensock/animation.gsap.min.js')}}"></script>
+<script src="{{asset('plugins/greensock/ScrollToPlugin.min.js')}}"></script>
+<script src="{{asset('plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
+<script src="{{asset('plugins/slick-1.8.0/slick.js')}}"></script>
+<script src="{{asset('plugins/easing/easing.js')}}"></script>
+<script src="{{asset('js/custom.js')}}"></script>
 
 
 
