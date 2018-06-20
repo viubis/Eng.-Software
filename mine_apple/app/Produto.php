@@ -20,6 +20,11 @@ class Produto extends Model
         return $this->belongsTo('mine_apple\Categoria', 'categoria_id');
     }
 
+    public function embalagem()
+    {
+        return $this->belongsTo('mine_apple\Embalagem', 'embalagem_id');
+    }
+
     public function fotos()
     {
         return $this->hasMany('mine_apple\Foto', 'produto_id');
