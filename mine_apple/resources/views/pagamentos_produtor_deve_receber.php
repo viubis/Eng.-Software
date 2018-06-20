@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
     <link rel="stylesheet" type="text/css" href="plugins/slick-1.8.0/slick.css">
-    <link rel="stylesheet" type="text/css" href="styles/recebimentos_do_produtor_style.css">
+    <link rel="stylesheet" type="text/css" href="styles/pagamentos_produtor_deve_receber_style.css">
     <link rel="stylesheet" type="text/css" href="styles/responsive.css">
 
     <link rel="shortcut icon" href="images/favicon.png">
@@ -154,8 +154,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                       <!-- <div class="contact_form_title">Recebimentos</div>-->
-                        <h2 class="h2 page-title">Recebimentos</h2>
+                        <!-- <div class="contact_form_title">Recebimentos</div>-->
+                        <h2 class="h2 page-title">Resumo de vendas</h2>
                         <div class="pb-0" id="line"></div>
                         <section class="voltar">
                             <label class=" my-1 mr-sm-2" id="dois"><a href="">Voltar</a></label>
@@ -164,25 +164,24 @@
                             <label class="my-1 mr-2" for="categorias" id="um">Exibir </label>
                             <select class="custom-select my-1 mr-sm-2" id="umum">
                                 <option value="todos">Todos</option>
-                                <option value="30dias">Últimos 30 dias</option>
-                                <option value="60dias">Últimos 60 dias</option>
-                                <option value="90dias">Últimos 90 dias</option>
+                                <option value="30dias">Últimos 7 dias</option>
+                                <option value="60dias">Últimos 15 dias</option>
+                                <option value="90dias">Últimos 30 dias</option>
                             </select>
-                                   <!-- <label class=" my-1 mr-sm-2" id="dois"><a href="">Voltar</a></label>-->
+                            <!-- <label class=" my-1 mr-sm-2" id="dois"><a href="">Voltar</a></label>-->
                         </section>
 
                         <section>
                             <div class="table-responsive">
                                 <table class="table" id="tabela">
                                     <thead><!--class="thead-light"-->
-                                        <tr>
-                                            <th scope="col" class="corlinha">Data</th>
-                                            <th scope="col" class="corlinha">Operação</th>
-                                            <th scope="col" class="corlinha">Contraparte</th>
-                                            <th scope="col" class="corlinha">Status</th>
-                                            <th scope="col" class="corlinha">Conta</th>
-                                            <th scope="col" class="corlinha">Valor</th>
-                                        </tr>
+                                    <tr>
+                                        <th scope="col" class="corlinha">Data de adesão</th>
+                                        <th scope="col" class="corlinha">Status da assinatura</th>
+                                        <th scope="col" class="corlinha">Cliente</th>
+                                        <th scope="col" class="corlinha">Valor</th>
+                                        <th scope="col" class="corlinha">Status da transação</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
 
@@ -204,7 +203,6 @@
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td></td>
@@ -212,10 +210,8 @@
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                        <td></td>
                                     </tr>
                                     <tr>
-                                        <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -226,6 +222,14 @@
                                 </table>
                             </div>
                         </section>
+
+                        <section class="valores">
+                            <div class="col-lg-12">
+                                <label class="val" id="disp" >Saldo disponível: R$ 100,00</label>
+                                <label class="val" id="rec" >Valor a receber: R$ 60,00</label>
+                            </div>
+                        </section>
+
                         <section class="botoes-fim">
                             <div class="col-lg-12 ">
                                 <label class="bot"><a href=""><< Primeira</a></label>
@@ -297,12 +301,12 @@
                 <div class="col">
 
                     <div
-                            class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
+                        class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                         <div class="copyright_content">
                             Copyright &copy;<script>document.write(new Date().getFullYear());</script>
                             Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
                                                                                       aria-hidden="true"></i> pela <a
-                                    href="#" target="_blank">Weiche Technologie</a>
+                                href="#" target="_blank">Weiche Technologie</a>
                         </div>
                         <div class="logos ml-sm-auto">
                             <ul class="logos_list">

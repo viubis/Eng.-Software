@@ -96,6 +96,12 @@
                                            placeholder="Valor mínimo para frete grátis..."
                                            class="form-first-name form-control" required id="valorMinimo">
                                 </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="raio_entrega">Raio de entrega (em km)</label>
+                                    <input type="number" min="1"  name="form-valor"
+                                           placeholder="Raio de entrega (em km)..."
+                                           class="form-first-name form-control" required id="raio_entrega">
+                                </div>
                                 <button type="button" class="btn btn-next">Próximo</button>
                             </div>
                         </fieldset>
