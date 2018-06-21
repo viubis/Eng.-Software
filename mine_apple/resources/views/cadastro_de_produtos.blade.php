@@ -155,7 +155,7 @@
                 <div class="col-lg-10 offset-lg-1">
                     <div class="contact_form_container">
                         <div class="contact_form_title">Cadastro de Produto</div>
-                        <form role="form" action="" method="post" class="registration-form">
+                        <form role="form" action="{{route('produto.store')}}" method="post" class="registration-form">
                             <fieldset>
                                 <div class="form-row">
                                     <div class="col-md-12 mb-3">
@@ -171,24 +171,24 @@
                                     <div class="col-md-6 mb-3">
                                         <label class="my-1 mr-2" for="categorias">Categoria </label>
                                         <select name="categoria" class="custom-select my-1 mr-sm-2" id="categorias">
-                                            <option value="Cereais">Cereais</option>
-                                            <option value="Frutas">Frutas</option>
-                                            <option value="Legumes">Legumes</option>
-                                            <option value="Leguminosas">Leguminosas</option>
-                                            <option value="Raízes">Raízes</option>
-                                            <option value="Tubérculos">Tubérculos</option>
-                                            <option value="Verduras">Verduras</option>
+                                            <option value="cereais">Cereais</option>
+                                            <option value="frutas">Frutas</option>
+                                            <option value="legumes">Legumes</option>
+                                            <option value="leguminosas">Leguminosas</option>
+                                            <option value="raizes">Raízes</option>
+                                            <option value="tuberculos">Tubérculos</option>
+                                            <option value="verduras">Verduras</option>
                                         </select>
                                     </div>
 
                                     <div class="col-md-6 mb-3">
                                         <label class="my-1 mr-2" for="Unidade">Tipo de embalagem </label>
                                         <select name="unidade" class="custom-select my-1 mr-sm-2" id="Unidade">
-                                            <option value="Unidade">Unidade</option>
-                                            <option value="Caixa">Caixa</option>
-                                            <option value="Litro">Litro</option>
-                                            <option value="Quilo">Quilo</option>
-                                            <option value="Dúzia">Dúzia</option>
+                                            <option value="unidade">Unidade</option>
+                                            <option value="caixa">Caixa</option>
+                                            <option value="litro">Litro</option>
+                                            <option value="quilo">Quilo</option>
+                                            <option value="duzia">Dúzia</option>
                                         </select>
                                     </div>
                                 </div>
@@ -196,44 +196,44 @@
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
                                         <label class="sr-only" for="nome">Nome</label>
-                                        <input type="text" name="form-first-name" placeholder="Nome do Produto..."
-                                               class="form-first-name form-control" id="nome">
+                                        <input type="text" placeholder="Nome do Produto..."
+                                               class="form-control" name="nome">
                                     </div>
 
 
                                     <div class="col-md-6 mb-3">
                                         <label class="sr-only" for="qtd">Quantidade produzida por dia</label>
-                                        <input type="number" min="1" max="999" name="form-first-name"
+                                        <input type="number" min="1" 
                                                placeholder="Quantidade produzida por dia..."
-                                               class="form-first-name form-control" id="qtd">
+                                               class="form-control" name="qtd">
                                     </div>
                                 </div>
 
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
                                         <label class="sr-only" for="qtdmin">Quantidade mínima por assinatura</label>
-                                        <input type="number" min="1" max="999" name="form-first-name"
+                                        <input type="number" min="1" 
                                                placeholder="Quantidade mínima de produtos por assinatura..."
-                                               class="form-first-name form-control" id="qtdmin">
+                                               class="form-control" name="qtdmin">
                                     </div>
                                     <div class="col-md-4 mb-3">
                                         <label class="sr-only" for="frete">Valor máximo de frete</label>
-                                        <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name"
+                                        <input type="number" step="0.1" min="0" 
                                                placeholder="Valor máximo de frete..."
-                                               class="form-first-name form-control" id="frete">
+                                               class="form-control" name="frete">
                                     </div>
                                     <div class="col-md-2 mb-3">
                                         <label class="sr-only" for="valor">Valor</label>
-                                        <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name"
+                                        <input type="number" step="0.01" min="0.0" 
                                                placeholder="Valor..."
-                                               class="form-first-name form-control" id="valor">
+                                               class="form-control" name="valor">
                                     </div>
                                 </div>
 
                                 <div class="form-row">
                                     <div class="col-md-12 mb-3">
                                         <div class="form-group">
-                                            <textarea class="form-control" rows="5" id="comment" name="form-first-name"
+                                            <textarea class="form-control" rows="5" id="comment" 
                                                       placeholder="Descrição do produto... "></textarea>
                                         </div>
                                     </div>
@@ -248,43 +248,43 @@
                                     <div class="col-md-12 mb-3">
                                         <div class="form-group">
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="segunda"
-                                                       value="option1" required>
+                                                <input class="form-check-input" type="checkbox" name="segunda"
+                                                       value="option1">
                                                 <label class="form-check-label" type="lab1" for="segunda">
                                                     Segunda-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="terca"
-                                                       value="option2" required>
+                                                <input class="form-check-input" type="checkbox" name="terca"
+                                                       value="option2">
                                                 <label class="form-check-label" type="lab1" for="terca">
                                                     Terça-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="quarta"
-                                                       value="option3" required>
+                                                <input class="form-check-input" type="checkbox" name="quarta"
+                                                       value="option3">
                                                 <label class="form-check-label" type="lab1" for="quarta">
                                                     Quarta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="quinta"
-                                                       value="option4" required>
+                                                <input class="form-check-input" type="checkbox" name="quinta"
+                                                       value="option4">
                                                 <label class="form-check-label" type="lab1" for="quinta">
                                                     Quinta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="sexta"
-                                                       value="option5" required>
+                                                <input class="form-check-input" type="checkbox" name="sexta"
+                                                       value="option5">
                                                 <label class="form-check-label" type="lab1" for="sexta">
                                                     Sexta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="sabado"
-                                                       value="option6" required>
+                                                <input class="form-check-input" type="checkbox" name="sabado"
+                                                       value="option6">
                                                 <label class="form-check-label" type="lab1" for="sabado">
                                                     Sábado
                                                 </label>
@@ -294,7 +294,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <button type="button" class="btn btn-next">Cadastrar</button>
+                                    <button type="submit" class="btn btn-next">Cadastrar</button>
                                 </div>
                             </fieldset>
                         </form>
