@@ -24,7 +24,7 @@ class CartaoController extends Controller
      */
     public function create()
     {
-        //
+        return view('adicionar_cartao');
     }
 
     /**
