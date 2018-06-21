@@ -72,23 +72,28 @@
                                     </ul>
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-first-name">Nome do titular</label>
-                                    <input type="text" name="form-facebook" placeholder="Nome do Titular do cartão"
+                                    <label class="sr-only" for="idnome">Nome do titular</label>
+                                    <input type="text" name="titular" placeholder="Nome do Titular do cartão"
                                            class="form-facebook form-control" id="idnome">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-first-name">Número do cartão</label>
-                                    <input type="text" name="form-facebook" placeholder="Número do cartão"
+                                    <label class="sr-only" for="idBanco">Número do cartão</label>
+                                    <input type="text" name="numero" placeholder="Número do cartão"
                                            class="form-facebook form-control" id="idBanco">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-first-name">Validade</label>
-                                    <input type="text" name="form-facebook" placeholder="Validade"
+                                    <label class="sr-only" for="codSeg">Código de segurança do cartão</label>
+                                    <input type="number" name="codigo" placeholder="Código de segurança do cartão"
+                                           class="form-facebook form-control" id="codSeg">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="validade">Validade</label>
+                                    <input type="text" name="validade" placeholder="Validade"
                                            class="form-facebook form-control" id="validade">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="tipo">Tipo de cartão </label>
-                                    <select class="form-control" id="tipo">
+                                    <select class="form-control" id="tipo" name="tipo">
                                         <option selected disabled>Tipo de cartão</option>
                                         <option value="credito">Crédito</option>
                                         <option value="debito">Débito</option>
