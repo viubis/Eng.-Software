@@ -92,9 +92,17 @@ CREATE TABLE IF NOT EXISTS `mine_apple`.`categoria` (
   UNIQUE INDEX `nome_UNIQUE` (`nome` ASC))
 ENGINE = InnoDB;
 
+CREATE TABLE IF NOT EXISTS `mine_apple`.`embalagem` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `tipo` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `tipo_UNIQUE` (`tipo` ASC))
+ENGINE = InnoDB;
+
 CREATE TABLE IF NOT EXISTS `mine_apple`.`produto` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `categoria_id` INT NOT NULL,
+  `embalagem_id` INT NOT NULL,
   `produtor_id` INT NOT NULL,
   `nome` VARCHAR(255) NOT NULL,
   `descricao` VARCHAR(255) NULL,
@@ -112,6 +120,7 @@ CREATE TABLE IF NOT EXISTS `mine_apple`.`produto` (
   PRIMARY KEY (`id`),
   INDEX `fk_produto_produtor_idx` (`produtor_id` ASC),
   INDEX `fk_produto_categoria_idx` (`categoria_id` ASC),
+  INDEX `fk_produto_embalagem_idx` (`embalagem_id` ASC),
   CONSTRAINT `fk_produto_produtor`
     FOREIGN KEY (`produtor_id`)
     REFERENCES `mine_apple`.`produtor` (`usuario_id`)
@@ -120,6 +129,11 @@ CREATE TABLE IF NOT EXISTS `mine_apple`.`produto` (
   CONSTRAINT `fk_produto_categoria`
     FOREIGN KEY (`categoria_id`)
     REFERENCES `mine_apple`.`categoria` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_produto_embalagem`
+    FOREIGN KEY (`embalagem_id`)
+    REFERENCES `mine_apple`.`embalagem` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

@@ -94,13 +94,7 @@
                                         <option value="debito">Débito</option>
                                     </select>
                                 </div>
-
-                                <div class="form-group">
-                                    <input id="contrato" name="contrato" type="checkbox" value="nao">
-                                    <label for="contrato">Li e aceito os termos de uso.</label>
-                                </div>
-                                <button type="button" class="btn btn-previous">Anterior</button>
-                                <button type="submit" class="btn">Cadastre-me!</button>
+                                <button type="submit" class="btn">Adicionar</button>
                             </div>
                         </fieldset>
                     </form>
