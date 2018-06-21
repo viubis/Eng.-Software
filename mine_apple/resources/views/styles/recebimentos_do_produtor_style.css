@@ -4134,7 +4134,9 @@ h1{
 
     float: right;
     padding-right: 0px;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
+    padding-top: 50px;
+
 
 }
 .botoes-fim .bot{
