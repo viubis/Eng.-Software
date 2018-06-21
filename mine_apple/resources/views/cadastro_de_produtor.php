@@ -55,12 +55,12 @@
                             <div class="form-bottom">
                                 <div class="form-group">
                                     <label class="sr-only" for="email">Email</label>
-                                    <input type="email" name="form-email" placeholder="Email..."
+                                    <input type="email" name="email" placeholder="Email..."
                                            class="form-first-name form-control" required id="email">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="senha">Senha</label>
-                                    <input type="password" minlength="8" name="form-senha" placeholder="Senha..."
+                                    <input type="password" minlength="8" name="senha" placeholder="Senha..."
                                            class="form-first-name form-control" required id="senha">
                                 </div>
                                 <div class="form-group">
@@ -72,22 +72,22 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="razaoSocial">Razão social</label>
-                                    <input type="text" name="form-razao-social" placeholder="Razão social..."
+                                    <input type="text" name="razaoSocial" placeholder="Razão social..."
                                            class="form-first-name form-control" required id="razaoSocial">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="cnpj">CNPJ</label>
-                                    <input type="text" name="form-cnpj" placeholder="CNPJ..."
+                                    <input type="text" name="cnpj" placeholder="CNPJ..."
                                            class="form-last-name form-control" required id="cnpj">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="nomeFantasia">Nome fantasia</label>
-                                    <input type="text" name="form-nome-fantasia" placeholder="Nome fantasia..."
+                                    <input type="text" name="nomeFantasia" placeholder="Nome fantasia..."
                                            class="form-first-name form-control" required id="nomeFantasia">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="telefoneComercial">Telefone Comercial</label>
-                                    <input type="tel" name="form-telefone" placeholder="Telefone Comercial..."
+                                    <input type="tel" name="telefone" placeholder="Telefone Comercial..."
                                            class="form-first-name form-control" required id="telefoneComercial">
                                 </div>
                                 <div class="form-group">
@@ -98,7 +98,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="raio_entrega">Raio de entrega (em km)</label>
-                                    <input type="number" min="1"  name="form-valor"
+                                    <input type="number" min="1"  name="raioEntrega"
                                            placeholder="Raio de entrega (em km)..."
                                            class="form-first-name form-control" required id="raio_entrega">
                                 </div>
@@ -119,34 +119,39 @@
                             <div class="form-bottom">
                                 <div class="form-group">
                                     <label class="sr-only" for="CEP">CEP</label>
-                                    <input type="text" name="form-cep" placeholder="CEP"
+                                    <input type="text" name="cep" placeholder="CEP"
                                            class="form-first-name form-control" required id="CEP">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="Rua">Rua</label>
-                                    <input type="text" name="form-rua" placeholder="Rua"
+                                    <input type="text" name="rua" placeholder="Rua"
                                            class="form-first-name form-control" required id="Rua">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="Número">Número</label>
-                                    <input type="number" min="1" name="form-numero" placeholder="Número"
+                                    <input type="number" min="1" name="numero" placeholder="Número"
                                            class="form-first-name form-control" id="Número">
                                 </div>
                                 <div class="form-group">
+                                    <label class="sr-only" for="Bairro">Bairro</label>
+                                    <input type="text" name="bairro" placeholder="Bairro"
+                                           class="form-first-name form-control" id="Bairro">
+                                </div>
+                                <div class="form-group">
                                     <label class="sr-only" for="Complemento">Complemento</label>
-                                    <input type="text" name="form-complemento" placeholder="Complemento"
+                                    <input type="text" name="complemento" placeholder="Complemento"
                                            class="form-first-name form-control" id="Complemento">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="estados">Estados</label>
-                                    <select class="form-control" id="estados">
+                                    <select class="form-control" id="estados" name="estado">
                                         <option value=""></option>
                                     </select>
 
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="cidades">Cidades</label>
-                                    <select class="form-control" id="cidades">
+                                    <select class="form-control" id="cidades" name="cidade">
                                     </select>
 
                                 </div>
@@ -168,18 +173,23 @@
                             <div class="form-bottom">
                                 <div class="form-group">
                                     <label class="sr-only" for="idBanco">ID do banco</label>
-                                    <input type="text" name="form-id-banco" placeholder="ID do banco"
+                                    <input type="text" name="idBanco" placeholder="ID do banco"
                                            class="form-facebook form-control" required id="idBanco">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="numeroConta">Número da conta</label>
-                                    <input type="text" name="form-numero-conta" placeholder="Número da conta"
+                                    <input type="text" name="numeroConta" placeholder="Número da conta"
                                            class="form-facebook form-control" required id="numeroConta">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="agencia">Agência</label>
-                                    <input type="text" name="form-agencia" placeholder="Agência"
+                                    <input type="text" name="agencia" placeholder="Agência"
                                            class="form-facebook form-control" required id="agencia">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="dVerif">Dígito verificador</label>
+                                    <input type="text" name="digito" placeholder="Dígito verificador"
+                                           class="form-facebook form-control" required id="dVerif">
                                 </div>
 
                                 <div class="form-group">

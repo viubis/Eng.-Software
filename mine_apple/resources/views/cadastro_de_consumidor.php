@@ -54,40 +54,40 @@
                             </div>
                             <div class="form-bottom">
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-first-name">First name</label>
-                                    <input type="text" name="form-first-name" placeholder="Nome..."
-                                           class="form-first-name form-control" id="form-first-name">
+                                    <label class="sr-only" for="nome">Nome</label>
+                                    <input type="text" name="nome" placeholder="Nome..."
+                                           class="form-first-name form-control" id="nome">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-first-name">Last name</label>
-                                    <input type="text" name="form-last-name" placeholder="Sobrenome..."
-                                           class="form-first-name form-control" id="form-last-name1">
+                                    <label class="sr-only" for="sobrenome">Sobrenome</label>
+                                    <input type="text" name="sobrenome" placeholder="Sobrenome..."
+                                           class="form-first-name form-control" id="sobrenome">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-last-name">Last name</label>
-                                    <input type="text" name="form-last-name" placeholder="CPF..."
-                                           class="form-last-name form-control" id="form-last-name">
+                                    <label class="sr-only" for="cpf">CPF</label>
+                                    <input type="text" name="cpf" placeholder="CPF..."
+                                           class="form-last-name form-control" id="cpf">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-first-name">First name</label>
-                                    <input type="email" name="form-email" placeholder="Email..."
-                                           class="form-first-name form-control" required id="form-first-name2">
+                                    <label class="sr-only" for="email">Email</label>
+                                    <input type="email" name="email" placeholder="Email..."
+                                           class="form-first-name form-control" required id="email">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="senha">Senha</label>
-                                    <input type="password" minlength="8" name="form-senha" placeholder="Senha..."
+                                    <input type="password" minlength="8" name="senha" placeholder="Senha..."
                                            class="form-first-name form-control" required id="senha">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="confSenha">Confirmação de senha</label>
-                                    <input type="password" minlength="8" name="form-confirmacao-senha"
+                                    <input type="password" minlength="8" name="confSenha"
                                            placeholder="Confirmação de senha..."
                                            class="form-first-name form-control" data-match="#senha" required
                                            id="confSenha">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="sexo">Sexo</label>
-                                    <select class="form-control" id="sexo" required>
+                                    <select class="form-control" id="sexo" name="sexo" required>
                                         <option disabled selected> Sexo</option>
                                         <option value="feminino">Feminino</option>
                                         <option value="masculino">Masculino</option>
@@ -110,34 +110,39 @@
                             </div>
                             <div class="form-bottom">
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-first-name">CEP</label>
-                                    <input type="text" name="form-first-name" placeholder="CEP"
+                                    <label class="sr-only" for="CEP">CEP</label>
+                                    <input type="text" name="cep" placeholder="CEP"
                                            class="form-first-name form-control" id="CEP">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-first-name">Rua</label>
-                                    <input type="text" name="form-first-name" placeholder="Rua"
+                                    <label class="sr-only" for="Rua">Rua</label>
+                                    <input type="text" name="rua" placeholder="Rua"
                                            class="form-first-name form-control" id="Rua">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-first-name">Número</label>
-                                    <input type="text" name="form-first-name" placeholder="Número"
+                                    <label class="sr-only" for="Número">Número</label>
+                                    <input type="text" name="numero" placeholder="Número"
                                            class="form-first-name form-control" id="Número">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-first-name">Complemento</label>
-                                    <input type="text" name="form-first-name" placeholder="Complemento"
+                                    <label class="sr-only" for="Bairro">Bairro</label>
+                                    <input type="text" name="bairro" placeholder="Bairro"
+                                           class="form-first-name form-control" id="Bairro">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="Complemento">Complemento</label>
+                                    <input type="text" name="complemento" placeholder="Complemento"
                                            class="form-first-name form-control" id="Complemento">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="estados">Estados</label>
-                                    <select class="form-control" id="estados">
+                                    <select class="form-control" id="estados" name="estado">
                                         <option value=""></option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="cidades">Cidades</label>
-                                    <select class="form-control" id="cidades">
+                                    <select class="form-control" id="cidades" name="cidade">
                                     </select>
                                 </div>
                                 <button type="button" class="btn btn-previous">Anterior</button>
@@ -177,23 +182,28 @@
                                     </ul>
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-first-name">Nome do titular</label>
-                                    <input type="text" name="form-facebook" placeholder="Nome do Titular do cartão"
-                                           class="form-facebook form-control" id="idnome">
+                                    <label class="sr-only" for="titular">Nome do titular</label>
+                                    <input type="text" name="titular" placeholder="Nome do Titular do cartão"
+                                           class="form-facebook form-control" id="titular">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-first-name">Número do cartão</label>
-                                    <input type="text" name="form-facebook" placeholder="Número do cartão"
-                                           class="form-facebook form-control" id="idBanco">
+                                    <label class="sr-only" for="NumeroCartao">Número do cartão</label>
+                                    <input type="text" name="numero" placeholder="Número do cartão"
+                                           class="form-facebook form-control" id="NumeroCartao">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-first-name">Validade</label>
-                                    <input type="text" name="form-facebook" placeholder="Validade"
+                                    <label class="sr-only" for="CodSeg">Número do cartão</label>
+                                    <input type="text" name="codigo" placeholder="Código de segurança"
+                                           class="form-facebook form-control" id="CodSeg">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="Validade">Validade</label>
+                                    <input type="text" name="validade" placeholder="Validade"
                                            class="form-facebook form-control" id="validade">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="tipo">Tipo de cartão </label>
-                                    <select class="form-control" id="tipo">
+                                    <select class="form-control" id="tipo" name="tipo">
                                         <option selected disabled>Tipo de cartão</option>
                                         <option value="credito">Crédito</option>
                                         <option value="debito">Débito</option>

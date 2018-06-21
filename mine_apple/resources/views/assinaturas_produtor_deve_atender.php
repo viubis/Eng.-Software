@@ -183,30 +183,30 @@
                                 <tr><td>Terça- feira</td></tr>-->
 
                                 <tr>
-                                    <th scope="row"><u>01</u></th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <th scope="row" id="idAssinatura"><u>01</u></th>
+                                    <td id="cliente"></td>
+                                    <td id="produtos"></td>
+                                    <td id="quantidade"></td>
+                                    <td id="diasEntrega"></td>
+                                    <td id="frequencia"></td>
                                     <th scope="row"><a href=""><u>Mais detalhes</u></a></th>
                                 </tr>
                                 <tr>
-                                    <th scope="row"><u>02</u></th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <th scope="row" id="idAssinatura"><u>02</u></th>
+                                    <td id="cliente"></td>
+                                    <td id="produtos"></td>
+                                    <td id="quantidade"></td>
+                                    <td id="diasEntrega"></td>
+                                    <td id="frequencia"></td>
                                     <th scope="row"><a href=""><u>Mais detalhes</u></a></th>
                                 </tr>
                                 <tr>
-                                    <th scope="row"><u>03</u></th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <th scope="row" id="idAssinatura"><u>03</u></th>
+                                    <td id="cliente"></td>
+                                    <td id="produtos"></td>
+                                    <td id="quantidade"></td>
+                                    <td id="diasEntrega"></td>
+                                    <td id="frequencia"></td>
                                     <th scope="row"><a href=""><u>Mais detalhes</u></a></th>
                                 </tr>
                                 </tbody>
