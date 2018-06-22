@@ -10,17 +10,17 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-    <link rel="stylesheet" href="styles/bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('css/bootstrap4/bootstrap.min.css')}}">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
           type='text/css'>
-    <link rel="stylesheet" href="styles/formularios_style.css">
+    <link rel="stylesheet" href="{{asset('css/formularios_style.css')}}">
 
     <!-- Favicon and touch icons -->
     <link rel="shortcut icon" href="images/favicon.png">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icon-144.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icon-114.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icon-72.png">
-    <link rel="apple-touch-icon-precomposed" href="images/icon-16.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('images/icon-144.png')}}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset('images/icon-114.png')}}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{asset('images/icon-72.png')}}">
+    <link rel="apple-touch-icon-precomposed" href="{{asset('images/icon-16.png')}}">
 
 </head>
 
@@ -29,7 +29,7 @@
 
 <!-- Top content -->
 <div class="top-content">
-    <div class="logo_icon"><img src="images/logoSite.png" alt=""></div>
+    <div class="logo_icon"><img src="{{asset('images/logoSite.png')}}" alt=""></div>
     <div class="inner-bg">
         <div class="container">
             <div class="row">
@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="confSenha">Confirmação de senha</label>
-                                    <input type="password" minlength="8" name="form-confirmacao-senha"
+                                    <input type="password" minlength="8" name="confirmacao-senha"
                                            placeholder="Confirmação de senha..."
                                            class="form-first-name form-control" data-match="#senha" required
                                            id="confSenha">
@@ -92,7 +92,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="valorMinimo">Valor mínimo para frete grátis</label>
-                                    <input type="number" min="1" max="999" name="form-valor"
+                                    <input type="number" min="1" max="999" name="valorMinimo"
                                            placeholder="Valor mínimo para frete grátis..."
                                            class="form-first-name form-control" required id="valorMinimo">
                                 </div>
@@ -230,16 +230,14 @@
 </div>
 
 <!-- Javascript -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="js/jquery.backstretch.min.js"></script>
-<script src="js/retina-1.1.0.min.js"></script>
-<script src="js/script_tela_cadastro_produtor.js"></script>
-<script src="js/validator.min.js"></script>
-<!--[if lt IE 10]>
-<script src="js/placeholder_tela_cadastro_produtor.js"></script>
-<![endif]-->
+<script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
+<script src="{{asset('js/popper.min.js')}}"></script>
+<script src="{{asset('css/bootstrap4/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/jquery.backstretch.min.js')}}"></script>
+<script src="{{asset('js/retina-1.1.0.min.js')}}"></script>
+<script src="{{asset('js/script_tela_cadastro_produtor.js')}}"></script>
+<script src="{{asset('js/validator.min.js')}}"></script>
+<script src="{{asset('js/placeholder_tela_cadastro_produtor.js')}}"></script>
 
 </body>
 
