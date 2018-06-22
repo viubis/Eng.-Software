@@ -55,7 +55,7 @@
                             <div class="form-bottom">
                                 <div class="form-group">
                                     <label class="sr-only" for="email">Email</label>
-                                    <input type="email" name="form-email" placeholder="Email..."
+                                    <input type="email" name="email" placeholder="Email..."
                                            class="form-first-name form-control" required id="email">
                                 </div>
                                 <button type="submit" class="btn">Enviar</button>
@@ -97,11 +97,7 @@
 <script src="{{asset('js/retina-1.1.0.min.js')}}"></script>
 <script src="{{asset('js/script_tela_cadastro_produtor')}}.js"></script>
 <script src="{{asset('js/validator.min.js')}}"></script>
-
-
-<!--[if lt IE 10]>
-<script src="js/placeholder_tela_cadastro_produtor.js"></script>
-<![endif]-->
+<script src="{{asset('js/placeholder_tela_cadastro_produtor.js')}}"></script>
 
 </body>
 
