@@ -161,7 +161,7 @@
                                     <div class="col-md-12 mb-3">
                                         <form method="POST" enctype="multipart/form-data">
                                             <label for="form-control">Adicione uma imagem do seu produto:</label>
-                                            <input type="file" name="pic" accept="image/*" class="form-control">
+                                            <input type="file" name="filename" accept="image/*" class="form-control">
 
                                         </form>
                                     </div>
@@ -205,7 +205,7 @@
                                         <label class="sr-only" for="qtd">Quantidade produzida por dia</label>
                                         <input type="number" min="1" 
                                                placeholder="Quantidade produzida por dia..."
-                                               class="form-control" name="qtd">
+                                               class="form-control" name="maxPorDia">
                                     </div>
                                 </div>
 
@@ -214,13 +214,13 @@
                                         <label class="sr-only" for="qtdmin">Quantidade mínima por assinatura</label>
                                         <input type="number" min="1" 
                                                placeholder="Quantidade mínima de produtos por assinatura..."
-                                               class="form-control" name="qtdmin">
+                                               class="form-control" name="minPorAssinatura">
                                     </div>
                                     <div class="col-md-4 mb-3">
                                         <label class="sr-only" for="frete">Valor máximo de frete</label>
                                         <input type="number" step="0.1" min="0" 
                                                placeholder="Valor máximo de frete..."
-                                               class="form-control" name="frete">
+                                               class="form-control" name="FreteMax">
                                     </div>
                                     <div class="col-md-2 mb-3">
                                         <label class="sr-only" for="valor">Valor</label>
@@ -233,7 +233,7 @@
                                 <div class="form-row">
                                     <div class="col-md-12 mb-3">
                                         <div class="form-group">
-                                            <textarea class="form-control" rows="5" id="comment" 
+                                            <textarea class="form-control" name="descricao" rows="5" id="comment" 
                                                       placeholder="Descrição do produto... "></textarea>
                                         </div>
                                     </div>
@@ -248,47 +248,56 @@
                                     <div class="col-md-12 mb-3">
                                         <div class="form-group">
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" name="segunda"
-                                                       value="option1">
+                                                <input class="form-check-input" type="checkbox" name="week[seg]"
+                                                       value="seg">
                                                 <label class="form-check-label" type="lab1" for="segunda">
                                                     Segunda-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" name="terca"
-                                                       value="option2">
+                                                <input class="form-check-input" type="checkbox" name="week[ter]"
+                                                       value="ter">
                                                 <label class="form-check-label" type="lab1" for="terca">
                                                     Terça-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" name="quarta"
-                                                       value="option3">
+                                                <input class="form-check-input" type="checkbox" name="week[qua]"
+                                                       value="qua">
                                                 <label class="form-check-label" type="lab1" for="quarta">
                                                     Quarta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" name="quinta"
-                                                       value="option4">
+                                                <input class="form-check-input" type="checkbox" name="week[qui]"
+                                                       value="qui">
                                                 <label class="form-check-label" type="lab1" for="quinta">
                                                     Quinta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" name="sexta"
-                                                       value="option5">
+                                                <input class="form-check-input" type="checkbox" name="week[sex]"
+                                                       value="sex">
                                                 <label class="form-check-label" type="lab1" for="sexta">
                                                     Sexta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" name="sabado"
-                                                       value="option6">
+                                                <input class="form-check-input" type="checkbox" name="week[sab]"
+                                                       value="sab">
                                                 <label class="form-check-label" type="lab1" for="sabado">
                                                     Sábado
                                                 </label>
                                             </div>
+
+					   <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" name="week[dom]"
+                                                       value="dom">
+                                                <label class="form-check-label" type="lab1" for="domingo">
+                                                    Domingo
+                                                </label>
+                                            </div>
+
 
                                         </div>
                                     </div>

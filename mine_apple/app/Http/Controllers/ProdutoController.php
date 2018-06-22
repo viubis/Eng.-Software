@@ -43,19 +43,37 @@ class ProdutoController extends Controller
 		$file->move(public_path().'images/, $name');
 	}
         $produto = new Produto;
+	$dias_semana = [];
+	
 	$produto->nome = $request->get('nome');
 	$produto->descricao = $request->get('descricao');
 	$produto->valor = $request->get('valor');
 	$produto->minPorAssinatura = $request->get('minPorAssinatura');
 	$produto->maxPorDia = $request->get('maxPorDia');
 	$produto->freteMax = $request->get('freteMax');
-	$produto->seg = $request->get('seg');
-	$produto->ter = $request->get('ter');
-	$produto->qua = $request->get('qua');
-	$produto->qui = $request->get('qui');
-	$produto->sex = $request->get('sex');
-	$produto->sab = $request->get('sab');
-	$produto->dom = $request->get('dom');
+	$produto->categoria = $request->get('categoria');
+	$produto->unidade =  $request->get('unidade');
+	if ( null !==  $request->get('week.seg'))
+		$produto->seg = 'true';
+	//$produto->seg = $request->get('seg');
+	if ( null !==  $request->get('week.ter'))
+		$produto->ter = 'true';
+	if ( null !== $request->get('week.qua'))
+		$produto->qua = 'true';
+	if (null !== $request->get('week.qui'))
+		$produto->qui = 'true';
+	if (null !== $request->get('week.sex'))
+		$produto->sex = 'true';
+	if (null !== $request->get('week.sab'))
+		$produto->sab = true;
+	if (null !== $request->get('week.dom'))
+		$produto->dom = true;
+	//$produto->ter = $request->get('ter');
+	//$produto->qua = $request->get('qua');
+	//$produto->qui = $request->get('qui');
+	//$produto->sex = $request->get('sex');
+	//$produto->sab = $request->get('sab');
+	//$produto->dom = $request->get('dom');
 	$produto->nome_foto = $name;
 	$produto->save();
 
