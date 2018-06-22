@@ -55,7 +55,7 @@
                                     </div>
                                     <div class="cart_content">
                                         <div class="cart_text"><a href="#">Bem-vindo</a></div>
-                                        <div class="cart_text"><a href="#">Saldo: R$ 100,00</a></div>
+                                        <div class="cart_text"><a href="#">Saldo: R$ 0,00</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -158,24 +158,9 @@
                         <div class="confimacao col-md-10 offset-lg-1 row">
                             <div class="col-md-12">
                                 <img src="images/naoencontrado2.png" width="80" name="naocadastrado" >
-                                <label class="obrigado">Ainda não possuem produtos cadastrados. Para cadastrar um novo produto <a href=""><u>Clique Aqui</u></a>. </label>
+                                <label class="obrigado">Ainda não existem produtos cadastrados. Para cadastrar <a href=""><u>Clique Aqui</u></a>. </label>
                                 <label></label>
                             </div>
-<!--
-                            <div class="col-md-4 offset-lg-2 row">
-                                <div class="col-md-9">
-                                    <label class="obrigado2">Número do pedido:</label>
-                                </div>
-                                <div class="col-md-2">
-                                    <label class="numPedido">01</label>
-                                </div>
-                            </div>
-                            <div class=" confirm-env col-md-4">
-                                <label >Confirmação do pedido enviada para:</label>
-                            </div>
-                            <div class="email col-md-4">
-                                <label>fulano@email.com </label>
-                            </div>-->
                         </div>
                     </div>
                 </div>
