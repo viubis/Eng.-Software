@@ -161,7 +161,7 @@
                                     <div class="col-md-12 mb-3">
                                         <form method="POST" enctype="multipart/form-data">
                                             <label for="form-control">Adicione uma imagem do seu produto:</label>
-                                            <input type="file" name="pic" accept="image/*" class="form-control">
+                                            <input type="file" name="path" accept="image/*" class="form-control">
 
                                         </form>
                                     </div>
@@ -170,7 +170,7 @@
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
                                         <label class="my-1 mr-2" for="categorias">Categoria </label>
-                                        <select class="custom-select my-1 mr-sm-2" id="categorias">
+                                        <select class="custom-select my-1 mr-sm-2" name="nomeCategoria" id="categorias">
                                             <option value="Cereais">Cereais</option>
                                             <option value="Frutas">Frutas</option>
                                             <option value="Legumes">Legumes</option>
@@ -183,7 +183,7 @@
 
                                     <div class="col-md-6 mb-3">
                                         <label class="my-1 mr-2" for="Unidade">Tipo de embalagem </label>
-                                        <select class="custom-select my-1 mr-sm-2" id="Unidade">
+                                        <select class="custom-select my-1 mr-sm-2" name="tipoEmbalagem" id="Unidade">
                                             <option value="Cereais">Unidade</option>
                                             <option value="Frutas">Caixa</option>
                                             <option value="Legumes">Litro</option>
@@ -196,14 +196,14 @@
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
                                         <label class="sr-only" for="nome">Nome</label>
-                                        <input type="text" name="form-first-name" placeholder="Nome do Produto..."
+                                        <input type="text" name="nome" placeholder="Nome do Produto..."
                                                class="form-first-name form-control" id="nome">
                                     </div>
 
 
                                     <div class="col-md-6 mb-3">
                                         <label class="sr-only" for="qtd">Quantidade produzida por dia</label>
-                                        <input type="number" min="1" max="999" name="form-first-name"
+                                        <input type="number" min="1" max="999" name="maxPorDia"
                                                placeholder="Quantidade produzida por dia..."
                                                class="form-first-name form-control" id="qtd">
                                     </div>
@@ -212,19 +212,19 @@
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
                                         <label class="sr-only" for="qtdmin">Quantidade mínima por assinatura</label>
-                                        <input type="number" min="1" max="999" name="form-first-name"
+                                        <input type="number" min="1" max="999" name="minPorAssinatura"
                                                placeholder="Quantidade mínima de produtos por assinatura..."
                                                class="form-first-name form-control" id="qtdmin">
                                     </div>
                                     <div class="col-md-4 mb-3">
                                         <label class="sr-only" for="frete">Valor máximo de frete</label>
-                                        <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name"
+                                        <input type="number" step="0.01" min="0.01" max="999.00" name="freteMax"
                                                placeholder="Valor máximo de frete..."
                                                class="form-first-name form-control" id="frete">
                                     </div>
                                     <div class="col-md-2 mb-3">
                                         <label class="sr-only" for="valor">Valor</label>
-                                        <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name"
+                                        <input type="number" step="0.01" min="0.01" max="999.00" name="valor"
                                                placeholder="Valor..."
                                                class="form-first-name form-control" id="valor">
                                     </div>
@@ -233,7 +233,7 @@
                                 <div class="form-row">
                                     <div class="col-md-12 mb-3">
                                         <div class="form-group">
-                                            <textarea class="form-control" rows="5" id="comment" name="form-first-name"
+                                            <textarea class="form-control" rows="5" id="comment" name="descricao"
                                                       placeholder="Descrição do produto... "></textarea>
                                         </div>
                                     </div>
@@ -249,44 +249,51 @@
                                         <div class="form-group">
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="segunda"
-                                                       value="option1" required>
+                                                       value="option1" required name="seg">
                                                 <label class="form-check-label" type="lab1" for="segunda">
                                                     Segunda-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="terca"
-                                                       value="option2" required>
+                                                       value="terca" name="ter" required>
                                                 <label class="form-check-label" type="lab1" for="terca">
                                                     Terça-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="quarta"
-                                                       value="option3" required>
+                                                       value="quarta" name="qua" required>
                                                 <label class="form-check-label" type="lab1" for="quarta">
                                                     Quarta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="quinta"
-                                                       value="option4" required>
+                                                       value="quinta" name="qui" required>
                                                 <label class="form-check-label" type="lab1" for="quinta">
                                                     Quinta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="sexta"
-                                                       value="option5" required>
+                                                       value="sexta" name="sex" required>
                                                 <label class="form-check-label" type="lab1" for="sexta">
                                                     Sexta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="sabado"
-                                                       value="option6" required>
+                                                       value="sabado" name="sab" required>
                                                 <label class="form-check-label" type="lab1" for="sabado">
                                                     Sábado
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="domingo"
+                                                       value="sabado" name="dom" required>
+                                                <label class="form-check-label" type="lab1" for="domingo">
+                                                    Domingo
                                                 </label>
                                             </div>
 

@@ -52,34 +52,39 @@
                             </div>
                             <div class="form-bottom">
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-first-name">CEP</label>
-                                    <input type="text" name="form-first-name" placeholder="CEP"
+                                    <label class="sr-only" for="CEP">CEP</label>
+                                    <input type="text" name="numero" placeholder="CEP"
                                            class="form-first-name form-control" id="CEP">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-first-name">Rua</label>
-                                    <input type="text" name="form-first-name" placeholder="Rua"
+                                    <label class="sr-only" for="Rua">Rua</label>
+                                    <input type="text" name="rua" placeholder="Rua"
                                            class="form-first-name form-control" id="Rua">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-first-name">Número</label>
-                                    <input type="text" name="form-first-name" placeholder="Número"
+                                    <label class="sr-only" for="Número">Número</label>
+                                    <input type="text" name="numero" placeholder="Número"
                                            class="form-first-name form-control" id="Número">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="form-first-name">Complemento</label>
-                                    <input type="text" name="form-first-name" placeholder="Complemento"
+                                    <label class="sr-only" for="Bairro">Bairro</label>
+                                    <input type="text" name="bairro" placeholder="Bairro"
+                                           class="form-first-name form-control" id="Bairro">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="Complemento">Complemento</label>
+                                    <input type="text" name="complemento" placeholder="Complemento"
                                            class="form-first-name form-control" id="Complemento">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="estados">Estados</label>
-                                    <select class="form-control" id="estados">
+                                    <select class="form-control" name="nome" id="estados">
                                         <option value=""></option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="cidades">Cidades</label>
-                                    <select class="form-control" id="cidades">
+                                    <select class="form-control" name="nome" id="cidades">
                                     </select>
                                 </div>
                                 <button type="submit" class="btn">Adicionar</button>

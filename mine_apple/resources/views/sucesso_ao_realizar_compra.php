@@ -212,24 +212,24 @@
                                     <tbody>
                                     <tr>
                                         <td><img src="images/imagemProduto.png" width="100" height="100"></td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>Quantidade</td>
-                                        <td>Preço</td>
+                                        <td>Abacaxi</td>
+                                        <td>Verduras & Cia</td>
+                                        <td>0</td>
+                                        <td>R$ 0,00</td>
                                     </tr>
                                     <tr>
                                         <td><img src="images/imagemProduto.png" width="100" height="100"></td>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>Quantidade</td>
-                                        <td>Preço</td>
+                                        <td>Banana</td>
+                                        <td>FreshFruits</td>
+                                        <td>0</td>
+                                        <td>R$ 0,00</td>
                                     </tr>
                                     <tr>
                                         <td><img src="images/imagemProduto.png" width="100" height="100"></td>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td>Quantidade</td>
-                                        <td>Preço</td>
+                                        <td>Laranja</td>
+                                        <td>Verduras & Cia</td>
+                                        <td>0</td>
+                                        <td>R$ 0,00</td>
                                     </tr>
                                     </tbody>
                                     <thead >

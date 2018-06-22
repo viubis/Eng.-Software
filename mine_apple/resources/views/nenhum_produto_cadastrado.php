@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
     <link rel="stylesheet" type="text/css" href="plugins/slick-1.8.0/slick.css">
-    <link rel="stylesheet" type="text/css" href="styles/assinaturas_produtor_deve_atender_style.css">
+    <link rel="stylesheet" type="text/css" href="styles/nenhum_produto_cadastrado_style.css">
     <link rel="stylesheet" type="text/css" href="styles/responsive.css">
 
     <link rel="shortcut icon" href="images/favicon.png">
@@ -55,6 +55,7 @@
                                     </div>
                                     <div class="cart_content">
                                         <div class="cart_text"><a href="#">Bem-vindo</a></div>
+                                        <div class="cart_text"><a href="#">Saldo: R$ 100,00</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -146,87 +147,42 @@
 
     </header>
 
-
     <main>
-
-        <div class="top-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 ">
-                        <div class="contact_form_title">Assinaturas</div>
-                        <div class="table-responsive">
-                            <table class="table" id="tabela">
-                                <thead><!--class="thead-light"-->
-                                <tr>
-                                    <th scope="col" class="corlinha">ID assinatura</th>
-                                    <th scope="col" class="corlinha">Cliente</th>
-                                    <th scope="col" class="corlinha">Produto(s)</th>
-                                    <th scope="col" class="corlinha">Quantidade</th>
-                                    <th scope="col" class="corlinha">Dias de entrega</th>
-                                    <th scope="col" class="corlinha">Frequência</th>
-
-
-                                </tr>
-                                </thead>
-                                <tbody>
-
-                                <!--<tr>
-                                    <td rowspan="2">Banana</td>
-                                    <td rowspan="2">Dúzia</td>
-                                    <td rowspan="2">100</td>
-                                    <td rowspan="2">Frutas</td>
-                                    <td rowspan="2">R$ 20,00</td>
-                                    <td rowspan="2">R$ 10,00</td>
-                                    <td>Segunda-feira</td>
-                                    <th scope="row" rowspan="2"><a href=""><u>Editar</u></a></th>
-                                </tr>
-                                <tr><td>Terça- feira</td></tr>-->
-
-                                <tr>
-                                    <th scope="row" id="idAssinatura"><u>01</u></th>
-                                    <td id="cliente"></td>
-                                    <td id="produtos"></td>
-                                    <td id="quantidade"></td>
-                                    <td id="diasEntrega"></td>
-                                    <td id="frequencia"></td>
-                                    <th scope="row"><a href=""><u>Mais detalhes</u></a></th>
-                                </tr>
-                                <tr>
-                                    <th scope="row" id="idAssinatura"><u>02</u></th>
-                                    <td id="cliente"></td>
-                                    <td id="produtos"></td>
-                                    <td id="quantidade"></td>
-                                    <td id="diasEntrega"></td>
-                                    <td id="frequencia"></td>
-                                    <th scope="row"><a href=""><u>Mais detalhes</u></a></th>
-                                </tr>
-                                <tr>
-                                    <th scope="row" id="idAssinatura"><u>03</u></th>
-                                    <td id="cliente"></td>
-                                    <td id="produtos"></td>
-                                    <td id="quantidade"></td>
-                                    <td id="diasEntrega"></td>
-                                    <td id="frequencia"></td>
-                                    <th scope="row"><a href=""><u>Mais detalhes</u></a></th>
-                                </tr>
-                                </tbody>
-                            </table>
+        <section>
+            <div class="top-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 row">
+                            <div class="contact_form_title">Meus Produtos</div>
+                        </div>
+                        <div class="confimacao col-md-10 offset-lg-1 row">
+                            <div class="col-md-12">
+                                <img src="images/naoencontrado2.png" width="80" name="naocadastrado" >
+                                <label class="obrigado">Ainda não possuem produtos cadastrados. Para cadastrar um novo produto <a href=""><u>Clique Aqui</u></a>. </label>
+                                <label></label>
+                            </div>
+<!--
+                            <div class="col-md-4 offset-lg-2 row">
+                                <div class="col-md-9">
+                                    <label class="obrigado2">Número do pedido:</label>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="numPedido">01</label>
+                                </div>
+                            </div>
+                            <div class=" confirm-env col-md-4">
+                                <label >Confirmação do pedido enviada para:</label>
+                            </div>
+                            <div class="email col-md-4">
+                                <label>fulano@email.com </label>
+                            </div>-->
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-
-
+        </section>
 
     </main>
-
-
-
-
-
-
 
     <!-- Footer -->
 
@@ -282,12 +238,12 @@
                 <div class="col">
 
                     <div
-                        class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
+                            class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                         <div class="copyright_content">
                             Copyright &copy;<script>document.write(new Date().getFullYear());</script>
                             Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
                                                                                       aria-hidden="true"></i> pela <a
-                            href="#" target="_blank">Weiche Technologie</a>
+                                href="#" target="_blank">Weiche Technologie</a>
                         </div>
                         <div class="logos ml-sm-auto">
                             <ul class="logos_list">

@@ -203,7 +203,7 @@
 
                                     <div class="col-md-6 mb-3">
                                         <label class="sr-only" for="qtd">Quantidade produzida por dia</label>
-                                        <input type="number" min="1" 
+                                        <input type="number" min="1"
                                                placeholder="Quantidade produzida por dia..."
                                                class="form-control" name="maxPorDia">
                                     </div>
@@ -212,19 +212,19 @@
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
                                         <label class="sr-only" for="qtdmin">Quantidade mínima por assinatura</label>
-                                        <input type="number" min="1" 
+                                        <input type="number" min="1"
                                                placeholder="Quantidade mínima de produtos por assinatura..."
                                                class="form-control" name="minPorAssinatura">
                                     </div>
                                     <div class="col-md-4 mb-3">
                                         <label class="sr-only" for="frete">Valor máximo de frete</label>
-                                        <input type="number" step="0.1" min="0" 
+                                        <input type="number" step="0.1" min="0"
                                                placeholder="Valor máximo de frete..."
                                                class="form-control" name="FreteMax">
                                     </div>
                                     <div class="col-md-2 mb-3">
                                         <label class="sr-only" for="valor">Valor</label>
-                                        <input type="number" step="0.01" min="0.0" 
+                                        <input type="number" step="0.01" min="0.0"
                                                placeholder="Valor..."
                                                class="form-control" name="valor">
                                     </div>
@@ -233,8 +233,7 @@
                                 <div class="form-row">
                                     <div class="col-md-12 mb-3">
                                         <div class="form-group">
-                                            <textarea class="form-control" name="descricao" rows="5" id="comment" 
-                                                      placeholder="Descrição do produto... "></textarea>
+                                            <textarea class="form-control" name="descricao" rows="5" id="comment" placeholder="Descrição do produto... "></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -248,8 +247,12 @@
                                     <div class="col-md-12 mb-3">
                                         <div class="form-group">
                                             <div class="form-check form-check-inline">
+
                                                 <input class="form-check-input" type="checkbox" name="week[seg]"
                                                        value="seg">
+
+                                                
+
                                                 <label class="form-check-label" type="lab1" for="segunda">
                                                     Segunda-feira
                                                 </label>
