@@ -14,11 +14,11 @@
 <link rel="stylesheet" href={{asset('css/tela_de_login_style.css')}}>
 
 <!-- Favicon and touch icons -->
-<link rel="shortcut icon" href="images/favicon.png">
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icon-144.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icon-114.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icon-72.png">
-<link rel="apple-touch-icon-precomposed" href="images/icon-16.png">
+<link rel="shortcut icon" href="{{asset('images/favicon.png')}}">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('images/icon-144.png')}}">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset('images/icon-114.png')}}">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{asset('images/icon-72.png')}}">
+<link rel="apple-touch-icon-precomposed" href="{{asset('images/icon-16.png')}}">
 
 
 <head></head>
@@ -26,7 +26,7 @@
 <body>
 <!-- Top content -->
 <div class="top-content">
-    <div class="logo_icon"><img src="images/logoSite.png" alt=""></div>
+    <div class="logo_icon"><img src="{{asset('images/logoSite.png')}}" alt=""></div>
     <div class="inner-bg">
         <div class="container">
             <div class="row">
@@ -44,18 +44,19 @@
                         </div>
                         <div class="form-bottom">
                             <form name="login" method="POST" action="{{ route('login') }}" class="login-form">
-			@csrf
+                                @csrf
                                 <div class="form-group">
                                     <label class="sr-only" for="form-email">Email</label>
                                     <input id="email" type="email" name="email" placeholder="Email..."
-                                           class="form-email form-control" id="form-email">
+                                           class="form-email form-control">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="form-password">Password</label>
                                     <input id="password" type="password" name="password" placeholder="Senha..."
-                                           class="form-password form-control" minlength="8" id="form-password">
+                                           class="form-password form-control" minlength="8">
                                     <div style="text-align: right">
-                                        <a href="{{ route('password.request') }}" style="color:#FFFFFF; font-size: 14px">Esqueci
+                                        <a href="{{ route('password.request') }}"
+                                           style="color:#FFFFFF; font-size: 14px">Esqueci
                                             minha senha</a>
                                     </div>
                                 </div>
@@ -94,9 +95,10 @@
                             </div>
                         </div>
                         <div class="form-bottom">
-                            <form name="register"  method="POST" action="{{ route('register') }}" class="registration-form">
-				@csrf
-				<div class="form-group">
+                            <form name="register" method="POST" action="{{ route('register') }}"
+                                  class="registration-form">
+                                @csrf
+                                <div class="form-group">
                                     <label class="sr-only" for="name-email">Nome</label>
                                     <input id="name1" type="text" name="name" placeholder="Nome... "
                                            class="form-email form-control">
@@ -104,28 +106,23 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="form-email">Email</label>
                                     <input id="email1" type="email" name="email" placeholder="Email... "
-                                           class="form-email form-control" id="form-email2">
+                                           class="form-email form-control">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="form-password">Password</label>
                                     <input id="password1" type="password" name="password" placeholder="Senha..."
-                                           class="form-password form-control" minlength="8" id="form-password2" required>
-                                    <!-- <div style="padding-bottom: 31px">
-
-                                    </div> -->
+                                           class="form-password form-control" minlength="8" required>
                                 </div>
 
-				<div class="form-group">
+                                <div class="form-group">
                                     <label class="sr-only" for="form-password">Password</label>
-                                    <input id="password1" type="password" name="password_confirmation" placeholder="Senha..."
-                                           class="form-password form-control" minlength="8" id="form-password2" required>
-                                    <!-- <div style="padding-bottom: 31px">
-
-                                    </div> -->
+                                    <input id="password1" type="password" name="password_confirmation"
+                                           placeholder="Senha..."
+                                           class="form-password form-control" minlength="8" required>
                                 </div>
-                               
-                                    <button type="submit" class="btn">Cadastrar</button>
-                                
+
+                                <button type="submit" class="btn">Cadastrar</button>
+
                             </form>
                         </div>
                         <div class="social-login">
@@ -177,7 +174,7 @@
 <script src="{{asset('js/script_tela_login.js')}}"></script>
 
 <!--[if lt IE 10]>
-<script src="js/placeholder_tela_de_login.js"></script>
+<script src="{{asset('js/placeholder_tela_de_login.js')}}"></script>
 <![endif]-->
 
 </body>
