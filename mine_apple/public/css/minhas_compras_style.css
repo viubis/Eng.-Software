@@ -4038,8 +4038,8 @@ input.form-control textarea{
     width: 100%;
     padding-left: 50px;
     margin-left: 0px;
-    padding-top: 50px; 
-   
+    padding-top: 50px;
+
 
 }
 
@@ -4057,7 +4057,7 @@ input.form-control textarea{
     max-width: 250px;
 }
 
-.row#backColor{
+.backColor{
     background-color: #fefefe;
     padding-top: 20px;
     box-shadow: 1px 2px 1px 2px #d7d7d7;
