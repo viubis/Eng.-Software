@@ -339,7 +339,7 @@ button.btn:active:focus, button.btn.active:focus {
     padding-bottom: 50px;
 }
 
-#line {
+.line {
     width: 100%;
     border-top: 1px solid #a2a2a2;
     padding-top: 10px;
@@ -3909,10 +3909,8 @@ select option
 		align-content: center;
 	}
 
-	.form-row#espac2{
+	.espac2{
 		padding-left: 10px;
-
-
 	}
 
 	.text-center#imagem{
@@ -3949,7 +3947,7 @@ select option
 		background-color: rgba(255,255,255,0.0);
 	}
 
-	.row#backColor{
+	.backColor{
 		background-color: #fefefe;
 		padding-top: 20px;
 		box-shadow: 1px 2px 1px 2px #d7d7d7;
