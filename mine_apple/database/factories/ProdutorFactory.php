@@ -10,6 +10,7 @@ $factory->define(mine_apple\Produtor::class, function (Faker $faker) {
         'razaoSocial' => $faker->company,
         'telefone' => $faker->randomNumber(),
         'raioEntrega' => $faker->randomFloat(1, 0, 100),
+        'avaliacao' => $faker->randomDigit(),
         'acesso' => $faker->randomElement([true, false]),
     ];
 });

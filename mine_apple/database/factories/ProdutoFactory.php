@@ -6,6 +6,7 @@ $factory->define(mine_apple\Produto::class, function (Faker $faker) {
     return [
         'categoria_id' => null,
         'produtor_id' => null,
+        'embalagem_id' => null,
         'nome' => $faker->companySuffix,
         'descricao' => $faker->paragraph,
         'valor' => $faker->randomFloat(2, 0, 100),

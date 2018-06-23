@@ -5,9 +5,9 @@ namespace mine_apple\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class UsuarioController extends Controller
+class PublicoController extends Controller
 {
-    //Métodos para manipular as views visíveis para todos os usuários
+    //Métodos para manipular as views públicas
 
     /**
      * @author O nome do desenvolvedor
@@ -15,10 +15,10 @@ class UsuarioController extends Controller
      * @return string
      */
     public function exemplo(Request $request) {
-        return Auth::user()->email . ' é usuário';
+        return  'Você é todos';
     }
 
-    public function home() {
-        return view('home');
+    public function index() {
+        return view('welcome');
     }
 }

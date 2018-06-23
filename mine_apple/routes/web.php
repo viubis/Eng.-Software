@@ -1,70 +1,78 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+//Rotas púlblicas ----------------------------------------------------------------------------------
 
-Route::get('/', function () {
-    return view('index');
+Route::get('/', 'PublicoController@index')->name('index');
+
+
+
+
+//Rotas de cadastro e recuperação de senha ---------------------------------------------------------
+Auth::routes();
+
+
+
+
+//Rotas para usuários cadastrados ------------------------------------------------------------------
+Route::middleware(['auth'])->group(function () {
+
+    Route::get('/home', 'UsuarioController@home')->name('home');
+
+
+
+
+    //Rotas para usuários que não definiram o tipo de conta ----------------------------------------
+    Route::middleware(['auth.usuario'])->group(function () {
+
+        Route::get('/usuario', function () {
+            return Auth::user()->email . ' é usuário';
+        });
+
+    });
+
+
+
+
+    //Rotas para administadores --------------------------------------------------------------------
+    Route::middleware(['auth.administrador'])->group(function () {
+
+        Route::get('/administrador', 'AdministradorController@exemplo')->name('administrador');
+
+    });
+
+
+
+
+    //Rotas para consumidores ----------------------------------------------------------------------
+    Route::middleware(['auth.consumidor'])->group(function () {
+
+        Route::get('/consumidor', 'ConsumidorController@exemplo')->name('consumidor');
+
+        //Route::get('/consumidor/cadastrar', 'ConsumidorController@cadastrarConsumidor')->name('consumidor.cadastrar');
+        //Route::get('/consumidor/alterar', 'ConsumidorController@alterarConsumidor')->name('consumidor.alterar');
+        //Route::get('/consumidor/adicionar_cartao', 'ConsumidorController@adicionarCartao')->name('comsumidor.cartao.cadastrar');
+        //Route::get('/consumidor/cadastrar_endereco', 'ConsumidorController@cadastrarEndereco')->name('consumidor.endereco.cadastrar');
+
+    });
+
+
+
+
+    //Rotas para produtores ------------------------------------------------------------------------
+    Route::middleware(['auth.produtor'])->group(function () {
+
+        Route::get('/produtor', 'ProdutorController@exemplo')->name('produtor');
+
+        //Route::get('/produtor/cadastrar', 'ProdutorController@cadastrarProdutor')->name('produtor.cadastrar');
+        //Route::get('/produtor/alterar', 'ProdutorController@alterarProdutor')->name('produtor.alterar');
+
+        Route::view('/produtor/cadastrar_produto', 'produtor.produto_cadastrar')->name('produtor.produto.cadastrar');
+        Route::post('/produtor/cadastrar_produto', 'ProdutorController@cadastrarProduto');
+
+        //Route::get('/produtor/alterar_produto/{id}', 'ProdutorController@editarProduto')->name('produtor.produto.alterar');
+        //Route::post('/produtor/alterar_produto/{id}', 'ProdutorController@alterarProduto');
+
+        //Route::get('/produtor/cadastrar_endereco', 'ProdutorController@cadastrarEndereco')->name('produtor.endereco.cadastrar');
+
+    });
 });
-
-//Auth::routes();
-
-Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('login', 'Auth\LoginController@login');
-Route::post('logout', 'Auth\LoginController@logout')->name('logout');
-Route::post('register', 'Auth\RegisterController@register');
-Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
-Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
-Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
-Route::post('password/reset', 'Auth\ResetPasswordController@reset');
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::resources([
-	'admin' 		=> 'AdministradorController',
-	'assinatura'	=> 'AssinaturaController',
-	'avaliacao' 	=> 'AvaliacaoController',
-	'banco'			=> 'BancoController',
-	'carrinho'		=> 'CarrinhoController',
-	'cartao'		=> 'CartaoController',
-	'categoria'		=> 'CategoriaController',
-	'cidade'		=> 'CidadeController',
-	'compra'		=> 'CompraController',
-	'consumidor'	=> 'ConsumidorController',
-	'conta'			=> 'ContaController',
-	'endereco'		=> 'EnderecoController',
-	'entrega'		=> 'EntregaController',
-	'estado'		=> 'EstadoController',
-	'foto'			=> 'FotoController',
-	'local'			=> 'LocalController',
-	'log'			=> 'LogController',
-	'pagamento'		=> 'PagamentoController',
-	'produto'		=> 'ProdutoController',
-	'produtor'		=> 'ProdutorController',
-	'usuario'		=> 'UsuarioController',
-	'visitante'		=> 'VisitanteController'
-]);
-
-
-//Rotas de redirecionamento da tela do Visitante
-/*Route::get('index', 'VisitanteController@getInicio')->name('inicio');
-Route::get('produtos', 'VisitanteController@getProdutos')->name('produtos');
-Route::get('sobre', 'VisitanteController@getSobre')->name('sobre');
-Route::get('fale_conosco', 'VisitanteController@getContato')->name('contato');
-Route::get('login','VisitanteController@getLogin')->name('login');
-Route::get('login','VisitanteController@getCadastro')->name('cadastrar');*/
-
-//Rotas de redirecionamento da tela Consumidor
-/*Route::get('index', 'ConsumidorController@getInicio')->name('inicio');
-Route::get('produtos', 'VisitanteController@getProdutos')->name('produtos');
-Route::get('sobre', 'ConsumidorController@getSobre')->name('sobre');
-Route::get('fale_conosco', 'ConsumidorController@getContato')->name('contato');*/

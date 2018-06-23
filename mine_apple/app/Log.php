@@ -12,6 +12,6 @@ class Log extends Model
 
     public function usuario()
     {
-        return $this->belongsTo('mine_apple\Usuario', 'usuario_id');
+        return $this->belongsTo('mine_apple\User', 'usuario_id');
     }
 }

@@ -59,5 +59,9 @@ class Kernel extends HttpKernel
         'guest' => \mine_apple\Http\Middleware\RedirectIfAuthenticated::class,
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'auth.usuario' => \mine_apple\Http\Middleware\CheckUsuario::class,
+        'auth.administrador' => \mine_apple\Http\Middleware\CheckAdministrador::class,
+        'auth.consumidor' => \mine_apple\Http\Middleware\CheckConsumidor::class,
+        'auth.produtor' => \mine_apple\Http\Middleware\CheckProdutor::class,
     ];
 }
