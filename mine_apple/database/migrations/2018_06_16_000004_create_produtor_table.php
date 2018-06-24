@@ -15,6 +15,7 @@ class CreateProdutorTable extends Migration
             $table->string('razaoSocial');
             $table->integer('telefone');
             $table->double('raioEntrega');
+            $table->double('avaliacao');
             $table->tinyInteger('acesso');
 
             $table->primary('usuario_id');

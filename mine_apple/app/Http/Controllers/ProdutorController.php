@@ -2,84 +2,115 @@
 
 namespace mine_apple\Http\Controllers;
 
-use App\Produtor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use mine_apple\Categoria;
+use mine_apple\Embalagem;
+use mine_apple\Foto;
+use mine_apple\Produto;
 
 class ProdutorController extends Controller
 {
+    //Métodos para manipular as views visíveis somente para produtores
+
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @author O nome do desenvolvedor
+     * @param Request $request
+     * @return string
      */
-    public function index()
-    {
-        //
+    public function exemplo(Request $request) {
+        return Auth::user()->email . ' é produtor';
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @author Bruno Claudino
+     * @param Request $request
+     * @return string
      */
-    public function create()
-    {
-        //
+    public function cadastrarProdutor(Request $request) {
+
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @author Bruno Claudino
+     * @param Request $request
+     * @return string
      */
-    public function store(Request $request)
-    {
-        //
+    public function alterarProdutor(Request $request) {
+
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Produtor  $produtor
-     * @return \Illuminate\Http\Response
+     * @author Sesaque Oliveira
+     * @param Request $request
+     * @return string
      */
-    public function show(Produtor $produtor)
-    {
-        //
+    public function cadastrarProduto(Request $request) {
+        //Obs. O log e o tratamento de erros serão implementados junto com o método alterarProduto e editarProduto dia 28/06
+
+
+        //Busca dependências
+        $produtor = Auth::user()->produtor;
+        $categoria = Categoria::where('nome', $request['categoria'])->first();
+        $embalagem = Embalagem::where('tipo', $request['embalagem'])->first();
+
+
+        //Criar e salva o novo produto
+        $produto = new Produto(['seg'=>false, 'ter'=>false, 'qua'=>false, 'qui'=>false, 'sex'=>false, 'sab'=>false, 'dom'=>false,]);
+        $produto->produtor_id = $produtor->usuario_id;
+        $produto->categoria_id = $categoria->id;
+        $produto->embalagem_id = $embalagem->id;
+        $produto->nome = $request->nome;
+        $produto->descricao = $request->descricao;
+        $produto->valor = $request->valor;
+        $produto->minPorAssinatura = $request->minPorAssinatura;
+        $produto->maxPorDia = $request->maxPorDia;
+        $produto->freteMax = $request->freteMax;
+
+        foreach ($request->entrega as $dia => $status) {
+            $produto[$dia] = true;
+        }
+
+        $produto->save();
+
+
+        //Salva a imagem
+        $nomeImagem = $produto->produtor_id . '_' . $produto->id . '.' . $request->imagem->getClientOriginalExtension();
+        $request->imagem->storeAs('produto_imagens', $nomeImagem);
+
+        $foto = new Foto();
+        $foto->produto_id = $produto->id;
+        $foto->path = "storage/produto_imagens/" . $nomeImagem;
+        $foto->save();
+
+
+        return redirect()->route('produtor.produto.cadastrar');
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Produtor  $produtor
-     * @return \Illuminate\Http\Response
+     * @author Sesaque Oliveira
+     * @param Request $request
+     * @return string
      */
-    public function edit(Produtor $produtor)
-    {
-        //
+    public function editarProduto(Request $request) {
+
     }
 
     /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Produtor  $produtor
-     * @return \Illuminate\Http\Response
+     * @author Sesaque Oliveira
+     * @param Request $request
+     * @return string
      */
-    public function update(Request $request, Produtor $produtor)
-    {
-        //
+    public function alterarProduto(Request $request) {
+
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Produtor  $produtor
-     * @return \Illuminate\Http\Response
+     * @author Edcarlos
+     * @param Request $request
+     * @return string
      */
-    public function destroy(Produtor $produtor)
-    {
-        //
+    public function cadastrarEndereco(Request $request) {
+
     }
 }

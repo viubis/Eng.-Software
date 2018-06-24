@@ -2,84 +2,55 @@
 
 namespace mine_apple\Http\Controllers;
 
-use App\Consumidor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ConsumidorController extends Controller
 {
+    //Métodos para manipular as views visíveis somente para consumidores
+
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @author O nome do desenvolvedor
+     * @param Request $request
+     * @return string
      */
-    public function index()
-    {
-        //
+    public function exemplo(Request $request) {
+        return Auth::user()->email . ' é consumidor';
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @author Rafael Brito
+     * @param Request $request
+     * @return string
      */
-    public function create()
-    {
-        //
+    public function cadastrarConsumidor(Request $request) {
+
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @author Rafael Brito
+     * @param Request $request
+     * @return string
      */
-    public function store(Request $request)
-    {
-        //
+    public function alterarConsumidor(Request $request) {
+
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Consumidor  $consumidor
-     * @return \Illuminate\Http\Response
+     * @author Lucas Alves
+     * @param Request $request
+     * @return string
      */
-    public function show(Consumidor $consumidor)
-    {
-        //
+    public function adicionarCartao(Request $request) {
+
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Consumidor  $consumidor
-     * @return \Illuminate\Http\Response
+     * @author Edcarlos
+     * @param Request $request
+     * @return string
      */
-    public function edit(Consumidor $consumidor)
-    {
-        //
-    }
+    public function cadastrarEndereco(Request $request) {
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Consumidor  $consumidor
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Consumidor $consumidor)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Consumidor  $consumidor
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Consumidor $consumidor)
-    {
-        //
     }
 }
