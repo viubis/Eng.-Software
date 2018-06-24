@@ -15,7 +15,7 @@ class PublicoController extends Controller
      * @return string
      */
     public function exemplo(Request $request) {
-        return  'Você é todos';
+        return  'Você ...';
     }
 
     public function index() {

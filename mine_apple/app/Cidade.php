@@ -10,8 +10,12 @@ class Cidade extends Model
     protected $guarded = ['id'];
     public $timestamps = false;
 
+    public function estado() {
+        return $this->belongsTo('mine_apple\Estado', 'estado_id');
+    }
+
     public function ceps()
     {
-        return $this->hasMany('mine_apple\Cidade', 'cidade_id');
+        return $this->hasMany('mine_apple\Cep', 'cidade_id');
     }
 }

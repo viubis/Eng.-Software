@@ -10,9 +10,9 @@ class Compra extends Model
     protected $guarded = ['id'];
     public $timestamps = false;
 
-    public function endereco()
+    public function consumidorEndereco()
     {
-        return $this->belongsTo('mine_apple\Endereco', 'endereco_id');
+        return $this->belongsTo('mine_apple\ConsumidorEndereco', 'consumidor_endereco_id');
     }
 
     public function assinaturas()

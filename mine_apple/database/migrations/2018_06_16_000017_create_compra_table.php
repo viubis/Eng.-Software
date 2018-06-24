@@ -10,16 +10,16 @@ class CreateCompraTable extends Migration
     {
         Schema::create('compra', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('endereco_id')->unsigned();
+            $table->integer('consumidor_endereco_id')->unsigned();
             $table->date('data');
             $table->time('hora');
             $table->double('valor');
             $table->double('frete');
 
-            $table->index('endereco_id', 'fk_compra_endereco_idx');
+            $table->index('consumidor_endereco_id', 'fk_compra_consumidor_endereco_idx');
 
-            $table->foreign('endereco_id', 'fk_compra_endereco_idx')
-                ->references('id')->on('endereco')
+            $table->foreign('consumidor_endereco_id', 'fk_compra_consumidor_endereco_idx')
+                ->references('id')->on('consumidor_endereco')
                 ->onDelete('no action')
                 ->onUpdate('no action');
 

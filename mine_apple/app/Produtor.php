@@ -12,7 +12,12 @@ class Produtor extends Model
 
     public function usuario()
     {
-        return $this->belongsTo('mine_apple\User', 'usuario_id');
+        return $this->belongsTo('mine_apple\User');
+    }
+
+    public function endereco()
+    {
+        return $this->belongsTo('mine_apple\Endereco', 'endereco_id');
     }
 
     public function contas()

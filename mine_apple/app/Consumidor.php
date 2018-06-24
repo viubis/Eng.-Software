@@ -12,12 +12,12 @@ class Consumidor extends Model
 
     public function usuario()
     {
-        return $this->belongsTo('mine_apple\User', 'usuario_id');
+        return $this->belongsTo('mine_apple\User');
     }
 
-    public function enderecos()
+    public function consumidorEndereco()
     {
-        return $this->hasMany('mine_apple\Endereco', 'consumidor_id');
+        return $this->hasMany('mine_apple\ConsumidorEndereco', 'consumidor_id');
     }
 
     public function cartoes()

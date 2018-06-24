@@ -39,19 +39,80 @@ CREATE TABLE IF NOT EXISTS `mine_apple`.`administrador` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+CREATE TABLE IF NOT EXISTS `mine_apple`.`estado` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(255) NOT NULL,
+  `sigla` CHAR(2) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `nome_UNIQUE` (`nome` ASC),
+  UNIQUE INDEX `sigla_UNIQUE` (`sigla` ASC))
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `mine_apple`.`cidade` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `estado_id` INT NOT NULL,
+  `nome` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `nome_UNIQUE` (`nome` ASC),
+  INDEX `fk_cidade_estado_idx` (`estado_id` ASC),
+  CONSTRAINT `fk_cidade_estado`
+    FOREIGN KEY (`estado_id`)
+    REFERENCES `mine_apple`.`estado` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `mine_apple`.`cep` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `cidade_id` INT NOT NULL,
+  `numero` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_cep_cidade_idx` (`cidade_id` ASC),
+  UNIQUE INDEX `numero_UNIQUE` (`numero` ASC),
+  CONSTRAINT `fk_cep_cidade`
+    FOREIGN KEY (`cidade_id`)
+    REFERENCES `mine_apple`.`cidade` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `mine_apple`.`endereco` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `cep_id` INT NOT NULL,
+  `rua` VARCHAR(255) NOT NULL,
+  `numero` INT NOT NULL,
+  `complemento` VARCHAR(255) NULL,
+  `bairro` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_endereco_cep_idx` (`cep_id` ASC),
+  CONSTRAINT `fk_endereco_cep`
+    FOREIGN KEY (`cep_id`)
+    REFERENCES `mine_apple`.`cep` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
 CREATE TABLE IF NOT EXISTS `mine_apple`.`produtor` (
   `usuario_id` INT NOT NULL,
+  `endereco_id` INT NOT NULL,
   `cnpj` INT NOT NULL,
   `nomeFantasia` VARCHAR(255) NOT NULL,
   `razaoSocial` VARCHAR(255) NOT NULL,
   `telefone` INT NOT NULL,
   `raioEntrega` DOUBLE NOT NULL,
+  `avaliacao` DOUBLE NOT NULL,
   `acesso` TINYINT(1) NOT NULL,
   UNIQUE INDEX `cnpj_UNIQUE` (`cnpj` ASC),
   PRIMARY KEY (`usuario_id`),
+  INDEX `fk_produtor_endereco_idx` (`endereco_id` ASC),
   CONSTRAINT `fk_produtor_usuario`
     FOREIGN KEY (`usuario_id`)
     REFERENCES `mine_apple`.`usuario` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_produtor_endereco`
+    FOREIGN KEY (`endereco_id`)
+    REFERENCES `mine_apple`.`endereco` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -174,78 +235,38 @@ CREATE TABLE IF NOT EXISTS `mine_apple`.`cartao` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE TABLE IF NOT EXISTS `mine_apple`.`estado` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(255) NOT NULL,
-  `sigla` CHAR(2) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `nome_UNIQUE` (`nome` ASC),
-  UNIQUE INDEX `sigla_UNIQUE` (`sigla` ASC))
-ENGINE = InnoDB;
-
-CREATE TABLE IF NOT EXISTS `mine_apple`.`cidade` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `estado_id` INT NOT NULL,
-  `nome` VARCHAR(255) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `nome_UNIQUE` (`nome` ASC),
-  INDEX `fk_cidade_estado_idx` (`estado_id` ASC),
-  CONSTRAINT `fk_cidade_estado`
-    FOREIGN KEY (`estado_id`)
-    REFERENCES `mine_apple`.`estado` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-CREATE TABLE IF NOT EXISTS `mine_apple`.`cep` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `cidade_id` INT NOT NULL,
-  `numero` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_cep_cidade_idx` (`cidade_id` ASC),
-  UNIQUE INDEX `numero_UNIQUE` (`numero` ASC),
-  CONSTRAINT `fk_cep_cidade`
-    FOREIGN KEY (`cidade_id`)
-    REFERENCES `mine_apple`.`cidade` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-CREATE TABLE IF NOT EXISTS `mine_apple`.`endereco` (
+CREATE TABLE IF NOT EXISTS `mine_apple`.`consumidor_endereco` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `consumidor_id` INT NOT NULL,
-  `cep_id` INT NOT NULL,
-  `rua` VARCHAR(255) NOT NULL,
-  `numero` INT NOT NULL,
-  `complemento` VARCHAR(255) NULL,
-  `bairro` VARCHAR(255) NOT NULL,
+  `endereco_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_endereco_cep_idx` (`cep_id` ASC),
-  INDEX `fk_endereco_consumidor_idx` (`consumidor_id` ASC),
-  CONSTRAINT `fk_endereco_cep`
-    FOREIGN KEY (`cep_id`)
-    REFERENCES `mine_apple`.`cep` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_endereco_consumidor`
+  INDEX `fk_consumidor_endereco_consumidor_idx` (`consumidor_id` ASC),
+  INDEX `fk_consumidor_endereco_endereco_idx` (`endereco_id` ASC),
+  UNIQUE INDEX `endereco_id_UNIQUE` (`endereco_id` ASC),
+  CONSTRAINT `fk_consumidor_endereco_consumidor`
     FOREIGN KEY (`consumidor_id`)
     REFERENCES `mine_apple`.`consumidor` (`usuario_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_consumidor_endereco_endereco`
+    FOREIGN KEY (`endereco_id`)
+    REFERENCES `mine_apple`.`endereco` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `mine_apple`.`compra` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `endereco_id` INT NOT NULL,
+  `consumidor_endereco_id` INT NOT NULL,
   `data` DATE NOT NULL,
   `hora` TIME NOT NULL,
   `valor` DOUBLE NOT NULL,
   `frete` DOUBLE NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_compra_endereco_idx` (`endereco_id` ASC),
-  CONSTRAINT `fk_compra_endereco`
-    FOREIGN KEY (`endereco_id`)
-    REFERENCES `mine_apple`.`endereco` (`id`)
+  INDEX `fk_compra_consumidor_endereco_idx` (`consumidor_endereco_id` ASC),
+  CONSTRAINT `fk_compra_consumidor_endereco`
+    FOREIGN KEY (`consumidor_endereco_id`)
+    REFERENCES `mine_apple`.`consumidor_endereco` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

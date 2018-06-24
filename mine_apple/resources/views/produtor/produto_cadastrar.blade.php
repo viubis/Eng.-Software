@@ -159,7 +159,7 @@
                             @csrf
 
                             <fieldset>
-                                <div class="form-row">s
+                                <div class="form-row">
                                     <div class="col-md-12 mb-3">
                                         <label for="form-control">Adicione uma imagem do seu produto:</label>
                                         <input type="file" name="imagem" accept="image/*" class="form-control">

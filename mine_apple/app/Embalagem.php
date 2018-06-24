@@ -10,7 +10,7 @@ class Embalagem extends Model
     protected $guarded = ['id'];
     public $timestamps = false;
 
-    public function produto()
+    public function produtos()
     {
         return $this->hasMany('mine_apple\Produto', 'embalagem_id');
     }

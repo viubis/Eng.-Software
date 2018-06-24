@@ -10,18 +10,18 @@ class Endereco extends Model
     protected $guarded = ['id'];
     public $timestamps = false;
 
-    public function consumidor()
+    public function consumidorEndereco()
     {
-        return $this->belongsTo('mine_apple\Consumidor', 'consumidor_id', 'usuario_id');
+        return $this->hasOne('mine_apple\ConsumidorEndereco', 'endereco_id');
+    }
+
+    public function produtor()
+    {
+        return $this->hasOne('mine_apple\Produtor', 'endereco_id');
     }
 
     public function cep()
     {
         return $this->belongsTo('mine_apple\Cep', 'cep_id');
-    }
-
-    public function compras()
-    {
-        return $this->hasMany('mine_apple\Compra', 'endereco_id');
     }
 }
