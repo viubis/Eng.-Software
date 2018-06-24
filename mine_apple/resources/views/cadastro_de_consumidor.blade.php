@@ -68,23 +68,7 @@
                                     <input type="text" name="cpf" placeholder="CPF..."
                                            class="form-last-name form-control" id="cpf">
                                 </div>
-                                <div class="form-group">
-                                    <label class="sr-only" for="email">Email</label>
-                                    <input type="email" name="email" placeholder="Email..."
-                                           class="form-first-name form-control" required id="email">
-                                </div>
-                                <div class="form-group">
-                                    <label class="sr-only" for="senha">Senha</label>
-                                    <input type="password" minlength="8" name="senha" placeholder="Senha..."
-                                           class="form-first-name form-control" required id="senha">
-                                </div>
-                                <div class="form-group">
-                                    <label class="sr-only" for="confSenha">Confirmação de senha</label>
-                                    <input type="password" minlength="8" name="confSenha"
-                                           placeholder="Confirmação de senha..."
-                                           class="form-first-name form-control" data-match="#senha" required
-                                           id="confSenha">
-                                </div>
+                                
                                 <div class="form-group">
                                     <label class="sr-only" for="sexo">Sexo</label>
                                     <select class="form-control" id="sexo" name="sexo" required>
