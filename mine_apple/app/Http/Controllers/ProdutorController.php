@@ -29,12 +29,8 @@ class ProdutorController extends Controller
      */
     public function cadastrarProdutor(Request $request) {
 
-        //Informações Endereco
-        $endereco = new Endereco();
-        $endereco->rua = $request->rua;
-        $endereco->numero = $request->numero;
-        $endereco->complemento = $request->complemento;
-        $endereco->bairro = $request->bairro;
+        
+        
 
         //Informações Produtor
         $produtor = new Produtor();
@@ -47,17 +43,8 @@ class ProdutorController extends Controller
         $produtor->avaliacao = $request->avaliacao;
         $produtor->cnpj = $request->cnpj;
 
-        //Informações Banco
-        $banco = new Banco();
-        $banco->idBanco = $request->idBanco;
-        $banco->numeroConta = $request->numeroConta;
-        $banco->agencia = $request->agencia;
-        $banco->digito = $request->digito;
-
-
-        
-
-
+        cadastrarEndereco($request);
+        cadastrarBanco($request);
 
     }
 
@@ -141,6 +128,23 @@ class ProdutorController extends Controller
      * @return string
      */
     public function cadastrarEndereco(Request $request) {
+        $endereco = new Endereco();
+        $endereco->rua = $request->rua;
+        $endereco->numero = $request->numero;
+        $endereco->complemento = $request->complemento;
+        $endereco->bairro = $request->bairro;
+    }
 
+    /**
+     * @author Lucas Alves
+     * @param Request $request
+     * @return string
+     */
+    public function cadastrarBanco(Request $request) {
+        $banco = new Banco();
+        $banco->idBanco = $request->idBanco;
+        $banco->numeroConta = $request->numeroConta;
+        $banco->agencia = $request->agencia;
+        $banco->digito = $request->digito;
     }
 }
