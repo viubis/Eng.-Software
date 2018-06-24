@@ -53,23 +53,8 @@
                                 </div>
                             </div>
                             <div class="form-bottom">
-                                <div class="form-group">
-                                    <label class="sr-only" for="email">Email</label>
-                                    <input type="email" name="email" placeholder="Email..."
-                                           class="form-first-name form-control" required id="email">
-                                </div>
-                                <div class="form-group">
-                                    <label class="sr-only" for="senha">Senha</label>
-                                    <input type="password" minlength="8" name="senha" placeholder="Senha..."
-                                           class="form-first-name form-control" required id="senha">
-                                </div>
-                                <div class="form-group">
-                                    <label class="sr-only" for="confSenha">Confirmação de senha</label>
-                                    <input type="password" minlength="8" name="confirmacao-senha"
-                                           placeholder="Confirmação de senha..."
-                                           class="form-first-name form-control" data-match="#senha" required
-                                           id="confSenha">
-                                </div>
+                                                             
+                                
                                 <div class="form-group">
                                     <label class="sr-only" for="razaoSocial">Razão social</label>
                                     <input type="text" name="razaoSocial" placeholder="Razão social..."
