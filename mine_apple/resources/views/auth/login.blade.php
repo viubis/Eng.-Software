@@ -98,11 +98,11 @@
                             <form name="register" method="POST" action="{{ route('register') }}"
                                   class="registration-form">
                                 @csrf
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label class="sr-only" for="name-email">Nome</label>
                                     <input id="name1" type="text" name="name" placeholder="Nome... "
                                            class="form-email form-control">
-                                </div>
+                                </div> -->
                                 <div class="form-group">
                                     <label class="sr-only" for="form-email">Email</label>
                                     <input id="email1" type="email" name="email" placeholder="Email... "
