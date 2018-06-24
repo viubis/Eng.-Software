@@ -65,7 +65,7 @@
                                         recebidas e muito mais!
                                     </h3>
                                 </div>
-                                <a href="#">
+                                <a href="/cadastro_produtor">
                                     <button type="button" class="btn">Cadastrar-me como produtor!</button>
                                 </a>
                             </form>
@@ -110,7 +110,7 @@
                                         produtores que fazem entregas em sua região e muito mais!
                                     </h3>
                                 </div>
-                                <a href="#">
+                                <a href="/cadastro_consumidor">
                                     <button type="button" class="btn">Cadastrar-me como consumidor!</button>
                                 </a>
                             </form>

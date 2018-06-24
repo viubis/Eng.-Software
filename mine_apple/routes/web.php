@@ -10,7 +10,21 @@ Route::get('/', 'PublicoController@index')->name('index');
 //Rotas de cadastro e recuperação de senha ---------------------------------------------------------
 Auth::routes();
 
+Route::get('tipo_cadastro', function () {
+    return view('tipo_de_cadastro_a_realizar');
+});
 
+Route::get('cadastro_produtor', function () {
+    return view('cadastro_de_produtor');
+});
+
+Route::get('cadastro_consumidor', function () {
+    return view('cadastro_de_consumidor');
+});
+
+Route::post('/cadastro_produtor', 'ProdutorController@cadastrarProdutor')->name('cadastrarProdutor');
+
+Route::post('/cadastro_consumidor', 'ConsumidorController@cadastrarProdutor')->name('cadastrarConsumidor');
 
 
 //Rotas para usuários cadastrados ------------------------------------------------------------------

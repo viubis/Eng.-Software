@@ -25,6 +25,19 @@ class ConsumidorController extends Controller
      */
     public function cadastrarConsumidor(Request $request) {
 
+        $consumidor = new Consumidor();
+        $consumidor->usuario_id = Auth::user()->id;
+        $consumidor->nome = $request->nome;
+        $consumidor->sobrenome = $request->sobrenome;
+        $consumidor->sexo = $request->sexo;
+        $consumidor->cpf = $request->cpf;
+        $consumidor->nome = $request->nome;
+
+        adicionarCartao($request);
+        cadastrarEndereco($request);
+
+        
+
     }
 
     /**
@@ -43,6 +56,13 @@ class ConsumidorController extends Controller
      */
     public function adicionarCartao(Request $request) {
 
+        $cartao = new Cartao();
+        $cartao->consumidor_id = Auth::user()->id;
+        $cartao->numero = $request->numero;
+        $cartao->titular = $request->titular;
+        $cartao->validade = $request->validade;
+        $cartao->codigo = $request->codigo;
+        $cartao->tipo = $request->tipo;
     }
 
     /**
@@ -51,6 +71,11 @@ class ConsumidorController extends Controller
      * @return string
      */
     public function cadastrarEndereco(Request $request) {
-
+        $endereco = new Endereco();
+        $endereco->consumidor_id = Auth::user()->id;
+        $endereco->rua = $request->rua;
+        $endereco->numero = $request->numero;
+        $endereco->complemento = $request->complemento;
+        $endereco->bairro = $request->bairro;
     }
 }
