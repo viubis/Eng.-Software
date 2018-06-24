@@ -8,6 +8,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             //UsuarioTableSeeder::class,
+            BancoTableSeeder::class,
         ]);
 
         //Adiciona as categorias

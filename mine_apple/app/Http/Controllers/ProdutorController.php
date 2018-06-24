@@ -43,7 +43,7 @@ class ProdutorController extends Controller
         $produtor->avaliacao = $request->avaliacao;
         $produtor->cnpj = $request->cnpj;
 
-        cadastrarEndereco($request);
+        $produtor->endereco_id = cadastrarEndereco($request);
         cadastrarBanco($request);
 
     }
@@ -123,9 +123,9 @@ class ProdutorController extends Controller
     }
 
     /**
-     * @author Edcarlos
+     * @author Lucas Alves
      * @param Request $request
-     * @return string
+     * @return int
      */
     public function cadastrarEndereco(Request $request) {
         $endereco = new Endereco();
@@ -133,6 +133,7 @@ class ProdutorController extends Controller
         $endereco->numero = $request->numero;
         $endereco->complemento = $request->complemento;
         $endereco->bairro = $request->bairro;
+        return $endereco->id;
     }
 
     /**
@@ -140,11 +141,12 @@ class ProdutorController extends Controller
      * @param Request $request
      * @return string
      */
-    public function cadastrarBanco(Request $request) {
-        $banco = new Banco();
-        $banco->idBanco = $request->idBanco;
-        $banco->numeroConta = $request->numeroConta;
-        $banco->agencia = $request->agencia;
-        $banco->digito = $request->digito;
+    public function cadastrarConta(Request $request) {
+        $conta = new Conta();
+        $conta->produtor_id = Auth::user()->id;
+        $conta->idBanco = $request->idBanco;
+        $conta->numeroConta = $request->numeroConta;
+        $conta->agencia = $request->agencia;
+        $conta->digito = $request->digito;
     }
 }
