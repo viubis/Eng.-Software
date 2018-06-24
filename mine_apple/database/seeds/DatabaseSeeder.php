@@ -9,23 +9,11 @@ class DatabaseSeeder extends Seeder
         $this->call([
             //UsuarioTableSeeder::class,
             BancoTableSeeder::class,
+            CategoriaTableSeeder::class,
+            EmbalagemTableSeeder::class,
         ]);
 
-        //Adiciona as categorias
-        \mine_apple\Categoria::create(['nome' => 'Cereais']);
-        \mine_apple\Categoria::create(['nome' => 'Frutas']);
-        \mine_apple\Categoria::create(['nome' => 'Legumes']);
-        \mine_apple\Categoria::create(['nome' => 'Leguminosas']);
-        \mine_apple\Categoria::create(['nome' => 'Raízes']);
-        \mine_apple\Categoria::create(['nome' => 'Tubérculos']);
-        \mine_apple\Categoria::create(['nome' => 'Verduras']);
-
-        //Adiciona os tipos de embalagens
-        \mine_apple\Embalagem::create(['tipo' => 'Unidade']);
-        \mine_apple\Embalagem::create(['tipo' => 'Caixa']);
-        \mine_apple\Embalagem::create(['tipo' => 'Litro']);
-        \mine_apple\Embalagem::create(['tipo' => 'Quilo']);
-        \mine_apple\Embalagem::create(['tipo' => 'Dúzia']);
+        
 
 
         //Usuários de teste
