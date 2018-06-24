@@ -22,6 +22,10 @@ Route::get('cadastro_consumidor', function () {
     return view('cadastro_de_consumidor');
 });
 
+Route::post('/cadastro_produtor', 'ProdutorController@cadastrarProdutor')->name('cadastrarProdutor');
+
+Route::post('/cadastro_consumidor', 'ConsumidorController@cadastrarProdutor')->name('cadastrarConsumidor');
+
 
 //Rotas para usuários cadastrados ------------------------------------------------------------------
 Route::middleware(['auth'])->group(function () {
