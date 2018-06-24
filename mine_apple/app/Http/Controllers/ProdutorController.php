@@ -23,11 +23,41 @@ class ProdutorController extends Controller
     }
 
     /**
-     * @author Bruno Claudino
+     * @author Lucas Alves
      * @param Request $request
      * @return string
      */
     public function cadastrarProdutor(Request $request) {
+
+        //Informações Endereco
+        $endereco = new Endereco();
+        $endereco->rua = $request->rua;
+        $endereco->numero = $request->numero;
+        $endereco->complemento = $request->complemento;
+        $endereco->bairro = $request->bairro;
+
+        //Informações Produtor
+        $produtor = new Produtor();
+        $produtor->usuario_id = Auth::user()->id;
+        $produtor->cnpj = $request->cnpj;
+        $produtor->nomeFantasia = $request->nomeFantasia;
+        $produtor->razaoSocial = $request->razaoSocial;
+        $produtor->telefone = $request->telefone;
+        $produtor->raioEntrega = $request->raioEntrega;
+        $produtor->avaliacao = $request->avaliacao;
+        $produtor->cnpj = $request->cnpj;
+
+        //Informações Banco
+        $banco = new Banco();
+        $banco->idBanco = $request->idBanco;
+        $banco->numeroConta = $request->numeroConta;
+        $banco->agencia = $request->agencia;
+        $banco->digito = $request->digito;
+
+
+        
+
+
 
     }
 
