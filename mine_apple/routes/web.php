@@ -4,15 +4,11 @@
 
 Route::get('/', 'PublicoController@index')->name('index');
 
-
+Route::get('tipo_cadastro', 'PublicoController@getTipoCadastro');
 
 
 //Rotas de cadastro e recuperação de senha ---------------------------------------------------------
 Auth::routes();
-
-Route::get('tipo_cadastro', function () {
-    return view('tipo_de_cadastro_a_realizar');
-});
 
 Route::get('cadastro_produtor', 'ProdutorController@getForm');
 
