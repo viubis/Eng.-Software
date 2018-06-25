@@ -11,7 +11,7 @@ class CreateCidadeTable extends Migration
         Schema::create('cidade', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('estado_id')->unsigned();
-            $table->string('nome')->unique();
+            $table->string('nome');
 
             $table->index(['estado_id'], 'fk_cidade_estado_idx');
 

@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
             CategoriaTableSeeder::class,
             EmbalagemTableSeeder::class,
             EstadoTableSeeder::class,
+            CidadeTableSeeder::class,
         ]);
 
         
