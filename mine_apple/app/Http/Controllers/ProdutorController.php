@@ -31,8 +31,8 @@ class ProdutorController extends Controller
      */
 
     public function getForm(){
-            $estado = Estado::pluck('nome', 'id');
-            return view('cadastro_de_produtor',compact('estado'));
+            $estados = Estado::all(['id', 'nome']);
+            return view('cadastro_de_produtor',compact('estados',$estados));
     }
 
     /**

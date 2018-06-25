@@ -27,8 +27,8 @@ class ConsumidorController extends Controller
      */
 
     public function getForm(){
-        $estado = Estado::pluck('nome', 'id');
-        return view('cadastro_de_consumidor',compact('estado'));
+        $estados = Estado::all(['id', 'nome']);
+        return view('cadastro_de_consumidor',compact('estados',$estados));
 
     }
 

@@ -121,7 +121,9 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="estados">Estados</label>
                                     <select class="form-control" id="estados" name="estado">
-                                        <option value=""></option>
+                                        @foreach($estados as $estado)
+                                            <option value="{{$estado->id}}">{{$estado->nome}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group">

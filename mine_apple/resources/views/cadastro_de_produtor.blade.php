@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="{{asset('css/formularios_style.css')}}">
 
     <!-- Favicon and touch icons -->
-    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="{{asset('images/favicon.png')}}">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('images/icon-144.png')}}">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset('images/icon-114.png')}}">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{asset('images/icon-72.png')}}">
@@ -129,8 +129,10 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="estados">Estados</label>
-                                    <select class="form-control" id="estados" name="estado">
-                                        <option value=""></option>
+                                    <select class="form-control" name="estado">
+                                        @foreach($estados as $estado)
+                                            <option value="{{$estado->id}}">{{$estado->nome}}</option>
+                                        @endforeach
                                     </select>
 
                                 </div>
