@@ -60,7 +60,10 @@ class ConsumidorController extends Controller
      * @return string
      */
     public function alterarConsumidor(Request $request) {
+       $consumidor = Auth::user();//Recupera dados do usuário logado
+       $consumidor->fill($request->all()->save());//Salva os dados
 
+       /*return redirect()->route('alterar_consumidor', $consumidor->id)->with('info', 'Dados Alterados com sucesso');*/
     }
 
     /**
