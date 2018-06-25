@@ -14,9 +14,9 @@ Route::get('tipo_cadastro', function () {
     return view('tipo_de_cadastro_a_realizar');
 });
 
-Route::get('cadastro_produtor', 'CadastroProdutorController@getForm');
+Route::get('cadastro_produtor', 'ProdutorController@getForm');
 
-Route::get('cadastro_consumidor', 'CadastroConsumidorController@getForm');
+Route::get('cadastro_consumidor', 'ConsumidorController@getForm');
 
 Route::post('/cadastro_produtor', 'ProdutorController@cadastrarProdutor')->name('cadastrarProdutor');
 

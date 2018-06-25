@@ -8,6 +8,9 @@ use mine_apple\Categoria;
 use mine_apple\Embalagem;
 use mine_apple\Foto;
 use mine_apple\Produto;
+use mine_apple\Estado;
+use mine_apple\Cidade;
+use mine_apple\Conta;
 
 class ProdutorController extends Controller
 {
@@ -20,6 +23,16 @@ class ProdutorController extends Controller
      */
     public function exemplo(Request $request) {
         return Auth::user()->email . ' é produtor';
+    }
+
+    /**
+     * @author Lucas Alves
+     * @return string
+     */
+
+    public function getForm(){
+            $estado = Estado::pluck('nome', 'id');
+            return view('cadastro_de_produtor',compact('estado'));
     }
 
     /**
