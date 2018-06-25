@@ -42,8 +42,8 @@ class ProdutorController extends Controller
      */
     public function cadastrarProdutor(Request $request) {
 
-        
-        
+
+
 
         //Informações Produtor
         $produtor = new Produtor();
@@ -58,6 +58,8 @@ class ProdutorController extends Controller
 
         $produtor->endereco_id = cadastrarEndereco($request);
         cadastrarBanco($request);
+
+        $produtor->save();
 
     }
 
