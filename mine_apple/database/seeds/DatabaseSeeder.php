@@ -11,6 +11,7 @@ class DatabaseSeeder extends Seeder
             BancoTableSeeder::class,
             CategoriaTableSeeder::class,
             EmbalagemTableSeeder::class,
+            EstadoTableSeeder::class,
         ]);
 
         
