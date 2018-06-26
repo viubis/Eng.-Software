@@ -69,7 +69,10 @@ class ProdutorController extends Controller
      * @return string
      */
     public function alterarProdutor(Request $request) {
+        $produtor = Auth::user();
+        $produtor->fill($request->all()->save());
 
+        return view('dados_cadastrais_de_produtor', $produtor->id)->with('info', 'Dados alterados com sucesso!');
     }
 
     /**
