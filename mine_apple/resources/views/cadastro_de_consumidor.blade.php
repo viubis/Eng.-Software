@@ -41,7 +41,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-6 offset-lg-3 form-box">
-                    <form role="form" action="" method="post" class="registration-form">
+                    <form role="form" action="{{route('cadastrarConsumidor')}}" method="post" class="registration-form">
 
                         <fieldset>
                             <div class="form-top">

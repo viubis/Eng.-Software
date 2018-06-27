@@ -16,7 +16,7 @@ Route::get('cadastro_consumidor', 'ConsumidorController@getForm');
 
 Route::post('/cadastro_produtor', 'ProdutorController@cadastrarProdutor')->name('cadastrarProdutor');
 
-Route::post('/cadastro_consumidor', 'ConsumidorController@cadastrarProdutor')->name('cadastrarConsumidor');
+Route::post('/cadastro_consumidor', 'ConsumidorController@cadastrarConsumidor')->name('cadastrarConsumidor');
 
 Route::post('/retorna_cidades', 'CidadeController@retornaCidades')->name('retornaCidades');
 
