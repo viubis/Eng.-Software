@@ -57,14 +57,10 @@
                             <div class="form-bottom">
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input  id="email" type="email" name="email" placeholder="Email..."
+                                    <input  id="email" type="email" name="email" placeholder="Email..." 
                                            class="form-first-name form-control" required>
 
-                                    @if ($errors->has('email'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                    @endif
+                                    
                                 </div>
                                 <button type="submit" class="btn">Enviar</button>
                             </div>
