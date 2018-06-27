@@ -41,9 +41,10 @@
             <div class="row">
                 <div class="col-sm-6 offset-lg-3 form-box">
                     <form method="POST" action="{{ route('password.email') }}" data-toggle="validator" class="registration-form">
-                        @csrf
+                        
 
                         <fieldset>
+                            @csrf
                             <div class="form-top">
                                 <div class="form-top-left">
                                     <h3>Esqueci a minha senha</h3>

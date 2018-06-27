@@ -43,9 +43,10 @@
                     <form role="form" action="{{route('cadastrarProdutor')}}" method="post" data-toggle="validator" class="registration-form">
 
                         <!-- Esse csrf ta bugando mais precisa dele -->
-                        @csrf
+                        
 
                         <fieldset>
+                            @csrf
                             <div class="form-top">
                                 <div class="form-top-left">
                                     <h3>Passo 1 / 3</h3>
