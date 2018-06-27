@@ -40,7 +40,10 @@
             </div>
             <div class="row">
                 <div class="col-sm-6 offset-lg-3 form-box">
-                    <form role="form" action="" method="post" data-toggle="validator" class="registration-form">
+                    <form role="form" action="{{route('cadastrarProdutor')}}" method="post" data-toggle="validator" class="registration-form">
+
+                        <!-- Esse csrf ta bugando mais precisa dele -->
+                        @csrf
 
                         <fieldset>
                             <div class="form-top">
@@ -129,7 +132,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="estados">Estados</label>
-                                    <select class="form-control" name="estado">
+                                    <select class="form-control" name="estado" id="estados">
                                         @foreach($estados as $estado)
                                             <option value="{{$estado->id}}">{{$estado->nome}}</option>
                                         @endforeach

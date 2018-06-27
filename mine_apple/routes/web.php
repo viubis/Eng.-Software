@@ -18,6 +18,8 @@ Route::post('/cadastro_produtor', 'ProdutorController@cadastrarProdutor')->name(
 
 Route::post('/cadastro_consumidor', 'ConsumidorController@cadastrarProdutor')->name('cadastrarConsumidor');
 
+Route::post('/retorna_cidades', 'CidadeController@retornaCidades')->name('retornaCidades');
+
 
 //Rotas para usuários cadastrados ------------------------------------------------------------------
 Route::middleware(['auth'])->group(function () {

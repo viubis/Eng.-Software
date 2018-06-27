@@ -1,5 +1,30 @@
 jQuery(document).ready(function () {
 
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+    });
+
+
+
+    $("#estados").on("change", function(){
+        var idEstado = $("#estados").val();
+
+        alert(idEstado);
+
+        jQuery.ajax({
+                  url: "/retorna_cidades",
+                  method: 'post',
+                  data: {
+                     estado: jQuery('#estados').val()
+                  },
+                  success: function(result){
+                     ("#cidades").html(result);
+                     alert(result);
+                }});
+    });
+
     /*
         Fullscreen background
     */
