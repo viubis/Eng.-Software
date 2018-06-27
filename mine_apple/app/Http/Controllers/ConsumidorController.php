@@ -39,7 +39,8 @@ class ConsumidorController extends Controller
      */
     public function cadastrarConsumidor(Request $request) {
 
-        $consumidor = new Consumidor();
+        dd($request->all());
+        /*$consumidor = new Consumidor();
         $consumidor->usuario_id = Auth::user()->id;
         $consumidor->nome = $request->nome;
         $consumidor->sobrenome = $request->sobrenome;
@@ -48,7 +49,7 @@ class ConsumidorController extends Controller
         $consumidor->nome = $request->nome;
 
         adicionarCartao($request);
-        cadastrarEndereco($request);
+        cadastrarEndereco($request);*/
 
         
 
