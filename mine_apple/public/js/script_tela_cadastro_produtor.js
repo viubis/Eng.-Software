@@ -11,17 +11,16 @@ jQuery(document).ready(function () {
     $("#estados").on("change", function(){
         var idEstado = $("#estados").val();
 
-        alert(idEstado);
-
         jQuery.ajax({
-                  url: "/retorna_cidades",
+                  url: '/retorna_cidades',
+                  dataType: "html",
                   method: 'post',
                   data: {
-                     estado: jQuery('#estados').val()
+                     _token: $('meta[name="csrf-token"]').attr('content'),
+                     estado: idEstado
                   },
                   success: function(result){
-                     ("#cidades").html(result);
-                     alert(result);
+                     $("#cidades").html(result);
                 }});
     });
 

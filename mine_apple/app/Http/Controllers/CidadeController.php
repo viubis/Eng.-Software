@@ -2,6 +2,7 @@
 
 namespace mine_apple\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use mine_apple\Estado;
 use mine_apple\Cidade;
@@ -11,11 +12,18 @@ class CidadeController extends Controller
     public function retornaCidades(Request $request){
     	$id = $request->estado;
 
-    	$cidades =  DB::table('cidade')->where('estado_id', '=', $id);
+    	$retorno = null;
 
-    	return foreach ($cidades as $cidade) {
-    		echo '<option value="{{$cidade->id}}">{{$cidade->nome}}</option>'
+    	//$cidades =  DB::table('cidade')->select('id', 'nome', 'estado_id')
+    	//								->where('estado_id', '=', $id);
+
+    	$cidades = Cidade::where('estado_id', $id)->get();
+
+    	foreach ($cidades as $cidade) {
+    		$retorno .= "<option value='".$cidade->id ."'> ".$cidade->nome." </option>";
     	}
+
+    	return $retorno;
 
     }
 }
