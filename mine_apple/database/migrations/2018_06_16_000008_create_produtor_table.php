@@ -24,7 +24,7 @@ class CreateProdutorTable extends Migration
             $table->index(['endereco_id'], 'fk_produtor_endereco_idx');
 
             $table->foreign('usuario_id', 'fk_produtor_usuario_idx')
-                ->references('id')->on('usuario')
+                ->references('id')->on('users')
                 ->onDelete('no action')
                 ->onUpdate('no action');
 

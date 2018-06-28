@@ -48,6 +48,8 @@
 
                         <fieldset>
                             
+                            @csrf
+                            
                             <div class="form-top">
                                 <div class="form-top-left">
                                     <h3>Passo 1 / 3</h3>
@@ -183,7 +185,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <input id="contrato" name="contrato" type="checkbox" value="nao">
+                                    <input id="contrato" name="contrato" type="checkbox" value="false">
                                     <label for="contrato">Li e aceito os termos de uso.</label>
                                 </div>
                                 <button type="button" class="btn btn-previous">Anterior</button>

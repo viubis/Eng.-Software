@@ -12,6 +12,8 @@ use mine_apple\Estado;
 use mine_apple\Cidade;
 use mine_apple\Conta;
 use mine_apple\Banco;
+use mine_apple\Produtor;
+use mine_apple\Endereco;
 
 class ProdutorController extends Controller
 {
@@ -48,7 +50,7 @@ class ProdutorController extends Controller
 
 
         //Informações Produtor
-        $produtor = new Produtor();
+        $produtor = new Produtor;
         $produtor->usuario_id = Auth::user()->id;
         $produtor->cnpj = $request->cnpj;
         $produtor->nomeFantasia = $request->nomeFantasia;
@@ -58,8 +60,8 @@ class ProdutorController extends Controller
         $produtor->avaliacao = 0;
         
 
-        $produtor->endereco_id = cadastrarEndereco($request);
-        cadastrarBanco($request);
+        $produtor->endereco_id = $this->cadastrarEndereco($request);
+        $this->cadastrarConta($request, $produtor);
 
         $produtor->save();
 
@@ -148,11 +150,14 @@ class ProdutorController extends Controller
      * @return int
      */
     public function cadastrarEndereco(Request $request) {
-        $endereco = new Endereco();
+        $endereco = new Endereco;
+        $endereco->cidade_id = $request->cidade;
         $endereco->rua = $request->rua;
         $endereco->numero = $request->numero;
         $endereco->complemento = $request->complemento;
         $endereco->bairro = $request->bairro;
+        $endereco->numero_cep = $request->cep;
+        $endereco->save();
         return $endereco->id;
     }
 
@@ -162,11 +167,12 @@ class ProdutorController extends Controller
      * @return string
      */
     public function cadastrarConta(Request $request) {
-        $conta = new Conta();
+        $conta = new Conta;
         $conta->produtor_id = Auth::user()->id;
-        $conta->idBanco = $request->idBanco;
-        $conta->numeroConta = $request->numeroConta;
+        $conta->banco_id = $request->banco;
+        $conta->numero = $request->numeroConta;
         $conta->agencia = $request->agencia;
         $conta->digito = $request->digito;
+        $conta->save();
     }
 }
