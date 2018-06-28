@@ -20,7 +20,7 @@ class CreateConsumidorTable extends Migration
             $table->primary('usuario_id');
 
             $table->foreign('usuario_id', 'fk_consumidor_usuario_idx')
-                ->references('id')->on('users')
+                ->references('id')->on('usuario')
                 ->onDelete('no action')
                 ->onUpdate('no action');
 
