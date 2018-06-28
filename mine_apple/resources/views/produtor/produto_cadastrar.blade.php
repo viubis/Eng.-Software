@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap4/bootstrap.min.css')}}">
     <link href="{{asset('plugins/fontawesome-free-5.0.1/css/fontawesome-all.css')}}" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}"}>
+    <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/animate.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/slick-1.8.0/slick.css')}}">
@@ -249,51 +249,51 @@
                                             <div class="form-check form-check-inline">
 
                                                 <input class="form-check-input" type="checkbox" name="entrega[seg]"
-                                                       value="true">
-                                                <label class="form-check-label" type="lab1" for="segunda">
+                                                       value="true" id="checkboxSegunda">
+                                                <label class="form-check-label" type="lab1" for="checkboxSegunda">
                                                     Segunda-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" name="entrega[ter]"
-                                                       value="true">
-                                                <label class="form-check-label" type="lab1" for="terca">
+                                                       value="true" id="checkboxTerca">
+                                                <label class="form-check-label" type="lab1" for="checkboxTerca">
                                                     Terça-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" name="entrega[qua]"
-                                                       value="true">
-                                                <label class="form-check-label" type="lab1" for="quarta">
+                                                       value="true" id="checkboxQuarta">
+                                                <label class="form-check-label" type="lab1" for="checkboxQuarta">
                                                     Quarta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" name="entrega[qui]"
-                                                       value="true">
-                                                <label class="form-check-label" type="lab1" for="quinta">
+                                                       value="true" id="checkboxQuinta">
+                                                <label class="form-check-label" type="lab1" for="checkboxQuinta">
                                                     Quinta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" name="entrega[sex]"
-                                                       value="true">
-                                                <label class="form-check-label" type="lab1" for="sexta">
+                                                       value="true" id="checkboxSexta">
+                                                <label class="form-check-label" type="lab1" for="checkboxSexta">
                                                     Sexta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" name="entrega[sab]"
-                                                       value="true">
-                                                <label class="form-check-label" type="lab1" for="sabado">
+                                                       value="true" id="checkboxSabado">
+                                                <label class="form-check-label" type="lab1" for="checkboxSabado">
                                                     Sábado
                                                 </label>
                                             </div>
 
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" name="entrega[dom]"
-                                                       value="true">
-                                                <label class="form-check-label" type="lab1" for="domingo">
+                                                       value="true" id="checkboxDomingo">
+                                                <label class="form-check-label" type="lab1" for="checkboxDomingo">
                                                     Domingo
                                                 </label>
                                             </div>
@@ -369,12 +369,10 @@
                     <div
                         class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                         <div class="copyright_content">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                            Copyright &copy;<script>document.write(new Date().getFullYear().toString());</script>
                             Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
                                                                                       aria-hidden="true"></i> pela <a
                                 href="#" target="_blank">Weiche Technologie</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </div>
                         <div class="logos ml-sm-auto">
                             <ul class="logos_list">
