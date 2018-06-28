@@ -118,7 +118,7 @@
                             <div class="page_menu_search">
                                 <form action="#">
                                     <input type="search" required="required" class="page_menu_search_input"
-                                           placeholder="Pesquisar produtos...">
+                                           placeholder="Pesquisar produtos..." name="buscarProdutos">
                                 </form>
                             </div>
                             <ul class="page_menu_nav">
@@ -162,12 +162,12 @@
                         <div class="pb-0" id="line"></div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="inputEmail4">Email</label>
-                                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="inputPassword4">Senha</label>
-                                <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+                                <label for="senha">Senha</label>
+                                <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
                             </div>
                         </div>
 
@@ -177,22 +177,22 @@
                         <div class="pb-0" id="line"></div>
                         <div class="form-group">
                             <label for="nomeFantasia">Nome fantasia</label>
-                            <input type="text" class="form-control" id="nomeFantasia" placeholder="Nome fantasia">
+                            <input type="text" class="form-control" id="nomeFantasia" name="nomeFantasia" placeholder="Nome fantasia">
                         </div>
                         <div class="form-group">
                             <label for="razaoSocial">Razão Social</label>
                             <input type="text" class="form-control" id="razaoSocial"
-                                   placeholder="Razão social">
+                                   placeholder="Razão social" name="razaoSocial">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="cnpj">CNPJ</label>
-                                <input type="text" class="form-control" id="cnpj" placeholder="Cnpj">
+                                <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="Cnpj">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="telefoneComercial">Telefone comercial</label>
                                 <input type="text" class="form-control" id="telefoneComercial"
-                                       placeholder="Telefone Comercial">
+                                       placeholder="Telefone Comercial" name="telefoneComercial">
                             </div>
                         </div>
 

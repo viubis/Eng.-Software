@@ -117,7 +117,7 @@
                             <div class="page_menu_search">
                                 <form action="#">
                                     <input type="search" required="required" class="page_menu_search_input"
-                                           placeholder="Pesquisar produtos...">
+                                           placeholder="Pesquisar produtos..." name="buscarProdutos">
                                 </form>
                             </div>
                             <ul class="page_menu_nav">
@@ -256,7 +256,7 @@
                                             <div class="card-body">
                                               <h4 class="card-title">Disponivel          R$500,00</h4>
                                               <div  class="pb-0" id="line"> </div>
-                                              <p class="card-text"><input type="text" class="form-control" id="valor" placeholder="Valor">
+                                              <p class="card-text"><input type="text" class="form-control" id="valor" name="valorDisponivel" placeholder="Valor">
                                               </p>
                                               <div  class="pb-0" id="line"> </div>
                                               <h4>Conta Bancaria</h4>

@@ -117,7 +117,7 @@
                             <div class="page_menu_search">
                                 <form action="#">
                                     <input type="search" required="required" class="page_menu_search_input"
-                                           placeholder="Pesquisar produtos...">
+                                           placeholder="Pesquisar produtos..." name="buscarProdutos">
                                 </form>
                             </div>
                             <ul class="page_menu_nav">
@@ -172,7 +172,7 @@
                                     <div class="form-group col-md-5">
                                         <input type="text" readonly class="form-control-plaintext"
                                                id="staticNomeFantasia"
-                                               placeholder="Nome fantasia" disabled>
+                                               placeholder="Nome fantasia" name="nomeFantasia" disabled>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -181,7 +181,7 @@
                                     </div>
                                     <div class="form-group col-md-5">
                                         <input type="text" readonly class="form-control-plaintext" id="staticCNPJ"
-                                               placeholder="CNPJ" disabled>
+                                               placeholder="CNPJ" disabled name="cnpj">
                                     </div>
                                 </div>
                             </div>

@@ -9,7 +9,7 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-<link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+<link href="{{asset('plugins/fontawesome-free-5.0.1/css/fontawesome-all.css')}}" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="{{asset('css/bootstrap4/bootstrap.min.css')}}">
 <link rel="stylesheet" href="{{asset('css/cadastro_a_realizar_style.css')}}">
 

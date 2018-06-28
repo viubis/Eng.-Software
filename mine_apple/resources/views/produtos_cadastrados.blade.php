@@ -117,7 +117,7 @@
                             <div class="page_menu_search">
                                 <form action="#">
                                     <input type="search" required="required" class="page_menu_search_input"
-                                           placeholder="Pesquisar produtos...">
+                                           placeholder="Pesquisar produtos..." name="buscarProdutos">
                                 </form>
                             </div>
                             <ul class="page_menu_nav">
@@ -161,7 +161,7 @@
                             </div>-->
                             <div class="col-md-7">
                                 <input type="text" class="form-control" id="razao"
-                                       placeholder="Razão Social" disabled>
+                                       placeholder="Razão Social" name="RazaoSocial" disabled>
                             </div>
                         </div>
                         <div class="table-responsive">

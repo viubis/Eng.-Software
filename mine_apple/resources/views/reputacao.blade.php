@@ -117,7 +117,7 @@
                             <div class="page_menu_search">
                                 <form action="#">
                                     <input type="search" required="required" class="page_menu_search_input"
-                                           placeholder="Pesquisar produtos...">
+                                           placeholder="Pesquisar produtos..." name="buscarProdutos">
                                 </form>
                             </div>
                             <ul class="page_menu_nav">
@@ -228,18 +228,18 @@
                                             </div>
                                         </ul>
                                             <div class="form-group">
-                                                <input type="text" class="form-control" id="produtos" placeholder="Data de avaliação"  disabled="disabled">
+                                                <input type="text" class="form-control" id="dataAvaliacao" name="dataAvaliacao" placeholder="Data de avaliação"  disabled="disabled">
                                             </div>
 
                                     </div>
                                 </div>
                             <label for="nomeCliente">Nome do cliente</label>
                             <div class="form-group">
-                                    <input type="text" class="form-control" id="nomeCliente" placeholder="Nome cliente"  disabled="disabled">
+                                    <input type="text" class="form-control" id="nomeCliente" name="nomeCliente" placeholder="Nome cliente"  disabled="disabled">
                              </div>
-                             <label for="assinatura">Assinatura:</label>
+                             <label for="produtosSelecionados">Assinatura:</label>
                              <div class="form-group">
-                                    <input type="text" class="form-control" id="produtos" placeholder="Produtos selecionados"  disabled="disabled">
+                                    <input type="text" class="form-control" name="produtosSelecionados" id="produtosSelecionados" placeholder="Produtos selecionados"  disabled="disabled">
                              </div>
                             </div>
 
@@ -257,17 +257,18 @@
                                     </div>
                                 </ul>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="produtos" placeholder="Data de avaliação"  disabled="disabled">
+                                        <input type="text" class="form-control" id="dataAvaliacao2" name="dataAvaliacao2" placeholder="Data de avaliação"  disabled="disabled">
                                     </div>
                              </div>
                             </div>
                             <label for="nomeCliente">Nome do cliente</label>
                             <div class="form-group">
-                                    <input type="text" class="form-control" id="nomeCliente" placeholder="Nome cliente" disabled="disabled">
+                                    <input type="text" class="form-control" id="nomeCliente" name="nomeCliente" placeholder="Nome cliente" disabled="disabled">
+                                    <input type="text" class="form-control" id="nomeCliente" name="nomeCliente" placeholder="Nome cliente" disabled="disabled">
                              </div>
-                             <label for="assinatura">Assinatura:</label>
+                             <label for="produtosSelecionados2">Assinatura:</label>
                              <div class="form-group">
-                                    <input type="text" class="form-control" id="produtos" placeholder="Produtos selecionados"  disabled="disabled">
+                                    <input type="text" class="form-control"  name="produtosSelecionados2" id="produtosSelecionados2" placeholder="Produtos selecionados"  disabled="disabled">
                              </div>
                             </div>
 

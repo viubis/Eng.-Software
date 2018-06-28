@@ -117,7 +117,7 @@
                             <div class="page_menu_search">
                                 <form action="#">
                                     <input type="search" required="required" class="page_menu_search_input"
-                                           placeholder="Pesquisar produtos...">
+                                           placeholder="Pesquisar produtos..." name="buscarProdutos">
                                 </form>
                             </div>
                             <ul class="page_menu_nav">
@@ -171,7 +171,7 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <input type="text" class="form-control" id="dataCompra"
-                                               placeholder="20/05/2018" disabled>
+                                               placeholder="20/05/2018" disabled name="dataCompra">
                                     </div>
                                 </div>
                             </fieldset>
@@ -193,7 +193,7 @@
                                     <div class="form-row">
                                         <div class="form-group col-md-12">
                                             <input type="text" class="form-control" id="dataCompra2"
-                                                   placeholder="23/02/2018" disabled>
+                                                   placeholder="23/02/2018" disabled name="dataCompra2">
                                         </div>
                                     </div>
                                 </fieldset>
@@ -215,7 +215,7 @@
                                         <div class="form-row">
                                             <div class="form-group col-md-12">
                                                 <input type="text" class="form-control" id="data"
-                                                       placeholder="05/01/2018" disabled>
+                                                       placeholder="05/01/2018" disabled name="dataCompra3">
                                             </div>
                                         </div>
                                     </fieldset>
