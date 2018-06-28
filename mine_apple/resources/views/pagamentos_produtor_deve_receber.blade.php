@@ -111,14 +111,14 @@
         <div class="page_menu">
             <div class="container">
                 <div class="row">
-                    <div class="col">
+                    <div class="col">'
 
                         <div class="page_menu_content">
 
                             <div class="page_menu_search">
                                 <form action="#">
                                     <input type="search" required="required" class="page_menu_search_input"
-                                           placeholder="Pesquisar produtos...">
+                                           placeholder="Pesquisar produtos..." name="buscarProdutos">
                                 </form>
                             </div>
                             <ul class="page_menu_nav">

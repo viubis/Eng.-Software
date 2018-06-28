@@ -109,7 +109,7 @@
                             <div class="page_menu_search">
                                 <form action="#">
                                     <input type="search" required="required" class="page_menu_search_input"
-                                           placeholder="Pesquisar produtos...">
+                                           placeholder="Pesquisar produtos..." name="pesquisarProdutos">
                                 </form>
                             </div>
 
@@ -194,7 +194,7 @@
                         </div>
                     </div>
                     <br /><br />
-                    <div class="form-group col-lg-18" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" class="btn btn-info" value="Avaliar"></div>
+                    <div class="form-group col-lg-18" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="enviarAvaliacao" class="btn btn-info" value="Avaliar"></div>
 
                 </div>
 

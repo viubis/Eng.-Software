@@ -72,7 +72,7 @@
                                 <div class="header_search_form_container">
                                     <form action="#" class="header_search_form clearfix">
                                         <input type="search" required="required" class="header_search_input"
-                                               placeholder="Pesquisar produtos...">
+                                               placeholder="Pesquisar produtos..." name="buscarProdutos">
 
                                         <div class="custom_dropdown">
                                             <div class="custom_dropdown_list">
@@ -188,7 +188,7 @@
                             <div class="page_menu_search">
                                 <form action="#">
                                     <input type="search" required="required" class="page_menu_search_input"
-                                           placeholder="Pesquisar produtos...">
+                                           placeholder="Pesquisar produtos..." name="buscarProdutos">
                                 </form>
                             </div>
                             <ul class="page_menu_nav">
@@ -210,61 +210,8 @@
 
     </header>
 
-    <!--<section>-->
     <body>
 
-   <!-- <div class="top-content">
-            <div class="container">
-                <h1 class="h1 page-title" data-reactid="38">Frutas</h1>
-                <div class="pb-0" id="line"></div>
-                <div class="row">
-                    <div class="contact_form_title"></div>
-
-
-                </div>
-
-                    <div class= "containerProduto">
-
-                        <img src="images/banana.jpg" height="200" width="200" style="float:left">
-                        <div class="form-group col-md-6">
-                            <label for="nomeProduto">Nome produto</label>
-                            <input type="text" class="form-control" id="nomeProduto"
-                            placeholder="Nome produto">
-                        </div>
-
-                        <div class="form-group col-md-6">
-                        <div class="form-group">
-                                <label for="Descrição">Descrição</label>
-                                <input type="text" class="form-control" id="descricaoProduto"
-                                placeholder="Pequena descrição do produto">
-                        </div>
-                        </div>
-                        <div class="form-row" >
-                        <div class="form-group col-md-2">
-                        <div class="form-group">
-                                <label for="Preço">Preço</label>
-                                <input type="text" class="form-control" id="precoProduto"
-                                placeholder="R$ 10,00">
-                        </div>
-                        </div>
-                        <div class="form-group col-md-2">
-                                <div class="form-group">
-                                        <label for="Pacote">Pacote</label>
-                                        <input type="text" class="form-control" id="pacoteProduto"
-                                        placeholder="duzia">
-                                </div>
-                                </div>
-                        </div>
-                    </div>
-                <center>
-                    <button type="submit" class="btn btn-primary">Mostrar mais</button>
-                </center>
-            </div>
-
-
-        </div>
-
-        </body>-->
 
    <div class="top-content">
        <div class="container">
@@ -297,24 +244,24 @@
                                    <div class="form-group col-md-6">
                                        <label for="nomeprod"> Nome Produto </label>
                                        <input type="text" class="form-control" id="nomeprod1"
-                                              placeholder="Nome do produto" disabled>
+                                              placeholder="Nome do produto" disabled name="nomeprod1">
                                    </div>
                                    <div class="form-group col-md-12">
-                                       <label for="freq">Descrição </label>
-                                       <input type="text" class="form-control" placeholder="Descrição" disabled>
+                                       <label for="descricaoProd1">Descrição </label>
+                                       <input type="text" id="descricaoProd1" name="descricaoProd1" class="form-control" placeholder="Descrição" disabled>
                                    </div>
                                </div>
                                <div class="form-row" id="espac1">
                                    <div class="form-group col-md-6">
-                                       <label for="freq">Preço</label>
-                                       <input type="number" min="0.1" max="999" name="form-valor"
-                                              class="form-control" id="freq"
+                                       <label for="valorProd1">Preço</label>
+                                       <input type="number" min="0.1" max="999" name="valorProd1"
+                                              class="form-control" id="valorProd1"
                                               placeholder=" R$ 10,00" disabled>
                                    </div>
                                    <div class="form-group col-md-6">
-                                       <label for="quant">Pacote</label>
-                                       <input type="text" name="form-valor" class="form-control"
-                                              id="quant" placeholder="duzia" disabled>
+                                       <label for="tipoEmbalagemProd1">Pacote</label>
+                                       <input type="text" name="tipoEmbalagemProd1" class="form-control"
+                                              id="tipoEmbalagemProd1" placeholder="duzia" disabled>
                                    </div>
                                </div>
 
@@ -343,26 +290,26 @@
                                 <fieldset>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label for="nomeprod"> Nome Produto </label>
-                                            <input type="text" class="form-control" id="nomeprod1"
+                                            <label for="nomeprod2"> Nome Produto </label>
+                                            <input type="text" class="form-control" id="nomeprod2"
                                                    placeholder="Nome do produto" disabled>
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <label for="freq">Descrição </label>
-                                            <input type="text" class="form-control" placeholder="Descrição" disabled>
+                                            <label for="descricaoProd2">Descrição </label>
+                                            <input type="text" id="descricaoProd2" name="descricaoProd2" class="form-control" placeholder="Descrição" disabled>
                                         </div>
                                     </div>
                                     <div class="form-row" id="espac1">
                                         <div class="form-group col-md-6">
-                                            <label for="freq">Preço</label>
-                                            <input type="number" min="0.1" max="999" name="form-valor"
-                                                   class="form-control" id="freq"
+                                            <label for="valorProd2">Preço</label>
+                                            <input type="number" min="0.1" max="999" name="valorProd2"
+                                                   class="form-control" id="valorProd2"
                                                    placeholder=" R$ 10,00" disabled>
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <label for="quant">Pacote</label>
-                                            <input type="text" name="form-valor" class="form-control"
-                                                   id="quant" placeholder="unidade" disabled>
+                                            <label for="tipoEmbalagemProd2">Pacote</label>
+                                            <input type="text" name="tipoEmbalagemProd2" class="form-control"
+                                                   id="tipoEmbalagemProd2" placeholder="unidade" disabled>
                                         </div>
                                     </div>
 

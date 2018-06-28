@@ -131,7 +131,7 @@
                             <div class="page_menu_search">
                                 <form action="#">
                                     <input type="search" required="required" class="page_menu_search_input"
-                                           placeholder="Pesquisar produtos...">
+                                           placeholder="Pesquisar produtos..." name="buscarProdutos">
                                 </form>
                             </div>
                             <ul class="page_menu_nav">
@@ -172,7 +172,7 @@
                                 <div class="form-group col-md-2" style="margin-top: -25px;">
                                     <div class="anil_nepal">
                                         <label class="switch switch-left-right">
-                                            <input class="switch-input" type="checkbox">
+                                            <input class="switch-input" type="checkbox" name="estado">
                                             <span class="switch-label" data-on="Ativa" data-off="Inativa"></span> <span
                                                 class="switch-handle"></span> </label>
                                     </div>
@@ -199,7 +199,7 @@
                             </div>
                         </div>
                         <div class="imagem">
-                            <div class="imagemProduto"><img src="images/imagemProduto.png" alt="Responsive image"></div>
+                            <div class="imagemProduto"><img src="{{asset('images/imagemProduto.png')}}" alt="Responsive image"></div>
                         </div>
                     </div>
                 </div>
@@ -210,38 +210,38 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="nomeprod">Produto </label>
-                                        <input type="text" class="form-control" id="nomeprod1"
+                                        <input type="text" class="form-control" id="nomeprod1" name="nomeprod1"
                                                placeholder="Nome do produto" disabled>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="freq">Tipo de embalagem </label>
+                                        <label for="tipoEmbalagemProd1">Tipo de embalagem </label>
                                         <input type="text" class="form-control" placeholder="Tipo de embalagem"
-                                               disabled>
+                                               disabled name="tipoEmbalagemProd1" id="tipoEmbalagemProd1">
                                     </div>
                                 </div>
                                 <div class="form-row" id="espac1">
                                     <div class="form-group col-md-6">
                                         <label for="freq">Frequência de entrega </label>
-                                        <input type="number" min="1" max="999" name="form-valor"
+                                        <input type="number" min="1" max="999" name="frequenciaEntregaProd1"
                                                class="form-control" id="freq"
                                                placeholder="Frequência de entrega por semana" disabled>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="quant">Quantidade</label>
-                                        <input type="number" min="1" max="999" name="form-valor" class="form-control"
-                                               id="quant" placeholder="Quantidade" disabled>
+                                        <label for="quantProd1">Quantidade</label>
+                                        <input type="number" min="1" max="999" name="qntProd1" class="form-control"
+                                               id="quantProd1" placeholder="Quantidade" disabled>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6 ">
                                         <label for="vendedor">Vendedor</label>
-                                        <input type="text" name="form-first-name"
+                                        <input type="text" name="nomeVendedor"
                                                placeholder="Vendedor"
                                                class="form-first-name form-control" id="vendedor" disabled>
                                     </div>
                                     <div class="form-group col-md-6 ">
-                                        <label for="quant">Valor</label>
-                                        <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name"
+                                        <label for="valorProd1">Valor</label>
+                                        <input type="number" step="0.01" min="0.01" max="999.00" name="valorProd1"
                                                placeholder="Valor"
                                                class="form-first-name form-control" id="valor" disabled>
                                     </div>
@@ -258,44 +258,51 @@
                                         <div class="form-group">
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="segunda"
-                                                       value="option1" disabled>
+                                                       value="segunda" disabled name="segunda">
                                                 <label class="form-check-label" type="lab1" for="segunda">
                                                     Segunda-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="terca"
-                                                       value="option2" disabled>
+                                                       value="terca" disabled name="terca">
                                                 <label class="form-check-label" type="lab1" for="terca">
                                                     Terça-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="quarta"
-                                                       value="option3" checked disabled>
+                                                       value="quarta" checked disabled name="quarta">
                                                 <label class="form-check-label" type="lab1" for="quarta">
                                                     Quarta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="quinta"
-                                                       value="option4" disabled>
+                                                       value="quinta" disabled name="quinta">
                                                 <label class="form-check-label" type="lab1" for="quinta">
                                                     Quinta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="sexta"
-                                                       value="option5" disabled>
+                                                       value="sexta" disabled name="sexta">
                                                 <label class="form-check-label" type="lab1" for="sexta">
                                                     Sexta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="sabado"
-                                                       value="option6" checked disabled>
+                                                       value="sabado" checked disabled name="sabado">
                                                 <label class="form-check-label" type="lab1" for="sabado">
                                                     Sábado
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="domingo"
+                                                       value="domingo" checked disabled name="domingo">
+                                                <label class="form-check-label" type="lab1" for="domingo">
+                                                    Domingo
                                                 </label>
                                             </div>
                                         </div>
@@ -315,16 +322,16 @@
                         <div class="pb-0" id="line"></div>
                         <div class="form-row">
                             <div class="form-group col-md-6 ">
-                                <label for="inputEmail4">Frete</label>
-                                <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name"
+                                <label for="frete">Frete</label>
+                                <input type="number" step="0.01" min="0.01" max="999.00" name="frete"
                                        placeholder="Frete"
                                        class="form-first-name form-control" id="frete" disabled>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="inputPassword4">Valor Total</label>
-                                <input type="number" step="0.01" min="0.01" max="999.00" name="form-first-name"
+                                <label for="valorTotal">Valor Total</label>
+                                <input type="number" step="0.01" min="0.01" max="999.00" name="valorTotal"
                                        placeholder="Valor Total"
-                                       class="form-first-name form-control" id="valortot" disabled>
+                                       class="form-first-name form-control" id="valorTotal" disabled>
                             </div>
                         </div>
 

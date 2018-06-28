@@ -67,7 +67,7 @@
                                 <div class="header_search_form_container">
                                     <form action="#" class="header_search_form clearfix">
                                         <input type="search" required="required" class="header_search_input"
-                                               placeholder="Pesquisar produtos...">
+                                               placeholder="Pesquisar produtos..." name="buscarProdutos">
 
                                         <div class="custom_dropdown">
                                             <div class="custom_dropdown_list">
@@ -184,7 +184,7 @@
                             <div class="page_menu_search">
                                 <form action="#">
                                     <input type="search" required="required" class="page_menu_search_input"
-                                           placeholder="Pesquisar produtos...">
+                                           placeholder="Pesquisar produtos..." name="buscarProdutos">
                                 </form>
                             </div>
                             <ul class="page_menu_nav">
@@ -268,17 +268,17 @@
                             <div
                                 class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
                                 <input type="text" id="contact_form_name" class="contact_form_name input_field"
-                                       placeholder="Seu nome" required="required"
+                                       placeholder="Seu nome" required="required" name="nome"
                                        data-error="É obrigatório informar seu nome.">
                                 <input type="email" id="contact_form_email" class="contact_form_email input_field"
-                                       placeholder="Seu email" required="required"
+                                       placeholder="Seu email" required="required" name="email"
                                        data-error="É obrigatório informar seu email.">
                                 <input type="tel" id="contact_form_phone" class="contact_form_phone input_field"
-                                       placeholder="Seu número de telefone">
+                                       placeholder="Seu número de telefone" name="telefone">
                             </div>
                             <div class="contact_form_text">
                                 <textarea id="contact_form_message" class="text_field contact_form_message"
-                                          name="message" rows="4" placeholder="Mensagem" required="required"
+                                          name="mensagem" rows="4" placeholder="Mensagem" required="required"
                                           data-error="Por favor, escreva-nos uma mensagem."></textarea>
                             </div>
                             <div class="contact_form_button">

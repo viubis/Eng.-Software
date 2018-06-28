@@ -118,44 +118,6 @@
             </div>
         </nav>
 
-        <!-- Menu -->
-
-        <!--div class="page_menu">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-
-                        <div class="page_menu_content">
-
-                            <div class="page_menu_search">
-                                <form action="#">
-                                    <input type="search" required="required" class="page_menu_search_input"
-                                           placeholder="Pesquisar produtos...">
-                                </form>
-                            </div>
-                            <ul class="page_menu_nav">
-
-                                <li class="page_menu_item">
-                                    <a href="#">Inicio<i class="fa fa-angle-down"></i></a>
-                                </li>
-                                <li class="page_menu_item">
-                                    <a href="#">Produtos<i class="fa fa-angle-down"></i></a>
-                                </li>
-                                <li class="page_menu_item">
-                                    <a href="#">Sobre<i class="fa fa-angle-down"></i></a>
-                                </li>
-                                <li class="page_menu_item">
-                                    <a href="#">Fale Conosco<i class="fa fa-angle-down"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </header-->
-
 
     <div class="top-content">
         <div class="container">

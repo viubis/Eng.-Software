@@ -72,7 +72,7 @@
                                 <div class="header_search_form_container">
                                     <form action="#" class="header_search_form clearfix">
                                         <input type="search" required="required" class="header_search_input"
-                                               placeholder="Pesquisar produtos...">
+                                               placeholder="Pesquisar produtos..." name="buscarProdutos">
 
                                         <div class="custom_dropdown">
                                             <div class="custom_dropdown_list">
@@ -188,7 +188,7 @@
                             <div class="page_menu_search">
                                 <form action="#">
                                     <input type="search" required="required" class="page_menu_search_input"
-                                           placeholder="Pesquisar produtos...">
+                                           placeholder="Pesquisar produtos..." name="buscarProdutos">
                                 </form>
                             </div>
                             <ul class="page_menu_nav">
