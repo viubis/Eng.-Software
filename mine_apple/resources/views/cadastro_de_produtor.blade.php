@@ -80,12 +80,7 @@
                                     <input type="tel" name="telefone" placeholder="Telefone Comercial..."
                                            class="form-first-name form-control" required id="telefoneComercial">
                                 </div>
-                                <div class="form-group">
-                                    <label class="sr-only" for="valorMinimo">Valor mínimo para frete grátis</label>
-                                    <input type="number" min="1" max="999" name="valorMinimo"
-                                           placeholder="Valor mínimo para frete grátis..."
-                                           class="form-first-name form-control" required id="valorMinimo">
-                                </div>
+                                
                                 <div class="form-group">
                                     <label class="sr-only" for="raio_entrega">Raio de entrega (em km)</label>
                                     <input type="number" min="1"  name="raioEntrega"

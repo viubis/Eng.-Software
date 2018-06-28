@@ -55,8 +55,8 @@ class ProdutorController extends Controller
         $produtor->razaoSocial = $request->razaoSocial;
         $produtor->telefone = $request->telefone;
         $produtor->raioEntrega = $request->raioEntrega;
-        $produtor->avaliacao = $request->avaliacao;
-        $produtor->cnpj = $request->cnpj;
+        $produtor->avaliacao = 0;
+        
 
         $produtor->endereco_id = cadastrarEndereco($request);
         cadastrarBanco($request);
