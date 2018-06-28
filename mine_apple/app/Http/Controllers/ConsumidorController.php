@@ -7,9 +7,10 @@ use Illuminate\Support\Facades\Auth;
 use mine_apple\Estado;
 use mine_apple\Cidade;
 use mine_apple\Cartao;
-use minea_apple\ConsumidorEndereco;
+use mine_apple\ConsumidorEndereco;
 use mine_apple\Conta;
 use mine_apple\Endereco;
+use mine_apple\Consumidor;
 
 class ConsumidorController extends Controller
 {
