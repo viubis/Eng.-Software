@@ -165,8 +165,11 @@
                             <div class="form-bottom">
                                 <div class="form-group">
                                     <label class="sr-only" for="idBanco">ID do banco</label>
-                                    <input type="text" name="idBanco" placeholder="ID do banco"
-                                           class="form-facebook form-control" required id="idBanco">
+                                    <select class="form-control" name="banco" id="idBancos">
+                                        @foreach($bancos as $banco)
+                                            <option value="{{$banco->id}}">{{$banco->nome}}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="numeroConta">Número da conta</label>

@@ -11,6 +11,7 @@ use mine_apple\Produto;
 use mine_apple\Estado;
 use mine_apple\Cidade;
 use mine_apple\Conta;
+use mine_apple\Banco;
 
 class ProdutorController extends Controller
 {
@@ -31,8 +32,9 @@ class ProdutorController extends Controller
      */
 
     public function getForm(){
+            $bancos = Banco::all(['id', 'nome']);
             $estados = Estado::all(['id', 'nome']);
-            return view('cadastro_de_produtor',compact('estados',$estados));
+            return view('cadastro_de_produtor',compact('estados','bancos'));
     }
 
     /**
