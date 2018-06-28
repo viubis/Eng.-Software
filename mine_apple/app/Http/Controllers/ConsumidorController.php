@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Auth;
 use mine_apple\Estado;
 use mine_apple\Cidade;
 use mine_apple\Cartao;
+use minea_apple\ConsumidorEndereco;
+use mine_apple\Conta;
+use mine_apple\Endereco;
 
 class ConsumidorController extends Controller
 {
@@ -28,7 +31,7 @@ class ConsumidorController extends Controller
 
     public function getForm(){
         $estados = Estado::all(['id', 'nome']);
-        return view('cadastro_de_consumidor',compact('estados',$estados));
+        return view('cadastro_de_consumidor',compact('estados'));
 
     }
 
@@ -39,17 +42,41 @@ class ConsumidorController extends Controller
      */
     public function cadastrarConsumidor(Request $request) {
 
-        dd($request->all());
-        /*$consumidor = new Consumidor();
+        //dd($request->all());
+        $consumidor = new Consumidor;
         $consumidor->usuario_id = Auth::user()->id;
         $consumidor->nome = $request->nome;
         $consumidor->sobrenome = $request->sobrenome;
         $consumidor->sexo = $request->sexo;
         $consumidor->cpf = $request->cpf;
-        $consumidor->nome = $request->nome;
 
-        adicionarCartao($request);
-        cadastrarEndereco($request);*/
+        //$this->adicionarCartao($request);
+        //$this->cadastrarEndereco($request);
+
+        $consumidor_endereco = new ConsumidorEndereco; 
+        $endereco = new Endereco();
+        $endereco->rua = $request->rua;
+        $endereco->numero = $request->numero;
+        $endereco->complemento = $request->complemento;
+        $endereco->bairro = $request->bairro;
+        $endereco->cep = $request->cep;
+        $endereco->cidade_id = $request->cidade;
+        $consumidor_endereco->endereco_id = $endereco->id;
+        $consumidor_endereco->consumidor_id = Auth::user()->id;
+
+        $cartao = new Cartao;
+        $cartao->consumidor_id = Auth::user()->id;
+        $cartao->numero = $request->numero;
+        $cartao->titular = $request->titular;
+        $cartao->validade = $request->validade;
+        $cartao->codigo = $request->codigo;
+        $cartao->tipo = $request->tipo;
+
+        $consumidor->save();
+
+        $consumidor_endereco->save();
+
+        $cartao->save();
 
         
 
@@ -81,6 +108,7 @@ class ConsumidorController extends Controller
         $cartao->validade = $request->validade;
         $cartao->codigo = $request->codigo;
         $cartao->tipo = $request->tipo;
+
     }
 
     /**
@@ -90,10 +118,11 @@ class ConsumidorController extends Controller
      */
     public function cadastrarEndereco(Request $request) {
         $endereco = new Endereco();
-        $endereco->consumidor_id = Auth::user()->id;
         $endereco->rua = $request->rua;
         $endereco->numero = $request->numero;
         $endereco->complemento = $request->complemento;
         $endereco->bairro = $request->bairro;
+        $endereco->cep = $request->cep;
+        $endereco->cidade_id = $request->cidade;
     }
 }
