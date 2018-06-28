@@ -44,6 +44,9 @@
                     <form role="form" action="{{route('cadastrarConsumidor')}}" method="post" class="registration-form">
 
                         <fieldset>
+
+                            @csrf
+
                             <div class="form-top">
                                 <div class="form-top-left">
                                     <h3>Passo 1 / 3</h3>
@@ -57,25 +60,25 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="nome">Nome</label>
                                     <input type="text" name="nome" placeholder="Nome..."
-                                           class="form-first-name form-control" id="nome">
+                                           class="form-first-name form-control" id="nome" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="sobrenome">Sobrenome</label>
                                     <input type="text" name="sobrenome" placeholder="Sobrenome..."
-                                           class="form-first-name form-control" id="sobrenome">
+                                           class="form-first-name form-control" id="sobrenome" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="cpf">CPF</label>
                                     <input type="text" name="cpf" placeholder="CPF..."
-                                           class="form-last-name form-control" id="cpf">
+                                           class="form-last-name form-control" id="cpf" required>
                                 </div>
                                 
                                 <div class="form-group">
                                     <label class="sr-only" for="sexo">Sexo</label>
                                     <select class="form-control" id="sexo" name="sexo" required>
                                         <option disabled selected> Sexo</option>
-                                        <option value="feminino">Feminino</option>
-                                        <option value="masculino">Masculino</option>
+                                        <option value="f">Feminino</option>
+                                        <option value="m">Masculino</option>
                                     </select>
                                 </div>
 
@@ -97,22 +100,22 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="CEP">CEP</label>
                                     <input type="text" name="cep" placeholder="CEP"
-                                           class="form-first-name form-control" id="CEP">
+                                           class="form-first-name form-control" id="CEP" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="Rua">Rua</label>
                                     <input type="text" name="rua" placeholder="Rua"
-                                           class="form-first-name form-control" id="Rua">
+                                           class="form-first-name form-control" id="Rua" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="Número">Número</label>
                                     <input type="text" name="numero" placeholder="Número"
-                                           class="form-first-name form-control" id="Número">
+                                           class="form-first-name form-control" id="Número" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="Bairro">Bairro</label>
                                     <input type="text" name="bairro" placeholder="Bairro"
-                                           class="form-first-name form-control" id="Bairro">
+                                           class="form-first-name form-control" id="Bairro" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="Complemento">Complemento</label>
@@ -121,7 +124,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="estados">Estados</label>
-                                    <select class="form-control" id="estados" name="estado">
+                                    <select class="form-control" name="estado" id="estados">
                                         @foreach($estados as $estado)
                                             <option value="{{$estado->id}}">{{$estado->nome}}</option>
                                         @endforeach

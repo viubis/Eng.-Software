@@ -58,7 +58,7 @@ class ProdutorController extends Controller
         $produtor->telefone = $request->telefone;
         $produtor->raioEntrega = $request->raioEntrega;
         $produtor->avaliacao = 0;
-        
+
 
         $produtor->endereco_id = $this->cadastrarEndereco($request);
         $this->cadastrarConta($request, $produtor);
@@ -74,7 +74,7 @@ class ProdutorController extends Controller
      */
     public function alterarProdutor(Request $request) {
         $produtor = Auth::user();
-        $produtor->fill($request->all()->save());
+        $produtor->fill($request->all())->save();
 
         return view('dados_cadastrais_de_produtor', $produtor->id)->with('info', 'Dados alterados com sucesso!');
     }
