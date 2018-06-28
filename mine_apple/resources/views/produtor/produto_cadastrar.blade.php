@@ -159,12 +159,13 @@
                             @csrf
 
                             <fieldset>
-                                <div class="form-row">
+                                <div class="form-row item" id="formulario">
                                     <div class="col-md-12 mb-3">
-                                        <label for="form-control">Adicione uma imagem do seu produto:</label>
-                                        <input type="file" name="imagem" accept="image/*" class="form-control">
+                                        <label for="form-control">Adicione imagens do seu produto:</label>
+                                        <input id="item" type="file" style="margin-bottom: 10px" name="imagem" accept="image/*" class="form-control">
                                     </div>
                                 </div>
+                                <input style="font-size: 15px; margin-bottom: 20px; margin-top: -10px" type="button" class="btn-circle" id="novaImg" value="Nova imagem"/>
 
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
@@ -391,6 +392,7 @@
 </div>
 
 <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
+<script src="{{asset('js/adicaoImagensDinamicamente.js')}}"></script>
 <script src="{{asset('css/bootstrap4/popper.js')}}"></script>
 <script src="{{asset('css/bootstrap4/bootstrap.min.js')}}"></script>
 <script src="{{asset('plugins/greensock/TweenMax.min.js')}}"></script>
