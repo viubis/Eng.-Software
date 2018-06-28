@@ -60,8 +60,12 @@ class ConsumidorController extends Controller
         $endereco->numero = $request->numero;
         $endereco->complemento = $request->complemento;
         $endereco->bairro = $request->bairro;
-        $endereco->cep = $request->cep;
+        $endereco->numero_cep = $request->cep;
         $endereco->cidade_id = $request->cidade;
+        $endereco->save();
+
+        $consumidor->save();
+
         $consumidor_endereco->endereco_id = $endereco->id;
         $consumidor_endereco->consumidor_id = Auth::user()->id;
 
@@ -73,7 +77,7 @@ class ConsumidorController extends Controller
         $cartao->codigo = $request->codigo;
         $cartao->tipo = $request->tipo;
 
-        $consumidor->save();
+        
 
         $consumidor_endereco->save();
 
