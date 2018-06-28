@@ -20,8 +20,13 @@ class Endereco extends Model
         return $this->hasOne('mine_apple\Produtor', 'endereco_id');
     }
 
-    public function cep()
+    /*public function cep()
     {
         return $this->belongsTo('mine_apple\Cep', 'cep_id');
+    }*/
+
+    public function cidade()
+    {
+        return $this->belongsTo('mine_apple\Cidade', 'cidade_id');
     }
 }
