@@ -56,10 +56,20 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get('/consumidor', 'ConsumidorController@exemplo')->name('consumidor');
 
+        Route::get('/consumidor/adicionar_cartao', 'ConsumidorController@adicionarCartao')->name('consumidor.adicionar.cartao');
+
+        Route::get('/consumidor/cadastrar_endereco', 'ConsumidorController@getCadastrarEndereco');
+
+        Route::post('/consumidor/cadastrar_endereco', 'ConsumidorController@cadastrarEndereco')->name('consumidor.cadastrar.endereco');
+
         //Route::get('/consumidor/cadastrar', 'ConsumidorController@cadastrarConsumidor')->name('consumidor.cadastrar');
         //Route::get('/consumidor/alterar', 'ConsumidorController@alterarConsumidor')->name('consumidor.alterar');
         //Route::get('/consumidor/adicionar_cartao', 'ConsumidorController@adicionarCartao')->name('comsumidor.cartao.cadastrar');
+<<<<<<< HEAD
         Route::get('/consumidor/cadastrar_endereco', 'ConsumidorController@cadastrarEndereco')->name('consumidor.endereco.cadastrar');
+=======
+        //
+>>>>>>> d8e6784fc3c0b06d23628dd2e3e4baf07ec78707
 
     });
 
