@@ -18,7 +18,7 @@ class Cartao extends Model
 
     public function setNumeroAttribute($numero)
     {
-        $this->attributes['numero'] = Crypt::encryptString($numero);
+        $this->attributes['numero_cartao'] = Crypt::encryptString($numero);
     }
 
     public function getCodigoAttribute($codigo)

@@ -50,6 +50,7 @@ class ConsumidorController extends Controller
         $consumidor->sobrenome = $request->sobrenome;
         $consumidor->sexo = $request->sexo;
         $consumidor->cpf = $request->cpf;
+        $consumidor->acesso = 1;
 
         //$this->adicionarCartao($request);
         //$this->cadastrarEndereco($request);

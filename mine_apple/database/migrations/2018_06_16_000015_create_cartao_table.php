@@ -11,9 +11,9 @@ class CreateCartaoTable extends Migration
         Schema::create('cartao', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('consumidor_id')->unsigned();
-            $table->string('numero');
+            $table->string('numero_cartao');
             $table->string('titular');
-            $table->date('validade');
+            $table->string('validade');
             $table->string('codigo');
             $table->enum('tipo', ['c', 'd']);
 
