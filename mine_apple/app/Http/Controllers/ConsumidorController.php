@@ -116,18 +116,28 @@ class ConsumidorController extends Controller
 
     }
 
+    public function getCadastrarEndereco(){
+        $estados = Estado::all(['id', 'nome']);
+        return view('adicionar_endereco',compact('estados'));
+    }
+
     /**
      * @author Edcarlos
      * @param Request $request
      * @return string
      */
     public function cadastrarEndereco(Request $request) {
-        $endereco = new Endereco();
+        $consumidor_endereco = new ConsumidorEndereco; 
+        $endereco = new Endereco;
         $endereco->rua = $request->rua;
         $endereco->numero = $request->numero;
         $endereco->complemento = $request->complemento;
         $endereco->bairro = $request->bairro;
-        $endereco->cep = $request->cep;
+        $endereco->numero_cep = $request->cep;
         $endereco->cidade_id = $request->cidade;
+        $endereco->save();
+
+        $consumidor_endereco->endereco_id = $endereco->id;
+        $consumidor_endereco->consumidor_id = Auth::user()->id;
     }
 }
