@@ -85,16 +85,13 @@ class ProdutorController extends Controller
      * @return string
      */
     public function cadastrarProduto(Request $request) {
-        //Obs. O log e o tratamento de erros serão implementados junto com o método alterarProduto e editarProduto dia 28/06
-
-
         //Busca dependências
         $produtor = Auth::user()->produtor;
-        $categoria = Categoria::where('nome', $request['categoria'])->first();
-        $embalagem = Embalagem::where('tipo', $request['embalagem'])->first();
+        $categoria = Categoria::where('nome', $request->categoria)->first();
+        $embalagem = Embalagem::where('tipo', $request->embalagem)->first();
 
 
-        //Criar e salva o novo produto
+        //Criar e salva o produto
         $produto = new Produto(['seg'=>false, 'ter'=>false, 'qua'=>false, 'qui'=>false, 'sex'=>false, 'sab'=>false, 'dom'=>false,]);
         $produto->produtor_id = $produtor->usuario_id;
         $produto->categoria_id = $categoria->id;
@@ -110,10 +107,15 @@ class ProdutorController extends Controller
             $produto[$dia] = true;
         }
 
+        if($request->id != null)
+            $produto->id = $request->id;
+
         $produto->save();
 
 
         //Salva a imagem
+        Foto::where('produto_id', $produto->id)->delete();
+
         $nomeImagem = $produto->produtor_id . '_' . $produto->id . '.' . $request->imagem->getClientOriginalExtension();
         $request->imagem->storeAs('produto_imagens', $nomeImagem);
 
@@ -123,7 +125,7 @@ class ProdutorController extends Controller
         $foto->save();
 
 
-        return redirect()->route('produtor.produto.cadastrar');
+        return redirect()->route('produto.cadastrar');
     }
 
     /**
@@ -132,16 +134,13 @@ class ProdutorController extends Controller
      * @return string
      */
     public function editarProduto(Request $request) {
+        $produto = Produto::find($request->id);
 
-    }
+        if($produto == null || $produto->produtor_id != Auth::user()->produtor->usuario_id)
+            return redirect()->route('index');
 
-    /**
-     * @author Sesaque Oliveira
-     * @param Request $request
-     * @return string
-     */
-    public function alterarProduto(Request $request) {
 
+        return view('alterar_dados_produtos')->with('produto', $produto);
     }
 
     /**

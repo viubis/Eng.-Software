@@ -4,6 +4,7 @@
 
 Route::get('/', 'PublicoController@index')->name('index');
 
+
 Route::get('tipo_cadastro', 'PublicoController@getTipoCadastro');
 
 
@@ -25,8 +26,6 @@ Route::post('/retorna_cidades', 'CidadeController@retornaCidades')->name('retorn
 Route::middleware(['auth'])->group(function () {
 
     Route::get('/home', 'UsuarioController@home')->name('home');
-
-
 
 
     //Rotas para usuários que não definiram o tipo de conta ----------------------------------------
@@ -80,11 +79,11 @@ Route::middleware(['auth'])->group(function () {
         //Route::get('/produtor/cadastrar', 'ProdutorController@cadastrarProdutor')->name('produtor.cadastrar');
         Route::get('/produtor/alterar', 'ProdutorController@alterarProdutor')->name('produtor.alterar');
 
-        Route::view('/produtor/cadastrar_produto', 'produtor.produto_cadastrar')->name('produtor.produto.cadastrar');
+        Route::view('/produtor/cadastrar_produto', 'produtor.produto_cadastrar')->name('produto.cadastrar');
         Route::post('/produtor/cadastrar_produto', 'ProdutorController@cadastrarProduto');
 
-        //Route::get('/produtor/alterar_produto/{id}', 'ProdutorController@editarProduto')->name('produtor.produto.alterar');
-        //Route::post('/produtor/alterar_produto/{id}', 'ProdutorController@alterarProduto');
+        Route::get('/produtor/alterar_produto/{id}', 'ProdutorController@editarProduto')->where('id', '[0-9]+')->name('produto.alterar');
+        Route::post('/produtor/alterar_produto/{id}', 'ProdutorController@cadastrarProduto');
 
         //Route::get('/produtor/cadastrar_endereco', 'ProdutorController@cadastrarEndereco')->name('produtor.endereco.cadastrar');
 

@@ -110,7 +110,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-
                         <div class="page_menu_content">
 
                             <div class="page_menu_search">
@@ -156,7 +155,9 @@
                 <div class="col-lg-10 offset-lg-1">
                     <div class="contact_form_container">
                         <div class="contact_form_title">Alterar informações do produto</div>
-                        <form role="form" action="" method="post" class="registration-form">
+                        <form role="form" action="{{route('produto.alterar', $produto->id)}}" method="post" class="registration-form">
+                            @csrf
+
                             <fieldset>
                                 <div class="form-row">
                                     <div class="col-md-12 mb-3">
@@ -198,7 +199,7 @@
                                     <div class="col-md-6 mb-3">
                                         <label class="sr-only" for="nome">Nome</label>
                                         <input type="text" name="nome" placeholder="Nome do Produto..."
-                                               class="form-first-name form-control" id="nome">
+                                               class="form-first-name form-control" id="nome" value="{{$produto->nome}}">
                                     </div>
 
 
@@ -206,6 +207,7 @@
                                         <label class="sr-only" for="qtd">Quantidade produzida por dia</label>
                                         <input type="number" min="1" max="999" name="maxPorDia"
                                                placeholder="Quantidade produzida por dia..."
+                                               value="{{$produto->maxPorDia}}"
                                                class="form-first-name form-control" id="qtd">
                                     </div>
                                 </div>
@@ -215,18 +217,21 @@
                                         <label class="sr-only" for="qtdmin">Quantidade mínima por assinatura</label>
                                         <input type="number" min="1" max="999" name="minPorAssinatura"
                                                placeholder="Quantidade mínima de produtos por assinatura..."
+                                               value="{{$produto->minPorAssinatura}}"
                                                class="form-first-name form-control" id="qtdmin">
                                     </div>
                                     <div class="col-md-4 mb-3">
                                         <label class="sr-only" for="frete">Valor máximo de frete</label>
                                         <input type="number" step="0.01" min="0.01" max="999.00" name="freteMax"
                                                placeholder="Valor máximo de frete..."
+                                               value="{{$produto->freteMax}}"
                                                class="form-first-name form-control" id="frete">
                                     </div>
                                     <div class="col-md-2 mb-3">
                                         <label class="sr-only" for="valor">Valor</label>
                                         <input type="number" step="0.01" min="0.01" max="999.00" name="valor"
                                                placeholder="Valor..."
+                                               value="{{$produto->valor}}"
                                                class="form-first-name form-control" id="valor">
                                     </div>
                                 </div>
@@ -235,7 +240,8 @@
                                     <div class="col-md-12 mb-3">
                                         <div class="form-group">
                                             <textarea class="form-control" rows="5" id="comment" name="descricao"
-                                                      placeholder="Descrição do produto... "></textarea>
+                                                      placeholder="Descrição do produto... ">{{$produto->descricao}}
+                                            </textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -250,49 +256,49 @@
                                         <div class="form-group">
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="segunda"
-                                                       value="option1" required name="seg">
+                                                       value="option1"  name="seg">
                                                 <label class="form-check-label" type="lab1" for="segunda">
                                                     Segunda-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="terca"
-                                                       value="terca" name="ter" required>
+                                                       value="terca" name="ter" >
                                                 <label class="form-check-label" type="lab1" for="terca">
                                                     Terça-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="quarta"
-                                                       value="quarta" name="qua" required>
+                                                       value="quarta" name="qua" >
                                                 <label class="form-check-label" type="lab1" for="quarta">
                                                     Quarta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="quinta"
-                                                       value="quinta" name="qui" required>
+                                                       value="quinta" name="qui" >
                                                 <label class="form-check-label" type="lab1" for="quinta">
                                                     Quinta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="sexta"
-                                                       value="sexta" name="sex" required>
+                                                       value="sexta" name="sex" >
                                                 <label class="form-check-label" type="lab1" for="sexta">
                                                     Sexta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="sabado"
-                                                       value="sabado" name="sab" required>
+                                                       value="sabado" name="sab" >
                                                 <label class="form-check-label" type="lab1" for="sabado">
                                                     Sábado
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="domingo"
-                                                       value="sabado" name="dom" required>
+                                                       value="sabado" name="dom" >
                                                 <label class="form-check-label" type="lab1" for="domingo">
                                                     Domingo
                                                 </label>
@@ -302,7 +308,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <button type="button" class="btn btn-next">Alterar</button>
+                                    <button type="submit" class="btn btn-next">Alterar</button>
                                 </div>
                             </fieldset>
                         </form>

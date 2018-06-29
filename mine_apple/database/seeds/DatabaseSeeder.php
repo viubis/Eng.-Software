@@ -15,7 +15,6 @@ class DatabaseSeeder extends Seeder
             CidadeTableSeeder::class,
         ]);
 
-        
 
 
         //Usuários de teste

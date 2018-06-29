@@ -155,7 +155,7 @@
                 <div class="col-lg-10 offset-lg-1">
                     <div class="contact_form_container">
                         <div class="contact_form_title">Cadastro de Produto</div>
-                        <form role="form" action="{{route('produtor.produto.cadastrar')}}" method="post" enctype="multipart/form-data" class="registration-form">
+                        <form role="form" action="{{route('produto.cadastrar')}}" method="post" enctype="multipart/form-data" class="registration-form">
                             @csrf
 
                             <fieldset>
