@@ -9,6 +9,7 @@ class CreateCartaoTable extends Migration
     public function up()
     {
         Schema::create('cartao', function (Blueprint $table) {
+            //
             $table->increments('id');
             $table->integer('consumidor_id')->unsigned();
             $table->string('numero_cartao');

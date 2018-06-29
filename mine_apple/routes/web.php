@@ -66,7 +66,7 @@ Route::middleware(['auth'])->group(function () {
 
 
 
-    //Rotas para produtores ------------------------------------------------------------------------
+    //Rotas para produtores -----------------------------------------------------------------------
     Route::middleware(['auth.produtor'])->group(function () {
 
         Route::get('/produtor', 'ProdutorController@exemplo')->name('produtor');

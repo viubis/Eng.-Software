@@ -17,7 +17,7 @@ class Cartao extends Model
     }
 
     public function setNumeroAttribute($numero)
-    {
+    {   //nome modificado pois estava duplicado
         $this->attributes['numero_cartao'] = Crypt::encryptString($numero);
     }
 

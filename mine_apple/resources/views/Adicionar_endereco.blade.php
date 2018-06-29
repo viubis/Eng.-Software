@@ -40,8 +40,9 @@
             </div>
             <div class="row">
                 <div class="col-sm-6 offset-lg-3 form-box">
-                    <form role="form" action="" method="post" class="registration-form">
+                    <form role="form" action="{{route('consumidor.cadastrar.endereco')}}" method="post" class="registration-form">
                         <fieldset>
+                            @csrf
                             <div class="form-top">
                                 <div class="form-top-left">
                                     <h3>Cadastrar novo endereço</h3>
@@ -53,7 +54,7 @@
                             <div class="form-bottom">
                                 <div class="form-group">
                                     <label class="sr-only" for="CEP">CEP</label>
-                                    <input type="text" name="numero" placeholder="CEP"
+                                    <input type="text" name="cep" placeholder="CEP"
                                            class="form-first-name form-control" id="CEP">
                                 </div>
                                 <div class="form-group">
@@ -78,13 +79,13 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="estados">Estados</label>
-                                    <select class="form-control" name="nome" id="estados">
-                                        <option value=""></option>
-                                    </select>
+                                    @foreach($estados as $estado)
+                                        <option value="{{$estado->id}}">{{$estado->nome}}</option>
+                                    @endforeach
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="cidades">Cidades</label>
-                                    <select class="form-control" name="nome" id="cidades">
+                                    <select class="form-control" name="cidade" id="cidades">
                                     </select>
                                 </div>
                                 <button type="submit" class="btn">Adicionar</button>

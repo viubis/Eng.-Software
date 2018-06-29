@@ -40,8 +40,9 @@
             </div>
             <div class="row">
                 <div class="col-sm-6 offset-lg-3 form-box">
-                    <form role="form" action="" method="post" class="registration-form">
+                    <form role="form" method="post" action="{{route('consumidor.adicionar.cartao')}}" class="registration-form">
                         <fieldset>
+                            @csrf
                             <div class="form-top">
                                 <div class="form-top-left">
                                     <h3>Cadastrar novo cartão de crédito:</h3>
@@ -95,8 +96,8 @@
                                     <label class="sr-only" for="tipo">Tipo de cartão </label>
                                     <select class="form-control" id="tipo" name="tipo">
                                         <option selected disabled>Tipo de cartão</option>
-                                        <option value="credito">Crédito</option>
-                                        <option value="debito">Débito</option>
+                                        <option value="c">Crédito</option>
+                                        <option value="d">Débito</option>
                                     </select>
                                 </div>
                                 <button type="submit" class="btn">Adicionar</button>

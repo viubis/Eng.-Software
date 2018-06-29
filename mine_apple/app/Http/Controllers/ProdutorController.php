@@ -63,7 +63,6 @@ class ProdutorController extends Controller
         $produtor->endereco_id = $this->cadastrarEndereco($request);
         $produtor->acesso = 1;
         //$this->cadastrarConta($request, $produtor);
-
         $produtor->save();
 
         $conta = new Conta;

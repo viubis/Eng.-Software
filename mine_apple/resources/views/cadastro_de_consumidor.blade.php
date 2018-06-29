@@ -28,7 +28,7 @@
 <body>
 
 
-<!-- Top content -->
+<!-- Top content --->
 <div class="top-content">
     <div class="logo_icon"><img src="{{asset('images/logoSite.png')}}" alt=""></div>
     <div class="inner-bg">
