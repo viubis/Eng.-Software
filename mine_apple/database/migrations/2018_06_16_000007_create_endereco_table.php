@@ -12,7 +12,7 @@ class CreateEnderecoTable extends Migration
             $table->increments('id');
             //$table->integer('cep_id')->unsigned();
             $table->integer('cidade_id')->unsigned();
-            $table->integer('numero_cep');
+            $table->string('numero_cep');
             $table->string('rua');
             $table->integer('numero');
             $table->string('complemento')->nullable();
