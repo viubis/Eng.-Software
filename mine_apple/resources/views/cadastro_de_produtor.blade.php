@@ -44,12 +44,12 @@
                     <form role="form" action="{{route('cadastrarProdutor')}}" method="post" data-toggle="validator" class="registration-form">
 
                         <!-- Esse csrf ta bugando mais precisa dele -->
-                        
+
 
                         <fieldset>
-                            
+
                             @csrf
-                            
+
                             <div class="form-top">
                                 <div class="form-top-left">
                                     <h3>Passo 1 / 3</h3>
@@ -60,8 +60,8 @@
                                 </div>
                             </div>
                             <div class="form-bottom">
-                                                             
-                                
+
+
                                 <div class="form-group">
                                     <label class="sr-only" for="razaoSocial">Razão social</label>
                                     <input type="text" name="razaoSocial" placeholder="Razão social..."
@@ -82,7 +82,7 @@
                                     <input type="tel" name="telefone" placeholder="Telefone Comercial..."
                                            class="form-first-name form-control" required id="telefoneComercial">
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label class="sr-only" for="raio_entrega">Raio de entrega (em km)</label>
                                     <input type="number" min="1"  name="raioEntrega"
@@ -169,19 +169,32 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="numeroConta">Número da conta</label>
-                                    <input type="text" name="numeroConta" placeholder="Número da conta"
-                                           class="form-facebook form-control" required id="numeroConta">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label class="sr-only" for="numeroConta">Número da conta</label>
+                                            <input type="text" name="numeroConta" placeholder="Número da conta"
+                                                   class="form-facebook form-control" required id="numeroConta">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="sr-only" for="dVerif">Dígito verificador</label>
+                                            <input type="text" name="digitoConta" placeholder="Dígito verificador"
+                                                   class="form-facebook form-control" required id="dVerif">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="agencia">Agência</label>
-                                    <input type="text" name="agencia" placeholder="Agência"
-                                           class="form-facebook form-control" required id="agencia">
-                                </div>
-                                <div class="form-group">
-                                    <label class="sr-only" for="dVerif">Dígito verificador</label>
-                                    <input type="text" name="digito" placeholder="Dígito verificador"
-                                           class="form-facebook form-control" required id="dVerif">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label class="sr-only" for="agencia">Agência</label>
+                                            <input type="text" name="agencia" placeholder="Agência"
+                                                   class="form-facebook form-control" required id="agencia">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="sr-only" for="dVerif">Dígito verificador</label>
+                                            <input type="text" name="digitoAgencia" placeholder="Dígito verificador"
+                                                   class="form-facebook form-control" required id="dVerif">
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="form-group">
@@ -229,7 +242,6 @@
 <script src="{{asset('js/retina-1.1.0.min.js')}}"></script>
 <script src="{{asset('js/script_tela_cadastro_produtor.js')}}"></script>
 <script src="{{asset('js/validator.min.js')}}"></script>
-<script src="{{asset('js/placeholder_tela_cadastro_produtor.js')}}"></script>
 
 </body>
 

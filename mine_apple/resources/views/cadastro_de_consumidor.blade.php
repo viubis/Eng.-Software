@@ -72,7 +72,7 @@
                                     <input type="text" name="cpf" placeholder="CPF..."
                                            class="form-last-name form-control" id="cpf" required>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label class="sr-only" for="sexo">Sexo</label>
                                     <select class="form-control" id="sexo" name="sexo" required>
@@ -244,10 +244,6 @@
 <script src="{{asset('js/jquery.backstretch.min.js')}}"></script>
 <script src="{{asset('js/retina-1.1.0.min.js')}}"></script>
 <script src="{{asset('js/script_tela_cadastro_produtor.js')}}"></script>
-
-<!--[if lt IE 10]>
-<script src="{{asset('js/placeholder_tela_cadastro_produtor.js')}}"></script>
-<![endif]-->
 
 </body>
 
