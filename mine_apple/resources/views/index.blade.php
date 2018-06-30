@@ -224,7 +224,7 @@
                 <img class="d-block w-100" src="{{asset('images/banner_background4.png')}}" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="{{asset('images/banner_background.jpg')}}" alt="Second slide">
+                <img class="d-block w-100" src="{{asset('images/banner_background2.png')}}" alt="Second slide">
             </div>
             <div class="carousel-item">
                 <img class="d-block w-100" src="{{asset('images/banner_background.jpg')}}" alt="Third slide">
