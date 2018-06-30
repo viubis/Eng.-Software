@@ -191,14 +191,7 @@
                                     <input type="text" name="validade" placeholder="Validade"
                                            class="form-facebook form-control" id="validade">
                                 </div>
-                                <div class="form-group">
-                                    <label class="sr-only" for="tipo">Tipo de cartão </label>
-                                    <select class="form-control" id="tipo" name="tipo">
-                                        <option selected disabled>Tipo de cartão</option>
-                                        <option value="c">Crédito</option>
-                                        <option value="d">Débito</option>
-                                    </select>
-                                </div>
+                                
 
                                 <div class="form-group">
                                     <input id="contrato" name="contrato" type="checkbox" value="nao">

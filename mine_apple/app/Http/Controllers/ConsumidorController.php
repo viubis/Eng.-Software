@@ -72,11 +72,11 @@ class ConsumidorController extends Controller
 
         $cartao = new Cartao;
         $cartao->consumidor_id = Auth::user()->id;
-        $cartao->numero = $request->numero;
+        $cartao->numero = $request->numero_cartao;
         $cartao->titular = $request->titular;
         $cartao->validade = $request->validade;
         $cartao->codigo = $request->codigo;
-        $cartao->tipo = $request->tipo;
+        
 
         
 
