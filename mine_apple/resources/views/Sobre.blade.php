@@ -95,7 +95,7 @@
 
                             <div class="main_nav_menu ml-auto">
                                 <ul class="standard_dropdown main_nav_dropdown">
-                                    <li><a href="#">Inicio<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="{{url("/")}}">Inicio<i class="fas fa-chevron-down"></i></a></li>
                                     <li><a href="{{url("/sobre")}}">Sobre<i class="fas fa-chevron-down"></i></a></li>
                                     <li><a href="{{url("/fale_conosco")}}">Fale Conosco<i class="fas fa-chevron-down"></i></a></li>
                                 </ul>
