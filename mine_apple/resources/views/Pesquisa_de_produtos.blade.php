@@ -152,9 +152,9 @@
 
                             <div class="main_nav_menu ml-auto">
                                 <ul class="standard_dropdown main_nav_dropdown">
-                                    <li><a href="#">Inicio<i class="fas fa-chevron-down"></i></a></li>
-                                    <li><a href="#">Sobre<i class="fas fa-chevron-down"></i></a></li>
-                                    <li><a href="#">Fale Conosco<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="{{url("/")}}">Inicio<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="{{url("/sobre")}}">Sobre<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="{{url("/fale_conosco")}}">Fale Conosco<i class="fas fa-chevron-down"></i></a></li>
                                 </ul>
                             </div>
 
@@ -193,13 +193,13 @@
                             </div>
                             <ul class="page_menu_nav">
                                 <li class="page_menu_item">
-                                    <a href="#">Inicio<i class="fa fa-angle-down"></i></a>
+                                    <a href="{{url("/")}}">Inicio<i class="fa fa-angle-down"><i></i></a>
                                 </li>
                                 <li class="page_menu_item">
-                                    <a href="#">Sobre<i class="fa fa-angle-down"></i></a>
+                                    <a href="{{url("/sobre")}}">Sobre<i class="fa fa-angle-down"><i></i></a>
                                 </li>
                                 <li class="page_menu_item">
-                                    <a href="#">Fale Conosco<i class="fa fa-angle-down"></i></a>
+                                    <a href="{{url("/fale_conosco")}}">Fale Conosco<i class="fa fa-angle-down"><i></i></a>
                                 </li>
                             </ul>
                         </div>

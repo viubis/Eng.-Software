@@ -8,6 +8,8 @@ Route::get('/sobre', 'PublicoController@sobre');
 
 Route::get('/fale_conosco', 'PublicoController@faleConosco');
 
+Route::get('/carrinho', 'PublicoController@carrinho');
+
 Route::get('tipo_cadastro', 'PublicoController@getTipoCadastro');
 
 
@@ -29,6 +31,7 @@ Route::post('/retorna_cidades', 'CidadeController@retornaCidades')->name('retorn
 Route::middleware(['auth'])->group(function () {
 
     Route::get('/home', 'UsuarioController@home')->name('home');
+    Route::get('/minhascompras', 'UsuarioController@minhasCompras');
 
 
     //Rotas para usuários que não definiram o tipo de conta ----------------------------------------

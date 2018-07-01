@@ -32,4 +32,7 @@ class PublicoController extends Controller
     public function faleConosco(){
         return view('fale_conosco');
     }
+    public function carrinho(){
+        return view('Carrinho_de_compras');
+    }
 }

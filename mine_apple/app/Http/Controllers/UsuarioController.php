@@ -21,4 +21,7 @@ class UsuarioController extends Controller
     public function home() {
         return view('home');
     }
+    public function minhasCompras(){
+        return view('minhas_compras');
+    }
 }
