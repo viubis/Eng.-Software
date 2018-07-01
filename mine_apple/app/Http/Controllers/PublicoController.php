@@ -25,4 +25,11 @@ class PublicoController extends Controller
     public function getTipoCadastro(){
         return view('tipo_de_cadastro_a_realizar');
     }
+    public function sobre(){
+        return view('Sobre');
+    }
+
+    public function faleConosco(){
+        return view('fale_conosco');
+    }
 }

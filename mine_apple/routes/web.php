@@ -4,6 +4,9 @@
 
 Route::get('/', 'PublicoController@index')->name('index');
 
+Route::get('/sobre', 'PublicoController@sobre');
+
+Route::get('/fale_conosco', 'PublicoController@faleConosco');
 
 Route::get('tipo_cadastro', 'PublicoController@getTipoCadastro');
 
