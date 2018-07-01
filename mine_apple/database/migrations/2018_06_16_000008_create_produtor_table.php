@@ -11,7 +11,7 @@ class CreateProdutorTable extends Migration
         Schema::create('produtor', function (Blueprint $table) {
             $table->integer('usuario_id')->unsigned();
             $table->integer('endereco_id')->unsigned();
-            $table->integer('cnpj')->unique();
+            $table->string('cnpj')->unique();
             $table->string('nomeFantasia');
             $table->string('razaoSocial');
             $table->integer('telefone');

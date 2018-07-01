@@ -28,7 +28,7 @@
 <body>
 
 
-<!-- Top content -->
+<!-- Top content --->
 <div class="top-content">
     <div class="logo_icon"><img src="{{asset('images/logoSite.png')}}" alt=""></div>
     <div class="inner-bg">
@@ -72,7 +72,7 @@
                                     <input type="text" name="cpf" placeholder="CPF..."
                                            class="form-last-name form-control" id="cpf" required>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label class="sr-only" for="sexo">Sexo</label>
                                     <select class="form-control" id="sexo" name="sexo" required>
@@ -178,7 +178,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="NumeroCartao">Número do cartão</label>
-                                    <input type="text" name="numero" placeholder="Número do cartão"
+                                    <input type="text" name="numero_cartao" placeholder="Número do cartão"
                                            class="form-facebook form-control" id="NumeroCartao">
                                 </div>
                                 <div class="form-group">
@@ -191,14 +191,7 @@
                                     <input type="text" name="validade" placeholder="Validade"
                                            class="form-facebook form-control" id="validade">
                                 </div>
-                                <div class="form-group">
-                                    <label class="sr-only" for="tipo">Tipo de cartão </label>
-                                    <select class="form-control" id="tipo" name="tipo">
-                                        <option selected disabled>Tipo de cartão</option>
-                                        <option value="credito">Crédito</option>
-                                        <option value="debito">Débito</option>
-                                    </select>
-                                </div>
+                                
 
                                 <div class="form-group">
                                     <input id="contrato" name="contrato" type="checkbox" value="nao">
@@ -244,10 +237,6 @@
 <script src="{{asset('js/jquery.backstretch.min.js')}}"></script>
 <script src="{{asset('js/retina-1.1.0.min.js')}}"></script>
 <script src="{{asset('js/script_tela_cadastro_produtor.js')}}"></script>
-
-<!--[if lt IE 10]>
-<script src="{{asset('js/placeholder_tela_cadastro_produtor.js')}}"></script>
-<![endif]-->
 
 </body>
 

@@ -10,7 +10,7 @@ class CreateConsumidorTable extends Migration
     {
         Schema::create('consumidor', function (Blueprint $table) {
             $table->integer('usuario_id')->unsigned();
-            $table->integer('cpf')->unique();
+            $table->string('cpf')->unique();
             $table->string('nome');
             $table->string('sobrenome');
             $table->enum('sexo', ['m', 'f'])->nullable();

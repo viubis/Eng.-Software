@@ -221,25 +221,13 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="{{asset('images/banner_background.jpg')}}" alt="First slide">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Produto 1</h5>
-                    <p>Valor do produto 1</p>
-                </div>
+                <img class="d-block w-100" src="{{asset('images/banner_background1.png')}}" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="{{asset('images/banner_background.jpg')}}" alt="Second slide">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Produto 2</h5>
-                    <p>Valor do produto 2</p>
-                </div>
+                <img class="d-block w-100" src="{{asset('images/banner_background2.png')}}" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="{{asset('images/banner_background.jpg')}}" alt="Third slide">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Produto 3</h5>
-                    <p>Valor do produto 3</p>
-                </div>
+                <img class="d-block w-100" src="{{asset('images/banner_background3.png')}}" alt="Third slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
