@@ -8,11 +8,11 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             UsuarioTableSeeder::class,
-            //BancoTableSeeder::class,
-            //CategoriaTableSeeder::class,
-            //EmbalagemTableSeeder::class,
+            BancoTableSeeder::class,
+            CategoriaTableSeeder::class,
+            EmbalagemTableSeeder::class,
             EstadoTableSeeder::class,
-           // CidadeTableSeeder::class,
+            CidadeTableSeeder::class,
         ]);
 
 
