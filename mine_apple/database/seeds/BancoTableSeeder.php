@@ -262,7 +262,7 @@ class BancoTableSeeder extends Seeder
 			 ['id' => 757, 'nome' => 'BANCO KEB DO BRASIL S.A.'],
 			 ['id' => 260, 'nome' => 'NUBANK S.A'],
 			 ['id' => 102, 'nome' => 'XP INVESTIMENTOS']
-    
+
 ]);
     }
 }
