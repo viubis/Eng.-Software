@@ -218,7 +218,7 @@
            <div class="row">
                <div class="col-lg-12 ">
                    <!--<div class="contact_form_title">Detalhes da Assinatura</div>-->
-                   <h1 class="h1 page-title" data-reactid="38">Frutas</h1>
+                   <h1 class="h1 page-title" data-reactid="38">Todos os produtos</h1>
                    <div class="pb-0" id="line"></div>
                </div>
            </div>
@@ -226,7 +226,7 @@
    </div>
 
 
-   <div class="containerInfosProdutos">
+   <!-- <div class="containerInfosProdutos">
        <div class="container">
            <div class="row" id="backColor">
                <div class="col-sm-4">
@@ -271,9 +271,9 @@
                </div>
                <div class="pb-0" id="line"></div>
            </div>
-       </div>
+       </div> -->
 
-
+       @foreach($produtos as $produto)
        <div class="containerInfosProdutos">
             <div class="container">
                 <div class="row" id="backColor">
@@ -290,13 +290,13 @@
                                 <fieldset>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label for="nomeprod2"> Nome Produto </label>
+                                            <label for="nomeprod2">Nome do Produto </label>
                                             <input type="text" class="form-control" id="nomeprod2"
-                                                   placeholder="Nome do produto" disabled>
+                                                   placeholder="{{$produto->nome}}" disabled>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label for="descricaoProd2">Descrição </label>
-                                            <input type="text" id="descricaoProd2" name="descricaoProd2" class="form-control" placeholder="Descrição" disabled>
+                                            <input type="text" id="descricaoProd2" name="descricaoProd2" class="form-control" placeholder="{{$produto->descricao}}" disabled>
                                         </div>
                                     </div>
                                     <div class="form-row" id="espac1">
@@ -304,26 +304,31 @@
                                             <label for="valorProd2">Preço</label>
                                             <input type="number" min="0.1" max="999" name="valorProd2"
                                                    class="form-control" id="valorProd2"
-                                                   placeholder=" R$ 10,00" disabled>
+                                                   placeholder="{{$produto->valor}}" disabled>
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <label for="tipoEmbalagemProd2">Pacote</label>
+                                            <label for="tipoEmbalagemProd2">Embalagem</label>
                                             <input type="text" name="tipoEmbalagemProd2" class="form-control"
-                                                   id="tipoEmbalagemProd2" placeholder="unidade" disabled>
+                                                   id="tipoEmbalagemProd2" placeholder="{{DB::table('embalagem')
+            ->join('produto', 'embalagem.id', '=', 'produto.embalagem_id')
+            ->select('tipo')
+            ->get() }}" disabled>
                                         </div>
                                     </div>
 
                                 </fieldset>
+                                
                             </form>
                         </div>
                     </div>
                     <div class="pb-0" id="line"></div>
                 </div>
             </div>
+            @endforeach
        <center>
-            <div class="col-md-12 mb-3">
+            <!-- <div class="col-md-12 mb-3">
                 <button type="submit" class="btn btn-primary">Mostrar mais</button>
-            </div>
+            </div> -->
 
         </center>
    </div>

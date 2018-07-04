@@ -71,7 +71,13 @@ Route::middleware(['auth'])->group(function () {
         //Route::get('/consumidor/alterar', 'ConsumidorController@alterarConsumidor')->name('consumidor.alterar');
         //Route::get('/consumidor/adicionar_cartao', 'ConsumidorController@adicionarCartao')->name('comsumidor.cartao.cadastrar');
 
-        Route::get('/consumidor/cadastrar_endereco', 'ConsumidorController@cadastrarEndereco')->name('consumidor.endereco.cadastrar');
+        Route::get('/consumidor/cadastrar_endereco', 'ConsumidorController@cadastrarEndereco');
+
+        //Pesquisa por categorias
+
+        Route::get('/pesquisa_produtos', 'ConsumidorController@getPesquisaTodosProdutos');
+
+        /*Route::get('/pesquisa_produtos/{categoria}', 'ConsumidorController@getPesquisaTodosProdutos')->where('categoria', '[0-7]+');*/
 
     });
 
