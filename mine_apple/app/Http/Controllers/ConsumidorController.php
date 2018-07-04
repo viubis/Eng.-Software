@@ -122,6 +122,13 @@ class ConsumidorController extends Controller
         return view('adicionar_endereco',compact('estados'));
     }
 
+    public function getPesquisaProdutos(){
+        $produtos = Produto:all();
+        $produtores = Produtor:all();
+        $embalagens = Embalagem:all();
+        return view('pesquisa_de_produtos', compact('produtos', 'produtores'));
+    }
+
     /**
      * @author Edcarlos
      * @param Request $request

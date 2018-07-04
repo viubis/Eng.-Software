@@ -287,33 +287,35 @@
                     <div class="col-sm-8">
                         <div class="subcontainerProduto2 ">
                             <form>
+                                @foreach($produtos as $produto)
                                 <fieldset>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label for="nomeprod2"> Nome Produto </label>
+                                            <label for="nomeprod2"> {{$produto->nome}} </label>
                                             <input type="text" class="form-control" id="nomeprod2"
                                                    placeholder="Nome do produto" disabled>
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <label for="descricaoProd2">Descrição </label>
+                                            <label for="descricaoProd2">{{$produto->descricao}} </label>
                                             <input type="text" id="descricaoProd2" name="descricaoProd2" class="form-control" placeholder="Descrição" disabled>
                                         </div>
                                     </div>
                                     <div class="form-row" id="espac1">
                                         <div class="form-group col-md-6">
-                                            <label for="valorProd2">Preço</label>
+                                            <label for="valorProd2">{{$produto->valor}}</label>
                                             <input type="number" min="0.1" max="999" name="valorProd2"
                                                    class="form-control" id="valorProd2"
                                                    placeholder=" R$ 10,00" disabled>
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <label for="tipoEmbalagemProd2">Pacote</label>
+                                            <label for="tipoEmbalagemProd2">{{Embalagem:all()}}</label>
                                             <input type="text" name="tipoEmbalagemProd2" class="form-control"
                                                    id="tipoEmbalagemProd2" placeholder="unidade" disabled>
                                         </div>
                                     </div>
 
                                 </fieldset>
+                                @endforeach
                             </form>
                         </div>
                     </div>
