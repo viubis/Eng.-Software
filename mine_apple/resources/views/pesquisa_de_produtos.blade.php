@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Mineapple shop project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap4/bootstrap.min.css')}}">
     <link href="{{asset('plugins/fontawesome-free-5.0.1/css/fontawesome-all.css')}}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}">
@@ -193,13 +194,13 @@
                             </div>
                             <ul class="page_menu_nav">
                                 <li class="page_menu_item">
-                                    <a href="{{url("/")}}">Inicio<i class="fa fa-angle-down"><i></i></a>
+                                    <a href="{{url('/')}}">Inicio<i class="fa fa-angle-down"><i></i></a>
                                 </li>
                                 <li class="page_menu_item">
-                                    <a href="{{url("/sobre")}}">Sobre<i class="fa fa-angle-down"><i></i></a>
+                                    <a href="{{url('/sobre')}}">Sobre<i class="fa fa-angle-down"><i></i></a>
                                 </li>
                                 <li class="page_menu_item">
-                                    <a href="{{url("/fale_conosco")}}">Fale Conosco<i class="fa fa-angle-down"><i></i></a>
+                                    <a href="{{url('/fale_conosco')}}">Fale Conosco<i class="fa fa-angle-down"><i></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -226,53 +227,6 @@
    </div>
 
 
-   <!-- <div class="containerInfosProdutos">
-       <div class="container">
-           <div class="row" id="backColor">
-               <div class="col-sm-4">
-                   <div class="subcontainerProduto1">
-                       <div class="imagem">
-                           <img src="images/banana.jpg" height="200" width="200" style="float:left">
-                       </div>
-                   </div>
-               </div>
-               <div class="col-sm-8">
-                   <div class="subcontainerProduto2 ">
-                       <form>
-                           <fieldset>
-                               <div class="form-row">
-                                   <div class="form-group col-md-6">
-                                       <label for="nomeprod"> Nome Produto </label>
-                                       <input type="text" class="form-control" id="nomeprod1"
-                                              placeholder="Nome do produto" disabled name="nomeprod1">
-                                   </div>
-                                   <div class="form-group col-md-12">
-                                       <label for="descricaoProd1">Descrição </label>
-                                       <input type="text" id="descricaoProd1" name="descricaoProd1" class="form-control" placeholder="Descrição" disabled>
-                                   </div>
-                               </div>
-                               <div class="form-row" id="espac1">
-                                   <div class="form-group col-md-6">
-                                       <label for="valorProd1">Preço</label>
-                                       <input type="number" min="0.1" max="999" name="valorProd1"
-                                              class="form-control" id="valorProd1"
-                                              placeholder=" R$ 10,00" disabled>
-                                   </div>
-                                   <div class="form-group col-md-6">
-                                       <label for="tipoEmbalagemProd1">Pacote</label>
-                                       <input type="text" name="tipoEmbalagemProd1" class="form-control"
-                                              id="tipoEmbalagemProd1" placeholder="duzia" disabled>
-                                   </div>
-                               </div>
-
-                           </fieldset>
-                       </form>
-                   </div>
-               </div>
-               <div class="pb-0" id="line"></div>
-           </div>
-       </div> -->
-
        @foreach($produtos as $produto)
        <div class="containerInfosProdutos">
             <div class="container">
@@ -289,30 +243,45 @@
                             <form>
                                 <fieldset>
                                     <div class="form-row">
+
+                                        <input type="hidden" name="id" value="{{$produto->id}}">
+
                                         <div class="form-group col-md-6">
                                             <label for="nomeprod2">Nome do Produto </label>
-                                            <input type="text" class="form-control" id="nomeprod2"
-                                                   placeholder="{{$produto->nome}}" disabled>
+                                            <input type="text" class="form-control" 
+                                                   placeholder="{{$produto->nome}}" name="nome" disabled>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label for="descricaoProd2">Descrição </label>
-                                            <input type="text" id="descricaoProd2" name="descricaoProd2" class="form-control" placeholder="{{$produto->descricao}}" disabled>
+                                            <input type="text" id="descricaoProd2" name="descricaoProd2" class="form-control" placeholder="{{$produto->descricao}}" name="descricao" disabled>
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <label for="quantidade">Quantidade</label>
+                                            <input type="number" name="quantidade"
+                                                   class="form-control" 
+                                                   placeholder="0">
                                         </div>
                                     </div>
                                     <div class="form-row" id="espac1">
                                         <div class="form-group col-md-6">
                                             <label for="valorProd2">Preço</label>
                                             <input type="number" min="0.1" max="999" name="valorProd2"
-                                                   class="form-control" id="valorProd2"
-                                                   placeholder="{{$produto->valor}}" disabled>
+                                                   class="form-control" 
+                                                   placeholder="{{$produto->valor}}" name="preco" disabled>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="tipoEmbalagemProd2">Embalagem</label>
-                                            <input type="text" name="tipoEmbalagemProd2" class="form-control"
-                                                   id="tipoEmbalagemProd2" placeholder="{{DB::table('embalagem')
+                                            <input type="text" name="tipoEmbalagemProd2" name="embalagem" class="form-control"
+                                                    placeholder="{{DB::table('embalagem')
             ->join('produto', 'embalagem.id', '=', 'produto.embalagem_id')
             ->select('tipo')
             ->get() }}" disabled>
+                                        </div>
+
+                                        <div class="form-group col-md-4">
+                                            <button class="btn btn-primary" type="submit">Adicionar ao carrinho</button>
+                                            
                                         </div>
                                     </div>
 
@@ -425,6 +394,7 @@
 <script src="{{asset('plugins/slick-1.8.0/slick.js')}}"></script>
 <script src="{{asset('plugins/easing/easing.js')}}"></script>
 <script src="{{asset('js/custom.js')}}"></script>
+<script src="{{asset('js/script_tela_pesquisa_produtos.js')}}"></script>
 
 
 

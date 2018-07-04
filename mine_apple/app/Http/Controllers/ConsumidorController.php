@@ -121,6 +121,11 @@ class ConsumidorController extends Controller
 
     }
 
+    public function adicionarCarrinho(Request $request){
+
+        Cart::add($request->id, $request->nome, $request->quantidade, $request->preco);
+    }
+
     public function getCadastrarEndereco(){
         $estados = Estado::all(['id', 'nome']);
         return view('adicionar_endereco',compact('estados'));
