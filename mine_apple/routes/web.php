@@ -73,7 +73,11 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get('/consumidor/cadastrar_endereco', 'ConsumidorController@cadastrarEndereco');
 
-        Route::get('/pesquisa_produtos', 'ConsumidorController@getPesquisaProdutos');
+        //Pesquisa por categorias
+
+        Route::get('/pesquisa_produtos', 'ConsumidorController@getPesquisaTodosProdutos');
+
+        /*Route::get('/pesquisa_produtos/{categoria}', 'ConsumidorController@getPesquisaTodosProdutos')->where('categoria', '[0-7]+');*/
 
     });
 

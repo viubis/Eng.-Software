@@ -11,6 +11,10 @@ use mine_apple\ConsumidorEndereco;
 use mine_apple\Conta;
 use mine_apple\Endereco;
 use mine_apple\Consumidor;
+use mine_apple\Produto;
+use mine_apple\Produtor;
+use mine_apple\Embalagem;
+
 
 class ConsumidorController extends Controller
 {
@@ -122,13 +126,39 @@ class ConsumidorController extends Controller
         return view('adicionar_endereco',compact('estados'));
     }
 
-    public function getPesquisaProdutos(){
-        $produtos = Produto:all();
-        $produtores = Produtor:all();
-        $embalagens = Embalagem:all();
-        return view('pesquisa_de_produtos', compact('produtos', 'produtores'));
+    /*public function getPesquisaTodosProdutos(){
+        $produtos = Produto::all();
+        $produtores = Produtor::all();
+        $embalagens = Embalagem::all();
+        return view('pesquisa_de_produtos', compact('produtos', 'produtores', 'embalagem'));
+    }*/
+    public function getPesquisaTodosProdutos(){
+        
+        $produtos = Produto::all();
+        $produtores = Produtor::all();
+        $embalagens = Embalagem::all();
+
+        return view('pesquisa_de_produtos', compact('produtos', 'produtores', 'embalagem'));
+
+        
     }
 
+    public function getPesquisaCategoriasProdutos($categoria){
+        $produtos = null;
+        $produtores = null;
+        $embalagens = null;
+        if ($categoria = 0)
+            $produtos = Produto::all();
+        else
+            $produtos = Produto::where('id', $categoria)->get();
+
+        $produtores = Produtor::all();
+        $embalagens = Embalagem::all();
+
+        return view('pesquisa_de_produtos', compact('produtos', 'produtores', 'embalagem'));
+
+        
+    }                         
     /**
      * @author Edcarlos
      * @param Request $request
