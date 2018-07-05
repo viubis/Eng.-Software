@@ -235,13 +235,13 @@
                                         <div class="form-group col-md-6">
                                             <label for="nomeProd1"> Nome Produto </label>
                                             <input type="text" style="border: none;" class="form-control" id="nomeProd1"
-                                               value="{{item->name}}" name="nome" readonly>
+                                               value="{{$item->name}}" name="nome" readonly>
                                         </div>
 
                                     <div class="form-group col-md-">
                                         <label for="quantidadeProd1">Quantidade </label>
                                         <input type="number" step="0" min="1" max="999" name="quantidade"
-                                               value="{{item->qty}}" 
+                                               value="{{$item->qty}}"
                                                class="form-first-name form-control" id="quantidadeProd1" readonly>
                                     </div>
                                 </div>
@@ -250,12 +250,12 @@
                                         <label for="valorProd1">Preço</label>
                                         <input type="number" style="border: none;" min="0.1" max="999" name="preco"
                                                class="form-control" id="valorProd1"
-                                               value="{{item->price}}" readonly>
+                                               value="{{$item->price}}" readonly>
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label for="tipoEmbalagemProd1">Pacote</label>
                                         <input type="text" style="border: none;" name="pacote" class="form-control"
-                                            readonly>
+                                            readonly id="tipoEmbalagemProd1">
                                     </div>
                                 </div>
                             </fieldset>
@@ -267,7 +267,7 @@
     </div>
     @endforeach
 
-    
+
 </div>
 
 <div class="col-md-6">

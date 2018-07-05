@@ -187,12 +187,12 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="cnpj">CNPJ</label>
-                                <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="Cnpj">
+                                <input type="text" class="form-control" id="cnpj" data-mask="00.000.000/0000-00" name="cnpj" placeholder="Cnpj">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="telefoneComercial">Telefone comercial</label>
                                 <input type="text" class="form-control" id="telefoneComercial"
-                                       placeholder="Telefone Comercial" name="telefoneComercial">
+                                       placeholder="Telefone Comercial" name="telefoneComercial" data-mask="(00) 00000-0000">
                             </div>
                         </div>
 
@@ -289,17 +289,17 @@
                     <div
                         class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                         <div class="copyright_content">
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                            Copyright &copy;<script>document.write(new Date().getFullYear().toString());</script>
                             Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
                                                                                       aria-hidden="true"></i> pela <a
                                 href="#" target="_blank">Weiche Technologie</a>
                         </div>
                         <div class="logos ml-sm-auto">
                             <ul class="logos_list">
-                                <li><a href="#"><img src="images/logos_1.png" alt=""></a></li>
-                                <li><a href="#"><img src="images/logos_2.png" alt=""></a></li>
-                                <li><a href="#"><img src="images/logos_3.png" alt=""></a></li>
-                                <li><a href="#"><img src="images/logos_4.png" alt=""></a></li>
+                                <li><a href="#"><img src="{{asset('images/logos_1.png')}}" alt=""></a></li>
+                                <li><a href="#"><img src="{{asset('images/logos_2.png')}}" alt=""></a></li>
+                                <li><a href="#"><img src="{{asset('images/logos_3.png')}}" alt=""></a></li>
+                                <li><a href="#"><img src="{{asset('images/logos_4.png')}}" alt=""></a></li>
                             </ul>
                         </div>
                     </div>
@@ -321,6 +321,7 @@
 <script src="{{asset('plugins/slick-1.8.0/slick.js')}}"></script>
 <script src="{{asset('plugins/easing/easing.js')}}"></script>
 <script src="{{asset('js/custom.js')}}"></script>
+<script src="{{asset('plugins/jquery-plugin-mask/jquery.mask.js')}}"></script>
 </body>
 
 </html>

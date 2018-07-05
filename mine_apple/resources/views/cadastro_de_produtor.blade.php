@@ -70,7 +70,7 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="cnpj">CNPJ</label>
                                     <input type="text" name="cnpj" placeholder="CNPJ..."
-                                           class="form-last-name form-control" required id="cnpj">
+                                           class="form-last-name form-control" required id="cnpj" data-mask="00.000.000/0000-00">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="nomeFantasia">Nome fantasia</label>
@@ -80,7 +80,7 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="telefoneComercial">Telefone Comercial</label>
                                     <input type="tel" name="telefone" placeholder="Telefone Comercial..."
-                                           class="form-first-name form-control" required id="telefoneComercial">
+                                           class="form-first-name form-control" required id="telefoneComercial" data-mask="(00) 00000-0000">
                                 </div>
 
                                 <div class="form-group">
@@ -107,7 +107,7 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="CEP">CEP</label>
                                     <input type="text" name="cep" placeholder="CEP"
-                                           class="form-first-name form-control" required id="CEP">
+                                           class="form-first-name form-control" data-mask="00.000-000" required id="CEP">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="Rua">Rua</label>
@@ -178,7 +178,7 @@
                                         <div class="col-md-6">
                                             <label class="sr-only" for="dVerif">Dígito verificador</label>
                                             <input type="text" name="digitoConta" placeholder="Dígito verificador"
-                                                   class="form-facebook form-control" required id="dVerif">
+                                                   class="form-facebook form-control" required id="dVerif" maxlength="1">
                                         </div>
                                     </div>
                                 </div>
@@ -192,7 +192,7 @@
                                         <div class="col-md-6">
                                             <label class="sr-only" for="dVerif">Dígito verificador</label>
                                             <input type="text" name="digitoAgencia" placeholder="Dígito verificador"
-                                                   class="form-facebook form-control" required id="dVerif">
+                                                   class="form-facebook form-control" required id="dVerif" maxlength="1">
                                         </div>
                                     </div>
                                 </div>
@@ -223,7 +223,7 @@
                 <div
                     class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                     <div class="copyright_content">
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                        Copyright &copy;<script>document.write(new Date().getFullYear().toString());</script>
                         Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
                                                                                   aria-hidden="true"></i> pela <a
                             href="#" target="_blank">Weiche Technologie</a>
@@ -242,7 +242,7 @@
 <script src="{{asset('js/retina-1.1.0.min.js')}}"></script>
 <script src="{{asset('js/script_tela_cadastro_produtor.js')}}"></script>
 <script src="{{asset('js/validator.min.js')}}"></script>
-
+<script src="{{asset('plugins/jquery-plugin-mask/jquery.mask.js')}}"></script>
 </body>
 
 </html>

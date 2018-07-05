@@ -74,7 +74,7 @@
                             </div>
                         </div>
                         <div class="imagem">
-                            <div class="imagemProduto"><img src="images/imagemProduto.png" alt="Responsive image"></div>
+                            <div class="imagemProduto"><img src="{{asset('images/imagemProduto.png')}}" alt="Responsive image"></div>
                         </div>
                     </div>
                 </div>
