@@ -333,7 +333,7 @@ button.btn:active:focus, button.btn.active:focus {
 
 #linha {
     width: 100%;
-    border-top: 1px solid #a2a2a2;
+    border-top: 1px solid #b8b8b8;
     padding-top: 50px;
     border-bottom: 1px;
     padding-bottom: 50px;
@@ -341,7 +341,7 @@ button.btn:active:focus, button.btn.active:focus {
 
 .line {
     width: 100%;
-    border-top: 1px solid #a2a2a2;
+    border-top: 1px solid #b8b8b8;
     padding-top: 10px;
 
 }
@@ -3913,7 +3913,7 @@ select option {
 	.containerInfosProdutos{
 		width: 100%;
 		padding-left: 50px;
-		margin-left: 0px;
+		margin-left: 0;
 		padding-top: 50px;
 	}
 

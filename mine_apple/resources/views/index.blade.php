@@ -259,7 +259,7 @@
 
                                 <!-- Deals Item -->
                                 <div class="owl-item deals_item">
-                                    <div class="deals_image"><img src="{{asset('images/abacaxi.png')}}" alt=""></div>
+                                    <div class="deals_image"><img src="{{asset('images/abacaxi.png')}}" alt="" class="img-fluid"></div>
                                     <div class="deals_content">
                                         <div class="deals_info_line d-flex flex-row justify-content-start">
                                             <div class="deals_item_category"><a href="#">Frutas</a></div>
@@ -303,7 +303,7 @@
 
                                 <!-- Deals Item -->
                                 <div class="owl-item deals_item">
-                                    <div class="deals_image"><img src="{{asset('images/maça.png')}}" alt=""></div>
+                                    <div class="deals_image"><img src="{{asset('images/maça.png')}}" class="img-fluid" alt=""></div>
                                     <div class="deals_content">
                                         <div class="deals_info_line d-flex flex-row justify-content-start">
                                             <div class="deals_item_category"><a href="#">Frutas</a></div>
@@ -347,7 +347,7 @@
 
                                 <!-- Deals Item -->
                                 <div class="owl-item deals_item">
-                                    <div class="deals_image"><img src="{{asset('images/laranja-laranja.jpg')}}" alt="">
+                                    <div class="deals_image"><img src="{{asset('images/laranja-laranja.jpg')}}" class="img-fluid" alt="">
                                     </div>
                                     <div class="deals_content">
                                         <div class="deals_info_line d-flex flex-row justify-content-start">
@@ -423,7 +423,7 @@
                                             class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/banana.jpg')}}" alt=""></div>
+                                                <img src="{{asset('images/banana.jpg')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 7,00<span>duzia</span></div>
                                                 <div class="product_name">
@@ -448,7 +448,7 @@
                                             class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/cenoura1.png')}}" alt=""></div>
+                                                <img src="{{asset('images/cenoura1.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 3,00<span>Kg</span></div>
                                                 <div class="product_name">
@@ -474,7 +474,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/pera.png')}}" alt=""></div>
+                                                <img src="{{asset('images/pera.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 1,00<span>unid.</span></div>
                                                 <div class="product_name">
@@ -499,7 +499,7 @@
                                             class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/abobora.jpg')}}" alt=""></div>
+                                                <img src="{{asset('images/abobora.jpg')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 5,00<span>unid.</span></div>
                                                 <div class="product_name">
@@ -524,7 +524,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/batata-inglesa.jpg')}}" alt=""></div>
+                                                <img src="{{asset('images/batata-inglesa.jpg')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 3,00<span>Kg</span></div>
                                                 <div class="product_name">
@@ -549,7 +549,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/chuchu.png" alt=""></div>
+                                                <img src="{{asset('images/chuchu.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 2,00<span>Kg</span></div>
                                                 <div class="product_name">
@@ -574,7 +574,7 @@
                                             class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="images/pimentao.jpg" alt=""></div>
+                                                <img src="{{asset('images/pimentao.jpg')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 1,00<span>unid.</span></div>
                                                 <div class="product_name">
@@ -599,7 +599,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/tomate.jpg')}}" alt=""></div>
+                                                <img src="{{asset('images/tomate.jpg')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 4,00<span>Kg</span></div>
                                                 <div class="product_name">
@@ -624,7 +624,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_1.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_1.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
@@ -649,7 +649,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_2.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_2.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -674,7 +674,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_3.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_3.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -699,7 +699,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_4.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_4.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
@@ -724,7 +724,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_5.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_5.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
@@ -749,7 +749,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_6.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_6.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -774,7 +774,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_7.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_7.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -799,416 +799,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_8.png')}}" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$225</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="featured_slider_dots_cover"></div>
-                            </div>
-
-                            <!-- Product Panel -->
-
-                            <div class="product_panel panel">
-                                <div class="featured_slider slider">
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_1.png')}}" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price discount">$225<span>$300</span></div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount">-25%</li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_2.png')}}" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$379</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Apple iPod shuffle</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button active">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_3.png')}}" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$379</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Sony MDRZX310W</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_4.png')}}" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price discount">$225<span>$300</span></div>
-                                                <div class="product_name">
-                                                    <div><a href="#">LUNA Smartphone</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount">-25%</li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_5.png')}}" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$225</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Canon STM Kit...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_6.png')}}" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$379</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Samsung J330F...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_7.png')}}" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$379</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Lenovo IdeaPad</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount">-25%</li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_8.png')}}" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$225</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Digitus EDNET...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_1.png')}}" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$225</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_2.png')}}" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$379</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_3.png')}}" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$379</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_4.png')}}" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$225</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_5.png')}}" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$225</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_6.png')}}" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$379</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_7.png')}}" alt=""></div>
-                                            <div class="product_content">
-                                                <div class="product_price">$379</div>
-                                                <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
-                                                </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
-                                                </div>
-                                            </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                            <ul class="product_marks">
-                                                <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Slider Item -->
-                                    <div class="featured_slider_item">
-                                        <div class="border_active"></div>
-                                        <div
-                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_8.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_8.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
@@ -1242,7 +833,7 @@
                                             class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_1.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_1.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">$225<span>$300</span></div>
                                                 <div class="product_name">
@@ -1267,7 +858,7 @@
                                             class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_2.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_2.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -1292,7 +883,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_3.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_3.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -1317,7 +908,7 @@
                                             class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_4.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_4.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">$225<span>$300</span></div>
                                                 <div class="product_name">
@@ -1342,7 +933,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_5.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_5.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
@@ -1367,7 +958,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_6.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_6.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -1392,7 +983,7 @@
                                             class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_7.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_7.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -1417,7 +1008,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_8.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_8.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
@@ -1442,7 +1033,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_1.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_1.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
@@ -1467,7 +1058,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_2.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_2.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -1492,7 +1083,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_3.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_3.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -1517,7 +1108,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_4.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_4.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
@@ -1542,7 +1133,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_5.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_5.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
@@ -1567,7 +1158,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_6.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_6.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -1592,7 +1183,7 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_7.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_7.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$379</div>
                                                 <div class="product_name">
@@ -1617,7 +1208,416 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_8.png')}}" alt=""></div>
+                                                <img src="{{asset('images/featured_8.png')}}" class="img-fluid" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$225</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="featured_slider_dots_cover"></div>
+                            </div>
+
+                            <!-- Product Panel -->
+
+                            <div class="product_panel panel">
+                                <div class="featured_slider slider">
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_1.png')}}" class="img-fluid" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price discount">$225<span>$300</span></div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount">-25%</li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_2.png')}}" class="img-fluid" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$379</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Apple iPod shuffle</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button active">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_3.png')}}" class="img-fluid" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$379</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Sony MDRZX310W</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_4.png')}}" class="img-fluid" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price discount">$225<span>$300</span></div>
+                                                <div class="product_name">
+                                                    <div><a href="#">LUNA Smartphone</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount">-25%</li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_5.png')}}" class="img-fluid" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$225</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Canon STM Kit...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_6.png')}}" class="img-fluid" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$379</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Samsung J330F...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_7.png')}}" class="img-fluid" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$379</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Lenovo IdeaPad</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount">-25%</li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_8.png')}}" class="img-fluid" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$225</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Digitus EDNET...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_1.png')}}" class="img-fluid" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$225</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_2.png')}}" class="img-fluid" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$379</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_3.png')}}" class="img-fluid" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$379</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_4.png')}}" class="img-fluid" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$225</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_5.png')}}" class="img-fluid" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$225</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_6.png')}}" class="img-fluid" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$379</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_7.png')}}" class="img-fluid" alt=""></div>
+                                            <div class="product_content">
+                                                <div class="product_price">$379</div>
+                                                <div class="product_name">
+                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                </div>
+                                                <div class="product_extras">
+                                                    <button class="product_cart_button">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <ul class="product_marks">
+                                                <li class="product_mark product_discount"></li>
+                                                <li class="product_mark product_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider Item -->
+                                    <div class="featured_slider_item">
+                                        <div class="border_active"></div>
+                                        <div
+                                            class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div
+                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                                <img src="{{asset('images/featured_8.png')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price">$225</div>
                                                 <div class="product_name">
@@ -1676,7 +1676,7 @@
                             <div class="owl-item">
                                 <div
                                     class="popular_category d-flex flex-column align-items-center justify-content-center">
-                                    <div class="popular_category_image"><img src="{{asset('images/popular_1.png')}}"
+                                    <div class="popular_category_image"><img src="{{asset('images/popular_1.png')}}" class="img-fluid"
                                                                              alt=""></div>
                                     <div class="popular_category_text">Frutas</div>
                                 </div>
@@ -1685,8 +1685,8 @@
                             <!-- Popular Categories Item -->
                             <div class="owl-item">
                                 <div class="popular_category d-flex flex-column align-items-center justify-content-center">
-                                    <div class="popular_category_image"><img src="{{asset('images/popular_2.png')}}"
-                                                                             alt=""></div>
+                                    <div class="popular_category_image"><img src="{{asset('images/popular_2.png')}} "
+                                                                             class="img-fluid" alt=""></div>
                                     <div class="popular_category_text">Legumes</div>
                                 </div>
                             </div>
@@ -1695,7 +1695,7 @@
                             <div class="owl-item">
                                 <div class="popular_category d-flex flex-column align-items-center justify-content-center">
                                     <div class="popular_category_image"><img src="{{asset('images/popular_3.png')}}"
-                                                                             alt=""></div>
+                                                                             class="img-fluid" alt=""></div>
                                     <div class="popular_category_text">Tubérculos</div>
                                 </div>
                             </div>
@@ -1704,7 +1704,7 @@
                             <div class="owl-item">
                                 <div class="popular_category d-flex flex-column align-items-center justify-content-center">
                                     <div class="popular_category_image"><img src="{{asset('images/popular_4.png')}}"
-                                                                             alt=""></div>
+                                                                             class="img-fluid" alt=""></div>
                                     <div class="popular_category_text">Leguminosas</div>
                                 </div>
                             </div>
@@ -1714,7 +1714,7 @@
                                 <div
                                     class="popular_category d-flex flex-column align-items-center justify-content-center">
                                     <div class="popular_category_image"><img src="{{asset('images/popular_5.png')}}"
-                                                                             alt=""></div>
+                                                                             class="img-fluid" alt=""></div>
                                     <div class="popular_category_text">Cereais</div>
                                 </div>
                             </div>

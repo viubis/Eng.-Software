@@ -54,8 +54,9 @@
                         <!-- Logo -->
                         <div class="col-lg-4 col-sm-3 col-3 order-1 pt-3 pb-0">
                             <div class="logo_container">
-                                <div class="logo_icon ml-5 mt-1"><img src="{{asset('images/logoSite2.png')}}" class="img-fluid"
-                                                            alt=""></div>
+                                <div class="logo_icon ml-5 mt-1"><img src="{{asset('images/logoSite2.png')}}"
+                                                                      class="img-fluid"
+                                                                      alt=""></div>
                             </div>
                         </div>
 
@@ -207,7 +208,7 @@
     <div class="top-content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 ">
+                <div class="col-lg-12 mt-3 ">
                     <h1 class="h1 page-title" data-reactid="30">Carrinho de compras</h1>
                     <div class="pb-0 line"></div>
                 </div>
@@ -215,51 +216,48 @@
         </div>
     </div>
 
-
-    <div class="containerInfosProdutos">
-        <div class="container">
-            <div class="row backColor">
-                <div class="col-sm-4">
-                    <div class="subcontainerProduto1">
+<div class="row pl-5">
+    <div class="col-md-6">
+        <div class="containerInfosProdutos">
+            <div class="container">
+                <div class="row backColor">
+                    <div class="col-sm-5">
                         <div class="imagem">
-                            <img src="{{asset('images/banana.jpg')}}" style="float:left; height: 200px; width: 200px">
+                            <img src="{{asset('images/banana.jpg')}}" style="float:left; height: 150px; width: 150px">
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-8">
-                    <div class="subcontainerProduto2 ">
-                        <form>
-                            <fieldset>
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="nomeProd1"> Nome Produto </label>
-                                        <input type="text" class="form-control" id="nomeProd1"
+                    <div class="col-sm-7">
+                            <form>
+                                <fieldset>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="nomeProd1"> Nome Produto </label>
+                                            <input type="text" style="border: none;" class="form-control" id="nomeProd1"
                                                placeholder="Nome do produto" name="nomeProd1" disabled>
-                                    </div>
+                                        </div>
 
                                     <div class="form-group col-md-">
                                         <label for="quantidadeProd1">Quantidade </label>
                                         <input type="number" step="0" min="1" max="999" name="qntProd1"
-                                               placeholder="Valor..."
+                                               placeholder="Qnt..."
                                                class="form-first-name form-control" id="quantidadeProd1">
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-3">
                                         <label for="valorProd1">Preço</label>
-                                        <input type="number" min="0.1" max="999" name="valorProd1"
+                                        <input type="number" style="border: none;" min="0.1" max="999" name="valorProd1"
                                                class="form-control" id="valorProd1"
                                                placeholder="R$ 10,00" disabled>
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label for="tipoEmbalagemProd1">Pacote</label>
-                                        <input type="text" name="tipoEmbalagemProd1" class="form-control"
+                                        <input type="text" style="border: none;" name="tipoEmbalagemProd1" class="form-control"
                                                id="tipoEmbalagemProd1" placeholder="duzia" disabled>
                                     </div>
                                 </div>
                             </fieldset>
                         </form>
-                    </div>
                 </div>
             </div>
             <div class="pb-0 line"></div>
@@ -269,41 +267,40 @@
     <div class="containerInfosProdutos">
         <div class="container">
             <div class="row backColor">
-                <div class="col-sm-4">
+                <div class="col-sm-5">
                     <div class="subcontainerProduto1">
                         <div class="imagem">
-                            <img src="{{asset('images/abacaxi.png')}}" style="float:left; height: 200px; width: 200px">
+                            <img src="{{asset('images/abacaxi.png')}}" style="float:left; height: 150px; width: 150px">
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-8">
-                    <div class="subcontainerProduto2 ">
+                <div class="col-sm-7">
                         <form>
                             <fieldset>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="nomeprod2"> Nome Produto </label>
-                                        <input type="text" class="form-control" id="nomeprod2"
+                                        <input type="text" style="border: none;" class="form-control" id="nomeprod2"
                                                placeholder="Nome do produto" name="nomeprod2" disabled>
                                     </div>
 
                                     <div class="form-group col-md-">
                                         <label for="quantidadeProd2">Quantidade </label>
                                         <input type="number" step="0" min="1" max="999" name="qntProd2"
-                                               placeholder="Valor..."
+                                               placeholder="Qnt..."
                                                class="form-first-name form-control" id="quantidadeProd2">
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-3">
                                         <label for="valorProd2">Preço</label>
-                                        <input type="number" min="0.1" max="999" name="valorProd2"
+                                        <input type="number" style="border: none;" min="0.1" max="999" name="valorProd2"
                                                class="form-control" id="valorProd2"
                                                placeholder=" R$ 10,00" disabled>
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label for="tipoEmbalagemProd2">Pacote</label>
-                                        <input type="text" name="tipoEmbalagemProd2" class="form-control"
+                                        <input type="text" style="border: none;" name="tipoEmbalagemProd2" class="form-control"
                                                id="tipoEmbalagemProd2" placeholder="duzia" disabled>
                                     </div>
                                 </div>
@@ -311,72 +308,65 @@
                         </form>
                     </div>
                 </div>
-            </div>
             <div class="pb-0 line"></div>
         </div>
     </div>
+</div>
 
-
-    <div class="containerInfosProdutos">
-        <div class="form-row espac2">
-            <div class="card w-50" style="margin-left:+100px">
-                <div class="card-body">
-                    <h4 class="card-title">Calcule o frete:</h4>
-                    <div class="pb-0 line"></div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="CEP">CEP </label>
-                            <input type="text"
-                                   placeholder="CEP"
-                                   class="form-first-name form-control" id="CEP" name="cep">
-
-                        </div>
-                        <button type="submit" style="height: 30px;">Calcular</button>
+<div class="col-md-6">
+    <div class="form-row espac2 mt-xl-5" >
+        <div class="card w-50" style="margin-left:+100px">
+            <div class="card-body" style="background-color: #f0f0f0">
+                <h4 class="card-title">Resumo da compra:</h4>
+                <div class="pb-0 line"></div>
+                <div class="form-row" id="espac1">
+                    <div class="form-group col-md-6">
+                        <label for="subTotal">Sub-total: </label>
+                        <input type="text"
+                               placeholder="Valor" style="border: none;"
+                               class="form-first-name form-control" id="subTotal" name="subTotal" disabled>
+                        <label for="frete">Frete: </label>
+                        <input type="text" placeholder="Valor" style="border: none;" class="form-first-name form-control" id="frete"
+                               name="frete" disabled>
                     </div>
-                    <label>Valor do frete: </label>
-                    <label>R$ 00,00</label>
                 </div>
-
+                <label style="font-size: 20px">Total: </label>
+                <label class="ml-1">R$ 00,00</label>
             </div>
-
-
         </div>
-
-        <div class="form-row espac2">
-
-
-            <div class="card w-50" style="margin-left:+100px">
-                <div class="card-body">
-                    <h4 class="card-title">Resumo da compra:</h4>
-                    <div class="pb-0 line"></div>
-                    <div class="form-row" id="espac1">
-                        <div class="form-group col-md-6">
-                            <label for="subTotal">Sub-total: </label>
-                            <input type="text"
-                                   placeholder="valor"
-                                   class="form-first-name form-control" id="subTotal" name="subTotal" disabled>
-                            <label for="frete">Frete: </label>
-                            <input type="text" placeholder="valor" class="form-first-name form-control" id="frete"
-                                   name="frete" disabled>
-
-                        </div>
-                    </div>
-                    <label style="font-size: 20px">Total: </label>
-                    <label>&nbsp; R$ 00,00</label>
-                </div>
-
-            </div>
-
-
-        </div>
-
-        <br/><br/>
-
-        <div class="col-md-12 mb-3" align="center">
-            <button type="submit" class="btn btn-primary">Finalizar</button>
-        </div>
-
     </div>
+</div>
+</div>
+
+<div class="containerInfosProdutos mt-4">
+    <div class="form-row espac2">
+        <div class="card w-25" style="margin-left:+100px">
+            <div class="card-body">
+                <h4 class="card-title">Calcule o frete:</h4>
+                <div class="pb-0 line"></div>
+                <div class="form-row">
+                    <div class="form-group col-md-9">
+                        <label for="CEP">CEP </label>
+                        <input type="text"
+                               class="form-first-name form-control" id="CEP" name="cep">
+
+                    </div>
+                    <div class="form-group col-md-1 mt-2" align="center">
+                        <button type="submit" class="btn-sm btn-primary mt-4"
+                                style="background-color: #08c8b0; border: none;">Calcular
+                        </button>
+                    </div>
+                </div>
+                <label>Valor do frete: </label>
+                <label class="ml-1">R$ 00,00</label>
+            </div>
+        </div>
+    </div>
+    <br/><br/>
+    <div class="col-md-12 mb-3" align="center">
+        <button type="submit" class="btn btn-primary">Finalizar</button>
+    </div>
+</div>
 
 
     <!-- Footer -->
