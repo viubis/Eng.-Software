@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -59,12 +63,12 @@
                             <div class="form-bottom">
                                 <div class="form-group">
                                     <label class="sr-only" for="nome">Nome</label>
-                                    <input type="text" name="nome" placeholder="Nome..."
+                                    <input type="text" name="nome" placeholder="<?php echo $_SESSION['userData']['first_name'] ?>"
                                            class="form-first-name form-control" id="nome" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="sobrenome">Sobrenome</label>
-                                    <input type="text" name="sobrenome" placeholder="Sobrenome..."
+                                    <input type="text" name="sobrenome" placeholder="<?php echo $_SESSION['userData']['last_name']?>"
                                            class="form-first-name form-control" id="sobrenome" required>
                                 </div>
                                 <div class="form-group">
@@ -191,7 +195,7 @@
                                     <input type="text" name="validade" placeholder="Validade"
                                            class="form-facebook form-control" id="validade">
                                 </div>
-                                
+
 
                                 <div class="form-group">
                                     <input id="contrato" name="contrato" type="checkbox" value="nao">

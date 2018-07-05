@@ -1,3 +1,11 @@
+<?php
+    require_once "../../../app/Http/Controllers/config.php";
+
+    $redirectURL = "http://localhost/Facebooklogin/fb-callback.php";
+    $permissions = ['email', 'gender'];
+    $loginURL = $helper->getLoginUrl($redirectURL, $permissions);
+    echo $loginURL;
+?>
 <html lang="pt-br">
 
 
@@ -128,8 +136,9 @@
                         <div class="social-login">
                             <h3>...ou cadastre-se com:</h3>
                             <div class="social-login-buttons">
-                                <a class="btn btn-link-2" href="#">
-                                    <i class="fa fa-facebook"></i> Facebook
+                                <a class="btn btn-link-2" href="#" >
+                                    <i class="fa fa-facebook" ></i> Facebook
+                                    {{--onclick="window.location = '<?php echo $loginURL?>--}}
                                 </a>
                                 <a class="btn btn-link-2" href="#">
                                     <i class="fa fa-google-plus"></i> Google +
