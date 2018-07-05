@@ -121,33 +121,63 @@ class ConsumidorController extends Controller
 
     }
 
+    /**
+     * @author Lucas Alves
+     * @param Request $request
+     * @return string
+     */
     public function adicionarCarrinho(Request $request){
 
         Cart::add($request->id, $request->nome, $request->quantidade, $request->preco);
     }
 
+
+    /**
+     * @author Lucas Alves
+     * @return string
+     */
     public function getCadastrarEndereco(){
         $estados = Estado::all(['id', 'nome']);
         return view('adicionar_endereco',compact('estados'));
     }
 
-    /*public function getPesquisaTodosProdutos(){
-        $produtos = Produto::all();
-        $produtores = Produtor::all();
-        $embalagens = Embalagem::all();
-        return view('pesquisa_de_produtos', compact('produtos', 'produtores', 'embalagem'));
-    }*/
+    /**
+     * @author Lucas Alves
+     * @return string
+     */
     public function getPesquisaTodosProdutos(){
         
         $produtos = Produto::all();
         $produtores = Produtor::all();
         $embalagens = Embalagem::all();
-
         return view('pesquisa_de_produtos', compact('produtos', 'produtores', 'embalagem'));
-
-        
     }
 
+    /**
+     * @author Lucas Alves
+     * @return string
+     */
+    public function getCarrinhoCompras(){
+
+        $itens = Cart::content();
+        $subtotal = Cart::total();
+        return view('carrinho_de_compras', compact(('itens', 'subtotal')))
+    }
+
+    /**
+     * @author Lucas Alves
+     * @param Request $request
+     * @return string
+     */
+    public function finalizaCompra(Request $request){
+
+    }
+
+    /**
+     * @author Lucas Alves
+     * @param $categoria - categoria que será pesquisada
+     * @return string
+     */
     public function getPesquisaCategoriasProdutos($categoria){
         $produtos = null;
         $produtores = null;
@@ -161,8 +191,6 @@ class ConsumidorController extends Controller
         $embalagens = Embalagem::all();
 
         return view('pesquisa_de_produtos', compact('produtos', 'produtores', 'embalagem'));
-
-        
     }                         
     /**
      * @author Edcarlos

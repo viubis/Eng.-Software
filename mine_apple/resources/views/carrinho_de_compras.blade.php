@@ -218,6 +218,8 @@
 
 <div class="row pl-5">
     <div class="col-md-6">
+
+        @foreach($itens as $item)
         <div class="containerInfosProdutos">
             <div class="container">
                 <div class="row backColor">
@@ -233,27 +235,27 @@
                                         <div class="form-group col-md-6">
                                             <label for="nomeProd1"> Nome Produto </label>
                                             <input type="text" style="border: none;" class="form-control" id="nomeProd1"
-                                               placeholder="Nome do produto" name="nomeProd1" disabled>
+                                               value="{{item->name}}" name="nome" readonly>
                                         </div>
 
                                     <div class="form-group col-md-">
                                         <label for="quantidadeProd1">Quantidade </label>
-                                        <input type="number" step="0" min="1" max="999" name="qntProd1"
-                                               placeholder="Qnt..."
-                                               class="form-first-name form-control" id="quantidadeProd1">
+                                        <input type="number" step="0" min="1" max="999" name="quantidade"
+                                               value="{{item->qty}}" 
+                                               class="form-first-name form-control" id="quantidadeProd1" readonly>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-3">
                                         <label for="valorProd1">Preço</label>
-                                        <input type="number" style="border: none;" min="0.1" max="999" name="valorProd1"
+                                        <input type="number" style="border: none;" min="0.1" max="999" name="preco"
                                                class="form-control" id="valorProd1"
-                                               placeholder="R$ 10,00" disabled>
+                                               value="{{item->price}}" readonly>
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label for="tipoEmbalagemProd1">Pacote</label>
-                                        <input type="text" style="border: none;" name="tipoEmbalagemProd1" class="form-control"
-                                               id="tipoEmbalagemProd1" placeholder="duzia" disabled>
+                                        <input type="text" style="border: none;" name="pacote" class="form-control"
+                                            readonly>
                                     </div>
                                 </div>
                             </fieldset>
@@ -263,54 +265,9 @@
             <div class="pb-0 line"></div>
         </div>
     </div>
+    @endforeach
 
-    <div class="containerInfosProdutos">
-        <div class="container">
-            <div class="row backColor">
-                <div class="col-sm-5">
-                    <div class="subcontainerProduto1">
-                        <div class="imagem">
-                            <img src="{{asset('images/abacaxi.png')}}" style="float:left; height: 150px; width: 150px">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-7">
-                        <form>
-                            <fieldset>
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="nomeprod2"> Nome Produto </label>
-                                        <input type="text" style="border: none;" class="form-control" id="nomeprod2"
-                                               placeholder="Nome do produto" name="nomeprod2" disabled>
-                                    </div>
-
-                                    <div class="form-group col-md-">
-                                        <label for="quantidadeProd2">Quantidade </label>
-                                        <input type="number" step="0" min="1" max="999" name="qntProd2"
-                                               placeholder="Qnt..."
-                                               class="form-first-name form-control" id="quantidadeProd2">
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <label for="valorProd2">Preço</label>
-                                        <input type="number" style="border: none;" min="0.1" max="999" name="valorProd2"
-                                               class="form-control" id="valorProd2"
-                                               placeholder=" R$ 10,00" disabled>
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <label for="tipoEmbalagemProd2">Pacote</label>
-                                        <input type="text" style="border: none;" name="tipoEmbalagemProd2" class="form-control"
-                                               id="tipoEmbalagemProd2" placeholder="duzia" disabled>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
-            <div class="pb-0 line"></div>
-        </div>
-    </div>
+    
 </div>
 
 <div class="col-md-6">
@@ -323,11 +280,11 @@
                     <div class="form-group col-md-6">
                         <label for="subTotal">Sub-total: </label>
                         <input type="text"
-                               placeholder="Valor" style="border: none;"
-                               class="form-first-name form-control" id="subTotal" name="subTotal" disabled>
+                               value="{{$subtotal}}" style="border: none;"
+                               class="form-first-name form-control" id="subTotal" name="subTotal" readonly>
                         <label for="frete">Frete: </label>
                         <input type="text" placeholder="Valor" style="border: none;" class="form-first-name form-control" id="frete"
-                               name="frete" disabled>
+                               name="frete" readonly="">
                     </div>
                 </div>
                 <label style="font-size: 20px">Total: </label>
