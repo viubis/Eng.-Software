@@ -161,7 +161,7 @@
                             </div>
                             <div class="form-bottom">
                                 <div class="form-group">
-                                    <label class="sr-only" for="idBanco">ID do banco</label>
+                                    <label class="sr-only" for="idBancos">ID do banco</label>
                                     <select class="form-control" name="banco" id="idBancos">
                                         @foreach($bancos as $banco)
                                             <option value="{{$banco->id}}">{{$banco->nome}}</option>
