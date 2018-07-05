@@ -194,13 +194,13 @@
                             </div>
                             <ul class="page_menu_nav">
                                 <li class="page_menu_item">
-                                    <a href="{{url('/')}}">Inicio<i class="fa fa-angle-down"><i></i></a>
+                                    <a href="{{url('/')}}">Inicio<i class="fa fa-angle-down"></i></a>
                                 </li>
                                 <li class="page_menu_item">
-                                    <a href="{{url('/sobre')}}">Sobre<i class="fa fa-angle-down"><i></i></a>
+                                    <a href="{{url('/sobre')}}">Sobre<i class="fa fa-angle-down"></i></a>
                                 </li>
                                 <li class="page_menu_item">
-                                    <a href="{{url('/fale_conosco')}}">Fale Conosco<i class="fa fa-angle-down"><i></i></a>
+                                    <a href="{{url('/fale_conosco')}}">Fale Conosco<i class="fa fa-angle-down"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -210,8 +210,6 @@
         </div>
 
     </header>
-
-    <body>
 
 
    <div class="top-content">
@@ -248,9 +246,9 @@
                                         <input type="hidden" name="id" value="{{$produto->id}}">
 
                                         <div class="form-group col-md-6">
-                                            <label for="nomeprod2">Nome do Produto </label>
+                                            <label for="nomeProd2">Nome do Produto </label>
                                             <input type="text" class="form-control" 
-                                                   value="{{$produto->nome}}" name="nome" readonly>
+                                                   value="{{$produto->nome}}" name="nome" id="nomeProd2" readonly>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label for="descricaoProd2">Descrição </label>
@@ -268,7 +266,7 @@
                                         <div class="form-group col-md-6">
                                             <label for="valorProd2">Preço</label>
                                             <input type="number" min="0.1" max="999"
-                                                   class="form-control" 
+                                                   class="form-control" id="number"
                                                    value="{{$produto->valor}}" name="preco" readonly>
                                         </div>
                                         <div class="form-group col-md-6">
