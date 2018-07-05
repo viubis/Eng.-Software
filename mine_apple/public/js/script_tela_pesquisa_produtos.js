@@ -7,13 +7,12 @@ jQuery(document).ready(function () {
     });
 
 
+	$("td :submit").click(function(e){
 
-    $("#estados").on("change", function(){
-        var idEstado = $("#estados").val();
+		e.preventDefault();
 
-        jQuery.ajax({
-                  url: '/adiciona_carrinho',
-                  dataType: "html",
+		jQuery.ajax({
+                  url: '/adicionar_carrinho',
                   method: 'post',
                   data: {
                      _token: $('meta[name="csrf-token"]').attr('content'),
@@ -21,19 +20,12 @@ jQuery(document).ready(function () {
                      nome: nome,
                      quantidade: quantidade,
                      descricao: descricao,
-                     preco: preco,
-                     embalagem: embalagem
+                     preco: preco
                   },
-                  success: function(result){
+                  success: function(){
                      alert("Adicionado com sucesso");
-                }});
-    });
-
-
-
-
-
-
+                }});    
+	}); 
 
 
 });

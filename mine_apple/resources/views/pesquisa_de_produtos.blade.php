@@ -240,8 +240,9 @@
                     </div>
                     <div class="col-sm-8">
                         <div class="subcontainerProduto2 ">
-                            <form>
+                            <form method="post">
                                 <fieldset>
+                                  
                                     <div class="form-row">
 
                                         <input type="hidden" name="id" value="{{$produto->id}}">
@@ -249,11 +250,11 @@
                                         <div class="form-group col-md-6">
                                             <label for="nomeprod2">Nome do Produto </label>
                                             <input type="text" class="form-control" 
-                                                   placeholder="{{$produto->nome}}" name="nome" disabled>
+                                                   value="{{$produto->nome}}" name="nome" readonly>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label for="descricaoProd2">Descrição </label>
-                                            <input type="text" id="descricaoProd2" name="descricaoProd2" class="form-control" placeholder="{{$produto->descricao}}" name="descricao" disabled>
+                                            <input type="text" id="descricaoProd2" class="form-control" value="{{$produto->descricao}}" name="descricao" readonly>
                                         </div>
 
                                         <div class="form-group col-md-6">
@@ -266,17 +267,17 @@
                                     <div class="form-row" id="espac1">
                                         <div class="form-group col-md-6">
                                             <label for="valorProd2">Preço</label>
-                                            <input type="number" min="0.1" max="999" name="valorProd2"
+                                            <input type="number" min="0.1" max="999"
                                                    class="form-control" 
-                                                   placeholder="{{$produto->valor}}" name="preco" disabled>
+                                                   value="{{$produto->valor}}" name="preco" readonly>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="tipoEmbalagemProd2">Embalagem</label>
-                                            <input type="text" name="tipoEmbalagemProd2" name="embalagem" class="form-control"
+                                            <input type="text" name="embalagem" class="form-control"
                                                     placeholder="{{DB::table('embalagem')
             ->join('produto', 'embalagem.id', '=', 'produto.embalagem_id')
             ->select('tipo')
-            ->get() }}" disabled>
+            ->get() }}" readonly>
                                         </div>
 
                                         <div class="form-group col-md-4">
