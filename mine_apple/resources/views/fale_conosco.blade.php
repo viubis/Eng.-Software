@@ -53,9 +53,9 @@
                 <div class="row">
 
                     <!-- Logo -->
-                    <div class="col-lg-4 col-sm-3 col-3 order-1">
+                    <div class="col-lg-4 col-sm-3 col-3 order-1 pt-3 pb-0">
                         <div class="logo_container">
-                            <div class="logo_icon"><img src="{{asset('images/logoSite.png')}}" class="img-fluid" alt=""></div>
+                            <div class="logo_icon ml-5 mt-1"><img src="{{asset('images/logoSite2.png')}}" class="img-fluid" alt=""></div>
 
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                                         </div>
 
                                         <button type="submit" class="header_search_button trans_300" value="Submit"><img
-                                                src="images/search.png" alt=""></button>
+                                                src="{{asset('images/search.png')}}" alt=""></button>
                                     </form>
                                 </div>
                             </div>
@@ -101,7 +101,7 @@
                             <div class="cart">
                                 <div class="cart_container d-flex flex-row align-items-center justify-content-end">
                                     <div class="cart_icon">
-                                        <a href="#">
+                                        <a href="{{url("/carrinho")}}">
                                             <i class="fa fa-shopping-basket fa-3x" style="color: #000000"></i>
                                         </a>
                                         <div class="cart_count"><span>0</span></div>
@@ -190,13 +190,10 @@
                             <ul class="page_menu_nav">
 
                                 <li class="page_menu_item">
-                                    <a href="#">Inicio<i class="fa fa-angle-down"></i></a>
+                                    <a href="{{url("/")}}">Inicio<i class="fa fa-angle-down"></i></a>
                                 </li>
                                 <li class="page_menu_item">
-                                    <a href="#">Produtos<i class="fa fa-angle-down"></i></a>
-                                </li>
-                                <li class="page_menu_item">
-                                    <a href="#">Sobre<i class="fa fa-angle-down"></i></a>
+                                    <a href="{{url("/sobre")}}">Sobre<i class="fa fa-angle-down"></i></a>
                                 </li>
                                 <li class="page_menu_item">
                                     <a href="{{url("/fale_conosco")}}">Fale Conosco<i class="fa fa-angle-down"></i></a>

@@ -297,7 +297,7 @@ section
 }
 
 .top_bar_contact_item:not(:first-child) {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 .top_bar_contact_item a {
@@ -317,7 +317,7 @@ section
 }
 
 .top_bar_contact_item:last-child {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 .top_bar_icon {
@@ -404,7 +404,7 @@ section
     visibility: hidden;
     opacity: 0;
     background: #FFFFFF;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     -webkit-transition: opacity 0.3s ease;
     -moz-transition: opacity 0.3s ease;
     -ms-transition: opacity 0.3s ease;
@@ -490,7 +490,7 @@ section
 
 .header_main {
     z-index: 1;
-    height: 150px;
+    height: 100px;
 }
 
 .header.scrolled .header_main {
@@ -507,8 +507,12 @@ section
 }
 
 .logo_container {
-    height: 150px;
+    height: 100px;
 }
+
+/*.logo_icon{*/
+    /*margin-left: 50px;*/
+/*}*/
 
 .logo {
     top: 50%;
@@ -526,7 +530,7 @@ section
 }
 
 .header_search {
-    height: 175px;
+    height: 100px;
 }
 
 .header_search_content {
@@ -740,7 +744,7 @@ select option {
 }
 
 .wishlist_cart {
-    height: 175px;
+    height: 100px;
 }
 
 .wishlist {
@@ -1049,7 +1053,7 @@ select option {
 
 .page_menu_content {
     height: 0px;
-    background: #0e8ce4;
+    background: #08c8b0;
     padding-left: 15px;
     padding-right: 15px;
     overflow: hidden;

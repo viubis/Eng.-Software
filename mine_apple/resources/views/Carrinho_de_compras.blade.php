@@ -26,7 +26,7 @@
 </head>
 
 <body>
-        <div class="top_bar">
+<div class="top_bar">
     <div class="super_container">
         <!-- Header -->
         <header class="header">
@@ -38,8 +38,8 @@
                             <div class="top_bar_content ml-auto">
                                 <div class="top_bar_user">
                                     <div class="user_icon"><img src="{{asset('images/iconUser.png')}}" alt=""></div>
-                                    <div><a href="#">Cadastrar</a></div>
-                                    <div><a href="#">Login</a></div>
+                                    <div><a href="{{url("/login")}}">Cadastrar</a></div>
+                                    <div><a href="{{url("/login")}}">Login</a></div>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,8 @@
                         <!-- Logo -->
                         <div class="col-lg-4 col-sm-3 col-3 order-1 pt-3 pb-0">
                             <div class="logo_container">
-                                <div class="logo_icon"><img src="{{asset('images/logoSite2.png')}}" class="img-fluid" alt=""></div>
+                                <div class="logo_icon ml-5 mt-1"><img src="{{asset('images/logoSite2.png')}}" class="img-fluid"
+                                                            alt=""></div>
                             </div>
                         </div>
 
@@ -65,10 +66,11 @@
                                     <div class="header_search_form_container">
                                         <form action="#" class="header_search_form clearfix">
                                             <input type="search" required="required" class="header_search_input"
-                                               placeholder="Pesquisar produtos..." name="buscarProdutos">
+                                                   placeholder="Pesquisar produtos..." name="buscarProdutos">
                                             <div class="custom_dropdown">
                                                 <div class="custom_dropdown_list">
-                                                    <span class="custom_dropdown_placeholder clc">Todas as categorias</span>
+                                                    <span
+                                                        class="custom_dropdown_placeholder clc">Todas as categorias</span>
                                                     <i class="fas fa-chevron-down"></i>
                                                     <ul class="custom_list clc">
                                                         <li><a class="clc" href="#">Todas as categorias</a></li>
@@ -82,8 +84,9 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <button type="submit" class="header_search_button trans_300" value="Submit"><img
-                                            src="images/search.png" alt=""></button>
+                                            <button type="submit" class="header_search_button trans_300" value="Submit">
+                                                <img
+                                                    src="{{asset('images/search.png')}}" alt=""></button>
                                         </form>
                                     </div>
                                 </div>
@@ -120,7 +123,8 @@
 
                                 <!-- Categories Menu -->
                                 <div class="cat_menu_container">
-                                    <div class="cat_menu_title d-flex flex-row align-items-center justify-content-start">
+                                    <div
+                                        class="cat_menu_title d-flex flex-row align-items-center justify-content-start">
                                         <div class="cat_burger"><span></span><span></span><span></span></div>
                                         <div class="cat_menu_text">Categorias</div>
                                     </div>
@@ -141,8 +145,10 @@
                                 <div class="main_nav_menu ml-auto">
                                     <ul class="standard_dropdown main_nav_dropdown">
                                         <li><a href="{{url("/")}}">Inicio<i class="fas fa-chevron-down"></i></a></li>
-                                        <li><a href="{{url("/sobre")}}">Sobre<i class="fas fa-chevron-down"></i></a></li>
-                                        <li><a href="{{url("/fale_conosco")}}">Fale Conosco<i class="fas fa-chevron-down"></i></a></li>
+                                        <li><a href="{{url("/sobre")}}">Sobre<i class="fas fa-chevron-down"></i></a>
+                                        </li>
+                                        <li><a href="{{url("/fale_conosco")}}">Fale Conosco<i
+                                                    class="fas fa-chevron-down"></i></a></li>
                                     </ul>
                                 </div>
 
@@ -153,7 +159,7 @@
                                         <div class="menu_burger">
                                             <div class="menu_trigger_text">menu</div>
                                             <div class="cat_burger menu_burger_inner">
-                                            <span></span><span></span><span></span></div>
+                                                <span></span><span></span><span></span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -174,7 +180,7 @@
                                 <div class="page_menu_search">
                                     <form action="#">
                                         <input type="search" required="required" class="page_menu_search_input"
-                                           placeholder="Pesquisar produtos..." name="buscarProdutos">
+                                               placeholder="Pesquisar produtos..." name="buscarProdutos">
                                     </form>
                                 </div>
                                 <ul class="page_menu_nav">
@@ -185,7 +191,8 @@
                                         <a href="{{url("/sobre")}}">Sobre<i class="fa fa-angle-down"></i></a>
                                     </li>
                                     <li class="page_menu_item">
-                                        <a href="{{url("fale_conosco")}}">Fale Conosco<i class="fa fa-angle-down"></i></a>
+                                        <a href="{{url("fale_conosco")}}">Fale Conosco<i
+                                                class="fa fa-angle-down"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -197,254 +204,255 @@
     </div>
 
 
-<div class="top-content">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 ">
-                <h1 class="h1 page-title" data-reactid="30">Carrinho de compras</h1>
-                <div class="pb-0 line"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="containerInfosProdutos">
-    <div class="container">
-        <div class="row backColor">
-            <div class="col-sm-4">
-                <div class="subcontainerProduto1">
-                    <div class="imagem">
-                        <img src="{{asset('images/banana.jpg')}}" style="float:left; height: 200px; width: 200px">
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="subcontainerProduto2 ">
-                    <form>
-                        <fieldset>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="nomeProd1"> Nome Produto </label>
-                                    <input type="text" class="form-control" id="nomeProd1"
-                                           placeholder="Nome do produto" name="nomeProd1" disabled>
-                                </div>
-
-                                <div class="form-group col-md-">
-                                    <label for="quantidadeProd1">Quantidade </label>
-                                    <input type="number" step="0" min="1" max="999" name="qntProd1"
-                                           placeholder="Valor..."
-                                           class="form-first-name form-control" id="quantidadeProd1">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-3">
-                                    <label for="valorProd1">Preço</label>
-                                    <input type="number" min="0.1" max="999" name="valorProd1"
-                                           class="form-control" id="valorProd1"
-                                           placeholder="R$ 10,00" disabled>
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label for="tipoEmbalagemProd1">Pacote</label>
-                                    <input type="text" name="tipoEmbalagemProd1" class="form-control"
-                                           id="tipoEmbalagemProd1" placeholder="duzia" disabled>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </form>
+    <div class="top-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <h1 class="h1 page-title" data-reactid="30">Carrinho de compras</h1>
+                    <div class="pb-0 line"></div>
                 </div>
             </div>
         </div>
-        <div class="pb-0 line"></div>
     </div>
-</div>
 
-<div class="containerInfosProdutos">
-    <div class="container">
-        <div class="row backColor">
-            <div class="col-sm-4">
-                <div class="subcontainerProduto1">
-                    <div class="imagem">
-                        <img src="{{asset('images/abacaxi.png')}}" style="float:left; height: 200px; width: 200px">
+
+    <div class="containerInfosProdutos">
+        <div class="container">
+            <div class="row backColor">
+                <div class="col-sm-4">
+                    <div class="subcontainerProduto1">
+                        <div class="imagem">
+                            <img src="{{asset('images/banana.jpg')}}" style="float:left; height: 200px; width: 200px">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="subcontainerProduto2 ">
+                        <form>
+                            <fieldset>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="nomeProd1"> Nome Produto </label>
+                                        <input type="text" class="form-control" id="nomeProd1"
+                                               placeholder="Nome do produto" name="nomeProd1" disabled>
+                                    </div>
+
+                                    <div class="form-group col-md-">
+                                        <label for="quantidadeProd1">Quantidade </label>
+                                        <input type="number" step="0" min="1" max="999" name="qntProd1"
+                                               placeholder="Valor..."
+                                               class="form-first-name form-control" id="quantidadeProd1">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label for="valorProd1">Preço</label>
+                                        <input type="number" min="0.1" max="999" name="valorProd1"
+                                               class="form-control" id="valorProd1"
+                                               placeholder="R$ 10,00" disabled>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="tipoEmbalagemProd1">Pacote</label>
+                                        <input type="text" name="tipoEmbalagemProd1" class="form-control"
+                                               id="tipoEmbalagemProd1" placeholder="duzia" disabled>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-8">
-                <div class="subcontainerProduto2 ">
-                    <form>
-                        <fieldset>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="nomeprod2"> Nome Produto </label>
-                                    <input type="text" class="form-control" id="nomeprod2"
-                                           placeholder="Nome do produto" name="nomeprod2" disabled>
-                                </div>
-
-                                <div class="form-group col-md-">
-                                    <label for="quantidadeProd2">Quantidade </label>
-                                    <input type="number" step="0" min="1" max="999" name="qntProd2"
-                                           placeholder="Valor..."
-                                           class="form-first-name form-control" id="quantidadeProd2">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-3">
-                                    <label for="valorProd2">Preço</label>
-                                    <input type="number" min="0.1" max="999" name="valorProd2"
-                                           class="form-control" id="valorProd2"
-                                           placeholder=" R$ 10,00" disabled>
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label for="tipoEmbalagemProd2">Pacote</label>
-                                    <input type="text" name="tipoEmbalagemProd2" class="form-control"
-                                           id="tipoEmbalagemProd2" placeholder="duzia" disabled>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </form>
-                </div>
-            </div>
+            <div class="pb-0 line"></div>
         </div>
-        <div class="pb-0 line"></div>
     </div>
-</div>
 
-
-<div class="containerInfosProdutos">
-    <div class="form-row espac2">
-        <div class="card w-50" style="margin-left:+100px">
-            <div class="card-body">
-                <h4 class="card-title">Calcule o frete:</h4>
-                <div class="pb-0 line"></div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="CEP">CEP </label>
-                        <input type="text"
-                               placeholder="CEP"
-                               class="form-first-name form-control" id="CEP" name="cep">
-
+    <div class="containerInfosProdutos">
+        <div class="container">
+            <div class="row backColor">
+                <div class="col-sm-4">
+                    <div class="subcontainerProduto1">
+                        <div class="imagem">
+                            <img src="{{asset('images/abacaxi.png')}}" style="float:left; height: 200px; width: 200px">
+                        </div>
                     </div>
-                    <button type="submit" style="height: 30px;">Calcular</button>
                 </div>
-                <label>Valor do frete: </label>
-                <label>R$ 00,00</label>
+                <div class="col-sm-8">
+                    <div class="subcontainerProduto2 ">
+                        <form>
+                            <fieldset>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="nomeprod2"> Nome Produto </label>
+                                        <input type="text" class="form-control" id="nomeprod2"
+                                               placeholder="Nome do produto" name="nomeprod2" disabled>
+                                    </div>
+
+                                    <div class="form-group col-md-">
+                                        <label for="quantidadeProd2">Quantidade </label>
+                                        <input type="number" step="0" min="1" max="999" name="qntProd2"
+                                               placeholder="Valor..."
+                                               class="form-first-name form-control" id="quantidadeProd2">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label for="valorProd2">Preço</label>
+                                        <input type="number" min="0.1" max="999" name="valorProd2"
+                                               class="form-control" id="valorProd2"
+                                               placeholder=" R$ 10,00" disabled>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="tipoEmbalagemProd2">Pacote</label>
+                                        <input type="text" name="tipoEmbalagemProd2" class="form-control"
+                                               id="tipoEmbalagemProd2" placeholder="duzia" disabled>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
             </div>
+            <div class="pb-0 line"></div>
+        </div>
+    </div>
+
+
+    <div class="containerInfosProdutos">
+        <div class="form-row espac2">
+            <div class="card w-50" style="margin-left:+100px">
+                <div class="card-body">
+                    <h4 class="card-title">Calcule o frete:</h4>
+                    <div class="pb-0 line"></div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="CEP">CEP </label>
+                            <input type="text"
+                                   placeholder="CEP"
+                                   class="form-first-name form-control" id="CEP" name="cep">
+
+                        </div>
+                        <button type="submit" style="height: 30px;">Calcular</button>
+                    </div>
+                    <label>Valor do frete: </label>
+                    <label>R$ 00,00</label>
+                </div>
+
+            </div>
+
 
         </div>
 
-
-    </div>
-
-    <div class="form-row espac2">
+        <div class="form-row espac2">
 
 
-        <div class="card w-50" style="margin-left:+100px">
-            <div class="card-body">
-                <h4 class="card-title">Resumo da compra:</h4>
-                <div class="pb-0 line"></div>
-                <div class="form-row" id="espac1">
-                    <div class="form-group col-md-6">
-                        <label for="subTotal">Sub-total: </label>
-                        <input type="text"
-                               placeholder="valor"
-                               class="form-first-name form-control" id="subTotal" name="subTotal" disabled>
-                        <label for="frete">Frete: </label>
-                        <input type="text" placeholder="valor" class="form-first-name form-control" id="frete" name="frete" disabled>
+            <div class="card w-50" style="margin-left:+100px">
+                <div class="card-body">
+                    <h4 class="card-title">Resumo da compra:</h4>
+                    <div class="pb-0 line"></div>
+                    <div class="form-row" id="espac1">
+                        <div class="form-group col-md-6">
+                            <label for="subTotal">Sub-total: </label>
+                            <input type="text"
+                                   placeholder="valor"
+                                   class="form-first-name form-control" id="subTotal" name="subTotal" disabled>
+                            <label for="frete">Frete: </label>
+                            <input type="text" placeholder="valor" class="form-first-name form-control" id="frete"
+                                   name="frete" disabled>
 
+                        </div>
                     </div>
+                    <label style="font-size: 20px">Total: </label>
+                    <label>&nbsp; R$ 00,00</label>
                 </div>
-                <label style="font-size: 20px">Total: </label>
-                <label>&nbsp; R$ 00,00</label>
+
             </div>
+
 
         </div>
 
+        <br/><br/>
+
+        <div class="col-md-12 mb-3" align="center">
+            <button type="submit" class="btn btn-primary">Finalizar</button>
+        </div>
 
     </div>
 
-    <br/><br/>
 
-    <div class="col-md-12 mb-3" align="center">
-        <button type="submit" class="btn btn-primary">Finalizar</button>
-    </div>
+    <!-- Footer -->
 
-</div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row" id="linha">
 
-
-<!-- Footer -->
-
-<footer class="footer">
-    <div class="container">
-        <div class="row" id="linha">
-
-            <div class="col-lg-3 footer_col">
-                <div class="footer_column footer_contact">
-                    <div class="logo_container">
-                        <div class="logo"><a href="#">Mineapple</a></div>
+                <div class="col-lg-3 footer_col">
+                    <div class="footer_column footer_contact">
+                        <div class="logo_container">
+                            <div class="logo"><a href="#">Mineapple</a></div>
+                        </div>
+                        <div class="footer_title">Tem uma dúvida? Mande-nos um email!</div>
+                        <div class="footer_phone">mineapple@gmail.com</div>
+                        <div class="footer_contact_text">
+                            <p>Feira de Santana</p>
+                            <p>Bahia, BR</p>
+                        </div>
+                        <div class="footer_social">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google"></i></a></li>
+                                <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="footer_title">Tem uma dúvida? Mande-nos um email!</div>
-                    <div class="footer_phone">mineapple@gmail.com</div>
-                    <div class="footer_contact_text">
-                        <p>Feira de Santana</p>
-                        <p>Bahia, BR</p>
-                    </div>
-                    <div class="footer_social">
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fab fa-google"></i></a></li>
-                            <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                </div>
+
+                <div class="col-lg-2">
+                    <div class="footer_column">
+                        <div class="footer_title">Serviços</div>
+                        <ul class="footer_list">
+                            <li><a href="#">Minha conta</a></li>
+                            <li><a href="#">Pedidos</a></li>
+                            <li><a href="#">Lista de Desejos</a></li>
+                            <li><a href="#">Atendimento ao cliente</a></li>
+
                         </ul>
                     </div>
                 </div>
+
             </div>
-
-            <div class="col-lg-2">
-                <div class="footer_column">
-                    <div class="footer_title">Serviços</div>
-                    <ul class="footer_list">
-                        <li><a href="#">Minha conta</a></li>
-                        <li><a href="#">Pedidos</a></li>
-                        <li><a href="#">Lista de Desejos</a></li>
-                        <li><a href="#">Atendimento ao cliente</a></li>
-
-                    </ul>
-                </div>
-            </div>
-
         </div>
-    </div>
-</footer>
+    </footer>
 
-<!-- Copyright -->
+    <!-- Copyright -->
 
-<div class="copyright">
-    <div class="container">
-        <div class="row">
-            <div class="col">
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col">
 
-                <div
-                    class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
-                    <div class="copyright_content">
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                        Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
-                                                                                  aria-hidden="true"></i> pela <a
-                        href="#" target="_blank">Weiche Technologie</a>
-                    </div>
-                    <div class="logos ml-sm-auto">
-                        <ul class="logos_list">
-                            <li><a href="#"><img src="images/logos_1.png" alt=""></a></li>
-                            <li><a href="#"><img src="images/logos_2.png" alt=""></a></li>
-                            <li><a href="#"><img src="images/logos_3.png" alt=""></a></li>
-                            <li><a href="#"><img src="images/logos_4.png" alt=""></a></li>
-                        </ul>
+                    <div
+                        class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
+                        <div class="copyright_content">
+                            Copyright &copy;<script>document.write(new Date().getFullYear().toString());</script>
+                            Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
+                                                                                      aria-hidden="true"></i> pela <a
+                                href="#" target="_blank">Weiche Technologie</a>
+                        </div>
+                        <div class="logos ml-sm-auto">
+                            <ul class="logos_list">
+                                <li><a href="#"><img src="{{asset('images/logos_1.png')}}" alt=""></a></li>
+                                <li><a href="#"><img src="{{asset('images/logos_2.png')}}" alt=""></a></li>
+                                <li><a href="#"><img src="{{asset('images/logos_3.png')}}" alt=""></a></li>
+                                <li><a href="#"><img src="{{asset('images/logos_4.png')}}" alt=""></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 
 <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>

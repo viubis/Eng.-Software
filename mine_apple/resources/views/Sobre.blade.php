@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/animate.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/slick-1.8.0/slick.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/detalhes_compra.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/sobre_style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/responsive.css')}}">
 
     <!-- Favicon and touch icons -->
@@ -31,28 +31,84 @@
     <!-- Header -->
     <header class="header">
 
+
+        <!-- Top Bar -->
+
+        <div class="top_bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col d-flex flex-row">
+                        <div class="top_bar_content ml-auto">
+                            <div class="top_bar_user">
+                                <div class="user_icon"><img src="{{asset('images/iconUser.png')}}" alt=""></div>
+                                <div><a href="#">Cadastrar</a></div>
+                                <div><a href="#">Login</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header Main -->
+
         <div class="header_main">
             <div class="container">
                 <div class="row">
 
                     <!-- Logo -->
-                    <div class="col-lg-4 col-sm-3 col-3 order-1">
+                    <div class="col-lg-4 col-sm-3 col-3 order-1 pt-3 pb-0">
                         <div class="logo_container">
-                            <div class="logo_icon"><img src="{{asset('images/logoSite.png')}}" class="img-fluid" alt=""></div>
+                            <div class="logo_icon ml-5 mt-1"><img src="{{asset('images/logoSite2.png')}}" class="img-fluid" alt=""></div>
 
                         </div>
                     </div>
+
+                    <!-- Search  6 col 12 ord 2 order 3-->
+                    <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+                        <div class="header_search">
+                            <div class="header_search_content">
+                                <div class="header_search_form_container">
+                                    <form action="#" class="header_search_form clearfix">
+                                        <input type="search" required="required" class="header_search_input"
+                                               placeholder="Pesquisar produtos..." name="buscarProdutos">
+
+                                        <div class="custom_dropdown">
+                                            <div class="custom_dropdown_list">
+                                                <span class="custom_dropdown_placeholder clc">Todas as categorias</span>
+                                                <i class="fas fa-chevron-down"></i>
+                                                <ul class="custom_list clc">
+                                                    <li><a class="clc" href="#">Todas as categorias</a></li>
+                                                    <li><a class="clc" href="#">Cereais</a></li>
+                                                    <li><a class="clc" href="#">Frutas</a></li>
+                                                    <li><a class="clc" href="#">Legumes</a></li>
+                                                    <li><a class="clc" href="#">Leguminosas</a></li>
+                                                    <li><a class="clc" href="#">Raízes</a></li>
+                                                    <li><a class="clc" href="#">Tubérculos</a></li>
+                                                    <li><a class="clc" href="#">Verduras</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <button type="submit" class="header_search_button trans_300" value="Submit"><img
+                                                src="{{asset('images/search.png')}}" alt=""></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Wishlist -->
-                    <div class="col-lg-8 col-3 order-lg-3 order-2 text-lg-left text-right">
+                    <div class="col-lg-2 col-9 order-lg-3 order-2 text-lg-left text-right">
                         <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
-                            <!-- Icone usuário logado -->
+                            <!-- Cart -->
                             <div class="cart">
                                 <div class="cart_container d-flex flex-row align-items-center justify-content-end">
                                     <div class="cart_icon">
-                                        <i class="fa fa-user-circle fa-4x" style="color: #08c8b0 "></i>
-                                    </div>
-                                    <div class="cart_content">
-                                        <div class="cart_text"><a href="#">Login</a></div>
+                                        <a href="{{url("/carrinho")}}">
+                                            <i class="fa fa-shopping-basket fa-3x" style="color: #000000"></i>
+                                        </a>
+                                        <div class="cart_count"><span>0</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -97,7 +153,8 @@
                                 <ul class="standard_dropdown main_nav_dropdown">
                                     <li><a href="{{url("/")}}">Inicio<i class="fas fa-chevron-down"></i></a></li>
                                     <li><a href="{{url("/sobre")}}">Sobre<i class="fas fa-chevron-down"></i></a></li>
-                                    <li><a href="{{url("/fale_conosco")}}">Fale Conosco<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="{{url("/fale_conosco")}}">Fale Conosco<i class="fas fa-chevron-down"></i></a>
+                                    </li>
                                 </ul>
                             </div>
 
@@ -138,9 +195,6 @@
 
                                 <li class="page_menu_item">
                                     <a href="{{url("/")}}">Inicio<i class="fa fa-angle-down"></i></a>
-                                </li>
-                                <li class="page_menu_item">
-                                    <a href="#">Produtos<i class="fa fa-angle-down"></i></a>
                                 </li>
                                 <li class="page_menu_item">
                                     <a href="{{url("/sobre")}}">Sobre<i class="fa fa-angle-down"></i></a>

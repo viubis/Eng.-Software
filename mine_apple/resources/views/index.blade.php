@@ -41,8 +41,8 @@
                         <div class="top_bar_content ml-auto">
                             <div class="top_bar_user">
                                 <div class="user_icon"><img src="{{asset('images/iconUser.png')}}" alt=""></div>
-                                <div><a href="/login">Cadastrar</a></div>
-                                <div><a href="/login">Login</a></div>
+                                <div><a href="{{url("/login")}}">Cadastrar</a></div>
+                                <div><a href="{{url("/login")}}">Login</a></div>
                             </div>
                         </div>
                     </div>
@@ -55,13 +55,11 @@
         <div class="header_main">
             <div class="container">
                 <div class="row">
-
                     <!-- Logo -->
                     <div class="col-lg-4 col-sm-3 col-3 order-1 pt-3 pb-0">
                         <div class="logo_container">
-                            <div class="logo_icon"><img src="{{asset('images/logoSite2.png')}}" class="img-fluid"
+                            <div class="logo_icon ml-5 mt-1"><img src="{{asset('images/logoSite2.png')}}" class="img-fluid"
                                                         alt=""></div>
-
                         </div>
                     </div>
 
@@ -107,7 +105,7 @@
                                 <div class="cart_container d-flex flex-row align-items-center justify-content-end">
                                     <div class="cart_icon">
                                         <a href="{{url("/carrinho")}}">
-                                            <i class="fa fa-shopping-basket fa-3x" style="color: #000000"></i>
+                                            <i class="fa fa-shopping-basket fa-3x mt-0" style="color: #000000"></i>
                                         </a>
                                         <div class="cart_count"><span>0</span></div>
                                     </div>
