@@ -71,7 +71,7 @@
         </div>
 
 
-    </header>
+
 
     <main>
         <section>
