@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Endereco extends Model
 {
     protected $table = 'endereco';
-    protected $guarded = ['id'];
+    protected $guarded = ['cidade_id', 'numero_cep', 'rua', 'numero', 'complemento', 'bairro'];
     public $timestamps = false;
 
     public function consumidorEndereco()
@@ -20,10 +20,6 @@ class Endereco extends Model
         return $this->hasOne('mine_apple\Produtor', 'endereco_id');
     }
 
-    /*public function cep()
-    {
-        return $this->belongsTo('mine_apple\Cep', 'cep_id');
-    }*/
 
     public function cidade()
     {

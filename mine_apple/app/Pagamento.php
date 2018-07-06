@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Pagamento extends Model 
 {
     protected $table = 'pagamento';
-    protected $guarded = ['id'];
+    protected $fillable = ['assinatura_id', 'cartao_id', 'data', 'hora', 'valor'];
     public $timestamps = false;
 
     public function assinatura()

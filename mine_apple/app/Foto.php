@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Foto extends Model
 {
     protected $table = 'foto';
-    protected $guarded = ['id'];
+    protected $fillable = ['produto_id', 'path'];
     public $timestamps = false;
 
     public function produto()

@@ -8,6 +8,7 @@ class Produtor extends Model
 {
     protected $table = 'produtor';
     protected $primaryKey = 'usuario_id';
+    protected $fillable = ['usuario_id', 'endereco_id', 'cnpj', 'nomeFantasia', 'razaoSocial', 'telefone', 'raioEntrega', 'avaliacao', 'acesso'];
     public $timestamps = false;
 
     public function usuario()

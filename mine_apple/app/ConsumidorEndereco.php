@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ConsumidorEndereco extends Model
 {
     protected $table = 'consumidor_endereco';
-    protected $guarded = ['id'];
+    protected $fillable = ['consumidor_id', 'endereco_id'];
     public $timestamps = false;
 
     public function consumidor()

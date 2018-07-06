@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Estado extends Model
 {
     protected $table = 'estado';
-    protected $guarded = ['id'];
+    protected $fillable = ['nome', 'sigla'];
     public $timestamps = false;
 
     public function cidades()

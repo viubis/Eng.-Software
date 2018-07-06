@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Assinatura extends Model 
 {
     protected $table = 'assinatura';
-    protected $guarded = ['id'];
+    protected $fillable = ['compra_id', 'produtor_id', 'valor', 'frete', 'notaFiscal', 'status'];
     public $timestamps = false;
 
     public function compra()

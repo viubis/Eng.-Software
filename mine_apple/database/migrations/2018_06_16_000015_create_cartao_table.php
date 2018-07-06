@@ -16,7 +16,6 @@ class CreateCartaoTable extends Migration
             $table->string('titular');
             $table->string('validade');
             $table->string('codigo');
-            //$table->enum('tipo', ['c', 'd']);
 
             $table->index('consumidor_id', 'fk_cartao_consumidor_idx');
 

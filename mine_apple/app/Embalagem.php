@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Embalagem extends Model
 {
     protected $table = 'embalagem';
-    protected $guarded = ['id'];
+    protected $fillable = ['tipo'];
     public $timestamps = false;
 
     public function produtos()
