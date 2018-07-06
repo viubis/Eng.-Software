@@ -12,6 +12,15 @@ Route::get('/carrinho', 'PublicoController@carrinho');
 
 Route::get('tipo_cadastro', 'PublicoController@getTipoCadastro');
 
+//Rotas para facebook socialite -----------------------------------------------------------
+
+Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
+Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
+
+//Rotas para google socialite -----------------------------------------------------------
+
+Route::get('login/google', 'Auth\LoginController@redirectToProvider1');
+Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback1');
 
 //Rotas de cadastro e recuperação de senha ---------------------------------------------------------
 Auth::routes();
