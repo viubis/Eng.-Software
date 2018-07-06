@@ -14,6 +14,7 @@ use mine_apple\Consumidor;
 use mine_apple\Produto;
 use mine_apple\Produtor;
 use mine_apple\Embalagem;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 
 class ConsumidorController extends Controller
@@ -159,9 +160,11 @@ class ConsumidorController extends Controller
      */
     public function getCarrinhoCompras(){
 
+        //retorna todos os itens do carrinho
         $itens = Cart::content();
+        //retorna o preço total
         $subtotal = Cart::total();
-        return view('carrinho_de_compras', compact(('itens', 'subtotal')))
+        return view('carrinho_de_compras', compact('itens', 'subtotal'));
     }
 
     /**
@@ -170,6 +173,8 @@ class ConsumidorController extends Controller
      * @return string
      */
     public function finalizaCompra(Request $request){
+
+        $itens = Cart::content();
 
     }
 

@@ -238,9 +238,9 @@
                     </div>
                     <div class="col-sm-8">
                         <div class="subcontainerProduto2 ">
-                            <form method="post">
+                            <form role="form" method="post" action="/adicionar_carrinho">
                                 <fieldset>
-                                  
+                                    @csrf
                                     <div class="form-row">
 
                                         <input type="hidden" name="id" value="{{$produto->id}}">

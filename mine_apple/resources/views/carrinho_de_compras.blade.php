@@ -288,7 +288,7 @@
                     </div>
                 </div>
                 <label style="font-size: 20px">Total: </label>
-                <label class="ml-1">R$ 00,00</label>
+                <label class="ml-1">{{R$ 00,00}}</label>
             </div>
         </div>
     </div>
