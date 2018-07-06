@@ -85,12 +85,12 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="codSeg">Código de segurança do cartão</label>
                                     <input type="number" name="codigo" placeholder="Código de segurança do cartão"
-                                           class="form-facebook form-control" id="codSeg">
+                                           class="form-facebook form-control" id="codSeg" maxlength="4">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="validade">Validade</label>
                                     <input type="text" name="validade" placeholder="Validade"
-                                           class="form-facebook form-control" id="validade">
+                                           class="form-facebook form-control" id="validade" data-mask="00/00/00">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="tipo">Tipo de cartão </label>
@@ -138,10 +138,7 @@
 <script src="{{asset('js/jquery.backstretch.min.js')}}"></script>
 <script src="{{asset('js/retina-1.1.0.min.js')}}"></script>
 <script src="{{asset('js/script_tela_cadastro_produtor.js')}}"></script>
-
-<!--[if lt IE 10]>
-<script src="{{asset('js/placeholder_tela_cadastro_produtor.js')}}"></script>
-<![endif]-->
+<script src="{{asset('plugins/jquery-plugin-mask/jquery.mask.js')}}"></script>
 
 </body>
 

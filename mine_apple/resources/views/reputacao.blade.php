@@ -107,52 +107,7 @@
 
         <!-- Menu -->
 
-        <div class="page_menu">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-
-                        <div class="page_menu_content">
-
-                            <div class="page_menu_search">
-                                <form action="#">
-                                    <input type="search" required="required" class="page_menu_search_input"
-                                           placeholder="Pesquisar produtos..." name="buscarProdutos">
-                                </form>
-                            </div>
-                            <ul class="page_menu_nav">
-
-                                <li class="page_menu_item">
-                                    <a href="#">Meus Dados<i class="fa fa-angle-down"></i></a>
-                                </li>
-                                <li class="page_menu_item">
-                                    <a href="#">Resumo da Conta<i class="fa fa-angle-down"></i></a>
-                                </li>
-                                <li class="page_menu_item">
-                                    <a href="#">Meus Produtos<i class="fa fa-angle-down"></i></a>
-                                </li>
-                                <li class="page_menu_item">
-                                    <a href="#">Assinaturas<i class="fa fa-angle-down"></i></a>
-                                </li>
-                                <li class="page_menu_item">
-                                    <a href="#">Reputação<i class="fa fa-angle-down"></i></a>
-                                </li>
-                            </ul>
-
-                            <!-- <div class="menu_contact">
-                                 <div class="menu_contact_item">
-                                     <div class="menu_contact_icon"><img src="images/phone_white.png" alt=""></div>
-                                     +38 068 005 3570
-                                 </div>
-                                 <div class="menu_contact_item">
-                                     <div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div>
-                                     <a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>
-                             </div>-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      @include('layouts.header_produtor')
 
 
     </header>
@@ -237,7 +192,7 @@
                             <div class="form-group">
                                     <input type="text" class="form-control" id="nomeCliente" name="nomeCliente" placeholder="Nome cliente"  disabled="disabled">
                              </div>
-                             <label for="produtosSelecionados">Assinatura:</label>
+                             <label for="assinatura">Assinatura:</label>
                              <div class="form-group">
                                     <input type="text" class="form-control" name="produtosSelecionados" id="produtosSelecionados" placeholder="Produtos selecionados"  disabled="disabled">
                              </div>
@@ -264,9 +219,8 @@
                             <label for="nomeCliente">Nome do cliente</label>
                             <div class="form-group">
                                     <input type="text" class="form-control" id="nomeCliente" name="nomeCliente" placeholder="Nome cliente" disabled="disabled">
-                                    <input type="text" class="form-control" id="nomeCliente" name="nomeCliente" placeholder="Nome cliente" disabled="disabled">
                              </div>
-                             <label for="produtosSelecionados2">Assinatura:</label>
+                             <label for="assinatura">Assinatura:</label>
                              <div class="form-group">
                                     <input type="text" class="form-control"  name="produtosSelecionados2" id="produtosSelecionados2" placeholder="Produtos selecionados"  disabled="disabled">
                              </div>

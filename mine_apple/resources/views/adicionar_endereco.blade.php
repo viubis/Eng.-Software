@@ -55,7 +55,7 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="CEP">CEP</label>
                                     <input type="text" name="cep" placeholder="CEP"
-                                           class="form-first-name form-control" id="CEP">
+                                           class="form-first-name form-control" data-mask="00.000-000" id="CEP">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="Rua">Rua</label>
@@ -127,10 +127,7 @@
 <script src="{{asset('js/jquery.backstretch.min.js')}}"></script>
 <script src="{{asset('js/retina-1.1.0.min.js')}}"></script>
 <script src="{{asset('js/script_tela_cadastro_produtor.js')}}"></script>
-
-<!--[if lt IE 10]>
-<script src="{{asset('js/placeholder_tela_cadastro_produtor.js')}}"></script>
-<![endif]-->
+<script src="{{asset('plugins/jquery-plugin-mask/jquery.mask.js')}}"></script>
 
 </body>
 

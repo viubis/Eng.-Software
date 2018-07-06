@@ -82,6 +82,8 @@ Route::middleware(['auth'])->group(function () {
 
         Route::post('/adicionar_carrinho', 'ConsumidorController@adicionarCarrinho');
 
+        Route::get('/carrinho_de_compras','ConsumidorController@getCarrinhoCompras');
+
         Route::get('/consumidor/cadastrar_endereco', 'ConsumidorController@cadastrarEndereco');
 
         //Pesquisa por categorias

@@ -70,7 +70,12 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="cpf">CPF</label>
                                     <input type="text" name="cpf" placeholder="CPF..."
-                                           class="form-last-name form-control" id="cpf" required>
+                                           class="form-last-name form-control" id="cpf" data-mask="000.000.000-00" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="cpf">CPF</label>
+                                    <input type="text" name="telefone" placeholder="Telefone..."
+                                           class="form-last-name form-control" id="telefone" data-mask="(00) 00000-0000" required>
                                 </div>
 
                                 <div class="form-group">
@@ -100,7 +105,7 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="CEP">CEP</label>
                                     <input type="text" name="cep" placeholder="CEP"
-                                           class="form-first-name form-control" id="CEP" required>
+                                           class="form-first-name form-control" id="CEP" data-mask="00.000-000" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="Rua">Rua</label>
@@ -144,7 +149,7 @@
                             <div class="form-top">
                                 <div class="form-top-left">
                                     <h3>Passo 3 / 3</h3>
-                                    <p>Cartão de credito:</p>
+                                    <p>Cartão de crédito:</p>
                                 </div>
                                 <div class="form-top-right">
                                     <i class="fa fa-credit-card"></i>
@@ -153,22 +158,22 @@
                             <div class="form-bottom">
                                 <div class="logoscartoes">
                                     <ul class="logos_list" style="display: inline-block">
-                                        <li><a href="#"><img src="images/logos_1.png" alt=""></a></li>
+                                        <li><a href="#"><img src="{{asset('images/logos_1.png')}}" alt=""></a></li>
                                     </ul>
                                     <ul class="logos_list" style="display: inline-block">
-                                        <li><a href="#"><img src="images/logos_2.png" alt=""></a></li>
+                                        <li><a href="#"><img src="{{asset('images/logos_2.png')}}" alt=""></a></li>
                                     </ul>
                                     <ul class="logos_list" style="display: inline-block">
-                                        <li><a href="#"><img src="images/logos_3.png" alt=""></a></li>
+                                        <li><a href="#"><img src="{{asset('images/logos_3.png')}}" alt=""></a></li>
                                     </ul>
                                     <ul class="logos_list" style="display: inline-block">
-                                        <li><a href="#"><img src="images/logos_4.png" alt=""></a></li>
+                                        <li><a href="#"><img src="{{asset('images/logos_4.png')}}" alt=""></a></li>
                                     </ul>
                                     <ul class="logos_list" style="display: inline-block">
-                                        <li><a href="#"><img src="images/logos_5.png" alt=""></a></li>
+                                        <li><a href="#"><img src="{{asset('images/logos_5.png')}}" alt=""></a></li>
                                     </ul>
                                     <ul class="logos_list" style="display: inline-block">
-                                        <li><a href="#"><img src="images/logos_6.png" alt=""></a></li>
+                                        <li><a href="#"><img src="{{asset('images/logos_6.png')}}" alt=""></a></li>
                                     </ul>
                                 </div>
                                 <div class="form-group">
@@ -189,9 +194,9 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="Validade">Validade</label>
                                     <input type="text" name="validade" placeholder="Validade"
-                                           class="form-facebook form-control" id="validade">
+                                           class="form-facebook form-control" id="validade" data-mask="00/00/0000">
                                 </div>
-                                
+
 
                                 <div class="form-group">
                                     <input id="contrato" name="contrato" type="checkbox" value="nao">
@@ -219,7 +224,7 @@
                 <div
                     class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                     <div class="copyright_content">
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                        Copyright &copy;<script>document.write(new Date().getFullYear().toString());</script>
                         Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
                                                                                   aria-hidden="true"></i> pela <a
                             href="#" target="_blank">Weiche Technologie</a>
@@ -237,6 +242,7 @@
 <script src="{{asset('js/jquery.backstretch.min.js')}}"></script>
 <script src="{{asset('js/retina-1.1.0.min.js')}}"></script>
 <script src="{{asset('js/script_tela_cadastro_produtor.js')}}"></script>
+<script src="{{asset('plugins/jquery-plugin-mask/jquery.mask.js')}}"></script>
 
 </body>
 

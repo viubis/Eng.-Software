@@ -15,7 +15,7 @@ jQuery(document).ready(function () {
                   url: '/adicionar_carrinho',
                   method: 'post',
                   data: {
-                     _token: $('meta[name="csrf-token"]').attr('content'),
+                     //_token: $('meta[name="csrf-token"]').attr('content'),
                      id: id,
                      nome: nome,
                      quantidade: quantidade,
@@ -25,7 +25,9 @@ jQuery(document).ready(function () {
                   success: function(){
                      alert("Adicionado com sucesso");
                 }});    
-	}); 
+	});
+
+
 
 
 });
