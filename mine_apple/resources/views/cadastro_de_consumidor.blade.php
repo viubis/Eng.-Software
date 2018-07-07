@@ -194,7 +194,7 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="Validade">Validade</label>
                                     <input type="text" name="validade" placeholder="Validade"
-                                           class="form-facebook form-control" id="validade" data-mask="00/00/0000">
+                                           class="form-facebook form-control" id="validade" data-mask="00/0000">
                                 </div>
 
 
