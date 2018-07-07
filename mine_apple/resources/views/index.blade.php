@@ -29,7 +29,17 @@
 <div class="super_container">
 
     <!-- Header -->
-    @include('layouts.header_consumidor')
+    @if(Auth::check())
+        <!-- @if(Auth::user()->consumidor != null)
+            @include('layouts.header_consumidor')
+        @elseif(Auth::user()->produtor != null)
+            @include('layouts.header_produtor')
+        @elseif(Auth::user()->administrador != null)
+            @include('layouts.header_administrador')
+        @endif -->
+    @else
+        @include('layouts.header_usuario')
+    @endif
 
     <!-- Banner -->
 

@@ -21,6 +21,9 @@ class ConsumidorController extends Controller
 {
     //Métodos para manipular as views visíveis somente para consumidores
 
+    public function _construct(){
+        $this->middleware(middleware:'auth.consumidor')
+    }
     /**
      * @author O nome do desenvolvedor
      * @param Request $request
@@ -28,6 +31,10 @@ class ConsumidorController extends Controller
      */
     public function exemplo(Request $request) {
         return Auth::user()->email . ' é consumidor';
+    }
+
+    public function index(){
+        return view('index');
     }
 
     /**

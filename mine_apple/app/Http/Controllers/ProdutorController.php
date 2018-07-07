@@ -19,6 +19,7 @@ class ProdutorController extends Controller
 {
     //Métodos para manipular as views visíveis somente para produtores
 
+
     /**
      * @author O nome do desenvolvedor
      * @param Request $request
@@ -26,6 +27,10 @@ class ProdutorController extends Controller
      */
     public function exemplo(Request $request) {
         return Auth::user()->email . ' é produtor';
+    }
+
+    public function index(){
+        return view('index');
     }
 
     /**
