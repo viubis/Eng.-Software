@@ -162,6 +162,7 @@ return [
 
         Laravel\Socialite\SocialiteServiceProvider::class,
 
+
     ],
 
     /*
@@ -213,5 +214,7 @@ return [
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
     ],
+
+    LaravelLegends\PtBrValidator\ValidatorProvider::class,
 
 ];

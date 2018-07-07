@@ -8,6 +8,7 @@ class Consumidor extends Model
 {
     protected $table = 'consumidor';
     protected $primaryKey = 'usuario_id';
+    protected $fillable = ['usuario_id', 'cpf', 'nome', 'sobrenome', 'sexo', 'telefone', 'acesso'];
     public $timestamps = false;
 
     public function usuario()

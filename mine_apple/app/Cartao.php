@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Crypt;
 class Cartao extends Model 
 {
     protected $table = 'cartao';
-    protected $guarded = ['id'];
+    protected $fillable = ['consumidor_id', 'numero_cartao', 'titular', 'validade', 'codigo'];
     public $timestamps = false;
 
     public function getNumeroAttribute($numero)

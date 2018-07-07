@@ -14,15 +14,6 @@ class User extends Authenticatable
     protected $hidden = ['remember_token'];
     public $timestamps = false;
 
-
-    /*public function getPasswordAttribute($password) {
-        return Crypt::decryptString($password);
-    }
-
-    public function setPasswordAttribute($password) {
-        $this->attributes['password'] = Crypt::encryptString($password);
-    }*/
-
     public function administrador()
     {
         return $this->hasOne('mine_apple\Administrador', 'usuario_id');

@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Produto extends Model
 {
     protected $table = 'produto';
-    protected $guarded = ['id'];
+    protected $fillable = ['produtor_id', 'categoria_id', 'embalagem_id', 'nome', 'descricao', 'valor', 'minPorAssinatura',
+                            'maxPorDia', 'freteMax', 'seg', 'ter', 'qua', 'qui', 'sex', 'sab', 'dom'];
     public $timestamps = false;
 
     public function produtor()
