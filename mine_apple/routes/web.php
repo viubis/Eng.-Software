@@ -49,7 +49,8 @@ Route::middleware(['auth'])->group(function () {
     //Rotas para administadores --------------------------------------------------------------------
     Route::middleware(['auth.administrador'])->group(function () {
 
-        Route::get('/administrador', 'AdministradorController@exemplo')->name('administrador');
+        // Route::get('/administrador', 'AdministradorController@exemplo')->name('administrador');
+        Route::get('/administrador', 'AdministradorController@index')->name('administrador');
 
     });
 
@@ -59,7 +60,9 @@ Route::middleware(['auth'])->group(function () {
     //Rotas para consumidores ----------------------------------------------------------------------
     Route::middleware(['auth.consumidor'])->group(function () {
 
-        Route::get('/consumidor', 'ConsumidorController@exemplo')->name('consumidor');
+        // Route::get('/consumidor', 'ConsumidorController@exemplo')->name('consumidor');
+
+        Route::get('/consumidor', 'ConsumidorController@index')->name('consumidor');
 
         Route::get('/consumidor/adicionar_cartao', 'ConsumidorController@adicionarCartao')->name('consumidor.adicionar.cartao');
 
@@ -91,7 +94,9 @@ Route::middleware(['auth'])->group(function () {
     //Rotas para produtores -----------------------------------------------------------------------
     Route::middleware(['auth.produtor'])->group(function () {
 
-        Route::get('/produtor', 'ProdutorController@exemplo')->name('produtor');
+        // Route::get('/produtor', 'ProdutorController@exemplo')->name('produtor');
+
+        Route::get('/produtor', 'ProdutorController@index')->name('produtor');
 
         //Route::get('/produtor/cadastrar', 'ProdutorController@cadastrarProdutor')->name('produtor.cadastrar');
         Route::get('/produtor/alterar', 'ProdutorController@alterarProdutor')->name('produtor.alterar');

@@ -1,4 +1,45 @@
 <header class="header">
+    <!-- Top Bar -->
+        <div class="top_bar">
+            <div class="container">
+                <div class="row">
+                     <div class="col d-flex flex-row">
+                        <div class="top_bar_content ml-auto">
+                            <div class="top_bar_user">
+                                @guest
+                                    <div class="user_icon"><img src="{{asset('images/iconUser.png')}}" alt=""></div>
+                                    <div><a href="{{url("/login")}}">Cadastrar</a></div>
+                                    <div><a href="{{url("/login")}}">Login</a></div>
+                                @else
+                                    <!-- Icone usuário logado -->
+                                    <div class="cart">
+                                        <div class="cart_container d-flex flex-row align-items-center justify-content-end">
+                                            <div class="cart_icon">
+                                                <i class="fa fa-user-circle fa-4x" style="color: #08c8b0 "></i>
+                                            </div>
+                                            <div class="cart_content">
+                                                <div class="cart_text"><a href="#">{{Auth::user()->administrador->nome}} <span class="caret"></span></a>
+                                                            
+                                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                                                 onclick="event.preventDefault();
+                                                                 document.getElementById('logout-form').submit();">{{ __('Sair') }}</a>
+
+                                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                        @csrf
+                                                        </form>
+                                                    </div>
+                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endguest
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Header Main -->
 
@@ -18,7 +59,7 @@
                     <div class="col-lg-8 col-3 order-lg-3 order-2 text-lg-left text-right">
                         <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
                             <!-- Icone usuário logado -->
-                            <div class="cart">
+                            <!-- <div class="cart">
                                 <div class="cart_container d-flex flex-row align-items-center justify-content-end">
                                     <div class="cart_icon">
                                         <i class="fa fa-user-circle fa-4x" style="color: #08c8b0 "></i>
@@ -28,7 +69,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
