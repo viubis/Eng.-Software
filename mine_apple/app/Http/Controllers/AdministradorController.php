@@ -4,6 +4,10 @@ namespace mine_apple\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use mine_apple\Produtor;
+use mine_apple\Consumidor;
+use mine_apple\Usuario;
+use mine_apple\Produto;
 
 class AdministradorController extends Controller
 {
@@ -25,7 +29,8 @@ class AdministradorController extends Controller
 
     public function getGerenciamentoProdutores(){
     	$produtores = Produtor::all();
-    	return view('gerenciamento_de_usuario_produtor', compact('produtores'));
+        $produtos = Produto::all();
+    	return view('gerenciamento_usuario_produtor', compact('produtores', 'produtos'));
     }
 
     public function getGerenciamentoSistema(){

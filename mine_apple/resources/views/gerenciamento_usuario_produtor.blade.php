@@ -146,7 +146,7 @@
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="contact_form_title">Gerenciamento de usuário</div>
-                    <form>
+                    
                         <div class="form-row">
                             <label class="sr-only" for="selecionarProdutor">Selecione um produtor... </label>
                             <select class="form-control" id="selecionarProdutor" style="margin-bottom: 20px">
@@ -158,11 +158,14 @@
                             <a href="#">Ver todos</a>
                         </div>
 
-                        <label class="my-0 mr-2" style="font-size: 20px">Usuário <i
+                        @foreach($produtores as $produtor) 
+
+                        <label class="my-0 mr-2" style="font-size: 20px">{{$produtor->usuario_id}} <i
                                 class="fa fa-at"></i>produtor</label>
 
                         <div class="pb-0" id="line"></div>
 
+                        <form>
                         <div class="form-row">
                             <div class="form-group col-md-2">
                                 <i class="fa fa-user-circle fa-8x"></i>
@@ -170,12 +173,12 @@
                             <div class="form-group col-md-10">
                                 <div class="row">
                                     <div class="form-group col-md-3" style="margin-right: -20px">
-                                        <label for="staticNome" class="col-form-label">Nome fantasia</label>
+                                        <label for="staticNome" class="col-form-label">Nome Fantasia</label>
                                     </div>
                                     <div class="form-group col-md-5">
                                         <input type="text" readonly class="form-control-plaintext"
                                                id="staticNomeFantasia" name="nomeFantasia"
-                                               placeholder="Nome fantasia" disabled>
+                                               placeholder="{{$produtor->nomeFantasia}}">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -184,7 +187,7 @@
                                     </div>
                                     <div class="form-group col-md-5">
                                         <input type="text" readonly class="form-control-plaintext" id="staticCNPJ"
-                                               placeholder="CNPJ" disabled name="cnpj">
+                                               placeholder="{{$produtor->cnpj}}" name="cnpj">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -193,9 +196,10 @@
                                     </div>
                                     <div class="form-group col-md-5">
                                         <select multiple class="form-control" size="2" id="listaProdutos">
-                                            <option disabled>Produto 1</option>
-                                            <option disabled>Produto 2</option>
-                                            <option disabled>Produto 3</option>
+                                            {{$determinadosProdutos = $produtos->where('produtor_id', '=', $produtor->usuario_id) }}
+                                            @foreach($determinadosProdutos as $produto)
+                                            <option disabled>{{$produto->nome}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -206,54 +210,20 @@
                                     </div>
                                     <div class="form-group col-md-5" style="margin-top: 10px;">
                                         <div class="row" style="margin-bottom: 10px">
+                                            @for($i = 0; $i < $produtor->avaliacao; $i++) 
                                             <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
-                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
-                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
-                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
-                                            <i class="far fa-star" style="color: yellow; margin-right: 5px"></i>
-                                        </div>
-                                        <div class="row" style="margin-bottom: 10px">
-                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
-                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
-                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
-                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
-                                            <i class="far fa-star" style="color: yellow; margin-right: 5px"></i>
-                                        </div>
-                                        <div class="row" style="margin-bottom: 10px">
-                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
-                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
-                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
-                                            <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
-                                            <i class="far fa-star" style="color: yellow; margin-right: 5px"></i>
-                                            <div class="row" align="right" style="margin-top: 15px">
-                                                <a href="#">Ver todos</a>
-                                            </div>
+                                            @endfor
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input id="userBloqueado" name="userBloqueado" type="checkbox" value="nao">
+                                <input id="userBloqueado" name="userBloqueado" type="checkbox" value="{{$produtor->acesso}}">
                                 <label for="userBloqueado">Acesso negado a plataforma</label>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group  col-md-10">
-                                <label class="my-0 mr-2" style="font-size: 20px">Categoria </label>
-                            </div>
-                            <div class="form-group  col-md-2" align="right">
-                                <a href="#">Atualizar</a>
-                            </div>
-                        </div>
-                        <div class="pb-0" id="line" style="margin-top: -15px"></div>
-                        <div class="form-row">
-                            <div class="form-group  col-md-6">
-                                <p style="color: #000000; font-size: 15px">Atual: produtor</p>
-                            </div>
-                            <div class="form-group  col-md-3">
-                                <a href="#">Alterar para produtor</a>
-                            </div>
-                        </div>
+                        
+                        @endforeach
                     </form>
                 </div>
             </div>
