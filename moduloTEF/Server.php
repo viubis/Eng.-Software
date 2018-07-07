@@ -18,7 +18,7 @@ do{
     $msg = socket_read($accept, 1024);
     $infos = explode(";", $msg);
     $verif = new VerificadorCartao();
-    $resposta = $verif -> verificacao($infos[0],$infos[1],$infos[2],$infos[3]);
+    $resposta = $verif -> verificacao($infos[0],$infos[1],$infos[2],$infos[3], $infos[4]);
 
     $msg = trim($msg);
     echo "Client says: \t".$msg."\n\n";
