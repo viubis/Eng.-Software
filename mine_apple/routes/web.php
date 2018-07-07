@@ -61,6 +61,12 @@ Route::middleware(['auth'])->group(function () {
         // Route::get('/administrador', 'AdministradorController@exemplo')->name('administrador');
         Route::get('/administrador', 'AdministradorController@index')->name('administrador');
 
+        Route::get('/gerenciamento/consumidor', 'AdministradorController@getGerenciamentoConsumidores');
+
+        Route::get('/gerenciamento/produtor', 'AdministradorController@getGerenciamentoProdutores');
+
+        Route::get('/gerenciamento/sistema', 'AdministradorController@getGerenciamentoSistema');
+
     });
 
 

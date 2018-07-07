@@ -17,4 +17,19 @@ class AdministradorController extends Controller
     public function exemplo(Request $request) {
         return Auth::user()->email . ' é administrador';
     }
+
+    public function getGerenciamentoConsumidores(){
+    	$consumidores = Consumidor::all();
+    	return view('gerenciamento_de_usuario_consumidor', compact('consumidores'));
+    }
+
+    public function getGerenciamentoProdutores(){
+    	$produtores = Produtor::all();
+    	return view('gerenciamento_de_usuario_produtor', compact('produtores'));
+    }
+
+    public function getGerenciamentoSistema(){
+    	$usuarios = Usuario::all();
+    	return view('gerenciamento_do_sistema', compact('usuarios'));
+    }
 }
