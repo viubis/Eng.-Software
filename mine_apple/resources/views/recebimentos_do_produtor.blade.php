@@ -162,7 +162,7 @@
                             <label class=" my-1 mr-sm-2" id="dois"><a href="">Voltar</a></label>
                         </section>
                         <section class="seletores-inicio">
-                            <label class="my-1 mr-2" for="categorias" id="um">Exibir </label>
+                            <label class="my-1 mr-2" for="umum" id="um">Exibir </label>
                             <select class="custom-select my-1 mr-sm-2" id="umum">
                                 <option value="todos">Todos</option>
                                 <option value="30dias">Últimos 30 dias</option>

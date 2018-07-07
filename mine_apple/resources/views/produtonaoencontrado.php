@@ -196,7 +196,7 @@
                                     <a href="{{url("/")}}">Inicio<i class="fa fa-angle-down"></i></a>
                                 </li>
                                 <li class="page_menu_item">
-                                    <a href="{{url("/sobre")}}">Sobre<i class="fa fa-angle-down"></i></a>
+                                    <a href="{{url("/sobre)}}">Sobre<i class="fa fa-angle-down"></i></a>
                                 </li>
                                 <li class="page_menu_item">
                                     <a href="{{url("/fale_conosco")}}">Fale Conosco<i class="fa fa-angle-down"></i></a>
@@ -210,7 +210,7 @@
 
     </header>
 
-    <body>
+
 
 
    <div class="top-content">
@@ -226,7 +226,7 @@
    </div>
 
 
-</body>
+
 
 
 

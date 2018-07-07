@@ -211,7 +211,7 @@
     </header>
 
     <!--<section>-->
-    <body>
+
 
    <!-- <div class="top-content">
             <div class="container">
@@ -510,8 +510,7 @@
                 <div class="pb-0" id="line"></div>
             </div>
         </div>
-
-
+       </div>
    </div>
 
    <div class="containerInfosProdutos">
@@ -524,7 +523,7 @@
               <h4 class="card-title">Endereço de entrega:</h4>
               <div  class="pb-0" id="line"> </div>
               <div class="form-group col-md-12">
-                <label for="freq">Meus endereços </label>
+                <label for="listaEndereco">Meus endereços </label>
                    <select multiple class="form-control" size="2" id="listaEndereco">
                          <option >Rua A, Feira 6, 43, Feira de Santana, Bahia.</option>
                          <option >Rua B, Feira 6, 56, Feira de Santana, Bahia.</option>
@@ -532,19 +531,19 @@
 
             </div>
 
-            <A href="http://www.seulink.com.br" title="Pequena Descrição">Adicionar endereço</A>
+            <a href="http://www.seulink.com.br" title="Pequena Descrição">Adicionar endereço</a>
             </div>
             <div class="card-body">
                 <h4 class="card-title">Cartões:</h4>
                 <div  class="pb-0" id="line"> </div>
                 <div class="form-group col-md-12">
-                  <label for="freq">Meus cartões </label>
+                  <label for="listaCartao">Meus cartões </label>
                      <select multiple class="form-control" size="2" id="listaCartao">
                            <option >VISA terminado em 544.</option>
                            <option >Master terminado em 322.</option>
-                   </select>
+                     </select>
 
-              </div>
+                </div>
               <div class="form-group col-md-5">
                 <label for="codSeguranca">Código de segurança </label>
                 <input type="text"
@@ -559,14 +558,12 @@
 
 </div>
 
-<br/><br/>
 
-<center>
     <div class="col-md-12 mb-3">
         <button type="submit" class="btn btn-primary">Finalizar</button>
     </div>
 
-</center>
+
 </div>
 
 
