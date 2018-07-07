@@ -6,8 +6,8 @@
                         <div class="col d-flex flex-row">
                             <div class="top_bar_content ml-auto">
                                 <div class="top_bar_user">
-                                    <div class="user_icon"><img src="{{asset('images/iconUser.png')}}" alt=""></div>
-                                    <div><a href="{{url('/login')}}">Cadastrar</a></div>
+                                    <div class="user_icon"><i style="color: #08c8b0;" class="fa fa-user-circle fa-2x"></i></div>
+                                    <div><a href="{{url('/login')}}" style="font-size: 13px">Cadastre-se ou acesse a sua conta clicando aqui</a></div>
                                 </div>
                             </div>
                         </div>
@@ -170,4 +170,4 @@
                             </div>
                         </div>
                     </header>
-                   
+

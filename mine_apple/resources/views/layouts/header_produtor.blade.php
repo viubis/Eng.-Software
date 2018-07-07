@@ -7,28 +7,27 @@
                         <div class="top_bar_content ml-auto">
                             <div class="top_bar_user">
                                 @guest
-                                    <div class="user_icon"><img src="{{asset('images/iconUser.png')}}" alt=""></div>
-                                    <div><a href="{{url('/login')}}">Cadastrar</a></div>
+                                    <div class="user_icon"><i style="color: #08c8b0;" class="fa fa-user-circle fa-2x"></i></div>
+                                    <div><a href="{{url('/login')}}">Cadastre-se ou acesse a sua conta clicando aqui</a></div>
                                 @else
-                                    <!-- Icone usuário logado -->
-                                    <div class="cart">
-                                        <div class="cart_container d-flex flex-row align-items-center justify-content-end">
-                                            <div class="cart_icon">
-                                                <i class="fa fa-user-circle fa-4x" style="color: #08c8b0 "></i>
+                                <!-- Icone usuário logado -->
+                                    <div class="top_bar_user">
+                                        <div class="row">
+                                            <div class="col-md-1 mt-3">
+                                                <i style="color: #08c8b0;" class="fa fa-user-circle fa-2x"></i>
                                             </div>
-                                            <div class="cart_content">
-                                                <div class="cart_text"><a href="#">{{Auth::user()->produtor->nomeFantasia}} <span class="caret"></span></a>
-                                                            
-                                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                        <a class="dropdown-item" href="{{ route('logout') }}"
-                                                                 onclick="event.preventDefault();
+                                            <div class="col-md-4">
+                                                <a style="font-size: 13px" href="#">{{Auth::user()->produtor->nomeFantasia}} <span
+                                                    ></span></a>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <a class="dropdown-item" style="font-size: 13px;border: none" href="{{ route('logout') }}"
+                                                   onclick="event.preventDefault();
                                                                  document.getElementById('logout-form').submit();">{{ __('Sair') }}</a>
 
-                                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                        @csrf
-                                                        </form>
-                                                    </div>
-                                                 </div>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    @csrf
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
@@ -49,7 +48,7 @@
                     <!-- Logo -->
                     <div class="col-lg-4 col-sm-3 col-3 order-1">
                         <div class="logo_container">
-                            <div class="logo_icon"><img src="{{asset('images/logoSite.png')}}" class="img-fluid" alt=""></div>
+                            <div class="logo_icon"><img src="{{asset('images/logoSite2.png')}}" class="img-fluid" alt=""></div>
                         </div>
                     </div>
 
@@ -132,9 +131,8 @@
                                 </form>
                             </div>
                             <ul class="page_menu_nav">
-
                                 <li class="page_menu_item">
-                                    <a href="#">Meus Dados<i class="fa fa-angle-down"></i></a>
+                                    <a style="font-size: 10px" href="#">Meus Dados<i class="fa fa-angle-down"></i></a>
                                 </li>
                                 <li class="page_menu_item">
                                     <a href="#">Resumo da Conta<i class="fa fa-angle-down"></i></a>

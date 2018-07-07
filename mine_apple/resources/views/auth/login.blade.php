@@ -154,7 +154,7 @@
                 <div
                     class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                     <div class="copyright_content">
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                        Copyright &copy;<script>document.write(new Date().getFullYear().toString());</script>
                         Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
                                                                                   aria-hidden="true"></i> pela <a
                             href="#" target="_blank">Weiche Technologie</a>
@@ -173,9 +173,6 @@
 <script src="{{asset('js/jquery.backstretch.min.js')}}"></script>
 <script src="{{asset('js/script_tela_login.js')}}"></script>
 
-<!--[if lt IE 10]>
-<script src="{{asset('js/placeholder_tela_de_login.js')}}"></script>
-<![endif]-->
 
 </body>
 
