@@ -9,8 +9,7 @@
                                 <div class="top_bar_user">
                                     @guest
                                         <div class="user_icon"><img src="{{asset('images/iconUser.png')}}" alt=""></div>
-                                        <div><a href="{{url("/login")}}">Cadastrar</a></div>
-                                        <div><a href="{{url("/login")}}">Login</a></div>
+                                        <div><a href="{{url('/login')}}">Acesso</a></div>
                                     @else
                                         <!-- Icone usuário logado -->
                                         <div class="cart">

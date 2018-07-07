@@ -7,8 +7,7 @@
                             <div class="top_bar_content ml-auto">
                                 <div class="top_bar_user">
                                     <div class="user_icon"><img src="{{asset('images/iconUser.png')}}" alt=""></div>
-                                    <div><a href="{{url("/login")}}">Cadastrar</a></div>
-                                    <div><a href="{{url("/login")}}">Login</a></div>
+                                    <div><a href="{{url('/login')}}">Cadastrar</a></div>
                                 </div>
                             </div>
                         </div>
