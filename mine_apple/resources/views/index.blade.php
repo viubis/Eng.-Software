@@ -30,19 +30,19 @@
 
     <!-- Header -->
     @if(Auth::check())
-        <!-- @if(Auth::user()->consumidor != null)
+        @if(Auth::user()->consumidor != null)
             @include('layouts.header_consumidor')
         @elseif(Auth::user()->produtor != null)
             @include('layouts.header_produtor')
         @elseif(Auth::user()->administrador != null)
             @include('layouts.header_administrador')
-        @endif -->
+        @endif 
     @else
+    
         @include('layouts.header_usuario')
     @endif
 
     <!-- Banner -->
-
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"
          style="width: 100%; height: 400px; overflow: hidden">
         <ol class="carousel-indicators">
