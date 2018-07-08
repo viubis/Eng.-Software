@@ -50,6 +50,8 @@ Route::middleware(['auth'])->group(function () {
             return Auth::user()->email . ' é usuário';
         });
 
+        Route::get('/produto/{id}', 'PublicoController@getDetalhesProduto');
+
     });
 
 
