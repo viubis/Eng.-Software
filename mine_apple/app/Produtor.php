@@ -35,4 +35,14 @@ class Produtor extends Model
     {
         return $this->hasMany('mine_apple\Assinatura', 'produtor_id');
     }
+
+    /**
+     * Recebe a distância e retorna o valor do frete
+     * se a distância for maior que o raio máximo retorna -1
+     * @param $distancia
+     * @return int
+     */
+    public function frete($distancia) {
+        return 10;
+    }
 }
