@@ -73,7 +73,7 @@
                                            class="form-last-name form-control" id="cpf" data-mask="000.000.000-00" required>
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="cpf">CPF</label>
+                                    <label class="sr-only" for="telefone">CPF</label>
                                     <input type="text" name="telefone" placeholder="Telefone..."
                                            class="form-last-name form-control" id="telefone" data-mask="(00) 00000-0000" required>
                                 </div>

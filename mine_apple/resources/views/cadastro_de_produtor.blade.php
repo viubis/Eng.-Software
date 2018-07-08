@@ -80,7 +80,7 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="telefoneComercial">Telefone Comercial</label>
                                     <input type="tel" name="telefone" placeholder="Telefone Comercial..."
-                                           class="form-first-name form-control" required id="telefoneComercial" data-mask="(00) 00000-0000">
+                                           class="form-first-name form-control" required id="telefoneComercial" data-mask="(00) 00000-0000"required>
                                 </div>
 
                                 <div class="form-group">

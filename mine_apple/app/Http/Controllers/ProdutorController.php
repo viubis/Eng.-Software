@@ -78,6 +78,8 @@ class ProdutorController extends Controller
         $conta->digito = $request->digito;
         $conta->save();
 
+         return redirect()->route('produtor');
+
     }
 
     /**

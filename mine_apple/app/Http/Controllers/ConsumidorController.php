@@ -96,7 +96,7 @@ class ConsumidorController extends Controller
 
         $cartao->save();
 
-        
+        return redirect()->route('consumidor');
 
     }
 
