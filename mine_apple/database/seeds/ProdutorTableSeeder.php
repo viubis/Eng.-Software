@@ -18,7 +18,7 @@ class ProdutorTableSeeder extends Seeder
         	'cnpj' => '123213',
         	'nomeFantasia' => 'Fantasia',
         	'razaoSocial' => 'Fantasia',
-        	'telefone' => 213223,
+        	'telefone' => '213223',
         	'raioEntrega' => 20,
         	'avaliacao' => 8,
         	'acesso' => 1

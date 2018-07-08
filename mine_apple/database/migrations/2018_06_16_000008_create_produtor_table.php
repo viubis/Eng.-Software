@@ -14,7 +14,7 @@ class CreateProdutorTable extends Migration
             $table->string('cnpj')->unique();
             $table->string('nomeFantasia');
             $table->string('razaoSocial');
-            $table->integer('telefone')->nullable();
+            $table->string('telefone')->nullable();
             $table->double('raioEntrega');
             $table->double('avaliacao');
             $table->tinyInteger('acesso');

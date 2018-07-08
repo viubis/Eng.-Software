@@ -53,7 +53,7 @@ class ProdutorController extends Controller
 
 
 
-
+        //dd($request->all());
         //Informações Produtor
         $produtor = new Produtor;
         $produtor->usuario_id = Auth::user()->id;

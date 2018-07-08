@@ -14,7 +14,7 @@ class CreateConsumidorTable extends Migration
             $table->string('nome');
             $table->string('sobrenome');
             $table->enum('sexo', ['m', 'f'])->nullable();
-            $table->integer('telefone')->nullable();
+            $table->string('telefone')->nullable();
             $table->tinyInteger('acesso');
 
             $table->primary('usuario_id');

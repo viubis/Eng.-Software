@@ -18,7 +18,7 @@ class ConsumidorTableSeeder extends Seeder
         	'nome' => 'Consumidor',
         	'sobrenome' => 'Teste',
         	'sexo' => 'm',
-        	'telefone' => 31232,
+        	'telefone' => '31232',
         	'acesso' => 1
         ]);
     }
