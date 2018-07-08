@@ -14,14 +14,4 @@ class Cep extends Model
     public static function validar($cep) {
         return true;
     }
-
-    /**
-     * Calcula a distância entre dois ceps
-     * @param $cep1
-     * @param $cep2
-     * @return int
-     */
-    public static function distancia($cep1, $cep2) {
-        return 10;
-    }
 }

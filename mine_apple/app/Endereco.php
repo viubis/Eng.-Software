@@ -25,4 +25,14 @@ class Endereco extends Model
     {
         return $this->belongsTo('mine_apple\Cidade', 'cidade_id');
     }
+
+    /**
+     * Calcula a distância entre dois endereços
+     * @param Endereco $endereco1
+     * @param Endereco $endereco2
+     * @return int
+     */
+    public static function distancia(Endereco $endereco1, Endereco $endereco2) {
+        return 10;
+    }
 }
