@@ -4,6 +4,9 @@ namespace mine_apple\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use mine_apple\Produto;
+use mine_apple\Embalagem;
+use mine_apple\Produtor;
 
 class PublicoController extends Controller
 {
@@ -34,5 +37,12 @@ class PublicoController extends Controller
     }
     public function carrinho(){
         return view('Carrinho_de_compras');
+    }
+
+    public function getDetalhesProduto($id){
+        $produto = Produto::where('id', '=', $id);
+        $produtores = Produtor::all();
+        $embalagens = Embalagem::all();
+        return view('visualização_detalhada_produto', compact('produto', 'produtores', 'embalagem'));
     }
 }

@@ -185,6 +185,11 @@ class ConsumidorController extends Controller
 
     }
 
+    public function getAvaliacaoAssinatura(){
+        $assinaturas = Assinatura::all();
+        return view('avaliacao_assinatura', compact('assinaturas'));
+    }
+
     /**
      * @author Lucas Alves
      * @param $categoria - categoria que será pesquisada

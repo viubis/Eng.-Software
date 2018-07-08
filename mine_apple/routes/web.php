@@ -50,6 +50,8 @@ Route::middleware(['auth'])->group(function () {
             return Auth::user()->email . ' é usuário';
         });
 
+        Route::get('/produto/{id}', 'PublicoController@getDetalhesProduto');
+
     });
 
 
@@ -100,6 +102,8 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/pesquisa_produtos', 'ConsumidorController@getPesquisaTodosProdutos');
 
         /*Route::get('/pesquisa_produtos/{categoria}', 'ConsumidorController@getPesquisaTodosProdutos')->where('categoria', '[0-7]+');*/
+
+        Route::get('/avaliacao_assinatura', 'ConsumidorController@getAvaliacaoAssinatura')
 
     });
 
