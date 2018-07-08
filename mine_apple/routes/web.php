@@ -103,7 +103,7 @@ Route::middleware(['auth'])->group(function () {
 
         /*Route::get('/pesquisa_produtos/{categoria}', 'ConsumidorController@getPesquisaTodosProdutos')->where('categoria', '[0-7]+');*/
 
-        Route::get('/avaliacao_assinatura', 'ConsumidorController@getAvaliacaoAssinatura')
+        Route::get('/avaliacao_assinatura', 'ConsumidorController@getAvaliacaoAssinatura');
 
     });
 
@@ -129,4 +129,5 @@ Route::middleware(['auth'])->group(function () {
         //Route::get('/produtor/cadastrar_endereco', 'ProdutorController@cadastrarEndereco')->name('produtor.endereco.cadastrar');
 
     });
+
 });
