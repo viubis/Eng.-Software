@@ -62,6 +62,7 @@ class ConsumidorController extends Controller
         $consumidor->sobrenome = $request->sobrenome;
         $consumidor->sexo = $request->sexo;
         $consumidor->cpf = $request->cpf;
+        $consumidor->telefone = $request->telefone;
         $consumidor->acesso = 1;
 
         //$this->adicionarCartao($request);

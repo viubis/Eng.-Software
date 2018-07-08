@@ -12,10 +12,10 @@ class CreateCartaoTable extends Migration
             //
             $table->increments('id');
             $table->integer('consumidor_id')->unsigned();
-            $table->string('numero_cartao');
+            $table->string('numero_cartao', 255);
             $table->string('titular');
             $table->string('validade');
-            $table->string('codigo');
+            $table->string('codigo', 255);
 
             $table->index('consumidor_id', 'fk_cartao_consumidor_idx');
 
