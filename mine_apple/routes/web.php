@@ -44,6 +44,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/home', 'UsuarioController@home')->name('home');
     Route::get('/minhascompras', 'UsuarioController@minhasCompras');
+    Route::get('/produto/{id}', 'PublicoController@getDetalhesProduto');
 
 
     //Rotas para usuários que não definiram o tipo de conta ----------------------------------------
@@ -53,7 +54,7 @@ Route::middleware(['auth'])->group(function () {
             return Auth::user()->email . ' é usuário';
         });
 
-        Route::get('/produto/{id}', 'PublicoController@getDetalhesProduto');
+        
 
     });
 

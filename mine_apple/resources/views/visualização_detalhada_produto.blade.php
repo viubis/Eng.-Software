@@ -81,12 +81,12 @@
                 <!-- Description -->
                 <div class="col-md-4">
                     <div class="product_description">
-                        <div class="product_category">Frutas</div>
-                        <div class="product_name">Abacaxi</div>
-                        <div class="product_text"><p>Produzido e entregue por: <br/> Verduras & CIA</p></div>
+                        <div class="product_category">{{$categoria->nome}}</div>
+                        <div class="product_name">{{$produto->nome}}</div>
+                        <div class="product_text"><p>Produzido e entregue por: <br/> {{$produtor->nomeFantasia}}</p></div>
                         <div class="order_info d-flex flex-row">
                             <form action="#">
-                                <div class="product_price">R$2,50</div>
+                                <div class="product_price">{{$produto->preco}}</div>
                                 <div class="clearfix" style="z-index: 1000;">
 
                                     <!-- Product Quantity -->
@@ -116,8 +116,8 @@
                                 <div class="product_rassurance">
                                     <p class="mb-0" style="color: black">Informações sobre o vendedor</p>
                                     <p class="local mb-0" style="color: black"><i class="fa fa-map-marker-alt fa-2x"></i> Localização</p>
-                                    <p class="mt-0 mb-0">Feira de Santana, Bahia</p>
-                                    <div class="row">
+                                    <p class="mt-0 mb-0">{{$cidade->nome}}, {{$estado->nome}}</p>
+                                    <!-- <div class="row">
                                         <div class="col-md-4 primeiro" align="center">
                                             <i class="fas fa-sort-numeric-up fa-2x"></i><br/>420 assinaturas nos últimos 2 meses
                                         </div>
@@ -127,7 +127,7 @@
                                         <div class="col-md-4" align="center">
                                             <i class="far fa-clock fa-2x"></i><br/>Entrega os produtos com atraso
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
 
                             </form>
