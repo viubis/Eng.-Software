@@ -8,6 +8,10 @@ use mine_apple\Produtor;
 use mine_apple\Consumidor;
 use mine_apple\Usuario;
 use mine_apple\Produto;
+use mine_apple\ConsumidorEndereco;
+use mine_apple\Endereco;
+use mine_apple\Cidade;
+use mine_apple\Estado;
 
 class AdministradorController extends Controller
 {
@@ -24,13 +28,20 @@ class AdministradorController extends Controller
 
     public function getGerenciamentoConsumidores(){
     	$consumidores = Consumidor::all();
-    	return view('gerenciamento_de_usuario_consumidor', compact('consumidores'));
+        $enderecos = Endereco::all();
+        $consumidor_enderecos = ConsumidorEndereco::all();
+        $cidades = Cidade::all();
+        $estados = Estado::all();
+    	return view('gerenciamento_de_usuario_consumidor', compact('consumidores', 'enderecos','consumidor_enderecos', 'cidades', 'estados'));
     }
 
     public function getGerenciamentoProdutores(){
     	$produtores = Produtor::all();
         $produtos = Produto::all();
-    	return view('gerenciamento_usuario_produtor', compact('produtores', 'produtos'));
+        $enderecos = Endereco::all();
+        $cidades = Cidade::all();
+        $estados = Estado::all();
+    	return view('gerenciamento_usuario_produtor', compact('produtores', 'produtos', 'enderecos', 'cidades', 'estados'));
     }
 
     public function getGerenciamentoSistema(){

@@ -53,6 +53,7 @@
                         <label class="my-0 mr-2" style="font-size: 20px">Usuário <i class="fa fa-at"></i>consumidor
                         </label>
                         <div class="pb-0" id="line"></div>
+                        @foreach($consumidores as $consumidor)
                         <div class="form-row">
                             <div class="form-group col-md-2">
                                 <i class="fa fa-user-circle fa-8x"></i>
@@ -61,48 +62,60 @@
                             <div class="form-group col-md-10">
                                 <div class="row">
                                     <div class="form-group col-md-3" style="margin-right: -20px">
-                                        <label for="staticNome" class="col-form-label">Nome fantasia</label>
+                                        <label for="staticNome" class="col-form-label">Nome</label>
                                     </div>
                                     <div class="form-group col-md-5">
                                         <input type="text" readonly class="form-control-plaintext"
                                                id="staticNomeFantasia"
-                                               placeholder="Nome fantasia" name="nomeFantasia" disabled>
+                                               placeholder="{{$consumidor->nome}}" name="nomeFantasia" readonly>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-md-3" style="margin-right: -20px">
-                                        <label for="staticCNPJ" class="col-form-label">CNPJ</label>
+                                        <label for="staticCNPJ" class="col-form-label">CPF</label>
                                     </div>
                                     <div class="form-group col-md-5">
                                         <input type="text" readonly class="form-control-plaintext" id="staticCNPJ"
-                                               placeholder="CNPJ" disabled name="cnpj">
+                                               placeholder="{{$consumidor->cpf}}" readonly name="cpf">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    @php $consumidor_endereco_atual =  $consumidor_enderecos->where('consumidor_id', '=', $consumidor->usuario_id)->first() @endphp
+
+                                    @php $endereco = $enderecos->where('id', '=', $consumidor_endereco_atual->endereco_id)->first()@endphp
+                                    <div class="form-group col-md-3" style="margin-right: -20px">
+                                        <label for="staticCNPJ" class="col-form-label">Cidade</label>
+                                    </div>
+                                    @php $cidade = $cidades->where('id','=', $endereco->cidade_id)->first() @endphp
+                                    <div class="form-group col-md-5">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticCNPJ"
+                                               placeholder="{{$cidade->nome}}" readonly name="cpf">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md-3" style="margin-right: -20px">
+                                        <label for="staticCNPJ" class="col-form-label">Estado</label>
+                                    </div>
+                                    <div class="form-group col-md-5">
+                                        @php $estado = $estados->where('id', '=', $cidade->estado_id)->first() @endphp
+                                        <input type="text" readonly class="form-control-plaintext" id="staticCNPJ"
+                                               placeholder="{{$estado->nome}}" readonly name="cpf">
+                                        
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <input id="userBloqueado" name="userBloqueado" type="checkbox" value="nao">
+                                <input id="userBloqueado" name="userBloqueado" type="checkbox" value="{{$consumidor->acesso}}">
                                 <label for="userBloqueado">Acesso negado a plataforma</label>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group  col-md-10">
-                                <label class="my-0 mr-2" style="font-size: 20px">Categoria </label>
-                            </div>
-                            <div class="form-group  col-md-2" align="right">
-                                <!--                                <button type="submit" class="btn btn-primary">Atualizar</button>-->
-                                <a href="#">Atualizar</a>
-                            </div>
-                        </div>
-                        <div class="pb-0" id="line" style="margin-top: -15px"></div>
-                        <div class="form-row">
-                            <div class="form-group  col-md-6">
-                                <p style="color: #000000; font-size: 15px">Atual: consumidor</p>
-                            </div>
-                            <div class="form-group  col-md-3">
-                                <a href="#">Alterar para produtor</a>
-                            </div>
-                        </div>
+                        @endforeach
+                        
+                        <!-- <div class="pb-0" id="line" style="margin-top: -15px"></div> -->
+                        
                     </form>
                 </div>
             </div>
