@@ -8,6 +8,7 @@
         "php": "^7.1.3",
         "fideloper/proxy": "^4.0",
         "gloudemans/shoppingcart": "^2.5",
+        "guzzlehttp/guzzle": "~5.3|~6.0",
         "laravel-validation-rules/credit-card": "^1.0",
         "laravellegends/pt-br-validator" : "^5.1",
         "laravel/framework": "5.6.*",

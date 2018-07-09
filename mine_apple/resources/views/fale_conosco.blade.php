@@ -49,7 +49,7 @@
                                                 </div>
                                                 <div class="cart_content">
                                                     <div class="cart_text"><a href="#">{{Auth::user()->consumidor->nome}} <span class="caret"></span></a>
-                                                            
+
                                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                                             <a class="dropdown-item" href="{{ route('logout') }}"
                                                                  onclick="event.preventDefault();
@@ -286,7 +286,8 @@
                     <div class="contact_form_container">
                         <div class="contact_form_title">Fale conosco</div>
 
-                        <form action="#" id="contact_form">
+                        <form action="{{route('enviarMensagem')}}" id="contact_form" method="POST">
+                            @csrf
                             <div
                                 class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
                                 <input type="text" id="contact_form_name" class="contact_form_name input_field"
@@ -299,7 +300,7 @@
                                        placeholder="Seu número de telefone" name="telefone">
                             </div>
                             <div class="contact_form_text">
-                                <textarea id="contact_form_message" class="text_field contact_form_message"
+                                <textarea id="mensagem" class="text_field contact_form_message"
                                           name="mensagem" rows="4" placeholder="Mensagem" required="required"
                                           data-error="Por favor, escreva-nos uma mensagem."></textarea>
                             </div>
