@@ -37,12 +37,18 @@ class Produtor extends Model
     }
 
     /**
-     * Recebe a distância e retorna o valor do frete
-     * se a distância for maior que o raio máximo retorna -1
+     * Calcula o valor do frete
+     *
+     * @param $raioEntrega
      * @param $distancia
-     * @return int
+     * @param $freteMax
+     * @return int -1 se a distância for maior que o raio de entrega
      */
-    public function frete($distancia) {
-        return 10;
+    public static function frete($raioEntrega, $distancia, $freteMax) {
+        if($distancia <= $raioEntrega) {
+            return $distancia / $raioEntrega * $freteMax;
+        }
+
+        return -1 ;
     }
 }
