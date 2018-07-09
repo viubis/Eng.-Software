@@ -21,6 +21,7 @@ class FaleConoscoController
     public function enviar(Request $request){
 
         Mail::to('victoria.oliveiragomes@gmail.com')->send(new envioEmail($request));
+        return view('fale_conosco')->with('Email enviado com sucesso!');
     }
 
 }
