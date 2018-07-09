@@ -45,6 +45,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/home', 'UsuarioController@home')->name('home');
     Route::get('/minhascompras', 'UsuarioController@minhasCompras');
     Route::get('/produto/{id}', 'PublicoController@getDetalhesProduto');
+    Route::get('/pesquisa_produtos', 'PublicoController@getPesquisaTodosProdutos');
+    Route::get('/pesquisa_produtos/{categoria}', 'PublicoController@getPesquisaCategoriasProdutos')->where('categoria', '[0-7]+');
 
 
     //Rotas para usuários que não definiram o tipo de conta ----------------------------------------
@@ -103,9 +105,7 @@ Route::middleware(['auth'])->group(function () {
 
         //Pesquisa por categorias
 
-        Route::get('/pesquisa_produtos', 'ConsumidorController@getPesquisaTodosProdutos');
-
-        /*Route::get('/pesquisa_produtos/{categoria}', 'ConsumidorController@getPesquisaTodosProdutos')->where('categoria', '[0-7]+');*/
+        
 
         Route::get('/avaliacao_assinatura', 'ConsumidorController@getAvaliacaoAssinatura');
 

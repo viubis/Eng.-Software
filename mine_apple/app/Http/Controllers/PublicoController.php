@@ -43,6 +43,27 @@ class PublicoController extends Controller
         return view('carrinho_de_compras');
     }
 
+    public function getPesquisaCategoriasProdutos($categoria){
+    
+        $produtos = Produto::where('categoria_id','=', $categoria)->get();
+        $produtores = Produtor::all();
+        $embalagens = Embalagem::all();
+
+        return view('pesquisa_de_produtos', compact('produtos', 'produtores', 'embalagem'));
+    }
+
+    /**
+     * @author Lucas Alves
+     * @return string
+     */
+    public function getPesquisaTodosProdutos(){
+        
+        $produtos = Produto::all();
+        $produtores = Produtor::all();
+        $embalagens = Embalagem::all();
+        return view('pesquisa_de_produtos', compact('produtos', 'produtores', 'embalagem'));
+    }   
+
     public function getDetalhesProduto($id){
         $produto = Produto::where('id', '=', $id)->first();
         $produtor = Produtor::where('usuario_id', '=' ,$produto->produtor_id)->first();

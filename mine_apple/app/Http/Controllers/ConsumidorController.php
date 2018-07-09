@@ -150,17 +150,7 @@ class ConsumidorController extends Controller
         return view('adicionar_endereco',compact('estados'));
     }
 
-    /**
-     * @author Lucas Alves
-     * @return string
-     */
-    public function getPesquisaTodosProdutos(){
-        
-        $produtos = Produto::all();
-        $produtores = Produtor::all();
-        $embalagens = Embalagem::all();
-        return view('pesquisa_de_produtos', compact('produtos', 'produtores', 'embalagem'));
-    }
+    
 
     /**
      * @author Lucas Alves
@@ -196,20 +186,7 @@ class ConsumidorController extends Controller
      * @param $categoria - categoria que será pesquisada
      * @return string
      */
-    public function getPesquisaCategoriasProdutos($categoria){
-        $produtos = null;
-        $produtores = null;
-        $embalagens = null;
-        if ($categoria = 0)
-            $produtos = Produto::all();
-        else
-            $produtos = Produto::where('id', $categoria)->get();
-
-        $produtores = Produtor::all();
-        $embalagens = Embalagem::all();
-
-        return view('pesquisa_de_produtos', compact('produtos', 'produtores', 'embalagem'));
-    }                         
+                          
     /**
      * @author Edcarlos
      * @param Request $request

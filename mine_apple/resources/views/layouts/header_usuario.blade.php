@@ -42,14 +42,14 @@
                                                     class="custom_dropdown_placeholder clc">Todas as categorias</span>
                                                     <i class="fas fa-chevron-down"></i>
                                                     <ul class="custom_list clc">
-                                                        <li><a class="clc" href="#">Todas as categorias</a></li>
-                                                        <li><a class="clc" href="#">Cereais</a></li>
-                                                        <li><a class="clc" href="#">Frutas</a></li>
-                                                        <li><a class="clc" href="#">Legumes</a></li>
-                                                        <li><a class="clc" href="#">Leguminosas</a></li>
-                                                        <li><a class="clc" href="#">Raízes</a></li>
-                                                        <li><a class="clc" href="#">Tubérculos</a></li>
-                                                        <li><a class="clc" href="#">Verduras</a></li>
+                                                        <li><a class="clc" href="/pesquisa_produtos">Todas as categorias</a></li>
+                                                        <li><a class="clc" href="/pesquisa_produtos/1">Cereais</a></li>
+                                                        <li><a class="clc" href="/pesquisa_produtos/2">Frutas</a></li>
+                                                        <li><a class="clc" href="/pesquisa_produtos/3">Legumes</a></li>
+                                                        <li><a class="clc" href="/pesquisa_produtos/4">Leguminosas</a></li>
+                                                        <li><a class="clc" href="/pesquisa_produtos/5">Raízes</a></li>
+                                                        <li><a class="clc" href="/pesquisa_produtos/6">Tubérculos</a></li>
+                                                        <li><a class="clc" href="/pesquisa_produtos/7">Verduras</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -99,13 +99,13 @@
                                     </div>
 
                                     <ul class="cat_menu">
-                                        <li><a href="#">Cereais <i class="fas fa-chevron-right ml-auto"></i></a></li>
-                                        <li><a href="#">Frutas<i class="fas fa-chevron-right"></i></a></li>
-                                        <li><a href="#">Legumes<i class="fas fa-chevron-right"></i></a></li>
-                                        <li><a href="#">Leguminosas<i class="fas fa-chevron-right"></i></a></li>
-                                        <li><a href="#">Raízes<i class="fas fa-chevron-right"></i></a></li>
-                                        <li><a href="#">Tubérculos<i class="fas fa-chevron-right"></i></a></li>
-                                        <li><a href="#">Verduras<i class="fas fa-chevron-right"></i></a></li>
+                                        <li><a href="/pesquisa_produtos/1">Cereais <i class="fas fa-chevron-right ml-auto"></i></a></li>
+                                        <li><a href="/pesquisa_produtos/2">Frutas<i class="fas fa-chevron-right"></i></a></li>
+                                        <li><a href="/pesquisa_produtos/3">Legumes<i class="fas fa-chevron-right"></i></a></li>
+                                        <li><a href="/pesquisa_produtos/4">Leguminosas<i class="fas fa-chevron-right"></i></a></li>
+                                        <li><a href="/pesquisa_produtos/5">Raízes<i class="fas fa-chevron-right"></i></a></li>
+                                        <li><a href="/pesquisa_produtos/6">Tubérculos<i class="fas fa-chevron-right"></i></a></li>
+                                        <li><a href="/pesquisa_produtos/7">Verduras<i class="fas fa-chevron-right"></i></a></li>
                                     </ul>
                                 </div>
 
