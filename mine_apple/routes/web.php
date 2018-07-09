@@ -14,6 +14,7 @@ Route::get('tipo_cadastro', 'PublicoController@getTipoCadastro');
 
 Route::post('/enviar', 'FaleConoscoController@enviar')->name('enviarMensagem');
 
+
 //Rotas para facebook socialite -----------------------------------------------------------
 
 Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
