@@ -36,7 +36,7 @@ class PublicoController extends Controller
         return view('fale_conosco');
     }
     public function carrinho(){
-        return view('Carrinho_de_compras');
+        return view('carrinho_de_compras');
     }
 
     public function getDetalhesProduto($id){
