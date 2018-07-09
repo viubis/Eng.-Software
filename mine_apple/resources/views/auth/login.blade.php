@@ -68,10 +68,10 @@
                     <div class="social-login">
                         <h3>...ou entre com:</h3>
                         <div class="social-login-buttons">
-                            <a class="btn btn-link-2" href="#">
+                            <a class="btn btn-link-2" href="{{url("/login/facebook")}}">
                                 <i class="fa fa-facebook"></i> Facebook
                             </a>
-                            <a class="btn btn-link-2" href="#">
+                            <a class="btn btn-link-2" href="{{url("/login/google")}}">
                                 <i class="fa fa-google-plus"></i> Google +
                             </a>
                         </div>
@@ -128,10 +128,10 @@
                         <div class="social-login">
                             <h3>...ou cadastre-se com:</h3>
                             <div class="social-login-buttons">
-                                <a class="btn btn-link-2" href="#">
+                                <a class="btn btn-link-2" href="/login/google">
                                     <i class="fa fa-facebook"></i> Facebook
                                 </a>
-                                <a class="btn btn-link-2" href="#">
+                                <a class="btn btn-link-2" href="{{url("/login/facebook")}}">
                                     <i class="fa fa-google-plus"></i> Google +
                                 </a>
                             </div>

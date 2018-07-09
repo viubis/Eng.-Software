@@ -60,30 +60,30 @@ class LoginController extends Controller
     {
         $user = Socialite::driver('facebook')->user();
 
-        //return $user->name;
-        $achaUsuario = User::where('email', $user->email)->first();
-        if($achaUsuario){
-            Auth::login($user->email);
-            return view('index')->with("Conta acessada");
-        }else{
-            $usuario = new User();
-            $usuario->email = $user->email;
-            $usuario->senha = null;
-            $user->save();
-
-            $costumer = new Consumidor();
-            $costumer->nome = $user->first_name;
-            $costumer->sobrenome = $user->last_name;
-            $costumer->usuario_id = $usuario->id;
-            $costumer->save();
-            Auth::login($costumer);
-            return view('index')->with('Cadastro realizado');
-        }
+        return $user->name;
+//        $achaUsuario = User::where('email', $user->email)->first();
+//        if($achaUsuario){
+//            Auth::login($user->email);
+//            return view('index')->with("Conta acessada");
+//        }else{
+//            $usuario = new User();
+//            $usuario->email = $user->email;
+//            $usuario->senha = null;
+//            $user->save();
+//
+//            $costumer = new Consumidor();
+//            $costumer->nome = $user->first_name;
+//            $costumer->sobrenome = $user->last_name;
+//            $costumer->usuario_id = $usuario->id;
+//            $costumer->save();
+//            Auth::login($costumer);
+//            return view('index')->with('Cadastro realizado');
+//        }
 
         // $user->token;
     }
 
-    //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    //----- login do google ----
     /**
      * Redirect the user to the Google authentication page.
      *
