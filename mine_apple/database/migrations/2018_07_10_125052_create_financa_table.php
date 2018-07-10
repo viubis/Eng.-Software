@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFinancasTable extends Migration
+class CreateFinancaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreateFinancasTable extends Migration
      */
     public function up()
     {
-        Schema::create('financas', function (Blueprint $table) {
-            $table->integer('produtor_id');
+        Schema::create('financa', function (Blueprint $table) {
+            $table->integer('usuario_id')->unsigned();
             $table->float('saldo_disponivel')->default('0.0');
             $table->float('valor_a_receber')->default('0.0');
             $table->timestamps();
 
             $table->primary('usuario_id');
-            $table->foreign('produtor_id', 'fk_produtor_financas_idx')
+            $table->foreign('usuario_id', 'fk_produtor_financas_idx')
                 ->references('usuario_id')->on('produtor')
                 ->onDelete('no action')
                 ->onUpdate('no action');
