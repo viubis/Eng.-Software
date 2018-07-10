@@ -32,20 +32,25 @@ class Endereco extends Model
     /**
      * Valida o número do cep
      *
-     * @param $cep
+     * @param $cep somente números
      * @return bool
      */
     public static function validarCep($cep) {
-        if(preg_match("/^[0-9]{2}[0-9]{3}[0-9]{3}$/", $cep) > 0) { //Valida o formato
-
-            //Verifica se existe
-            $response = new DistanceMatrix(new StandardLicense('AIzaSyB04oYaUr3O4pgiKt957DkM5rd_NMuVPAU'));
-            $response->addOrigin($cep);
-            $response->addDestination($cep);
-            return $response->request()->rows()[0]->elements()[0]->successful();
-        }
+        if(preg_match("/^[0-9]{2}[0-9]{3}[0-9]{3}$/", $cep) > 0) //Valida o formato
+            return self::validarTrajeto($cep, $cep);
 
         return false;
+    }
+
+    /**
+     * Valida o trajeto
+     *
+     * @param $origem 'rua, número, cep'
+     * @param $destino 'rua, número, cep'
+     * @return boolean
+     */
+    public static function validarTrajeto($origem, $destino) {
+        return self::distancia($origem, $destino)->successful();
     }
 
     /**
@@ -53,14 +58,16 @@ class Endereco extends Model
      *
      * @param $origem 'rua, número, cep'
      * @param $destino 'rua, número, cep'
-     * @return integer
+     * @return integer distância em metros
      */
     public static function calcularDistancia($origem, $destino) {
-        $response = new DistanceMatrix(new StandardLicense('AIzaSyB04oYaUr3O4pgiKt957DkM5rd_NMuVPAU'));
+        return self::distancia($origem, $destino)->distance();
+    }
 
+    private static function distancia($origem, $destino) {
+        $response = new DistanceMatrix(new StandardLicense('AIzaSyB04oYaUr3O4pgiKt957DkM5rd_NMuVPAU'));
         $response->addOrigin($origem);
         $response->addDestination($destino);
-
-        return $response->request()->rows()[0]->elements()[0]->distance();
+        return $response->request()->rows()[0]->elements()[0];
     }
 }
