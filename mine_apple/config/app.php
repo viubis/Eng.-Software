@@ -162,7 +162,7 @@ return [
 
         Laravel\Socialite\SocialiteServiceProvider::class,
 
-
+        \TeamPickr\DistanceMatrix\Frameworks\Laravel\DistanceMatrixServiceProvider::class,
     ],
 
     /*
@@ -213,6 +213,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
+        'DistanceMatrix' => \TeamPickr\DistanceMatrix\Frameworks\Laravel\DistanceMatrix::class,
     ],
 
     LaravelLegends\PtBrValidator\ValidatorProvider::class,

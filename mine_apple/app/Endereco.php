@@ -2,7 +2,10 @@
 
 namespace mine_apple;
 
+use Canducci\Cep\Cep;
 use Illuminate\Database\Eloquent\Model;
+use TeamPickr\DistanceMatrix\DistanceMatrix;
+use TeamPickr\DistanceMatrix\Licenses\StandardLicense;
 
 class Endereco extends Model
 {
@@ -27,12 +30,37 @@ class Endereco extends Model
     }
 
     /**
-     * Calcula a distância entre dois endereços
-     * @param Endereco $endereco1
-     * @param Endereco $endereco2
-     * @return int
+     * Valida o número do cep
+     *
+     * @param $cep
+     * @return bool
      */
-    public static function distancia(Endereco $endereco1, Endereco $endereco2) {
-        return 10;
+    public static function validarCep($cep) {
+        if(preg_match("/^[0-9]{2}[0-9]{3}[0-9]{3}$/", $cep) > 0) { //Valida o formato
+
+            //Verifica se existe
+            $response = new DistanceMatrix(new StandardLicense('AIzaSyB04oYaUr3O4pgiKt957DkM5rd_NMuVPAU'));
+            $response->addOrigin($cep);
+            $response->addDestination($cep);
+            return $response->request()->rows()[0]->elements()[0]->successful();
+        }
+
+        return false;
+    }
+
+    /**
+     * Calcula a distância entre dois endereços
+     *
+     * @param $origem 'rua, número, cep'
+     * @param $destino 'rua, número, cep'
+     * @return integer
+     */
+    public static function calcularDistancia($origem, $destino) {
+        $response = new DistanceMatrix(new StandardLicense('AIzaSyB04oYaUr3O4pgiKt957DkM5rd_NMuVPAU'));
+
+        $response->addOrigin($origem);
+        $response->addDestination($destino);
+
+        return $response->request()->rows()[0]->elements()[0]->distance();
     }
 }
