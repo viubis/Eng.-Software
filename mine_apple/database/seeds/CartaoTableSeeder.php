@@ -12,6 +12,9 @@ class CartaoTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('cartao')->insert([
+            ['id' => 1, 'consumidor_id' => 1, 'numero_cartao' => '12345678789', 'titular' => 'Consumidor',
+                'validade'=>'22/11/2010', 'codigo'=>'491'],
+        ]);
     }
 }
