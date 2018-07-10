@@ -92,7 +92,7 @@
                                         </div>
 
                                         <button type="submit" class="header_search_button trans_300" value="Submit"><img
-                                                src="images/search.png" alt=""></button>
+                                                src="{{asset('images/search.png')}}" alt=""></button>
                                     </form>
                                 </div>
                             </div>
@@ -270,7 +270,7 @@
        <div class="container">
            <div class="row">
                <div class="col-lg-12 ">
-                   <!--<div class="contact_form_title">Detalhes da Assinatura</div>-->
+                   <!--<div class="contact_form_title">Detalhes da AssinaturaController</div>-->
                    <h1 class="h1 page-title" data-reactid="30">Definição de assinatura</h1>
                    <div class="pb-0" id="line"></div>
                </div>

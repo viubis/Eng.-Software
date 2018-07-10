@@ -17,10 +17,11 @@ class FaleConoscoController
     /**
      * Envia uma mensagem para o email do site, provinda de um consumidor
      * @param Request $request
+     * @return
      */
     public function enviar(Request $request){
 
-        Mail::to('victoria.oliveiragomes@gmail.com')->send(new envioEmail($request));
+        Mail::to('mineapple.organicstore@gmail.com')->send(new envioEmail($request));
         return view('fale_conosco')->with('Email enviado com sucesso!');
     }
 

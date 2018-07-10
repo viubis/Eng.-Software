@@ -68,7 +68,7 @@ class ConsumidorController extends Controller
         //$this->adicionarCartao($request);
         //$this->cadastrarEndereco($request);
 
-        $consumidor_endereco = new ConsumidorEndereco; 
+        $consumidor_endereco = new ConsumidorEndereco;
         $endereco = new Endereco();
         $endereco->rua = $request->rua;
         $endereco->numero = $request->numero;
@@ -89,9 +89,9 @@ class ConsumidorController extends Controller
         $cartao->titular = $request->titular;
         $cartao->validade = $request->validade;
         $cartao->codigo = $request->codigo;
-        
 
-        
+
+
 
         $consumidor_endereco->save();
 
@@ -150,7 +150,7 @@ class ConsumidorController extends Controller
         return view('adicionar_endereco',compact('estados'));
     }
 
-    
+
 
     /**
      * @author Lucas Alves
@@ -177,7 +177,7 @@ class ConsumidorController extends Controller
     }
 
     public function getAvaliacaoAssinatura(){
-        $assinaturas = Assinatura::all();
+        $assinaturas = AssinaturaController::all();
         return view('avaliacao_assinatura', compact('assinaturas'));
     }
 
@@ -186,14 +186,14 @@ class ConsumidorController extends Controller
      * @param $categoria - categoria que será pesquisada
      * @return string
      */
-                          
+
     /**
      * @author Edcarlos
      * @param Request $request
      * @return string
      */
     public function cadastrarEndereco(Request $request) {
-        $consumidor_endereco = new ConsumidorEndereco; 
+        $consumidor_endereco = new ConsumidorEndereco;
         $endereco = new Endereco;
         $endereco->rua = $request->rua;
         $endereco->numero = $request->numero;
@@ -206,4 +206,5 @@ class ConsumidorController extends Controller
         $consumidor_endereco->endereco_id = $endereco->id;
         $consumidor_endereco->consumidor_id = Auth::user()->id;
     }
+
 }

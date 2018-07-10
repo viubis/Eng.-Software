@@ -48,7 +48,7 @@
        <div class="container">
            <div class="row">
                <div class="col-lg-12 ">
-                   <!--<div class="contact_form_title">Detalhes da Assinatura</div>-->
+                   <!--<div class="contact_form_title">Detalhes da AssinaturaController</div>-->
                    <h1 class="h1 page-title" data-reactid="38">Todos os produtos</h1>
                    <div class="pb-0" id="line"></div>
                </div>

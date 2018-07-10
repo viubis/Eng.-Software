@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use mine_apple\Categoria;
 use mine_apple\Embalagem;
-use mine_apple\financas;
+use mine_apple\Financa;
 use mine_apple\Foto;
 use mine_apple\Produto;
 use mine_apple\Estado;
@@ -19,8 +19,6 @@ use mine_apple\Endereco;
 class ProdutorController extends Controller
 {
     //Métodos para manipular as views visíveis somente para produtores
-
-
     /**
      * @author O nome do desenvolvedor
      * @param Request $request
@@ -79,7 +77,7 @@ class ProdutorController extends Controller
         $conta->digito = $request->digito;
         $conta->save();
 
-        $financas = new financas();
+        $financas = new Financa();
         $financas->produtor_id = $produtor->usuario_id;
         $financas->save();
          return redirect()->route('produtor');
