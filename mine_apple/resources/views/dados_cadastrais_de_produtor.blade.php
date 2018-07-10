@@ -163,12 +163,12 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="{{Auth::user()->email}}">
                             </div>
-                            <div class="form-group col-md-6">
+                            <!-- <div class="form-group col-md-6">
                                 <label for="senha">Senha</label>
-                                <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
-                            </div>
+                                <input type="password" class="form-control" id="senha" name="senha" placeholder="{{Auth::user()->password}}">
+                            </div> -->
                         </div>
 
 
@@ -177,22 +177,22 @@
                         <div class="pb-0" id="line"></div>
                         <div class="form-group">
                             <label for="nomeFantasia">Nome fantasia</label>
-                            <input type="text" class="form-control" id="nomeFantasia" name="nomeFantasia" placeholder="Nome fantasia">
+                            <input type="text" class="form-control" id="nomeFantasia" name="nomeFantasia" placeholder="{{$produtor->nomeFantasia}}">
                         </div>
                         <div class="form-group">
                             <label for="razaoSocial">Razão Social</label>
                             <input type="text" class="form-control" id="razaoSocial"
-                                   placeholder="Razão social" name="razaoSocial">
+                                   placeholder="{{$produtor->razaoSocial}}" name="razaoSocial">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="cnpj">CNPJ</label>
-                                <input type="text" class="form-control" id="cnpj" data-mask="00.000.000/0000-00" name="cnpj" placeholder="Cnpj">
+                                <input type="text" class="form-control" id="cnpj" data-mask="00.000.000/0000-00" name="cnpj" placeholder="{{$produtor->cnpj}}">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="telefoneComercial">Telefone comercial</label>
                                 <input type="text" class="form-control" id="telefoneComercial"
-                                       placeholder="Telefone Comercial" name="telefoneComercial" data-mask="(00) 00000-0000">
+                                       placeholder="{{$produtor->telefone}}" name="telefoneComercial" data-mask="(00) 00000-0000">
                             </div>
                         </div>
 
@@ -200,10 +200,12 @@
                         <label class="my-0 mr-2" style="font-size: 20px">Contas bancárias <i
                                 class="fa fa-credit-card"></i></label>
                         <div class="pb-0" id="line"></div>
+                        @foreach($contas as $conta)
+                        @php $banco = $bancos->where('id', '=', $conta->banco_id)->first() @endphp 
                         <div class="form-row">
                             <div class="form-group  col-md-6">
-                                <p style="color: #000000; font-size: 15px">Nome do banco</p>
-                                <p style="color: #000000; font-size: 15px; margin-top: -15px">Número da conta</p>
+                                <p style="color: #000000; font-size: 15px">$banco->nome</p>
+                                <p style="color: #000000; font-size: 15px; margin-top: -15px">$conta->numero_conta</p>
                             </div>
                             <div class="form-group  col-md-3">
                                 <a href="#">Excluir</a>
@@ -212,14 +214,17 @@
                                 <a href="#">Adicionar conta</a>
                             </div>
                         </div>
+                        @endforeach
 
-
+                        @php $cidade = $cidades->where('id', '=', $endereco->cidade_id)->first() @endphp
+                        @php $estado = $estados->where('id', '=', $cidade->estado_id)->first() @endphp
+                        
                         <label class="my-0 mr-2" style="font-size: 20px">Endereço <i class="fas fa-map-marker-alt"></i></label>
                         <div class="pb-0" id="line"></div>
                         <div class="form-row">
                             <div class="form-group  col-md-6">
-                                <p style="color: #000000; font-size: 15px">Nome da rua, bairro, número</p>
-                                <p style="color: #000000; font-size: 15px; margin-top: -15px">Cep, estado, cidade</p>
+                                <p style="color: #000000; font-size: 15px">{{$endereco->rua}}, {{$endereco->bairro}}, {{$endereco->numero}}</p>
+                                <p style="color: #000000; font-size: 15px; margin-top: -15px">{{$endereco->numero_cep}}, {{$estado->nome}}, {{$cidade->nome}}</p>
                             </div>
                             <div class="form-group  col-md-6">
                                 <a href="#">Alterar</a>

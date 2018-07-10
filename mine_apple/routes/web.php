@@ -132,6 +132,8 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/produtor/alterar_produto/{id}', 'ProdutorController@editarProduto')->where('id', '[0-9]+')->name('produto.alterar');
         Route::post('/produtor/alterar_produto/{id}', 'ProdutorController@cadastrarProduto');
 
+        Route::get('/dados_cadastrais', 'ProdutorController@dadosCadastrais');
+
         //Route::get('/produtor/cadastrar_endereco', 'ProdutorController@cadastrarEndereco')->name('produtor.endereco.cadastrar');
 
     });
