@@ -1607,10 +1607,13 @@
                                                                             alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Fruta</a></div>
-                                            <div class="bestsellers_name"><a href="#">Abacate</a></div>
+                                            <div class="bestsellers_name">
+                                                <div><a href="#">Abacate</a></div>
+                                            </div>
+                                            <div class="product_price discount">R$ 2,50<span>Kg</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                             </div>
-                                            <div class="bestsellers_price discount">R$ 2,50<span>Kg</span></div>
+
                                         </div>
                                     </div>
                                     <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
@@ -1628,11 +1631,16 @@
                                                                             alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Fruta</a></div>
-                                            <div class="bestsellers_name"><a href="#">Morango</a></div>
+                                            <div class="bestsellers_name">
+                                                <div><a href="#">Morango</a></div>
+                                            </div>
+                                            <div class="product_price discount">R$ 8,99<span>bandeja</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                             </div>
-                                            <div class="bestsellers_price discount">R$ 8,99<span>bandeja</span></div>
                                         </div>
+
+
+
                                     </div>
                                     <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
                                     <ul class="bestsellers_marks">
@@ -1649,10 +1657,13 @@
                                                                             alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Fruta</a></div>
-                                            <div class="bestsellers_name"><a href="#">Uva Verde</a></div>
+                                            <div class="bestsellers_name">
+                                                <div><a href="#">Uva Verde</a></div>
+                                            </div>
+                                            <div class="product_price discount">R$ 3,00<span>Kg</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                             </div>
-                                            <div class="bestsellers_price discount">R$ 3,00<span>Kg</span></div>
+
                                         </div>
                                     </div>
                                     <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
@@ -1670,10 +1681,12 @@
                                         </div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Fruta</a></div>
-                                            <div class="bestsellers_name"><a href="#">Banana</a></div>
+                                            <div class="bestsellers_name">
+                                                <div><a href="#">Banana</a></div>
+                                            </div>
+                                            <div class="product_price discount">R$ 7,00<span>duzia</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                             </div>
-                                            <div class="bestsellers_price discount">R$ 7,00<span>duzia</span></div>
                                         </div>
                                     </div>
                                     <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
@@ -1691,10 +1704,13 @@
                                                                             alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Legume</a></div>
-                                            <div class="bestsellers_name"><a href="#">Abóbora</a></div>
+                                            <div class="bestsellers_name">
+                                                <div><a href="#">Abóbora</a></div>
+                                            </div>
+                                            <div class="product_price discount">R$ 5,00<span>unid</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                             </div>
-                                            <div class="bestsellers_price discount">R$ 5,00<span>unid</span></div>
+
                                         </div>
                                     </div>
                                     <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
@@ -1712,10 +1728,13 @@
                                                                             alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Hortaliça</a></div>
-                                            <div class="bestsellers_name"><a href="#">Couve-flor</a></div>
+                                            <div class="bestsellers_name">
+                                                <div><a href="#">Couve-Flor</a></div>
+                                            </div>
+                                            <div class="product_price discount">R$ 6,00<span>unid</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                             </div>
-                                            <div class="bestsellers_price discount">R$ 6,00<span>unid</span></div>
+
                                         </div>
                                     </div>
                                     <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
@@ -1733,10 +1752,13 @@
                                         </div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Verdura</a></div>
-                                            <div class="bestsellers_name"><a href="#">Chuchu</a></div>
+                                            <div class="bestsellers_name">
+                                                <div><a href="#">Chuchu</a></div>
+                                            </div>
+                                            <div class="product_price discount">R$ 2,00<span>Kg</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                             </div>
-                                            <div class="bestsellers_price discount">R$ 2,00<span>Kg</span></div>
+
                                         </div>
                                     </div>
                                     <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
@@ -1754,10 +1776,13 @@
                                         </div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Fruta</a></div>
-                                            <div class="bestsellers_name"><a href="#">Amora</a></div>
+                                            <div class="bestsellers_name">
+                                                <div><a href="#">Amora</a></div>
+                                            </div>
+                                            <div class="product_price discount">R$ 10,00<span>Kg</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                             </div>
-                                            <div class="bestsellers_price discount">R$ 10,00<span>Kg</span></div>
+
                                         </div>
                                     </div>
                                     <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
@@ -1775,10 +1800,13 @@
                                                                             alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Legume</a></div>
-                                            <div class="bestsellers_name"><a href="#">Berinjela</a></div>
+                                            <div class="bestsellers_name">
+                                                <div><a href="#">Berinjela</a></div>
+                                            </div>
+                                            <div class="product_price discount">R$ 3,99<span>Kg</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                             </div>
-                                            <div class="bestsellers_price discount">R$ 3,99<span>Kg</span></div>
+
                                         </div>
                                     </div>
                                     <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
@@ -1796,10 +1824,13 @@
                                                                             alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Raiz</a></div>
-                                            <div class="bestsellers_name"><a href="#">Beterraba</a></div>
+                                            <div class="bestsellers_name">
+                                                <div><a href="#">Beterraba</a></div>
+                                            </div>
+                                            <div class="product_price discount">R$ 4,99<span>Kg</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                             </div>
-                                            <div class="bestsellers_price discount">R$ 4,99<span>Kg</span></div>
+
                                         </div>
                                     </div>
                                     <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
@@ -1817,10 +1848,13 @@
                                                                             alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Hortaliça</a></div>
-                                            <div class="bestsellers_name"><a href="#">Brócolis</a></div>
+                                            <div class="bestsellers_name">
+                                                <div><a href="#">Brócolis</a></div>
+                                            </div>
+                                            <div class="product_price discount">R$ 10,00<span>unid</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                             </div>
-                                            <div class="bestsellers_price discount">R$ 10,00<span>unid.</span></div>
+
                                         </div>
                                     </div>
                                     <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
@@ -1838,10 +1872,13 @@
                                         </div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Raiz</a></div>
-                                            <div class="bestsellers_name"><a href="#">Inhame</a></div>
+                                            <div class="bestsellers_name">
+                                                <div><a href="#">Inhame</a></div>
+                                            </div>
+                                            <div class="product_price discount">R$ 5,00<span>Kg</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                             </div>
-                                            <div class="bestsellers_price discount">R$ 5,00<span>Kg</span></div>
+
                                         </div>
                                     </div>
                                     <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
@@ -2432,7 +2469,8 @@
                                     class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
                                     <div class="viewed_image"><img src="{{asset('images/banana.jpg')}}" alt=""></div>
                                     <div class="viewed_content text-center">
-                                        <div class="viewed_price">R$ 7,00<span>duzia</span></div>
+                                        <div class="product_price discount">R$ 7,00<span>duzia</span></div>
+                                       <!-- <div class="viewed_price">R$ 7,00<span>duzia</span></div>-->
                                         <div class="viewed_name"><a href="#">Banana</a></div>
                                     </div>
                                     <ul class="item_marks">
@@ -2448,7 +2486,7 @@
                                     class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
                                     <div class="viewed_image"><img src="{{asset('images/abacaxi.png')}}" alt=""></div>
                                     <div class="viewed_content text-center">
-                                        <div class="viewed_price">R$ 3,00</div>
+                                        <div class="product_price discount">R$ 3,00<span>unid</span></div>
                                         <div class="viewed_name"><a href="#">Abacaxi</a></div>
                                     </div>
                                     <ul class="item_marks">
@@ -2464,7 +2502,7 @@
                                     class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
                                     <div class="viewed_image"><img src="{{asset('images/tomate.jpg')}}" alt=""></div>
                                     <div class="viewed_content text-center">
-                                        <div class="viewed_price">R$ 4,00</div>
+                                        <div class="product_price discount">R$ 4,00<span>Kg</span></div>
                                         <div class="viewed_name"><a href="#">Tomate</a></div>
                                     </div>
                                     <ul class="item_marks">
@@ -2480,7 +2518,7 @@
                                     class="viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
                                     <div class="viewed_image"><img src="{{asset('images/pimentao.jpg')}}" alt=""></div>
                                     <div class="viewed_content text-center">
-                                        <div class="viewed_price">R$ 1,00</div>
+                                        <div class="product_price discount">R$ 1,00<span>unid</span></div>
                                         <div class="viewed_name"><a href="#">Pimentão Vermelho</a></div>
                                     </div>
                                     <ul class="item_marks">
@@ -2496,7 +2534,7 @@
                                     class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
                                     <div class="viewed_image"><img src="{{asset('images/abobora.jpg')}}" alt=""></div>
                                     <div class="viewed_content text-center">
-                                        <div class="viewed_price">R$ 5,00<span>unid.</span></div>
+                                        <div class="product_price discount">R$ 5,00<span>unid</span></div>
                                         <div class="viewed_name"><a href="#">Abóbora</a></div>
                                     </div>
                                     <ul class="item_marks">
@@ -2512,7 +2550,7 @@
                                     class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
                                     <div class="viewed_image"><img src="{{asset('images/pera.png')}}" alt=""></div>
                                     <div class="viewed_content text-center">
-                                        <div class="viewed_price">R$ 1,00</div>
+                                        <div class="product_price discount">R$ 1,00<span>unid</span></div>
                                         <div class="viewed_name"><a href="#">Pêra</a></div>
                                     </div>
                                     <ul class="item_marks">
