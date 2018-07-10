@@ -16,8 +16,9 @@ class FaleConoscoController
 {
     /**
      * Envia uma mensagem para o email do site, provinda de um consumidor
+     * @author Victória Gomes
      * @param Request $request
-     * @return
+     * @return string
      */
     public function enviar(Request $request){
 

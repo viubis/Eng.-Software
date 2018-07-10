@@ -25,7 +25,11 @@ class AdministradorController extends Controller
     public function exemplo(Request $request) {
         return Auth::user()->email . ' é administrador';
     }
-
+    
+    /**
+     * @author Lucas Alves
+     * @return string
+     */
     public function getGerenciamentoConsumidores(){
     	$consumidores = Consumidor::all();
         $enderecos = Endereco::all();
@@ -35,6 +39,10 @@ class AdministradorController extends Controller
     	return view('gerenciamento_de_usuario_consumidor', compact('consumidores', 'enderecos','consumidor_enderecos', 'cidades', 'estados'));
     }
 
+    /**
+     * @author Lucas Alves
+     * @return string
+     */
     public function getGerenciamentoProdutores(){
     	$produtores = Produtor::all();
         $produtos = Produto::all();
@@ -44,6 +52,10 @@ class AdministradorController extends Controller
     	return view('gerenciamento_usuario_produtor', compact('produtores', 'produtos', 'enderecos', 'cidades', 'estados'));
     }
 
+    /**
+     * @author Lucas Alves
+     * @return string
+     */
     public function getGerenciamentoSistema(){
     	$usuarios = Usuario::all();
     	return view('gerenciamento_do_sistema', compact('usuarios'));

@@ -33,6 +33,10 @@ class ConsumidorController extends Controller
         return Auth::user()->email . ' é consumidor';
     }
 
+    /**
+     * @author Rafael Brito
+     * @return string
+     */
     public function index(){
         return view('index');
     }
@@ -176,19 +180,20 @@ class ConsumidorController extends Controller
 
     }
 
-    public function getAvaliacaoAssinatura(){
-        $assinaturas = AssinaturaController::all();
-        return view('avaliacao_assinatura', compact('assinaturas'));
-    }
 
     /**
      * @author Lucas Alves
-     * @param $categoria - categoria que será pesquisada
      * @return string
      */
+    public function getAvaliacaoAssinatura(){
+        $assinaturas = Assinatura::all();
+        return view('avaliacao_assinatura', compact('assinaturas'));
+    }
+
+    
 
     /**
-     * @author Edcarlos
+     * @author Lucas Alves
      * @param Request $request
      * @return string
      */
