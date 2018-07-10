@@ -308,7 +308,7 @@
                             <div class="form-group">
                                     <input type="text" class="form-control" id="nomeCliente" placeholder="Nome cliente">
                              </div>
-                             <label for="assinatura">AssinaturaController:</label>
+                             <label for="assinatura">Assinatura:</label>
                              <div class="form-group">
                                     <input type="text" class="form-control" id="produtos" placeholder="Produtos selecionados">
                              </div>
@@ -333,7 +333,7 @@
                             <div class="form-group">
                                     <input type="text" class="form-control" id="nomeCliente" placeholder="Nome cliente">
                              </div>
-                             <label for="assinatura">AssinaturaController:</label>
+                             <label for="assinatura">Assinatura:</label>
                              <div class="form-group">
                                     <input type="text" class="form-control" id="produtos" placeholder="Produtos selecionados">
                              </div>

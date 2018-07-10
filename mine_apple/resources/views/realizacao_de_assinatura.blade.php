@@ -270,7 +270,7 @@
        <div class="container">
            <div class="row">
                <div class="col-lg-12 ">
-                   <!--<div class="contact_form_title">Detalhes da AssinaturaController</div>-->
+                   <!--<div class="contact_form_title">Detalhes da Assinatura</div>-->
                    <h1 class="h1 page-title" data-reactid="30">Definição de assinatura</h1>
                    <div class="pb-0" id="line"></div>
                </div>
@@ -285,7 +285,7 @@
                <div class="col-sm-4">
                    <div class="subcontainerProduto1">
                        <div class="imagem">
-                           <img src="images/banana.jpg" height="200" width="200" style="float:left">
+                           <img src="{{asset('images/abacaxi.png')}}" height="200" width="200" style="float:left">
                        </div>
                    </div>
                </div>
