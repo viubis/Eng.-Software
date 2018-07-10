@@ -98,8 +98,10 @@
                                             <div class="deals_item_category"><a href="#">Frutas</a></div>
                                         </div>
                                         <div class="deals_info_line d-flex flex-row justify-content-start">
-                                            <div class="deals_item_name">Abacaxi</div>
-                                            <div class="deals_item_price ml-auto">R$ 3,00</div>
+                                            <div class="deals_item_name">Abacaxi
+                                            <div class="deals_item_price ml-auto">
+                                                <div class="product_price discount">R$ 3,00<span>unid</span></div></div>
+                                            </div>
                                         </div>
                                         <div class="available">
                                             <div class="available_line d-flex flex-row justify-content-start">
@@ -108,7 +110,7 @@
                                             </div>
                                             <div class="available_bar"><span style="width:17%"></span></div>
                                         </div>
-                                        <div
+                                       <!-- <div
                                             class="deals_timer d-flex flex-row align-items-center justify-content-start">
                                             <div class="deals_timer_title_container">
                                                 <div class="deals_timer_title">Ande logo</div>
@@ -130,7 +132,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div>-->
                                     </div>
                                 </div>
 
@@ -142,39 +144,42 @@
                                             <div class="deals_item_category"><a href="#">Frutas</a></div>
                                         </div>
                                         <div class="deals_info_line d-flex flex-row justify-content-start">
-                                            <div class="deals_item_name">Maçã</div>
-                                            <div class="deals_item_price ml-auto">R$ 5,00</div>
-                                        </div>
-                                        <div class="available">
-                                            <div class="available_line d-flex flex-row justify-content-start">
-                                                <div class="available_title">Disponiveis: <span>6</span></div>
-                                                <div class="sold_title ml-auto">Vendidos: <span>28</span></div>
+                                            <div class="deals_item_name">Maçã
+                                            <div class="deals_item_price ml-auto">
+                                                <div class="product_price discount">R$ 5,00<span>Kg</span></div>
                                             </div>
-                                            <div class="available_bar"><span style="width:17%"></span></div>
-                                        </div>
-                                        <div
-                                            class="deals_timer d-flex flex-row align-items-center justify-content-start">
-                                            <div class="deals_timer_title_container">
-                                                <div class="deals_timer_title">Ande logo</div>
-                                                <div class="deals_timer_subtitle">Oferta acaba em:</div>
                                             </div>
-                                            <div class="deals_timer_content ml-auto">
-                                                <div class="deals_timer_box clearfix" data-target-time="">
-                                                    <div class="deals_timer_unit">
-                                                        <div id="deals_timer2_hr" class="deals_timer_hr"></div>
-                                                        <span>horas</span>
-                                                    </div>
-                                                    <div class="deals_timer_unit">
-                                                        <div id="deals_timer2_min" class="deals_timer_min"></div>
-                                                        <span>mins</span>
-                                                    </div>
-                                                    <div class="deals_timer_unit">
-                                                        <div id="deals_timer2_sec" class="deals_timer_sec"></div>
-                                                        <span>segs</span>
-                                                    </div>
+                                        </div>
+                                            <div class="available">
+                                                <div class="available_line d-flex flex-row justify-content-start">
+                                                    <div class="available_title">Disponiveis: <span>6</span></div>
+                                                    <div class="sold_title ml-auto">Vendidos: <span>28</span></div>
                                                 </div>
+                                                <div class="available_bar"><span style="width:17%"></span></div>
                                             </div>
-                                        </div>
+                                        <!--   <div
+                                               class="deals_timer d-flex flex-row align-items-center justify-content-start">
+                                               <div class="deals_timer_title_container">
+                                                   <div class="deals_timer_title">Ande logo</div>
+                                                   <div class="deals_timer_subtitle">Oferta acaba em:</div>
+                                               </div>
+                                               <div class="deals_timer_content ml-auto">
+                                                   <div class="deals_timer_box clearfix" data-target-time="">
+                                                       <div class="deals_timer_unit">
+                                                           <div id="deals_timer2_hr" class="deals_timer_hr"></div>
+                                                           <span>horas</span>
+                                                       </div>
+                                                       <div class="deals_timer_unit">
+                                                           <div id="deals_timer2_min" class="deals_timer_min"></div>
+                                                           <span>mins</span>
+                                                       </div>
+                                                       <div class="deals_timer_unit">
+                                                           <div id="deals_timer2_sec" class="deals_timer_sec"></div>
+                                                           <span>segs</span>
+                                                       </div>
+                                                   </div>
+                                               </div>
+                                           </div>-->
                                     </div>
                                 </div>
 
@@ -187,8 +192,11 @@
                                             <div class="deals_item_category"><a href="#">Frutas</a></div>
                                         </div>
                                         <div class="deals_info_line d-flex flex-row justify-content-start">
-                                            <div class="deals_item_name">Laranja</div>
-                                            <div class="deals_item_price ml-auto">R$ 2,00</div>
+                                            <div class="deals_item_name">Laranja
+                                                <div class="deals_item_price ml-auto">
+                                                    <div class="product_price discount">R$ 5,00<span>Kg</span></div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="available">
                                             <div class="available_line d-flex flex-row justify-content-start">
@@ -197,7 +205,7 @@
                                             </div>
                                             <div class="available_bar"><span style="width:17%"></span></div>
                                         </div>
-                                        <div
+                                      <!--  <div
                                             class="deals_timer d-flex flex-row align-items-center justify-content-start">
                                             <div class="deals_timer_title_container">
                                                 <div class="deals_timer_title">Ande logo</div>
@@ -219,7 +227,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div>-->
                                     </div>
                                 </div>
 
