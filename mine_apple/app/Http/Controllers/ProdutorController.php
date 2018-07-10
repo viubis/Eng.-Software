@@ -94,6 +94,16 @@ class ProdutorController extends Controller
 //        return view('dados_cadastrais_de_produtor', $produtor->id)->with('info', 'Dados alterados com sucesso!');
     }
 
+    public function dadosCadastrais(){
+        $produtor = Produtor::where('usuario_id', '=', Auth::user()->id)->first();
+        $endereco = Endereco::where('id', '=', $produtor->endereco_id)->first();
+        $cidades = Cidade::all();
+        $estados = Estado::all();
+        $contas = Conta::where('produtor_id', '=', Auth::user()->id);
+        $bancos = Banco::all();
+        return view('dados_cadastrais_de_produtor', compact('produtor', 'endereco', 'contas','bancos', 'cidades', 'estados'));
+    }
+
     /**
      * @author Sesaque Oliveira
      * @param Request $request
