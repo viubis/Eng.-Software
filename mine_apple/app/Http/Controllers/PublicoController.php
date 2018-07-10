@@ -25,24 +25,51 @@ class PublicoController extends Controller
         return  'Você ...';
     }
 
+    /**
+     * @author Bruno Claudino
+     * @return string
+     */
     public function index() {
         return view('index');
     }
 
+    /**
+     * @author Bruno Claudino
+     * @return string
+     */
     public function getTipoCadastro(){
         return view('tipo_de_cadastro_a_realizar');
     }
+
+    /**
+     * @author Bruno Claudino
+     * @return string
+     */
     public function sobre(){
         return view('Sobre');
     }
 
+    /**
+     * @author Bruno Claudino
+     * @return string
+     */
     public function faleConosco(){
         return view('fale_conosco');
     }
+
+    /**
+     * @author Bruno Claudino
+     * @return string
+     */
     public function carrinho(){
         return view('carrinho_de_compras');
     }
 
+    /**
+     * @author Lucas Alves
+     * @param $categoria - categoria que será pesquisada
+     * @return string
+     */
     public function getPesquisaCategoriasProdutos($categoria){
     
         $produtos = Produto::where('categoria_id','=', $categoria)->get();
@@ -62,8 +89,13 @@ class PublicoController extends Controller
         $produtores = Produtor::all();
         $embalagens = Embalagem::all();
         return view('pesquisa_de_produtos', compact('produtos', 'produtores', 'embalagem'));
-    }   
+    }
 
+    /**
+     * @author Lucas Alves
+     * @param $id - id referente ao produto
+     * @return string
+     */   
     public function getDetalhesProduto($id){
         $produto = Produto::where('id', '=', $id)->first();
         $produtor = Produtor::where('usuario_id', '=' ,$produto->produtor_id)->first();

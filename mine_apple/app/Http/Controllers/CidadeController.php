@@ -9,13 +9,15 @@ use mine_apple\Cidade;
 
 class CidadeController extends Controller
 {
+    /**
+     * @author Lucas Alves
+     * @param Request $request
+     * @return string
+     */
     public function retornaCidades(Request $request){
     	$id = $request->estado;
 
     	$retorno = null;
-
-    	//$cidades =  DB::table('cidade')->select('id', 'nome', 'estado_id')
-    	//								->where('estado_id', '=', $id);
 
     	$cidades = Cidade::where('estado_id', $id)->get();
 

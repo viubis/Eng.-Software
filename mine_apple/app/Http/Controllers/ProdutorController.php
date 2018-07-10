@@ -96,6 +96,10 @@ class ProdutorController extends Controller
 //        return view('dados_cadastrais_de_produtor', $produtor->id)->with('info', 'Dados alterados com sucesso!');
     }
 
+    /**
+     * @author Lucas Alves
+     * @return string
+     */
     public function dadosCadastrais(){
         $produtor = Produtor::where('usuario_id', '=', Auth::user()->id)->first();
         $endereco = Endereco::where('id', '=', $produtor->endereco_id)->first();
