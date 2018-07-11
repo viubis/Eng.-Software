@@ -8,7 +8,8 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
 use mine_apple\User;
-use mine_apple\Http\Controllers\Auth\RegisterController;
+use mine_apple\ConsumidorEndereco;
+use mine_apple\Endereco;
 use Illuminate\Support\Facades\Hash;
 class LoginController extends Controller
 {
@@ -65,6 +66,9 @@ class LoginController extends Controller
         $achaUsuario = User::where('email', $user->email)->first();
         if($achaUsuario){
             Auth::loginUsingId($achaUsuario->id);
+            DD("Usuário id:".$user->id." Consumidor(achado) id:".$achaUsuario->id
+                ."\nId recebido da sessão:".Auth::user()->id);
+
             return view('index')->with("Conta acessada");
         }else{
             $usuario = User::create([
@@ -77,7 +81,7 @@ class LoginController extends Controller
             $consumidor_endereco = new ConsumidorEndereco;
             $endereco = new Endereco();
             $endereco->rua = "";
-            $endereco->numero = null;
+            $endereco->numero = 0;
             $endereco->complemento = "";
             $endereco->bairro = "";
             $endereco->numero_cep = "";
@@ -101,7 +105,7 @@ class LoginController extends Controller
             Auth::login($costumer);
 
             $consumidor_endereco->endereco_id = $endereco->id;
-            $consumidor_endereco->consumidor_id = Auth::user()->id;
+            $consumidor_endereco->consumidor_id = $costumer->id;
 
             $cartao = new Cartao;
             $cartao->consumidor_id = Auth::user()->id;
@@ -113,6 +117,9 @@ class LoginController extends Controller
             $consumidor_endereco->save();
 
             $cartao->save();
+
+            DD("Usuário id:".$user->id." Consumidor id:".$costumer->id
+            ."\nId recebido da sessão:".Auth::user()->id);
             return view('index')->with('Cadastro realizado!');
         }
 
