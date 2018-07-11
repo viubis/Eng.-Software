@@ -1,6 +1,5 @@
 <?php
 
-use mine_apple\Produto;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -73,7 +72,7 @@ class ProdutoTableSeeder extends Seeder
                 'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
 
             ['produtor_id' => 2, 'categoria_id' => 2, 'embalagem_id' =>4, 'nome' => 'Melancia',
-                'descricao' => 'Fruta suculenta e refrescante, excelente no periódo do verão.',
+                'descricao' => 'Fruta suculenta e refrescante, excelente no período do verão.',
                 'valor' => 7, 'minPorAssinatura' => 1, 'maxPorDia' => 10,
                 'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
                 'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
@@ -86,25 +85,25 @@ class ProdutoTableSeeder extends Seeder
                 'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
 
             ['produtor_id' => 2, 'categoria_id' => 3, 'embalagem_id' =>1, 'nome' => 'Beringela',
-                'descricao' => 'Fruta suculenta e refrescante, excelente no periódo do verão.',
+                'descricao' => 'Fruta suculenta e refrescante, excelente no período do verão.',
                 'valor' => 2.50, 'minPorAssinatura' => 1, 'maxPorDia' => 10,
                 'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
                 'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
 
             ['produtor_id' => 2, 'categoria_id' => 3, 'embalagem_id' =>1, 'nome' => 'Beterraba',
-                'descricao' => 'Fruta suculenta e refrescante, excelente no periódo do verão.',
+                'descricao' => 'Fruta suculenta e refrescante, excelente no período do verão.',
                 'valor' => 3, 'minPorAssinatura' => 1, 'maxPorDia' => 10,
                 'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
                 'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
 
             ['produtor_id' => 2, 'categoria_id' => 3, 'embalagem_id' =>1, 'nome' => 'Chuchu',
-                'descricao' => 'Fruta suculenta e refrescante, excelente no periódo do verão.',
+                'descricao' => 'Fruta suculenta e refrescante, excelente no período do verão.',
                 'valor' => 2, 'minPorAssinatura' => 1, 'maxPorDia' => 10,
                 'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
                 'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
 
             ['produtor_id' => 2, 'categoria_id' => 3, 'embalagem_id' =>1, 'nome' => 'Pimentao',
-                'descricao' => 'Fruta suculenta e refrescante, excelente no periódo do verão.',
+                'descricao' => 'Fruta suculenta e refrescante, excelente no período do verão.',
                 'valor' => 2.50, 'minPorAssinatura' => 5, 'maxPorDia' => 10,
                 'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
                 'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
@@ -134,6 +133,66 @@ class ProdutoTableSeeder extends Seeder
                 'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
 
             ['produtor_id' => 2, 'categoria_id' => 4, 'embalagem_id' =>3, 'nome' => 'Lentilha',
+                'descricao' => '-',
+                'valor' => 2.50, 'minPorAssinatura' => 5, 'maxPorDia' => 10,
+                'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
+                'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
+
+            ['produtor_id' => 2, 'categoria_id' => 5, 'embalagem_id' =>3, 'nome' => 'Batata doce',
+                'descricao' => '-',
+                'valor' => 2.50, 'minPorAssinatura' => 5, 'maxPorDia' => 10,
+                'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
+                'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
+
+            ['produtor_id' => 2, 'categoria_id' => 5, 'embalagem_id' =>3, 'nome' => 'Batata Yacon',
+                'descricao' => '-',
+                'valor' => 2.50, 'minPorAssinatura' => 5, 'maxPorDia' => 10,
+                'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
+                'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
+
+            ['produtor_id' => 2, 'categoria_id' => 5, 'embalagem_id' =>3, 'nome' => 'Gengibre',
+                'descricao' => '-',
+                'valor' => 2.50, 'minPorAssinatura' => 5, 'maxPorDia' => 10,
+                'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
+                'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
+
+            ['produtor_id' => 2, 'categoria_id' => 5, 'embalagem_id' =>3, 'nome' => 'Mandioca',
+                'descricao' => '-',
+                'valor' => 2.50, 'minPorAssinatura' => 5, 'maxPorDia' => 10,
+                'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
+                'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
+
+            ['produtor_id' => 2, 'categoria_id' => 5, 'embalagem_id' =>3, 'nome' => 'Rabanete',
+                'descricao' => '-',
+                'valor' => 2.50, 'minPorAssinatura' => 5, 'maxPorDia' => 10,
+                'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
+                'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
+
+            ['produtor_id' => 2, 'categoria_id' => 7, 'embalagem_id' =>3, 'nome' => 'Alface',
+                'descricao' => '-',
+                'valor' => 2.50, 'minPorAssinatura' => 5, 'maxPorDia' => 10,
+                'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
+                'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
+
+            ['produtor_id' => 2, 'categoria_id' => 7, 'embalagem_id' =>3, 'nome' => 'Brócolis',
+                'descricao' => '-',
+                'valor' => 2.50, 'minPorAssinatura' => 5, 'maxPorDia' => 10,
+                'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
+                'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
+
+            ['produtor_id' => 2, 'categoria_id' => 7, 'embalagem_id' =>3, 'nome' => 'Couve-flor',
+                'descricao' => '-',
+                'valor' => 2.50, 'minPorAssinatura' => 5, 'maxPorDia' => 10,
+                'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
+                'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
+
+            ['produtor_id' => 2, 'categoria_id' => 7, 'embalagem_id' =>3, 'nome' => 'Espinafre',
+                'descricao' => '-',
+                'valor' => 2.50, 'minPorAssinatura' => 5, 'maxPorDia' => 10,
+                'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
+                'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
+
+            ['produtor_id' => 2, 'categoria_id' => 7, 'embalagem_id' =>3, 'nome' => 'Rúcula',
                 'descricao' => '-',
                 'valor' => 2.50, 'minPorAssinatura' => 5, 'maxPorDia' => 10,
                 'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,

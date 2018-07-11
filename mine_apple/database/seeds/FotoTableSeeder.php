@@ -93,6 +93,46 @@ class FotoTableSeeder extends Seeder
             ['produto_id' => 20, 'path'=>'images/Leguminosas/Lentilha/Lentilha2'],
             ['produto_id' => 20, 'path'=>'images/Leguminosas/Lentilha/Lentilha3'],
 
+            ['produto_id' => 21, 'path'=>'images/Raizes/BatataDoce/BatataDoce1'],
+            ['produto_id' => 21, 'path'=>'images/Raizes/BatataDoce/BatataDoce2'],
+            ['produto_id' => 21, 'path'=>'images/Raizes/BatataDoce/BatataDoce3'],
+
+            ['produto_id' => 22, 'path'=>'images/Raizes/BatataYacon/BatataYacon1'],
+            ['produto_id' => 22, 'path'=>'images/Raizes/BatataYacon/BatataYacon2'],
+            ['produto_id' => 22, 'path'=>'images/Raizes/BatataYacon/BatataYacon3'],
+
+            ['produto_id' => 23, 'path'=>'images/Raizes/Gengibre/Gengibre1'],
+            ['produto_id' => 23, 'path'=>'images/Raizes/Gengibre/Gengibre2'],
+            ['produto_id' => 23, 'path'=>'images/Raizes/Gengibre/Gengibre3'],
+
+            ['produto_id' => 24, 'path'=>'images/Raizes/Mandioca/Mandioca1'],
+            ['produto_id' => 24, 'path'=>'images/Raizes/Mandioca/Mandioca2'],
+            ['produto_id' => 24, 'path'=>'images/Raizes/Mandioca/Mandioca3'],
+
+            ['produto_id' => 25, 'path'=>'images/Raizes/Rabanete/Rabanete1'],
+            ['produto_id' => 25, 'path'=>'images/Raizes/Rabanete/Rabanete2'],
+            ['produto_id' => 25, 'path'=>'images/Raizes/Rabanete/Rabanete3'],
+
+            ['produto_id' => 26, 'path'=>'images/Verduras/Alface/Alface1'],
+            ['produto_id' => 26, 'path'=>'images/Verduras/Alface/Alface2'],
+            ['produto_id' => 26, 'path'=>'images/Verduras/Alface/Alface3'],
+
+            ['produto_id' => 27, 'path'=>'images/Verduras/Brocolis/Brocolis1'],
+            ['produto_id' => 27, 'path'=>'images/Verduras/Brocolis/Brocolis2'],
+            ['produto_id' => 27, 'path'=>'images/Verduras/Brocolis/Brocolis3'],
+
+            ['produto_id' => 28, 'path'=>'images/Verduras/Couve_flor/Couve_flor1'],
+            ['produto_id' => 28, 'path'=>'images/Verduras/Couve_flor/Couve_flor2'],
+            ['produto_id' => 28, 'path'=>'images/Verduras/Couve_flor/Couve_flor3'],
+
+            ['produto_id' => 29, 'path'=>'images/Verduras/Espinafre/Espinafre1'],
+            ['produto_id' => 29, 'path'=>'images/Verduras/Espinafre/Espinafre2'],
+            ['produto_id' => 29, 'path'=>'images/Verduras/Espinafre/Espinafre3'],
+
+            ['produto_id' => 29, 'path'=>'images/Verduras/Rucula/Rucula1'],
+            ['produto_id' => 29, 'path'=>'images/Verduras/Rucula/Rucula2'],
+            ['produto_id' => 29, 'path'=>'images/Verduras/Rucula/Rucula3'],
+
         ]);
 
     }
