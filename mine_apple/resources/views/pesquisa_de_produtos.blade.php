@@ -96,7 +96,7 @@
                                     </div>
                                     <div class="form-row" id="espac1">
                                         <div class="form-group col-md-6">
-                                            <label for="valorProd2">Preço</label>
+                                            <label for="number">Preço</label>
                                             <input type="number" min="0.1" max="999"
                                                    class="form-control" id="number"
                                                    value="{{$produto->valor}}" name="preco" readonly>
@@ -125,12 +125,12 @@
                 </div>
             </div>
             @endforeach
-       <center>
+
             <!-- <div class="col-md-12 mb-3">
                 <button type="submit" class="btn btn-primary">Mostrar mais</button>
             </div> -->
 
-        </center>
+
    </div>
 
 
