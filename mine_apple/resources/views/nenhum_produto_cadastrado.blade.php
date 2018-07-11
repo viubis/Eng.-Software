@@ -29,49 +29,18 @@
 <div class="super_container">
 
     <!-- Header -->
+    @if(Auth::check())
+        @if(Auth::user()->consumidor != null)
+            @include('layouts.header_consumidor')
+        @elseif(Auth::user()->produtor != null)
+            @include('layouts.header_produtor')
+        @elseif(Auth::user()->administrador != null)
+            @include('layouts.header_administrador')
+        @endif
+    @else
 
-    @include('layouts.header_produtor')
-        <!-- Menu -->
-
-        <div class="page_menu">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-
-                        <div class="page_menu_content">
-
-                            <div class="page_menu_search">
-                                <form action="#">
-                                    <input type="search" required="required" class="page_menu_search_input"
-                                           placeholder="Pesquisar produtos..." name="buscarProdutos">
-                                </form>
-                            </div>
-                            <ul class="page_menu_nav">
-
-                                <li class="page_menu_item">
-                                    <a href="#">Meus Dados<i class="fa fa-angle-down"></i></a>
-                                </li>
-                                <li class="page_menu_item">
-                                    <a href="#">Resumo da Conta<i class="fa fa-angle-down"></i></a>
-                                </li>
-                                <li class="page_menu_item">
-                                    <a href="#">Meus Produtos<i class="fa fa-angle-down"></i></a>
-                                </li>
-                                <li class="page_menu_item">
-                                    <a href="#">Assinaturas<i class="fa fa-angle-down"></i></a>
-                                </li>
-                                <li class="page_menu_item">
-                                    <a href="#">Reputação<i class="fa fa-angle-down"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
+        @include('layouts.header_usuario')
+    @endif
 
     <main>
         <section>

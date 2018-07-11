@@ -28,7 +28,7 @@
 
 <div class="super_container">
 
-    <!-- Header -->
+
     <!-- Header -->
     @if(Auth::check())
         @if(Auth::user()->consumidor != null)
