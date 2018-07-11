@@ -82,7 +82,9 @@
                                         <div class="form-group col-md-6">
                                             <label style="color: #99a8b7">Nome do Produto </label>
                                             <br/>
-                                            <label>{{$produto->nome}}</label>
+                                            <label><a style="color: #000000;" href={{url('/produto/'.$produto->id)}}>
+                                                    {{$produto->nome}}
+                                                </a></label>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label style="color: #99a8b7">Embalagem</label>
