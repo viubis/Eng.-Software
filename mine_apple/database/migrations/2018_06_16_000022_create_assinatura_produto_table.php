@@ -13,13 +13,13 @@ class CreateAssinaturaProdutoTable extends Migration
             $table->integer('produto_id')->unsigned();
             $table->integer('quantidade');
             $table->integer('frequencia');
-            $table->tinyInteger('seg');
-            $table->tinyInteger('ter');
-            $table->tinyInteger('qua');
-            $table->tinyInteger('qui');
-            $table->tinyInteger('sex');
-            $table->tinyInteger('sab');
-            $table->tinyInteger('dom');
+            $table->tinyInteger('seg')->default(0);
+            $table->tinyInteger('ter')->default(0);
+            $table->tinyInteger('qua')->default(0);
+            $table->tinyInteger('qui')->default(0);
+            $table->tinyInteger('sex')->default(0);
+            $table->tinyInteger('sab')->default(0);
+            $table->tinyInteger('dom')->default(0);
 
             $table->primary(['assinatura_id', 'produto_id']);
 

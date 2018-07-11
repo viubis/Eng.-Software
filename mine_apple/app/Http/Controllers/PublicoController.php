@@ -58,12 +58,18 @@ class PublicoController extends Controller
     }
 
     /**
-     * @author Bruno Claudino
+     * @author Lucas Alves
      * @return string
      */
-    public function carrinho(){
-        return view('carrinho_de_compras');
+    public function getCarrinhoCompras(){
+
+        //retorna todos os itens do carrinho
+        $itens = Cart::content();
+        //retorna o preço total
+        $subtotal = Cart::total();
+        return view('carrinho_de_compras', compact('itens', 'subtotal'));
     }
+    
 
     /**
      * @author Lucas Alves

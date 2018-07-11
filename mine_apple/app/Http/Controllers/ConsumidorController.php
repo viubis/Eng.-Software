@@ -9,12 +9,14 @@ use mine_apple\Cidade;
 use mine_apple\Cartao;
 use mine_apple\ConsumidorEndereco;
 use mine_apple\Conta;
+use mine_apple\Compra;
 use mine_apple\Endereco;
 use mine_apple\Consumidor;
 use mine_apple\Produto;
 use mine_apple\Produtor;
 use mine_apple\Embalagem;
 use Gloudemans\Shoppingcart\Facades\Cart;
+use Carbon\Carbon;
 
 
 class ConsumidorController extends Controller
@@ -154,20 +156,16 @@ class ConsumidorController extends Controller
         return view('adicionar_endereco',compact('estados'));
     }
 
-
-
     /**
      * @author Lucas Alves
      * @return string
      */
-    public function getCarrinhoCompras(){
-
-        //retorna todos os itens do carrinho
+    public function getRealizacaoAssinatura(){
         $itens = Cart::content();
-        //retorna o preço total
-        $subtotal = Cart::total();
-        return view('carrinho_de_compras', compact('itens', 'subtotal'));
+        return view('realizacao_de_assinatura', compact('itens'));
+
     }
+
 
     /**
      * @author Lucas Alves
@@ -175,8 +173,41 @@ class ConsumidorController extends Controller
      * @return string
      */
     public function finalizaCompra(Request $request){
-
+        //Pego o conteudo do carrinho
         $itens = Cart::content();
+        $data = Carbon::now();
+
+        //contador
+        $i = 0;
+
+        $assinatura = new Assinatura;
+
+        foreach($itens as $item){
+            $produto_assinatura = new Assinatura_Produto;
+            $produto = Produto::where('id', '=', $item->id);
+            $produto_assinatura->assinatura_id = $assinatura->id;
+            $produto_assinatura->produto_id = $produto->id;
+            $produto_assinatura->quantidade = $item->qty;
+            $produto_assinatura->produto_id = $produto->id;
+            $produto_assinatura->frequencia = $request->frequencia;
+            $produto_assinatura->seg = $request->seg[$i];
+            $produto_assinatura->ter = $request->ter[$i];
+            $produto_assinatura->qua = $request->qua[$i];
+            $produto_assinatura->qui = $request->qui[$i];
+            $produto_assinatura->sex = $request->sex[$i];
+            $produto_assinatura->sab = $request->sab[$i];
+            $produto_assinatura->dom = $request->dom[$i];
+            $produto_assinatura->save();
+            $i++;
+        }
+
+        $compra = new Compra;
+        $compra->consumidor_endereco_id = $request->id;
+        $compra->valor = $subtotal = Cart::total();
+        $compra->data = $data->
+        $compra->hora =
+        $compra->frete =
+        $compra->save();
 
     }
 

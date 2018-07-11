@@ -18,6 +18,8 @@ Route::get('/produto/{id}', 'PublicoController@getDetalhesProduto');
 Route::get('/pesquisa_produtos', 'PublicoController@getPesquisaTodosProdutos');
 Route::get('/pesquisa_produtos/{categoria}', 'PublicoController@getPesquisaCategoriasProdutos')->where('categoria', '[0-7]+');
 
+Route::get('/carrinho_de_compras','PublicoController@getCarrinhoCompras');
+
 
 //Rotas para facebook socialite -----------------------------------------------------------
 
@@ -101,15 +103,15 @@ Route::middleware(['auth'])->group(function () {
 
         Route::post('/adicionar_carrinho', 'ConsumidorController@adicionarCarrinho');
 
-        Route::get('/carrinho_de_compras','ConsumidorController@getCarrinhoCompras');
+        
 
         Route::get('/consumidor/cadastrar_endereco', 'ConsumidorController@cadastrarEndereco');
 
-        //Pesquisa por categorias
-
-        
-
         Route::get('/avaliacao_assinatura', 'ConsumidorController@getAvaliacaoAssinatura');
+
+        Route::get('/realizacao_assinatura', 'ConsumidorController@getRealizacaoAssinatura');
+
+
 
     });
 
