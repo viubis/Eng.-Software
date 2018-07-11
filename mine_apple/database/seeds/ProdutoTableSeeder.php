@@ -14,15 +14,13 @@ class ProdutoTableSeeder extends Seeder
     {
         DB::table('produto')->insert([
             ['produtor_id' => 2, 'categoria_id' => 1, 'embalagem_id' => 4, 'nome' => 'Arroz',
-                'descricao' => 'O arroz é fonte de energia ao organismo com carboidratos saudáveis. 
-                Ele é um alimento rico em carboidratos mas também tem proteínas, vitaminas e minerais.',
+                'descricao' => 'O arroz é fonte de energia ao organismo com carboidratos saudáveis. Ele é um alimento rico em carboidratos mas também tem proteínas, vitaminas e minerais.',
                 'valor' => 3, 'minPorAssinatura' => 2, 'maxPorDia' => 30,
                 'freteMax' => 25, 'seg' => true, 'ter' => true, 'qua' => true,
                 'qui' => true, 'sex' => false, 'sab' => false, 'dom' => false],
 
             ['produtor_id' => 2, 'categoria_id' => 1, 'embalagem_id' =>4, 'nome' => 'Aveia',
-                'descricao' => 'Produto não - transgênico que possui o certificado pela ECOCERT. 
-                Pode ser consumido com qualquer preparação e é feito basicamente por flocos de aveia.',
+                'descricao' => 'Produto não - transgênico que possui o certificado pela ECOCERT. Pode ser consumido com qualquer preparação e é feito basicamente por flocos de aveia.',
                 'valor' => 2, 'minPorAssinatura' => 2, 'maxPorDia' => 33,
                 'freteMax' => 22, 'seg' => true, 'ter' => false, 'qua' => true,
                 'qui' => false, 'sex' => true, 'sab' => false, 'dom' => false],
@@ -34,15 +32,13 @@ class ProdutoTableSeeder extends Seeder
                 'qui' => false, 'sex' => false, 'sab' => false, 'dom' => false],
 
             ['produtor_id' => 2, 'categoria_id' => 1, 'embalagem_id' =>4, 'nome' => 'Milho',
-                'descricao' => 'Milho limpo, seco e estocado em armazém profissional e 
-                com um ótimo padrão de qualidade.',
+                'descricao' => 'Milho limpo, seco e estocado em armazém profissional e com um ótimo padrão de qualidade.',
                 'valor' => 4, 'minPorAssinatura' => 2, 'maxPorDia' => 15,
                 'freteMax' => 14, 'seg' => false, 'ter' => false, 'qua' => true,
                 'qui' => false, 'sex' => false, 'sab' => true, 'dom' => false],
 
             ['produtor_id' => 2, 'categoria_id' => 1, 'embalagem_id' =>4, 'nome' => 'Soja',
-                'descricao' => 'Produto não transgênico, embalado a vácuo, isento de agrotóxicos 
-                e produtos químicos.',
+                'descricao' => 'Produto não transgênico, embalado a vácuo, isento de agrotóxicos e produtos químicos.',
                 'valor' => 2.30, 'minPorAssinatura' => 1, 'maxPorDia' => 10,
                 'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
                 'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
@@ -102,7 +98,7 @@ class ProdutoTableSeeder extends Seeder
                 'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
                 'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
 
-            ['produtor_id' => 2, 'categoria_id' => 3, 'embalagem_id' =>1, 'nome' => 'Pimentao',
+            ['produtor_id' => 2, 'categoria_id' => 3, 'embalagem_id' =>1, 'nome' => 'Pimentão',
                 'descricao' => 'Fruta suculenta e refrescante, excelente no período do verão.',
                 'valor' => 2.50, 'minPorAssinatura' => 5, 'maxPorDia' => 10,
                 'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
@@ -120,7 +116,7 @@ class ProdutoTableSeeder extends Seeder
                 'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
                 'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
 
-            ['produtor_id' => 2, 'categoria_id' => 4, 'embalagem_id' =>3, 'nome' => 'Feijao',
+            ['produtor_id' => 2, 'categoria_id' => 4, 'embalagem_id' =>3, 'nome' => 'Feijão',
                 'descricao' => '-',
                 'valor' => 2.50, 'minPorAssinatura' => 5, 'maxPorDia' => 10,
                 'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
