@@ -29,7 +29,6 @@
 <div class="top_bar">
     <div class="super_container">
 
-        
         <!-- Header -->
         @if(Auth::check())
             @if(Auth::user()->consumidor != null)
