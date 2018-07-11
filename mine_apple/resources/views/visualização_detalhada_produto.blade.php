@@ -51,15 +51,15 @@
                         <!-- Images -->
                         <div class="col-md-4">
                             <ul class="image_list">
-                                <li data-image="images/single_4.jpg"><img src="{{asset('images/abacaxi_puro.jpg')}}" alt=""></li>
-                                <li data-image="images/single_2.jpg"><img src="{{asset('images/abacaxi_perola.jpg')}}" alt=""></li>
-                                <li data-image="images/single_3.jpg"><img src="{{asset('images/abacaxi2.jpg')}}" alt=""></li>
+                                <li data-image="{{asset($fotos[0]->path)}}"><img src="{{asset($fotos[0]->path)}}" alt=""></li>
+                                <li data-image="{{asset($fotos[1]->path)}}"><img src="{{asset($fotos[1]->path)}}" alt=""></li>
+                                <li data-image="{{asset($fotos[2]->path)}}"><img src="{{asset($fotos[2]->path)}}" alt=""></li>
                             </ul>
                         </div>
 
                         <!-- Selected Image -->
                         <div class="col-md-8">
-                            <div class="image_selected"><img src="{{asset('images/abacaxi.png')}}" alt=""></div>
+                            <div class="image_selected"><img src="{{asset($fotos[0]->path)}}" alt=""></div>
                         </div>
                     </div>
                     <div class="frete">
