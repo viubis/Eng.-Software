@@ -96,7 +96,7 @@
                                     <a href="{{url("/carrinho")}}">
                                         <i class="fa fa-shopping-basket fa-3x" style="color: #000000"></i>
                                     </a>
-                                    <div class="cart_count"><span>2</span></div>
+                                    <div class="cart_count"><span>0</span></div>
                                 </div>
                             </div>
                         </div>

@@ -101,7 +101,7 @@ Route::middleware(['auth'])->group(function () {
 
         Route::post('/adicionar_carrinho', 'ConsumidorController@adicionarCarrinho');
 
-
+        Route::post('/remover_carrinho', 'ConsumidorController@removerDoCarrinho');
 
         Route::get('/consumidor/cadastrar_endereco', 'ConsumidorController@cadastrarEndereco');
 

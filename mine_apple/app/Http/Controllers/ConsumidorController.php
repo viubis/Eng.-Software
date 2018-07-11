@@ -151,6 +151,16 @@ class ConsumidorController extends Controller
     }
 
     /**
+     * @author Victória Oliveira
+     * @param Request $request
+     * @return string
+     */
+    public function removerDoCarrinho(Request $request){
+        dd($request->all());
+        Cart::remove($request->rowId);
+    }
+
+    /**
      * @author Lucas Alves
      * @return string
      */

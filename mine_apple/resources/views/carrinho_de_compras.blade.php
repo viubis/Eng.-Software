@@ -57,7 +57,6 @@
 
 <div class="row pl-5">
     <div class="col-md-6">
-
         @foreach($itens as $item)
         <div class="containerInfosProdutos">
             <div class="container">
@@ -71,7 +70,8 @@
                         </div>
                     </div>
                     <div class="col-sm-7">
-                            <form>
+                            <form action="/remover_carrinho" method="post">
+                                @csrf
                                 <fieldset>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
@@ -101,6 +101,13 @@
                                         @endphp
                                         <input type="text" style="border: none;" name="pacote" class="form-control"
                                             readonly id="tipoEmbalagemProd1" value="{{$embalagem->tipo}}">
+                                    </div>
+                                    <input type="hidden" name="rowId" value="{{$item->rowId}}">
+                                    <div class="pt-5">
+                                        <button class="btn-sm btn-primary mt-4"
+                                                style="background-color: rgba(0,0,0,0); border: none;
+                                                color: #0d82d3;"
+                                                type="submit">Remover produto</button>
                                     </div>
                                 </div>
                             </fieldset>
