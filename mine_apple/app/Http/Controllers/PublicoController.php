@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use mine_apple\Foto;
 use mine_apple\Produto;
 use mine_apple\Embalagem;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use mine_apple\Produtor;
 use mine_apple\Categoria;
 use mine_apple\Endereco;

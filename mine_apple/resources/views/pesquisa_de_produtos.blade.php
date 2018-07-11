@@ -78,6 +78,9 @@
                                     <div class="form-row">
 
                                         <input type="hidden" name="id" value="{{$produto->id}}">
+                                        <input type="hidden" name="nome" value="{{$produto->nome}}">
+                                        <input type="hidden" name="preco" value="{{$produto->valor}}">
+                                        <input type="hidden" name="embalagem" value="{{$produto->embalagem_id}}">
 
                                         <div class="form-group col-md-6">
                                             <label style="color: #99a8b7">Nome do Produto </label>
@@ -106,7 +109,7 @@
                                             <label for="quantidade" style="color: #99a8b7">Quantidade</label>
                                             <input type="number" name="quantidade"
                                                    class="form-control"
-                                                   placeholder="0">
+                                                   placeholder="1">
                                         </div>
                                     </div>
                                     <div class="form-group" align="right">

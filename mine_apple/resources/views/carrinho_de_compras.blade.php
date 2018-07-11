@@ -64,7 +64,10 @@
                 <div class="row backColor">
                     <div class="col-sm-5">
                         <div class="imagem">
-                            <img src="{{asset('images/banana.jpg')}}" style="float:left; height: 150px; width: 150px">
+                            @php
+                                $foto = \mine_apple\Foto::where('produto_id', '=', $item->id)->first();
+                            @endphp
+                            <img src="{{asset($foto->path)}}" style="float:left; height: 150px; width: 150px">
                         </div>
                     </div>
                     <div class="col-sm-7">
@@ -93,8 +96,11 @@
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label for="tipoEmbalagemProd1">Pacote</label>
+                                        @php
+                                            $embalagem = \mine_apple\Embalagem::where('id', '=', $item->options->embalagem)->first();
+                                        @endphp
                                         <input type="text" style="border: none;" name="pacote" class="form-control"
-                                            readonly id="tipoEmbalagemProd1">
+                                            readonly id="tipoEmbalagemProd1" value="{{$embalagem->tipo}}">
                                     </div>
                                 </div>
                             </fieldset>

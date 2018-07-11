@@ -142,10 +142,13 @@ class ConsumidorController extends Controller
      * @return string
      */
     public function adicionarCarrinho(Request $request){
-
-        Cart::add($request->id, $request->nome, $request->quantidade, $request->preco);
+        if(is_null($request->quantidade)) {
+            Cart::add($request->id, $request->nome, 1, $request->preco, ['embalagem' => $request->embalagem]);
+        }
+        else{
+            Cart::add($request->id, $request->nome, $request->quantidade, $request->preco, ['embalagem' => $request->embalagem]);
+        }
     }
-
 
     /**
      * @author Lucas Alves
@@ -221,7 +224,7 @@ class ConsumidorController extends Controller
         return view('avaliacao_assinatura', compact('assinaturas'));
     }
 
-    
+
 
     /**
      * @author Lucas Alves
