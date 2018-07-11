@@ -8,8 +8,6 @@ Route::get('/sobre', 'PublicoController@sobre');
 
 Route::get('/fale_conosco', 'PublicoController@faleConosco');
 
-Route::get('/carrinho', 'PublicoController@carrinho');
-
 Route::get('tipo_cadastro', 'PublicoController@getTipoCadastro');
 
 Route::post('/enviar', 'FaleConoscoController@enviar')->name('enviarMensagem');
@@ -18,7 +16,7 @@ Route::get('/produto/{id}', 'PublicoController@getDetalhesProduto');
 Route::get('/pesquisa_produtos', 'PublicoController@getPesquisaTodosProdutos');
 Route::get('/pesquisa_produtos/{categoria}', 'PublicoController@getPesquisaCategoriasProdutos')->where('categoria', '[0-7]+');
 
-Route::get('/carrinho_de_compras','PublicoController@getCarrinhoCompras');
+Route::get('/carrinho','PublicoController@getCarrinhoCompras');
 
 
 //Rotas para facebook socialite -----------------------------------------------------------
@@ -50,7 +48,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/home', 'UsuarioController@home')->name('home');
     Route::get('/minhascompras', 'UsuarioController@minhasCompras');
-    
+
 
 
     //Rotas para usuários que não definiram o tipo de conta ----------------------------------------
@@ -60,7 +58,7 @@ Route::middleware(['auth'])->group(function () {
             return Auth::user()->email . ' é usuário';
         });
 
-        
+
 
     });
 
@@ -103,7 +101,7 @@ Route::middleware(['auth'])->group(function () {
 
         Route::post('/adicionar_carrinho', 'ConsumidorController@adicionarCarrinho');
 
-        
+
 
         Route::get('/consumidor/cadastrar_endereco', 'ConsumidorController@cadastrarEndereco');
 
