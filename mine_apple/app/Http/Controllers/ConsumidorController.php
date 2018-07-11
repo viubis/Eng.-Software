@@ -145,10 +145,23 @@ class ConsumidorController extends Controller
      * @return string
      */
     public function adicionarCarrinho(Request $request){
-
-        Cart::add($request->id, $request->nome, $request->quantidade, $request->preco);
+        if(is_null($request->quantidade)) {
+            Cart::add($request->id, $request->nome, 1, $request->preco, ['embalagem' => $request->embalagem]);
+        }
+        else{
+            Cart::add($request->id, $request->nome, $request->quantidade, $request->preco, ['embalagem' => $request->embalagem]);
+        }
     }
 
+    /**
+     * @author Victória Oliveira
+     * @param Request $request
+     * @return string
+     */
+    public function removerDoCarrinho(Request $request){
+        dd($request->all());
+        Cart::remove($request->rowId);
+    }
 
     /**
      * @author Lucas Alves
@@ -224,7 +237,7 @@ class ConsumidorController extends Controller
         return view('avaliacao_assinatura', compact('assinaturas'));
     }
 
-    
+
 
     /**
      * @author Lucas Alves

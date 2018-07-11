@@ -4,8 +4,10 @@ namespace mine_apple\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use mine_apple\Foto;
 use mine_apple\Produto;
 use mine_apple\Embalagem;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use mine_apple\Produtor;
 use mine_apple\Categoria;
 use mine_apple\Endereco;
@@ -69,7 +71,7 @@ class PublicoController extends Controller
         $subtotal = Cart::total();
         return view('carrinho_de_compras', compact('itens', 'subtotal'));
     }
-    
+
 
     /**
      * @author Lucas Alves
@@ -77,12 +79,9 @@ class PublicoController extends Controller
      * @return string
      */
     public function getPesquisaCategoriasProdutos($categoria){
-    
         $produtos = Produto::where('categoria_id','=', $categoria)->get();
-        $produtores = Produtor::all();
-        $embalagens = Embalagem::all();
-
-        return view('pesquisa_de_produtos', compact('produtos', 'produtores', 'embalagem'));
+        $cat = Categoria::where('id', '=', $categoria)->first();
+        return view('pesquisa_de_produtos', compact('produtos', 'cat'));
     }
 
     /**
@@ -90,10 +89,10 @@ class PublicoController extends Controller
      * @return string
      */
     public function getPesquisaTodosProdutos(){
-        
+
         $produtos = Produto::all();
         $produtores = Produtor::all();
-        $embalagens = Embalagem::all();
+        $embalagem = Embalagem::all();
         return view('pesquisa_de_produtos', compact('produtos', 'produtores', 'embalagem'));
     }
 
@@ -101,15 +100,16 @@ class PublicoController extends Controller
      * @author Lucas Alves
      * @param $id - id referente ao produto
      * @return string
-     */   
+     */
     public function getDetalhesProduto($id){
         $produto = Produto::where('id', '=', $id)->first();
+        $fotos = Foto::where('produto_id', '=', $id)->get();
         $produtor = Produtor::where('usuario_id', '=' ,$produto->produtor_id)->first();
         $categoria = Categoria::where('id', '=', $produto->categoria_id)->first();
         $endereco = Endereco::where('id', '=', $produtor->usuario_id)->first();
         $cidade = Cidade::where('id', '=', $endereco->cidade_id)->first();
         $estado = Estado::where('id', '=', $cidade->estado_id)->first();
         $embalagem = Embalagem::all();
-        return view('visualização_detalhada_produto', compact('produto', 'produtor', 'embalagem', 'categoria', 'cidade', 'estado'));
+        return view('visualização_detalhada_produto', compact('produto', 'produtor', 'embalagem', 'categoria', 'cidade', 'estado', 'fotos'));
     }
 }

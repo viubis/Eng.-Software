@@ -28,97 +28,19 @@
 <div class="super_container">
 
     <!-- Header -->
-    <header class="header">
+    <!-- Header -->
+    @if(Auth::check())
+        @if(Auth::user()->consumidor != null)
+            @include('layouts.header_consumidor')
+        @elseif(Auth::user()->produtor != null)
+            @include('layouts.header_produtor')
+        @elseif(Auth::user()->administrador != null)
+            @include('layouts.header_administrador')
+        @endif
+    @else
 
-        <div class="header_main">
-            <div class="container">
-                <div class="row">
-
-                    <!-- Logo -->
-                    <div class="col-lg-4 col-sm-3 col-3 order-1">
-                        <div class="logo_container">
-                            <div class="logo_icon"><img src="images/logoSite.png" class="img-fluid" alt=""></div>
-
-                        </div>
-                    </div>
-                    <!-- Wishlist -->
-                    <div class="col-lg-8 col-3 order-lg-3 order-2 text-lg-left text-right">
-                        <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
-                            <!-- Icone usuário logado -->
-                            <div class="cart">
-                                <div class="cart_container d-flex flex-row align-items-center justify-content-end">
-                                    <div class="cart_icon">
-                                        <i class="fa fa-user-circle fa-4x" style="color: #08c8b0 "></i>
-                                    </div>
-                                    <div class="cart_content">
-                                        <div class="cart_text"><a href="#">Bem-vindo</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Main Navigation -->
-
-        <nav class="main_nav">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-
-                        <div class="main_nav_content d-flex flex-row">
-
-                            <!-- Categories Menu -->
-
-                            
-
-                            <!-- Main Nav Menu -->
-
-                            
-
-                            <!-- Menu Trigger -->
-
-                            <div class="menu_trigger_container ml-auto">
-                                <div class="menu_trigger d-flex flex-row align-items-center justify-content-end">
-                                    <div class="menu_burger">
-                                        <div class="menu_trigger_text">menu</div>
-                                        <div class="cat_burger menu_burger_inner">
-                                            <span></span><span></span><span></span></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Menu -->
-
-        <div class="page_menu">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-
-                        <div class="page_menu_content">
-
-                            <div class="page_menu_search">
-                                <form action="#">
-                                    <input type="search" required="required" class="page_menu_search_input"
-                                           placeholder="Pesquisar produtos...">
-                                </form>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </header>
+        @include('layouts.header_usuario')
+    @endif
 
     <!--<section>-->
     <div class="top-content">
@@ -140,7 +62,7 @@
                             <option >item 5</option>
                             <option >item 6</option>
                             </select>
-                            </div>
+
                     </form>
                 
                     </div>   
@@ -176,6 +98,7 @@
                         <div class="row">
                         <textarea class="form-group col-md-8" rows="5" id="comment"></textarea></div>
                     </div>
+            </ul>
             </div>
         
     </div>
@@ -194,13 +117,13 @@
                             <option >3</option>
                             <option >4</option>
                             <option >5</option>
-                            </select>
+                        </select>
                             <br /><br />
                             <input type="submit" class="btn btn-info" value="Avaliar">
-                        </div>
+
                    </form>
                     <br /><br />
-                    
+            </ul>
                     
                 </div>
     </div>
