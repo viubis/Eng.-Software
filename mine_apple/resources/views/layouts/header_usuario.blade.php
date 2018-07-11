@@ -22,9 +22,9 @@
                         <!-- Logo -->
                         <div class="col-lg-4 col-sm-3 col-3 order-1 pt-3 pb-0">
                             <div class="logo_container">
-                                <div class="logo_icon ml-5 mt-1"><img src="{{asset('images/logoSite2.png')}}"
+                                <div class="logo_icon ml-5 mt-1"><a href="{{url("/")}}"><img src="{{asset('images/logoSite2.png')}}"
                                   class="img-fluid"
-                                  alt=""></div>
+                                  alt=""></a></div>
                               </div>
                           </div>
 
@@ -42,14 +42,14 @@
                                                     class="custom_dropdown_placeholder clc">Todas as categorias</span>
                                                     <i class="fas fa-chevron-down"></i>
                                                     <ul class="custom_list clc">
-                                                        <li><a class="clc" href="/pesquisa_produtos">Todas as categorias</a></li>
-                                                        <li><a class="clc" href="/pesquisa_produtos/1">Cereais</a></li>
-                                                        <li><a class="clc" href="/pesquisa_produtos/2">Frutas</a></li>
-                                                        <li><a class="clc" href="/pesquisa_produtos/3">Legumes</a></li>
-                                                        <li><a class="clc" href="/pesquisa_produtos/4">Leguminosas</a></li>
-                                                        <li><a class="clc" href="/pesquisa_produtos/5">Raízes</a></li>
-                                                        <li><a class="clc" href="/pesquisa_produtos/6">Tubérculos</a></li>
-                                                        <li><a class="clc" href="/pesquisa_produtos/7">Verduras</a></li>
+                                                        <li><a class="clc" href="{{url("/pesquisa_produtos")}}">Todas as categorias</a></li>
+                                                        <li><a class="clc" href="{{url("/pesquisa_produtos/1")}}">Cereais</a></li>
+                                                        <li><a class="clc" href="{{url("/pesquisa_produtos/2")}}">Frutas</a></li>
+                                                        <li><a class="clc" href="{{url("/pesquisa_produtos/3")}}">Legumes</a></li>
+                                                        <li><a class="clc" href="{{url("/pesquisa_produtos/4")}}">Leguminosas</a></li>
+                                                        <li><a class="clc" href="{{url("/pesquisa_produtos/5")}}">Raízes</a></li>
+                                                        <li><a class="clc" href="{{url("/pesquisa_produtos/6")}}">Tubérculos</a></li>
+                                                        <li><a class="clc" href="{{url("/pesquisa_produtos/7")}}">Verduras</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -99,13 +99,13 @@
                                     </div>
 
                                     <ul class="cat_menu">
-                                        <li><a href="/pesquisa_produtos/1">Cereais <i class="fas fa-chevron-right ml-auto"></i></a></li>
-                                        <li><a href="/pesquisa_produtos/2">Frutas<i class="fas fa-chevron-right"></i></a></li>
-                                        <li><a href="/pesquisa_produtos/3">Legumes<i class="fas fa-chevron-right"></i></a></li>
-                                        <li><a href="/pesquisa_produtos/4">Leguminosas<i class="fas fa-chevron-right"></i></a></li>
-                                        <li><a href="/pesquisa_produtos/5">Raízes<i class="fas fa-chevron-right"></i></a></li>
-                                        <li><a href="/pesquisa_produtos/6">Tubérculos<i class="fas fa-chevron-right"></i></a></li>
-                                        <li><a href="/pesquisa_produtos/7">Verduras<i class="fas fa-chevron-right"></i></a></li>
+                                        <li><a href="{{url("/pesquisa_produtos/1")}}">Cereais <i class="fas fa-chevron-right ml-auto"></i></a></li>
+                                        <li><a href="{{url("/pesquisa_produtos/2")}}">Frutas<i class="fas fa-chevron-right"></i></a></li>
+                                        <li><a href="{{url("/pesquisa_produtos/3")}}">Legumes<i class="fas fa-chevron-right"></i></a></li>
+                                        <li><a href="{{url("/pesquisa_produtos/4")}}">Leguminosas<i class="fas fa-chevron-right"></i></a></li>
+                                        <li><a href="{{url("/pesquisa_produtos/5")}}">Raízes<i class="fas fa-chevron-right"></i></a></li>
+                                        <li><a href="{{url("/pesquisa_produtos/6")}}">Tubérculos<i class="fas fa-chevron-right"></i></a></li>
+                                        <li><a href="{{url("/pesquisa_produtos/7")}}">Verduras<i class="fas fa-chevron-right"></i></a></li>
                                     </ul>
                                 </div>
 

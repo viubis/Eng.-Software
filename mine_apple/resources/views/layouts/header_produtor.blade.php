@@ -17,7 +17,7 @@
                                                 <i style="color: #08c8b0;" class="fa fa-user-circle fa-2x"></i>
                                             </div>
                                             <div class="col-md-4">
-                                                <a style="font-size: 13px" href="#">{{Auth::user()->produtor->nomeFantasia}} <span
+                                                <a style="font-size: 13px" href="{{url("")}}">{{Auth::user()->produtor->nomeFantasia}} <span
                                                     ></span></a>
                                             </div>
                                             <div class="col-md-1">
