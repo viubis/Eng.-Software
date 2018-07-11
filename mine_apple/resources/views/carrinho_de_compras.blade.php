@@ -37,9 +37,32 @@
                         <div class="col d-flex flex-row">
                             <div class="top_bar_content ml-auto">
                                 <div class="top_bar_user">
-                                    <div class="user_icon"><img src="{{asset('images/iconUser.png')}}" alt=""></div>
-                                    <div><a href="{{url("/login")}}">Cadastrar</a></div>
-                                    <div><a href="{{url("/login")}}">Login</a></div>
+                                     @guest
+                                        <div class="user_icon"><i style="color: #08c8b0;" class="fa fa-user-circle fa-2x"></i></div>
+                                        <div><a href="{{url('/login')}}">Cadastre-se ou acesse a sua conta clicando aqui</a></div>
+                                     @else
+                                        <!-- Icone usuário logado -->
+                                        <div class="top_bar_user">
+                                            <div class="row">
+                                                <div class="col-md-1 mt-3">
+                                                    <i style="color: #08c8b0;" class="fa fa-user-circle fa-2x"></i>
+                                                </div>
+                                                <div class="col-md-4">
+                                                        <a style="font-size: 13px" href="#">{{Auth::user()->consumidor->nome}} <span
+                                                            ></span></a>
+                                                </div>
+                                                <div class="col-md-1">
+                                                        <a style="font-size: 13px;border: none" href="{{ route('logout') }}"
+                                                           onclick="event.preventDefault();
+                                                                                         document.getElementById('logout-form').submit();">{{ __('Sair') }}</a>
+                                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                              style="display: none;">
+                                                            @csrf
+                                                        </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endguest
                                 </div>
                             </div>
                         </div>
@@ -101,7 +124,7 @@
                                 <div class="cart">
                                     <div class="cart_container d-flex flex-row align-items-center justify-content-end">
                                         <div class="cart_icon">
-                                            <a href="{{url("/carrinho")}}">
+                                            <a href="{{route('carrinho_compras')}}">
                                                 <i class="fa fa-shopping-basket fa-3x" style="color: #000000"></i>
                                             </a>
                                             <div class="cart_count"><span>2</span></div>

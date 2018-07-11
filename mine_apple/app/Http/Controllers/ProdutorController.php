@@ -15,6 +15,7 @@ use mine_apple\Conta;
 use mine_apple\Banco;
 use mine_apple\Produtor;
 use mine_apple\Endereco;
+use mine_apple\Http\Requests\FormProdutor;
 
 class ProdutorController extends Controller
 {
@@ -48,7 +49,7 @@ class ProdutorController extends Controller
      * @param Request $request
      * @return string
      */
-    public function cadastrarProdutor(Request $request) {
+    public function cadastrarProdutor(FormProdutor $request) {
 
 
 

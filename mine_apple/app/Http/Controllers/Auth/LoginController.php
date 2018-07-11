@@ -10,6 +10,7 @@ use Laravel\Socialite\Facades\Socialite;
 use mine_apple\User;
 use mine_apple\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Hash;
+use mine_apple\Http\Requests\FormConsumidor;
 class LoginController extends Controller
 {
     /*

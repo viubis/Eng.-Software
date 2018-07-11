@@ -3,6 +3,7 @@
 namespace mine_apple\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class FormConsumidor extends FormRequest
 {
@@ -16,8 +17,8 @@ class FormConsumidor extends FormRequest
         return [
             'nome'          => 'required|string|min:1|max:255',
             'sobrenome'     => 'required|string|min:1|max:255',
-            'cpf'           => 'required|formato_cpf',
-            'telefone'      => 'required|telefone_com_ddd',
+            'cpf'           => 'required|string|min:14|max:14',
+            'telefone'      => 'required|string|min:14|max:15',
             'sexo'          => ['required', Rule::in('m', 'f')],
         ];
     }

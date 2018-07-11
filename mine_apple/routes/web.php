@@ -97,6 +97,8 @@ Route::middleware(['auth'])->group(function () {
 
         Route::post('/consumidor/cadastrar_endereco', 'ConsumidorController@cadastrarEndereco')->name('consumidor.cadastrar.endereco');
 
+        Route::get('/carrinho_de_compras','ConsumidorController@getCarrinhoCompras')->name('carrinho_compras');
+
         //Route::get('/consumidor/cadastrar', 'ConsumidorController@cadastrarConsumidor')->name('consumidor.cadastrar');
         //Route::get('/consumidor/alterar', 'ConsumidorController@alterarConsumidor')->name('consumidor.alterar');
         //Route::get('/consumidor/adicionar_cartao', 'ConsumidorController@adicionarCartao')->name('comsumidor.cartao.cadastrar');
