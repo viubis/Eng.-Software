@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
             ProdutorTableSeeder::class,
             ConsumidorEnderecoTableSeeder::class,
             ProdutoTableSeeder::class,
-            AdministradorTableSeeder::class
+            AdministradorTableSeeder::class,
+            FotoTableSeeder::class
         ]);
 
     }

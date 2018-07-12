@@ -31,6 +31,13 @@
 <!-- Top content --->
 <div class="top-content">
     <div class="logo_icon"><img src="{{asset('images/logoSite.png')}}" alt=""></div>
+                    @if(isset($errors) && count($errors) > 0)
+                        <div class="alert alert-danger">
+                            @foreach ($errors->all() as $erro):
+                                <p>{{$erro}}</p>
+                            @endforeach 
+                       </div>
+                    @endif
     <div class="inner-bg">
         <div class="container">
             <div class="row">
@@ -41,6 +48,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-6 offset-lg-3 form-box">
+                    
                     <form role="form" action="{{route('cadastrarConsumidor')}}" method="post" class="registration-form">
 
                         <fieldset>
@@ -60,28 +68,28 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="nome">Nome</label>
                                     <input type="text" name="nome" placeholder="Nome..."
-                                           class="form-first-name form-control" id="nome" required>
+                                           class="form-first-name form-control" id="nome" value="{{old('nome')}}">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="sobrenome">Sobrenome</label>
                                     <input type="text" name="sobrenome" placeholder="Sobrenome..."
-                                           class="form-first-name form-control" id="sobrenome" required>
+                                           class="form-first-name form-control" id="sobrenome" value="{{old('sobrenome')}}">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="cpf">CPF</label>
                                     <input type="text" name="cpf" placeholder="CPF..."
-                                           class="form-last-name form-control" id="cpf" data-mask="000.000.000-00" required>
+                                           class="form-last-name form-control" id="cpf" data-mask="000.000.000-00" value="{{old('cpf')}}">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="telefone">CPF</label>
                                     <input type="text" name="telefone" placeholder="Telefone..."
-                                           class="form-last-name form-control" id="telefone" data-mask="(00) 00000-0000" required>
+                                           class="form-last-name form-control" id="telefone" data-mask="(00) 00000-0000" value="{{old('telefone')}}">
                                 </div>
 
                                 <div class="form-group">
                                     <label class="sr-only" for="sexo">Sexo</label>
-                                    <select class="form-control" id="sexo" name="sexo" required>
-                                        <option disabled selected> Sexo</option>
+                                    <select class="form-control" id="sexo" name="sexo" value="{{old('sexo')}}">
+                                        <option disabled selected value=""> Sexo</option>
                                         <option value="f">Feminino</option>
                                         <option value="m">Masculino</option>
                                     </select>
@@ -105,27 +113,27 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="CEP">CEP</label>
                                     <input type="text" name="cep" placeholder="CEP"
-                                           class="form-first-name form-control" id="CEP" data-mask="00.000-000" required>
+                                           class="form-first-name form-control" id="CEP" data-mask="00.000-000" value="{{old('cep')}}" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="Rua">Rua</label>
                                     <input type="text" name="rua" placeholder="Rua"
-                                           class="form-first-name form-control" id="Rua" required>
+                                           class="form-first-name form-control" id="Rua" value="{{old('rua')}}" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="Número">Número</label>
                                     <input type="text" name="numero" placeholder="Número"
-                                           class="form-first-name form-control" id="Número" required>
+                                           class="form-first-name form-control" id="Número" value="{{old('numero')}}" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="Bairro">Bairro</label>
                                     <input type="text" name="bairro" placeholder="Bairro"
-                                           class="form-first-name form-control" id="Bairro" required>
+                                           class="form-first-name form-control" id="Bairro" value="{{old('bairro')}}" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="Complemento">Complemento</label>
                                     <input type="text" name="complemento" placeholder="Complemento"
-                                           class="form-first-name form-control" id="Complemento">
+                                           class="form-first-name form-control" id="Complemento" value="{{old('complemento')}}">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="estados">Estados</label>
@@ -179,22 +187,22 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="titular">Nome do titular</label>
                                     <input type="text" name="titular" placeholder="Nome do Titular do cartão"
-                                           class="form-facebook form-control" id="titular">
+                                           class="form-facebook form-control" id="titular" value="{{old('titular')}}">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="NumeroCartao">Número do cartão</label>
                                     <input type="text" name="numero_cartao" placeholder="Número do cartão"
-                                           class="form-facebook form-control" id="NumeroCartao">
+                                           class="form-facebook form-control" id="NumeroCartao" data-mask="0000 0000 0000 0000" value="{{old('numero_cartao')}}">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="CodSeg">Número do cartão</label>
                                     <input type="text" name="codigo" placeholder="Código de segurança"
-                                           class="form-facebook form-control" id="CodSeg">
+                                           class="form-facebook form-control" id="CodSeg" data-mask="000" value="{{old('codigo')}}">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="Validade">Validade</label>
                                     <input type="text" name="validade" placeholder="Validade"
-                                           class="form-facebook form-control" id="validade" data-mask="00/0000">
+                                           class="form-facebook form-control" id="validade" data-mask="00/0000" value="{{old('validade')}}">
                                 </div>
 
 

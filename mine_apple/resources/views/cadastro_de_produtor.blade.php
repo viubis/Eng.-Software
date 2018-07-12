@@ -31,6 +31,13 @@
 <!-- Top content -->
 <div class="top-content">
     <div class="logo_icon"><img src="{{asset('images/logoSite.png')}}" alt=""></div>
+        @if(isset($errors) && count($errors) > 0)
+            <div class="alert alert-danger">
+                @foreach ($errors->all() as $erro):
+                    <p>{{$erro}}</p>
+                 @endforeach 
+            </div>
+        @endif
     <div class="inner-bg">
         <div class="container">
             <div class="row">
@@ -65,29 +72,29 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="razaoSocial">Razão social</label>
                                     <input type="text" name="razaoSocial" placeholder="Razão social..."
-                                           class="form-first-name form-control" required id="razaoSocial">
+                                           class="form-first-name form-control" required id="razaoSocial" value="{{old('razaoSocial')}}">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="cnpj">CNPJ</label>
                                     <input type="text" name="cnpj" placeholder="CNPJ..."
-                                           class="form-last-name form-control" required id="cnpj" data-mask="00.000.000/0000-00">
+                                           class="form-last-name form-control" required id="cnpj" data-mask="00.000.000/0000-00" value="{{old('cnpj')}}">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="nomeFantasia">Nome fantasia</label>
                                     <input type="text" name="nomeFantasia" placeholder="Nome fantasia..."
-                                           class="form-first-name form-control" required id="nomeFantasia">
+                                           class="form-first-name form-control" required id="nomeFantasia" value="{{old('nomeFantasia')}}">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="telefoneComercial">Telefone Comercial</label>
                                     <input type="tel" name="telefone" placeholder="Telefone Comercial..."
-                                           class="form-first-name form-control" required id="telefoneComercial" data-mask="(00) 00000-0000"required>
+                                           class="form-first-name form-control" required id="telefoneComercial" data-mask="(00) 00000-0000" value="{{old('telefone')}}" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="sr-only" for="raio_entrega">Raio de entrega (em km)</label>
                                     <input type="number" min="1"  name="raioEntrega"
                                            placeholder="Raio de entrega (em km)..."
-                                           class="form-first-name form-control" required id="raio_entrega">
+                                           class="form-first-name form-control" required id="raio_entrega" value="{{old('raioEntrega')}}">
                                 </div>
                                 <button type="button" class="btn btn-next">Próximo</button>
                             </div>
@@ -107,27 +114,27 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="CEP">CEP</label>
                                     <input type="text" name="cep" placeholder="CEP"
-                                           class="form-first-name form-control" data-mask="00.000-000" required id="CEP">
+                                           class="form-first-name form-control" data-mask="00.000-000" required id="CEP" value="{{old('cep')}}">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="Rua">Rua</label>
                                     <input type="text" name="rua" placeholder="Rua"
-                                           class="form-first-name form-control" required id="Rua">
+                                           class="form-first-name form-control" required id="Rua" value="{{old('rua')}}">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="Número">Número</label>
                                     <input type="number" min="1" name="numero" placeholder="Número"
-                                           class="form-first-name form-control" id="Número">
+                                           class="form-first-name form-control" id="Número" value="{{old('numero')}}">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="Bairro">Bairro</label>
                                     <input type="text" name="bairro" placeholder="Bairro"
-                                           class="form-first-name form-control" id="Bairro">
+                                           class="form-first-name form-control" id="Bairro" value="{{old('bairro')}}">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="Complemento">Complemento</label>
                                     <input type="text" name="complemento" placeholder="Complemento"
-                                           class="form-first-name form-control" id="Complemento">
+                                           class="form-first-name form-control" id="Complemento" value="{{old('complemento')}}">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="estados">Estados</label>
@@ -173,12 +180,12 @@
                                         <div class="col-md-6">
                                             <label class="sr-only" for="numeroConta">Número da conta</label>
                                             <input type="text" name="numeroConta" placeholder="Número da conta"
-                                                   class="form-facebook form-control" required id="numeroConta">
+                                                   class="form-facebook form-control" required id="numeroConta" value="{{old('numeroConta')}}">
                                         </div>
                                         <div class="col-md-6">
                                             <label class="sr-only" for="dVerif">Dígito verificador</label>
                                             <input type="text" name="digitoConta" placeholder="Dígito verificador"
-                                                   class="form-facebook form-control" required id="dVerif" maxlength="1">
+                                                   class="form-facebook form-control" required id="dVerif" maxlength="1" value="{{old('digitoConta')}}">
                                         </div>
                                     </div>
                                 </div>
@@ -187,12 +194,12 @@
                                         <div class="col-md-6">
                                             <label class="sr-only" for="agencia">Agência</label>
                                             <input type="text" name="agencia" placeholder="Agência"
-                                                   class="form-facebook form-control" required id="agencia">
+                                                   class="form-facebook form-control" required id="agencia" value="{{old('agencia')}}">
                                         </div>
                                         <div class="col-md-6">
                                             <label class="sr-only" for="dVerif">Dígito verificador</label>
                                             <input type="text" name="digitoAgencia" placeholder="Dígito verificador"
-                                                   class="form-facebook form-control" required id="dVerif" maxlength="1">
+                                                   class="form-facebook form-control" required id="dVerif" maxlength="1" value="{{old('digitoAgencia')}}">
                                         </div>
                                     </div>
                                 </div>

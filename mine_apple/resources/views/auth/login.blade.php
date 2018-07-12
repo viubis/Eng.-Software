@@ -31,6 +31,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-5">
+                    @if(isset($errors) && count($errors) > 0)
+                        <div class="alert alert-danger">
+                            @foreach ($errors->all() as $erro):
+                                <p>{{$erro}}</p>
+                            @endforeach 
+                       </div>
+                    @endif
 
                     <div class="form-box">
                         <div class="form-top">
@@ -48,7 +55,7 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="form-email">Email</label>
                                     <input id="email" type="email" name="email" placeholder="Email..."
-                                           class="form-email form-control">
+                                           class="form-email form-control" value="{{old('email')}}">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="form-password">Password</label>
@@ -106,7 +113,7 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="form-email">Email</label>
                                     <input id="email1" type="email" name="email" placeholder="Email... "
-                                           class="form-email form-control">
+                                           class="form-email form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="form-password">Password</label>

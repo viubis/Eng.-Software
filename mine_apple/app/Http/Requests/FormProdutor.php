@@ -3,6 +3,7 @@
 namespace mine_apple\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class FormProdutor extends FormRequest
 {
@@ -15,9 +16,9 @@ class FormProdutor extends FormRequest
     {
         return [
             'razaoSocial'   => 'required|string|min:1|max:255',
-            'cnpj'          => 'required|cnpj',
+            'cnpj'          => 'required|string|min:18|max:18',
             'nomeFantasia'  => 'required|string|min:1|max:255',
-            'telefone'      => 'required|telefone_com_ddd',
+            'telefone'      => 'required|string|min:14|max:15',
             'raioEntrega'   => 'required|numeric',
         ];
     }

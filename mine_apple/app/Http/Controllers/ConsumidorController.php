@@ -17,6 +17,7 @@ use mine_apple\Produtor;
 use mine_apple\Embalagem;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Carbon\Carbon;
+use mine_apple\Http\Requests\FormConsumidor;
 
 
 class ConsumidorController extends Controller
@@ -59,7 +60,7 @@ class ConsumidorController extends Controller
      * @param Request $request
      * @return string
      */
-    public function cadastrarConsumidor(Request $request) {
+    public function cadastrarConsumidor(FormConsumidor $request) {
 
         //dd($request->all());
         $consumidor = new Consumidor;
@@ -70,6 +71,8 @@ class ConsumidorController extends Controller
         $consumidor->cpf = $request->cpf;
         $consumidor->telefone = $request->telefone;
         $consumidor->acesso = 1;
+
+
 
         //$this->adicionarCartao($request);
         //$this->cadastrarEndereco($request);
@@ -142,10 +145,23 @@ class ConsumidorController extends Controller
      * @return string
      */
     public function adicionarCarrinho(Request $request){
-
-        Cart::add($request->id, $request->nome, $request->quantidade, $request->preco);
+        if(is_null($request->quantidade)) {
+            Cart::add($request->id, $request->nome, 1, $request->preco, ['embalagem' => $request->embalagem]);
+        }
+        else{
+            Cart::add($request->id, $request->nome, $request->quantidade, $request->preco, ['embalagem' => $request->embalagem]);
+        }
     }
 
+    /**
+     * @author Victória Oliveira
+     * @param Request $request
+     * @return string
+     */
+    public function removerDoCarrinho(Request $request){
+        dd($request->all());
+        Cart::remove($request->rowId);
+    }
 
     /**
      * @author Lucas Alves
@@ -325,7 +341,7 @@ class ConsumidorController extends Controller
         return view('avaliacao_assinatura', compact('assinaturas'));
     }
 
-    
+
 
     /**
      * @author Lucas Alves
@@ -345,6 +361,15 @@ class ConsumidorController extends Controller
 
         $consumidor_endereco->endereco_id = $endereco->id;
         $consumidor_endereco->consumidor_id = Auth::user()->id;
+    }
+
+     public function getCarrinhoCompras(){
+
+        //retorna todos os itens do carrinho
+        $itens = Cart::content();
+        //retorna o preço total
+        $subtotal = Cart::total();
+        return view('carrinho_de_compras', compact('itens', 'subtotal'));
     }
 
 }
