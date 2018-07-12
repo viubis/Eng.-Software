@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/gerenciamento_usuario.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/responsive.css')}}">
 
-    <<!-- Favicon and touch icons -->
+    <!-- Favicon and touch icons -->
     <link rel="shortcut icon" href="{{asset('images/favicon.png')}}">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('images/icon-144.png')}}">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset('images/icon-114.png')}}">
