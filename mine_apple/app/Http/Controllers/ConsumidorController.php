@@ -15,6 +15,7 @@ use mine_apple\Consumidor;
 use mine_apple\Produto;
 use mine_apple\Produtor;
 use mine_apple\Embalagem;
+use mine_apple\Foto;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Carbon\Carbon;
 use mine_apple\Http\Requests\FormConsumidor;
@@ -280,9 +281,10 @@ class ConsumidorController extends Controller
         $enderecos = Endereco::all();
         $cidades = Cidade::all();
         $estados = Estado::all();
+        $fotos = Foto::all();
         $cartoes = Cartao::where('consumidor_id', '=', Auth::user()->id);
         $consumidor_enderecos = ConsumidorEndereco::all();
-        return view('realizacao_de_assinatura', compact('itens', 'embalagens', 'produtos', 'enderecos', 'consumidor_enderecos', 'cidades', 'estados', 'cartoes'));
+        return view('realizacao_de_assinatura', compact('itens', 'embalagens', 'produtos', 'enderecos', 'consumidor_enderecos', 'cidades', 'estados', 'cartoes', 'fotos'));
 
     }
 
@@ -336,6 +338,7 @@ class ConsumidorController extends Controller
      */
     public function getAvaliacaoAssinatura(){
         $assinaturas = Assinatura::all();
+        $produtores = Produtor::all();
         return view('avaliacao_assinatura', compact('assinaturas'));
     }
 

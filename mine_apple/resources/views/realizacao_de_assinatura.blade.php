@@ -118,8 +118,9 @@
            <div class="row" id="backColor">
                <div class="col-sm-4">
                    <div class="subcontainerProduto1">
+                    @php $foto = $fotos->where('produto_id', '=', $item->id)->first() @endphp
                        <div class="imagem">
-                           <img src="{{asset('images/abacaxi.png')}}" height="200" width="200" style="float:left">
+                           <img src="{{asset($foto->path)}}" height="200" width="200" style="float:left">
                        </div>
                    </div>
                </div>
@@ -136,9 +137,9 @@
                                    <div class="form-group col-md-12">
                                        <label for="freqProd1">Frequencia de entrega </label>
                                           <select multiple class="form-control" size="2" id="freqProd1" name="freqProd1">
-                                                <option disabled>Produto 1</option>
-                                                <option disabled>Produto 2</option>
-                                                <option disabled>Produto 3</option>
+                                             @for($i = 0; $i < 5; $i++)
+                                                <option>{{$i}} vez por semana</option>
+                                            @endfor
                                         </select>
 
                                    </div>
