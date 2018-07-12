@@ -60,4 +60,23 @@ class AdministradorController extends Controller
     	$usuarios = Usuario::all();
     	return view('gerenciamento_do_sistema', compact('usuarios'));
     }
+
+    /**
+     * @author Lucas Alves
+     * @param request
+     * @return string
+     */
+    public function banirProdutor(Request $request){
+        $id = $request->id;
+        $produtor = Produtor::where('usuario_id', '=', $id);
+        $produtor->acesso = 0;
+        $this.getGerenciamentoProdutores();
+    }
+
+    public function banirConsumidor(Request $request){
+        $id = $request->id;
+        $consumidor = Consumidor::where('usuario_id', '=', $id);
+        $consumidor->acesso = 0;
+        $this.getGerenciamentoConsumidores();
+    }
 }

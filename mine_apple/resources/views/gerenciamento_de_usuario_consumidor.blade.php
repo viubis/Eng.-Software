@@ -49,7 +49,7 @@
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="contact_form_title">Gerenciamento de usuário</div>
-                    <form>
+                    
                         <div class="form-row">
                             <label class="sr-only" for="selecionarConsumidor">Selecione um consumidor... </label>
                             <select class="form-control" id="selecionarConsumidor" style="margin-bottom: 20px">
@@ -63,6 +63,7 @@
                         </label>
                         <div class="pb-0" id="line"></div>
                         @foreach($consumidores as $consumidor)
+                        <form role="form" method="post" action="/gerenciamento/consumidor">
                         <div class="form-row">
                             <div class="form-group col-md-2">
                                 <i class="fa fa-user-circle fa-8x"></i>

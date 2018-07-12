@@ -71,7 +71,7 @@
 
                         <div class="pb-0" id="line"></div>
 
-                        <form>
+                        <form role="form" method="post" action="gerenciamento/produtor">
                         <div class="form-row">
                             <div class="form-group col-md-2">
                                 <i class="fa fa-user-circle fa-8x"></i>
