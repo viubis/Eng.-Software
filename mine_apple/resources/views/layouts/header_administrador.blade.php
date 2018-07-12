@@ -87,11 +87,14 @@
 
                             <div class="main_nav_menu ml-auto">
                                 <ul class="standard_dropdown main_nav_dropdown">
-                                    <li><a href="#">Gerenciamento de sistema<i class="fas fa-chevron-down"
-                                                                               id="meusdados"></i></a>
+                                    <li><a href="{{url('/gerenciamento/sistema')}}">Gerenciamento de Sistema<i class="fas fa-chevron-down"
+                                                                               ></i></a>
                                     </li>
-                                    <li><a href="#">Gerenciamento de usuário<i class="fas fa-chevron-down"
-                                                                               id="resumoconta"></i></a>
+                                    <li><a href="{{url('/gerenciamento/produtor')}}">Gerenciamento de Produtor<i class="fas fa-chevron-down"
+                                                                               ></i></a>
+                                    </li>
+                                    <li><a href="{{url('/gerenciamento/consumidor')}}">Gerenciamento de Consumidor<i class="fas fa-chevron-down"
+                                            ></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -131,10 +134,13 @@
                             <ul class="page_menu_nav">
 
                                 <li class="page_menu_item">
-                                    <a href="#">Gerenciamento de sistema<i class="fa fa-angle-down"></i></a>
+                                    <a href="{{url('/gerenciamento/sistema')}}">Gerenciamento de Sistema<i class="fa fa-angle-down"></i></a>
                                 </li>
                                 <li class="page_menu_item">
-                                    <a href="#">Gerenciamento de usuário<i class="fa fa-angle-down"></i></a>
+                                    <a href="{{url('/gerenciamento/produtor')}}">Gerenciamento de Produtor<i class="fa fa-angle-down"></i></a>
+                                </li>
+                                <li class="page_menu_item">
+                                    <a href="{{url('/gerenciamento/consumidor')}}">Gerenciamento de Consumidor<i class="fa fa-angle-down"></i></a>
                                 </li>
                             </ul>
                         </div>
