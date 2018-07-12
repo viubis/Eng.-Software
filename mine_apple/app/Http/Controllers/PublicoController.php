@@ -81,7 +81,9 @@ class PublicoController extends Controller
     public function getPesquisaCategoriasProdutos($categoria){
         $produtos = Produto::where('categoria_id','=', $categoria)->get();
         $cat = Categoria::where('id', '=', $categoria)->first();
-        return view('pesquisa_de_produtos', compact('produtos', 'cat'));
+        $fotos = Foto::all();
+        
+        return view('pesquisa_de_produtos', compact('produtos', 'cat', 'fotos'));
     }
 
     /**
@@ -93,7 +95,8 @@ class PublicoController extends Controller
         $produtos = Produto::all();
         $produtores = Produtor::all();
         $embalagem = Embalagem::all();
-        return view('pesquisa_de_produtos', compact('produtos', 'produtores', 'embalagem'));
+        $fotos = Foto::all();
+        return view('pesquisa_de_produtos', compact('produtos', 'produtores', 'embalagem', 'fotos'));
     }
 
     /**

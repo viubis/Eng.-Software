@@ -48,7 +48,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 pt-3">
-                    <h1 class="h1 page-title" data-reactid="38">{{$cat->nome}}</h1>
+                    <h1 class="h1 page-title" data-reactid="38">@if (isset($cat)) {{$cat->nome}} @else {{'Todos Produtos'}} @endif</h1>
                     <div class="pb-3" id="line"></div>
                 </div>
             </div>
@@ -64,9 +64,11 @@
                         <div class="subcontainerProduto1">
                             <div class="imagem">
                                 @php
-                                    $foto = \mine_apple\Foto::where('produto_id', '=', $produto->id)->first();
+                                    $foto = $fotos->where('produto_id', '=', $produto->id)
                                 @endphp
-                                <img src="{{asset($foto->path)}}" height="200" width="200" style="float:left">
+                                @foreach($foto as $i)
+                                <img src="{{asset($i->path)}}" height="200" width="200" style="float:left">
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -109,7 +111,7 @@
                                             <label for="quantidade" style="color: #99a8b7">Quantidade</label>
                                             <input type="number" name="quantidade"
                                                    class="form-control"
-                                                   placeholder="1">
+                                                   placeholder="0">
                                         </div>
                                     </div>
                                     <div class="form-group" align="right">
@@ -126,7 +128,7 @@
                     <div class="pb-0" id="line"></div>
                 </div>
             </div>
-        @endforeach
+        
 
         <!-- <div class="col-md-12 mb-3">
                 <button type="submit" class="btn btn-primary">Mostrar mais</button>
@@ -134,6 +136,7 @@
 
 
         </div>
+        @endforeach
 
 
 
