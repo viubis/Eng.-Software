@@ -63,10 +63,10 @@
                                     <div class="custom_dropdown">
                                         <div class="custom_dropdown_list">
                                                     <span
-                                                        class="custom_dropdown_placeholder clc">Todas as categorias</span>
+                                                        class="custom_dropdown_placeholder clc">Categorias</span>
                                             <i class="fas fa-chevron-down"></i>
                                             <ul class="custom_list clc">
-                                                <li><a class="clc" href="{{url("/pesquisa_produtos")}}">Todas as categorias</a></li>
+                                                <li><a class="clc" href="{{url("/pesquisa_produtos")}}">Todas</a></li>
                                                 <li><a class="clc" href="{{url("/pesquisa_produtos/1")}}">Cereais</a></li>
                                                 <li><a class="clc" href="{{url("/pesquisa_produtos/2")}}">Frutas</a></li>
                                                 <li><a class="clc" href="{{url("/pesquisa_produtos/3")}}">Legumes</a></li>
@@ -93,7 +93,7 @@
                         <div class="cart">
                             <div class="cart_container d-flex flex-row align-items-center justify-content-end">
                                 <div class="cart_icon">
-                                    <a href="{{route('carrinho_compras')}}">
+                                    <a href="{{url('/carrinho_de_compras')}}">
                                         <i class="fa fa-shopping-basket fa-3x" style="color: #000000"></i>
                                     </a>
                                     <div class="cart_count"><span>0</span></div>
@@ -150,7 +150,7 @@
                         <div class="menu_trigger_container ml-auto">
                             <div class="menu_trigger d-flex flex-row align-items-center justify-content-end">
                                 <div class="menu_burger">
-                                    <div class="menu_trigger_text">menu</div>
+                                    <div class="menu_trigger_text"></div>
                                     <div class="cat_burger menu_burger_inner">
                                         <span></span><span></span><span></span></div>
                                 </div>
@@ -186,6 +186,10 @@
                             <li class="page_menu_item">
                                 <a href="{{url("fale_conosco")}}">Fale Conosco<i
                                         class="fa fa-angle-down"></i></a>
+                            </li>
+                            <li class="page_menu_item">
+                                <a href="{{url('/carrinho_de_compras')}}">Carrinho<i
+                                            class="fa fa-angle-down"></i></a>
                             </li>
                         </ul>
                     </div>

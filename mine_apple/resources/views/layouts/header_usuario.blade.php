@@ -1,4 +1,6 @@
-   <header class="header">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+<header class="header">
             <!-- Top Bar -->
             <div class="top_bar">
                 <div class="container">
@@ -14,22 +16,22 @@
                     </div>
                 </div>
             </div>
-
+<div class="col-lg-12 col-xs-12 col-sm-12" >
             <!-- Header Main -->
             <div class="header_main">
                 <div class="container">
                     <div class="row">
                         <!-- Logo -->
-                        <div class="col-lg-4 col-sm-3 col-3 order-1 pt-3 pb-0">
+                        <div class="col-lg-4 col-xs-6 col-sm-4 pt-3 text-center">
                             <div class="logo_container">
-                                <div class="logo_icon ml-5 mt-1"><a href="{{url("/")}}"><img src="{{asset('images/logoSite2.png')}}"
-                                  class="img-fluid"
+                                <div class="logo_icon ml-1 mt-1"><a href="{{url("/")}}"><img src="{{asset('images/logoSite2.png')}}"
+
                                   alt=""></a></div>
                               </div>
                           </div>
 
                           <!-- Search  6 col 12 ord 2 order 3-->
-                          <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+                          <div class="col-lg-6 col-sm-6 col-xs-6 pt-0">
                             <div class="header_search">
                                 <div class="header_search_content">
                                     <div class="header_search_form_container">
@@ -39,10 +41,10 @@
                                             <div class="custom_dropdown">
                                                 <div class="custom_dropdown_list">
                                                     <span
-                                                    class="custom_dropdown_placeholder clc">Todas as categorias</span>
+                                                    class="custom_dropdown_placeholder clc">Categorias</span>
                                                     <i class="fas fa-chevron-down"></i>
                                                     <ul class="custom_list clc">
-                                                        <li><a class="clc" href="{{url("/pesquisa_produtos")}}">Todas as categorias</a></li>
+                                                        <li><a class="clc" href="{{url("/pesquisa_produtos")}}">Todas</a></li>
                                                         <li><a class="clc" href="{{url("/pesquisa_produtos/1")}}">Cereais</a></li>
                                                         <li><a class="clc" href="{{url("/pesquisa_produtos/2")}}">Frutas</a></li>
                                                         <li><a class="clc" href="{{url("/pesquisa_produtos/3")}}">Legumes</a></li>
@@ -63,14 +65,14 @@
                             </div>
 
                             <!-- Wishlist -->
-                            <div class="col-lg-2 col-9 order-lg-3 order-2 text-lg-left text-right pb-0 pt-0">
-                                <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+                            <div class="col-lg-2 col-9">
+                                <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end  clearfix">
                                     <!-- Cart -->
                                     <div class="cart">
-                                        <div class="cart_container d-flex flex-row align-items-center justify-content-end">
-                                            <div class="cart_icon">
-                                                <a href="{{url("/carrinho")}}">
-                                                    <i class="fa fa-shopping-basket fa-3x" style="color: #000000"></i>
+                                        <div class="cart_container d-flex flex-row align-items-center justify-content-end ">
+                                            <div class="cart_icon ">
+                                                <a href="{{url('/carrinho_de_compras')}}">
+                                                    <i class="fa fa-shopping-basket fa-3x " style="color: #000000"></i>
                                                 </a>
                                                 <div class="cart_count"><span>2</span></div>
                                             </div>
@@ -81,6 +83,7 @@
                         </div>
                     </div>
                 </div>
+</div>
 
                 <!-- Main Navigation -->
 
@@ -109,6 +112,7 @@
                                     </ul>
                                 </div>
 
+
                                 <!-- Main Nav Menu -->
 
                                 <div class="main_nav_menu ml-auto">
@@ -126,9 +130,9 @@
                                     <div class="menu_trigger_container ml-auto">
                                         <div class="menu_trigger d-flex flex-row align-items-center justify-content-end">
                                             <div class="menu_burger">
-                                                <div class="menu_trigger_text">menu</div>
+                                                <div class="menu_trigger_text"></div>
                                                 <div class="cat_burger menu_burger_inner">
-                                                    <span></span><span></span><span></span></div>
+                                                    <span></span><span></span><span></span><span></span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -162,12 +166,17 @@
                                             <li class="page_menu_item">
                                                 <a href="{{url("fale_conosco")}}">Fale Conosco<i
                                                     class="fa fa-angle-down"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                            </li>
+                                            <li class="page_menu_item">
+                                                <a href="{{url('/carrinho_de_compras')}}">Carrinho<i
+                                                            class="fa fa-angle-down"></i></a>
+                                            </li>
+                                        </ul>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </header>
+                    </div>
+</header>
 

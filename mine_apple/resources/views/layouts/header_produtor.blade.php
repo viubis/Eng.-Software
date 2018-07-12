@@ -88,7 +88,7 @@
 
                             <div class="main_nav_menu ml-auto">
                                 <ul class="standard_dropdown main_nav_dropdown">
-                                    <li><a href="#">Meus Dados<i class="fas fa-chevron-down" id="meusdados"></i></a>
+                                    <li><a href="{{url('/dados_cadastrais')}}">Meus Dados<i class="fas fa-chevron-down" id="meusdados"></i></a>
                                     </li>
                                     <li><a href="#">Resumo da Conta<i class="fas fa-chevron-down" id="resumoconta"></i></a>
                                     </li>
@@ -132,7 +132,7 @@
                             </div>
                             <ul class="page_menu_nav">
                                 <li class="page_menu_item">
-                                    <a style="font-size: 10px" href="#">Meus Dados<i class="fa fa-angle-down"></i></a>
+                                    <a style="font-size: 10px" href="{{url('/dados_cadastrais')}}">Meus Dados<i class="fa fa-angle-down"></i></a>
                                 </li>
                                 <li class="page_menu_item">
                                     <a href="#">Resumo da Conta<i class="fa fa-angle-down"></i></a>
