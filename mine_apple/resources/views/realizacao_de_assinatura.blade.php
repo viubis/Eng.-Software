@@ -125,7 +125,7 @@
                </div>
                <div class="col-sm-8">
                    <div class="subcontainerProduto2 ">
-                       <form>
+                       <form method="post" action="/realizacao_assinatura">
                            <fieldset>
                                <div class="form-row">
                                    <div class="form-group col-md-6">
@@ -174,45 +174,52 @@
                                 <div class="col-md-12 mb-3">
                                     <div class="form-group">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="segunda"
-                                                   value="segunda" name="segunda" disabled>
-                                            <label class="form-check-label" type="lab1" for="segunda" style="margin-left:-22px;margin-right:+20px">
+                                            <input class="form-check-input" type="checkbox"
+                                                   value="segunda" name="segunda[{{$item->id}}]" >
+                                            <label class="form-check-label" type="lab1" style="margin-left:-22px;margin-right:+20px">
                                                 Segunda-feira
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="terca"
-                                                   value="terca" name="terca" disabled>
-                                            <label class="form-check-label" type="lab1" for="terca" style="margin-left:-22px;margin-right:+20px">
+                                            <input class="form-check-input" type="checkbox" 
+                                                   value="terca" name="terca[{{$item->id}}]" >
+                                            <label class="form-check-label" type="lab1" style="margin-left:-22px;margin-right:+20px">
                                                 Terça-feira
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="quarta"
-                                                   value="quarta" name="quarta" disabled>
-                                            <label class="form-check-label" type="lab1" for="quarta" style="margin-left:-22px;margin-right:+20px">
+                                            <input class="form-check-input" type="checkbox"
+                                                   value="quarta" name="quarta[{{$item->id}}]" >
+                                            <label class="form-check-label" type="lab1" style="margin-left:-22px;margin-right:+20px">
                                                 Quarta-feira
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="quinta"
-                                                   value="option4" name="quinta" disabled>
-                                            <label class="form-check-label" type="lab1" for="quinta" style="margin-left:-22px;margin-right:+20px">
+                                            <input class="form-check-input" type="checkbox" 
+                                                   value="option4" name="quinta[{{$item->id}}]" >
+                                            <label class="form-check-label" type="lab1" style="margin-left:-22px;margin-right:+20px">
                                                 Quinta-feira
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="sexta"
-                                                   value="option5" name="sexta" disabled>
-                                            <label class="form-check-label" type="lab1" for="sexta" style="margin-left:-22px;margin-right:+20px">
+                                            <input class="form-check-input" type="checkbox" 
+                                                   value="option5" name="sexta[{{$item->id}}]" >
+                                            <label class="form-check-label" type="lab1" style="margin-left:-22px;margin-right:+20px">
                                                 Sexta-feira
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="sabado"
-                                                   value="option6" name="sabado" disabled>
-                                            <label class="form-check-label" type="lab1" for="sabado" style="margin-left:-22px;margin-right:+20px">
+                                            <input class="form-check-input" type="checkbox" 
+                                                   value="option6" name="sabado[{{$item->id}}]" >
+                                            <label class="form-check-label" type="lab1" style="margin-left:-22px;margin-right:+20px">
                                                 Sábado
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" 
+                                                   value="option6" name="domingo[{{$item->id}}]" >
+                                            <label class="form-check-label" type="lab1" style="margin-left:-22px;margin-right:+20px">
+                                                Domingo
                                             </label>
                                         </div>
                                     </div>
@@ -262,7 +269,8 @@
                   <label for="listaCartao">Meus cartões </label>
                      <select multiple class="form-control" size="2" id="listaCartao">
                             @foreach($cartoes as $cartao)
-                           <option >VISA terminado em 544.</option>
+                            @php $ultimos_digitos = substr($cartao->numero, -3) @endphp
+                           <option >VISA terminado em {{$ultimos_digitos}}.</option>
                            @endforeach
                      </select>
 

@@ -298,7 +298,6 @@ class ConsumidorController extends Controller
         $data = Carbon::now();
 
         //contador
-        $i = 0;
 
         $assinatura = new Assinatura;
 
@@ -310,15 +309,14 @@ class ConsumidorController extends Controller
             $produto_assinatura->quantidade = $item->qty;
             $produto_assinatura->produto_id = $produto->id;
             $produto_assinatura->frequencia = $request->frequencia;
-            $produto_assinatura->seg = $request->seg[$i];
-            $produto_assinatura->ter = $request->ter[$i];
-            $produto_assinatura->qua = $request->qua[$i];
-            $produto_assinatura->qui = $request->qui[$i];
-            $produto_assinatura->sex = $request->sex[$i];
-            $produto_assinatura->sab = $request->sab[$i];
-            $produto_assinatura->dom = $request->dom[$i];
+            $produto_assinatura->seg = $request->seg[$item->id];
+            $produto_assinatura->ter = $request->ter[$item->id];
+            $produto_assinatura->qua = $request->qua[$item->id];
+            $produto_assinatura->qui = $request->qui[$item->id];
+            $produto_assinatura->sex = $request->sex[$item->id];
+            $produto_assinatura->sab = $request->sab[$item->id];
+            $produto_assinatura->dom = $request->dom[$item->id];
             $produto_assinatura->save();
-            $i++;
         }
 
         $compra = new Compra;
