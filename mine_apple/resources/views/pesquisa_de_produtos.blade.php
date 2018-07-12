@@ -111,7 +111,7 @@
                                             <label for="quantidade" style="color: #99a8b7">Quantidade</label>
                                             <input type="number" name="quantidade"
                                                    class="form-control"
-                                                   placeholder="0">
+                                                   value="1" required>
                                         </div>
                                     </div>
                                     <div class="form-group" align="right">
