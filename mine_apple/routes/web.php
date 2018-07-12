@@ -111,6 +111,8 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get('/realizacao_assinatura', 'ConsumidorController@getRealizacaoAssinatura');
 
+        Route::post('/valida_cartao', 'ConsumidorController@validaCartao');
+
 
 
     });

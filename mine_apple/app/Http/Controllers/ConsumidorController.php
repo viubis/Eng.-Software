@@ -117,7 +117,7 @@ class ConsumidorController extends Controller
        $consumidor->fill($request->all()->save());//Salva os dados
 
        /*return redirect()->route('alterar_consumidor', $consumidor->id)->with('info', 'Dados Alterados com sucesso');*/
-    }
+   }
 
     /**
      * @author Lucas Alves
@@ -157,12 +157,116 @@ class ConsumidorController extends Controller
     }
 
     /**
+ * @author Felipe Braz
+ * @website https://www.braz.pro.br/blog
+ * @param int $cartao
+ * @param int $cvc
+ * @return array
+ */
+    function validaCartao(Request $request, $cvc=false){
+       $cartao = preg_replace("/[^0-9]/", "", $cartao);
+       if($cvc) $cvc = preg_replace("/[^0-9]/", "", $cvc);
+
+       $cartoes = array(
+        'Visa' => array('len' => array(13,16),    'cvc' => 3),
+           'Mastercard' => array('len' => array(16),       'cvc' => 3),
+           'Diners' => array('len' => array(14,16),    'cvc' => 3),
+           'Elo' => array('len' => array(16),       'cvc' => 3),
+           'Amex' => array('len' => array(15),       'cvc' => 4),
+           'Discover' => array('len' => array(16),       'cvc' => 4),
+           'Aura' => array('len' => array(16),       'cvc' => 3),
+           'Jcb' => array('len' => array(16),       'cvc' => 3),
+           'Hipercard'  => array('len' => array(13,16,19), 'cvc' => 3),
+       );
+
+
+       switch($cartao){
+           case (bool) preg_match('/^(636368|438935|504175|451416|636297)/', $request->cartao) :
+           $bandeira = 'elo'; 
+           break;
+
+           case (bool) preg_match('/^(606282)/', $request->cartao) :
+           $bandeira = 'hipercard'; 
+           break;
+
+           case (bool) preg_match('/^(5067|4576|4011)/', $request->cartao) :
+           $bandeira = 'elo'; 
+           break;
+
+           case (bool) preg_match('/^(3841)/', $request->cartao) :
+           $bandeira = 'hipercard'; 
+           break;
+
+           case (bool) preg_match('/^(6011)/', $request->cartao) :
+           $bandeira = 'discover'; 
+           break;
+
+           case (bool) preg_match('/^(622)/', $request->cartao) :
+           $bandeira = 'discover'; 
+           break;
+
+           case (bool) preg_match('/^(301|305)/', $request->cartao) :
+           $bandeira = 'diners'; 
+           break;
+
+           case (bool) preg_match('/^(34|37)/', $request->cartao) :
+           $bandeira = 'amex'; 
+           break;
+
+           case (bool) preg_match('/^(36,38)/', $request->cartao) :
+           $bandeira = 'diners'; 
+           break;
+
+           case (bool) preg_match('/^(64,65)/', $request->cartao) :
+           $bandeira = 'discover'; 
+           break;
+
+           case (bool) preg_match('/^(50)/', $request->cartao) :
+           $bandeira = 'aura'; 
+           break;
+
+           case (bool) preg_match('/^(35)/', $request->cartao) :
+           $bandeira = 'jcb'; 
+           break;
+
+           case (bool) preg_match('/^(60)/', $request->cartao) :
+           $bandeira = 'hipercard'; 
+           break;
+
+           case (bool) preg_match('/^(4)/', $request->cartao) :
+           $bandeira = 'visa'; 
+           break;
+
+           case (bool) preg_match('/^(5)/', $request->cartao) :
+           $bandeira = 'mastercard'; 
+           break;
+       }
+
+       $dados_cartao = $cartoes[$bandeira];
+       if(!is_array($dados_cartao)) return array(false, false, false);
+
+       $valid     = true;
+       $valid_cvc = false;
+
+       if(!in_array(strlen($request->cartao), $dados_cartao['len'])) $valid = false;
+       if($cvc AND strlen($cvc) <= $dados_cartao['cvc'] AND strlen($cvc) !=0) $valid_cvc = true;
+       return array($bandeira, $valid, $valid_cvc);
+   }
+
+    /**
      * @author Lucas Alves
      * @return string
      */
     public function getRealizacaoAssinatura(){
         $itens = Cart::content();
-        return view('realizacao_de_assinatura', compact('itens'));
+        $embalagens = Embalagem::all();
+        $produtos = Produto::all();
+        $enderecos = Endereco::all();
+        $cidades = Cidade::all();
+        $estados = Estado::all();
+        $cartoes = Cartao::where('consumidor_id', '=', Auth::user()->id);
+        $consumidor_enderecos = ConsumidorEndereco::all();
+        return view('realizacao_de_assinatura', compact('itens', 'embalagens', 'produtos', 'enderecos', 'consumidor_enderecos', 'cidades', 'estados', 'cartoes'));
 
     }
 
@@ -204,9 +308,9 @@ class ConsumidorController extends Controller
         $compra = new Compra;
         $compra->consumidor_endereco_id = $request->id;
         $compra->valor = $subtotal = Cart::total();
-        $compra->data = $data->
-        $compra->hora =
-        $compra->frete =
+        $compra->data = $data->toDateString();
+        $compra->hora = $data->toTimeString();
+        $compra->frete = 10;
         $compra->save();
 
     }

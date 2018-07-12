@@ -280,6 +280,7 @@
 
 
    <div class="containerInfosProdutos">
+        @foreach($itens as $item)
        <div class="container">
            <div class="row" id="backColor">
                <div class="col-sm-4">
@@ -295,9 +296,9 @@
                            <fieldset>
                                <div class="form-row">
                                    <div class="form-group col-md-6">
-                                       <label for="nomeProd1"> Nome Produto </label>
+                                       <label for="nomeProd1"> Nome do Produto </label>
                                        <input type="text" class="form-control" id="nomeProd1"
-                                              placeholder="Nome do produto" disabled name="nomeProd1">
+                                              placeholder="{{$item->name}}" disabled name="nomeProd1">
                                    </div>
                                    <div class="form-group col-md-12">
                                        <label for="freqProd1">Frequencia de entrega </label>
@@ -308,24 +309,26 @@
                                         </select>
 
                                    </div>
-                                   <div class="form-group col-md-">
+                                   <!-- <div class="form-group col-md-">
                                         <label for="qntProd1">Quantidade </label>
                                         <input type="number" step="0" min="1" max="999" name="qntProd1"
                                         placeholder="Valor..."
                                         class="form-first-name form-control" id="qntProd1">
-                                    </div>
+                                    </div> -->
                                </div>
                                <div class="form-row" id="espac1">
                                    <div class="form-group col-md-6">
                                        <label for="valorProd1">Preço</label>
                                        <input type="number" min="0.1" max="999" name="valorProd1"
                                               class="form-control" id="valorProd1"
-                                              placeholder=" R$ 10,00" disabled>
+                                              placeholder="{{$item->price}} " disabled>
                                    </div>
+                                   @php $produto = $produtos->where('id', '=', $item->id)->first() @endphp
+                                   @php $embalagem = $embalagens->where('id', '=', $produto->embalagem_id)->first() @endphp
                                    <div class="form-group col-md-6">
                                        <label for="tipoEmbalagemProd1">Pacote</label>
                                        <input type="text" name="tipoEmbalagemProd1" class="form-control"
-                                              id="tipoEmbalagemProd1" placeholder="duzia" disabled>
+                                              id="tipoEmbalagemProd1" placeholder="{{$embalagem->tipo}}" disabled>
                                    </div>
                                </div>
 
@@ -390,134 +393,14 @@
                <div class="pb-0" id="line"></div>
            </div>
        </div>
-
-
-       <div class="containerInfosProdutos">
-        <div class="container">
-            <div class="row" id="backColor">
-                <div class="col-sm-4">
-                    <div class="subcontainerProduto1">
-                        <div class="imagem">
-                            <img src="{{asset('images/abacaxi.png')}}" height="200" width="200" style="float:left">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-8">
-                    <div class="subcontainerProduto2 ">
-                        <form>
-                            <fieldset>
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="nomeprod2"> Nome Produto </label>
-                                        <input type="text" class="form-control" id="nomeprod1"
-                                               placeholder="Nome do produto" disabled name="nomeprod2">
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label for="freqEntregaProd2">Frequencia de entrega </label>
-                                           <select multiple class="form-control" size="2" id="freqEntregaProd2">
-                                                 <option disabled>Produto 1</option>
-                                                 <option disabled>Produto 2</option>
-                                                 <option disabled>Produto 3</option>
-                                         </select>
-
-                                    </div>
-                                    <div class="form-group col-md-">
-                                         <label for="qntProd2">Quantidade </label>
-                                         <input type="number" step="0" min="1" max="999" name="qntProd2"
-                                         placeholder="Valor..."
-                                         class="form-first-name form-control" id="qntProd2">
-                                     </div>
-                                </div>
-                                <div class="form-row" id="espac1">
-                                    <div class="form-group col-md-6">
-                                        <label for="valorProd2">Preço</label>
-                                        <input type="number" min="0.1" max="999" name="valorProd2"
-                                               class="form-control" id="valorProd2"
-                                               placeholder=" R$ 10,00" disabled>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="tipoEmbalagemProd2">Pacote</label>
-                                        <input type="text" name="tipoEmbalagemProd2" class="form-control"
-                                               id="tipoEmbalagemProd2" placeholder="unidade" disabled>
-                                    </div>
-                                </div>
-
-                                <div class="form-row" type="ent">
-                                 <div class="col-md-12 mb-3">
-                                     <label class="my-1 mr-2" for="diasEntrega">Dias de entrega</label>
-                                 </div>
-                             </div>
-                             <div class="form-row" type="row1">
-                                 <div class="col-md-12 mb-3">
-                                     <div class="form-group">
-                                         <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="checkbox" id="segunda"
-                                                    value="segunda" name="segunda" disabled>
-                                             <label class="form-check-label" type="lab1" for="segunda" style="margin-left:-22px;margin-right:+20px">
-                                                 Segunda-feira
-                                             </label>
-                                         </div>
-                                         <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="checkbox" id="terca"
-                                                    value="terca" name="terca" disabled>
-                                             <label class="form-check-label" type="lab1" for="terca" style="margin-left:-22px;margin-right:+20px">
-                                                 Terça-feira
-                                             </label>
-                                         </div>
-                                         <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="checkbox" id="quarta"
-                                                    value="quarta" name="quarta" disabled>
-                                             <label class="form-check-label" type="lab1" for="quarta" style="margin-left:-22px;margin-right:+20px">
-                                                 Quarta-feira
-                                             </label>
-                                         </div>
-                                         <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="checkbox" id="quinta"
-                                                    value="quinta" name="quinta" disabled>
-                                             <label class="form-check-label" type="lab1" for="quinta" style="margin-left:-22px;margin-right:+20px">
-                                                 Quinta-feira
-                                             </label>
-                                         </div>
-                                         <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="checkbox" id="sexta"
-                                                    value="sexta" name="sexta" disabled>
-                                             <label class="form-check-label" type="lab1" for="sexta" style="margin-left:-22px;margin-right:+20px">
-                                                 Sexta-feira
-                                             </label>
-                                         </div>
-                                         <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="checkbox" id="sabado"
-                                                    value="sabado" name="sabado" disabled>
-                                             <label class="form-check-label" type="lab1" for="sabado" style="margin-left:-22px;margin-right:+20px">
-                                                 Sábado
-                                             </label>
-                                         </div>
-                                         <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="checkbox" id="domingo"
-                                                    value="domingo" name="domingo" disabled>
-                                             <label class="form-check-label" type="lab1" for="domingo" style="margin-left:-22px;margin-right:+20px">
-                                                 Domingo
-                                             </label>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
-                <div class="pb-0" id="line"></div>
-            </div>
-        </div>
-       </div>
    </div>
+   @endforeach
 
    <div class="containerInfosProdutos">
    <div class="form-row" id="espac2">
 
 
-
+    @php $consumidor_enderecos_atuais =  $consumidor_enderecos->where('consumidor_id', '=', Auth::user()->id) @endphp
     <div class="card w-50" style="margin-left:+100px">
             <div class="card-body">
               <h4 class="card-title">Endereço de entrega:</h4>
@@ -525,13 +408,19 @@
               <div class="form-group col-md-12">
                 <label for="listaEndereco">Meus endereços </label>
                    <select multiple class="form-control" size="2" id="listaEndereco">
-                         <option >Rua A, Feira 6, 43, Feira de Santana, Bahia.</option>
-                         <option >Rua B, Feira 6, 56, Feira de Santana, Bahia.</option>
+                        @foreach($consumidor_enderecos_atuais as $i)
+                        @php $endereco = $enderecos->where('id', '=', $i->endereco_id)->first()@endphp
+
+                        @php $cidade = $cidades->where('id','=', $endereco->cidade_id)->first() @endphp
+
+                        @php $estado = $estados->where('id', '=', $cidade->estado_id)->first() @endphp
+                         <option >{{$endereco->rua}}, {{$endereco->bairro}}, {{$endereco->numero}}, {{$cidade->nome}}, {{$estado->nome}}.</option>
+                        @endforeach
                  </select>
 
             </div>
 
-            <a href="http://www.seulink.com.br" title="Pequena Descrição">Adicionar endereço</a>
+            <!-- <a href="http://www.seulink.com.br">Adicionar endereço</a> -->
             </div>
             <div class="card-body">
                 <h4 class="card-title">Cartões:</h4>
@@ -539,8 +428,9 @@
                 <div class="form-group col-md-12">
                   <label for="listaCartao">Meus cartões </label>
                      <select multiple class="form-control" size="2" id="listaCartao">
+                            @foreach($cartoes as $cartao)
                            <option >VISA terminado em 544.</option>
-                           <option >Master terminado em 322.</option>
+                           @endforeach
                      </select>
 
                 </div>
@@ -550,7 +440,7 @@
                 placeholder="Valor..."
                 class="form-first-name form-control" name="codSeguranca" id="codSeguranca">
             </div>
-              <A href="http://www.seulink.com.br" title="Pequena Descrição">Adicionar cartão</A>
+              <!-- <A href="http://www.seulink.com.br" title="Pequena Descrição">Adicionar cartão</A> -->
               </div>
           </div>
 
@@ -658,6 +548,7 @@
 <script src="{{asset('plugins/slick-1.8.0/slick.js')}}"></script>
 <script src="{{asset('plugins/easing/easing.js')}}"></script>
 <script src="{{asset('js/custom.js')}}"></script>
+<script src="{{asset('js/script_realizacao_de_assinatura.js')}}"></script>
 
 
 
