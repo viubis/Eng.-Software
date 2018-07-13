@@ -144,7 +144,10 @@
 	}
 	.main_nav
 	{
-		margin-top: 56px;
+		margin-top: 0px;
+		width: 100%;
+
+
 	}
 	.main_nav_menu
 	{
@@ -153,7 +156,7 @@
 	.logo_container,
 	.wishlist_cart
 	{
-		height: 125px;
+		height: 95px;
 	}
 	.main_nav_content
 	{
@@ -321,6 +324,7 @@
 	.main_nav
 	{
 		margin-top: 0px;
+		max-width:100%;
 	}
 	.banner_product_image
 	{
@@ -780,6 +784,17 @@
 	{
 		display: none;
 	}
+	/*********/
+	.col{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.container{
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+
 }
 
 /************
@@ -816,4 +831,12 @@
 @media only screen and (max-width: 400px)
 {
 
+}
+/*******************************/
+@media only screen and (min-width: 768px) {
+	.container{
+		max-width:100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
 }

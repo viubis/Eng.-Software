@@ -44,7 +44,7 @@
 
     <!-- Banner -->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"
-         style="width: 100%; height: 400px; overflow: hidden">
+         style="width: 100%; height: 100%; overflow: hidden">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
