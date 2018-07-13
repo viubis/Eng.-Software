@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use mine_apple\Produtor;
 use mine_apple\Consumidor;
-use mine_apple\Usuario;
+use mine_apple\User;
 use mine_apple\Produto;
 use mine_apple\ConsumidorEndereco;
 use mine_apple\Endereco;
@@ -25,7 +25,7 @@ class AdministradorController extends Controller
     public function exemplo(Request $request) {
         return Auth::user()->email . ' é administrador';
     }
-    
+
     /**
      * @author Lucas Alves
      * @return string
@@ -57,7 +57,7 @@ class AdministradorController extends Controller
      * @return string
      */
     public function getGerenciamentoSistema(){
-    	$usuarios = Usuario::all();
+    	$usuarios = User::all();
     	return view('gerenciamento_do_sistema', compact('usuarios'));
     }
 
