@@ -43,105 +43,72 @@
         @include('layouts.header_usuario')
     @endif
 
-
     <div class="top-content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 pt-3">
-                    <h1 class="h1 page-title"
-                        data-reactid="38">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="contact_form_title pt-3" style="font-size: 30px;">
                         @if (isset($cat)) {{$cat->nome}}
                         @elseif(isset($busca)) {{'Produtos encontrados na busca por '.$busca}}
                         @else {{'Todos Produtos'}}
-                        @endif
-                    </h1>
+                        @endif</div>
                     <div class="pb-3" id="line"></div>
+
+                    @foreach($produtos as $produto)
+                        @php
+                            $foto = $fotos->where('produto_id', '=', $produto->id)->first();
+                        @endphp
+                        <div class="col-md-3 pt-0 pb-0 pl-0 pr-0" style="float: left;">
+                            <form role="form" method="post" action="/adicionar_carrinho">
+                                <fieldset>
+                                    @csrf
+                                    <div class="form-row">
+                                        <input type="hidden" name="id" value="{{$produto->id}}">
+                                        <input type="hidden" name="nome" value="{{$produto->nome}}">
+                                        <input type="hidden" name="preco" value="{{$produto->valor}}">
+                                        <input type="hidden" name="embalagem" value="{{$produto->embalagem_id}}">
+                                        <div class="col-md-10">
+                                            <article class="col-item" style="width: 100%; overflow: hidden">
+                                                <div class="photo"
+                                                     style="height: 140px;width: 100%; overflow: hidden;">
+                                                    <div class="options-cart-round">
+                                                        <button class="btn btn-secondary" type="submit"
+                                                                title="Adicionar ao carrinho">
+                                                            <span class="fa fa-shopping-basket"></span>
+                                                        </button>
+                                                    </div>
+                                                    <a href="#">
+                                                        <img src="{{asset($foto->path)}}" class="img-fluid"
+                                                             alt="Product Image">
+                                                    </a>
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price-details col-lg-12">
+                                                            @php
+                                                                $produtor = \mine_apple\Produtor::where('usuario_id', '=', $produto->produtor_id)->first();
+                                                            @endphp
+                                                            <p class="details">Vendedor: {{$produtor->nomeFantasia}}</p>
+                                                            <h1>{{$produto->nome}}</h1>
+                                                            <span class="price-new">R${{$produto->valor}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
 
 
-    @foreach($produtos as $produto)
-        <div class="containerInfosProdutos">
-            <div class="container">
-                <div class="row" id="backColor">
-                    <div class="col-sm-4">
-                        <div class="subcontainerProduto1">
-                            <div class="imagem">
-                                @php
-                                    $foto = $fotos->where('produto_id', '=', $produto->id)->first();
-                                @endphp
-                                <img src="{{asset($foto->path)}}" height="200" width="200" style="float:left">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="subcontainerProduto2 ">
-                            <form role="form" method="post" action="/adicionar_carrinho">
-                                <fieldset>
-                                    @csrf
-                                    <div class="form-row">
-
-                                        <input type="hidden" name="id" value="{{$produto->id}}">
-                                        <input type="hidden" name="nome" value="{{$produto->nome}}">
-                                        <input type="hidden" name="preco" value="{{$produto->valor}}">
-                                        <input type="hidden" name="embalagem" value="{{$produto->embalagem_id}}">
-
-                                        <div class="form-group col-md-6">
-                                            <label style="color: #99a8b7">Nome do Produto </label>
-                                            <br/>
-                                            <label><a style="color: #000000;" href={{url('/produto/'.$produto->id)}}>
-                                                    {{$produto->nome}}
-                                                </a></label>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label style="color: #99a8b7">Embalagem</label>
-                                            <br/>
-                                            @php
-                                                $embalagem = \mine_apple\Embalagem::where('id', '=', $produto->embalagem_id)->first();
-                                            @endphp
-                                            <label>{{$embalagem->tipo}}</label>
-
-                                        </div>
-                                    </div>
-                                    <div class="form-row" id="espac1">
-                                        <div class="form-group col-md-6">
-                                            <label style="color: #99a8b7">Preço</label>
-                                            <br/>
-                                            <label>{{$produto->valor}}</label>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="quantidade" style="color: #99a8b7">Quantidade</label>
-                                            <input type="number" name="quantidade"
-                                                   class="form-control"
-                                                   value="1" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-group" align="right">
-                                        <button class="btn-sm btn-primary mt-4"
-                                                style="background-color: #08c8b0; border: none;"
-                                                type="submit">Adicionar ao carrinho
-                                        </button>
-
-                                    </div>
-                                </fieldset>
-
-                            </form>
-                        </div>
-                    </div>
-                    <div class="pb-0" id="line"></div>
-                </div>
-            </div>
 
 
-            <!-- <div class="col-md-12 mb-3">
-                    <button type="submit" class="btn btn-primary">Mostrar mais</button>
-                </div> -->
-
-
-        </div>
-@endforeach
 
 
 @include('layouts.footer')
@@ -189,6 +156,7 @@
 <script src="{{asset('plugins/slick-1.8.0/slick.js')}}"></script>
 <script src="{{asset('plugins/easing/easing.js')}}"></script>
 <script src="{{asset('js/custom.js')}}"></script>
+<script src="{{asset('js/pesquisa_img.js')}}"></script>
 <script src="{{asset('js/script_tela_pesquisa_produtos.js')}}"></script>
 
 
