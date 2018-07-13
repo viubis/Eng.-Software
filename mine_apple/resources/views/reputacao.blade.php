@@ -30,6 +30,7 @@
 
     <!-- Header -->
 <<<<<<< HEAD
+<<<<<<< HEAD
     <!-- <header class="header"> -->
 
         <!-- Header Main -->
@@ -113,6 +114,8 @@
 
   <!--   </header> -->
 =======
+=======
+>>>>>>> fb27308a0c5a672c9d90ad3851ff5bcaba571a8e
     @if(Auth::check())
         @if(Auth::user()->consumidor != null)
             @include('layouts.header_consumidor')
@@ -125,6 +128,9 @@
 
         @include('layouts.header_usuario')
     @endif
+<<<<<<< HEAD
+>>>>>>> fb27308a0c5a672c9d90ad3851ff5bcaba571a8e
+=======
 >>>>>>> fb27308a0c5a672c9d90ad3851ff5bcaba571a8e
 
 
