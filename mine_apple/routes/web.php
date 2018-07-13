@@ -144,6 +144,8 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get('/dados_cadastrais', 'ProdutorController@dadosCadastrais');
 
+        Route::get('/produtor/reputacao', 'ProdutorController@reputacaoProdutor');
+
         //Route::get('/produtor/cadastrar_endereco', 'ProdutorController@cadastrarEndereco')->name('produtor.endereco.cadastrar');
 
     });

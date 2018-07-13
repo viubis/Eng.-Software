@@ -29,27 +29,27 @@
 <div class="super_container">
 
     <!-- Header -->
-    <header class="header">
+    <!-- <header class="header"> -->
 
         <!-- Header Main -->
 
-        <div class="header_main">
+        <!-- <div class="header_main">
             <div class="container">
-                <div class="row">
+                <div class="row"> -->
 
                     <!-- Logo -->
-                    <div class="col-lg-4 col-sm-3 col-3 order-1">
+                    <!-- <div class="col-lg-4 col-sm-3 col-3 order-1">
                         <div class="logo_container">
                             <div class="logo_icon"><img src="{{asset('images/logoSite.png')}}" class="img-fluid" alt=""></div>
                         </div>
-                    </div>
+                    </div> -->
 
 
                     <!-- Wishlist -->
-                    <div class="col-lg-8 col-3 order-lg-3 order-2 text-lg-left text-right">
+                   <!--  <div class="col-lg-8 col-3 order-lg-3 order-2 text-lg-left text-right">
                         <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
-                            <!-- Icone usuário logado -->
-                            <div class="cart">
+ -->                            <!-- Icone usuário logado -->
+<!--                             <div class="cart">
                                 <div class="cart_container d-flex flex-row align-items-center justify-content-end">
                                     <div class="cart_icon">
                                         <i class="fa fa-user-circle fa-4x" style="color: #08c8b0 "></i>
@@ -63,20 +63,20 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Main Navigation -->
 
-        <nav class="main_nav">
+        <!-- <nav class="main_nav">
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <div class="main_nav_content d-flex flex-row">
+                        <div class="main_nav_content d-flex flex-row"> -->
 
 
                             <!-- Main Nav Menu -->
 
-                            <div class="main_nav_menu ml-auto">
+                            <!-- <div class="main_nav_menu ml-auto">
                                 <ul class="standard_dropdown main_nav_dropdown">
                                     <li><a href="#">Meus Dados<i class="fas fa-chevron-down" id="meusdados"></i></a>
                                     </li>
@@ -86,11 +86,11 @@
                                     <li><a href="#">Assinaturas<i class="fas fa-chevron-down"></i></a></li>
                                     <li><a href="#">Reputação<i class="fas fa-chevron-down"></i></a></li>
                                 </ul>
-                            </div>
+                            </div> -->
 
                             <!-- Menu Trigger -->
 
-                            <div class="menu_trigger_container ml-auto">
+                            <!-- <div class="menu_trigger_container ml-auto">
                                 <div class="menu_trigger d-flex flex-row align-items-center justify-content-end">
                                     <div class="menu_burger">
                                         <div class="menu_trigger_text">Menu</div>
@@ -103,14 +103,14 @@
                     </div>
                 </div>
             </div>
-        </nav>
+        </nav> -->
 
         <!-- Menu -->
 
-      @include('layouts.header_produtor')
+    @include('layouts.header_produtor')
 
 
-    </header>
+  <!--   </header> -->
 
 
     <!--<section>-->

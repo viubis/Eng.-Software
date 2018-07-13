@@ -206,4 +206,8 @@ class ProdutorController extends Controller
         $conta->digito = $request->digito;
         $conta->save();
     }
+
+    public function reputacaoProdutor(){
+        return view('reputacao');
+    }
 }
