@@ -260,8 +260,7 @@
                  </select>
 
             </div>
-
-            <!-- <a href="http://www.seulink.com.br">Adicionar endereço</a> -->
+            <a href="{{url('/adicionar_cartao')}}">Adicionar endereço</a>
             </div>
             <div class="card-body">
                 <h4 class="card-title">Cartões:</h4>
@@ -276,13 +275,13 @@
                      </select>
 
                 </div>
-              <div class="form-group col-md-5">
-                <label for="codSeguranca">Código de segurança </label>
-                <input type="text"
-                placeholder="Valor..."
-                class="form-first-name form-control" name="codSeguranca" id="codSeguranca">
-            </div>
-              <!-- <A href="http://www.seulink.com.br" title="Pequena Descrição">Adicionar cartão</A> -->
+                <div class="form-group col-md-5">
+                    <label for="codSeguranca">Código de segurança </label>
+                    <input type="text"
+                    placeholder="Valor..."
+                    class="form-first-name form-control" name="codSeguranca" id="codSeguranca">
+                </div>
+              <A href="{{url('/adicionar_cartao')}}">Adicionar cartão</A> 
               </div>
           </div>
 

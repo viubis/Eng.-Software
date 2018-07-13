@@ -72,6 +72,7 @@
                             </fieldset>
                         </form>
                         <A href="http://www.seulink.com.br" title="Pequena Descrição">Detalhes</A>
+                        <A href="{{url('/avaliação_assinatura')}}" title="Pequena Descrição">Avalie a assinatura</A>
                     </div>
                 </div>
             </div>
@@ -94,6 +95,7 @@
                                 </fieldset>
                             </form>
                             <A href="http://www.seulink.com.br" title="Pequena Descrição">Detalhes</A>
+                            <A href="{{url('/avaliação_assinatura')}}" title="Pequena Descrição">Avalie a assinatura</A>
                         </div>
                     </div>
                 </div>
