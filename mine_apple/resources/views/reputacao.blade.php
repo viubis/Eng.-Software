@@ -29,6 +29,7 @@
 <div class="super_container">
 
     <!-- Header -->
+<<<<<<< HEAD
     <!-- <header class="header"> -->
 
         <!-- Header Main -->
@@ -111,6 +112,20 @@
 
 
   <!--   </header> -->
+=======
+    @if(Auth::check())
+        @if(Auth::user()->consumidor != null)
+            @include('layouts.header_consumidor')
+        @elseif(Auth::user()->produtor != null)
+            @include('layouts.header_produtor')
+        @elseif(Auth::user()->administrador != null)
+            @include('layouts.header_administrador')
+        @endif
+    @else
+
+        @include('layouts.header_usuario')
+    @endif
+>>>>>>> fb27308a0c5a672c9d90ad3851ff5bcaba571a8e
 
 
     <!--<section>-->
