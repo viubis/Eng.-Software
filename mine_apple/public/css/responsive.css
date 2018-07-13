@@ -136,7 +136,7 @@
 	}
 	.header_search
 	{
-		height: 50px;
+		height: 100px;
 	}
 	.custom_dropdown
 	{
@@ -305,6 +305,7 @@
 @media only screen and (max-width: 768px)
 {
 
+
 }
 
 /************
@@ -463,7 +464,8 @@
 	}
 	.cart_icon
 	{
-		width: 17px;
+		display:none;
+		/*width: 17px;*/
 	}
 	.cart_count
 	{
@@ -792,6 +794,9 @@
 	.container{
 		padding-left: 0;
 		padding-right: 0;
+	}
+	.header_search{
+		padding-top: 3px;
 	}
 
 

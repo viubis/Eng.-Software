@@ -44,16 +44,16 @@
         <div class="container">
             <div class="row">
                 <!-- Logo -->
-                <div class="col-lg-4 col-sm-3 col-3 order-1 pt-3 pb-0">
-                    <div class="logo_container">
-                        <div class="logo_icon ml-5 mt-1"><a href="{{url("/")}}"><img src="{{asset('images/logoSite2.png')}}"
-                                                              class="img-fluid"
-                                                              alt=""></a></div>
+
+
+                <div class="col-lg-4 col-xs-12 col-sm-4 pt-3 text-center clearfix ">
+                    <div class="logo_container  ">
+                        <div class="logo_icon text-center"><img src="{{asset('images/logoSite2.png')}}" alt=""></div>
                     </div>
                 </div>
 
                 <!-- Search  6 col 12 ord 2 order 3-->
-                <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+                <div class="col-lg-5 col-sm-6 text-lg-left ">
                     <div class="header_search">
                         <div class="header_search_content">
                             <div class="header_search_form_container">
@@ -87,7 +87,7 @@
                 </div>
 
                 <!-- Wishlist -->
-                <div class="col-lg-2 col-9 order-lg-3 order-2 text-lg-left text-right pb-0 pt-0">
+                <div class="col-lg-2  col-sm-1 col-9 order-lg-3 order-2 text-lg-left text-right pb-0 pt-0">
                     <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
                         <!-- Cart -->
                         <div class="cart">
