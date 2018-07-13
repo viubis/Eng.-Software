@@ -280,7 +280,7 @@
                                                     <button class="product_cart_button">Adicionar ao Carrinho</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount">-25%</li>
                                                 <li class="product_mark product_new">novo</li>
@@ -306,7 +306,7 @@
                                                     </button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            <div class=""><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">novo</li>
@@ -331,7 +331,6 @@
                                                     <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -356,7 +355,6 @@
                                                     <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount">-25%</li>
                                                 <li class="product_mark product_new">novo</li>
@@ -381,7 +379,6 @@
                                                     <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -406,7 +403,6 @@
                                                     <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">novo</li>
@@ -431,7 +427,6 @@
                                                     <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount">-25%</li>
                                                 <li class="product_mark product_new">novo</li>
@@ -456,7 +451,6 @@
                                                     <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">novo</li>
@@ -471,17 +465,17 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_1.png')}}" class="img-fluid" alt=""></div>
+                                                <img src="{{asset('images/')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
-                                                <div class="product_price">$225</div>
+                                                <div class="product_price">R$</div>
                                                 <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Exemplo 1</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
+                                                    <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                            
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -496,17 +490,16 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_2.png')}}" class="img-fluid" alt=""></div>
+                                                <img src="{{asset('images/')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
-                                                <div class="product_price">$379</div>
+                                                <div class="product_price">R$</div>
                                                 <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Exemplo 2</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
+                                                    <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -521,17 +514,16 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_3.png')}}" class="img-fluid" alt=""></div>
+                                                <img src="{{asset('images/')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
-                                                <div class="product_price">$379</div>
+                                                <div class="product_price">R$</div>
                                                 <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Exemplo 3</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
+                                                    <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -546,17 +538,16 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_4.png')}}" class="img-fluid" alt=""></div>
+                                                <img src="{{asset('images/')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
-                                                <div class="product_price">$225</div>
+                                                <div class="product_price">R$</div>
                                                 <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Exemplo 4</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
+                                                    <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -571,17 +562,16 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_5.png')}}" class="img-fluid" alt=""></div>
+                                                <img src="{{asset('images/')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
-                                                <div class="product_price">$225</div>
+                                                <div class="product_price">R$</div>
                                                 <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Exemplo 5</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
+                                                    <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -596,17 +586,16 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_6.png')}}" class="img-fluid" alt=""></div>
+                                                <img src="{{asset('images/')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
-                                                <div class="product_price">$379</div>
+                                                <div class="product_price">R$</div>
                                                 <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Exemplo 6</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
+                                                    <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -621,17 +610,17 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_7.png')}}" class="img-fluid" alt=""></div>
+                                                <img src="{{asset('images/')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
-                                                <div class="product_price">$379</div>
+                                                <div class="product_price">R$</div>
                                                 <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Exemplo 7</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
+                                                    <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                    
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -646,17 +635,16 @@
                                             class="product_item d-flex flex-column align-items-center justify-content-center text-center">
                                             <div
                                                 class="product_image d-flex flex-column align-items-center justify-content-center">
-                                                <img src="{{asset('images/featured_8.png')}}" class="img-fluid" alt=""></div>
+                                                <img src="{{asset('images/')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
-                                                <div class="product_price">$225</div>
+                                                <div class="product_price">R$</div>
                                                 <div class="product_name">
-                                                    <div><a href="#">Huawei MediaPad...</a></div>
+                                                    <div><a href="#">Exemplo 7</a></div>
                                                 </div>
                                                 <div class="product_extras">
-                                                    <button class="product_cart_button">Add to Cart</button>
+                                                    <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -690,7 +678,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount">-25%</li>
                                                 <li class="product_mark product_new">new</li>
@@ -715,7 +702,6 @@
                                                     <button class="product_cart_button active">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -740,7 +726,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -765,7 +750,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount">-25%</li>
                                                 <li class="product_mark product_new">new</li>
@@ -790,7 +774,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -815,7 +798,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -840,7 +822,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount">-25%</li>
                                                 <li class="product_mark product_new">new</li>
@@ -865,7 +846,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -890,7 +870,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -915,7 +894,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -940,7 +918,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -965,7 +942,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -990,7 +966,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -1015,7 +990,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -1040,7 +1014,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -1065,7 +1038,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -1099,7 +1071,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount">-25%</li>
                                                 <li class="product_mark product_new">new</li>
@@ -1124,7 +1095,6 @@
                                                     <button class="product_cart_button active">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -1149,7 +1119,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -1174,7 +1143,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount">-25%</li>
                                                 <li class="product_mark product_new">new</li>
@@ -1199,7 +1167,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -1224,7 +1191,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -1249,7 +1215,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount">-25%</li>
                                                 <li class="product_mark product_new">new</li>
@@ -1274,7 +1239,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -1299,7 +1263,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -1324,7 +1287,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -1349,7 +1311,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -1374,7 +1335,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -1399,7 +1359,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -1424,7 +1383,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -1449,7 +1407,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -1474,7 +1431,6 @@
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="product_fav"><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
