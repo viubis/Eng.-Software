@@ -30,7 +30,6 @@
 <div class="super_container">
 
     <!-- Header -->
-    <!-- Header -->
     @if(Auth::check())
         @if(Auth::user()->consumidor != null)
             @include('layouts.header_consumidor')
@@ -52,7 +51,7 @@
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="contact_form_title">Gerenciamento de usuário</div>
-                    
+
                         <div class="form-row">
                             <label class="sr-only" for="selecionarProdutor">Selecione um produtor... </label>
                             <select class="form-control" id="selecionarProdutor" style="margin-bottom: 20px">
@@ -64,7 +63,7 @@
                             <a href="#">Ver todos</a>
                         </div>
 
-                        @foreach($produtores as $produtor) 
+                        @foreach($produtores as $produtor)
 
                         <label class="my-0 mr-2" style="font-size: 20px">{{$produtor->usuario_id}} <i
                                 class="fa fa-at"></i>produtor</label>
@@ -116,7 +115,7 @@
                                     </div>
                                     <div class="form-group col-md-5" style="margin-top: 10px;">
                                         <div class="row" style="margin-bottom: 10px">
-                                            @for($i = 0; $i < $produtor->avaliacao; $i++) 
+                                            @for($i = 0; $i < $produtor->avaliacao; $i++)
                                             <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
                                             @endfor
                                         </div>
@@ -128,7 +127,7 @@
                                 <label for="userBloqueado">Acesso negado a plataforma</label>
                             </div>
                         </div>
-                        
+
                         @endforeach
                     </form>
                 </div>
