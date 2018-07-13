@@ -4,7 +4,7 @@
 
 Route::get('/', 'PublicoController@index')->name('index');
 
-Route::post('/', 'PublicoController@getPesquisaCategoriasNome');
+Route::post('/', 'PublicoController@getPesquisaCategoriasNome')->name('pesquisa');
 
 Route::get('/sobre', 'PublicoController@sobre');
 

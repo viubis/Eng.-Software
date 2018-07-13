@@ -33,9 +33,10 @@
                             <div class="header_search">
                                 <div class="header_search_content">
                                     <div class="header_search_form_container">
-                                        <form action="#" class="header_search_form clearfix">
+                                        <form action="{{route('pesquisa')}}" role="form" method="post" class="header_search_form clearfix">
+                                            @csrf
                                             <input type="search" required="required" class="header_search_input"
-                                            placeholder="Pesquisar produtos..." name="buscarProdutos">
+                                            placeholder="Pesquisar produtos..." name="busca">
                                             <div class="custom_dropdown">
                                                 <div class="custom_dropdown_list">
                                                     <span
@@ -149,9 +150,9 @@
                                 <div class="col">
                                     <div class="page_menu_content">
                                         <div class="page_menu_search">
-                                            <form action="#">
+                                            <form action="{{route('pesquisa')}}">
                                                 <input type="search" required="required" class="page_menu_search_input"
-                                                placeholder="Pesquisar produtos..." name="buscarProdutos">
+                                                placeholder="Pesquisar produtos..." name="-">
                                             </form>
                                         </div>
                                         <ul class="page_menu_nav">

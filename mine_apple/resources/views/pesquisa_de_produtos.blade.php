@@ -66,10 +66,7 @@
                                 @php
                                     $foto = $fotos->where('produto_id', '=', $produto->id)->first();
                                 @endphp
-                                @foreach($foto as $i)
-                                    <img src="{{asset($foto->path)}}" height="200" width="200" style="float:left">
-                                    @break
-                                @endforeach
+                                <img src="{{asset($foto->path)}}" height="200" width="200" style="float:left">
                             </div>
                         </div>
                     </div>
