@@ -30,9 +30,8 @@
                             <div class="footer_title">Serviços</div>
                             <ul class="footer_list">
                                 <li><a href="#">Minha conta</a></li>
-                                <li><a href="#">Pedidos</a></li>
-                                <li><a href="#">Lista de Desejos</a></li>
-                                <li><a href="#">Atendimento ao cliente</a></li>
+                                <li><a href="/carrinho">Pedidos</a></li>
+                                <li><a href="/fale_conosco">Atendimento ao cliente</a></li>
 
                             </ul>
                         </div>
