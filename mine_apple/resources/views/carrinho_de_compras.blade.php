@@ -169,7 +169,7 @@
         </div>
         <br/><br/>
         <div class="col-md-12 mb-3" align="center">
-            <button type="submit" class="btn btn-primary" href="{{url('/realizacao_de_assinatura')}}">Finalizar</button>
+            <button type="submit" class="btn btn-primary" href="{{url('/realizacao_assinatura')}}">Finalizar</button>
         </div>
     </div>
 

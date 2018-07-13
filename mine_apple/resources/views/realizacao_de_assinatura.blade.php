@@ -260,7 +260,7 @@
                  </select>
 
             </div>
-            <a href="{{url('/adicionar_cartao')}}">Adicionar endereço</a>
+            <a href="/consumidor/cadastrar_endereco">Adicionar endereço</a>
             </div>
             <div class="card-body">
                 <h4 class="card-title">Cartões:</h4>
@@ -281,7 +281,7 @@
                     placeholder="Valor..."
                     class="form-first-name form-control" name="codSeguranca" id="codSeguranca">
                 </div>
-              <A href="{{url('/adicionar_cartao')}}">Adicionar cartão</A> 
+              <A href="/consumidor/adicionar_cartao">Adicionar cartão</A> 
               </div>
           </div>
 
