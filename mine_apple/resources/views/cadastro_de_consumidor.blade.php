@@ -31,13 +31,23 @@
 <!-- Top content --->
 <div class="top-content">
     <div class="logo_icon"><img src="{{asset('images/logoSite.png')}}" alt=""></div>
+<<<<<<< HEAD
                     @if(isset($errors) && count($errors) > 0)
                         <div class="alert alert-danger">
                             @foreach ($errors->all() as $erro):
                                 <p>{{$erro}}</p>
-                            @endforeach 
+                            @endforeach
                        </div>
                     @endif
+=======
+        @if(isset($errors) && count($errors) > 0)
+            <div class="alert alert-danger">
+                @foreach ($errors->all() as $erro):
+                    <p>{{$erro}}</p>
+                 @endforeach 
+            </div>
+        @endif
+>>>>>>> 8662e677a7e182ab7aa2405241f9f2788a020046
     <div class="inner-bg">
         <div class="container">
             <div class="row">
@@ -48,7 +58,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-6 offset-lg-3 form-box">
-                    
+
                     <form role="form" action="{{route('cadastrarConsumidor')}}" method="post" class="registration-form">
 
                         <fieldset>
@@ -67,13 +77,24 @@
                             <div class="form-bottom">
                                 <div class="form-group">
                                     <label class="sr-only" for="nome">Nome</label>
-                                    <input type="text" name="nome" placeholder="Nome..."
-                                           class="form-first-name form-control" id="nome" value="{{old('nome')}}">
+                                    <input type="text" name="nome"
+                                           @if(isset($nome))
+                                                value="{{$nome}}"
+                                           @else
+                                                value="{{old('nome')}}"
+                                           @endif
+                                           placeholder="Nome..."
+                                           class="form-first-name form-control" id="nome">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="sobrenome">Sobrenome</label>
                                     <input type="text" name="sobrenome" placeholder="Sobrenome..."
-                                           class="form-first-name form-control" id="sobrenome" value="{{old('sobrenome')}}">
+                                           @if(isset($sobrenome))
+                                               value = "{{$sobrenome}}"
+                                           @else
+                                                value="{{old('sobrenome')}}"
+                                           @endif
+                                           class="form-first-name form-control" id="sobrenome">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="cpf">CPF</label>

@@ -115,4 +115,18 @@ class PublicoController extends Controller
         $embalagem = Embalagem::all();
         return view('visualização_detalhada_produto', compact('produto', 'produtor', 'embalagem', 'categoria', 'cidade', 'estado', 'fotos'));
     }
+
+    public function getPesquisaCategoriasNome(Request $request){
+        $query = $request->query;
+        $produtos = Produto::where('nome', 'LIKE', '%{$query}%');
+        $produtores = Produtor::all();
+        $embalagem = Embalagem::all();
+        $fotos = Foto::all();
+        return view('pesquisa_de_produtos', compact('produtos', 'produtores', 'embalagem', 'fotos'));
+
+
+    }
+
+
+
 }

@@ -126,8 +126,9 @@
                </div>
                <div class="col-sm-8">
                    <div class="subcontainerProduto2 ">
-                       <form method="post" action="/realizacao_assinatura">
+                       <form role="form" method="post" action="/realizacao_assinatura">
                            <fieldset>
+                            @csrf
                                <div class="form-row">
                                    <div class="form-group col-md-6">
                                        <label for="nomeProd1"> Nome do Produto </label>
@@ -228,7 +229,7 @@
                             </div>
 
                            </fieldset>
-                       </form>
+                       
                    </div>
                </div>
                <div class="pb-0" id="line"></div>
@@ -296,7 +297,7 @@
 
 
 </div>
-
+</form>
 
 
 

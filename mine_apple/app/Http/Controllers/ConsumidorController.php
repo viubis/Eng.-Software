@@ -19,6 +19,8 @@ use mine_apple\Foto;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Carbon\Carbon;
 use mine_apple\Http\Requests\FormConsumidor;
+use mine_apple\Assinatura;
+use mine_apple\Assinatura_Produto;
 
 
 class ConsumidorController extends Controller

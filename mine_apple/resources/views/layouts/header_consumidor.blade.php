@@ -57,9 +57,10 @@
                     <div class="header_search">
                         <div class="header_search_content">
                             <div class="header_search_form_container">
-                                <form action="#" class="header_search_form clearfix">
+                                <form role="form" method="post" action="/" class="header_search_form clearfix">
+                                    @csrf
                                     <input type="search" required="required" class="header_search_input"
-                                           placeholder="Pesquisar produtos..." name="buscarProdutos">
+                                           placeholder="Pesquisar produtos..." name="query">
                                     <div class="custom_dropdown">
                                         <div class="custom_dropdown_list">
                                                     <span
