@@ -64,10 +64,11 @@
                         <div class="subcontainerProduto1">
                             <div class="imagem">
                                 @php
-                                    $foto = $fotos->where('produto_id', '=', $produto->id)
+                                    $foto = $fotos->where('produto_id', '=', $produto->id)->first();
                                 @endphp
                                 @foreach($foto as $i)
-                                <img src="{{asset($i->path)}}" height="200" width="200" style="float:left">
+                                    <img src="{{asset($foto->path)}}" height="200" width="200" style="float:left">
+                                    @break
                                 @endforeach
                             </div>
                         </div>
@@ -128,7 +129,7 @@
                     <div class="pb-0" id="line"></div>
                 </div>
             </div>
-        
+
 
         <!-- <div class="col-md-12 mb-3">
                 <button type="submit" class="btn btn-primary">Mostrar mais</button>

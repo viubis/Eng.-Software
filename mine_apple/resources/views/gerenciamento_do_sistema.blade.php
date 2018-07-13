@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/animate.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/slick-1.8.0/slick.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/detalhes_compra.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/gerenciamento_usuario.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/responsive.css')}}">
 
     <!-- Favicon and touch icons -->
