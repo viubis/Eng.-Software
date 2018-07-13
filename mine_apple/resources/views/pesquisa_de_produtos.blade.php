@@ -48,7 +48,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 pt-3">
-                    <h1 class="h1 page-title" data-reactid="38">@if (isset($cat)) {{$cat->nome}} @else {{'Todos Produtos'}} @endif</h1>
+                    <h1 class="h1 page-title"
+                        data-reactid="38">
+                        @if (isset($cat)) {{$cat->nome}}
+                        @elseif(isset($busca)) {{'Produtos encontrados na busca por '.$busca}}
+                        @else {{'Todos Produtos'}}
+                        @endif
+                    </h1>
                     <div class="pb-3" id="line"></div>
                 </div>
             </div>
@@ -92,9 +98,9 @@
                                         <div class="form-group col-md-6">
                                             <label style="color: #99a8b7">Embalagem</label>
                                             <br/>
-                                                   @php
-                                                       $embalagem = \mine_apple\Embalagem::where('id', '=', $produto->embalagem_id)->first();
-                                                   @endphp
+                                            @php
+                                                $embalagem = \mine_apple\Embalagem::where('id', '=', $produto->embalagem_id)->first();
+                                            @endphp
                                             <label>{{$embalagem->tipo}}</label>
 
                                         </div>
@@ -115,7 +121,8 @@
                                     <div class="form-group" align="right">
                                         <button class="btn-sm btn-primary mt-4"
                                                 style="background-color: #08c8b0; border: none;"
-                                                type="submit">Adicionar ao carrinho</button>
+                                                type="submit">Adicionar ao carrinho
+                                        </button>
 
                                     </div>
                                 </fieldset>
@@ -128,46 +135,46 @@
             </div>
 
 
-        <!-- <div class="col-md-12 mb-3">
-                <button type="submit" class="btn btn-primary">Mostrar mais</button>
-            </div> -->
+            <!-- <div class="col-md-12 mb-3">
+                    <button type="submit" class="btn btn-primary">Mostrar mais</button>
+                </div> -->
 
 
         </div>
-        @endforeach
+@endforeach
 
 
-    @include('layouts.footer')
+@include('layouts.footer')
 
-        <!-- Copyright -->
+<!-- Copyright -->
 
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col">
 
-                        <div
-                            class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
-                            <div class="copyright_content">
-                                Copyright &copy;<script>document.write(new Date().getFullYear().toString());</script>
-                                Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
-                                                                                          aria-hidden="true"></i> pela
-                                <a
-                                    href="#" target="_blank">Weiche Technologie</a>
-                            </div>
-                            <div class="logos ml-sm-auto">
-                                <ul class="logos_list">
-                                    <li><a href="#"><img src="{{asset('images/logos_1.png')}}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{asset('images/logos_2.png')}}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{asset('images/logos_3.png')}}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{asset('images/logos_4.png')}}" alt=""></a></li>
-                                </ul>
-                            </div>
+                    <div
+                        class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
+                        <div class="copyright_content">
+                            Copyright &copy;<script>document.write(new Date().getFullYear().toString());</script>
+                            Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
+                                                                                      aria-hidden="true"></i> pela
+                            <a
+                                href="#" target="_blank">Weiche Technologie</a>
+                        </div>
+                        <div class="logos ml-sm-auto">
+                            <ul class="logos_list">
+                                <li><a href="#"><img src="{{asset('images/logos_1.png')}}" alt=""></a></li>
+                                <li><a href="#"><img src="{{asset('images/logos_2.png')}}" alt=""></a></li>
+                                <li><a href="#"><img src="{{asset('images/logos_3.png')}}" alt=""></a></li>
+                                <li><a href="#"><img src="{{asset('images/logos_4.png')}}" alt=""></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </div>
 
 <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
