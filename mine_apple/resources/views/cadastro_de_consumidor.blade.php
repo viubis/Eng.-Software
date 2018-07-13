@@ -31,23 +31,13 @@
 <!-- Top content --->
 <div class="top-content">
     <div class="logo_icon"><img src="{{asset('images/logoSite.png')}}" alt=""></div>
-<<<<<<< HEAD
-                    @if(isset($errors) && count($errors) > 0)
-                        <div class="alert alert-danger">
-                            @foreach ($errors->all() as $erro):
-                                <p>{{$erro}}</p>
-                            @endforeach
-                       </div>
-                    @endif
-=======
         @if(isset($errors) && count($errors) > 0)
             <div class="alert alert-danger">
                 @foreach ($errors->all() as $erro):
                     <p>{{$erro}}</p>
-                 @endforeach 
+                 @endforeach
             </div>
         @endif
->>>>>>> 8662e677a7e182ab7aa2405241f9f2788a020046
     <div class="inner-bg">
         <div class="container">
             <div class="row">
