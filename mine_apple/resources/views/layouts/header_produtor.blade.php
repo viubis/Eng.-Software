@@ -96,7 +96,7 @@
                                     </li>
                                     <li><a href="#">Meus Produtos<i class="fas fa-chevron-down"></i></a></li>
                                     <li><a href="#">Assinaturas<i class="fas fa-chevron-down"></i></a></li>
-                                    <li><a href="#">Reputação<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="{{url('/produtor/reputacao')}}">Reputação<i class="fas fa-chevron-down"></i></a></li>
                                 </ul>
                             </div>
 
