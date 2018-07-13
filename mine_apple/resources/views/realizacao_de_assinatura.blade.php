@@ -118,15 +118,17 @@
            <div class="row" id="backColor">
                <div class="col-sm-4">
                    <div class="subcontainerProduto1">
+                    @php $foto = $fotos->where('produto_id', '=', $item->id)->first() @endphp
                        <div class="imagem">
-                           <img src="{{asset('images/abacaxi.png')}}" height="200" width="200" style="float:left">
+                           <img src="{{asset($foto->path)}}" height="200" width="200" style="float:left">
                        </div>
                    </div>
                </div>
                <div class="col-sm-8">
                    <div class="subcontainerProduto2 ">
-                       <form method="post" action="/realizacao_assinatura">
+                       <form role="form" method="post" action="/realizacao_assinatura">
                            <fieldset>
+                            @csrf
                                <div class="form-row">
                                    <div class="form-group col-md-6">
                                        <label for="nomeProd1"> Nome do Produto </label>
@@ -136,9 +138,9 @@
                                    <div class="form-group col-md-12">
                                        <label for="freqProd1">Frequencia de entrega </label>
                                           <select multiple class="form-control" size="2" id="freqProd1" name="freqProd1">
-                                                <option disabled>Produto 1</option>
-                                                <option disabled>Produto 2</option>
-                                                <option disabled>Produto 3</option>
+                                             @for($i = 0; $i < 5; $i++)
+                                                <option>{{$i}} vez por semana</option>
+                                            @endfor
                                         </select>
 
                                    </div>
@@ -227,7 +229,7 @@
                             </div>
 
                            </fieldset>
-                       </form>
+                       
                    </div>
                </div>
                <div class="pb-0" id="line"></div>
@@ -259,8 +261,7 @@
                  </select>
 
             </div>
-
-            <!-- <a href="http://www.seulink.com.br">Adicionar endereço</a> -->
+            <a href="/consumidor/cadastrar_endereco">Adicionar endereço</a>
             </div>
             <div class="card-body">
                 <h4 class="card-title">Cartões:</h4>
@@ -275,13 +276,13 @@
                      </select>
 
                 </div>
-              <div class="form-group col-md-5">
-                <label for="codSeguranca">Código de segurança </label>
-                <input type="text"
-                placeholder="Valor..."
-                class="form-first-name form-control" name="codSeguranca" id="codSeguranca">
-            </div>
-              <!-- <A href="http://www.seulink.com.br" title="Pequena Descrição">Adicionar cartão</A> -->
+                <div class="form-group col-md-5">
+                    <label for="codSeguranca">Código de segurança </label>
+                    <input type="text"
+                    placeholder="Valor..."
+                    class="form-first-name form-control" name="codSeguranca" id="codSeguranca">
+                </div>
+              <A href="/consumidor/adicionar_cartao">Adicionar cartão</A> 
               </div>
           </div>
 
@@ -296,56 +297,12 @@
 
 
 </div>
+</form>
 
 
 
 
-
-      <!-- Footer -->
-
-      <footer class="footer">
-            <div class="container">
-                <div class="row" id="linha">
-
-                    <div class="col-lg-3 footer_col">
-                        <div class="footer_column footer_contact">
-                            <div class="logo_container">
-                                <div class="logo"><a href="#">Mineapple</a></div>
-                            </div>
-                            <div class="footer_title">Tem uma dúvida? Mande-nos um email!</div>
-                            <div class="footer_phone">mineapple@gmail.com</div>
-                            <div class="footer_contact_text">
-                                <p>Feira de Santana</p>
-                                <p>Bahia, BR</p>
-                            </div>
-                            <div class="footer_social">
-                                <ul>
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-google"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2">
-                        <div class="footer_column">
-                            <div class="footer_title">Serviços</div>
-                            <ul class="footer_list">
-                                <li><a href="#">Minha conta</a></li>
-                                <li><a href="#">Pedidos</a></li>
-                                <li><a href="#">Lista de Desejos</a></li>
-                                <li><a href="#">Atendimento ao cliente</a></li>
-
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </footer>
+@include('layouts.footer')
 
         <!-- Copyright -->
 

@@ -35,7 +35,7 @@
             <div class="alert alert-danger">
                 @foreach ($errors->all() as $erro):
                     <p>{{$erro}}</p>
-                 @endforeach 
+                 @endforeach
             </div>
         @endif
     <div class="inner-bg">
@@ -184,7 +184,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <label class="sr-only" for="dVerif">Dígito verificador</label>
-                                            <input type="text" name="digitoConta" placeholder="Dígito verificador"
+                                            <input type="text" name="digito" placeholder="Dígito verificador"
                                                    class="form-facebook form-control" required id="dVerif" maxlength="1" value="{{old('digitoConta')}}">
                                         </div>
                                     </div>

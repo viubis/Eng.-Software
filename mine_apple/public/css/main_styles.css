@@ -857,6 +857,7 @@ select option {
 .main_nav_content {
     width: 100%;
     height: 60px;
+    padding-right:20px;
 }
 
 .cat_menu_container {

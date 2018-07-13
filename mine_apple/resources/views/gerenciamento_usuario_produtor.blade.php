@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/gerenciamento_usuario.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/responsive.css')}}">
 
-    <<!-- Favicon and touch icons -->
+    <!-- Favicon and touch icons -->
     <link rel="shortcut icon" href="{{asset('images/favicon.png')}}">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('images/icon-144.png')}}">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset('images/icon-114.png')}}">
@@ -29,7 +29,6 @@
 
 <div class="super_container">
 
-    <!-- Header -->
     <!-- Header -->
     @if(Auth::check())
         @if(Auth::user()->consumidor != null)
@@ -52,7 +51,7 @@
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="contact_form_title">Gerenciamento de usuário</div>
-                    
+
                         <div class="form-row">
                             <label class="sr-only" for="selecionarProdutor">Selecione um produtor... </label>
                             <select class="form-control" id="selecionarProdutor" style="margin-bottom: 20px">
@@ -64,14 +63,14 @@
                             <a href="#">Ver todos</a>
                         </div>
 
-                        @foreach($produtores as $produtor) 
+                        @foreach($produtores as $produtor)
 
                         <label class="my-0 mr-2" style="font-size: 20px">{{$produtor->usuario_id}} <i
                                 class="fa fa-at"></i>produtor</label>
 
                         <div class="pb-0" id="line"></div>
 
-                        <form>
+                        <form role="form" method="post" action="gerenciamento/produtor">
                         <div class="form-row">
                             <div class="form-group col-md-2">
                                 <i class="fa fa-user-circle fa-8x"></i>
@@ -116,7 +115,7 @@
                                     </div>
                                     <div class="form-group col-md-5" style="margin-top: 10px;">
                                         <div class="row" style="margin-bottom: 10px">
-                                            @for($i = 0; $i < $produtor->avaliacao; $i++) 
+                                            @for($i = 0; $i < $produtor->avaliacao; $i++)
                                             <i class="fas fa-star" style="color: yellow; margin-right: 5px"></i>
                                             @endfor
                                         </div>
@@ -128,7 +127,7 @@
                                 <label for="userBloqueado">Acesso negado a plataforma</label>
                             </div>
                         </div>
-                        
+
                         @endforeach
                     </form>
                 </div>
@@ -138,51 +137,7 @@
 
     <!--</section>-->
 
-    <!-- Footer -->
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row" id="linha">
-
-                <div class="col-lg-3 footer_col">
-                    <div class="footer_column footer_contact">
-                        <div class="logo_container">
-                            <div class="logo"><a href="#">Mineapple</a></div>
-                        </div>
-                        <div class="footer_title">Tem uma dúvida? Mande-nos um email!</div>
-                        <div class="footer_phone">mineapple@gmail.com</div>
-                        <div class="footer_contact_text">
-                            <p>Feira de Santana</p>
-                            <p>Bahia, BR</p>
-                        </div>
-                        <div class="footer_social">
-                            <ul>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-google"></i></a></li>
-                                <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2">
-                    <div class="footer_column">
-                        <div class="footer_title">Serviços</div>
-                        <ul class="footer_list">
-                            <li><a href="#">Minha conta</a></li>
-                            <li><a href="#">Pedidos</a></li>
-                            <li><a href="#">Lista de Desejos</a></li>
-                            <li><a href="#">Atendimento ao cliente</a></li>
-
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </footer>
+    @include('layouts.footer')
 
     <!-- Copyright -->
 

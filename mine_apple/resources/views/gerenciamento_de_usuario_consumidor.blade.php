@@ -16,7 +16,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/gerenciamento_usuario.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/responsive.css')}}">
 
-    <<!-- Favicon and touch icons -->
+
+    <!-- Favicon and touch icons -->
     <link rel="shortcut icon" href="{{asset('images/favicon.png')}}">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('images/icon-144.png')}}">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset('images/icon-114.png')}}">
@@ -49,7 +50,7 @@
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="contact_form_title">Gerenciamento de usuário</div>
-                    <form>
+
                         <div class="form-row">
                             <label class="sr-only" for="selecionarConsumidor">Selecione um consumidor... </label>
                             <select class="form-control" id="selecionarConsumidor" style="margin-bottom: 20px">
@@ -63,6 +64,7 @@
                         </label>
                         <div class="pb-0" id="line"></div>
                         @foreach($consumidores as $consumidor)
+                        <form role="form" method="post" action="/gerenciamento/consumidor">
                         <div class="form-row">
                             <div class="form-group col-md-2">
                                 <i class="fa fa-user-circle fa-8x"></i>
@@ -74,7 +76,7 @@
                                         <label for="staticNome" class="col-form-label">Nome</label>
                                     </div>
                                     <div class="form-group col-md-5">
-                                        <input type="text" readonly class="form-control-plaintext"
+                                        <input type="text" class="form-control-plaintext"
                                                id="staticNomeFantasia"
                                                placeholder="{{$consumidor->nome}}" name="nomeFantasia" readonly>
                                     </div>
@@ -84,7 +86,7 @@
                                         <label for="staticCNPJ" class="col-form-label">CPF</label>
                                     </div>
                                     <div class="form-group col-md-5">
-                                        <input type="text" readonly class="form-control-plaintext" id="staticCNPJ"
+                                        <input type="text" class="form-control-plaintext" id="staticCNPJ"
                                                placeholder="{{$consumidor->cpf}}" readonly name="cpf">
                                     </div>
                                 </div>
@@ -98,7 +100,7 @@
                                     </div>
                                     @php $cidade = $cidades->where('id','=', $endereco->cidade_id)->first() @endphp
                                     <div class="form-group col-md-5">
-                                        <input type="text" readonly class="form-control-plaintext" id="staticCNPJ"
+                                        <input type="text" class="form-control-plaintext" id="staticCNPJ"
                                                placeholder="{{$cidade->nome}}" readonly name="cpf">
                                     </div>
                                 </div>
@@ -109,9 +111,9 @@
                                     </div>
                                     <div class="form-group col-md-5">
                                         @php $estado = $estados->where('id', '=', $cidade->estado_id)->first() @endphp
-                                        <input type="text" readonly class="form-control-plaintext" id="staticCNPJ"
+                                        <input type="text" class="form-control-plaintext" id="staticCNPJ"
                                                placeholder="{{$estado->nome}}" readonly name="cpf">
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -122,9 +124,9 @@
                             </div>
                         </div>
                         @endforeach
-                        
+
                         <!-- <div class="pb-0" id="line" style="margin-top: -15px"></div> -->
-                        
+
                     </form>
                 </div>
             </div>
@@ -133,51 +135,7 @@
 
     <!--</section>-->
 
-    <!-- Footer -->
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row" id="linha">
-
-                <div class="col-lg-3 footer_col">
-                    <div class="footer_column footer_contact">
-                        <div class="logo_container">
-                            <div class="logo"><a href="#">Mineapple</a></div>
-                        </div>
-                        <div class="footer_title">Tem uma dúvida? Mande-nos um email!</div>
-                        <div class="footer_phone">mineapple@gmail.com</div>
-                        <div class="footer_contact_text">
-                            <p>Feira de Santana</p>
-                            <p>Bahia, BR</p>
-                        </div>
-                        <div class="footer_social">
-                            <ul>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-google"></i></a></li>
-                                <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2">
-                    <div class="footer_column">
-                        <div class="footer_title">Serviços</div>
-                        <ul class="footer_list">
-                            <li><a href="#">Minha conta</a></li>
-                            <li><a href="#">Pedidos</a></li>
-                            <li><a href="#">Lista de Desejos</a></li>
-                            <li><a href="#">Atendimento ao cliente</a></li>
-
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </footer>
+    @include('layouts.footer')
 
     <!-- Copyright -->
 
@@ -189,7 +147,7 @@
                     <div
                         class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                         <div class="copyright_content">
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                            Copyright &copy;<script>document.write(new Date().getFullYear().toString());</script>
                             Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
                                                                                       aria-hidden="true"></i> pela <a
                                 href="#" target="_blank">Weiche Technologie</a>

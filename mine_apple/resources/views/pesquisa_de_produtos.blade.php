@@ -48,7 +48,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 pt-3">
-                    <h1 class="h1 page-title" data-reactid="38">{{$cat->nome}}</h1>
+                    <h1 class="h1 page-title" data-reactid="38">@if (isset($cat)) {{$cat->nome}} @else {{'Todos Produtos'}} @endif</h1>
                     <div class="pb-3" id="line"></div>
                 </div>
             </div>
@@ -64,9 +64,12 @@
                         <div class="subcontainerProduto1">
                             <div class="imagem">
                                 @php
-                                    $foto = \mine_apple\Foto::where('produto_id', '=', $produto->id)->first();
+                                    $foto = $fotos->where('produto_id', '=', $produto->id)->first();
                                 @endphp
-                                <img src="{{asset($foto->path)}}" height="200" width="200" style="float:left">
+                                @foreach($foto as $i)
+                                    <img src="{{asset($foto->path)}}" height="200" width="200" style="float:left">
+                                    @break
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -109,7 +112,7 @@
                                             <label for="quantidade" style="color: #99a8b7">Quantidade</label>
                                             <input type="number" name="quantidade"
                                                    class="form-control"
-                                                   placeholder="1">
+                                                   value="1" required>
                                         </div>
                                     </div>
                                     <div class="form-group" align="right">
@@ -126,7 +129,7 @@
                     <div class="pb-0" id="line"></div>
                 </div>
             </div>
-        @endforeach
+
 
         <!-- <div class="col-md-12 mb-3">
                 <button type="submit" class="btn btn-primary">Mostrar mais</button>
@@ -134,56 +137,10 @@
 
 
         </div>
+        @endforeach
 
 
-
-
-
-        <!-- Footer -->
-
-        <footer class="footer">
-            <div class="container">
-                <div class="row" id="linha">
-
-                    <div class="col-lg-3 footer_col">
-                        <div class="footer_column footer_contact">
-                            <div class="logo_container">
-                                <div class="logo"><a href="#">Mineapple</a></div>
-                            </div>
-                            <div class="footer_title">Tem uma dúvida? Mande-nos um email!</div>
-                            <div class="footer_phone">mineapple.organicstore@gmail.com</div>
-                            <div class="footer_contact_text">
-                                <p>Feira de Santana</p>
-                                <p>Bahia, BR</p>
-                            </div>
-                            <div class="footer_social">
-                                <ul>
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-google"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2">
-                        <div class="footer_column">
-                            <div class="footer_title">Serviços</div>
-                            <ul class="footer_list">
-                                <li><a href="#">Minha conta</a></li>
-                                <li><a href="#">Pedidos</a></li>
-                                <li><a href="#">Lista de Desejos</a></li>
-                                <li><a href="#">Atendimento ao cliente</a></li>
-
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </footer>
+    @include('layouts.footer')
 
         <!-- Copyright -->
 

@@ -1,4 +1,3 @@
-<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
 <header class="header">
             <!-- Top Bar -->
@@ -16,22 +15,21 @@
                     </div>
                 </div>
             </div>
-<div class="col-lg-12 col-xs-12 col-sm-12" >
+
             <!-- Header Main -->
             <div class="header_main">
-                <div class="container">
+                <div class="container" >
                     <div class="row">
                         <!-- Logo -->
-                        <div class="col-lg-4 col-xs-6 col-sm-4 pt-3 text-center">
-                            <div class="logo_container">
-                                <div class="logo_icon ml-1 mt-1"><a href="{{url("/")}}"><img src="{{asset('images/logoSite2.png')}}"
 
-                                  alt=""></a></div>
-                              </div>
-                          </div>
+                        <div class="col-lg-4 col-xs-12 col-sm-4 pt-3 text-center clearfix ">
+                            <div class="logo_container  ">
+                                <div class="logo_icon text-center"><a href="{{url("/")}}"><img src="{{asset('images/logoSite2.png')}}" alt=""></a></div>
+                            </div>
+                        </div>
 
                           <!-- Search  6 col 12 ord 2 order 3-->
-                          <div class="col-lg-6 col-sm-6 col-xs-6 pt-0">
+                          <div class="col-lg-5 col-sm-6 text-lg-left">
                             <div class="header_search">
                                 <div class="header_search_content">
                                     <div class="header_search_form_container">
@@ -65,13 +63,13 @@
                             </div>
 
                             <!-- Wishlist -->
-                            <div class="col-lg-2 col-9">
+                            <div class="col-lg-2  col-sm-1 col-9 order-lg-3 order-2 text-lg-left text-right pb-0 pt-0">
                                 <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end  clearfix">
                                     <!-- Cart -->
                                     <div class="cart">
                                         <div class="cart_container d-flex flex-row align-items-center justify-content-end ">
                                             <div class="cart_icon ">
-                                                <a href="{{url('/carrinho_de_compras')}}">
+                                                <a href="{{url('/carrinho')}}">
                                                     <i class="fa fa-shopping-basket fa-3x " style="color: #000000"></i>
                                                 </a>
                                                 <div class="cart_count"><span>2</span></div>
@@ -83,12 +81,12 @@
                         </div>
                     </div>
                 </div>
-</div>
+
 
                 <!-- Main Navigation -->
 
-                <nav class="main_nav">
-                    <div class="container">
+                <nav class="main_nav" >
+                    <div class="container" >
                         <div class="row">
                             <div class="col">
                                 <div class="main_nav_content d-flex flex-row">
@@ -168,7 +166,7 @@
                                                     class="fa fa-angle-down"></i></a>
                                             </li>
                                             <li class="page_menu_item">
-                                                <a href="{{url('/carrinho_de_compras')}}">Carrinho<i
+                                                <a href="{{url('/carrinho')}}">Carrinho<i
                                                             class="fa fa-angle-down"></i></a>
                                             </li>
                                         </ul>

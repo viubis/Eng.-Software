@@ -77,6 +77,10 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get('/gerenciamento/sistema', 'AdministradorController@getGerenciamentoSistema');
 
+        Route::post('gerenciamento/produtor', 'AdministradorController@banirProdutor');
+
+        Route::post('gerenciamento/consumidor', 'AdministradorController@banirConsumidor');
+
     });
 
 
