@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/gerenciamento_usuario.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/responsive.css')}}">
 
+
     <!-- Favicon and touch icons -->
     <link rel="shortcut icon" href="{{asset('images/favicon.png')}}">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('images/icon-144.png')}}">
@@ -146,7 +147,7 @@
                             <div class="logo"><a href="#">Mineapple</a></div>
                         </div>
                         <div class="footer_title">Tem uma dúvida? Mande-nos um email!</div>
-                        <div class="footer_phone">mineapple@gmail.com</div>
+                        <div class="footer_phone">contato.mineapple@gmail.com</div>
                         <div class="footer_contact_text">
                             <p>Feira de Santana</p>
                             <p>Bahia, BR</p>
