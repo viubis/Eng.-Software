@@ -10,7 +10,9 @@ use Laravel\Socialite\Facades\Socialite;
 use mine_apple\User;
 use mine_apple\ConsumidorEndereco;
 use mine_apple\Endereco;
+use mine_apple\Cartao;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Contracts\Auth\Authenticable;
 use mine_apple\Http\Requests\FormConsumidor;
 class LoginController extends Controller
 {
@@ -79,6 +81,17 @@ class LoginController extends Controller
             $vetor = explode(" ", $user->name);
             $sobrenome = "";
 
+            $costumer = new Consumidor();
+            $costumer->nome = $vetor[0];
+            $costumer->sobrenome = $sobrenome;
+            $costumer->usuario_id = $usuario->id;
+            $costumer->cpf = "";
+            $costumer->sexo = 'm';
+
+            $costumer->acesso = 1;
+            $costumer->save();
+            //Auth::login($costumer);
+
             $consumidor_endereco = new ConsumidorEndereco;
             $endereco = new Endereco();
             $endereco->rua = "";
@@ -86,41 +99,34 @@ class LoginController extends Controller
             $endereco->complemento = "";
             $endereco->bairro = "";
             $endereco->numero_cep = "";
-            $endereco->cidade_id = "";
+            $endereco->cidade_id = 5269;
             $endereco->save();
 
-            for($i = 1; i<count($vetor);$i++){
-                $sobrenome = $vetor[$i];
-            }
-            $costumer = new Consumidor();
-            $costumer->nome = $vetor[0];
-            $costumer->sobrenome = $sobrenome;
-            $costumer->usuario_id = $usuario->id;
-            if($user->gender == 'male'){
-                $costumer->sexo = 'm';
-            }else{
-                $costumer->sexo = 'f';
-            }
-            $costumer->acesso = 1;
-            $costumer->save();
-            Auth::login($costumer);
-
             $consumidor_endereco->endereco_id = $endereco->id;
-            $consumidor_endereco->consumidor_id = $costumer->id;
+            $consumidor_endereco->consumidor_id = $usuario->id;
+            $consumidor_endereco->save();
+
+            $nomes = 1;
+            //while()
+            for(; $nomes<count($vetor);$nomes++){
+                $sobrenome = $vetor[$nomes];
+            }
+
+
+
 
             $cartao = new Cartao;
-            $cartao->consumidor_id = Auth::user()->id;
+            $cartao->consumidor_id = $usuario->id;
             $cartao->numero = "";
             $cartao->titular = "";
             $cartao->validade = "";
             $cartao->codigo = "";
 
-            $consumidor_endereco->save();
 
             $cartao->save();
 
-            DD("Usuário id:".$user->id." Consumidor id:".$costumer->id
-            ."\nId recebido da sessão:".Auth::user()->id);
+//            DD("Usuário id:".$user->id." Consumidor id:".$costumer->id
+//            ."\nId recebido da sessão:".Auth::user()->id);
             return view('index')->with('Cadastro realizado!');
         }
 
@@ -147,29 +153,67 @@ class LoginController extends Controller
     {
         $user = Socialite::driver('google')->user();
 
-        //return $user->name;
         $achaUsuario = User::where('email', $user->email)->first();
         if($achaUsuario){
-            Auth::login($user->email);
+            Auth::loginUsingId($achaUsuario->id);
+            DD("Usuário id:".$user->id." Consumidor(achado) id:".$achaUsuario->id
+                ."\nId recebido da sessão:".Auth::user()->id);
+
             return view('index')->with("Conta acessada");
         }else{
-            $usuario = new User();
-            $usuario->email = $user->email;
-            $usuario->senha = "mpiansesawpoprlde";
-            $user->save();
+            $usuario = User::create([
+                'email' => $user->email,
+                'password' => Hash::make("mpiansesawpoprlde"),
+            ]);
+            $vetor = explode(" ", $user->name);
+            $sobrenome = "";
 
             $costumer = new Consumidor();
-            $costumer->nome = $user->first_name;
-            $costumer->sobrenome = $user->last_name;
-            $costumer->usuario_id = Auth::user()->id;
-            if($user->gender == 'male'){
-                $costumer->sexo = 'm';
-            }else{
-                $costumer->sexo = 'f';
-            }
+            $costumer->nome = $vetor[0];
+            $costumer->sobrenome = $sobrenome;
+            $costumer->usuario_id = $usuario->id;
+            $costumer->cpf = "";
+            $costumer->sexo = 'm';
+
             $costumer->acesso = 1;
             $costumer->save();
-            Auth::login($costumer);
+            //Auth::login($costumer);
+
+            $consumidor_endereco = new ConsumidorEndereco;
+            $endereco = new Endereco();
+            $endereco->rua = "";
+            $endereco->numero = 0;
+            $endereco->complemento = "";
+            $endereco->bairro = "";
+            $endereco->numero_cep = "";
+            $endereco->cidade_id = 5269;
+            $endereco->save();
+
+            $consumidor_endereco->endereco_id = $endereco->id;
+            $consumidor_endereco->consumidor_id = $usuario->id;
+            $consumidor_endereco->save();
+
+            $nomes = 1;
+            //while()
+            for(; $nomes<count($vetor);$nomes++){
+                $sobrenome = $vetor[$nomes];
+            }
+
+
+
+
+            $cartao = new Cartao;
+            $cartao->consumidor_id = $usuario->id;
+            $cartao->numero = "";
+            $cartao->titular = "";
+            $cartao->validade = "";
+            $cartao->codigo = "";
+
+
+            $cartao->save();
+
+//            DD("Usuário id:".$user->id." Consumidor id:".$costumer->id
+//            ."\nId recebido da sessão:".Auth::user()->id);
             return view('index')->with('Cadastro realizado!');
         }
 

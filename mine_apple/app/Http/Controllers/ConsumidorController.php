@@ -160,8 +160,13 @@ class ConsumidorController extends Controller
      * @return string
      */
     public function removerDoCarrinho(Request $request){
-        dd($request->all());
+//        dd($request->all());
         Cart::remove($request->rowId);
+        //retorna todos os itens do carrinho
+        $itens = Cart::content();
+        //retorna o preço total
+        $subtotal = Cart::total();
+        return view('carrinho_de_compras', compact('itens', 'subtotal'));
     }
 
     /**
@@ -199,63 +204,63 @@ class ConsumidorController extends Controller
 
        switch($cartao){
            case (bool) preg_match('/^(636368|438935|504175|451416|636297)/', $request->cartao) :
-           $bandeira = 'elo'; 
+           $bandeira = 'elo';
            break;
 
            case (bool) preg_match('/^(606282)/', $request->cartao) :
-           $bandeira = 'hipercard'; 
+           $bandeira = 'hipercard';
            break;
 
            case (bool) preg_match('/^(5067|4576|4011)/', $request->cartao) :
-           $bandeira = 'elo'; 
+           $bandeira = 'elo';
            break;
 
            case (bool) preg_match('/^(3841)/', $request->cartao) :
-           $bandeira = 'hipercard'; 
+           $bandeira = 'hipercard';
            break;
 
            case (bool) preg_match('/^(6011)/', $request->cartao) :
-           $bandeira = 'discover'; 
+           $bandeira = 'discover';
            break;
 
            case (bool) preg_match('/^(622)/', $request->cartao) :
-           $bandeira = 'discover'; 
+           $bandeira = 'discover';
            break;
 
            case (bool) preg_match('/^(301|305)/', $request->cartao) :
-           $bandeira = 'diners'; 
+           $bandeira = 'diners';
            break;
 
            case (bool) preg_match('/^(34|37)/', $request->cartao) :
-           $bandeira = 'amex'; 
+           $bandeira = 'amex';
            break;
 
            case (bool) preg_match('/^(36,38)/', $request->cartao) :
-           $bandeira = 'diners'; 
+           $bandeira = 'diners';
            break;
 
            case (bool) preg_match('/^(64,65)/', $request->cartao) :
-           $bandeira = 'discover'; 
+           $bandeira = 'discover';
            break;
 
            case (bool) preg_match('/^(50)/', $request->cartao) :
-           $bandeira = 'aura'; 
+           $bandeira = 'aura';
            break;
 
            case (bool) preg_match('/^(35)/', $request->cartao) :
-           $bandeira = 'jcb'; 
+           $bandeira = 'jcb';
            break;
 
            case (bool) preg_match('/^(60)/', $request->cartao) :
-           $bandeira = 'hipercard'; 
+           $bandeira = 'hipercard';
            break;
 
            case (bool) preg_match('/^(4)/', $request->cartao) :
-           $bandeira = 'visa'; 
+           $bandeira = 'visa';
            break;
 
            case (bool) preg_match('/^(5)/', $request->cartao) :
-           $bandeira = 'mastercard'; 
+           $bandeira = 'mastercard';
            break;
        }
 
@@ -282,9 +287,10 @@ class ConsumidorController extends Controller
         $cidades = Cidade::all();
         $estados = Estado::all();
         $fotos = Foto::all();
+        //$cartoes = Cartao::all();
         $cartoes = Cartao::where('consumidor_id', '=', Auth::user()->id);
         $consumidor_enderecos = ConsumidorEndereco::all();
-        return view('realizacao_de_assinatura', compact('itens', 'embalagens', 'produtos', 'enderecos', 'consumidor_enderecos', 'cidades', 'estados', 'cartoes', 'fotos'));
+        return view('realizacao_de_assinatura', compact('itens', 'embalagens', 'produtos', 'enderecos', 'consumidor_enderecos', 'cidades', 'estados', 'fotos', 'cartoes'));
 
     }
 
