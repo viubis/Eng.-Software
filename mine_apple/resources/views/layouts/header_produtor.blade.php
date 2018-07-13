@@ -50,7 +50,7 @@
                     <!-- Logo -->
                     <div class="col-lg-12 col-xs-12 col-sm-12 pt-3 text-center clearfix ">
                         <div class="logo_container  ">
-                            <div class="logo_icon text-center"><img src="{{asset('images/logoSite2.png')}}" alt=""></div>
+                            <div class="logo_icon text-center"><a href="{{url("/")}}"><img src="{{asset('images/logoSite2.png')}}" alt=""></a></div>
                         </div>
                     </div>
 
