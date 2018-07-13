@@ -18,7 +18,7 @@
 
             <!-- Header Main -->
             <div class="header_main">
-                <div class="container">
+                <div class="container" >
                     <div class="row">
                         <!-- Logo -->
 
@@ -85,8 +85,8 @@
 
                 <!-- Main Navigation -->
 
-                <nav class="main_nav">
-                    <div class="container">
+                <nav class="main_nav" >
+                    <div class="container" >
                         <div class="row">
                             <div class="col">
                                 <div class="main_nav_content d-flex flex-row">

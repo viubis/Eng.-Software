@@ -403,7 +403,7 @@
 	.cat_menu_container
 	{
 		width: auto;
-		padding-right: 15px;
+		padding-right: 35px;
 	}
 	.cat_menu_text
 	{
@@ -487,9 +487,12 @@
 	.main_nav
 	{
 		width: calc(100% + 30px);
-		margin-left: -15px;
-		margin-right: -15px;
+		margin-left: 0px; /*-15*/
+		margin-right: 0px; /*-15*/
 		margin-top: 0px;
+        padding-right: 0;
+        padding-left: 0;
+
 	}
 	.main_nav_content
 	{
@@ -792,13 +795,17 @@
 		padding-right: 0;
 	}
 	.container{
-		padding-left: 0;
-		padding-right: 0;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 	.header_search{
 		padding-top: 3px;
 	}
 
+    .cont1{
+        margin-right: 0;
+        margin-left: 0;
+    }
 
 }
 
@@ -841,7 +848,6 @@
 @media only screen and (min-width: 768px) {
 	.container{
 		max-width:100%;
-		padding-left: 0;
-		padding-right: 0;
+		
 	}
 }
