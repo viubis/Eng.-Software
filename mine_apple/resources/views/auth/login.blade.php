@@ -60,7 +60,7 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="form-password">Password</label>
                                     <input id="password" type="password" name="password" placeholder="Senha..."
-                                           class="form-password form-control" minlength="8">
+                                           class="form-password form-control" minlength="8" required>
                                     <div style="text-align: right">
                                         <a href="{{ route('password.request') }}"
                                            style="color:#FFFFFF; font-size: 14px">Esqueci
