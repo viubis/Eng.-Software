@@ -57,10 +57,10 @@
                     <div class="header_search">
                         <div class="header_search_content">
                             <div class="header_search_form_container">
-                                <form role="form" method="post" action="/" class="header_search_form clearfix">
+                                <form role="form" method="post" action="{{route('pesquisa')}}" class="header_search_form clearfix">
                                     @csrf
                                     <input type="search" required="required" class="header_search_input"
-                                           placeholder="Pesquisar produtos..." name="query">
+                                           placeholder="Pesquisar produtos..." name="busca">
                                     <div class="custom_dropdown">
                                         <div class="custom_dropdown_list">
                                                     <span

@@ -152,7 +152,7 @@
                                         <div class="page_menu_search">
                                             <form action="{{route('pesquisa')}}">
                                                 <input type="search" required="required" class="page_menu_search_input"
-                                                placeholder="Pesquisar produtos..." name="-">
+                                                placeholder="Pesquisar produtos..." name="busca">
                                             </form>
                                         </div>
                                         <ul class="page_menu_nav">
