@@ -28,184 +28,182 @@
 <body>
 
 <div class="super_container">
-            <!-- Header -->
-            @if(Auth::check())
-                @if(Auth::user()->consumidor != null)
-                    @include('layouts.header_consumidor')
-                @elseif(Auth::user()->produtor != null)
-                    @include('layouts.header_produtor')
-                @elseif(Auth::user()->administrador != null)
-                    @include('layouts.header_administrador')
-                @endif
-            @else
-                @include('layouts.header_usuario')
-            @endif
-        
+    <!-- Header -->
+    @if(Auth::check())
+        @if(Auth::user()->consumidor != null)
+            @include('layouts.header_consumidor')
+        @elseif(Auth::user()->produtor != null)
+            @include('layouts.header_produtor')
+        @elseif(Auth::user()->administrador != null)
+            @include('layouts.header_administrador')
+        @endif
+    @else
+        @include('layouts.header_usuario')
+    @endif
 
-        <div class="top-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 mt-3 ">
-                        <h1 class="h1 page-title" data-reactid="30">Carrinho de compras</h1>
-                        <div class="pb-0 line"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-    <div class="row pl-5">
-        <div class="col-md-6">
-            @foreach($itens as $item)
-                <div class="containerInfosProdutos">
-                    <div class="container">
-                        <div class="row backColor">
-                            <div class="col-sm-5">
-                                <div class="imagem">
-                                    @php
-                                        $foto = \mine_apple\Foto::where('produto_id', '=', $item->id)->first();
-                                    @endphp
-                                    <img src="{{asset($foto->path)}}" style="float:left; height: 150px; width: 150px">
-                                </div>
-                            </div>
-                            <div class="col-sm-7">
+    <div class="top-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <h1 class="h1 page-title pt-3" data-reactid="30">Carrinho de compras</h1>
+                    <div class="pb-0 line"></div>
+
+                    <!-- ========================= SECTION CONTENT ========================= -->
+                    <section class="section-content bg padding-y border-top">
+                            <div class="row">
+                                <main class="col-sm-9">
                                 <form action="/remover_carrinho" method="post">
                                     @csrf
-                                    <fieldset>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="nomeProd1"> Nome Produto </label>
-                                                <input type="text" style="border: none;" class="form-control" id="nomeProd1"
-                                                       value="{{$item->name}}" name="nome" readonly>
-                                            </div>
-
-                                            <div class="form-group col-md-">
-                                                 <label for="quantidadeProd1">Quantidade </label>
-                                                <input type="number" step="0" min="1" max="999" name="quantidade"
-                                                       value="{{$item->qty}}"
-                                                       class="form-first-name form-control" id="quantidadeProd1" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-3">
-                                                <label for="valorProd1">Preço</label>
-                                                <input type="number" style="border: none;" min="0.1" max="999" name="preco"
-                                                       class="form-control" id="valorProd1"
-                                                       value="{{$item->price}}" readonly>
-                                            </div>
-                                            <div class="form-group col-md-3">
-                                                <label for="tipoEmbalagemProd1">Pacote</label>
+                                    <div class="card">
+                                        <table class="table table-hover shopping-cart-wrap">
+                                            <thead class="text-muted">
+                                            <tr>
+                                                <th scope="col">Produto</th>
+                                                <th scope="col" width="120">Quantidade</th>
+                                                <th scope="col" width="120">Valor</th>
+                                                <th scope="col" class="text-right" width="150"></th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            @foreach($itens as $item)
+                                            <tr>
+                                                <input type="hidden" name="rowId" value="{{$item->rowId}}">
                                                 @php
-                                                    $embalagem = \mine_apple\Embalagem::where('id', '=', $item->options->embalagem)->first();
+                                                    $foto = \mine_apple\Foto::where('produto_id', '=', $item->id)->first();
                                                 @endphp
-                                                <input type="text" style="border: none;" name="pacote" class="form-control"
-                                                    readonly id="tipoEmbalagemProd1" value="{{$embalagem->tipo}}">
-                                            </div>
-                                            <input type="hidden" name="rowId" value="{{$item->rowId}}">
-                                            <div class="pt-5">
-                                                <button class="btn-sm btn-primary mt-4"
-                                                        style="background-color: rgba(0,0,0,0); border: none;
-                                                        color: #0d82d3;"
-                                                        type="submit">Remover produto</button>
-                                            </div>
-                                        </div>
-                                    </fieldset>
+                                                <td>
+                                                    <figure class="media">
+                                                        <div class="img-wrap" style="float:left; height: 150px; width: 150px"><img src="{{asset($foto->path)}}"
+                                                                                   class="img-thumbnail img-sm"
+                                                            >
+                                                        </div>
+                                                        <figcaption class="media-body pl-2">
+                                                            <h6 class="title text-truncate">{{$item->name}}</h6>
+                                                            <dl class="dlist-inline small">
+                                                                @php
+                                                                    $produto = \mine_apple\Produto::where('id','=',$item->id)->first();
+                                                                    $produtor = \mine_apple\Produtor::where('usuario_id', '=', $produto->produtor_id)->first();
+                                                                @endphp
+                                                                <dt>Produtor:</dt>
+                                                                <dd>{{$produtor->nomeFantasia}}</dd>
+                                                            </dl>
+                                                        </figcaption>
+                                                    </figure>
+                                                </td>
+                                                <td>
+                                                    <label class="sr-only" for="quantidade">Quantidade</label>
+                                                    <input type="number" class="ml-3" id="quantidade" placeholder="1" min="1" style="width: 50px">
+                                                </td>
+                                                <td>
+                                                    @php
+                                                        $embalagem = \mine_apple\Embalagem::where('id', '=', $item->options->embalagem)->first();
+                                                    @endphp
+                                                    <div class="price-wrap">
+                                                        <var class="price">R${{$item->price}}</var>
+                                                        <small class="text-muted">(por {{$embalagem->tipo}}) </small>
+                                                    </div> <!-- price-wrap .// -->
+                                                </td>
+                                                <td class="text-right">
+                                                    <button class="btn-sm btn-primary mt-4"
+                                                    style="background-color: rgba(0,0,0,0); border: none;
+                                                    color: #0d82d3;"
+                                                    type="submit">Remover produto
+                                                    </button>
+                                                    {{--<a href="" class="btn btn-outline-danger"> × Remover</a>--}}
+                                                </td>
+                                            </tr>
+                                            @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div> <!-- card.// -->
                                 </form>
+                                </main> <!-- col.// -->
+                                <aside class="col-sm-3" style="background-color:#f0f0f0;">
+                                    <h4 class="pt-3">Resumo da compra</h4>
+                                    <hr>
+                                    {{--<p class="alert alert-success">Add USD 5.00 of eligible items to your order to--}}
+                                        {{--qualify for FREE--}}
+                                        {{--Shipping. </p>--}}
+                                    <dl class="dlist-align">
+                                        <dt>Sub-total</dt>
+                                        <dd class="text-right">R${{$subtotal}}</dd>
+                                    </dl>
+                                    <dl class="dlist-align">
+                                        <dt>Frete:</dt>
+                                        <dd class="text-right">R$00,00</dd>
+                                    </dl>
+                                    <dl class="dlist-align h4">
+                                        <dt>Total:</dt>
+                                        <dd class="text-right"><strong>R$00,00</strong></dd>
+                                    </dl>
+                                </aside> <!-- col.// -->
                             </div>
-                        </div>
-                    <div class="pb-0 line"></div>
-                    </div>
-                </div>
-            @endforeach
-        </div>
 
-        <div class="col-md-6">
-            <div class="form-row espac2 mt-xl-5" >
-                <div class="card w-50" style="margin-left:+100px">
-                    <div class="card-body" style="background-color: #f0f0f0">
-                        <h4 class="card-title">Resumo da compra:</h4>
-                        <div class="pb-0 line"></div>
-                        <div class="form-row" id="espac1">
-                            <div class="form-group col-md-6">
-                                <label for="subTotal">Sub-total: </label>
-                                <input type="text"
-                                       value="{{$subtotal}}" style="border: none;"
-                                       class="form-first-name form-control" id="subTotal" name="subTotal" readonly>
-                                <label for="frete">Frete: </label>
-                                <input type="text" placeholder="Valor" style="border: none;" class="form-first-name form-control" id="frete"
-                                       name="frete" readonly="">
+                    </section>
+                    <!-- ========================= SECTION CONTENT END// ========================= -->
+                    <div class="pt-3">
+                        <div class="card w-auto col-md-4 pl-0 pr-0">
+                            <div class="card-body">
+                                <h4 class="card-title">Calcule o frete:</h4>
+                                <div class="pb-0 line"></div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-9">
+                                        <label class="sr-only" for="CEP">CEP </label>
+                                        <input type="text" placeholder="Informe o seu cep..."
+                                               class="form-first-name form-control" id="CEP" name="cep">
+                                    </div>
+                                    <div class="form-group col-md-1" align="center">
+                                        <button type="submit" class="btn-sm btn-primary mt-1"
+                                                style="background-color: #08c8b0; border: none;">Calcular
+                                        </button>
+                                    </div>
+                                </div>
+                                <label>Valor do frete: </label>
+                                <label class="ml-1">R$ 00,00</label>
                             </div>
+                         </div>
+                    </div>
+                    <div class="col-md-12 mb-3" align="center">
+                        <button type="submit" class="btn btn-primary" href="{{url('/realizacao_assinatura')}}">Finalizar</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+
+@include('layouts.footer')
+
+<!-- Copyright -->
+
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                    <div
+                        class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
+                        <div class="copyright_content">
+                            Copyright &copy;<script>document.write(new Date().getFullYear().toString());</script>
+                            Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
+                                                                                      aria-hidden="true"></i> pela <a
+                                href="#" target="_blank">Weiche Technologie</a>
                         </div>
-                        <label style="font-size: 20px">Total: </label>
-                        <label class="ml-1">R$ 00,00</label>
+                        <div class="logos ml-sm-auto">
+                            <ul class="logos_list">
+                                <li><a href="#"><img src="{{asset('images/logos_1.png')}}" alt=""></a></li>
+                                <li><a href="#"><img src="{{asset('images/logos_2.png')}}" alt=""></a></li>
+                                <li><a href="#"><img src="{{asset('images/logos_3.png')}}" alt=""></a></li>
+                                <li><a href="#"><img src="{{asset('images/logos_4.png')}}" alt=""></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="containerInfosProdutos mt-4">
-        <div class="form-row espac2">
-            <div class="card w-25" style="margin-left:+100px">
-                <div class="card-body">
-                    <h4 class="card-title">Calcule o frete:</h4>
-                    <div class="pb-0 line"></div>
-                    <div class="form-row">
-                        <div class="form-group col-md-9">
-                            <label for="CEP">CEP </label>
-                            <input type="text"
-                                   class="form-first-name form-control" id="CEP" name="cep">
-
-                        </div>
-                        <div class="form-group col-md-1 mt-2" align="center">
-                            <button type="submit" class="btn-sm btn-primary mt-4"
-                                    style="background-color: #08c8b0; border: none;">Calcular
-                            </button>
-                        </div>
-                    </div>
-                    <label>Valor do frete: </label>
-                    <label class="ml-1">R$ 00,00</label>
-                </div>
-            </div>
-        </div>
-        <br/><br/>
-        <div class="col-md-12 mb-3" align="center">
-            <button type="submit" class="btn btn-primary" href="{{url('/realizacao_assinatura')}}">Finalizar</button>
-        </div>
-    </div>
-
-
-        <!-- Footer -->
-
-        @include('layouts.footer')
-
-        <!-- Copyright -->
-
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-
-                        <div
-                            class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
-                            <div class="copyright_content">
-                                Copyright &copy;<script>document.write(new Date().getFullYear().toString());</script>
-                                Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
-                                                                                          aria-hidden="true"></i> pela <a
-                                    href="#" target="_blank">Weiche Technologie</a>
-                            </div>
-                            <div class="logos ml-sm-auto">
-                                <ul class="logos_list">
-                                    <li><a href="#"><img src="{{asset('images/logos_1.png')}}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{asset('images/logos_2.png')}}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{asset('images/logos_3.png')}}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{asset('images/logos_4.png')}}" alt=""></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 </div>
 
 <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
