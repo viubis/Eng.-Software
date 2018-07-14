@@ -129,9 +129,9 @@ class FotoTableSeeder extends Seeder
             ['produto_id' => 29, 'path'=>'images/Verduras/Espinafre/Espinafre2.jpeg'],
             ['produto_id' => 29, 'path'=>'images/Verduras/Espinafre/Espinafre3.png'],
 
-            ['produto_id' => 29, 'path'=>'images/Verduras/Rucula/Rucula1.jpg'],
-            ['produto_id' => 29, 'path'=>'images/Verduras/Rucula/Rucula2.jpg'],
-            ['produto_id' => 29, 'path'=>'images/Verduras/Rucula/Rucula3.jpg'],
+            ['produto_id' => 30, 'path'=>'images/Verduras/Rucula/Rucula1.jpg'],
+            ['produto_id' => 30, 'path'=>'images/Verduras/Rucula/Rucula2.jpg'],
+            ['produto_id' => 30, 'path'=>'images/Verduras/Rucula/Rucula3.jpg'],
 
         ]);
 
