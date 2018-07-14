@@ -40,12 +40,10 @@
             </div>
             <div class="row">
                 <div class="col-sm-6 offset-lg-3 form-box">
-                    @if(isset($errors) && count($errors) > 0)
-                        <div class="alert alert-danger">
-                        @foreach ($errors->all() as $erro):
-                            <p>{{$erro}}</p>
-                        @endforeach 
-                    </div>
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
                     @endif
                     <form method="POST" action="{{ route('password.email') }}" data-toggle="validator" class="registration-form">
                         
@@ -65,7 +63,13 @@
                                 <div class="form-group">
                                     <label for="email">Email</label>
                                     <input  id="email" type="email" name="email" placeholder="Email..." 
-                                           class="form-first-name form-control">
+                                           class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" value="{{old('email')}}" required>
+
+                                    @if ($errors->has('email'))
+                                        <span class="invalid-feedback">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+                                    @endif
 
                                     
                                 </div>

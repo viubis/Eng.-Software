@@ -29,16 +29,15 @@
     <div class="logo_icon"><img src="{{asset('images/logoSite.png')}}" alt=""></div>
     <div class="inner-bg">
         <div class="container">
+            @if(isset($errors) && count($errors) > 0)
+                <div class="alert alert-danger">
+                    @foreach ($errors->all() as $erro):
+                        <p>{{$erro}}</p>
+                    @endforeach 
+                </div>
+             @endif
             <div class="row">
                 <div class="col-sm-5">
-                    @if(isset($errors) && count($errors) > 0)
-                        <div class="alert alert-danger">
-                            @foreach ($errors->all() as $erro):
-                                <p>{{$erro}}</p>
-                            @endforeach 
-                       </div>
-                    @endif
-
                     <div class="form-box">
                         <div class="form-top">
                             <div class="form-top-left">
