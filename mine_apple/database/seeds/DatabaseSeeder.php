@@ -20,7 +20,9 @@ class DatabaseSeeder extends Seeder
             ProdutoTableSeeder::class,
             AdministradorTableSeeder::class,
             FotoTableSeeder::class,
-            CartaoTableSeeder::class
+            CartaoTableSeeder::class,
+            OperacaoTableSeeder::class,
+            LogTableSeeder::class
         ]);
 
     }

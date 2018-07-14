@@ -13,12 +13,19 @@ class CreateLogTable extends Migration
             $table->integer('usuario_id')->unsigned();
             $table->date('data');
             $table->time('hora');
-            $table->string('operacao');
+            $table->integer('operacao_id')->unsigned();
 
             $table->index(['usuario_id'], 'fk_log_usuario_idx');
 
+            $table->index(['operacao_id'], 'fk_log_operacao_idx');
+
             $table->foreign('usuario_id', 'fk_log_usuario_idx')
                 ->references('id')->on('usuario')
+                ->onDelete('no action')
+                ->onUpdate('no action');
+
+            $table->foreign('operacao_id', 'fk_log_operacao_idx')
+                ->references('id')->on('operacao')
                 ->onDelete('no action')
                 ->onUpdate('no action');
 

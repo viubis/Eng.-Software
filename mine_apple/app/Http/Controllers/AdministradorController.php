@@ -12,6 +12,7 @@ use mine_apple\ConsumidorEndereco;
 use mine_apple\Endereco;
 use mine_apple\Cidade;
 use mine_apple\Estado;
+use mine_apple\Log;
 
 class AdministradorController extends Controller
 {
@@ -57,8 +58,9 @@ class AdministradorController extends Controller
      * @return string
      */
     public function getGerenciamentoSistema(){
+        $logs = Log::all();
     	$usuarios = User::all();
-    	return view('gerenciamento_do_sistema', compact('usuarios'));
+    	return view('gerenciamento_do_sistema', compact('usuarios', 'logs'));
     }
 
     /**
