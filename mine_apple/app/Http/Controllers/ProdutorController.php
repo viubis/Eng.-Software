@@ -90,11 +90,16 @@ class ProdutorController extends Controller
      * @param Request $request
      * @return string
      */
-    public function alterarProdutor(Request $request) {
-        $produtor = Auth::user();
-        $produtor->fill($request->all())->save();
-        return redirect('index')->with('info', 'Dados alterados com sucesso!');
-//        return view('dados_cadastrais_de_produtor', $produtor->id)->with('info', 'Dados alterados com sucesso!');
+    public function alterarProdutor(FormProdutor $request) {
+        // dd($request->all());
+        $dados = $request->all();
+        Auth::user()->produtor->update($dados);
+        $endereco = Endereco::where('id', '=', Auth::user()->produtor->endereco_id)->first();
+        $cidades = Cidade::all();
+        $estados = Estado::all();
+        $contas = Conta::where('produtor_id', '=', Auth::user()->id);
+        $bancos = Banco::all();
+        return view('dados_cadastrais_de_produtor', compact('endereco', 'contas','bancos', 'cidades', 'estados'));
     }
 
     /**

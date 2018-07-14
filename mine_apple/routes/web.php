@@ -136,7 +136,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/produtor', 'ProdutorController@index')->name('produtor');
 
         //Route::get('/produtor/cadastrar', 'ProdutorController@cadastrarProdutor')->name('produtor.cadastrar');
-        Route::get('/produtor/alterar', 'ProdutorController@alterarProdutor')->name('produtor.alterar');
+        Route::post('/produtor/alterar', 'ProdutorController@alterarProdutor')->name('produtor.alterar');
 
         Route::view('/produtor/cadastrar_produto', 'produtor.produto_cadastrar')->name('produto.cadastrar');
         Route::post('/produtor/cadastrar_produto', 'ProdutorController@cadastrarProduto');

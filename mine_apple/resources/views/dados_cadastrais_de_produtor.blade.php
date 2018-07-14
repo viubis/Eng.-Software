@@ -51,14 +51,15 @@
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="contact_form_title">Meus dados</div>
-                    <form>
+                    <form action="{{route('produtor.alterar')}}" method="POST">
+                        @csrf
                         <label class="my-0 mr-2" style="font-size: 20px">Dados da conta <i class="fa fa-at"></i>
                         </label>
                         <div class="pb-0" id="line"></div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="{{Auth::user()->email}}">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="{{Auth::user()->email}}" disabled>
                             </div>
                             <!-- <div class="form-group col-md-6">
                                 <label for="senha">Senha</label>
@@ -72,22 +73,21 @@
                         <div class="pb-0" id="line"></div>
                         <div class="form-group">
                             <label for="nomeFantasia">Nome fantasia</label>
-                            <input type="text" class="form-control" id="nomeFantasia" name="nomeFantasia" placeholder="{{$produtor->nomeFantasia}}">
+                            <input type="text" class="form-control" id="nomeFantasia" name="nomeFantasia" placeholder="Nome Fantasia" value="{{Auth::user()->produtor->nomeFantasia}}">
                         </div>
                         <div class="form-group">
                             <label for="razaoSocial">Razão Social</label>
-                            <input type="text" class="form-control" id="razaoSocial"
-                                   placeholder="{{$produtor->razaoSocial}}" name="razaoSocial">
+                            <input type="text" class="form-control" id="razaoSocial" name="razaoSocial" placeholder="Razao Social" value="{{Auth::user()->produtor->razaoSocial}}">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="cnpj">CNPJ</label>
-                                <input type="text" class="form-control" id="cnpj" data-mask="00.000.000/0000-00" name="cnpj" placeholder="{{$produtor->cnpj}}">
+                                <input type="text" class="form-control" id="cnpj" data-mask="00.000.000/0000-00" name="cnpj" placeholder="CNPJ" value="{{Auth::user()->produtor->cnpj}}">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="telefoneComercial">Telefone comercial</label>
                                 <input type="text" class="form-control" id="telefoneComercial"
-                                       placeholder="{{$produtor->telefone}}" name="telefoneComercial" data-mask="(00) 00000-0000">
+                                       placeholder="Telefone" value="{{Auth::user()->produtor->telefone}}" name="telefoneComercial" data-mask="(00) 00000-0000">
                             </div>
                         </div>
 
