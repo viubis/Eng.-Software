@@ -147,6 +147,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+
         /*
          * Package Service Providers...
          */
@@ -163,6 +164,8 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,
 
         \TeamPickr\DistanceMatrix\Frameworks\Laravel\DistanceMatrixServiceProvider::class,
+
+        Barryvdh\DomPDF\ServiceProvider::class,
     ],
 
     /*
@@ -214,6 +217,7 @@ return [
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
         'DistanceMatrix' => \TeamPickr\DistanceMatrix\Frameworks\Laravel\DistanceMatrix::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
     ],
 
     LaravelLegends\PtBrValidator\ValidatorProvider::class,

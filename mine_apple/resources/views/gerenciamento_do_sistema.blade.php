@@ -58,8 +58,8 @@
                                 <label for="listaRelatorio" class="pl-xl-5">Tipo de Relatório: </label>
                             </div>
                             <div class="form-group col-md-3 pl-0">
-                                <select multiple class="form-control" size="2" id="listaRelatorio" >
-                                    <option>Relatório 1</option>
+                                <select multiple class="form-control" size="2" id="listaRelatorio" onchange="location = this.value;" >
+                                    <option value="/relatorio/geral">Relatório Cadastros</option>
                                     <option>Relatório 2</option>
                                     <option>Relatório 3</option>
                                 </select>

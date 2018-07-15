@@ -83,6 +83,8 @@ Route::middleware(['auth'])->group(function () {
 
         Route::post('gerenciamento/consumidor', 'AdministradorController@banirConsumidor');
 
+        Route::get('relatorio/geral', 'AdministradorController@getRelatorioGeral');
+
     });
 
 
