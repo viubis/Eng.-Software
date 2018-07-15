@@ -84,83 +84,84 @@
                                                     <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
                                                     <div class="col"> <li><a href="#"><img src="images/star0.png" alt=""></a></li></div>
 
+                                                </div>
                                             </div>
-                                    </div>
 
+                                    </ul>
                             </div>
                             <br /><br />
 
-
-                                </ul>
 
                             </div>
 
                             <div class="container">
                                 <label class="Avaliacao" style="font-size: 19px">Avaliações:</label>
                             </div>
-                                <div class="container">
-                                    <div class="form-group col-md-4">
-                                        <ul class="star_reputacao">
-                                            <div class="starsreputacao">
-                                                <div class="row">
-                                                    <div class="col"> <li><a href="#"><img src="{{asset('images/star1.png')}}" alt=""></a></li> </div>
-                                                    <div class="col"> <li><a href="#"><img src="{{asset('images/star1.png')}}" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="{{asset('images/star1.png')}}" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="{{asset('images/star0.png')}}" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="{{asset('images/star0.png')}}" alt=""></a></li></div>
+                            <section class="format-section">
+                                    <div class="container espacamento">
+                                        <div class="form-group col-md-4">
+                                            <ul class="star_reputacao">
 
+                                                    <div class="row">
+                                                        <div class="col"> <li><a href="#"><img src="{{asset('images/star1.png')}}" alt=""></a></li> </div>
+                                                        <div class="col"> <li><a href="#"><img src="{{asset('images/star1.png')}}" alt=""></a></li></div>
+                                                        <div class="col"> <li><a href="#"><img src="{{asset('images/star1.png')}}" alt=""></a></li></div>
+                                                        <div class="col"> <li><a href="#"><img src="{{asset('images/star0.png')}}" alt=""></a></li></div>
+                                                        <div class="col"> <li><a href="#"><img src="{{asset('images/star0.png')}}" alt=""></a></li></div>
+
+                                                    </div>
+
+                                            </ul>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="dataAvaliacao" name="dataAvaliacao" placeholder="Data de avaliação"  disabled="disabled">
                                                 </div>
-                                            </div>
-                                        </ul>
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" id="dataAvaliacao" name="dataAvaliacao" placeholder="Data de avaliação"  disabled="disabled">
-                                            </div>
-
-                                    </div>
-                                </div>
-                            <label for="nomeCliente">Nome do cliente</label>
-                            <div class="form-group">
-                                    <input type="text" class="form-control" id="nomeCliente" name="nomeCliente" placeholder="Nome cliente"  disabled="disabled">
-                             </div>
-                             <label for="assinatura">Assinatura:</label>
-                             <div class="form-group">
-                                    <input type="text" class="form-control" name="produtosSelecionados" id="produtosSelecionados" placeholder="Produtos selecionados"  disabled="disabled">
-                             </div>
-                            </div>
-
-                             <div class="container">
-                                <div class="form-group col-md-4">  <ul class="star_reputacao">
-                                    <div class="starsreputacao">
-                                        <div class="row">
-                                            <div class="col"> <li><a href="#"><img src="{{asset('images/star1.png')}}" alt=""></a></li> </div>
-                                            <div class="col"> <li><a href="#"><img src="{{asset('images/star1.png')}}" alt=""></a></li></div>
-                                            <div class="col"> <li><a href="#"><img src="{{asset('images/star1.png')}}" alt=""></a></li></div>
-                                            <div class="col"> <li><a href="#"><img src="{{asset('images/star0.png')}}" alt=""></a></li></div>
-                                            <div class="col"> <li><a href="#"><img src="{{asset('images/star0.png')}}" alt=""></a></li></div>
 
                                         </div>
                                     </div>
-                                </ul>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="dataAvaliacao2" name="dataAvaliacao2" placeholder="Data de avaliação"  disabled="disabled">
+                                    <div class="form-group col-md-8">
+                                        <label for="nomeCliente">Nome do cliente</label>
+                                        <div class="form-group">
+                                                <input type="text" class="form-control" id="nomeCliente" name="nomeCliente" placeholder="Nome cliente"  disabled="disabled">
+                                         </div>
+                                         <label for="assinatura">Assinatura:</label>
+                                         <div class="form-group">
+                                                <input type="text" class="form-control" name="produtosSelecionados" id="produtosSelecionados" placeholder="Produtos selecionados"  disabled="disabled">
+                                         </div>
                                     </div>
-                             </div>
-                            </div>
-                            <label for="nomeCliente">Nome do cliente</label>
-                            <div class="form-group">
-                                    <input type="text" class="form-control" id="nomeCliente" name="nomeCliente" placeholder="Nome cliente" disabled="disabled">
-                             </div>
-                             <label for="assinatura">Assinatura:</label>
-                             <div class="form-group">
-                                    <input type="text" class="form-control"  name="produtosSelecionados2" id="produtosSelecionados2" placeholder="Produtos selecionados"  disabled="disabled">
-                             </div>
-                            </div>
+                            </section>
+                            <section class="format-section">
+                                 <div class="container espacamento">
+                                    <div class="form-group col-md-4">
+                                        <ul class="star_reputacao">
 
+                                                <div class="row">
+                                                    <div class="col"><li><a href="#"><img src="{{asset('images/star1.png')}}" alt=""></a></li></div>
+                                                    <div class="col"><li><a href="#"><img src="{{asset('images/star1.png')}}" alt=""></a></li></div>
+                                                    <div class="col"><li><a href="#"><img src="{{asset('images/star1.png')}}" alt=""></a></li></div>
+                                                    <div class="col"><li><a href="#"><img src="{{asset('images/star0.png')}}" alt=""></a></li></div>
+                                                    <div class="col"><li><a href="#"><img src="{{asset('images/star0.png')}}" alt=""></a></li></div>
+                                                </div>
+
+                                        </ul>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="dataAvaliacao2" name="dataAvaliacao2" placeholder="Data de avaliação"  disabled="disabled">
+                                        </div>
+                                 </div>
+                                </div>
+                                <div class="form-group col-md-8">
+                                    <label for="nomeCliente">Nome do cliente</label>
+                                    <div class="form-group">
+                                            <input type="text" class="form-control" id="nomeCliente" name="nomeCliente" placeholder="Nome cliente" disabled="disabled">
+                                     </div>
+                                     <label for="assinatura">Assinatura:</label>
+                                     <div class="form-group">
+                                            <input type="text" class="form-control"  name="produtosSelecionados2" id="produtosSelecionados2" placeholder="Produtos selecionados"  disabled="disabled">
+                                     </div>
+                                </div>
+
+                            </section>
 
                         </fieldset>
-
-
-
 
 
 
@@ -179,7 +180,7 @@
             </div>
         </div>
     </div>
-
+    </div>
 
 
 

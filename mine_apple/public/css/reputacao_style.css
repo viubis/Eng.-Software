@@ -523,7 +523,7 @@ section
 .logo_container
 {
     /*background-color: #000000;*/
-    height: 175px;
+    height: 95px;
 }
 .logo
 {
@@ -4013,4 +4013,23 @@ input.form-control textarea{
 
 .text-center#imagem{
     padding-top: 40px;
+}
+
+.star_reputacao{
+    display: inline-block;
+}
+
+.stars_reputacao{
+    margin-left: 0px;
+}
+
+.espacamento{
+    padding-left:0;
+}
+
+.format-section{
+
+    box-shadow: 1px 1px 1px 1px #cbcbcb;
+    padding: 1%;
+    margin-bottom: 15px;
 }
