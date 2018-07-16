@@ -154,6 +154,8 @@ class ConsumidorController extends Controller
         else{
             Cart::add($request->id, $request->nome, $request->quantidade, $request->preco, ['embalagem' => $request->embalagem]);
         }
+
+        return redirect()->route('carrinho');
     }
 
     /**
