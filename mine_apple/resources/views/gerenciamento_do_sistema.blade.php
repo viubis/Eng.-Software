@@ -106,7 +106,7 @@
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">>Verificar LOGs</button>
                         </div>
 
-                        
+
                     </div>
 
                     <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -119,11 +119,9 @@
                           </button>
                       </div>
                       <div class="modal-body">
-                        
-                        
                         <div class="row" align="center">
                             <!-- <div class="form-group col-md-4 pl-xl-5 pr-0" align="right"> -->
-                                
+
                                 <table class="table">
                                   <thead>
                                     <tr>
@@ -149,7 +147,7 @@
                       </table>
                   <!-- </div> -->
               </div>
-              
+
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
