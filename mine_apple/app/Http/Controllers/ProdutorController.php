@@ -81,7 +81,18 @@ class ProdutorController extends Controller
         $financas = new Financa();
         $financas->produtor_id = $produtor->usuario_id;
         $financas->save();
-         return redirect()->route('produtor');
+
+        $log = new Log;
+        $log->usuario_id = Auth::user()->id;
+        $log->operacao_id = 1;
+        $log->data = $data->toDateString();
+        $log->hora = $data->toTimeString();
+        $log->save();
+
+
+        return redirect()->route('produtor');
+
+
 
     }
 
@@ -99,6 +110,14 @@ class ProdutorController extends Controller
         $estados = Estado::all();
         $contas = Conta::where('produtor_id', '=', Auth::user()->id);
         $bancos = Banco::all();
+
+        $log = new Log;
+        $log->usuario_id = Auth::user()->id;
+        $log->operacao_id = 2;
+        $log->data = $data->toDateString();
+        $log->hora = $data->toTimeString();
+        $log->save();
+
         return view('dados_cadastrais_de_produtor', compact('endereco', 'contas','bancos', 'cidades', 'estados'));
     }
 
@@ -161,6 +180,13 @@ class ProdutorController extends Controller
         $foto->path = "storage/produto_imagens/" . $nomeImagem;
         $foto->save();
 
+        $log = new Log;
+        $log->usuario_id = Auth::user()->id;
+        $log->operacao_id = 6;
+        $log->data = $data->toDateString();
+        $log->hora = $data->toTimeString();
+        $log->save();
+
 
         return redirect()->route('produto.cadastrar');
     }
@@ -175,6 +201,16 @@ class ProdutorController extends Controller
 
         if($produto == null || $produto->produtor_id != Auth::user()->produtor->usuario_id)
             return redirect()->route('index');
+
+        $log = new Log;
+        $log->usuario_id = Auth::user()->id;
+        $log->operacao_id = 7;
+        $log->data = $data->toDateString();
+        $log->hora = $data->toTimeString();
+        $log->save();
+
+
+        return redirect()->route('produto.cadastrar');
 
 
         return view('alterar_dados_produtos')->with('produto', $produto);

@@ -18,7 +18,7 @@ Route::get('/produto/{id}', 'PublicoController@getDetalhesProduto');
 Route::get('/pesquisa_produtos', 'PublicoController@getPesquisaTodosProdutos');
 Route::get('/pesquisa_produtos/{categoria}', 'PublicoController@getPesquisaCategoriasProdutos')->where('categoria', '[0-7]+');
 
-Route::get('/carrinho','PublicoController@getCarrinhoCompras');
+Route::get('/carrinho','PublicoController@getCarrinhoCompras')->name('carrinho');
 
 
 //Rotas para facebook socialite -----------------------------------------------------------

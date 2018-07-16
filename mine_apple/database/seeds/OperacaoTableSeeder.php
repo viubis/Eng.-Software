@@ -14,28 +14,38 @@ class OperacaoTableSeeder extends Seeder
     {
         Operacao::create([
     		'id' => 1,
-    		'nome' => 'Cadastro'
+    		'nome' => 'Geração Cadastro'
     	]);
 
+        Operacao::create([
+            'id' => 2,
+            'nome' => 'Alteração Cadastro'
+        ]);
+
     	Operacao::create([
-    		'id' => 2,
+    		'id' => 3,
     		'nome' => 'Compra'
     	]);
 
     	Operacao::create([
-    		'id' => 3,
+    		'id' => 4,
     		'nome' => 'Banimento administrador'
     	]);
 
     	Operacao::create([
-    		'id' => 4,
+    		'id' => 5,
     		'nome' => 'Banimento consumidor'
     	]);
 
     	Operacao::create([
-    		'id' => 5,
+    		'id' => 6,
     		'nome' => 'Adição de produto'
     	]);
+
+        Operacao::create([
+            'id' => 7,
+            'nome' => 'Alteração de produto'
+        ]);
 
     }
 }
