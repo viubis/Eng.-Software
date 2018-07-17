@@ -166,6 +166,8 @@ return [
         \TeamPickr\DistanceMatrix\Frameworks\Laravel\DistanceMatrixServiceProvider::class,
 
         Barryvdh\DomPDF\ServiceProvider::class,
+
+        Spatie\Backup\BackupServiceProvider::class,
     ],
 
     /*

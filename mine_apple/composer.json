@@ -16,6 +16,7 @@
         "laravel/socialite": "^3.0",
         "laravel/tinker": "^1.0",
         "laravellegends/pt-br-validator": "^5.1",
+        "spatie/laravel-backup": "^5.9",
         "teampickr/php-google-maps-distance-matrix": "^0.2.0"
     },
     "require-dev": {
