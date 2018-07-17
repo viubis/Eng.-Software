@@ -109,6 +109,13 @@ class ConsumidorController extends Controller
 
         $cartao->save();
 
+        $log = new Log;
+        $log->usuario_id = Auth::user()->id;
+        $log->operacao_id = 1;
+        $log->data = $data->toDateString();
+        $log->hora = $data->toTimeString();
+        $log->save();
+
         return redirect()->route('consumidor');
 
     }
@@ -123,6 +130,13 @@ class ConsumidorController extends Controller
        $consumidor->fill($request->all()->save());//Salva os dados
 
        /*return redirect()->route('alterar_consumidor', $consumidor->id)->with('info', 'Dados Alterados com sucesso');*/
+
+       $log = new Log;
+       $log->usuario_id = Auth::user()->id;
+       $log->operacao_id = 2;
+       $log->data = $data->toDateString();
+       $log->hora = $data->toTimeString();
+       $log->save();
    }
 
     /**
@@ -154,6 +168,8 @@ class ConsumidorController extends Controller
         else{
             Cart::add($request->id, $request->nome, $request->quantidade, $request->preco, ['embalagem' => $request->embalagem]);
         }
+
+        return redirect()->route('carrinho');
     }
 
     /**
@@ -336,6 +352,13 @@ class ConsumidorController extends Controller
         $compra->hora = $data->toTimeString();
         $compra->frete = 10;
         $compra->save();
+
+        $log = new Log;
+        $log->usuario_id = Auth::user()->id;
+        $log->operacao_id = 3;
+        $log->data = $data->toDateString();
+        $log->hora = $data->toTimeString();
+        $log->save();
 
     }
 

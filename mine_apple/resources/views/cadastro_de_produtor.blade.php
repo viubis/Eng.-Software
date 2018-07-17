@@ -206,13 +206,30 @@
 
                                 <div class="form-group">
                                     <input id="contrato" name="contrato" type="checkbox" value="false">
-                                    <label for="contrato">Li e aceito os termos de uso.</label>
+                                    <label for="contrato">Li e aceito os <a data-toggle="modal" data-target="#exampleModalLong" style="color: #0d82d3">termos de uso</a>.</label>
                                 </div>
                                 <button type="button" class="btn btn-previous">Anterior</button>
                                 <button type="submit" class="btn">Cadastre-me!</button>
                             </div>
                         </fieldset>
-
+                        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle"><b>Termos de uso</b></h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        @include('layouts.termos_de_uso')
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -248,6 +265,7 @@
 <script src="{{asset('js/jquery.backstretch.min.js')}}"></script>
 <script src="{{asset('js/retina-1.1.0.min.js')}}"></script>
 <script src="{{asset('js/script_tela_cadastro_produtor.js')}}"></script>
+<script src="{{asset('js/termos_de_uso.js')}}"></script>
 <script src="{{asset('js/validator.min.js')}}"></script>
 <script src="{{asset('plugins/jquery-plugin-mask/jquery.mask.js')}}"></script>
 </body>
