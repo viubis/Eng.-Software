@@ -13,6 +13,7 @@ use mine_apple\Estado;
 use mine_apple\Cidade;
 use mine_apple\Conta;
 use mine_apple\Banco;
+use mine_apple\Log;
 use mine_apple\Produtor;
 use mine_apple\Endereco;
 use mine_apple\Http\Requests\FormProdutor;
@@ -101,8 +102,8 @@ class ProdutorController extends Controller
      * @param Request $request
      * @return string
      */
-    public function alterarProdutor(FormProdutor $request) {
-        // dd($request->all());
+    public function alterarProdutor(Request $request) {
+//        dd($request->all());
         $dados = $request->all();
         Auth::user()->produtor->update($dados);
         $endereco = Endereco::where('id', '=', Auth::user()->produtor->endereco_id)->first();
