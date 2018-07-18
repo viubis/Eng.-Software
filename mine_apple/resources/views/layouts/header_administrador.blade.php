@@ -56,27 +56,11 @@
 
 
                     <!-- Search  6 col 12 ord 2 order 3-->
-                    <div class="col-lg-5 col-sm-6 text-lg-left ">
-                        <div class="header_search">
-                            <div class="header_search_content">
-
-                                    <form role="" method="" action="" class="header_search_form clearfix">
-                                        @csrf
-                                        <!--<input type="search" required="required" class="header_search_input"
-                                               placeholder="Pesquisar produtos..." name="busca">-->
-                                        <div class="custom_dropdown">
-                                            <div class="custom_dropdown_list">
-                                                    <span class="custom_dropdown_placeholder clc"></span>
-
-                                                <ul class="custom_list clc">
-
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </form>
-
-                            </div>
-                        </div>
+                    <div class="col-lg-1 col-sm-1 text-lg-left ">
+                        <!--<input type="search" required="required" class="header_search_input"
+                                       placeholder="Pesquisar produtos..." name="busca">-->
+                        <span class="custom_dropdown_placeholder "></span>
+                        <ul class="custom_list "></ul>
                     </div>
 
                 </div>
