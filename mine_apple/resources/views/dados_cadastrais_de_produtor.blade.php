@@ -51,7 +51,7 @@
     <div class="top-content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 offset-lg-1">
+                <div class="col-lg-6 offset-lg-3" style="box-shadow: 1px 1px 5px 0px #d6d6d6; padding: 20px">
                     <div class="contact_form_title">Meus dados</div>
                     <form action="{{route('produtor.alterar')}}" method="POST">
                         @csrf
