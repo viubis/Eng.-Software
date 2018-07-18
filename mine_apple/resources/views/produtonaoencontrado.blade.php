@@ -12,9 +12,10 @@
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/animate.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/slick-1.8.0/slick.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/nenhum_produto_cadastrado_style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/pesquisa_de_produtos_style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/header_style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/responsive.css')}}">
+
 
 
     <!-- Favicon and touch icons -->
@@ -32,71 +33,63 @@
 
     <!-- Header -->
     @if(Auth::check())
-        @if(Auth::user()->consumidor != null)
-            @include('layouts.header_consumidor')
-        @elseif(Auth::user()->produtor != null)
-            @include('layouts.header_produtor')
-        @elseif(Auth::user()->administrador != null)
-            @include('layouts.header_administrador')
-        @endif
+    @if(Auth::user()->consumidor != null)
+    @include('layouts.header_consumidor')
+    @elseif(Auth::user()->produtor != null)
+    @include('layouts.header_produtor')
+    @elseif(Auth::user()->administrador != null)
+    @include('layouts.header_administrador')
+    @endif
     @else
 
-        @include('layouts.header_usuario')
+    @include('layouts.header_usuario')
     @endif
 
-    <main>
-        <section>
-            <div class="top-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 row">
-                            <div class="contact_form_title">Meus Produtos</div>
-                        </div>
-                        <div class="confimacao col-md-10 offset-lg-1 row">
-                            <div class="col-md-12">
-                                <img src="images/naoencontrado2.png" width="80" name="naocadastrado" >
-                                <label class="obrigado">Ainda não existem produtos cadastrados. Para cadastrar <a href=""><u>Clique Aqui</u></a>. </label>
-                                <label></label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-    </main>
+   <div class="top-content">
+       <div class="container">
+           <div class="row">
+               <div class="col-lg-12 ">
+                   <!--<div class="contact_form_title">Detalhes da Assinatura</div>-->
+                   <h1 class="h1 page-title" style="font-size:16px">Produto não encontrado...</h1>
+                   <div class="pb-0" id="line"></div>
+               </div>
+           </div>
+       </div>
+   </div>
 
-    @include('layouts.footer')
 
-    <!-- Copyright -->
+   @include('layouts.footer')
 
-    <div class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col">
+        <!-- Copyright -->
 
-                    <div
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+
+                        <div
                             class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
-                        <div class="copyright_content">
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                            Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
-                                                                                      aria-hidden="true"></i> pela <a
-                                href="#" target="_blank">Weiche Technologie</a>
-                        </div>
-                        <div class="logos ml-sm-auto">
-                            <ul class="logos_list">
-                                <li><a href="#"><img src="{{asset('images/logos_1.png')}}" alt=""></a></li>
-                                <li><a href="#"><img src="{{asset('images/logos_2.png')}}" alt=""></a></li>
-                                <li><a href="#"><img src="{{asset('images/logos_3.png')}}" alt=""></a></li>
-                                <li><a href="#"><img src="{{asset('images/logos_4.png')}}" alt=""></a></li>
-                            </ul>
+                            <div class="copyright_content">
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                                Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
+                                                                                          aria-hidden="true"></i> pela <a
+                                    href="#" target="_blank">Weiche Technologie</a>
+                            </div>
+                            <div class="logos ml-sm-auto">
+                                <ul class="logos_list">
+                                    <li><a href="#"><img src="{{asset('images/logos_1.png')}}" alt=""></a></li>
+                                    <li><a href="#"><img src="{{asset('images/logos_2.png')}}" alt=""></a></li>
+                                    <li><a href="#"><img src="{{asset('images/logos_3.png')}}" alt=""></a></li>
+                                    <li><a href="#"><img src="{{asset('images/logos_4.png')}}" alt=""></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
 <script src="{{asset('css/bootstrap4/popper.js')}}"></script>
@@ -110,6 +103,9 @@
 <script src="{{asset('plugins/slick-1.8.0/slick.js')}}"></script>
 <script src="{{asset('plugins/easing/easing.js')}}"></script>
 <script src="{{asset('js/custom.js')}}"></script>
+
+
+
 </body>
 
 </html>

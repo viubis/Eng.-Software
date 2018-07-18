@@ -13,7 +13,9 @@
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/animate.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/slick-1.8.0/slick.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/main_styles.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/header_style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/responsive.css')}}">
+
 
 
     <link rel="shortcut icon" href="{{asset('images/favicon.png')}}">

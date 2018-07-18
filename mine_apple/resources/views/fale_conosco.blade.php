@@ -10,7 +10,9 @@
     <link href="{{asset('plugins/fontawesome-free-5.0.1/css/fontawesome-all.css')}}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="{{asset('css/fale_conosco_style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/fale_conosco_responsive.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/header_style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/responsive.css')}}">
+
 
     <!-- Favicon and touch icons -->
     <link rel="shortcut icon" href="{{asset('images/favicon.png')}}">
