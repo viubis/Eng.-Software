@@ -104,17 +104,13 @@
    <div class="top-content">
        <div class="container">
            <div class="row">
-               <div class="col-md-10 offset-1 ">
+               <div class="col-md-10 offset-md-1 col-xs-8 ">
                    <!--<div class="contact_form_title">Detalhes da Assinatura</div>-->
                    <h3 class="h2 page-title text-center" data-reactid="30" style="margin-top:15px">Definição de assinatura</h3>
-                   <div class="pb-1 col-8 offset-2" id="line"></div>
-               </div>
-           </div>
-       </div>
-   </div>
+                   <div class="pb-1 col-md-8 offset-md-2 col-xs-6" id="line"></div>
 
 
-   <div class="containerInfosProdutos">
+
         @foreach($itens as $item)
        <div class="container">
            <div class="row" id="backColor">
@@ -245,11 +241,11 @@
 
 
     @php $consumidor_enderecos_atuais =  $consumidor_enderecos->where('consumidor_id', '=', Auth::user()->id) @endphp
-    <div class="card col-md-6 offset-3" >
+    <div class="card col-md-6 offset-md-3 col-xs-3" >
             <div class="card-body">
               <h4 class="card-title">Endereço de entrega:</h4>
               <div  class="pb-0" id="line"> </div>
-              <div class="form-group col-md-12">
+              <div class="form-group col-md-12 col-xs-8">
                 <label for="listaEndereco">Meus endereços </label>
                    <select multiple class="form-control" size="2" id="listaEndereco">
                         @foreach($consumidor_enderecos_atuais as $i)
@@ -295,6 +291,10 @@
 
 </div>
 
+
+</div>
+           </div>
+       </div>
    </div>
 </div>
 
