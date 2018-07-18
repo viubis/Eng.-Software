@@ -3,8 +3,8 @@
 require 'VerificadorCartao.php';
 Use verificador\VerificadorCartao;
 
-$host = "127.0.0.1";
-$port = 20205;
+$host = "192.168.1.6";
+$port = 12345;
 set_time_limit(0);
 
 $sock = socket_create(AF_INET, SOCK_STREAM, 0);
