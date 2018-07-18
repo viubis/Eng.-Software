@@ -48,83 +48,87 @@
                 <div class="col-lg-10 offset-lg-1">
                     <h1 class="h1 page-title pt-3" data-reactid="30">Carrinho de compras</h1>
                     <div class="pb-0 line"></div>
-
+                @if(count($itens)!=0)
                     <!-- ========================= SECTION CONTENT ========================= -->
-                    <section class="section-content bg padding-y border-top">
+                        <section class="section-content bg padding-y border-top">
                             <div class="row">
                                 <main class="col-sm-9">
-                                <form action="/remover_carrinho" method="post">
-                                    @csrf
-                                    <div class="card">
-                                        <table class="table table-hover shopping-cart-wrap">
-                                            <thead class="text-muted">
-                                            <tr>
-                                                <th scope="col">Produto</th>
-                                                <th scope="col" width="120">Quantidade</th>
-                                                <th scope="col" width="120">Valor</th>
-                                                <th scope="col" class="text-right" width="150"></th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            @foreach($itens as $item)
-                                            <tr>
-                                                <input type="hidden" name="rowId" value="{{$item->rowId}}">
-                                                @php
-                                                    $foto = \mine_apple\Foto::where('produto_id', '=', $item->id)->first();
-                                                @endphp
-                                                <td>
-                                                    <figure class="media">
-                                                        <div class="img-wrap" style="float:left; height: 150px; width: 150px"><img src="{{asset($foto->path)}}"
-                                                                                   class="img-thumbnail img-sm"
-                                                            >
-                                                        </div>
-                                                        <figcaption class="media-body pl-2">
-                                                            <h6 class="title text-truncate">{{$item->name}}</h6>
-                                                            <dl class="dlist-inline small">
-                                                                @php
-                                                                    $produto = \mine_apple\Produto::where('id','=',$item->id)->first();
-                                                                    $produtor = \mine_apple\Produtor::where('usuario_id', '=', $produto->produtor_id)->first();
-                                                                @endphp
-                                                                <dt>Produtor:</dt>
-                                                                <dd>{{$produtor->nomeFantasia}}</dd>
-                                                            </dl>
-                                                        </figcaption>
-                                                    </figure>
-                                                </td>
-                                                <td>
-                                                    <label class="sr-only" for="quantidade">Quantidade</label>
-                                                    <input type="number" class="ml-3" id="quantidade" placeholder="1" min="1" style="width: 50px">
-                                                </td>
-                                                <td>
-                                                    @php
-                                                        $embalagem = \mine_apple\Embalagem::where('id', '=', $item->options->embalagem)->first();
-                                                    @endphp
-                                                    <div class="price-wrap">
-                                                        <var class="price">R${{$item->price}}</var>
-                                                        <small class="text-muted">(por {{$embalagem->tipo}}) </small>
-                                                    </div> <!-- price-wrap .// -->
-                                                </td>
-                                                <td class="text-right">
-                                                    <button class="btn-sm btn-primary mt-4"
-                                                    style="background-color: rgba(0,0,0,0); border: none;
+                                    <form action="/remover_carrinho" method="post">
+                                        @csrf
+                                        <div class="card">
+                                            <table class="table table-hover shopping-cart-wrap">
+                                                <thead class="text-muted">
+                                                <tr>
+                                                    <th scope="col">Produto</th>
+                                                    <th scope="col" width="120">Quantidade</th>
+                                                    <th scope="col" width="120">Valor</th>
+                                                    <th scope="col" class="text-right" width="150"></th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                @foreach($itens as $item)
+                                                    <tr>
+                                                        <input type="hidden" name="rowId" value="{{$item->rowId}}">
+                                                        @php
+                                                            $foto = \mine_apple\Foto::where('produto_id', '=', $item->id)->first();
+                                                        @endphp
+                                                        <td>
+                                                            <figure class="media">
+                                                                <div class="img-wrap"
+                                                                     style="float:left; height: 150px; width: 150px">
+                                                                    <img src="{{asset($foto->path)}}"
+                                                                         class="img-thumbnail img-sm"
+                                                                    >
+                                                                </div>
+                                                                <figcaption class="media-body pl-2">
+                                                                    <h6 class="title text-truncate">{{$item->name}}</h6>
+                                                                    <dl class="dlist-inline small">
+                                                                        @php
+                                                                            $produto = \mine_apple\Produto::where('id','=',$item->id)->first();
+                                                                            $produtor = \mine_apple\Produtor::where('usuario_id', '=', $produto->produtor_id)->first();
+                                                                        @endphp
+                                                                        <dt>Produtor:</dt>
+                                                                        <dd>{{$produtor->nomeFantasia}}</dd>
+                                                                    </dl>
+                                                                </figcaption>
+                                                            </figure>
+                                                        </td>
+                                                        <td>
+                                                            <label class="sr-only" for="quantidade">Quantidade</label>
+                                                            <input type="number" class="ml-3" id="quantidade"
+                                                                   placeholder="1" min="1" style="width: 50px">
+                                                        </td>
+                                                        <td>
+                                                            @php
+                                                                $embalagem = \mine_apple\Embalagem::where('id', '=', $item->options->embalagem)->first();
+                                                            @endphp
+                                                            <div class="price-wrap">
+                                                                <var class="price">R${{$item->price}}</var>
+                                                                <small class="text-muted">(por {{$embalagem->tipo}})
+                                                                </small>
+                                                            </div> <!-- price-wrap .// -->
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <button class="btn-sm btn-primary mt-4"
+                                                                    style="background-color: rgba(0,0,0,0); border: none;
                                                     color: #0d82d3;"
-                                                    type="submit">Remover produto
-                                                    </button>
-                                                    {{--<a href="" class="btn btn-outline-danger"> × Remover</a>--}}
-                                                </td>
-                                            </tr>
-                                            @endforeach
-                                            </tbody>
-                                        </table>
-                                    </div> <!-- card.// -->
-                                </form>
+                                                                    type="submit">Remover produto
+                                                            </button>
+                                                            {{--<a href="" class="btn btn-outline-danger"> × Remover</a>--}}
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div> <!-- card.// -->
+                                    </form>
                                 </main> <!-- col.// -->
                                 <aside class="col-sm-3" style="background-color:#f0f0f0;">
                                     <h4 class="pt-3">Resumo da compra</h4>
                                     <hr>
                                     {{--<p class="alert alert-success">Add USD 5.00 of eligible items to your order to--}}
-                                        {{--qualify for FREE--}}
-                                        {{--Shipping. </p>--}}
+                                    {{--qualify for FREE--}}
+                                    {{--Shipping. </p>--}}
                                     <dl class="dlist-align">
                                         <dt>Sub-total</dt>
                                         <dd class="text-right">R${{$subtotal}}</dd>
@@ -140,37 +144,55 @@
                                 </aside> <!-- col.// -->
                             </div>
 
-                    </section>
-                    <!-- ========================= SECTION CONTENT END// ========================= -->
-                    <div class="pt-3">
-                        <div class="card w-auto col-md-4 pl-0 pr-0">
-                            <div class="card-body">
-                                <h4 class="card-title">Calcule o frete:</h4>
-                                <div class="pb-0 line"></div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-9">
-                                        <label class="sr-only" for="CEP">CEP </label>
-                                        <input type="text" placeholder="Informe o seu cep..."
-                                               class="form-first-name form-control" id="CEP" name="cep">
+                        </section>
+                        <!-- ========================= SECTION CONTENT END// ========================= -->
+                        <div class="pt-3">
+                            <div class="card w-auto col-md-4 pl-0 pr-0">
+                                <div class="card-body">
+                                    <h4 class="card-title">Calcule o frete:</h4>
+                                    <div class="pb-0 line"></div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-9">
+                                            <label class="sr-only" for="CEP">CEP </label>
+                                            <input type="text" placeholder="Informe o seu cep..."
+                                                   class="form-first-name form-control" id="CEP" name="cep">
+                                        </div>
+                                        <div class="form-group col-md-1" align="center">
+                                            <button type="submit" class="btn-sm btn-primary mt-1"
+                                                    style="background-color: #08c8b0; border: none;">Calcular
+                                            </button>
+                                        </div>
                                     </div>
-                                    <div class="form-group col-md-1" align="center">
-                                        <button type="submit" class="btn-sm btn-primary mt-1"
-                                                style="background-color: #08c8b0; border: none;">Calcular
-                                        </button>
-                                    </div>
+                                    <label>Valor do frete: </label>
+                                    <label class="ml-1">R$ 00,00</label>
                                 </div>
-                                <label>Valor do frete: </label>
-                                <label class="ml-1">R$ 00,00</label>
                             </div>
-                         </div>
-                    </div>
-                    <div class="col-md-12 mb-3" align="center">
-                        <button type="submit" class="btn btn-primary" href="{{url('/realizacao_assinatura')}}">Finalizar</button>
-                    </div>
+                        </div>
+                        <div class="col-md-12 mb-3" align="center">
+                            <button type="submit" class="btn btn-primary" href="{{url('/realizacao_assinatura')}}">
+                                Finalizar
+                            </button>
+                        </div>
+                    @else
+                        <div class="container">
+                            <div class="jumbotron">
+                                <div class="text-center"><i class="far fa-frown fa-5x" style="color: #08c8b0;"></i></div>
+                                <h1 class="text-center">Poxa vida!</h1>
+                                <h1 class="text-center" style="font-size: 13px"> Parece que você ainda não adicionou nenhum produto ao
+                                seu carrinho. </h1>
+
+
+                                <p class="text-center">Tente adicionar algo e voltar novamente.</p>
+                                <p class="text-center"><a class="btn btn-primary" style="background-color: #08c8b0; border: none;" href="{{url("/")}}"><i class="fa fa-home"></i>
+                                        Continuar comprando</a></p>
+                            </div>
+                        </div>
+                    @endif
+
+                </div>
             </div>
         </div>
     </div>
-</div>
 
     <!-- Footer -->
 
