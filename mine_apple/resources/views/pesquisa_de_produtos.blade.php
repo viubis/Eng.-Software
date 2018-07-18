@@ -54,6 +54,7 @@
                         @endif</div>
                     <div class="pb-3" id="line"></div>
 
+                @if(count($produtos)!=0)
                     @foreach($produtos as $produto)
                         @php
                             $foto = $fotos->where('produto_id', '=', $produto->id)->first();
@@ -101,6 +102,29 @@
                             </form>
                         </div>
                     @endforeach
+                @else
+                        <div class="container">
+                            <div class="jumbotron">
+                                <div class="text-center"><i class="far fa-frown fa-5x" style="color: #08c8b0;"></i></div>
+                                <h1 class="text-center">Poxa vida!</h1>
+                                <h1 class="text-center" style="font-size: 13px"> Infelizmente não encontramos
+                                @if(isset($busca))
+                                    o produto que você solicitou.
+                                @else
+                                    produtos na categoria que você escolheu.
+                                @endif
+                                </h1>
+
+
+                                <p class="text-center">Tente buscar de uma forma diferente, ou volte mais tarde.
+                                    <br/>
+                                    Pode ser que ele seja cadastrado a venda por outro produtor!
+                                </p>
+                                <p class="text-center"><a class="btn btn-primary" style="background-color: #08c8b0; border: none;" href="{{url("/")}}"><i class="fa fa-home"></i>
+                                        Continuar comprando</a></p>
+                            </div>
+                        </div>
+                @endif
                 </div>
             </div>
         </div>
