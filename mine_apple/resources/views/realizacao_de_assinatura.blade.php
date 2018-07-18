@@ -13,7 +13,9 @@
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/animate.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/slick-1.8.0/slick.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/realizacao_de_assinatura_style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/header_style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/responsive.css')}}">
+
 
 
     <!-- Favicon and touch icons -->
@@ -102,10 +104,10 @@
    <div class="top-content">
        <div class="container">
            <div class="row">
-               <div class="col-lg-12 ">
+               <div class="col-md-10 offset-1 ">
                    <!--<div class="contact_form_title">Detalhes da Assinatura</div>-->
-                   <h1 class="h1 page-title" data-reactid="30">Definição de assinatura</h1>
-                   <div class="pb-0" id="line"></div>
+                   <h3 class="h2 page-title text-center" data-reactid="30" style="margin-top:15px">Definição de assinatura</h3>
+                   <div class="pb-1 col-8 offset-2" id="line"></div>
                </div>
            </div>
        </div>
@@ -229,21 +231,21 @@
                             </div>
 
                            </fieldset>
-                       
+                       </form>
                    </div>
                </div>
+           </div>
                <div class="pb-0" id="line"></div>
            </div>
-       </div>
-   </div>
+
    @endforeach
 
-   <div class="containerInfosProdutos">
+
    <div class="form-row" id="espac2">
 
 
     @php $consumidor_enderecos_atuais =  $consumidor_enderecos->where('consumidor_id', '=', Auth::user()->id) @endphp
-    <div class="card w-50" style="margin-left:+100px">
+    <div class="card col-md-6 offset-3" >
             <div class="card-body">
               <h4 class="card-title">Endereço de entrega:</h4>
               <div  class="pb-0" id="line"> </div>
@@ -261,7 +263,7 @@
                  </select>
 
             </div>
-            <a href="/consumidor/cadastrar_endereco">Adicionar endereço</a>
+            <a style="margin-left:10px" href="/consumidor/cadastrar_endereco">Adicionar endereço</a>
             </div>
             <div class="card-body">
                 <h4 class="card-title">Cartões:</h4>
@@ -282,22 +284,22 @@
                     placeholder="Valor..."
                     class="form-first-name form-control" name="codSeguranca" id="codSeguranca">
                 </div>
-              <A href="/consumidor/adicionar_cartao">Adicionar cartão</A> 
+              <a style="margin-left:10px" href="/consumidor/adicionar_cartao">Adicionar cartão</a>
               </div>
+        <div class="col-md-12 mb-3 text-center">
+            <button type="submit" class="btn btn-primary">Finalizar</button>
+        </div>
           </div>
 
 
 
 </div>
 
-
-    <div class="col-md-12 mb-3">
-        <button type="submit" class="btn btn-primary">Finalizar</button>
-    </div>
-
-
+   </div>
 </div>
-</form>
+
+
+
 
 
 
