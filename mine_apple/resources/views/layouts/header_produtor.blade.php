@@ -54,8 +54,37 @@
                         </div>
                     </div>
 
+                    <!-- Search  6 col 12 ord 2 order 3-->
+                    <div class="col-lg-5 col-sm-6 text-lg-left ">
+                        <div class="header_search">
+                            <div class="header_search_content">
 
-                    <!-- Wishlist -->
+                                <form role="" method="" action="" class="header_search_form clearfix">
+                                @csrf
+                                <!--<input type="search" required="required" class="header_search_input"
+                                               placeholder="Pesquisar produtos..." name="busca">-->
+                                    <div class="custom_dropdown">
+                                        <div class="custom_dropdown_list">
+                                            <span class="custom_dropdown_placeholder clc"></span>
+
+                                            <ul class="custom_list clc">
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    <!-- Wishlist -->
                   <!--  <div class="col-lg-8 col-3 order-lg-3 order-2 text-lg-left text-right">
                         <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
                             <!-- Icone usuário logado -->
@@ -71,10 +100,10 @@
                                 </div>
                             </div> --
                         </div>
-                    </div>-->
+                    </div>
                 </div>
              </div>
-        </div>
+        </div>-->
 
 
         <!-- Main Navigation -->

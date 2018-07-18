@@ -851,3 +851,9 @@
 
 	}
 }
+
+@media only screen and (min-width: 991px) {
+	.logo_container{
+		height: 95px;
+	}
+}

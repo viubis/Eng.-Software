@@ -17,7 +17,7 @@
                                                 <i style="color: #08c8b0;" class="fa fa-user-circle fa-2x"></i>
                                             </div>
                                             <div class="col-md-4">
-                                                <a style="font-size: 13px" href="#">{{Auth::user()->administrador->nome}} <span
+                                                <a style="font-size: 13px" href="{{url("")}}">{{Auth::user()->administrador->nome}} <span
                                                     ></span></a>
                                             </div>
                                             <div class="col-md-1">
@@ -50,26 +50,35 @@
                     <!-- Logo -->
                    <div class="col-lg-12 col-xs-12 col-sm-12 pt-3 text-center clearfix ">
                         <div class="logo_container  ">
-                            <div class="logo_icon text-center"><img src="{{asset('images/logoSite2.png')}}" alt=""></div>
+                            <div class="logo_icon text-center"><a href="{{url("/")}}"><img src="{{asset('images/logoSite2.png')}}" alt=""></a></div>
                         </div>
                     </div>
 
-                    <!-- Wishlist --
-                    <div class="col-lg-8 col-3 order-lg-3 order-2 text-lg-left text-right">
-                        <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
-                            <!-- Icone usuário logado -->
-                            <!-- <div class="cart">
-                                <div class="cart_container d-flex flex-row align-items-center justify-content-end">
-                                    <div class="cart_icon">
-                                        <i class="fa fa-user-circle fa-4x" style="color: #08c8b0 "></i>
-                                    </div>
-                                    <div class="cart_content">
-                                        <div class="cart_text"><a href="#">Bem-vindo</a></div>
-                                    </div>
-                                </div>
+
+                    <!-- Search  6 col 12 ord 2 order 3-->
+                    <div class="col-lg-5 col-sm-6 text-lg-left ">
+                        <div class="header_search">
+                            <div class="header_search_content">
+
+                                    <form role="" method="" action="" class="header_search_form clearfix">
+                                        @csrf
+                                        <!--<input type="search" required="required" class="header_search_input"
+                                               placeholder="Pesquisar produtos..." name="busca">-->
+                                        <div class="custom_dropdown">
+                                            <div class="custom_dropdown_list">
+                                                    <span class="custom_dropdown_placeholder clc"></span>
+
+                                                <ul class="custom_list clc">
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </form>
+
                             </div>
-                        </div> --
-                    </div>-->
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
