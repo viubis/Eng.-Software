@@ -22,7 +22,11 @@ class DatabaseSeeder extends Seeder
             FotoTableSeeder::class,
             CartaoTableSeeder::class,
             OperacaoTableSeeder::class,
-            LogTableSeeder::class
+            LogTableSeeder::class,
+            CompraTableSeeder::class,
+            AssinaturaTableSeeder::class,
+            AssinaturaProdutoTableSeeder::class,
+            AvaliacaoTableSeeder::class
         ]);
 
     }
