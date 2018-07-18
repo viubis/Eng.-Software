@@ -81,8 +81,8 @@ class AssinaturaController
      */
     public function verificarCartao($infos)
     {
-        $host = "127.0.0.1";
-        $port = 20205;
+        $host = env('HOST');
+        $port = env('PORTA');
         $sock = socket_create(AF_INET, SOCK_STREAM, 0);
         socket_connect($sock, $host, $port);
         socket_write($sock, $infos, strlen($infos));
