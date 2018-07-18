@@ -50,7 +50,7 @@
     <div class="top-content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 offset-lg-1">
+                <div class="col-md-8 offset-md-2 col-lg-8 offset-lg-2">
                     <div class="contact_form_title">Minha reputação</div>
                     <div  class="pb-0" id="line"></div>
                     <div class="form-group">
@@ -74,16 +74,16 @@
 
                             <div class="form-row" id="espac2">
 
-                                    <label class="Avaliacao" style="font-size: 25px">Avaliação média com base nos clientes: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                                    <div class="form-group col-md-4">
+                                    <label class="Avaliacao" style="font-size: 19px">Avaliação média com base nos clientes:</label>
+                                    <div class="form-group col-md-12 offset-md-0 col-lg-5 offset-lg-0 ">
                                     <ul class="star_reputacao">
-                                            <div class="starsreputacao">
+                                            <div class="">
                                                 <div class="row">
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li> </div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star0.png" alt=""></a></li></div>
+                                                    <div class="col"> <li><a href="#"><img src="{{asset('images/star1.png')}}" alt=""></a></li> </div>
+                                                    <div class="col"> <li><a href="#"><img src="{{asset('images/star1.png')}}" alt=""></a></li></div>
+                                                    <div class="col"> <li><a href="#"><img src="{{asset('images/star1.png')}}" alt=""></a></li></div>
+                                                    <div class="col"> <li><a href="#"><img src="{{asset('images/star1.png')}}" alt=""></a></li></div>
+                                                    <div class="col"> <li><a href="#"><img src="{{asset('images/star0.png')}}" alt=""></a></li></div>
 
                                                 </div>
                                             </div>
@@ -100,7 +100,7 @@
                             </div>
                             <section class="format-section">
                                     <div class="container espacamento">
-                                        <div class="form-group col-md-4">
+                                        <div class="form-group col-md-8 col-lg-6">
                                             <ul class="star_reputacao">
 
                                                     <div class="row">
@@ -119,7 +119,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="form-group col-md-8">
+                                    <div class="form-group col-md-10 col-lg-10">
                                         <label for="nomeCliente">Nome do cliente</label>
                                         <div class="form-group">
                                                 <input type="text" class="form-control" id="nomeCliente" name="nomeCliente" placeholder="Nome cliente"  disabled="disabled">
@@ -132,7 +132,7 @@
                             </section>
                             <section class="format-section">
                                  <div class="container espacamento">
-                                    <div class="form-group col-md-4">
+                                    <div class="form-group col-md-8 col-lg-6">
                                         <ul class="star_reputacao">
 
                                                 <div class="row">
@@ -149,7 +149,7 @@
                                         </div>
                                  </div>
                                 </div>
-                                <div class="form-group col-md-8">
+                                <div class="form-group col-md-10">
                                     <label for="nomeCliente">Nome do cliente</label>
                                     <div class="form-group">
                                             <input type="text" class="form-control" id="nomeCliente" name="nomeCliente" placeholder="Nome cliente" disabled="disabled">

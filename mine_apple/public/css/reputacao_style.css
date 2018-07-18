@@ -3681,7 +3681,7 @@ select option
     text-align: center;
     font-size: 30px;
     font-weight: 400;
-    margin-bottom: 37px;
+    /*margin-bottom: 37px;*/
 }
 
 
@@ -4029,7 +4029,7 @@ input.form-control textarea{
 
 .format-section{
 
-    box-shadow: 1px 1px 1px 1px #cbcbcb;
+    box-shadow: 0px 1px 2px 1px #cecece;
     padding: 1%;
     margin-bottom: 15px;
 }
