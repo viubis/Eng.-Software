@@ -93,7 +93,7 @@
                                 <label for="horario" class="pl-xl-5">Horário: </label>
                             </div>
                             <div class="form-group col-md-3 pl-0">
-                                <input type="text" id="horario">
+                                <input type="text" name="horas" maxlength="8" onkeypress="valida_horas(this)">
                             </div>
                             <div class="form-group col-md-2 pl-0">
                                 <button type="button" class="btn btn-primary">Definir</button>
@@ -193,6 +193,27 @@
 </div>
 </div>
 </div>
+
+<script LANGUAGE="JavaScript">
+    <!--
+    
+        function valida_horas(edit){
+    
+          if(event.keyCode<48 || event.keyCode>57){
+    
+            event.returnValue=false;
+    
+          }
+    
+          if(edit.value.length==2 || edit.value.length==5){
+    
+            edit.value+=":";}
+    
+    }
+    
+    //-->
+    
+</SCRIPT>
 
 <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
 <script src="{{asset('css/bootstrap4/popper.js')}}"></script>
