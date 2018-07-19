@@ -49,10 +49,16 @@ Route::middleware(['auth'])->group(function () {
 
         Route::post('/gerenciamento/produtor', 'AdministradorController@banirProdutor');
 
+
         Route::post('/gerenciamento/consumidor', 'AdministradorController@banirConsumidor');
 
         Route::get('/relatorio/geral', 'AdministradorController@getRelatorioGeral');
+
+        Route::post('/backup/sistema', 'AdministradorController@dadosBackup')->name('backup');
+
+
     });
+
 
 
     //Rotas para consumidores ----------------------------------------------------------------------

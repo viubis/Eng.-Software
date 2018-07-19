@@ -390,7 +390,7 @@
 	p{font-size: 13px;}
 	.top_bar
 	{
-		display: none;
+		display: inline-block;
 	}
 	.logo_container, .wishlist_cart
 	{
@@ -479,6 +479,7 @@
 	.top_bar_user
 	{
 		margin-left: 0px;
+
 	}
 	.header_search
 	{
