@@ -4,23 +4,23 @@
         <div class="container">
             <div class="row">
                 <div class="col d-flex flex-row">
-                    <div class="top_bar_content ml-auto">
-                        <div class="top_bar_user">
+                    <div class="top_bar_content col-12 text-right">
+                        <div class="top_bar_user col-12">
                             @guest
                                 <div class="user_icon"><i style="color: #08c8b0;" class="fa fa-user-circle fa-2x"></i></div>
                                 <div><a href="{{url('/login')}}">&nbsp Cadastre-se ou acesse a sua conta clicando aqui</a></div>
                             @else
                             <!-- Icone usuário logado -->
-                                <div class="top_bar_user">
-                                    <div class="row">
-                                        <div class="col-md-1 mt-3">
+                                <div class="top_bar_user col-12">
+                                    <div class="row col-12">
+                                        <div class="">
                                             <i style="color: #08c8b0;" class="fa fa-user-circle fa-2x"></i>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="">
                                                 <a style="font-size: 13px" href="{{url("")}}">{{Auth::user()->consumidor->nome}} <span
                                                     ></span></a>
                                         </div>
-                                        <div class="col-md-1">
+                                        <div class="">
                                                 <a style="font-size: 13px;border: none" href="{{ route('logout') }}"
                                                    onclick="event.preventDefault();
                                                                                  document.getElementById('logout-form').submit();">{{ __('Sair') }}</a>
