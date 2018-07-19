@@ -122,7 +122,7 @@
                 </div>
             </div>
         </div>
-        <div class="panel"></div>
+
     </div>
 
     <!-- Footer -->

@@ -14,6 +14,8 @@ use mine_apple\Cidade;
 use mine_apple\Estado;
 use mine_apple\Log;
 use mine_apple\Operacao;
+use mine_apple\Avaliacao;
+use mine_apple\Assinatura;
 use PDF;
 use Artisan;
 use Storage;
@@ -23,15 +25,6 @@ use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 class AdministradorController extends Controller
 {
     //Métodos para manipular as views visíveis somente para administradores
-
-    /**
-     * @author O nome do desenvolvedor
-     * @param Request $request
-     * @return string
-     */
-    public function exemplo(Request $request) {
-        return Auth::user()->email . ' é administrador';
-    }
 
     /**
      * @author Lucas Alves
@@ -92,7 +85,9 @@ class AdministradorController extends Controller
     public function getRelatorioGeral(){
     PDF::setOptions(['isPhpEnabled' => true]);
       $logs = Log::all();
-      $pdf = PDF::loadView('relatorio_1', compact('logs'));
+      $avaliacoes = Avaliacao::all();
+      $assinaturas = Assinatura::all();
+      $pdf = PDF::loadView('relatorio_1', compact('logs', 'avaliacoes', 'assinaturas'));
       return $pdf->download('relatorio_geral.pdf');
     }
 

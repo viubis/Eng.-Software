@@ -63,5 +63,6 @@ class Kernel extends HttpKernel
         'auth.administrador' => \mine_apple\Http\Middleware\CheckAdministrador::class,
         'auth.consumidor' => \mine_apple\Http\Middleware\CheckConsumidor::class,
         'auth.produtor' => \mine_apple\Http\Middleware\CheckProdutor::class,
+        'auth.publico' => \mine_apple\Http\Middleware\CheckPublico::class,
     ];
 }

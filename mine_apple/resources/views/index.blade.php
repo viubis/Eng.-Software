@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/animate.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/slick-1.8.0/slick.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/main_styles.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/header_style.css')}}">
+
     <link rel="stylesheet" type="text/css" href="{{asset('css/responsive.css')}}">
 
 
@@ -40,7 +40,6 @@
             @include('layouts.header_administrador')
         @endif 
     @else
-    
         @include('layouts.header_usuario')
     @endif
 
@@ -268,10 +267,8 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div
-                                            class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="{{asset('images/banana.jpg')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 7,00<span>duzia</span></div>
@@ -308,7 +305,6 @@
                                                     </button>
                                                 </div>
                                             </div>
-                                            <div class=""><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">novo</li>
@@ -335,7 +331,7 @@
                                             </div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
+                                                <li class="product_mark product_new">novo</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -383,7 +379,7 @@
                                             </div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
+                                                <li class="product_mark product_new">novo</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -480,7 +476,7 @@
                                             
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
+                                                <li class="product_mark product_new">novo</li>
                                             </ul>
                                         </div>
                                     </div>

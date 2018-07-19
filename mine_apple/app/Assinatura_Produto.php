@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Assinatura_Produto extends Model
 {
     protected $table = 'assinatura_produto';
-    protected $primaryKey = ['assinatura_id', 'produto_id'];
+    //protected $primaryKey = ['assinatura_id', 'produto_id'];
     protected $fillable = ['assinatura_id', 'produto_id', 'quantidade', 'frequencia', 'seg', 'ter', 'qua', 'qui', 'sex', 'sab', 'dom'];
     public $timestamps = false;
 

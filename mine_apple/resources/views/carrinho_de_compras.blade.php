@@ -55,8 +55,6 @@
                         <section class="section-content bg padding-y border-top">
                             <div class="row">
                                 <main class="col-sm-9">
-                                    <form action="/remover_carrinho" method="post">
-                                        @csrf
                                         <div class="card">
                                             <table class="table table-hover shopping-cart-wrap">
                                                 <thead class="text-muted">
@@ -69,61 +67,63 @@
                                                 </thead>
                                                 <tbody>
                                                 @foreach($itens as $item)
-                                                    <tr>
-                                                        <input type="hidden" name="rowId" value="{{$item->rowId}}">
-                                                        @php
-                                                            $foto = \mine_apple\Foto::where('produto_id', '=', $item->id)->first();
-                                                        @endphp
-                                                        <td>
-                                                            <figure class="media">
-                                                                <div class="img-wrap"
-                                                                     style="float:left; height: 150px; width: 150px">
-                                                                    <img src="{{asset($foto->path)}}"
-                                                                         class="img-thumbnail img-sm"
-                                                                    >
-                                                                </div>
-                                                                <figcaption class="media-body pl-2">
-                                                                    <h6 class="title text-truncate">{{$item->name}}</h6>
-                                                                    <dl class="dlist-inline small">
-                                                                        @php
-                                                                            $produto = \mine_apple\Produto::where('id','=',$item->id)->first();
-                                                                            $produtor = \mine_apple\Produtor::where('usuario_id', '=', $produto->produtor_id)->first();
-                                                                        @endphp
-                                                                        <dt>Produtor:</dt>
-                                                                        <dd>{{$produtor->nomeFantasia}}</dd>
-                                                                    </dl>
-                                                                </figcaption>
-                                                            </figure>
-                                                        </td>
-                                                        <td>
-                                                            <label class="sr-only" for="quantidade">Quantidade</label>
-                                                            <input type="number" class="ml-3" id="quantidade"
-                                                                   placeholder="1" min="1" style="width: 50px">
-                                                        </td>
-                                                        <td>
+                                                    <form action="{{route('remover_carrinho')}}" method="post">
+                                                        @csrf
+                                                        <tr>
+                                                            <input type="hidden" name="id" value="{{$item->id}}">
                                                             @php
-                                                                $embalagem = \mine_apple\Embalagem::where('id', '=', $item->options->embalagem)->first();
+                                                                $foto = \mine_apple\Foto::where('produto_id', '=', $item->id)->first();
                                                             @endphp
-                                                            <div class="price-wrap">
-                                                                <var class="price">R${{$item->price}}</var>
-                                                                <small class="text-muted">(por {{$embalagem->tipo}})
-                                                                </small>
-                                                            </div> <!-- price-wrap .// -->
-                                                        </td>
-                                                        <td class="text-right">
-                                                            <button class="btn-sm btn-primary mt-4"
-                                                                    style="background-color: rgba(0,0,0,0); border: none;
-                                                    color: #0d82d3;"
-                                                                    type="submit">Remover produto
-                                                            </button>
-                                                            {{--<a href="" class="btn btn-outline-danger"> × Remover</a>--}}
-                                                        </td>
-                                                    </tr>
+                                                            <td>
+                                                                <figure class="media">
+                                                                    <div class="img-wrap"
+                                                                         style="float:left; height: 150px; width: 150px">
+                                                                        <img src="{{asset($foto->path)}}"
+                                                                             class="img-thumbnail img-sm"
+                                                                        >
+                                                                    </div>
+                                                                    <figcaption class="media-body pl-2">
+                                                                        <h3 class="title text-truncate">{{$item->name}}</h3>
+                                                                        <dl class="dlist-inline small">
+                                                                            @php
+                                                                                $produto = \mine_apple\Produto::where('id','=',$item->id)->first();
+                                                                                $produtor = \mine_apple\Produtor::where('usuario_id', '=', $produto->produtor_id)->first();
+                                                                            @endphp
+                                                                            <dt>Produtor: {{$produtor->nomeFantasia}}</dt>
+                                                                            <dd>Cep: {{$produtor->endereco->numero_cep}}</dd>
+                                                                        </dl>
+                                                                    </figcaption>
+                                                                </figure>
+                                                            </td>
+                                                            <td>
+                                                                <label class="sr-only" for="quantidade">Quantidade</label>
+                                                                <input type="number" class="ml-3" id="quantidade"
+                                                                       placeholder="1" min="1" style="width: 50px" value="{{$item->qty}}">
+                                                            </td>
+                                                            <td>
+                                                                @php
+                                                                    $embalagem = \mine_apple\Embalagem::where('id', '=', $item->options->embalagem)->first();
+                                                                @endphp
+                                                                <div class="price-wrap">
+                                                                    <h4 class="price">R$ {{number_format($item->price, 2, ',', '.')}}</h4>
+                                                                    <small class="text-muted">(por {{$embalagem->tipo}})
+                                                                    </small>
+                                                                </div> <!-- price-wrap .// -->
+                                                            </td>
+                                                            <td class="text-right">
+                                                                <button class="btn-sm btn-primary mt-0"
+                                                                        style="background-color: rgba(0,0,0,0); border: none;
+                                                        color: #0d82d3;"
+                                                                        type="submit">Remover produto
+                                                                </button>
+                                                                {{--<a href="" class="btn btn-outline-danger"> × Remover</a>--}}
+                                                            </td>
+                                                        </tr>
+                                                    </form>
                                                 @endforeach
                                                 </tbody>
                                             </table>
                                         </div> <!-- card.// -->
-                                    </form>
                                 </main> <!-- col.// -->
                                 <aside class="col-sm-3" style="background-color:#f0f0f0;">
                                     <h4 class="pt-3">Resumo da compra</h4>
@@ -133,15 +133,15 @@
                                     {{--Shipping. </p>--}}
                                     <dl class="dlist-align">
                                         <dt>Sub-total</dt>
-                                        <dd class="text-right">R${{$subtotal}}</dd>
+                                        <dd class="text-right">R$ {{number_format($subtotal, 2, ',', '.')}}</dd>
                                     </dl>
                                     <dl class="dlist-align">
                                         <dt>Frete:</dt>
-                                        <dd class="text-right">R$00,00</dd>
+                                        <dd class="text-right">R$ {{number_format($frete, 2, ',', '.')}}</dd>
                                     </dl>
                                     <dl class="dlist-align h4">
                                         <dt>Total:</dt>
-                                        <dd class="text-right"><strong>R$00,00</strong></dd>
+                                        <dd class="text-right"><strong>R$ {{number_format($total, 2, ',', '.')}}</strong></dd>
                                     </dl>
                                 </aside> <!-- col.// -->
                             </div>
@@ -153,20 +153,21 @@
                                 <div class="card-body">
                                     <h4 class="card-title">Calcule o frete:</h4>
                                     <div class="pb-0 line"></div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-9">
-                                            <label class="sr-only" for="CEP">CEP </label>
-                                            <input type="text" placeholder="Informe o seu cep..."
-                                                   class="form-first-name form-control" id="CEP" name="cep">
+                                    <form action="{{route('atualizar_carrinho')}}" method="post">
+                                        @csrf
+                                        <div class="form-row">
+                                            <div class="form-group col-md-9">
+                                                <label class="sr-only" for="CEP">CEP </label>
+                                                <input type="text" placeholder="Informe o seu cep..."
+                                                       class="form-first-name form-control" id="CEP" name="cep" data-mask="00000000" style="color: #000000">
+                                            </div>
+                                            <div class="form-group col-md-1" align="center">
+                                                <button type="submit" class="btn-sm btn-primary mt-1"
+                                                        style="background-color: #08c8b0; border: none;">Calcular
+                                                </button>
+                                            </div>
                                         </div>
-                                        <div class="form-group col-md-1" align="center">
-                                            <button type="submit" class="btn-sm btn-primary mt-1"
-                                                    style="background-color: #08c8b0; border: none;">Calcular
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <label>Valor do frete: </label>
-                                    <label class="ml-1">R$ 00,00</label>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -190,7 +191,6 @@
                             </div>
                         </div>
                     @endif
-
                 </div>
             </div>
         </div>
@@ -242,7 +242,7 @@
 <script src="{{asset('plugins/slick-1.8.0/slick.js')}}"></script>
 <script src="{{asset('plugins/easing/easing.js')}}"></script>
 <script src="{{asset('js/custom.js')}}"></script>
-
+<script src="{{asset('plugins/jquery-plugin-mask/jquery.mask.js')}}"></script>
 
 </body>
 

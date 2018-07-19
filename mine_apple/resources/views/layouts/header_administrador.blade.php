@@ -8,7 +8,7 @@
                             <div class="top_bar_user col-xs-12 ">
                                 @guest
                                     <div class="user_icon mr-2 pr-2"><i style="color: #08c8b0;" class="fa fa-user-circle fa-2x"></i></div>
-                                    <div><a href="{{url('/login')}}">Cadastre-se ou acesse a sua conta clicando aqui</a></div>
+                                    <div><a href="{{url('/login')}}">&nbsp Cadastre-se ou acesse a sua conta clicando aqui</a></div>
                                 @else
                                 <!-- Icone usuário logado -->
                                     <div class="top_bar_user">

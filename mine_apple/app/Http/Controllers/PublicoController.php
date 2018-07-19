@@ -19,28 +19,11 @@ class PublicoController extends Controller
     //Métodos para manipular as views públicas
 
     /**
-     * @author O nome do desenvolvedor
-     * @param Request $request
-     * @return string
-     */
-    public function exemplo(Request $request) {
-        return  'Você ...';
-    }
-
-    /**
      * @author Bruno Claudino
      * @return string
      */
     public function index() {
         return view('index');
-    }
-
-    /**
-     * @author Bruno Claudino
-     * @return string
-     */
-    public function getTipoCadastro(){
-        return view('tipo_de_cadastro_a_realizar');
     }
 
     /**

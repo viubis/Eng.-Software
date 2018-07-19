@@ -1,6 +1,6 @@
 <footer class="footer">
             <div class="container">
-                <div class="row" id="linha">
+                <div class="row" >
 
                     <div class="col-lg-3 footer_col">
                         <div class="footer_column footer_contact">

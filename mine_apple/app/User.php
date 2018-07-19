@@ -33,5 +33,4 @@ class User extends Authenticatable
     {
         return $this->hasMany('mine_apple\Log', 'usuario_id');
     }
-
 }

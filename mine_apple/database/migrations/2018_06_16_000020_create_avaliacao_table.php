@@ -9,11 +9,10 @@ class CreateAvaliacaoTable extends Migration
     public function up()
     {
         Schema::create('avaliacao', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('assinatura_id')->unsigned();
             $table->double('nota');
             $table->string('comentario')->nullable();
-
-            $table->primary('assinatura_id');
 
             $table->foreign('assinatura_id', 'fk_avaliacao_assinatura')
                 ->references('id')->on('assinatura')

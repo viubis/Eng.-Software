@@ -10,39 +10,17 @@
     <thead class="thead-dark">
       <tr>
         <th scope="col">Indicador</th>
-        <th scope="col">Jan</th>
-        <th scope="col">Fev</th>
-        <th scope="col">Mar</th>
-        <th scope="col">Abr</th>
-        <th scope="col">Mai</th>
-        <th scope="col">Jun</th>
-        <th scope="col">Jul</th>
-        <th scope="col">Ago</th>
-        <th scope="col">Set</th>
-        <th scope="col">Nov</th>
-        <th scope="col">Out</th>
-        <th scope="col">Dez</th>
         <th scope="col">Total</th>
+    
       </tr>
     </thead>
     <tbody>
       <tr>
-        @php $cadastro = $logs->where('operacao_id', '=', 1)->first() @endphp
+        @php $cadastro = $logs->where('operacao_id', '=', 1) @endphp
         
-        <th scope="row">{{'Cadastros Usuários'}}</th>
-        <td>{{$cadastro->whereMonth('data', '01')->get()->count()}}</td>
-        <td>{{$cadastro->whereMonth('data', '02')->get()->count()}}</td>
-        <td>{{$cadastro->whereMonth('data', '03')->get()->count()}}</td>
-        <td>{{$cadastro->whereMonth('data', '04')->get()->count()}}</td>
-        <td>{{$cadastro->whereMonth('data', '05')->get()->count()}}</td>
-        <td>{{$cadastro->whereMonth('data', '06')->get()->count()}}</td>
-        <td>{{$cadastro->whereMonth('data', '07')->get()->count()}}</td>
-        <td>{{$cadastro->whereMonth('data', '08')->get()->count()}}</td>
-        <td>{{$cadastro->whereMonth('data', '09')->get()->count()}}</td>
-        <td>{{$cadastro->whereMonth('data', '10')->get()->count()}}</td>
-        <td>{{$cadastro->whereMonth('data', '11')->get()->count()}}</td>
-        <td>{{$cadastro->whereMonth('data', '12')->get()->count()}}</td>
+        <th scope="row">{{'Cadastros de Usuários'}}</th>
         <td>{{$cadastro->count()}}</td>
+        
         
       </tr>
     </tbody>
@@ -50,20 +28,8 @@
     <tbody>
       <tr>
 
-        @php $produto = $logs->where('operacao_id', '=', 6)->first() @endphp
-        <th scope="row">{{'Adição Produtos'}}</th>
-        <td>{{$produto->whereMonth('data', '01')->get()->count()}}</td>
-        <td>{{$produto->whereMonth('data', '02')->get()->count()}}</td>
-        <td>{{$produto->whereMonth('data', '03')->get()->count()}}</td>
-        <td>{{$produto->whereMonth('data', '04')->get()->count()}}</td>
-        <td>{{$produto->whereMonth('data', '05')->get()->count()}}</td>
-        <td>{{$produto->whereMonth('data', '06')->get()->count()}}</td>
-        <td>{{$produto->whereMonth('data', '07')->get()->count()}}</td>
-        <td>{{$produto->whereMonth('data', '08')->get()->count()}}</td>
-        <td>{{$produto->whereMonth('data', '09')->get()->count()}}</td>
-        <td>{{$produto->whereMonth('data', '10')->get()->count()}}</td>
-        <td>{{$produto->whereMonth('data', '11')->get()->count()}}</td>
-        <td>{{$produto->whereMonth('data', '12')->get()->count()}}</td>
+        @php $produto = $logs->where('operacao_id', '=', 6) @endphp
+        <th scope="row">{{'Adições de Produtos'}}</th>
         <td>{{$produto->count()}}</td>
         
       </tr>
@@ -71,21 +37,27 @@
 
     <tbody>
       <tr>
-        @php $compra = $logs->where('operacao_id', '=', 3)->first() @endphp
+        @php $compra = $logs->where('operacao_id', '=', 3) @endphp
         <th scope="row">{{'Compras'}}</th>
-        <td>{{$compra->whereMonth('data', '01')->get()->count()}}</td>
-        <td>{{$compra->whereMonth('data', '02')->get()->count()}}</td>
-        <td>{{$compra->whereMonth('data', '03')->get()->count()}}</td>
-        <td>{{$compra->whereMonth('data', '04')->get()->count()}}</td>
-        <td>{{$compra->whereMonth('data', '05')->get()->count()}}</td>
-        <td>{{$compra->whereMonth('data', '06')->get()->count()}}</td>
-        <td>{{$compra->whereMonth('data', '07')->get()->count()}}</td>
-        <td>{{$compra->whereMonth('data', '08')->get()->count()}}</td>
-        <td>{{$compra->whereMonth('data', '09')->get()->count()}}</td>
-        <td>{{$compra->whereMonth('data', '10')->get()->count()}}</td>
-        <td>{{$compra->whereMonth('data', '11')->get()->count()}}</td>
-        <td>{{$compra->whereMonth('data', '12')->get()->count()}}</td>
         <td>{{$compra->count()}}</td>
+        
+      </tr>
+    </tbody>
+
+    <tbody>
+      <tr>
+        @php $avaliacao = $avaliacoes->avg('nota') @endphp
+        <th scope="row">{{'Média Avaliação'}}</th>
+        <td>{{$avaliacao}}</td>
+        
+      </tr>
+    </tbody>
+
+    <tbody>
+      <tr>
+        @php $assinatura = $assinaturas->avg('valor') @endphp
+        <th scope="row">{{'Média Valor Por Assinatura'}}</th>
+        <td>{{$assinatura}}</td>
         
       </tr>
     </tbody>
