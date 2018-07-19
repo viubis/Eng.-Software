@@ -21,14 +21,6 @@ use mine_apple\Http\Requests\FormProdutor;
 class ProdutorController extends Controller
 {
     //Métodos para manipular as views visíveis somente para produtores
-    /**
-     * @author O nome do desenvolvedor
-     * @param Request $request
-     * @return string
-     */
-    public function exemplo(Request $request) {
-        return Auth::user()->email . ' é produtor';
-    }
 
     public function index(){
         return view('index');
@@ -38,7 +30,6 @@ class ProdutorController extends Controller
      * @author Lucas Alves
      * @return string
      */
-
     public function getForm(){
             $bancos = Banco::all(['id', 'nome']);
             $estados = Estado::all(['id', 'nome']);

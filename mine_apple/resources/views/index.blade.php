@@ -40,7 +40,6 @@
             @include('layouts.header_administrador')
         @endif 
     @else
-    
         @include('layouts.header_usuario')
     @endif
 

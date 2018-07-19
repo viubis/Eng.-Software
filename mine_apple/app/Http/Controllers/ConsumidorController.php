@@ -12,6 +12,7 @@ use mine_apple\Conta;
 use mine_apple\Compra;
 use mine_apple\Endereco;
 use mine_apple\Consumidor;
+use mine_apple\Log;
 use mine_apple\Produto;
 use mine_apple\Produtor;
 use mine_apple\Embalagem;
@@ -27,18 +28,6 @@ class ConsumidorController extends Controller
 {
     //Métodos para manipular as views visíveis somente para consumidores
 
-    /*public function _construct(){
-        $this->middleware(middleware:'auth.consumidor')
-    }*/
-    /**
-     * @author O nome do desenvolvedor
-     * @param Request $request
-     * @return string
-     */
-    public function exemplo(Request $request) {
-        return Auth::user()->email . ' é consumidor';
-    }
-
     /**
      * @author Rafael Brito
      * @return string
@@ -51,20 +40,17 @@ class ConsumidorController extends Controller
      * @author Lucas Alves
      * @return string
      */
-
     public function getForm(){
         $estados = Estado::all(['id', 'nome']);
         return view('cadastro_de_consumidor',compact('estados'));
-
     }
 
     /**
      * @author Rafael Brito
-     * @param Request $request
+     * @param FormConsumidor $request
      * @return string
      */
     public function cadastrarConsumidor(FormConsumidor $request) {
-
         //dd($request->all());
         $consumidor = new Consumidor;
         $consumidor->usuario_id = Auth::user()->id;
@@ -103,8 +89,6 @@ class ConsumidorController extends Controller
         $cartao->codigo = $request->codigo;
 
 
-
-
         $consumidor_endereco->save();
 
         $cartao->save();
@@ -117,7 +101,6 @@ class ConsumidorController extends Controller
         $log->save();
 
         return redirect()->route('consumidor');
-
     }
 
     /**
@@ -145,7 +128,6 @@ class ConsumidorController extends Controller
      * @return string
      */
     public function adicionarCartao(Request $request) {
-
         $cartao = new Cartao();
         $cartao->consumidor_id = Auth::user()->id;
         $cartao->numero = $request->numero;
@@ -153,7 +135,6 @@ class ConsumidorController extends Controller
         $cartao->validade = $request->validade;
         $cartao->codigo = $request->codigo;
         $cartao->tipo = $request->tipo;
-
     }
 
     /**
@@ -161,15 +142,18 @@ class ConsumidorController extends Controller
      * @param Request $request
      * @return string
      */
-    public function adicionarCarrinho(Request $request){
-        if(is_null($request->quantidade)) {
+    public function adicionarCarrinho(Request $request) {
+        $item = Cart::content()->firstWhere('id', $request->id);
+
+        if(empty($item)) {
             Cart::add($request->id, $request->nome, 1, $request->preco, ['embalagem' => $request->embalagem]);
-        }
-        else{
-            Cart::add($request->id, $request->nome, $request->quantidade, $request->preco, ['embalagem' => $request->embalagem]);
+            Cart::setTax(Cart::content()->firstWhere('id', $request->id)->rowId, 0);
+
+        }else {
+            Cart::update($item->rowId, $item->qty+1);
         }
 
-        return redirect()->route('carrinho');
+        return $this->getCarrinhoCompras();
     }
 
     /**
@@ -177,14 +161,14 @@ class ConsumidorController extends Controller
      * @param Request $request
      * @return string
      */
-    public function removerDoCarrinho(Request $request){
-//        dd($request->all());
-        Cart::remove($request->rowId);
-        //retorna todos os itens do carrinho
-        $itens = Cart::content();
-        //retorna o preço total
-        $subtotal = Cart::total();
-        return view('carrinho_de_compras', compact('itens', 'subtotal'));
+    public function removerDoCarrinho(Request $request) {
+        $item = Cart::content()->firstWhere('id', $request->id);
+
+        if(!empty($item)) {
+            Cart::remove($item->rowId);
+        }
+
+        return $this->getCarrinhoCompras();
     }
 
     /**
@@ -197,12 +181,12 @@ class ConsumidorController extends Controller
     }
 
     /**
- * @author Felipe Braz
- * @website https://www.braz.pro.br/blog
- * @param int $cartao
- * @param int $cvc
- * @return array
- */
+     * @author Felipe Braz
+     * @website https://www.braz.pro.br/blog
+     * @param Request $request
+     * @param bool $cvc
+     * @return array
+     */
     function validaCartao(Request $request, $cvc=false){
        $cartao = preg_replace("/[^0-9]/", "", $cartao);
        if($cvc) $cvc = preg_replace("/[^0-9]/", "", $cvc);
@@ -218,7 +202,6 @@ class ConsumidorController extends Controller
            'Jcb' => array('len' => array(16),       'cvc' => 3),
            'Hipercard'  => array('len' => array(13,16,19), 'cvc' => 3),
        );
-
 
        switch($cartao){
            case (bool) preg_match('/^(636368|438935|504175|451416|636297)/', $request->cartao) :
@@ -309,7 +292,6 @@ class ConsumidorController extends Controller
         $cartoes = Cartao::where('consumidor_id', '=', Auth::user()->id);
         $consumidor_enderecos = ConsumidorEndereco::all();
         return view('realizacao_de_assinatura', compact('itens', 'embalagens', 'produtos', 'enderecos', 'consumidor_enderecos', 'cidades', 'estados', 'fotos', 'cartoes'));
-
     }
 
 
@@ -374,7 +356,6 @@ class ConsumidorController extends Controller
     }
 
 
-
     /**
      * @author Lucas Alves
      * @param Request $request
@@ -395,13 +376,63 @@ class ConsumidorController extends Controller
         $consumidor_endereco->consumidor_id = Auth::user()->id;
     }
 
-     public function getCarrinhoCompras(){
+    /**
+     * @author
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function getCarrinhoCompras(){
+       //retorna todos os itens do carrinho
+       $itens = Cart::content();
+       $subtotal = 0;
+       $frete = 0;
+       $total = 0;
 
-        //retorna todos os itens do carrinho
-        $itens = Cart::content();
-        //retorna o preço total
-        $subtotal = Cart::total();
-        return view('carrinho_de_compras', compact('itens', 'subtotal'));
+       if(!empty($itens)) {
+           //retorna o preço do subtotal
+           $subtotal = Cart::subtotal();
+           $frete = Cart::tax();
+           $total = Cart::total();
+       }
+
+       return view('carrinho_de_compras', compact('itens', 'subtotal', 'frete', 'total'));
     }
 
+    /**
+     * @author Sesaque Oliveira
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function atualizarCarrinho(Request $request) {
+        $itens = Cart::content();
+
+        if(!empty($itens) && Endereco::validarCep($request->cep)) {
+            foreach ($itens as $item) {
+                $produto = Produto::find($item->id);
+                $cepProdutor = $produto->produtor->endereco->numero_cep;
+
+                if(Endereco::validarTrajeto($cepProdutor, $request->cep)) {
+                    $distancia = Endereco::calcularDistancia($cepProdutor, $request->cep);
+                    $raioEntrega = $produto->produtor->raioEntrega;
+                    $freteMax = $produto->freteMax;
+                    $frete = Produtor::frete($raioEntrega, $distancia, $freteMax);
+
+                    Cart::setTax($item->rowId, $frete/$item->price);
+                }else {
+                    return ('Produto indiponível para a região'); //teste
+                }
+            }
+        }else {
+            return ('Cep inválido'); //teste
+        }
+
+        return $this->getCarrinhoCompras();
+    }
+
+    /**
+     * @author
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function minhasCompras(){
+        return view('minhas_compras');
+    }
 }
