@@ -109,6 +109,8 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get('/produtor/reputacao', 'ProdutorController@reputacaoProdutor');
 
+        Route::get('/resumo/conta', 'ProdutorController@resumoConta')->name('resumo.conta');
+
         //Route::get('/produtor/cadastrar_endereco', 'ProdutorController@cadastrarEndereco')->name('produtor.endereco.cadastrar');
     });
 

@@ -243,4 +243,8 @@ class ProdutorController extends Controller
     public function reputacaoProdutor(){
         return view('reputacao');
     }
+
+    public function resumoConta() {
+        return view('Resumo');
+    }
 }
