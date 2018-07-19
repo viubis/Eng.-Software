@@ -29,134 +29,18 @@
 
 <div class="super_container">
 
-    <!-- Header -->
-    <header class="header">
+@if(Auth::check())
+    @if(Auth::user()->consumidor != null)
+        @include('layouts.header_consumidor')
+    @elseif(Auth::user()->produtor != null)
+        @include('layouts.header_produtor')
+    @elseif(Auth::user()->administrador != null)
+        @include('layouts.header_administrador')
+    @endif
+@else
 
-        <!-- Header Main -->
-
-        <div class="header_main">
-            <div class="container">
-                <div class="row">
-
-                    <!-- Logo -->
-                    <div class="col-lg-4 col-sm-3 col-3 order-1">
-                        <div class="logo_container">
-                            <div class="logo_icon"><img src="{{asset('images/logoSite.png')}}" class="img-fluid" alt=""></div>
-                        </div>
-                    </div>
-
-
-                    <!-- Wishlist -->
-                    <div class="col-lg-8 col-3 order-lg-3 order-2 text-lg-left text-right">
-                        <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
-                            <!-- Icone usuário logado -->
-                            <div class="cart">
-                                <div class="cart_container d-flex flex-row align-items-center justify-content-end">
-                                    <div class="cart_icon">
-                                        <i class="fa fa-user-circle fa-4x" style="color: #08c8b0 "></i>
-                                    </div>
-                                    <div class="cart_content">
-                                        <div class="cart_text"><a href="#">Bem-vindo</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Main Navigation -->
-
-        <nav class="main_nav">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="main_nav_content d-flex flex-row">
-
-
-                            <!-- Main Nav Menu -->
-
-                            <div class="main_nav_menu ml-auto">
-                                <ul class="standard_dropdown main_nav_dropdown">
-                                    <li><a href="#">Meus Dados<i class="fas fa-chevron-down" id="meusdados"></i></a>
-                                    </li>
-                                    <li><a href="#">Resumo da Conta<i class="fas fa-chevron-down" id="resumoconta"></i></a>
-                                    </li>
-                                    <li><a href="#">Meus Produtos<i class="fas fa-chevron-down"></i></a></li>
-                                    <li><a href="#">Assinaturas<i class="fas fa-chevron-down"></i></a></li>
-                                    <li><a href="#">Reputação<i class="fas fa-chevron-down"></i></a></li>
-                                </ul>
-                            </div>
-
-                            <!-- Menu Trigger -->
-
-                            <div class="menu_trigger_container ml-auto">
-                                <div class="menu_trigger d-flex flex-row align-items-center justify-content-end">
-                                    <div class="menu_burger">
-                                        <div class="menu_trigger_text">Menu</div>
-                                        <div class="cat_burger menu_burger_inner">
-                                            <span></span><span></span><span></span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Menu -->
-
-        <div class="page_menu">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-
-                        <div class="page_menu_content">
-
-                            <div class="page_menu_search">
-                                <form action="#">
-                                    <input type="search" required="required" class="page_menu_search_input"
-                                           placeholder="Pesquisar produtos..." name="buscarProdutos">
-                                </form>
-                            </div>
-                            <ul class="page_menu_nav">
-
-                                <li class="page_menu_item">
-                                    <a href="#">Meus Dados<i class="fa fa-angle-down"></i></a>
-                                </li>
-                                <li class="page_menu_item">
-                                    <a href="#">Resumo da Conta<i class="fa fa-angle-down"></i></a>
-                                </li>
-                                <li class="page_menu_item">
-                                    <a href="#">Meus Produtos<i class="fa fa-angle-down"></i></a>
-                                </li>
-                                <li class="page_menu_item">
-                                    <a href="#">Assinaturas<i class="fa fa-angle-down"></i></a>
-                                </li>
-                                <li class="page_menu_item">
-                                    <a href="#">Reputação<i class="fa fa-angle-down"></i></a>
-                                </li>
-                            </ul>
-
-                            <!-- <div class="menu_contact">
-                                 <div class="menu_contact_item">
-                                     <div class="menu_contact_icon"><img src="images/phone_white.png" alt=""></div>
-                                     +38 068 005 3570
-                                 </div>
-                                 <div class="menu_contact_item">
-                                     <div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div>
-                                     <a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>
-                             </div>-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-    </header>
+    @include('layouts.header_usuario')
+@endif
 
 
     <!--<section>-->
@@ -167,26 +51,9 @@
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="contact_form_title">Resumo da Conta</div>
-                    <!--div  class="pb-0" id="line"></div-->
                     <div class="form-group">
                     <form>
                         <fieldset>
-                           <!-- <div class="form-row">
-                                <div class="col-md-1 mb-3">
-                                    <label class="linhaassinaturas" type="nomenumero" for="inputnumero">Número</label>
-                                </div>
-                                <div class="col-md-2 mb-3">
-                                    <input type="text" class="form-control" placeholder="número">
-                                </div>
-                                <div class="col-md-1 offset-1 mb-3">
-                                    <label class="linhaassinaturas" type="nomenumero" for="inputcliente">Cliente </label>
-                                </div>
-                                <div class="col-md-7 mb-3">
-                                    <input type="text" class="form-control" placeholder="nome do cliente">
-                                </div>
-                            </div>
-                            <div  class="pb-0" id="linha"></div>-->
-
                             <div class="form-row" id="espac2">
 
                                     <label class="Pagamentos" style="font-size: 25px"> Pagamentos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><u>Ver todos</u></a>   </label>
@@ -195,17 +62,6 @@
 
                                     <div class="col-lg-10 offset-lg-1">
                                     <div class="form-group col-md-4">
-                                    <!--ul class="star_reputacao">
-                                            <div class="starsreputacao">
-                                                <div class="row">
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li> </div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star0.png" alt=""></a></li></div>
-
-                                            </div>
-                                    </div-->
 
                             </div>
                             <br /><br />
@@ -223,18 +79,6 @@
 
                                     <div class="col-lg-10 offset-lg-1">
                                     <div class="form-group col-md-4">
-                                    <!--ul class="star_reputacao">
-                                            <div class="starsreputacao">
-                                                <div class="row">
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li> </div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star0.png" alt=""></a></li></div>
-
-                                            </div>
-                                    </div-->
-
                             </div>
                             <br /><br />
 

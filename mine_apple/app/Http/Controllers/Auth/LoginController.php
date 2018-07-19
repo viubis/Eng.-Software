@@ -34,9 +34,19 @@ class LoginController extends Controller
     /**
      * Where to redirect users after login.
      *
-     * @var string
+     * @return  string
      */
-    protected $redirectTo = '/';
+    public function redirectTo(){
+        if(Auth::user()->consumidor != null){
+            return '/';
+        }
+        else if(Auth::user()->produtor != null){
+            return '/resumo/conta';
+        }
+        else{
+            return '/gerenciamento/sistema';
+        }
+    }
 
     /**
      * Create a new controller instance.
