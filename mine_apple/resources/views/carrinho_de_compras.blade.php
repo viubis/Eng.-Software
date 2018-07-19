@@ -159,7 +159,7 @@
                                             <div class="form-group col-md-9">
                                                 <label class="sr-only" for="CEP">CEP </label>
                                                 <input type="text" placeholder="Informe o seu cep..."
-                                                       class="form-first-name form-control" id="CEP" name="cep" data-mask="00000000" style="color: #000000">
+                                                       class="form-first-name form-control" id="CEP" name="cep" data-mask="00000000" style="color: #000000" required>
                                             </div>
                                             <div class="form-group col-md-1" align="center">
                                                 <button type="submit" class="btn-sm btn-primary mt-1"

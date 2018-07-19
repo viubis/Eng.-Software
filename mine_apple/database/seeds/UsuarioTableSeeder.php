@@ -8,21 +8,27 @@ class UsuarioTableSeeder extends Seeder
     public function run()
     {
         User::create([
-        // id é 1
-		'email' => 'consumidor@gmail.com',
-		'password' => bcrypt('12345678'),
+            // id é 1
+            'email' => 'consumidor@gmail.com',
+            'password' => bcrypt('12345678'),
 		]);
 
 		User::create([
-		// id é 2
-		'email' => 'produtor@gmail.com',
-		'password' => bcrypt('12345678'),
+            // id é 2
+            'email' => 'produtor1@gmail.com',
+            'password' => bcrypt('12345678'),
 		]);
 
+        User::create([
+            // id é 3
+            'email' => 'produtor2@gmail.com',
+            'password' => bcrypt('12345678'),
+        ]);
+
 		User::create([
-		// id é 3
-		'email' => 'administrador@gmail.com',
-		'password' => bcrypt('12345678'),
+            // id é 4
+            'email' => 'administrador@gmail.com',
+            'password' => bcrypt('12345678'),
 		]);
 
 		/*User::create([

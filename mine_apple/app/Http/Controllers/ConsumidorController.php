@@ -152,7 +152,7 @@ class ConsumidorController extends Controller
         } else
             Cart::update($item->rowId, $item->qty+1);
 
-        return $this->getCarrinhoCompras(0);
+        return $this->getCarrinhoCompras();
     }
 
     /**
@@ -166,7 +166,7 @@ class ConsumidorController extends Controller
         if(!empty($item))
             Cart::remove($item->rowId);
 
-        return $this->getCarrinhoCompras(0);
+        return $this->getCarrinhoCompras();
     }
 
     /**
@@ -378,7 +378,15 @@ class ConsumidorController extends Controller
      * @author
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function getCarrinhoCompras($frete){
+    public function getCarrinhoCompras(){
+        return $this->carrinhoCompras(0);
+    }
+
+    /**
+     * @author
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function carrinhoCompras($frete){
        $itens = Cart::content();
        $subtotal = 0;
        $total = 0;
@@ -401,9 +409,39 @@ class ConsumidorController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function atualizarCarrinho(Request $request) {
-        return $this->getCarrinhoCompras(10);
+        if(Endereco::validarCep($request->cep) != null) {
+            $itens = Cart::content();
+            $produtores = [];
+            $frete = 0;
 
-       
+            foreach($itens as $item) {
+                $id = $item->options->produtor.' ';
+                $freteMax = $item->options->freteMax;
+
+                if(!key_exists($id, $produtores)) {
+                    $produtores = array_merge($produtores, [$id => [$freteMax, 1]]);
+                }else {
+                    $produtores[$id][0] += $freteMax;
+                    $produtores[$id][1]++;
+                }
+            }
+
+            foreach($produtores as $id => $itens) {
+                $produtor = Produtor::find(trim($id));
+                $cepProdutor = $produtor->endereco->numero_cep;
+                $raioEntrega = $produtor->raioEntrega;
+                $freteMax = $itens[0] / $itens[1];
+                $distancia = Endereco::calcularDistancia($request->cep, $cepProdutor);
+
+                if($distancia > -1)
+                    $frete += Produtor::frete($raioEntrega, $distancia, $freteMax);
+                else
+                    return ('Produto indisponível'); //teste
+            }
+
+            return $this->carrinhoCompras($frete);
+        } else
+            return ('Cep inválido'); //teste
     }
 
     /**
