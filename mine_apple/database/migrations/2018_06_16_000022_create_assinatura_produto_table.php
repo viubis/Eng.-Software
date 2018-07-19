@@ -9,6 +9,7 @@ class CreateAssinaturaProdutoTable extends Migration
     public function up()
     {
         Schema::create('assinatura_produto', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('assinatura_id')->unsigned();
             $table->integer('produto_id')->unsigned();
             $table->integer('quantidade');
@@ -20,8 +21,6 @@ class CreateAssinaturaProdutoTable extends Migration
             $table->tinyInteger('sex')->default(0);
             $table->tinyInteger('sab')->default(0);
             $table->tinyInteger('dom')->default(0);
-
-            $table->primary(['assinatura_id', 'produto_id']);
 
             $table->index('assinatura_id', 'fk_assinatura_produto_assinatura_idx');
             $table->index('produto_id', 'fk_assinatura_produto_produto_idx');

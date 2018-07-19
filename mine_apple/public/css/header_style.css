@@ -931,3 +931,290 @@ select option {
     -o-transform: translateY(-2px);
     transform: translateY(-2px);
 }
+
+/*********************************
+17. Footer
+*********************************/
+
+.footer
+{
+    padding-top: 52px;
+    padding-bottom: 40px;
+    margin-top: 80px;
+    box-shadow: 1px -2px 20px #e1e3e4;
+
+
+}
+.footer .logo_container
+{
+    height: auto;
+    margin-bottom: 18px;
+    margin-top: -10px;
+}
+/*.footer .logo*/
+/*{*/
+/*top: auto;*/
+/*-webkit-transform: transform: none;*/
+/*-moz-transform: transform: none;*/
+/*-ms-transform: transform: none;*/
+/*-o-transform: transform: none;*/
+/*transform: none;*/
+/*}*/
+.footer .logo a
+{
+    color: #000000;
+}
+.footer_title
+{
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+}
+.footer_phone
+{
+    font-size: 18px;
+    font-weight: 500;
+    color: #0e8ce4;
+    margin-top: 13px;
+}
+.footer_contact_text
+{
+    margin-top: 10px;
+}
+.footer_contact_text p
+{
+    margin-bottom: 0;
+}
+.footer_social
+{
+    margin-top: 27px;
+}
+.footer_social ul li
+{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #fafafa;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    margin-right: 16px;
+    text-align: center;
+}
+.footer_social ul li i
+{
+    color: #000000;
+    line-height: 30px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.footer_social ul li:hover i
+{
+    color: #0e8ce4;
+}
+.footer_subtitle
+{
+    font-size: 12px;
+    color: #000000;
+}
+.footer_column ul:first-of-type
+{
+    margin-top: 21px;
+}
+.footer_column ul
+{
+    margin-top: 7px;
+}
+.footer_list li
+{
+    margin-bottom: 6px;
+}
+.footer_list li a
+{
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.4);
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.footer_list li a:hover
+{
+    color: #0e8ce4;
+}
+.footer_list_2
+{
+    margin-top: 42px !important;
+}
+
+.copyright
+{
+    width: 100%;
+    background: #fafafa;
+}
+.copyright_container
+{
+    width: 100%;
+    height: 56px;
+}
+.copyright_content
+{
+    font-size: 12px;
+    color: rgba(0,0,0,0.6);
+}
+.copyright_content span
+{
+    font-weight: 500;
+}
+.logos
+{
+
+}
+.logos_list li
+{
+    display: inline-block;
+    margin-right: 16px;
+}
+.logos_list li:last-child
+{
+    margin-right: 0;
+}
+
+/*NAVBAR*/
+
+.navbar{
+    background:
+            linear-gradient(
+                    rgba(0,0,0,.8),rgba(0,0,0,.8)
+            ),
+            url("../images/background_tela_de_login.jpg") no-repeat;
+}
+
+.search{
+    margin: 0;
+}
+
+.navbar-brand {
+    position: relative;
+    z-index: 2;
+}
+
+.navbar-nav.navbar-right .btn {
+    position: relative;
+    z-index: 2;
+    padding: 4px 20px;
+    margin: 10px auto;
+    transition: transform 0.3s;
+}
+
+.navbar .navbar-collapse {
+    position: relative;
+    /*overflow: hidden !important;*/
+}
+
+.navbar .navbar-collapse .navbar-right > li:last-child {
+    padding-left: 22px;
+}
+
+.navbar .nav-collapse {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding-right: 120px;
+    padding-left: 80px;
+    width: 100%;
+}
+
+.navbar.navbar-default .nav-collapse {
+    background-color: #f8f8f8;
+}
+
+.navbar.navbar-inverse .nav-collapse {
+    background-color: #222;
+}
+
+.navbar .nav-collapse .navbar-form {
+    border-width: 0;
+    box-shadow: none;
+}
+
+.nav-collapse > li {
+    float: right;
+}
+
+.btn.btn-circle {
+    border-radius: 50px;
+}
+
+.btn.btn-outline {
+    background-color: transparent;
+}
+
+.navbar-nav.navbar-right .btn:not(.collapsed) {
+    background-color: rgb(111, 84, 153);
+    border-color: rgb(111, 84, 153);
+    color: rgb(255, 255, 255);
+}
+
+.navbar.navbar-default .nav-collapse,
+.navbar.navbar-inverse .nav-collapse {
+    height: auto !important;
+    transition: transform 0.3s;
+    transform: translate(0px, -50px);
+}
+
+.navbar.navbar-default .nav-collapse.in,
+.navbar.navbar-inverse .nav-collapse.in {
+    transform: translate(0px, 0px);
+}
+
+@media screen and (max-width: 767px) {
+    .navbar .navbar-collapse .navbar-right > li:last-child {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .navbar .nav-collapse {
+        margin: 7px auto;
+        padding: 0;
+    }
+
+    .navbar .nav-collapse .navbar-form {
+        margin: 0;
+    }
+
+    .nav-collapse > li {
+        float: none;
+    }
+
+    .navbar.navbar-default .nav-collapse,
+    .navbar.navbar-inverse .nav-collapse {
+        transform: translate(-100%, 0px);
+    }
+
+    .navbar.navbar-default .nav-collapse.in,
+    .navbar.navbar-inverse .nav-collapse.in {
+        transform: translate(0px, 0px);
+    }
+
+    .navbar.navbar-default .nav-collapse.slide-down,
+    .navbar.navbar-inverse .nav-collapse.slide-down {
+        transform: translate(0px, -100%);
+    }
+
+    .navbar.navbar-default .nav-collapse.in.slide-down,
+    .navbar.navbar-inverse .nav-collapse.in.slide-down {
+        transform: translate(0px, 0px);
+    }
+}
+
+.dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:10rem;padding:.5rem 0;margin:.125rem 0 0;font-size:.9rem;color:#212529;text-align:left;list-style:none;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.15);border-radius:.25rem}
