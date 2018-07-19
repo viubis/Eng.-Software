@@ -15,5 +15,4 @@ class Financa extends Model
     {
         return $this->hasOne('mine_apple\Produtor', 'usuario_id');
     }
-
 }

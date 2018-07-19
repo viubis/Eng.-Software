@@ -32,7 +32,7 @@ class Endereco extends Model
     /**
      * Valida o número do cep
      *
-     * @param $cep somente números
+     * @param $cep 'cep' somente números
      * @return bool
      */
     public static function validarCep($cep) {

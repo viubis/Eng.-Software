@@ -23,15 +23,6 @@ class AdministradorController extends Controller
     //Métodos para manipular as views visíveis somente para administradores
 
     /**
-     * @author O nome do desenvolvedor
-     * @param Request $request
-     * @return string
-     */
-    public function exemplo(Request $request) {
-        return Auth::user()->email . ' é administrador';
-    }
-
-    /**
      * @author Lucas Alves
      * @return string
      */

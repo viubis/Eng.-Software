@@ -90,10 +90,12 @@
                                                         <div class="price-details col-lg-12">
                                                             @php
                                                                 $produtor = \mine_apple\Produtor::where('usuario_id', '=', $produto->produtor_id)->first();
+                                                                $embalagem = \mine_apple\Embalagem::where('id', '=', $produto->embalagem_id)->first();
                                                             @endphp
-                                                            <p class="details">Vendedor: {{$produtor->nomeFantasia}}</p>
                                                             <h1>{{$produto->nome}}</h1>
-                                                            <span class="price-new">R${{$produto->valor}}</span>
+                                                            <small class="text-muted">&nbsp ({{$embalagem->tipo}})</small>
+                                                            <span class="price-new">R$ {{number_format($produto->valor, 2, ',', '.')}}</span>
+                                                            <p class="details">Vendedor: {{$produtor->nomeFantasia}}</p>
                                                         </div>
                                                     </div>
                                                 </div>
