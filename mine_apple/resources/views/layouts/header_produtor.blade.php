@@ -50,7 +50,7 @@
                     <!-- Logo -->
                     <div class="col-lg-12 col-xs-12 col-sm-12 pt-3 text-center clearfix ">
                         <div class="logo_container  ">
-                            <div class="logo_icon text-center"><a href="{{url("/")}}"><img src="{{asset('images/logoSite2.png')}}" alt=""></a></div>
+                            <div class="logo_icon text-center"><img src="{{asset('images/logoSite2.png')}}" alt=""></div>
                         </div>
                     </div>
 
@@ -105,10 +105,10 @@
                                 <ul class="standard_dropdown main_nav_dropdown">
                                     <li><a href="{{url('/dados_cadastrais')}}">Meus Dados<i class="fas fa-chevron-down" id="meusdados"></i></a>
                                     </li>
-                                    <li><a href="#">Resumo da Conta<i class="fas fa-chevron-down" id="resumoconta"></i></a>
+                                    <li><a href="{{url('/resumo/conta')}}">Resumo da Conta<i class="fas fa-chevron-down" id="resumoconta"></i></a>
                                     </li>
-                                    <li><a href="#">Meus Produtos<i class="fas fa-chevron-down"></i></a></li>
-                                    <li><a href="#">Assinaturas<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="{{url('/meusProdutos')}}">Meus Produtos<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="{{url('/assinaturas')}}">Assinaturas<i class="fas fa-chevron-down"></i></a></li>
                                     <li><a href="{{url('/produtor/reputacao')}}">Reputação<i class="fas fa-chevron-down"></i></a></li>
                                 </ul>
                             </div>
@@ -150,16 +150,16 @@
                                     <a style="font-size: 10px" href="{{url('/dados_cadastrais')}}">Meus Dados<i class="fa fa-angle-down"></i></a>
                                 </li>
                                 <li class="page_menu_item">
-                                    <a href="#">Resumo da Conta<i class="fa fa-angle-down"></i></a>
+                                    <a href="{{url('/resumo/conta')}}">Resumo da Conta<i class="fa fa-angle-down"></i></a>
                                 </li>
                                 <li class="page_menu_item">
-                                    <a href="#">Meus Produtos<i class="fa fa-angle-down"></i></a>
+                                    <a href="{{url('/meusProdutos')}}">Meus Produtos<i class="fa fa-angle-down"></i></a>
                                 </li>
                                 <li class="page_menu_item">
-                                    <a href="#">Assinaturas<i class="fa fa-angle-down"></i></a>
+                                    <a href="{{url('/assinaturas')}}">Assinaturas<i class="fa fa-angle-down"></i></a>
                                 </li>
                                 <li class="page_menu_item">
-                                    <a href="#">Reputação<i class="fa fa-angle-down"></i></a>
+                                    <a href="{{url('/produtor/reputacao')}}">Reputação<i class="fa fa-angle-down"></i></a>
                                 </li>
                             </ul>
                         </div>

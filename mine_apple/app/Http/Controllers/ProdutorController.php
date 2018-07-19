@@ -247,4 +247,12 @@ class ProdutorController extends Controller
     public function resumoConta() {
         return view('Resumo');
     }
+
+    public function meusProdutos() {
+        return view('produtos_cadastrados');
+    }
+
+    public function assinaturas() {
+        return view('assinaturas_produtor_deve_atender');
+    }
 }

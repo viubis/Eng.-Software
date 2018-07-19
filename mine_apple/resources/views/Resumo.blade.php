@@ -51,26 +51,9 @@
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="contact_form_title">Resumo da Conta</div>
-                    <!--div  class="pb-0" id="line"></div-->
                     <div class="form-group">
                     <form>
                         <fieldset>
-                           <!-- <div class="form-row">
-                                <div class="col-md-1 mb-3">
-                                    <label class="linhaassinaturas" type="nomenumero" for="inputnumero">Número</label>
-                                </div>
-                                <div class="col-md-2 mb-3">
-                                    <input type="text" class="form-control" placeholder="número">
-                                </div>
-                                <div class="col-md-1 offset-1 mb-3">
-                                    <label class="linhaassinaturas" type="nomenumero" for="inputcliente">Cliente </label>
-                                </div>
-                                <div class="col-md-7 mb-3">
-                                    <input type="text" class="form-control" placeholder="nome do cliente">
-                                </div>
-                            </div>
-                            <div  class="pb-0" id="linha"></div>-->
-
                             <div class="form-row" id="espac2">
 
                                     <label class="Pagamentos" style="font-size: 25px"> Pagamentos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><u>Ver todos</u></a>   </label>
@@ -79,17 +62,6 @@
 
                                     <div class="col-lg-10 offset-lg-1">
                                     <div class="form-group col-md-4">
-                                    <!--ul class="star_reputacao">
-                                            <div class="starsreputacao">
-                                                <div class="row">
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li> </div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star0.png" alt=""></a></li></div>
-
-                                            </div>
-                                    </div-->
 
                             </div>
                             <br /><br />
@@ -107,18 +79,6 @@
 
                                     <div class="col-lg-10 offset-lg-1">
                                     <div class="form-group col-md-4">
-                                    <!--ul class="star_reputacao">
-                                            <div class="starsreputacao">
-                                                <div class="row">
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li> </div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star0.png" alt=""></a></li></div>
-
-                                            </div>
-                                    </div-->
-
                             </div>
                             <br /><br />
 
