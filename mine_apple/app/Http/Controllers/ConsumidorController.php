@@ -146,14 +146,13 @@ class ConsumidorController extends Controller
         $item = Cart::content()->firstWhere('id', $request->id);
 
         if(empty($item)) {
-            Cart::add($request->id, $request->nome, 1, $request->preco, ['embalagem' => $request->embalagem]);
-            Cart::setTax(Cart::content()->firstWhere('id', $request->id)->rowId, 0);
-
-        }else {
+            $produto = Produto::find($request->id);
+            Cart::add($request->id, $request->nome, 1, $request->preco,
+                ['embalagem' => $request->embalagem, 'freteMax' => $produto->freteMax, 'produtor' => $produto->produtor_id]);
+        } else
             Cart::update($item->rowId, $item->qty+1);
-        }
 
-        return $this->getCarrinhoCompras();
+        return $this->getCarrinhoCompras(0);
     }
 
     /**
@@ -164,11 +163,10 @@ class ConsumidorController extends Controller
     public function removerDoCarrinho(Request $request) {
         $item = Cart::content()->firstWhere('id', $request->id);
 
-        if(!empty($item)) {
+        if(!empty($item))
             Cart::remove($item->rowId);
-        }
 
-        return $this->getCarrinhoCompras();
+        return $this->getCarrinhoCompras(0);
     }
 
     /**
@@ -380,52 +378,32 @@ class ConsumidorController extends Controller
      * @author
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function getCarrinhoCompras(){
-       //retorna todos os itens do carrinho
+    public function getCarrinhoCompras($frete){
        $itens = Cart::content();
        $subtotal = 0;
-       $frete = 0;
        $total = 0;
 
        if(!empty($itens)) {
-           //retorna o preço do subtotal
            $subtotal = Cart::subtotal();
-           $frete = Cart::tax();
-           $total = Cart::total();
+           $total = $subtotal + $frete;
        }
 
        return view('carrinho_de_compras', compact('itens', 'subtotal', 'frete', 'total'));
     }
 
     /**
+     * Atualiza o valor do frete de acordo com o cep digitado
+     *
      * @author Sesaque Oliveira
+     *
      * @param Request $request
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function atualizarCarrinho(Request $request) {
-        $itens = Cart::content();
+        return $this->getCarrinhoCompras(10);
 
-        if(!empty($itens) && Endereco::validarCep($request->cep)) {
-            foreach ($itens as $item) {
-                $produto = Produto::find($item->id);
-                $cepProdutor = $produto->produtor->endereco->numero_cep;
-
-                if(Endereco::validarTrajeto($cepProdutor, $request->cep)) {
-                    $distancia = Endereco::calcularDistancia($cepProdutor, $request->cep);
-                    $raioEntrega = $produto->produtor->raioEntrega;
-                    $freteMax = $produto->freteMax;
-                    $frete = Produtor::frete($raioEntrega, $distancia, $freteMax);
-
-                    Cart::setTax($item->rowId, $frete/$item->price);
-                }else {
-                    return ('Produto indiponível para a região'); //teste
-                }
-            }
-        }else {
-            return ('Cep inválido'); //teste
-        }
-
-        return $this->getCarrinhoCompras();
+       
     }
 
     /**
