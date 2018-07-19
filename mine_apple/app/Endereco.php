@@ -3,6 +3,7 @@
 namespace mine_apple;
 
 use Canducci\Cep\Cep;
+use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Database\Eloquent\Model;
 use TeamPickr\DistanceMatrix\DistanceMatrix;
 use TeamPickr\DistanceMatrix\Licenses\StandardLicense;
@@ -30,44 +31,61 @@ class Endereco extends Model
     }
 
     /**
-     * Valida o número do cep
+     * Valida o cep
+     *
+     * @author Sesaque Oliveira
      *
      * @param $cep 'cep' somente números
-     * @return bool
+     *
+     * @return string informações do cep
      */
     public static function validarCep($cep) {
-        if(preg_match("/^[0-9]{2}[0-9]{3}[0-9]{3}$/", $cep) > 0) //Valida o formato
-            return self::validarTrajeto($cep, $cep);
+        if(preg_match("/^[0-9]{2}[0-9]{3}[0-9]{3}$/", $cep) > 0) {
+            $http = new \GuzzleHttp\Client();
+            $url = 'https://viacep.com.br/ws/'.$cep.'/json/';
 
-        return false;
+            try {
+                $resposta = $http->request('GET', $url)->getBody();
+                $dados = json_decode($resposta);
+
+                if(!property_exists($dados, "erro"))
+                    return $dados;
+            } catch(GuzzleException $e) {}
+        }
+
+        return null;
     }
 
     /**
-     * Valida o trajeto
+     * Calcula a distância entre dois ceps
      *
-     * @param $origem 'rua, número, cep'
-     * @param $destino 'rua, número, cep'
-     * @return boolean
-     */
-    public static function validarTrajeto($origem, $destino) {
-        return self::distancia($origem, $destino)->successful();
-    }
-
-    /**
-     * Calcula a distância entre dois endereços
+     * @author Sesaque Oliveira
      *
-     * @param $origem 'rua, número, cep'
-     * @param $destino 'rua, número, cep'
+     * @param $origem 'cep'
+     * @param $destino 'cep'
+     *
      * @return integer distância em metros
      */
-    public static function calcularDistancia($origem, $destino) {
-        return self::distancia($origem, $destino)->distance();
-    }
+    public static function calcularDistancia($cep1, $cep2) {
+        $origem = self::validarCep($cep1);
+        $destino = self::validarCep($cep2);
 
-    private static function distancia($origem, $destino) {
-        $response = new DistanceMatrix(new StandardLicense('AIzaSyB04oYaUr3O4pgiKt957DkM5rd_NMuVPAU'));
-        $response->addOrigin($origem);
-        $response->addDestination($destino);
-        return $response->request()->rows()[0]->elements()[0];
+        if($origem != null && $destino != null) {
+            $origem = $origem->localidade.','.$origem->uf.','.$origem->cep;
+            $destino = $destino->localidade.','.$destino->uf.','.$destino->cep;
+
+            $http = new \GuzzleHttp\Client();
+            $url = 'https://maps.googleapis.com/maps/api/distancematrix/json?origins='.$origem.'&destinations='.$destino.'&key=AIzaSyB04oYaUr3O4pgiKt957DkM5rd_NMuVPAU';
+
+            try {
+                $resposta = $http->request('GET', $url)->getBody();
+                $dados = json_decode($resposta)->rows[0]->elements[0];
+
+                if(strcmp($dados->status,"OK") == 0)
+                    return $dados->distance->value;
+            } catch(GuzzleException $e) {}
+        }
+
+        return null;
     }
 }
