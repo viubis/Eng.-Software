@@ -85,6 +85,8 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get('relatorio/geral', 'AdministradorController@getRelatorioGeral');
 
+        Route::post('/backup/sistema', 'AdministradorController@dadosBackup')->name('backup');
+
     });
 
 

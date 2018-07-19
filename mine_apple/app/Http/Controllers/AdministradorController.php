@@ -15,6 +15,10 @@ use mine_apple\Estado;
 use mine_apple\Log;
 use mine_apple\Operacao;
 use PDF;
+use Artisan;
+use Storage;
+use Illuminate\Console\Scheduling\Schedule;
+use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
 class AdministradorController extends Controller
 {
@@ -90,5 +94,72 @@ class AdministradorController extends Controller
       $logs = Log::all();
       $pdf = PDF::loadView('relatorio_1', compact('logs'));
       return $pdf->download('relatorio_geral.pdf');
+    }
+
+    public function dadosBackup(Request $request){
+        date_default_timezone_set('America/Sao_Paulo');
+        $data = date('Y/m/d');
+
+        $arquivo = fopen('backup_dados.txt','w');
+        fwrite($arquivo, $request->horas.','.$request->frequencia.','.$data); 
+        fclose($arquivo);
+        return redirect()->back();
+    }
+
+    public function iniciarBackup(){
+        date_default_timezone_set('America/Sao_Paulo');
+        $dados = file('backup_dados.txt');
+        foreach ($dados as $linha) {
+            $linha = trim($linha);
+            $valor = explode(',', $linha);
+
+            $hora = $valor[0];
+            $frequencia = $valor[1];
+            $data = $valor[2];
+        }
+
+        if(strcmp($frequencia,'Uma vez por semana') == 0){
+            $timestamp = strtotime($data . "+7 days");
+            $dataAtual = date('Y/m/d');
+            $horaAtual = strtotime(date('H:i:s'));
+            $horaConvertida = strtotime($hora);
+
+            if($timestamp == $dataAtual && $horaConvertida >= $horaAtual){
+                try{
+                    Artisan::call('backup:run', ['--only-db' => true]);
+                }catch(Exception $exc){
+
+                }
+            }
+    
+        }elseif(strcmp($frequencia,'Uma vez por mês') == 0){
+            $timestamp = strtotime($data . "+31 days");
+            $dataAtual = strtotime(date('Y/m/d'));
+            $horaAtual = strtotime(date('H:i:s'));
+            $horaConvertida = strtotime($hora);
+
+            if($timestamp == $dataAtual && $horaConvertida >= $horaAtual){
+                try{
+                    Artisan::call('backup:run', ['--only-db' => true]);
+                }catch(Exception $exc){
+
+                }
+            }
+
+        }else{
+            $timestamp = strtotime($data . "+365 days");
+            $dataAtual = strtotime(date('Y/m/d'));
+            $horaAtual = strtotime(date('H:i:s'));
+            $horaConvertida = strtotime($hora);
+            
+            if($timestamp == $dataAtual && $horaConvertida >= $horaAtual){
+                try{
+                    Artisan::call('backup:run', ['--only-db' => true]);
+                }catch(Exception $exc){
+
+                }
+            }
+
+        }
     }
 }
