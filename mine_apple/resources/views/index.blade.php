@@ -268,10 +268,8 @@
                                     <!-- Slider Item -->
                                     <div class="featured_slider_item">
                                         <div class="border_active"></div>
-                                        <div
-                                            class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                            <div
-                                                class="product_image d-flex flex-column align-items-center justify-content-center">
+                                        <div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
                                                 <img src="{{asset('images/banana.jpg')}}" class="img-fluid" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 7,00<span>duzia</span></div>
@@ -308,7 +306,6 @@
                                                     </button>
                                                 </div>
                                             </div>
-                                            <div class=""><i class="fas fa-heart"></i></div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">novo</li>
@@ -335,7 +332,7 @@
                                             </div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
+                                                <li class="product_mark product_new">novo</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -383,7 +380,7 @@
                                             </div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
+                                                <li class="product_mark product_new">novo</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -480,7 +477,7 @@
                                             
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
-                                                <li class="product_mark product_new">new</li>
+                                                <li class="product_mark product_new">novo</li>
                                             </ul>
                                         </div>
                                     </div>
