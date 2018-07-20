@@ -69,7 +69,6 @@
                                                 @foreach($fotos as $foto)
                                                 <div class="col-md-3" style="height: 150px; width: 150px">
                                                     <img src="{{asset($foto->path)}}" class="img-thumbnail img-sm">
-                                                    <a style="color: #0d82d3" href="#">Remover imagem</a>
                                                 </div>
                                                 @endforeach
                                             </div>
@@ -250,85 +249,85 @@
                                         <div class="form-group">
                                             <div class="form-check form-check-inline">
                                                 @if($produto->seg==1)
-                                                    <input class="form-check-input" type="checkbox" id="segunda"
-                                                           value="1" checked name="seg">
+                                                    <input class="form-check-input" type="checkbox" id="checkboxSegunda"
+                                                           value="true" checked name="entrega[seg]">
                                                 @else
-                                                    <input class="form-check-input" type="checkbox" id="segunda"
-                                                    value="0" name="seg">
+                                                    <input class="form-check-input" type="checkbox" id="checkboxSegunda"
+                                                    value="true" name="entrega[seg]">
                                                 @endif
-                                                <label class="form-check-label" type="lab1" for="segunda">
+                                                <label class="form-check-label" type="lab1" for="checkboxSegunda">
                                                     Segunda-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 @if($produto->ter==1)
-                                                    <input class="form-check-input" type="checkbox" id="terca"
-                                                           value="1" checked name="ter" >
+                                                    <input class="form-check-input" type="checkbox" id="checkboxTerca"
+                                                           value="true" checked name="entrega[ter]" >
                                                 @else
-                                                    <input class="form-check-input" type="checkbox" id="terca"
-                                                           value="0" name="ter" >
+                                                    <input class="form-check-input" type="checkbox" id="checkboxTerca"
+                                                           value="true" name="entrega[ter]" >
                                                 @endif
-                                                <label class="form-check-label" type="lab1" for="terca">
+                                                <label class="form-check-label" type="lab1" for="checkboxTerca">
                                                     Terça-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 @if($produto->qua==1)
-                                                    <input class="form-check-input" type="checkbox" id="quarta"
-                                                           value="1" checked name="qua" >
+                                                    <input class="form-check-input" type="checkbox" id="checkboxQuarta"
+                                                           value="true" checked name="entrega[qua]" >
                                                 @else
-                                                    <input class="form-check-input" type="checkbox" id="quarta"
-                                                           value="0" name="qua" >
+                                                    <input class="form-check-input" type="checkbox" id="checkboxQuarta"
+                                                           value="true" name="entrega[qua]" >
                                                 @endif
-                                                <label class="form-check-label" type="lab1" for="quarta">
+                                                <label class="form-check-label" type="lab1" for="checkboxQuarta">
                                                     Quarta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 @if($produto->qui==1)
-                                                    <input class="form-check-input" type="checkbox" id="quinta"
-                                                           value="1" checked name="qui" >
+                                                    <input class="form-check-input" type="checkbox" id="checkboxQuinta"
+                                                           value="true" checked name="entrega[qui]" >
                                                 @else
-                                                    <input class="form-check-input" type="checkbox" id="quinta"
-                                                           value="0" name="qui" >
+                                                    <input class="form-check-input" type="checkbox" id="checkboxQuinta"
+                                                           value="true" name="entrega[qui]" >
                                                 @endif
-                                                <label class="form-check-label" type="lab1" for="quinta">
+                                                <label class="form-check-label" type="lab1" for="checkboxQuinta">
                                                     Quinta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 @if($produto->sex==1)
-                                                    <input class="form-check-input" type="checkbox" id="sexta"
-                                                           value="1" checked name="sex" >
+                                                    <input class="form-check-input" type="checkbox" id="checkboxSexta"
+                                                           value="true" checked name="entrega[sex]" >
                                                 @else
-                                                    <input class="form-check-input" type="checkbox" id="sexta"
-                                                           value="0" name="sex" >
+                                                    <input class="form-check-input" type="checkbox" id="checkboxSexta"
+                                                           value="true" name="entrega[sex]" >
                                                 @endif
-                                                <label class="form-check-label" type="lab1" for="sexta">
+                                                <label class="form-check-label" type="lab1" for="checkboxSexta">
                                                     Sexta-feira
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 @if($produto->sab==1)
-                                                    <input class="form-check-input" type="checkbox" id="sabado"
-                                                           value="1" checked name="sab" >
+                                                    <input class="form-check-input" type="checkbox" id="checkboxSabado"
+                                                           value="true" checked name="entrega[sab]" >
                                                 @else
-                                                    <input class="form-check-input" type="checkbox" id="sabado"
-                                                           value="0" name="sab" >
+                                                    <input class="form-check-input" type="checkbox" id="checkboxSabado"
+                                                           value="true" name="entrega[sab]" >
                                                 @endif
-                                                <label class="form-check-label" type="lab1" for="sabado">
+                                                <label class="form-check-label" type="lab1" for="checkboxSabado">
                                                     Sábado
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 @if($produto->dom==1)
-                                                    <input class="form-check-input" type="checkbox" id="domingo"
-                                                           value="1" checked name="dom" >
+                                                    <input class="form-check-input" type="checkbox" id="checkboxDomingo"
+                                                           value="true" checked name="entrega[dom]" >
                                                 @else
-                                                    <input class="form-check-input" type="checkbox" id="domingo"
-                                                           value="0" name="dom" >
+                                                    <input class="form-check-input" type="checkbox" id="checkboxDomingo"
+                                                           value="true" name="entrega[dom]" >
                                                 @endif
-                                                <label class="form-check-label" type="lab1" for="domingo">
+                                                <label class="form-check-label" type="lab1" for="checkboxDomingo">
                                                     Domingo
                                                 </label>
                                             </div>

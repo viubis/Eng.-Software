@@ -123,7 +123,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4">
-                                <label class="novoProduto"><a href=""><u>Cadastrar Produto</u></a></label>
+                                <label class="novoProduto"><a href="{{url('/produtor/cadastrar_produto')}}"><u>Cadastrar Produto</u></a></label>
                             </div>
                         </div>
                     </div>

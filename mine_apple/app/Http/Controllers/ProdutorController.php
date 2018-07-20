@@ -175,10 +175,14 @@ class ProdutorController extends Controller
         $nomeImagem = $produto->produtor_id . '_' . $produto->id . '.' . $request->imagem->getClientOriginalExtension();
         $request->imagem->storeAs('produto_imagens', $nomeImagem);
 
+        $categoria = Categoria::where('id', '=', $produto->categoria_id)->first();
+
         $foto = new Foto();
         $foto->produto_id = $produto->id;
-        $foto->path = "storage/produto_imagens/" . $nomeImagem;
+        $foto->path = "images/".$categoria->nome."/".$nomeImagem;
         $foto->save();
+
+        move_uploaded_file($nomeImagem,'images/'.$categoria->nome);
 
         date_default_timezone_set('America/Sao_Paulo');
         $data = date('Y/m/d');
@@ -189,9 +193,7 @@ class ProdutorController extends Controller
         $log->data = $data;
         $log->hora = $hora;
         $log->save();
-
-
-        return redirect()->route('produto.cadastrar');
+        return redirect()->route('meusProdutos');
     }
 
     /**
@@ -211,6 +213,10 @@ class ProdutorController extends Controller
     public function alterarInfoProduto(Request $request){
         $dados = $request->all();
         $produto = Produto::where('id', '=', $request->id)->first();
+        $produto->update(['seg' => 0, 'ter' => 0, 'qua' => 0, 'qui' => 0, 'sex' => 0, 'sab' => 0, 'dom' => 0]);
+        foreach ($request->entrega as $dia => $status) {
+            $produto[$dia] = true;
+        }
         $produto->update($dados);
 
         date_default_timezone_set('America/Sao_Paulo');

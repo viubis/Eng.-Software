@@ -99,7 +99,7 @@ Route::middleware(['auth'])->group(function () {
 
         Route::post('/produtor/alterar', 'ProdutorController@alterarProdutor')->name('produtor.alterar');
 
-        Route::view('/produtor/cadastrar_produto', 'produtor.produto_cadastrar')->name('produto.cadastrar');
+        Route::view('/produtor/cadastrar_produto', 'cadastro_de_produtos')->name('produto.cadastrar');
         Route::post('/produtor/cadastrar_produto', 'ProdutorController@cadastrarProduto');
 
         Route::get('/produtor/alterar_produto/{id}', 'ProdutorController@editarProduto')->where('id', '[0-9]+')->name('produto.alterar');
@@ -114,7 +114,7 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get('/resumo/conta', 'ProdutorController@resumoConta');
 
-        Route::get('/meusProdutos', 'ProdutorController@meusProdutos');
+        Route::get('/meusProdutos', 'ProdutorController@meusProdutos')->name('meusProdutos');
 
         Route::get('/assinaturas', 'ProdutorController@assinaturas');
 
