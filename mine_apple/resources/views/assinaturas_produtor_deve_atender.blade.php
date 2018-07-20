@@ -51,10 +51,10 @@
         <div class="top-content">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 ">
-                        <div class="contact_form_title">Assinaturas</div>
+                    <div class="col-lg-10 offset-lg-1">
+                        <div class="contact_form_title text-center col-12">Assinaturas</div>
                         <div class="table-responsive">
-                            <table class="table" id="tabela">
+                            <table class="table table-striped table-bordered table-hover" id="tabela">
                                 <thead><!--class="thead-light"-->
                                 <tr>
                                     <th scope="col" class="corlinha">ID assinatura</th>
@@ -63,8 +63,6 @@
                                     <th scope="col" class="corlinha">Quantidade</th>
                                     <th scope="col" class="corlinha">Dias de entrega</th>
                                     <th scope="col" class="corlinha">Frequência</th>
-
-
                                 </tr>
                                 </thead>
                                 <tbody>
