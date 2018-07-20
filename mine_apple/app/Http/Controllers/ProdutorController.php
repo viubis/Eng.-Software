@@ -172,18 +172,47 @@ class ProdutorController extends Controller
         //Salva a imagem
         Foto::where('produto_id', $produto->id)->delete();
 
-        $nomeImagem = $produto->nome . '_' . $produto->id . '.' . $request->imagem->getClientOriginalExtension();
-        $request->imagem->storeAs('produto_imagens', $nomeImagem);
+        if($request->imagem1 != null) {
+            $nomeImagem = $produto->nome . '_' . $produto->id . '.' . $request->imagem1->getClientOriginalExtension();
+            $request->imagem1->storeAs('produto_imagens', $nomeImagem);
+            $categoria = Categoria::where('id', '=', $produto->categoria_id)->first();
 
-        $categoria = Categoria::where('id', '=', $produto->categoria_id)->first();
+            $foto = new Foto();
+            $foto->produto_id = $produto->id;
+            $foto->path = "images/" . $categoria->nome . "/" . $nomeImagem;
+            $foto->save();
 
-        $foto = new Foto();
-        $foto->produto_id = $produto->id;
-        $foto->path = "images/".$categoria->nome."/".$nomeImagem;
-        $foto->save();
+            $tmpName = $_FILES['imagem1']['tmp_name']; // Recebe o arquivo temporário.
+            move_uploaded_file($tmpName, "images/" . $categoria->nome . "/" . $nomeImagem);
+        }
+        if($request->imagem2 != null) {
+            $nomeImagem = $produto->nome . '_' . $produto->id . '.' . $request->imagem2->getClientOriginalExtension();
+            $request->imagem2->storeAs('produto_imagens', $nomeImagem);
+            $categoria = Categoria::where('id', '=', $produto->categoria_id)->first();
 
-        $tmpName = $_FILES['imagem']['tmp_name']; // Recebe o arquivo temporário.
-        move_uploaded_file( $tmpName, "images/".$categoria->nome."/".$nomeImagem );
+            $foto = new Foto();
+            $foto->produto_id = $produto->id;
+            $foto->path = "images/" . $categoria->nome . "/" . $nomeImagem;
+            $foto->save();
+
+            $tmpName = $_FILES['imagem2']['tmp_name']; // Recebe o arquivo temporário.
+            move_uploaded_file($tmpName, "images/" . $categoria->nome . "/" . $nomeImagem);
+        }
+
+        if($request->imagem3 != null) {
+            $nomeImagem = $produto->nome . '_' . $produto->id . '.' . $request->imagem3->getClientOriginalExtension();
+            $request->imagem3->storeAs('produto_imagens', $nomeImagem);
+            $categoria = Categoria::where('id', '=', $produto->categoria_id)->first();
+
+            $foto = new Foto();
+            $foto->produto_id = $produto->id;
+            $foto->path = "images/" . $categoria->nome . "/" . $nomeImagem;
+            $foto->save();
+
+            $tmpName = $_FILES['imagem3']['tmp_name']; // Recebe o arquivo temporário.
+            move_uploaded_file($tmpName, "images/" . $categoria->nome . "/" . $nomeImagem);
+        }
+
 
 
         date_default_timezone_set('America/Sao_Paulo');

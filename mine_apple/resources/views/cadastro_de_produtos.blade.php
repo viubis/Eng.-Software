@@ -60,7 +60,7 @@
                                 <div class="form-row item" id="formulario">
                                     <div class="col-md-12 mb-3">
                                         <label for="form-control">Adicione imagens do seu produto:</label>
-                                        <input id="item" type="file" style="margin-bottom: 10px" name="imagem" accept="image/*" class="form-control">
+                                        <input id="item" type="file" style="margin-bottom: 10px" name="imagem1" accept="image/*" class="form-control">
                                     </div>
                                 </div>
                                 <input style="font-size: 15px; margin-bottom: 20px; margin-top: -10px" type="button" class="btn-circle" id="novaImg" value="Nova imagem"/>

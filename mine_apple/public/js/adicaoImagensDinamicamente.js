@@ -1,10 +1,17 @@
 $(document).ready(function(){
-    var itemCont = 1;
+    var itemCont = 2;
     $("#novaImg").click(function(){
-        var novoItem = $("#item").clone();
+        if(itemCont<4) {
+            var novoItem = $("#item").clone();
+            $(novoItem).attr("name", "imagem" + itemCont);
 
-        var novoSelect = $(novoItem).children()[3];
+            var novoSelect = $(novoItem).children()[3];
 
-        $("#formulario").append(novoItem);
+            $("#formulario").append(novoItem);
+            itemCont++;
+        }
+        else{
+            alert("É possível cadastrar, no máximo, 3 imagens.");
+        }
     });
 });

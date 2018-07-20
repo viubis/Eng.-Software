@@ -65,10 +65,11 @@
                                                 $fotos = \mine_apple\Foto::where('produto_id', '=', $produto->id)->get();
                                             @endphp
                                             <label for="form-control">Imagens do seu produto:</label>
-                                            <div class="row">
+                                            <div class="row pb-3">
                                                 @foreach($fotos as $foto)
-                                                <div class="col-md-3" style="height: 150px; width: 150px">
-                                                    <img src="{{asset($foto->path)}}" class="img-thumbnail img-sm">
+                                                <div class="col-md-3" style="height: 150px; width: 150px;overflow: hidden">
+                                                    <img src="{{asset($foto->path)}}"
+                                                         class="img-thumbnail img-sm">
                                                 </div>
                                                 @endforeach
                                             </div>
