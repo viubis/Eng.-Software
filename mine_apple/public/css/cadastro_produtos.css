@@ -3968,12 +3968,10 @@ input.form-control textarea{
 }
 
 .form-row[type="row1"]{
-    text-align: left;
+    text-align: center;
     text-indent: 2px;
     padding-left: 15px;
     font-weight: 200;
-    padding-bottom: 50px;
-
 
 }
 .form-row[type="ent"]{

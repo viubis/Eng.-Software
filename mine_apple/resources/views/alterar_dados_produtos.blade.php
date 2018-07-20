@@ -52,7 +52,7 @@
         <!--  <div class="inner-bg">-->
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 offset-lg-1">
+                <div class="col-lg-8 offset-lg-2" style="box-shadow: 1px 1px 5px 0px #d6d6d6; padding: 20px">
                     <div class="contact_form_container">
                         <div class="contact_form_title">Alterar informações do produto</div>
                         <form role="form" action="{{route('produto.alterar', $produto->id)}}" method="post" class="registration-form">
@@ -97,14 +97,14 @@
 
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
-                                        <label class="sr-only" for="nome">Nome</label>
+                                        <label class="" for="nome">Nome</label>
                                         <input type="text" name="nome" placeholder="Nome do Produto..."
                                                class="form-first-name form-control" id="nome" value="{{$produto->nome}}">
                                     </div>
 
 
                                     <div class="col-md-6 mb-3">
-                                        <label class="sr-only" for="qtd">Quantidade produzida por dia</label>
+                                        <label class="" for="qtd">Quantidade produzida por dia</label>
                                         <input type="number" min="1" max="999" name="maxPorDia"
                                                placeholder="Quantidade produzida por dia..."
                                                value="{{$produto->maxPorDia}}"
@@ -114,21 +114,21 @@
 
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
-                                        <label class="sr-only" for="qtdmin">Quantidade mínima por assinatura</label>
+                                        <label class="" for="qtdmin">Quantidade mínima por assinatura</label>
                                         <input type="number" min="1" max="999" name="minPorAssinatura"
                                                placeholder="Quantidade mínima de produtos por assinatura..."
                                                value="{{$produto->minPorAssinatura}}"
                                                class="form-first-name form-control" id="qtdmin">
                                     </div>
                                     <div class="col-md-4 mb-3">
-                                        <label class="sr-only" for="frete">Valor máximo de frete</label>
+                                        <label class="" for="frete">Valor máximo de frete (R$)</label>
                                         <input type="number" step="0.01" min="0.01" max="999.00" name="freteMax"
                                                placeholder="Valor máximo de frete..."
                                                value="{{$produto->freteMax}}"
                                                class="form-first-name form-control" id="frete">
                                     </div>
                                     <div class="col-md-2 mb-3">
-                                        <label class="sr-only" for="valor">Valor</label>
+                                        <label class="" for="valor">Valor (R$)</label>
                                         <input type="number" step="0.01" min="0.01" max="999.00" name="valor"
                                                placeholder="Valor..."
                                                value="{{$produto->valor}}"
@@ -138,6 +138,7 @@
 
                                 <div class="form-row">
                                     <div class="col-md-12 mb-3">
+                                        <label class="" for="descricao">Descrição</label>
                                         <div class="form-group">
                                             <textarea class="form-control" rows="5" id="comment" name="descricao"
                                                       placeholder="Descrição do produto... ">{{$produto->descricao}}

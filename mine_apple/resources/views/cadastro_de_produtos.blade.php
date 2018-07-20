@@ -50,7 +50,7 @@
         <!--  <div class="inner-bg">-->
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 offset-lg-1">
+                <div class="col-lg-8 offset-lg-2" style="box-shadow: 1px 1px 5px 0px #d6d6d6; padding: 20px">
                     <div class="contact_form_container">
                         <div class="contact_form_title">Cadastro de Produto</div>
                         <form role="form" action="{{route('produto.cadastrar')}}" method="post" enctype="multipart/form-data" class="registration-form">
@@ -93,14 +93,14 @@
 
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
-                                        <label class="sr-only" for="nome">Nome</label>
+                                        <label class="" for="nome">Nome</label>
                                         <input type="text" placeholder="Nome do Produto..."
                                                class="form-control" name="nome">
                                     </div>
 
 
                                     <div class="col-md-6 mb-3">
-                                        <label class="sr-only" for="qtd">Quantidade produzida por dia</label>
+                                        <label class="" for="qtd">Quantidade produzida por dia</label>
                                         <input type="number" min="1"
                                                placeholder="Quantidade produzida por dia..."
                                                class="form-control" name="maxPorDia">
@@ -109,19 +109,19 @@
 
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
-                                        <label class="sr-only" for="qtdmin">Quantidade mínima por assinatura</label>
+                                        <label class="" for="qtdmin">Quantidade mínima por assinatura</label>
                                         <input type="number" min="1"
                                                placeholder="Quantidade mínima de produtos por assinatura..."
                                                class="form-control" name="minPorAssinatura">
                                     </div>
                                     <div class="col-md-4 mb-3">
-                                        <label class="sr-only" for="frete">Valor máximo de frete</label>
+                                        <label class="" for="frete">Valor máximo de frete (R$)</label>
                                         <input type="number" step="0.1" min="0"
                                                placeholder="Valor máximo de frete..."
                                                class="form-control" name="freteMax">
                                     </div>
                                     <div class="col-md-2 mb-3">
-                                        <label class="sr-only" for="valor">Valor</label>
+                                        <label class="" for="valor">Valor (R$)</label>
                                         <input type="number" step="0.01" min="0.0"
                                                placeholder="Valor..."
                                                class="form-control" name="valor">
@@ -130,6 +130,7 @@
 
                                 <div class="form-row">
                                     <div class="col-md-12 mb-3">
+                                        <label class="" for="descricao">Descrição</label>
                                         <div class="form-group">
                                             <textarea class="form-control" name="descricao" rows="5" id="comment" placeholder="Descrição do produto... "></textarea>
                                         </div>
