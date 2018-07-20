@@ -94,7 +94,7 @@
                         <div class="cart">
                             <div class="cart_container d-flex flex-row align-items-center justify-content-end">
                                 <div class="cart_icon">
-                                    <a href="{{url('/carrinho_de_compras')}}">
+                                    <a href="{{url("/carrinho_de_compras")}}">
                                         <i class="fa fa-shopping-basket fa-3x" style="color: #000000"></i>
                                     </a>
                                     <div class="cart_count"><span>0</span></div>
