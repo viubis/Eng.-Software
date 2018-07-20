@@ -72,35 +72,35 @@
                         </div>
 
                         <form role="form" action="{{route('backup')}}" method="post">
-                        @csrf 
-                        <div class="form-row">
-                            <div >Backup</div>
-                            <div  class="pb-0" id="line"> </div>
-                        </div>
+                            @csrf 
+                            <div class="form-row">
+                                <div >Backup</div>
+                                <div  class="pb-0" id="line"> </div>
+                            </div>
 
-                        <div class="row" align="center">
-                            <div class="form-group col-md-4 pl-xl-5 pr-0" align="right">
-                                <label for="frequencia" class="pl-xl-5">Frequência: </label>
+                            <div class="row" align="center">
+                                <div class="form-group col-md-4 pl-xl-5 pr-0" align="right">
+                                    <label for="frequencia" class="pl-xl-5">Frequência: </label>
+                                </div>
+                                <div class="form-group col-md-3 pl-0">
+                                    <select multiple class="form-control" size="2" id="frequencia" name="frequencia" value="{{old('frequecia')}}" required>
+                                        <option>Uma vez por semana</option>
+                                        <option>Uma vez por mês</option>
+                                        <option>Uma vez por ano</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="form-group col-md-3 pl-0">
-                                <select multiple class="form-control" size="2" id="frequencia" name="frequencia" value="{{old('frequecia')}}">
-                                    <option>Uma vez por semana</option>
-                                    <option>Uma vez por mês</option>
-                                    <option>Uma vez por ano</option>
-                                </select>
+                            <div class="row" align="center">
+                                <div class="form-group col-md-4 pl-xl-5 pr-0" align="right">
+                                    <label for="horario" class="pl-xl-5">Horário: </label>
+                                </div>
+                                <div class="form-group col-md-3 pl-0">
+                                    <input type="text" name="horas" maxlength="8" onkeypress="valida_horas(this)" value="{{old('horas')}}" required>
+                                </div>
+                                <div class="form-group col-md-2 pl-0">
+                                    <button type="submit" class="btn btn-primary">Definir</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row" align="center">
-                            <div class="form-group col-md-4 pl-xl-5 pr-0" align="right">
-                                <label for="horario" class="pl-xl-5">Horário: </label>
-                            </div>
-                            <div class="form-group col-md-3 pl-0">
-                                <input type="text" name="horas" maxlength="8" onkeypress="valida_horas(this)" value="{{old('horas')}}">
-                            </div>
-                            <div class="form-group col-md-2 pl-0">
-                                <button type="submit" class="btn btn-primary">Definir</button>
-                            </div>
-                        </div>
                         </form>
 
                         <div class="form-row">
