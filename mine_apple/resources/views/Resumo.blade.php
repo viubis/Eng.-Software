@@ -93,12 +93,13 @@
                                     <div class="card w-50">
                                         <div class="card-body">
                                             <h4 class="card-title">Disponivel R$500,00</h4>
-                                            <div  class="pb-0" id="line"> </div>
+                                            <div class="pb-0" id="line"> </div>
                                             <p class="card-text"><input type="text" class="form-control" id="valor" name="valorDisponivel" placeholder="Valor"></p>
-                                            <div  class="pb-0" id="line"> </div>
+                                            <div class="pb-0" id="line"> </div>
                                             <h4>Conta Bancaria</h4>
-                                            <p>Banco do Basil S.A</p>
-                                            <p>0443,Feira de Santana <p>0078524</p> </p>
+                                            <p style="margin-bottom: 0">Banco do Basil S.A</p>
+                                            <p style="margin-bottom: 0">0443,Feira de Santana</p>
+                                            <p>0078524</p>
 
                                             <a href="#" type="submit" class="btn btn-secondary">Transferir</a>
                                         </div>
