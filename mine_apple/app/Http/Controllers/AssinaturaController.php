@@ -18,7 +18,7 @@ class AssinaturaController
     /**
      * @author Victória Gomes e Bruno Claudino
      * @param Request $request
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      *
      *
      * O request para completar a assinatura retorna o id do a ser utilizado no pagamento (em teoria).
@@ -56,8 +56,8 @@ class AssinaturaController
 
     /**
      * @author Victória Gomes e Bruno Claudino
-     * @param Request $request
-     * @return string
+     * @param $produtos
+     * 
      *
      * Após a realização da assinatura, esse método é chamado e ele recebe um array contendo os produtos da assinatura
      * que acabou de ser ativada. Pega-se o id do produtor contido em cada produto, com isso busca-se a finança do produtor e
@@ -75,7 +75,8 @@ class AssinaturaController
     }
 
     /**
-     * @author Victória Oliveira Gomes
+     * Verifica um cartão
+     * @author Victória Gomes
      * @param $infos
      * @return string
      */
