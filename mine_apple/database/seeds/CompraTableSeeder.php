@@ -14,6 +14,7 @@ class CompraTableSeeder extends Seeder
     {
         Compra::create([
         	'consumidor_endereco_id' => 1,
+        	'consumidor_id' =>1,
         	'data' => '2018-07-05',
         	'hora' => '15:10:00',
         	'valor' => 20.0,
@@ -22,6 +23,7 @@ class CompraTableSeeder extends Seeder
 
         Compra::create([
         	'consumidor_endereco_id' => 1,
+            'consumidor_id' =>1,
         	'data' => '2018-08-05',
         	'hora' => '17:10:00',
         	'valor' => 20.0,
