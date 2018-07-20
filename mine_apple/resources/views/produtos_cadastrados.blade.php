@@ -50,12 +50,10 @@
         <div class="top-content">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 ">
-                        <div class="contact_form_title">Meus Produtos</div>
-                        <div class="row">
-                        </div>
+                    <div class="col-lg-10 offset-lg-1 ">
+                        <div class="contact_form_title text-center col-12">Meus Produtos</div>
                         <div class="table-responsive">
-                                <table class="table" id="tabela">
+                                <table class="table table-striped table-bordered table-hover" id="tabela">
                                 <thead><!--class="thead-light"-->
                                 <tr>
                                     <th scope="col" class="corlinha">Produto</th>
@@ -118,7 +116,7 @@
                             </table>
                         </div>
                         <div class="row">
-                            <div class="col-md-2">
+                            <div class="col-md-4">
                                 <label class="novoProduto"><a href=""><u>Cadastrar Produto</u></a></label>
                             </div>
                         </div>
@@ -131,10 +129,6 @@
 
 
     </main>
-
-
-
-
 
 
 
