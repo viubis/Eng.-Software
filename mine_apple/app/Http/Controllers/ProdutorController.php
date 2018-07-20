@@ -204,6 +204,13 @@ class ProdutorController extends Controller
         if($produto == null || $produto->produtor_id != Auth::user()->produtor->usuario_id)
             return redirect()->route('index');
 
+        return view('alterar_dados_produtos', compact('produto'));
+    }
+    public function alterarInfoProduto(Request $request){
+        $dados = $request->all();
+        $produto = Produto::where('id', $dados->id)->first();
+        $produto->update($dados);
+
         date_default_timezone_set('America/Sao_Paulo');
         $data = date('Y/m/d');
         $hora = date('H:i');
@@ -213,7 +220,9 @@ class ProdutorController extends Controller
         $log->data = $data;
         $log->hora = $hora;
         $log->save();
+
         return view('alterar_dados_produtos', compact('produto'));
+
     }
 
     /**
