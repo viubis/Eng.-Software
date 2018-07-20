@@ -52,6 +52,11 @@
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1 ">
                         <div class="contact_form_title text-center col-12">Meus Produtos</div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="novoProduto"><a href="{{url('/produtor/cadastrar_produto')}}"><u>Cadastrar novo produto</u></a></label>
+                            </div>
+                        </div>
                         <div class="table-responsive">
                                 <table class="table table-striped table-bordered table-hover" id="tabela">
                                 <thead><!--class="thead-light"-->
@@ -120,11 +125,6 @@
                             @endforeach
                                 </tbody>
                             </table>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <label class="novoProduto"><a href="{{url('/produtor/cadastrar_produto')}}"><u>Cadastrar Produto</u></a></label>
-                            </div>
                         </div>
                     </div>
                 </div>

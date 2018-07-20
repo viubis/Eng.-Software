@@ -73,7 +73,7 @@
                                                 </div>
                                                 @endforeach
                                             </div>
-                                            <input type="file" name="path" accept="image/*" class="form-control">
+                                            {{--<input type="file" name="path" accept="image/*" class="form-control">--}}
                                         </form>
                                     </div>
                                 </div>
