@@ -45,7 +45,7 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get('/gerenciamento/produtor', 'AdministradorController@getGerenciamentoProdutores');
 
-        Route::get('/gerenciamento/sistema', 'AdministradorController@getGerenciamentoSistema');
+        Route::get('/gerenciamento/sistema', 'AdministradorController@getGerenciamentoSistema')->name('gerenciamento_sistema');
 
         Route::post('/gerenciamento/produtor', 'AdministradorController@banirProdutor');
 
@@ -55,6 +55,8 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/relatorio/geral', 'AdministradorController@getRelatorioGeral');
 
         Route::post('/backup/sistema', 'AdministradorController@dadosBackup')->name('backup');
+
+        Route::get('/backup/deletar/{nomeArquivo}', 'AdministradorController@deletarBackup')->name('backup.deletar');
 
 
     });

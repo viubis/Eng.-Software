@@ -21,6 +21,7 @@ use Artisan;
 use Storage;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+USE Carbon\Carbon;
 
 class AdministradorController extends Controller
 {
@@ -68,7 +69,26 @@ class AdministradorController extends Controller
         $logs = Log::all();
     	$usuarios = User::all();
         $operacoes = Operacao::all();
-    	return view('gerenciamento_do_sistema', compact('usuarios', 'logs', 'operacoes'));
+
+        $disco = Storage::disk(config('backup.backup.destination.disks')[0]);
+        //var_dump($disco);
+        $arquivo = $disco->files(config('backup.backup.name'));
+        //var_dump($arquivo);
+        $backups = [];
+
+        foreach ($arquivo as $arq) {
+            if(substr($arq, -4) == '.zip' && $disco->exists($arq)){
+                $backups[] = [
+                    'file_path' => $arq,
+                    'file_name' => str_replace(config('backup.backup.name'). '/', '', $arq),
+                    'file_size' => $this->converterTamanho($disco->size($arq)),
+                    'last_modified' => $this->converterData($disco->lastModified($arq)),
+                ];
+            }
+        }
+        //var_dump($backups);
+        $backups = array_reverse($backups);
+    	return view('gerenciamento_do_sistema', compact('usuarios', 'logs', 'operacoes', 'backups'));
     }
 
     /**
@@ -156,9 +176,9 @@ class AdministradorController extends Controller
             $timestamp = strtotime($data . "+7 days"); //converte a data em um número e incrementa 7 a data armazenada (7 dias)
             $dataAtual = date('Y/m/d'); //recebe a data atual
             $horaAtual = strtotime(date('H:i:s')); //recebe o horário atual, e converte para um número
-            $horaConvertida = strtotime($hora); //converte a hora que estava no arqquivo em um número
+            $horaConvertida = strtotime($hora); //converte a hora que estava no arquivo em um número
 
-            //compara se passou 7 dias, e se o horário é maior ou igual ao que foi definido no backup
+            //compara se passou 1 semana, e se o horário é maior ou igual ao que foi definido no backup
             if($timestamp == $dataAtual && $horaConvertida >= $horaAtual){
                 try{
                     Artisan::call('backup:run', ['--only-db' => true]);// gera uma pasta com um arquivo .zip cque contem o bakup do banco de dados 
@@ -175,12 +195,12 @@ class AdministradorController extends Controller
 
         //Compara o valor armazenado na frequencia 
         }elseif(strcmp($frequencia,'Uma vez por mês') == 0){
-            $timestamp = strtotime($data . "+31 days"); //converte a data em um número e incrementa 31 a data armazenada (31 dias
+            $timestamp = strtotime($data . "+31 days"); //converte a data em um número e incrementa 31 a data armazenada (31 dias)
             $dataAtual = strtotime(date('Y/m/d')); //recebe a data atual
             $horaAtual = strtotime(date('H:i:s')); //recebe o horário atual, e converte para um número
-            $horaConvertida = strtotime($hora); //converte a hora que estava no arqquivo em um número
+            $horaConvertida = strtotime($hora); //converte a hora que estava no arquivo em um número
 
-            //compara se passou 31 dias, e se o horário é maior ou igual ao que foi definido no backup
+            //compara se passou 1 mês, e se o horário é maior ou igual ao que foi definido no backup
             if($timestamp == $dataAtual && $horaConvertida >= $horaAtual){
                 try{
                     Artisan::call('backup:run', ['--only-db' => true]); // gera uma pasta com um arquivo .zip cque contem o bakup do banco de dados 
@@ -195,20 +215,22 @@ class AdministradorController extends Controller
                 }
             }
 
+        //Compara o valor armazenado na frequencia 
         }elseif(strcmp($frequencia,'Uma vez por ano') == 0){
-            $timestamp = strtotime($data . "+365 days");
-            $dataAtual = strtotime(date('Y/m/d'));
-            $horaAtual = strtotime(date('H:i:s'));
-            $horaConvertida = strtotime($hora);
+            $timestamp = strtotime($data . "+365 days"); //converte a data em um número e incrementa 365 a data armazenada (365 dias)
+            $dataAtual = strtotime(date('Y/m/d')); //recebe a data atual
+            $horaAtual = strtotime(date('H:i:s')); //recebe o horário atual, e converte para um número
+            $horaConvertida = strtotime($hora); //converte a hora que estava no arquivo em um número
             
+            //compara se passou 1 ano, e se o horário é maior ou igual ao que foi definido no backup
             if($timestamp == $dataAtual && $horaConvertida >= $horaAtual){
                 try{
-                    Artisan::call('backup:run', ['--only-db' => true]);
+                    Artisan::call('backup:run', ['--only-db' => true]); // gera uma pasta com um arquivo .zip cque contem o bakup do banco de dados 
 
-                    $dat = date('Y/m/d');
-                    $arquiv = fopen('public/backup_dados.txt','w');
-                    fwrite($arquiv, $hora.','.$frequencia.','.$dat); 
-                    fclose($arquiv);
+                    $dat = date('Y/m/d'); //recebe data atual para que se possa verificar se passou 7 dias para o proximo backup
+                    $arquiv = fopen('public/backup_dados.txt','w'); // abre ou gera o arquivo
+                    fwrite($arquiv, $hora.','.$frequencia.','.$dat); //armazena os mesmos valores de (frequencia e horario) e armazena a data atual
+                    fclose($arquiv); //fecha o arquivo
 
                 }catch(Exception $exc){
 
@@ -218,5 +240,56 @@ class AdministradorController extends Controller
         }else{
             
         }
+    }
+
+
+    /**
+     * Deleta arquivo de backup
+     *
+     * @author Rafael
+     * @param $nomeArquiv
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * 
+     */
+    public function deletarBackup($nomeArquivo){
+        $disco = Storage::disk(config('backup.backup.destination.disks')[0]);
+        if($disco->exists(config('backup.backup.name') . '/' . $nomeArquivo)){
+            $disco->delete(config('backup.backup.name') . '/' . $nomeArquivo);
+            return redirect()->route('gerenciamento_sistema');
+        } else {
+            abort(404, "O arquivo de backup não existe");
+        }
+    }
+
+
+    /**
+     * Converte o tamanho do arquivo de deimal para o formato
+     * convencional
+     *
+     * @author Rafael
+     * @param $bytes e $decimal
+     * 
+     */
+    public function converterTamanho($bytes, $decimal = 2){
+
+        if($bytes < 1024){
+            return $byte. ' B';
+        }
+
+        $fator = floor(log($bytes, 1024));
+
+        return sprintf("%.{$decimal}f", $bytes / pow(2014, $fator)) . ['B', 'KB', 'MB', 'GB', 'TB', 'PB'][$fator];
+    }
+
+    /**
+     * Converte valor decimal da data para o formato date 
+     *
+     * @author Rafael
+     * @param Request $request
+     * 
+     */
+    public function converterData($data){
+        date_default_timezone_set('America/Sao_Paulo');
+        return Carbon::createFromTimeStamp($data)->formatLocalized('%d %b %Y %H:%M');
     }
 }

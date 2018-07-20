@@ -101,6 +101,9 @@
                                     <button type="submit" class="btn btn-primary">Definir</button>
                                 </div>
                             </div>
+                            <div class="form-group col-md-2 pl-0" align="center">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#backup">Verificar Backups</button>
+                            </div>
                         </form>
 
                         <div class="form-row">
@@ -108,62 +111,107 @@
                             <div  class="pb-0" id="line"> </div>
                         </div>
                         <div class="form-row text-center" align="center">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">>Verificar LOGs</button>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Verificar LOGs</button>
                         </div>
 
 
                     </div>
 
                     <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                      <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Logs</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                          </button>
-                      </div>
-                      <div class="modal-body">
-                        <div class="row" align="center">
-                            <!-- <div class="form-group col-md-4 pl-xl-5 pr-0" align="right"> -->
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                               <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Logs</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row" align="center">
+                                    <!-- <div class="form-group col-md-4 pl-xl-5 pr-0" align="right"> -->
 
-                                <table class="table">
-                                  <thead>
-                                    <tr>
-                                        <th scope="col">ID</th>
-                                      <th scope="col">Autor</th>
-                                      <th scope="col">Data</th>
-                                      <th scope="col">Hora</th>
-                                      <th scope="col">Operacao</th>
-                                  </tr>
-                              </thead>
-                              <tbody>
-                                <tr>@foreach($logs as $log)
-                        @php $operacao = $operacoes->where('id', '=', $log->operacao_id)->first() @endphp
-                        @php $usuario = $usuarios->where('id', '=', $log->usuario_id)->first() @endphp
-                                  <th scope="row">{{$log->usuario_id}}</th>
-                                  <td>{{$usuario->email}}</td>
-                                  <td>{{$log->data}}</td>
-                                  <td>{{$log->hora}}</td>
-                                  <td>{{$operacao->nome}}</td>
-                              </tr>
-                              @endforeach
-                          </tbody>
-                      </table>
-                  <!-- </div> -->
-              </div>
-
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">ID</th>
+                                                    <th scope="col">Autor</th>
+                                                    <th scope="col">Data</th>
+                                                    <th scope="col">Hora</th>
+                                                    <th scope="col">Operacao</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>@foreach($logs as $log)
+                                                    @php $operacao = $operacoes->where('id', '=', $log->operacao_id)->first() @endphp
+                                                    @php $usuario = $usuarios->where('id', '=', $log->usuario_id)->first() @endphp
+                                                      <th scope="row">{{$log->usuario_id}}</th>
+                                                      <td>{{$usuario->email}}</td>
+                                                      <td>{{$log->data}}</td>
+                                                      <td>{{$log->hora}}</td>
+                                                      <td>{{$operacao->nome}}</td>
+                                                </tr>
+                                                    @endforeach
+                                            </tbody>
+                                        </table>
+                          <!-- </div> -->
+                                    </div>
+                                </div>
+                        
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-</div>
-</div>
 
-</div>
-</div>
+        <!-- List Backups -->
+        <div class="modal fade" id="backup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Backups</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="row" align="center">
+                            <table class="table table-hover table-striped table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Nome do Arquivo</th>
+                                        <th>Tamanho</th>
+                                        <th>Data</th>
+                                        <th>Ação</th>
+                                    </tr>
+                                    <tbody>
+                                        @foreach($backups as $id => $backup)
+                                            <tr>   
+                                                <td>{{++$id}}</td>
+                                                <td>{{ $backup['file_name'] }}</td>
+                                                <td>{{ $backup['file_size'] }}</td>
+                                                <td>{{ $backup['last_modified'] }}</td>
+                                                <td><a href="{{route('backup.deletar', $backup['file_name'])}}" class="btn btn-danger btn-xs" class="fa fa-remove">Deletar</a></td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
 @include('layouts.footer')
 
