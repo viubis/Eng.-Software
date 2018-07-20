@@ -1576,7 +1576,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+                                    <div class="bestsellers_fav active"></div>
                                     <ul class="bestsellers_marks">
                                         <li class="bestsellers_mark bestsellers_discount">-25%</li>
                                         <li class="bestsellers_mark bestsellers_new">new</li>
@@ -1602,7 +1602,7 @@
 
 
                                     </div>
-                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+                                    <div class="bestsellers_fav"></i></div>
                                     <ul class="bestsellers_marks">
                                         <li class="bestsellers_mark bestsellers_discount">-25%</li>
                                         <li class="bestsellers_mark bestsellers_new">new</li>
@@ -1626,10 +1626,10 @@
 
                                         </div>
                                     </div>
-                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+                                    <div class="bestsellers_fav"></div>
                                     <ul class="bestsellers_marks">
                                         <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                        <li class="bestsellers_mark bestsellers_new">novo</li>
                                     </ul>
                                 </div>
 
@@ -1649,10 +1649,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+                                    <div class="bestsellers_fav"></div>
                                     <ul class="bestsellers_marks">
                                         <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                        <li class="bestsellers_mark bestsellers_new">novo</li>
                                     </ul>
                                 </div>
 
@@ -1676,7 +1676,7 @@
                                     <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
                                     <ul class="bestsellers_marks">
                                         <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                        <li class="bestsellers_mark bestsellers_new">novo</li>
                                     </ul>
                                 </div>
 
@@ -1697,7 +1697,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+                                    <div class="bestsellers_fav active"></div>
                                     <ul class="bestsellers_marks">
                                         <li class="bestsellers_mark bestsellers_discount">-25%</li>
                                         <li class="bestsellers_mark bestsellers_new">new</li>
@@ -1745,10 +1745,10 @@
 
                                         </div>
                                     </div>
-                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+                                    <div class="bestsellers_fav"></div>
                                     <ul class="bestsellers_marks">
                                         <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                        <li class="bestsellers_mark bestsellers_new">novo</li>
                                     </ul>
                                 </div>
 
@@ -1769,10 +1769,10 @@
 
                                         </div>
                                     </div>
-                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+                                    <div class="bestsellers_fav"></div>
                                     <ul class="bestsellers_marks">
                                         <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                        <li class="bestsellers_mark bestsellers_new">novo</li>
                                     </ul>
                                 </div>
 
@@ -1793,7 +1793,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+                                    <div class="bestsellers_fav"></div>
                                     <ul class="bestsellers_marks">
                                         <li class="bestsellers_mark bestsellers_discount">-25%</li>
                                         <li class="bestsellers_mark bestsellers_new">new</li>
@@ -1817,7 +1817,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+                                    <div class="bestsellers_fav active"></div>
                                     <ul class="bestsellers_marks">
                                         <li class="bestsellers_mark bestsellers_discount">-25%</li>
                                         <li class="bestsellers_mark bestsellers_new">new</li>
@@ -1841,7 +1841,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+                                    <div class="bestsellers_fav active"></div>
                                     <ul class="bestsellers_marks">
                                         <li class="bestsellers_mark bestsellers_discount">-25%</li>
                                         <li class="bestsellers_mark bestsellers_new">new</li>
@@ -1871,7 +1871,7 @@
                                             <div class="bestsellers_price discount">R$ 8,99<span>bandeja</span></div>
                                         </div>
                                     </div>
-                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+                                    <div class="bestsellers_fav active"></div>
                                     <ul class="bestsellers_marks">
                                         <li class="bestsellers_mark bestsellers_discount">-25%</li>
                                         <li class="bestsellers_mark bestsellers_new">new</li>
@@ -1893,10 +1893,10 @@
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
                                     </div>
-                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+                                    <div class="bestsellers_fav"></div>
                                     <ul class="bestsellers_marks">
                                         <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                        <li class="bestsellers_mark bestsellers_new">novo</li>
                                     </ul>
                                 </div>
 
