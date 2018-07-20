@@ -147,7 +147,7 @@
                             </div>
                             <ul class="page_menu_nav">
                                 <li class="page_menu_item">
-                                    <a style="font-size: 10px" href="{{url('/dados_cadastrais')}}">Meus Dados<i class="fa fa-angle-down"></i></a>
+                                    <a href="{{url('/dados_cadastrais')}}">Meus Dados<i class="fa fa-angle-down"></i></a>
                                 </li>
                                 <li class="page_menu_item">
                                     <a href="{{url('/resumo/conta')}}">Resumo da Conta<i class="fa fa-angle-down"></i></a>

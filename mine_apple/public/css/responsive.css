@@ -812,7 +812,15 @@
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+	.fonte25P{
+		font-size: 20px;
+		/*padding-right:40%;*/
+	}
+	.fonte25V{
+		font-size: 20px;
+	}
 }
+
 
 /************
 11. 539px
@@ -853,12 +861,25 @@
 @media only screen and (min-width: 768px) {
 	.container{
 		max-width:100%;
-
 	}
+
 }
 
 @media only screen and (min-width: 991px) {
 	.logo_container{
 		height: 95px;
 	}
+}
+
+@media only screen and (min-width: 319px) {
+    .fonte25P{
+        font-size:20px;
+    }
+    .fonte25V{
+        font-size:20px;
+    }
+}
+
+@media only screen and (max-width:376px){
+
 }

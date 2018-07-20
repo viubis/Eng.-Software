@@ -141,7 +141,7 @@ class AdministradorController extends Controller
                 }
             }
 
-        }else{
+        }elseif(strcmp($frequencia,'Uma vez por ano') == 0){
             $timestamp = strtotime($data . "+365 days");
             $dataAtual = strtotime(date('Y/m/d'));
             $horaAtual = strtotime(date('H:i:s'));
@@ -155,6 +155,8 @@ class AdministradorController extends Controller
                 }
             }
 
+        }else{
+            
         }
     }
 }

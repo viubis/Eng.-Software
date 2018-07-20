@@ -219,7 +219,7 @@
     </div>
 
     <!-- Footer -->
-    
+
     @include('layouts.footer')
 
     <!-- Copyright -->

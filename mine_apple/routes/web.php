@@ -103,6 +103,7 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/produtor/cadastrar_produto', 'ProdutorController@cadastrarProduto');
 
         Route::get('/produtor/alterar_produto/{id}', 'ProdutorController@editarProduto')->where('id', '[0-9]+')->name('produto.alterar');
+        Route::get('/produtor/infos_produto/{id}', 'ProdutorController@alterarInfosProdutos')->where('id', '[0-9]+')->name('produto.alterarInfo');
         Route::post('/produtor/alterar_produto/{id}', 'ProdutorController@cadastrarProduto');
 
         Route::get('/dados_cadastrais', 'ProdutorController@dadosCadastrais');

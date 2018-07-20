@@ -3,6 +3,7 @@
 namespace mine_apple\Console\Commands;
 
 use Illuminate\Console\Command;
+use Artisan;
 
 class AgendaBackup extends Command
 {
@@ -50,7 +51,6 @@ class AgendaBackup extends Command
 
         date_default_timezone_set('America/Sao_Paulo');
         $dados = file('public/backup_dados.txt');
-        var_dump($dados);
         foreach ($dados as $linha) {
             $linha = trim($linha);
             $valor = explode(',', $linha);
@@ -61,47 +61,70 @@ class AgendaBackup extends Command
         }
 
         if(strcmp($frequencia,'Uma vez por semana') == 0){
-            $timestamp = strtotime($data . "+7 days");
-            $dataAtual = date('Y/m/d');
+            $timestamp = strtotime($data);
+            $dataAtual = strtotime(date('Y/m/d'));
             $horaAtual = strtotime(date('H:i:s'));
             $horaConvertida = strtotime($hora);
+            $horaPos = strtotime(date('H:i:s'));
 
-            if($timestamp == $dataAtual && $horaConvertida >= $horaAtual){
+            echo 'Entou no if Uma vez por semana';
+            echo $timestamp.' '.$dataAtual;
+            if($timestamp == $dataAtual && $horaAtual <= $horaConvertida){
                 try{
                     Artisan::call('backup:run', ['--only-db' => true]);
-                }catch(Exception $exc){
 
+                    $dat = date('Y/m/d');
+                    $arquivo = fopen('public/backup_dados.txt','w');
+                    fwrite($arquivo, $hora.','.$frequencia.','.$dat); 
+                    fclose($arquivo);
+
+                }catch(Exception $exc){
+                    echo 'Entrou na Exceção';
                 }
             }
     
         }elseif(strcmp($frequencia,'Uma vez por mês') == 0){
-            $timestamp = strtotime($data . "+31 days");
+            $timestamp = strtotime($data);
             $dataAtual = strtotime(date('Y/m/d'));
             $horaAtual = strtotime(date('H:i:s'));
             $horaConvertida = strtotime($hora);
 
-            if($timestamp == $dataAtual && $horaConvertida >= $horaAtual){
+            if($timestamp == $dataAtual && $horaAtual <= $horaConvertida){
                 try{
                     Artisan::call('backup:run', ['--only-db' => true]);
-                }catch(Exception $exc){
 
+                    $dat = date('Y/m/d');
+                    $arquivo = fopen('public/backup_dados.txt','w');
+                    fwrite($arquivo, $hora.','.$frequencia.','.$dat); 
+                    fclose($arquivo);
+                    
+                }catch(Exception $exc){
+                    echo 'Entrou na Exceção';
+                }
+            }
+
+        }elseif(strcmp($frequencia,'Uma vez por ano') == 0){
+            $timestamp = strtotime($data);
+            $dataAtual = strtotime(date('Y/m/d'));
+            $horaAtual = strtotime(date('H:i:s'));
+            $horaConvertida = strtotime($hora);
+
+            if($timestamp == $dataAtual && $horaAtual <= $horaConvertida){
+                try{
+                    Artisan::call('backup:run', ['--only-db' => true]);
+
+                    $dat = date('Y/m/d');
+                    $arquivo = fopen('public/backup_dados.txt','w');
+                    fwrite($arquivo, $hora.','.$frequencia.','.$dat); 
+                    fclose($arquivo);
+
+                }catch(Exception $exc){
+                    echo 'Entrou na Exceção';
                 }
             }
 
         }else{
-            $timestamp = strtotime($data . "+365 days");
-            $dataAtual = strtotime(date('Y/m/d'));
-            $horaAtual = strtotime(date('H:i:s'));
-            $horaConvertida = strtotime($hora);
-            
-            if($timestamp == $dataAtual && $horaConvertida >= $horaAtual){
-                try{
-                    Artisan::call('backup:run', ['--only-db' => true]);
-                }catch(Exception $exc){
-
-                }
-            }
-
+            echo 'Nenhuma ação';
         }
     }
 }

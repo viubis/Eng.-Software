@@ -49,167 +49,69 @@
     <div class="top-content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 offset-lg-1">
+                <div class="col-lg-8 offset-lg-2">
                     <div class="contact_form_title">Resumo da Conta</div>
                     <div class="form-group">
-                    <form>
-                        <fieldset>
-                            <div class="form-row" id="espac2">
+                        <form>
+                            <fieldset>
+                                <div class="form-row">
+                                    <div class="alinhamentosub col-12 text-justify">
+                                        <label class="fonte25P col-6 ">Pagamentos</label>
+                                        <a href="" class="fonte25V col-3"><u>Ver todos</u></a>
+                                    </div>
 
-                                    <label class="Pagamentos" style="font-size: 25px"> Pagamentos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><u>Ver todos</u></a>   </label>
                                     <div  class="pb-0" id="line"> </div>
-                                    <label class="Pagamentos" style="font-size: 15px">   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><u>1 Em Analise</u></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><u>2 Pendentes</u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><u>0 Aprovados</u></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   </label>
+                                    <div class="col-12 text-center" style="font-size: 15px;padding-top:10px;margin-bottom: 60px">
+                                            <a href=""><u>1 Em Analise</u></a>
+                                            <a class="offset-1" href=""><u>2 Pendentes</u></a>
+                                            <a class=" offset-1" href=""><u>0 Aprovados</u></a>
+                                    </div>
+                                </div>
 
-                                    <div class="col-lg-10 offset-lg-1">
-                                    <div class="form-group col-md-4">
-
-                            </div>
-                            <br /><br />
-
-
-                                </ul>
-
-                            </div>
-
-                            <div class="form-row" id="espac2">
-
-                                    <label class="Recebimentos" style="font-size: 25px"> Recebimentos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><u>Ver todos</u></a>   </label>
+                                <div class="form-row">
+                                    <div class="alinhamentosub col-12 text-justify">
+                                        <label class="fonte25P col-6">Recebimentos</label>
+                                        <a href="" class="fonte25V col-3"><u>Ver todos</u></a>
+                                    </div>
                                     <div  class="pb-0" id="line"> </div>
-                                    <label class="Recebimentos" style="font-size: 15px">   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><u>5 Em Analise</u></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><u>3 Pendentes</u></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><u>1 Aprovados</u></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   </label>
+                                    <div class="col-12 text-center" style="font-size: 15px;padding-top:10px;margin-bottom: 120px">
+                                        <a href=""><u>5 Em Analise</u></a>
+                                        <a class="offset-1" href=""><u>3 Pendentes</u></a>
+                                        <a class="offset-1" href=""><u>1 Aprovados</u></a>
+                                    </div>
+                                </div>
 
-                                    <div class="col-lg-10 offset-lg-1">
-                                    <div class="form-group col-md-4">
-                            </div>
-                            <br /><br />
-
-
-                                </ul>
-
-                            </div>
-                            <div class="form-row" id="espac2">
-
-                                    <label class="Saldo" style="font-size: 25px"> Saldo no Mineapple  <a href="#" data-toggle="tooltip" title="Tranfira os valores obtidos aqui para sua conta principal. Você ainda tem direiro a uma transferência grátis.Após isso,pagará R$0,50 por transação">?</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
-
-                                        <script>
-                                                $(document).ready(function(){
-                                                    $('[data-toggle="tooltip"]').tooltip();
-                                                });
-                                                </script>
+                                <div class="form-row" id="espac2">
+                                    <label class="Saldo" style="font-size: 25px"> Saldo no Mineapple  <a href="#" data-toggle="tooltip" title="Tranfira os valores obtidos aqui para sua conta principal. Você ainda tem direito a uma transferência grátis.Após isso,pagará R$0,50 por transação.">?</a></label>
+                                    <script>
+                                        $(document).ready(function(){
+                                            $('[data-toggle="tooltip"]').tooltip();
+                                        });
+                                    </script>
                                     <div  class="pb-0" id="line"> </div>
 
                                     <div class="card w-50">
-                                            <div class="card-body">
-                                              <h4 class="card-title">Disponivel          R$500,00</h4>
-                                              <div  class="pb-0" id="line"> </div>
-                                              <p class="card-text"><input type="text" class="form-control" id="valor" name="valorDisponivel" placeholder="Valor">
-                                              </p>
-                                              <div  class="pb-0" id="line"> </div>
-                                              <h4>Conta Bancaria</h4>
-                                              <p>Banco do Basil S.A</p>
-                                              <p>0443,Feira de Santana <p>0078524</p> </p>
+                                        <div class="card-body">
+                                            <h4 class="card-title">Disponivel R$500,00</h4>
+                                            <div  class="pb-0" id="line"> </div>
+                                            <p class="card-text"><input type="text" class="form-control" id="valor" name="valorDisponivel" placeholder="Valor"></p>
+                                            <div  class="pb-0" id="line"> </div>
+                                            <h4>Conta Bancaria</h4>
+                                            <p>Banco do Basil S.A</p>
+                                            <p>0443,Feira de Santana <p>0078524</p> </p>
 
-                                              <a href="#" class="btn btn-primary">Transferir</a>
-                                            </div>
-                                          </div>
-
-                                    <div class="col-lg-10 offset-lg-1">
-                                    <div class="form-group col-md-4">
-                                    <ul class="ajuda">
-                                            <div class="ajudaInfo">
-                                                <div class="row">
-
-
-
-                                            </div>
-                                    </div-->
-
-                            </div>
-                            <br /><br />
-
-
-                                </ul>
-
-                            </div>
-
-                            <!--div class="container">
-                                <label class="Avaliacao" style="font-size: 19px">Avaliações:</label>
-                            </div>
-                                <div class="container">
-                                <div class="form-group col-md-4">
-                                <ul class="star_reputacao">
-                                            <div class="starsreputacao">
-                                                <div class="row">
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li> </div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star0.png" alt=""></a></li></div>
-                                                    <div class="col"> <li><a href="#"><img src="images/star0.png" alt=""></a></li></div>
-
-                                            </div>
+                                            <a href="#" type="submit" class="btn btn-secondary">Transferir</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <label for="nomeCliente">Nome do cliente</label>
-                            <div class="form-group">
-                                    <input type="text" class="form-control" id="nomeCliente" placeholder="Nome cliente">
-                             </div>
-                             <label for="assinatura">Assinatura:</label>
-                             <div class="form-group">
-                                    <input type="text" class="form-control" id="produtos" placeholder="Produtos selecionados">
-                             </div>
-                            </div>
+                            </fieldset>
 
-                             <div class="container">
-                                <div class="form-group col-md-4">
-                                 <ul class="star_reputacao">
-                                        <div class="starsreputacao">
-                                            <div class="row">
-                                                <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li> </div>
-                                                <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-                                                <div class="col"> <li><a href="#"><img src="images/star1.png" alt=""></a></li></div>
-
-                                            </div>
-                                     </div>
-                                    </div>
-                            </div>
-                            <label for="nomeCliente">Nome do cliente</label>
-                            <div class="form-group">
-                                    <input type="text" class="form-control" id="nomeCliente" placeholder="Nome cliente">
-                             </div>
-                             <label for="assinatura">Assinatura:</label>
-                             <div class="form-group">
-                                    <input type="text" class="form-control" id="produtos" placeholder="Produtos selecionados">
-                             </div>
-                            </div>
-
-
-                        </fieldset>
-
-
-
-
-
-
-
-
-
-                       <!--     <div class="form-group col-md-2">
-                                <label for="inputNome">Cliente</label>
-                            </div>
-                            <div class="form-group col-md-5">
-                                <input type="email" class="form-control" id="nomecliente" placeholder="nome do cliente">
-                            </div>-->
-
-                    </form>
-                </div>
+                        </form>
+                    </div>
             </div>
         </div>
     </div>
-
-
-
+    </div>
 
 
     @include('layouts.footer')
