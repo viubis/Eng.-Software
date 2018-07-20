@@ -4,6 +4,8 @@ namespace mine_apple\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use mine_apple\Assinatura;
+use mine_apple\Assinatura_Produto;
 use mine_apple\Categoria;
 use mine_apple\Embalagem;
 use mine_apple\Financa;
@@ -253,6 +255,12 @@ class ProdutorController extends Controller
     }
 
     public function assinaturas() {
-        return view('assinaturas_produtor_deve_atender');
+        $assinaturas = Assinatura::where('produtor_id', '=', Auth::user()->id)->get();
+//        foreach ($assinaturas as $assinatura){
+//            dd($assinatura);
+//        }
+        $assProdutos = Assinatura_Produto::all();
+        $prodInfo = Produto::all();
+        return view('assinaturas_produtor_deve_atender', compact('assinaturas', 'assProdutos', 'prodInfo'));
     }
 }
