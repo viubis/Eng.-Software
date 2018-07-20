@@ -812,7 +812,15 @@
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+	.fonte25P{
+		font-size: 20px;
+		/*padding-right:40%;*/
+	}
+	.fonte25V{
+		font-size: 20px;
+	}
 }
+
 
 /************
 11. 539px
@@ -853,8 +861,8 @@
 @media only screen and (min-width: 768px) {
 	.container{
 		max-width:100%;
-
 	}
+
 }
 
 @media only screen and (min-width: 991px) {
