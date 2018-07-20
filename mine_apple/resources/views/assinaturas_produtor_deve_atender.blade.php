@@ -72,7 +72,13 @@
                                         $produtos = $assProdutos->where('assinatura_id', '=', $assinatura->id);
                                     @endphp
                                     <th scope="row" id="idAssinatura"><u>{{$assinatura->id}}</u></th>
-                                    <td id="cliente">?</td>
+                                    <td id="cliente">
+                                        @php
+                                            $compra = \mine_apple\Compra::where('id', '=', $assinatura->compra_id)->first();
+                                            $cliente = \mine_apple\Consumidor::where('usuario_id', '=', $compra->consumidor_id)->first();
+                                        @endphp
+                                        {{$cliente->nome}} {{$cliente->sobrenome}}
+                                    </td>
                                     <td id="produtos">
                                         @foreach($produtos as $produto)
                                             @php
