@@ -55,30 +55,29 @@
                         <form>
                             <fieldset>
                                 <div class="form-row">
-                                    <div class="alinhamentosub col-12">
-                                        <label class="fonte25P col-8 ">Pagamentos</label>
-                                        <a href="" class="fonte25V col-3 text-right"><u>Ver todos</u></a>
+                                    <div class="alinhamentosub col-12 text-justify">
+                                        <label class="fonte25P col-6 ">Pagamentos</label>
+                                        <a href="" class="fonte25V col-3"><u>Ver todos</u></a>
                                     </div>
 
                                     <div  class="pb-0" id="line"> </div>
                                     <div class="col-12 text-center" style="font-size: 15px;padding-top:10px;margin-bottom: 60px">
-                                            <a class="col-sm-4" href=""><u>1 Em Analise</u></a>
-                                            <a class="col-sm-4 offset-1" href=""><u>2 Pendentes</u></a>
-                                            <a class="col-sm-4 offset-1" href=""><u>0 Aprovados</u></a>
-
+                                            <a href=""><u>1 Em Analise</u></a>
+                                            <a class="offset-1" href=""><u>2 Pendentes</u></a>
+                                            <a class=" offset-1" href=""><u>0 Aprovados</u></a>
                                     </div>
                                 </div>
 
                                 <div class="form-row">
-                                    <div class="alinhamentosub col-12">
-                                        <label class="fonte25P col-8">Recebimentos</label>
-                                        <a href="" class="fonte25V col-3 text-right"><u>Ver todos</u></a>
+                                    <div class="alinhamentosub col-12 text-justify">
+                                        <label class="fonte25P col-6">Recebimentos</label>
+                                        <a href="" class="fonte25V col-3"><u>Ver todos</u></a>
                                     </div>
                                     <div  class="pb-0" id="line"> </div>
                                     <div class="col-12 text-center" style="font-size: 15px;padding-top:10px;margin-bottom: 120px">
-                                        <a class="col-sm-4" href=""><u>5 Em Analise</u></a>
-                                        <a class="col-sm-4 offset-sm-1" href=""><u>3 Pendentes</u></a>
-                                        <a class="col-sm-4 offset-sm-1" href=""><u>1 Aprovados</u></a>
+                                        <a href=""><u>5 Em Analise</u></a>
+                                        <a class="offset-1" href=""><u>3 Pendentes</u></a>
+                                        <a class="offset-1" href=""><u>1 Aprovados</u></a>
                                     </div>
                                 </div>
 

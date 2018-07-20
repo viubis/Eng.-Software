@@ -870,3 +870,16 @@
 		height: 95px;
 	}
 }
+
+@media only screen and (min-width: 319px) {
+    .fonte25P{
+        font-size:20px;
+    }
+    .fonte25V{
+        font-size:20px;
+    }
+}
+
+@media only screen and (max-width:376px){
+
+}
