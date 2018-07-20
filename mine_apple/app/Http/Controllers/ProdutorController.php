@@ -172,7 +172,7 @@ class ProdutorController extends Controller
         //Salva a imagem
         Foto::where('produto_id', $produto->id)->delete();
 
-        $nomeImagem = $produto->produtor_id . '_' . $produto->id . '.' . $request->imagem->getClientOriginalExtension();
+        $nomeImagem = $produto->nome . '_' . $produto->id . '.' . $request->imagem->getClientOriginalExtension();
         $request->imagem->storeAs('produto_imagens', $nomeImagem);
 
         $categoria = Categoria::where('id', '=', $produto->categoria_id)->first();
@@ -182,7 +182,9 @@ class ProdutorController extends Controller
         $foto->path = "images/".$categoria->nome."/".$nomeImagem;
         $foto->save();
 
-        move_uploaded_file($nomeImagem,'images/'.$categoria->nome);
+        $tmpName = $_FILES['imagem']['tmp_name']; // Recebe o arquivo temporário.
+        move_uploaded_file( $tmpName, "images/".$categoria->nome."/".$nomeImagem );
+
 
         date_default_timezone_set('America/Sao_Paulo');
         $data = date('Y/m/d');
