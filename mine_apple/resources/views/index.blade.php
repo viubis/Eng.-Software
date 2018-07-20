@@ -38,7 +38,7 @@
             @include('layouts.header_produtor')
         @elseif(Auth::user()->administrador != null)
             @include('layouts.header_administrador')
-        @endif 
+        @endif
     @else
         @include('layouts.header_usuario')
     @endif
@@ -279,7 +279,7 @@
                                                     <button class="product_cart_button">Adicionar ao Carrinho</button>
                                                 </div>
                                             </div>
-                                            
+
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount">-25%</li>
                                                 <li class="product_mark product_new">novo</li>
@@ -473,7 +473,7 @@
                                                     <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
-                                            
+
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">novo</li>
@@ -618,7 +618,7 @@
                                                     <button class="product_cart_button">Adicionar ao carrinho</button>
                                                 </div>
                                             </div>
-                                    
+
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
                                                 <li class="product_mark product_new">new</li>
@@ -1477,8 +1477,8 @@
                             <div class="owl-item">
                                 <div
                                     class="popular_category d-flex flex-column align-items-center justify-content-center">
-                                    <div class="popular_category_image"><img src="{{asset('images/popular_1.png')}}" class="img-fluid"
-                                                                             alt=""></div>
+                                    <div class="popular_category_image"><a href="{{url('pesquisa_produtos/2')}}"><img src="{{asset('images/popular_1.png')}}" class="img-fluid"
+                                                                             alt=""></a></div>
                                     <div class="popular_category_text">Frutas</div>
                                 </div>
                             </div>
@@ -1486,8 +1486,8 @@
                             <!-- Popular Categories Item -->
                             <div class="owl-item">
                                 <div class="popular_category d-flex flex-column align-items-center justify-content-center">
-                                    <div class="popular_category_image"><img src="{{asset('images/popular_2.png')}} "
-                                                                             class="img-fluid" alt=""></div>
+                                    <div class="popular_category_image"><a href="{{url('pesquisa_produtos/3')}}"><img src="{{asset('images/popular_2.png')}} "
+                                                                             class="img-fluid" alt=""></a></div>
                                     <div class="popular_category_text">Legumes</div>
                                 </div>
                             </div>
@@ -1495,8 +1495,8 @@
                             <!-- Popular Categories Item -->
                             <div class="owl-item">
                                 <div class="popular_category d-flex flex-column align-items-center justify-content-center">
-                                    <div class="popular_category_image"><img src="{{asset('images/popular_3.png')}}"
-                                                                             class="img-fluid" alt=""></div>
+                                    <div class="popular_category_image"><a href="{{url('pesquisa_produtos/6')}}"><img src="{{asset('images/popular_3.png')}}"
+                                                                             class="img-fluid" alt=""></a></div>
                                     <div class="popular_category_text">Tubérculos</div>
                                 </div>
                             </div>
@@ -1504,8 +1504,8 @@
                             <!-- Popular Categories Item -->
                             <div class="owl-item">
                                 <div class="popular_category d-flex flex-column align-items-center justify-content-center">
-                                    <div class="popular_category_image"><img src="{{asset('images/popular_4.png')}}"
-                                                                             class="img-fluid" alt=""></div>
+                                    <div class="popular_category_image"><a href="pesquisa_produtos/4"><img src="{{asset('images/popular_4.png')}}"
+                                                                             class="img-fluid" alt=""></a></div>
                                     <div class="popular_category_text">Leguminosas</div>
                                 </div>
                             </div>
@@ -1514,8 +1514,8 @@
                             <div class="owl-item">
                                 <div
                                     class="popular_category d-flex flex-column align-items-center justify-content-center">
-                                    <div class="popular_category_image"><img src="{{asset('images/popular_5.png')}}"
-                                                                             class="img-fluid" alt=""></div>
+                                    <div class="popular_category_image"><a href="{{url('pesquisa_produtos/1')}}"><img src="{{asset('images/popular_5.png')}}"
+                                                                             class="img-fluid" alt=""></a></div>
                                     <div class="popular_category_text">Cereais</div>
                                 </div>
                             </div>
