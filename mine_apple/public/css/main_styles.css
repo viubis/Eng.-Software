@@ -1581,7 +1581,7 @@ select option {
 }
 .tabs ul li.active
 {
-	color: rgba(0,0,0,0.8);
+	color: rgba(0,0,0,1);
 }
 .tabs_line
 {
@@ -1669,7 +1669,7 @@ select option {
 {
 	display: block;
 	position: relative;
-	max-width: 100%;
+	max-width: 60%;
 }
 .product_content
 {
@@ -1799,7 +1799,7 @@ select option {
 }
 .product_cart_button:hover
 {
-	background: rgba(14, 140, 228, 0.8);
+	background: rgba(9, 179, 155, 0.8);
 }
 .featured_slider .slick-dots
 {
@@ -2039,7 +2039,7 @@ select option {
 }
 .popular_category
 {
-	height: 216px;
+	height: 250px;
 	padding-left: 40px;
 	padding-right: 40px;
 }
@@ -2054,9 +2054,11 @@ select option {
 }
 .popular_category_text
 {
-	margin-top: 20px;
+	/*margin-top: 20px;*/
+
 	line-height: 1.714;
 	text-align: center;
+    font-size: 16px;
 }
 
 /*********************************
