@@ -266,12 +266,11 @@
                 <div  class="pb-0" id="line"> </div>
                 <div class="form-group col-md-12">
                   <label for="listaCartao">Meus cartões </label>
-                     <select multiple class="form-control" size="2" id="listaCartao">
-                            @foreach($cartoes as $cartao)
-                            @php $ultimos_digitos = substr($cartao->numero, -3) @endphp
-                           <option >VISA terminado em {{$ultimos_digitos}}.</option>
-                           @endforeach
-                     </select>
+                    <select multiple class="form-control" size="2" id="listaCartao">
+                        @foreach($cartoes as $cartao)
+                            <option >VISA terminado em {{substr($cartao->numero, -3)}}.</option>
+                        @endforeach
+                    </select>
 
                 </div>
                 <div class="form-group col-md-5">

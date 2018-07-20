@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Crypt;
 class Cartao extends Model 
 {
     protected $table = 'cartao';
-    protected $fillable = ['consumidor_id', 'numero_cartao', 'titular', 'validade', 'codigo'];
+    protected $fillable = ['consumidor_id', 'numero', 'titular', 'validade', 'codigo'];
     public $timestamps = false;
 
     public function getNumeroAttribute($numero)
@@ -17,8 +17,8 @@ class Cartao extends Model
     }
 
     public function setNumeroAttribute($numero)
-    {   //nome modificado pois estava duplicado
-        $this->attributes['numero_cartao'] = Crypt::encryptString($numero);
+    {
+        $this->attributes['numero'] = Crypt::encryptString($numero);
     }
 
     public function getCodigoAttribute($codigo)

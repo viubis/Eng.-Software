@@ -286,9 +286,9 @@ class ConsumidorController extends Controller
         $cidades = Cidade::all();
         $estados = Estado::all();
         $fotos = Foto::all();
-        //$cartoes = Cartao::all();
-        $cartoes = Cartao::where('consumidor_id', '=', Auth::user()->id);
+        $cartoes = Consumidor::find(Auth::user()->id)->cartoes;
         $consumidor_enderecos = ConsumidorEndereco::all();
+
         return view('realizacao_de_assinatura', compact('itens', 'embalagens', 'produtos', 'enderecos', 'consumidor_enderecos', 'cidades', 'estados', 'fotos', 'cartoes'));
     }
 
