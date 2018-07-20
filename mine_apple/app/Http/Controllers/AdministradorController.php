@@ -27,8 +27,11 @@ class AdministradorController extends Controller
     //Métodos para manipular as views visíveis somente para administradores
 
     /**
+     * Retorna a tela gerenciamento consumidores com todos os dados
+     * 
+     * 
      * @author Lucas Alves
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function getGerenciamentoConsumidores(){
     	$consumidores = Consumidor::all();
@@ -40,8 +43,11 @@ class AdministradorController extends Controller
     }
 
     /**
+     * Retorna a tela gerenciamento produtores com todos os dados
+     * 
+     * 
      * @author Lucas Alves
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function getGerenciamentoProdutores(){
     	$produtores = Produtor::all();
@@ -53,8 +59,10 @@ class AdministradorController extends Controller
     }
 
     /**
+     * Retorna a tela gerenciamento do sistema com os logs
+     * 
      * @author Lucas Alves
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function getGerenciamentoSistema(){
         $logs = Log::all();
@@ -64,9 +72,11 @@ class AdministradorController extends Controller
     }
 
     /**
+     * Realiza o banimento de um produtor através do id
+     * 
      * @author Lucas Alves
-     * @param request
-     * @return string
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function banirProdutor(Request $request){
         $id = $request->id;
@@ -75,6 +85,13 @@ class AdministradorController extends Controller
         $this.getGerenciamentoProdutores();
     }
 
+    /**
+     * Realiza o banimento de um produtor através do id
+     * 
+     * @author Lucas Alves 
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+    */
     public function banirConsumidor(Request $request){
         $id = $request->id;
         $consumidor = Consumidor::where('usuario_id', '=', $id);
@@ -82,6 +99,12 @@ class AdministradorController extends Controller
         $this.getGerenciamentoConsumidores();
     }
 
+    /**
+     * Gera o relatório geral para o administrador
+     * 
+     * @author Lucas Alves
+     * @return Barryvdh\DomPDF\PDF
+     */
     public function getRelatorioGeral(){
     PDF::setOptions(['isPhpEnabled' => true]);
       $logs = Log::all();
@@ -91,6 +114,13 @@ class AdministradorController extends Controller
       return $pdf->download('relatorio_geral.pdf');
     }
 
+    /**
+     * 
+     * @author Rafael
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * 
+     */
     public function dadosBackup(Request $request){
         date_default_timezone_set('America/Sao_Paulo');
         $data = date('Y/m/d');
@@ -101,6 +131,9 @@ class AdministradorController extends Controller
         return redirect()->back();
     }
 
+    /**
+     * @author Rafael
+     */
     public function iniciarBackup(){
         date_default_timezone_set('America/Sao_Paulo');
         $dados = file('backup_dados.txt');

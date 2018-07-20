@@ -10,6 +10,8 @@ use mine_apple\Cidade;
 class CidadeController extends Controller
 {
     /**
+     * Retorna a lista de cidades pertencentes a determinado estado
+     * 
      * @author Lucas Alves
      * @param Request $request
      * @return string

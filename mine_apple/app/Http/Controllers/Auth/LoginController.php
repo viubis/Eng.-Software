@@ -59,8 +59,8 @@ class LoginController extends Controller
     }
 
     /**
-     * Redirect the user to the Facebook authentication page.
-     *
+     * Redireciona o usuário para a página de autenticação do Facebook
+     * @author Bruno Claudino
      * @return \Illuminate\Http\Response
      */
     public function redirectToProvider()
@@ -69,8 +69,8 @@ class LoginController extends Controller
     }
 
     /**
-     * Obtain the user information from Facebook.
-     *
+     * Obtem informações do Facebook
+     * @author Bruno Claudino
      * @return \Illuminate\Http\Response
      */
     public function handleProviderCallback()
@@ -105,8 +105,8 @@ class LoginController extends Controller
     //----- login do google ----
 
     /**
-     * Redirect the user to the Google authentication page.
-     *
+     * Redireciona o usuário para a página de autenticação do Google.
+     * @author Bruno Claudino
      * @return \Illuminate\Http\Response
      */
     public function redirectToProvider1()
@@ -115,8 +115,8 @@ class LoginController extends Controller
     }
 
     /**
-     * Obtain the user information from Google.
-     *
+     * Obtem informações do Google
+     * @author Bruno Claudino
      * @return \Illuminate\Http\Response
      */
     public function handleProviderCallback1()

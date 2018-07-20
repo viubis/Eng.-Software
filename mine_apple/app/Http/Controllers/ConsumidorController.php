@@ -30,7 +30,7 @@ class ConsumidorController extends Controller
 
     /**
      * @author Rafael Brito
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index(){
         return view('index');
@@ -38,7 +38,7 @@ class ConsumidorController extends Controller
 
     /**
      * @author Lucas Alves
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function getForm(){
         $estados = Estado::all(['id', 'nome']);
@@ -46,9 +46,11 @@ class ConsumidorController extends Controller
     }
 
     /**
-     * @author Rafael Brito
+     * Cadastrar um consumidor
+     * 
+     * @author Rafael Brito e Lucas Alves
      * @param FormConsumidor $request
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function cadastrarConsumidor(FormConsumidor $request) {
         //dd($request->all());
@@ -104,6 +106,8 @@ class ConsumidorController extends Controller
     }
 
     /**
+     * Altera dados do consumidor
+     * 
      * @author Rafael Brito
      * @param Request $request
      * @return string
@@ -123,9 +127,11 @@ class ConsumidorController extends Controller
    }
 
     /**
+     * Adiciona cartão
+     * 
      * @author Lucas Alves
      * @param Request $request
-     * @return string
+     * 
      */
     public function adicionarCartao(Request $request) {
         $cartao = new Cartao();
@@ -138,9 +144,9 @@ class ConsumidorController extends Controller
     }
 
     /**
-     * @author Lucas Alves
+     * @author Lucas Alves e Sesaque Oliveira
      * @param Request $request
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function adicionarCarrinho(Request $request) {
         $item = Cart::content()->firstWhere('id', $request->id);
@@ -158,7 +164,7 @@ class ConsumidorController extends Controller
     /**
      * @author Victória Oliveira
      * @param Request $request
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function removerDoCarrinho(Request $request) {
         $item = Cart::content()->firstWhere('id', $request->id);
@@ -171,7 +177,7 @@ class ConsumidorController extends Controller
 
     /**
      * @author Lucas Alves
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function getCadastrarEndereco(){
         $estados = Estado::all(['id', 'nome']);
@@ -276,7 +282,7 @@ class ConsumidorController extends Controller
 
     /**
      * @author Lucas Alves
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function getRealizacaoAssinatura(){
         $itens = Cart::content();
@@ -344,8 +350,9 @@ class ConsumidorController extends Controller
 
 
     /**
+     * Retorna a tela avaliação de assinaturas
      * @author Lucas Alves
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function getAvaliacaoAssinatura(){
         $assinaturas = Assinatura::all();
@@ -355,9 +362,10 @@ class ConsumidorController extends Controller
 
 
     /**
+     * Cadastra um novo endereço
      * @author Lucas Alves
      * @param Request $request
-     * @return string
+     * 
      */
     public function cadastrarEndereco(Request $request) {
         $consumidor_endereco = new ConsumidorEndereco;
@@ -375,7 +383,8 @@ class ConsumidorController extends Controller
     }
 
     /**
-     * @author
+     * Retorna o carrinho de compras, inicialmente sem contar o frete
+     * @author Lucas Alves
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function getCarrinhoCompras(){
@@ -383,7 +392,7 @@ class ConsumidorController extends Controller
     }
 
     /**
-     * @author
+     * @author Sesaque Oliveira
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function carrinhoCompras($frete){
@@ -445,7 +454,8 @@ class ConsumidorController extends Controller
     }
 
     /**
-     * @author
+     * Retorna a tela minhas compras
+     * @author Sesaque Oliveira
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function minhasCompras(){

@@ -18,7 +18,7 @@ class FaleConoscoController
      * Envia uma mensagem para o email do site, provinda de um consumidor
      * @author Victória Gomes
      * @param Request $request
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function enviar(Request $request){
 

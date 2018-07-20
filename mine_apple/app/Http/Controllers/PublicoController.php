@@ -16,35 +16,39 @@ use mine_apple\Estado;
 
 class PublicoController extends Controller
 {
-    //Métodos para manipular as views públicas
+    
 
     /**
+     * Retorna a página principal
      * @author Bruno Claudino
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index() {
         return view('index');
     }
 
     /**
+     * Retorna a página sobre
      * @author Bruno Claudino
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function sobre(){
         return view('Sobre');
     }
 
     /**
+     * Retorna a página fale conosco
      * @author Bruno Claudino
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function faleConosco(){
         return view('fale_conosco');
     }
 
     /**
+     * Retorna a página carrinho com as informações relacionadas ao carrinho
      * @author Lucas Alves
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function getCarrinhoCompras(){
 
@@ -57,9 +61,10 @@ class PublicoController extends Controller
 
 
     /**
+     * Retorna a pesquisa de produtos por categoria
      * @author Lucas Alves
-     * @param $categoria - categoria que será pesquisada
-     * @return string
+     * @param int $categoria
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function getPesquisaCategoriasProdutos($categoria){
         $produtos = Produto::where('categoria_id','=', $categoria)->get();
@@ -70,8 +75,9 @@ class PublicoController extends Controller
     }
 
     /**
+     * Retorna a pesquisa de todos os produtos
      * @author Lucas Alves
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function getPesquisaTodosProdutos(){
 
@@ -83,9 +89,10 @@ class PublicoController extends Controller
     }
 
     /**
+     * Retorna os detalhes referentes a um determinado produto
      * @author Lucas Alves
-     * @param $id - id referente ao produto
-     * @return string
+     * @param int $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function getDetalhesProduto($id){
         $produto = Produto::where('id', '=', $id)->first();
@@ -99,6 +106,12 @@ class PublicoController extends Controller
         return view('visualização_detalhada_produto', compact('produto', 'produtor', 'embalagem', 'categoria', 'cidade', 'estado', 'fotos'));
     }
 
+    /**
+     * Retorna a pesquisa de produtos por nome
+     * @author Lucas Alves e Victória Gomes
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function getPesquisaCategoriasNome(Request $request){
         $busca = $request->busca;
         $produtos = Produto::where('nome', 'like', $busca.'%')->get();
