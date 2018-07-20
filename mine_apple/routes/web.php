@@ -108,6 +108,8 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get('/dados_cadastrais', 'ProdutorController@dadosCadastrais');
 
+        Route::post('meusProdutos/editarProduto', 'ProdutorController@alterarInfoProduto')->name('alterarProdutos');
+
         Route::get('/produtor/reputacao', 'ProdutorController@reputacaoProdutor');
 
         Route::get('/resumo/conta', 'ProdutorController@resumoConta');

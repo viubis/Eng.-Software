@@ -251,10 +251,10 @@
                                             <div class="form-check form-check-inline">
                                                 @if($produto->seg==1)
                                                     <input class="form-check-input" type="checkbox" id="segunda"
-                                                           value="true" checked name="seg">
+                                                           value="1" checked name="seg">
                                                 @else
                                                     <input class="form-check-input" type="checkbox" id="segunda"
-                                                    value="false" name="seg">
+                                                    value="0" name="seg">
                                                 @endif
                                                 <label class="form-check-label" type="lab1" for="segunda">
                                                     Segunda-feira
@@ -263,10 +263,10 @@
                                             <div class="form-check form-check-inline">
                                                 @if($produto->ter==1)
                                                     <input class="form-check-input" type="checkbox" id="terca"
-                                                           value="true" checked name="ter" >
+                                                           value="1" checked name="ter" >
                                                 @else
                                                     <input class="form-check-input" type="checkbox" id="terca"
-                                                           value="false" name="ter" >
+                                                           value="0" name="ter" >
                                                 @endif
                                                 <label class="form-check-label" type="lab1" for="terca">
                                                     Terça-feira
@@ -275,10 +275,10 @@
                                             <div class="form-check form-check-inline">
                                                 @if($produto->qua==1)
                                                     <input class="form-check-input" type="checkbox" id="quarta"
-                                                           value="true" checked name="qua" >
+                                                           value="1" checked name="qua" >
                                                 @else
                                                     <input class="form-check-input" type="checkbox" id="quarta"
-                                                           value="false" name="qua" >
+                                                           value="0" name="qua" >
                                                 @endif
                                                 <label class="form-check-label" type="lab1" for="quarta">
                                                     Quarta-feira
@@ -287,10 +287,10 @@
                                             <div class="form-check form-check-inline">
                                                 @if($produto->qui==1)
                                                     <input class="form-check-input" type="checkbox" id="quinta"
-                                                           value="true" checked name="qui" >
+                                                           value="1" checked name="qui" >
                                                 @else
                                                     <input class="form-check-input" type="checkbox" id="quinta"
-                                                           value="false" name="qui" >
+                                                           value="0" name="qui" >
                                                 @endif
                                                 <label class="form-check-label" type="lab1" for="quinta">
                                                     Quinta-feira
@@ -299,10 +299,10 @@
                                             <div class="form-check form-check-inline">
                                                 @if($produto->sex==1)
                                                     <input class="form-check-input" type="checkbox" id="sexta"
-                                                           value="true" checked name="sex" >
+                                                           value="1" checked name="sex" >
                                                 @else
                                                     <input class="form-check-input" type="checkbox" id="sexta"
-                                                           value="false" name="sex" >
+                                                           value="0" name="sex" >
                                                 @endif
                                                 <label class="form-check-label" type="lab1" for="sexta">
                                                     Sexta-feira
@@ -311,10 +311,10 @@
                                             <div class="form-check form-check-inline">
                                                 @if($produto->sab==1)
                                                     <input class="form-check-input" type="checkbox" id="sabado"
-                                                           value="true" checked name="sab" >
+                                                           value="1" checked name="sab" >
                                                 @else
                                                     <input class="form-check-input" type="checkbox" id="sabado"
-                                                           value="false" name="sab" >
+                                                           value="0" name="sab" >
                                                 @endif
                                                 <label class="form-check-label" type="lab1" for="sabado">
                                                     Sábado
@@ -323,10 +323,10 @@
                                             <div class="form-check form-check-inline">
                                                 @if($produto->dom==1)
                                                     <input class="form-check-input" type="checkbox" id="domingo"
-                                                           value="true" checked name="dom" >
+                                                           value="1" checked name="dom" >
                                                 @else
                                                     <input class="form-check-input" type="checkbox" id="domingo"
-                                                           value="false" name="dom" >
+                                                           value="0" name="dom" >
                                                 @endif
                                                 <label class="form-check-label" type="lab1" for="domingo">
                                                     Domingo

@@ -210,8 +210,7 @@ class ProdutorController extends Controller
 
     public function alterarInfoProduto(Request $request){
         $dados = $request->all();
-        dd($dados);
-        $produto = Produto::where('id', '=', $dados->id)->first();
+        $produto = Produto::where('id', '=', $request->id)->first();
         $produto->update($dados);
 
         date_default_timezone_set('America/Sao_Paulo');
