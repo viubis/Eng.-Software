@@ -4067,7 +4067,6 @@ input.form-control textarea{
 
 /*Tabela*/
 
-
 input#razao{
     margin-bottom: 10px;
     background-color: #ffffff;
@@ -4080,16 +4079,49 @@ label.novoProduto{
 
 th{
     text-align: center;
+
 }
 
 td{
     text-align: center;
+
 
 }
 
 tr{
     border: 1px solid #d7d7d7;
 
+
+}
+
+table#tabela td{
+    border: 1px solid #e5e5e5;
+    vertical-align: middle;
+}
+
+table#tabela th{
+    border: 1px solid #e5e5e5;
+    vertical-align: middle;
+}
+
+table#tabela tr{
+    border: 1px solid #e5e5e5;
+    vertical-align: middle;
+}
+
+
+.table-hover tbody tr:hover{
+    background-color: transparent;
+    box-shadow: 1px 1px 3px 1px #6d6d6d;
+}
+
+thead tr th{
+    box-shadow: 0px 3px 0px 0px #e2e2e2;
+
+}
+
+th#entreg{
+    box-shadow: 3px 3px 3px 1px #6d6d6d;
 }
 
 /*#tabela{
@@ -4097,29 +4129,4 @@ tr{
     box-shadow: 0px 0px 1px 0px black;
 
 }*/
-
-table#tabela td{
-    border: 1px solid #d7d7d7;
-    vertical-align: middle;
-}
-
-table#tabela th{
-    border: 1px solid #d7d7d7;
-    vertical-align: middle;
-}
-
-.corlinha{
-    background-color: #f5f5f5;
-    border: 1px solid #d7d7d7;
-
-}
-
-tbody {
-    border-bottom: 1px solid #b3b3b3;
-    box-shadow: 0px 1px 1px black;
-}
-
-
-
-
 

@@ -206,9 +206,11 @@ class ProdutorController extends Controller
 
         return view('alterar_dados_produtos', compact('produto'));
     }
+
+
     public function alterarInfoProduto(Request $request){
         $dados = $request->all();
-        $produto = Produto::where('id', $dados->id)->first();
+        $produto = Produto::where('id', '=', $request->id)->first();
         $produto->update($dados);
 
         date_default_timezone_set('America/Sao_Paulo');
