@@ -1,0 +1,173 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+
+namespace mine_apple\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use mine_apple\Foto;
+use mine_apple\Produto;
+use mine_apple\Embalagem;
+use Gloudemans\Shoppingcart\Facades\Cart;
+use mine_apple\Produtor;
+use mine_apple\Categoria;
+use mine_apple\Endereco;
+use mine_apple\Cidade;
+use mine_apple\Estado;
+
+class PublicoController extends Controller
+{
+    
+
+    /**
+     * Retorna a p&aacute;gina principal
+     * @author Bruno Claudino
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function index() {
+        return view('index');
+    }
+
+    /**
+     * Retorna a p&aacute;gina sobre
+     * @author Bruno Claudino
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function sobre(){
+        return view('Sobre');
+    }
+
+    /**
+     * Retorna a p&aacute;gina fale conosco
+     * @author Bruno Claudino
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function faleConosco(){
+        return view('fale_conosco');
+    }
+
+    /**
+     * Retorna a p&aacute;gina carrinho com as informa&ccedil;&otilde;es relacionadas ao carrinho
+     * @author Lucas Alves
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function getCarrinhoCompras(){
+
+        //retorna todos os itens do carrinho
+        $itens = Cart::content();
+        //retorna o pre&ccedil;o total
+        $subtotal = Cart::total();
+        return view('carrinho_de_compras', compact('itens', 'subtotal'));
+    }
+
+
+    /**
+     * Retorna a pesquisa de produtos por categoria
+     * @author Lucas Alves
+     * @param int $categoria
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function getPesquisaCategoriasProdutos($categoria){
+        $produtos = Produto::where('categoria_id','=', $categoria)-&gt;get();
+        $cat = Categoria::where('id', '=', $categoria)-&gt;first();
+        $fotos = Foto::all();
+
+        return view('pesquisa_de_produtos', compact('produtos', 'cat', 'fotos'));
+    }
+
+    /**
+     * Retorna a pesquisa de todos os produtos
+     * @author Lucas Alves
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function getPesquisaTodosProdutos(){
+
+        $produtos = Produto::all();
+        $produtores = Produtor::all();
+        $embalagem = Embalagem::all();
+        $fotos = Foto::all();
+        return view('pesquisa_de_produtos', compact('produtos', 'produtores', 'embalagem', 'fotos'));
+    }
+
+    /**
+     * Retorna os detalhes referentes a um determinado produto
+     * @author Lucas Alves
+     * @param int $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function getDetalhesProduto($id){
+        $produto = Produto::where('id', '=', $id)-&gt;first();
+        $fotos = Foto::where('produto_id', '=', $id)-&gt;get();
+        $produtor = Produtor::where('usuario_id', '=' ,$produto-&gt;produtor_id)-&gt;first();
+        $categoria = Categoria::where('id', '=', $produto-&gt;categoria_id)-&gt;first();
+        $endereco = Endereco::where('id', '=', $produtor-&gt;usuario_id)-&gt;first();
+        $cidade = Cidade::where('id', '=', $endereco-&gt;cidade_id)-&gt;first();
+        $estado = Estado::where('id', '=', $cidade-&gt;estado_id)-&gt;first();
+        $embalagem = Embalagem::all();
+        return view('visualiza&ccedil;&atilde;o_detalhada_produto', compact('produto', 'produtor', 'embalagem', 'categoria', 'cidade', 'estado', 'fotos'));
+    }
+
+    /**
+     * Retorna a pesquisa de produtos por nome
+     * @author Lucas Alves e Vict&oacute;ria Gomes
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function getPesquisaCategoriasNome(Request $request){
+        $busca = $request-&gt;busca;
+        $produtos = Produto::where('nome', 'like', $busca.'%')-&gt;get();
+        $produtores = Produtor::all();
+        $embalagem = Embalagem::all();
+        $fotos = Foto::all();
+        return view('pesquisa_de_produtos', compact('produtos', 'produtores', 'embalagem', 'fotos', 'busca'));
+
+
+    }
+
+
+
+}
+</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

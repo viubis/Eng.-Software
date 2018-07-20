@@ -1,0 +1,1446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title="Documentação Mineapple" version="v2.9.0">
+  <partials/>
+  <file path="FaleConoscoController.php" generated-path="FaleConoscoController.html" hash="2106d28e786289cc957d9bd972ff201e" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Request">\Illuminate\Http\Request</namespace-alias>
+    <namespace-alias name="Mail">\Illuminate\Support\Facades\Mail</namespace-alias>
+    <namespace-alias name="envioEmail">\mine_apple\Mail\envioEmail</namespace-alias>
+    <class final="false" abstract="false" namespace="mine_apple\Http\Controllers" line="9" package="Default">
+      <extends/>
+      <name>FaleConoscoController</name>
+      <full_name>\mine_apple\Http\Controllers\FaleConoscoController</full_name>
+      <docblock line="9">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="9" description="Default"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="17" package="Default">
+        <name>enviar</name>
+        <full_name>\mine_apple\Http\Controllers\FaleConoscoController::enviar()</full_name>
+        <docblock line="17">
+          <description>Envia uma mensagem para o email do site, provinda de um consumidor</description>
+          <long-description></long-description>
+          <tag name="author" line="17" description="Victória Gomes"/>
+          <tag name="param" line="17" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+          <tag name="return" line="17" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="9" code="PPC:ERR-50005">No summary for class \mine_apple\Http\Controllers\FaleConoscoController</error>
+    </parse_markers>
+    <source>eJxlkc9KAzEQxu95ihGE3Rb/3FVUkFY9eFHwtCBjdmwD2UzMJC2iPpWP4IuZ7K5t0Rw2Yeebb778cnbhl14phx2JR03QGUdP6L2l5iZG31yxi4GtpSCnKgnBrbUpizCOgnt6TSTxX/Ehec8hNnPU2JI0d2jsINoZUX425FaGZ11fV0pbFIE5WsqjWTRvE6h3BXkdT6f9DlOY5VaE1CF05AQX1IHHgMBAxQ9aBjGRDsAHXhnXIrSU5aDZSQ7acvh1usQUlxzg0ej4/RWy6zVnJptyse1gvCzsh+GwKQeKKThodgD0uVFHaR4NrQuHyOHtY1fSF8pn9Dnud5+erdHwkpyOhh0UPhjqv7Mn72poy6twPDmJXFcFbs/2iMMCndGSp9LlouA40txVk8NzIdfWjtawJV9vXCenG9fxUqscsK5e8os86eFJisnaxGVd9c1Dwsw6+4MkTSK8V41Gn0p9qh/hEND2</source>
+  </file>
+  <file path="PublicoController.php" generated-path="PublicoController.html" hash="79a7a64e31bdecd3f89676c0c9b6f989" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Request">\Illuminate\Http\Request</namespace-alias>
+    <namespace-alias name="Auth">\Illuminate\Support\Facades\Auth</namespace-alias>
+    <namespace-alias name="Foto">\mine_apple\Foto</namespace-alias>
+    <namespace-alias name="Produto">\mine_apple\Produto</namespace-alias>
+    <namespace-alias name="Embalagem">\mine_apple\Embalagem</namespace-alias>
+    <namespace-alias name="Cart">\Gloudemans\Shoppingcart\Facades\Cart</namespace-alias>
+    <namespace-alias name="Produtor">\mine_apple\Produtor</namespace-alias>
+    <namespace-alias name="Categoria">\mine_apple\Categoria</namespace-alias>
+    <namespace-alias name="Endereco">\mine_apple\Endereco</namespace-alias>
+    <namespace-alias name="Cidade">\mine_apple\Cidade</namespace-alias>
+    <namespace-alias name="Estado">\mine_apple\Estado</namespace-alias>
+    <class final="false" abstract="false" namespace="mine_apple\Http\Controllers" line="17" package="Default">
+      <extends>\mine_apple\Http\Controllers\Controller</extends>
+      <name>PublicoController</name>
+      <full_name>\mine_apple\Http\Controllers\PublicoController</full_name>
+      <docblock line="17">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="17" description="Default"/>
+        <tag name="inherited_from" description="\mine_apple\Http\Controllers\Controller" refers="\mine_apple\Http\Controllers\Controller" link="/classes/mine_apple.Http.Controllers.Controller.html"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="26" package="Default">
+        <name>index</name>
+        <full_name>\mine_apple\Http\Controllers\PublicoController::index()</full_name>
+        <docblock line="26">
+          <description>Retorna a página principal</description>
+          <long-description></long-description>
+          <tag name="author" line="26" description="Bruno Claudino"/>
+          <tag name="return" line="26" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="35" package="Default">
+        <name>sobre</name>
+        <full_name>\mine_apple\Http\Controllers\PublicoController::sobre()</full_name>
+        <docblock line="35">
+          <description>Retorna a página sobre</description>
+          <long-description></long-description>
+          <tag name="author" line="35" description="Bruno Claudino"/>
+          <tag name="return" line="35" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="44" package="Default">
+        <name>faleConosco</name>
+        <full_name>\mine_apple\Http\Controllers\PublicoController::faleConosco()</full_name>
+        <docblock line="44">
+          <description>Retorna a página fale conosco</description>
+          <long-description></long-description>
+          <tag name="author" line="44" description="Bruno Claudino"/>
+          <tag name="return" line="44" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="53" package="Default">
+        <name>getCarrinhoCompras</name>
+        <full_name>\mine_apple\Http\Controllers\PublicoController::getCarrinhoCompras()</full_name>
+        <docblock line="53">
+          <description>Retorna a página carrinho com as informações relacionadas ao carrinho</description>
+          <long-description></long-description>
+          <tag name="author" line="53" description="Lucas Alves"/>
+          <tag name="return" line="53" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="69" package="Default">
+        <name>getPesquisaCategoriasProdutos</name>
+        <full_name>\mine_apple\Http\Controllers\PublicoController::getPesquisaCategoriasProdutos()</full_name>
+        <docblock line="69">
+          <description>Retorna a pesquisa de produtos por categoria</description>
+          <long-description></long-description>
+          <tag name="author" line="69" description="Lucas Alves"/>
+          <tag name="param" line="69" description="" type="integer" variable="$categoria">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="69" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$categoria</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="82" package="Default">
+        <name>getPesquisaTodosProdutos</name>
+        <full_name>\mine_apple\Http\Controllers\PublicoController::getPesquisaTodosProdutos()</full_name>
+        <docblock line="82">
+          <description>Retorna a pesquisa de todos os produtos</description>
+          <long-description></long-description>
+          <tag name="author" line="82" description="Lucas Alves"/>
+          <tag name="return" line="82" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="97" package="Default">
+        <name>getDetalhesProduto</name>
+        <full_name>\mine_apple\Http\Controllers\PublicoController::getDetalhesProduto()</full_name>
+        <docblock line="97">
+          <description>Retorna os detalhes referentes a um determinado produto</description>
+          <long-description></long-description>
+          <tag name="author" line="97" description="Lucas Alves"/>
+          <tag name="param" line="97" description="" type="integer" variable="$id">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="97" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$id</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="115" package="Default">
+        <name>getPesquisaCategoriasNome</name>
+        <full_name>\mine_apple\Http\Controllers\PublicoController::getPesquisaCategoriasNome()</full_name>
+        <docblock line="115">
+          <description>Retorna a pesquisa de produtos por nome</description>
+          <long-description></long-description>
+          <tag name="author" line="115" description="Lucas Alves e Victória Gomes"/>
+          <tag name="param" line="115" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+          <tag name="return" line="115" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="17" code="PPC:ERR-50005">No summary for class \mine_apple\Http\Controllers\PublicoController</error>
+    </parse_markers>
+    <source>eJzVV91u0zAUvs9T+GIo3bSy+46Vn8IACaGJIa4qVW7sthZOHPyzjb+HQVzwAIgn6ItxjuOkbpOODcQY0dQkPsfH3zmfvxPv3v1yUSZJQXNuSppxkouCT2hZSj5+Zm05HqnCaiUl1+YwSZzh5LmUDryoDR6v+DvHjT3cNJ66slTajo9pRhk344fOLiqnaI1jZVVr8EQr5jrGn+RTKumc55XlqVSO8ZwWZny6UGUpinlGowVH8LIttm4ZRoB5rrSg7WULxjXP2nhGgsFCbX9jKQPvJJPUGHLiplJkalVIwi8sL5ghq6HkY0LgSvzvwd6ev5M98ooD1IISSsrllznUlZRaFJkoqaxdHlCoq9LkkXaFIiNJHROFaqyaW6cLMo6I8cvSzJrxG8HPsVywyPtPsYs34E+Ic+Dvpc+EzFyRWaEKIqAwF71dUoHHK6x2BjN7qTenu4fe+vkKuRk11fwW5OVx9Ha3pHWK1uukNaOSk0wVymTqFmSHcEYVmq05os8kQL5OqqA/2J8LBenmhBrYITOlc7r8tvzBDSwhaQYQKAMTVY33ZlFeuAwcHsozbm6kInNuRwHKSOWlpgYL01Tm4ECHRK1iyhD4EyBgQ9hmCnDtVKYjgt1nMIAawrvthRquh1OgZr78piCurQWNIYyb+pEmin+LY6yRVWOYMOTM40/3kQFo6BZkiIBgIK3DprsrRi+hlJt3ThhKGAeYvmkaAg0dUg6N8iq0lVTTHLaBJTvteX+Z05OQQdPZTWj+prcCEylgp0nziATPweB8Ab0faxz8J4Kl++kR1DOK0R/CcjE/aPPsBY8mDs4m7ekzoc16gJmqgOAHcjCg0tPfzX/NFPJfpxBvgGgM88Cbjx7vgyttg2b71xFvgXBrkl8jtobfWL6dtIaCbvpoHnnpthuvTyDg1ZxG2m6d5P0xdyuM+NZAuQ6fgIpxaAEL341nsCWhPUEvJi5HA9dYfqZqgq+pcMFuivXHIYnAVA+W7hByh44j/cGUXwsvTAsBJ5vTN2VfU7S2iUIMZxzVYhWD7Nfu/WE9b7IFVNMrftVUmohxw+oMycOpFndyeLwkoO4PV/i7IfrDMOLzD12x6iUBnffZCs0foBGYf+hsnj5Af1i5bg10JbmuCfJMQJpSfMAzy1f8pOJGgwNLrc4OccbabCmz4cG/eNTex+P+/Va89kUuVN46NkdSJZy8EZldfsf98xR8N8Ub/oMjO7p6+Hcf6JeArrcJJ1b21JkMRVDb+kM/0pZg10cc64Qll+It3qtgd9M76SVK/q8/CPDgc/TbK2nOfMnn5Cdm2hl/</source>
+  </file>
+  <file path="ProdutorController.php" generated-path="ProdutorController.html" hash="c0bd8de1667ce87392c8c7ea2180b511" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Request">\Illuminate\Http\Request</namespace-alias>
+    <namespace-alias name="Auth">\Illuminate\Support\Facades\Auth</namespace-alias>
+    <namespace-alias name="Assinatura">\mine_apple\Assinatura</namespace-alias>
+    <namespace-alias name="Assinatura_Produto">\mine_apple\Assinatura_Produto</namespace-alias>
+    <namespace-alias name="Avaliacao">\mine_apple\Avaliacao</namespace-alias>
+    <namespace-alias name="Categoria">\mine_apple\Categoria</namespace-alias>
+    <namespace-alias name="Embalagem">\mine_apple\Embalagem</namespace-alias>
+    <namespace-alias name="Financa">\mine_apple\Financa</namespace-alias>
+    <namespace-alias name="Foto">\mine_apple\Foto</namespace-alias>
+    <namespace-alias name="Produto">\mine_apple\Produto</namespace-alias>
+    <namespace-alias name="Estado">\mine_apple\Estado</namespace-alias>
+    <namespace-alias name="Cidade">\mine_apple\Cidade</namespace-alias>
+    <namespace-alias name="Conta">\mine_apple\Conta</namespace-alias>
+    <namespace-alias name="Banco">\mine_apple\Banco</namespace-alias>
+    <namespace-alias name="Log">\mine_apple\Log</namespace-alias>
+    <namespace-alias name="Produtor">\mine_apple\Produtor</namespace-alias>
+    <namespace-alias name="Endereco">\mine_apple\Endereco</namespace-alias>
+    <namespace-alias name="FormProdutor">\mine_apple\Http\Requests\FormProdutor</namespace-alias>
+    <class final="false" abstract="false" namespace="mine_apple\Http\Controllers" line="24" package="Default">
+      <extends>\mine_apple\Http\Controllers\Controller</extends>
+      <name>ProdutorController</name>
+      <full_name>\mine_apple\Http\Controllers\ProdutorController</full_name>
+      <docblock line="24">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="24" description="Default"/>
+        <tag name="inherited_from" description="\mine_apple\Http\Controllers\Controller" refers="\mine_apple\Http\Controllers\Controller" link="/classes/mine_apple.Http.Controllers.Controller.html"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="32" package="Default">
+        <name>index</name>
+        <full_name>\mine_apple\Http\Controllers\ProdutorController::index()</full_name>
+        <docblock line="32">
+          <description>Retorna index</description>
+          <long-description></long-description>
+          <tag name="author" line="32" description="Rafael"/>
+          <tag name="return" line="32" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="41" package="Default">
+        <name>getForm</name>
+        <full_name>\mine_apple\Http\Controllers\ProdutorController::getForm()</full_name>
+        <docblock line="41">
+          <description>Retorna o formulário de cadastro</description>
+          <long-description></long-description>
+          <tag name="author" line="41" description="Lucas Alves"/>
+          <tag name="return" line="41" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="53" package="Default">
+        <name>cadastrarProdutor</name>
+        <full_name>\mine_apple\Http\Controllers\ProdutorController::cadastrarProdutor()</full_name>
+        <docblock line="53">
+          <description>Cadastra um Produtor</description>
+          <long-description></long-description>
+          <tag name="author" line="53" description="Lucas Alves"/>
+          <tag name="param" line="53" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+          <tag name="return" line="53" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="108" package="Default">
+        <name>alterarProdutor</name>
+        <full_name>\mine_apple\Http\Controllers\ProdutorController::alterarProdutor()</full_name>
+        <docblock line="108">
+          <description></description>
+          <long-description></long-description>
+          <tag name="author" line="108" description="Bruno Claudino"/>
+          <tag name="param" line="108" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+          <tag name="return" line="108" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="136" package="Default">
+        <name>dadosCadastrais</name>
+        <full_name>\mine_apple\Http\Controllers\ProdutorController::dadosCadastrais()</full_name>
+        <docblock line="136">
+          <description>Retorna a tela dados cadastrais com todos os dados</description>
+          <long-description></long-description>
+          <tag name="author" line="136" description="Lucas Alves"/>
+          <tag name="return" line="136" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="152" package="Default">
+        <name>cadastrarProduto</name>
+        <full_name>\mine_apple\Http\Controllers\ProdutorController::cadastrarProduto()</full_name>
+        <docblock line="152">
+          <description>Cadastra um produto</description>
+          <long-description></long-description>
+          <tag name="author" line="152" description="Sesaque Oliveira"/>
+          <tag name="param" line="152" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+          <tag name="return" line="152" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="245" package="Default">
+        <name>editarProduto</name>
+        <full_name>\mine_apple\Http\Controllers\ProdutorController::editarProduto()</full_name>
+        <docblock line="245">
+          <description>Edita as informações de um produto</description>
+          <long-description></long-description>
+          <tag name="author" line="245" description="Sesaque Oliveira"/>
+          <tag name="param" line="245" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+          <tag name="return" line="245" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="261" package="Default">
+        <name>alterarInfoProduto</name>
+        <full_name>\mine_apple\Http\Controllers\ProdutorController::alterarInfoProduto()</full_name>
+        <docblock line="261">
+          <description>Alterar as informações relacionadas a um produtor</description>
+          <long-description></long-description>
+          <tag name="author" line="261" description="Bruno Claudino"/>
+          <tag name="param" line="261" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+          <tag name="return" line="261" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="290" package="Default">
+        <name>cadastrarEndereco</name>
+        <full_name>\mine_apple\Http\Controllers\ProdutorController::cadastrarEndereco()</full_name>
+        <docblock line="290">
+          <description>Cadastra um endereço</description>
+          <long-description></long-description>
+          <tag name="author" line="290" description="Lucas Alves"/>
+          <tag name="param" line="290" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="306" package="Default">
+        <name>cadastrarConta</name>
+        <full_name>\mine_apple\Http\Controllers\ProdutorController::cadastrarConta()</full_name>
+        <docblock line="306">
+          <description></description>
+          <long-description></long-description>
+          <tag name="author" line="306" description="Lucas Alves"/>
+          <tag name="param" line="306" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="321" package="Default">
+        <name>reputacaoProdutor</name>
+        <full_name>\mine_apple\Http\Controllers\ProdutorController::reputacaoProdutor()</full_name>
+        <docblock line="321">
+          <description>Retorna a tela reputação de produtor</description>
+          <long-description></long-description>
+          <tag name="author" line="321" description="Lucas Alves"/>
+          <tag name="return" line="321" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="331" package="Default">
+        <name>resumoConta</name>
+        <full_name>\mine_apple\Http\Controllers\ProdutorController::resumoConta()</full_name>
+        <docblock line="331">
+          <description>Retorna a tela relacionada ao resumo do produtor</description>
+          <long-description></long-description>
+          <tag name="author" line="331" description="Lucas Alves"/>
+          <tag name="return" line="331" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="340" package="Default">
+        <name>meusProdutos</name>
+        <full_name>\mine_apple\Http\Controllers\ProdutorController::meusProdutos()</full_name>
+        <docblock line="340">
+          <description>Retorna os produtos relacionados a um determinado produtor</description>
+          <long-description></long-description>
+          <tag name="author" line="340" description="Victória Gomes"/>
+          <tag name="return" line="340" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="353" package="Default">
+        <name>assinaturas</name>
+        <full_name>\mine_apple\Http\Controllers\ProdutorController::assinaturas()</full_name>
+        <docblock line="353">
+          <description>Retorna os assinaturas relacionados a um determinado produtor</description>
+          <long-description></long-description>
+          <tag name="author" line="353" description="Victória Gomes"/>
+          <tag name="return" line="353" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="24" code="PPC:ERR-50005">No summary for class \mine_apple\Http\Controllers\ProdutorController</error>
+      <error line="108" code="PPC:ERR-50008">No summary for method alterarProdutor()</error>
+      <error line="306" code="PPC:ERR-50008">No summary for method cadastrarConta()</error>
+    </parse_markers>
+    <source>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</source>
+  </file>
+  <file path="ConsumidorController.php" generated-path="ConsumidorController.html" hash="4da55c9de23a79242a5a01bb0e5e0f03" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Request">\Illuminate\Http\Request</namespace-alias>
+    <namespace-alias name="Auth">\Illuminate\Support\Facades\Auth</namespace-alias>
+    <namespace-alias name="Estado">\mine_apple\Estado</namespace-alias>
+    <namespace-alias name="Cidade">\mine_apple\Cidade</namespace-alias>
+    <namespace-alias name="Cartao">\mine_apple\Cartao</namespace-alias>
+    <namespace-alias name="ConsumidorEndereco">\mine_apple\ConsumidorEndereco</namespace-alias>
+    <namespace-alias name="Conta">\mine_apple\Conta</namespace-alias>
+    <namespace-alias name="Compra">\mine_apple\Compra</namespace-alias>
+    <namespace-alias name="Endereco">\mine_apple\Endereco</namespace-alias>
+    <namespace-alias name="Consumidor">\mine_apple\Consumidor</namespace-alias>
+    <namespace-alias name="Log">\mine_apple\Log</namespace-alias>
+    <namespace-alias name="Produto">\mine_apple\Produto</namespace-alias>
+    <namespace-alias name="Produtor">\mine_apple\Produtor</namespace-alias>
+    <namespace-alias name="Embalagem">\mine_apple\Embalagem</namespace-alias>
+    <namespace-alias name="Foto">\mine_apple\Foto</namespace-alias>
+    <namespace-alias name="Cart">\Gloudemans\Shoppingcart\Facades\Cart</namespace-alias>
+    <namespace-alias name="Carbon">\Carbon\Carbon</namespace-alias>
+    <namespace-alias name="FormConsumidor">\mine_apple\Http\Requests\FormConsumidor</namespace-alias>
+    <namespace-alias name="Assinatura">\mine_apple\Assinatura</namespace-alias>
+    <namespace-alias name="Assinatura_Produto">\mine_apple\Assinatura_Produto</namespace-alias>
+    <class final="false" abstract="false" namespace="mine_apple\Http\Controllers" line="27" package="Default">
+      <extends>\mine_apple\Http\Controllers\Controller</extends>
+      <name>ConsumidorController</name>
+      <full_name>\mine_apple\Http\Controllers\ConsumidorController</full_name>
+      <docblock line="27">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="27" description="Default"/>
+        <tag name="inherited_from" description="\mine_apple\Http\Controllers\Controller" refers="\mine_apple\Http\Controllers\Controller" link="/classes/mine_apple.Http.Controllers.Controller.html"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="35" package="Default">
+        <name>index</name>
+        <full_name>\mine_apple\Http\Controllers\ConsumidorController::index()</full_name>
+        <docblock line="35">
+          <description></description>
+          <long-description></long-description>
+          <tag name="author" line="35" description="Rafael Brito"/>
+          <tag name="return" line="35" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="43" package="Default">
+        <name>getForm</name>
+        <full_name>\mine_apple\Http\Controllers\ConsumidorController::getForm()</full_name>
+        <docblock line="43">
+          <description></description>
+          <long-description></long-description>
+          <tag name="author" line="43" description="Lucas Alves"/>
+          <tag name="return" line="43" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="55" package="Default">
+        <name>cadastrarConsumidor</name>
+        <full_name>\mine_apple\Http\Controllers\ConsumidorController::cadastrarConsumidor()</full_name>
+        <docblock line="55">
+          <description>Cadastrar um consumidor</description>
+          <long-description></long-description>
+          <tag name="author" line="55" description="Rafael Brito e Lucas Alves"/>
+          <tag name="param" line="55" description="" type="\mine_apple\Http\Requests\FormConsumidor" variable="$request">
+            <type>\mine_apple\Http\Requests\FormConsumidor</type>
+          </tag>
+          <tag name="return" line="55" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\mine_apple\Http\Requests\FormConsumidor</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="115" package="Default">
+        <name>alterarConsumidor</name>
+        <full_name>\mine_apple\Http\Controllers\ConsumidorController::alterarConsumidor()</full_name>
+        <docblock line="115">
+          <description>Altera dados do consumidor</description>
+          <long-description></long-description>
+          <tag name="author" line="115" description="Rafael Brito"/>
+          <tag name="param" line="115" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+          <tag name="return" line="115" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="136" package="Default">
+        <name>adicionarCartao</name>
+        <full_name>\mine_apple\Http\Controllers\ConsumidorController::adicionarCartao()</full_name>
+        <docblock line="136">
+          <description>Adiciona cartão</description>
+          <long-description></long-description>
+          <tag name="author" line="136" description="Lucas Alves"/>
+          <tag name="param" line="136" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="151" package="Default">
+        <name>adicionarCarrinho</name>
+        <full_name>\mine_apple\Http\Controllers\ConsumidorController::adicionarCarrinho()</full_name>
+        <docblock line="151">
+          <description></description>
+          <long-description></long-description>
+          <tag name="author" line="151" description="Lucas Alves e Sesaque Oliveira"/>
+          <tag name="param" line="151" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+          <tag name="return" line="151" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="169" package="Default">
+        <name>removerDoCarrinho</name>
+        <full_name>\mine_apple\Http\Controllers\ConsumidorController::removerDoCarrinho()</full_name>
+        <docblock line="169">
+          <description></description>
+          <long-description></long-description>
+          <tag name="author" line="169" description="Victória Oliveira"/>
+          <tag name="param" line="169" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+          <tag name="return" line="169" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="182" package="Default">
+        <name>getCadastrarEndereco</name>
+        <full_name>\mine_apple\Http\Controllers\ConsumidorController::getCadastrarEndereco()</full_name>
+        <docblock line="182">
+          <description></description>
+          <long-description></long-description>
+          <tag name="author" line="182" description="Lucas Alves"/>
+          <tag name="return" line="182" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="194" package="Default">
+        <name>validaCartao</name>
+        <full_name>\mine_apple\Http\Controllers\ConsumidorController::validaCartao()</full_name>
+        <docblock line="194">
+          <description></description>
+          <long-description></long-description>
+          <tag name="author" line="194" description="Felipe Braz"/>
+          <tag name="website" line="194" description="https://www.braz.pro.br/blog"/>
+          <tag name="param" line="194" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+          <tag name="param" line="194" description="" type="boolean" variable="$cvc">
+            <type>boolean</type>
+          </tag>
+          <tag name="return" line="194" description="" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$cvc</name>
+          <default>false</default>
+          <type>boolean</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="287" package="Default">
+        <name>getRealizacaoAssinatura</name>
+        <full_name>\mine_apple\Http\Controllers\ConsumidorController::getRealizacaoAssinatura()</full_name>
+        <docblock line="287">
+          <description></description>
+          <long-description></long-description>
+          <tag name="author" line="287" description="Lucas Alves"/>
+          <tag name="return" line="287" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="306" package="Default">
+        <name>finalizaCompra</name>
+        <full_name>\mine_apple\Http\Controllers\ConsumidorController::finalizaCompra()</full_name>
+        <docblock line="306">
+          <description></description>
+          <long-description></long-description>
+          <tag name="author" line="306" description="Lucas Alves"/>
+          <tag name="param" line="306" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+          <tag name="return" line="306" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="356" package="Default">
+        <name>getAvaliacaoAssinatura</name>
+        <full_name>\mine_apple\Http\Controllers\ConsumidorController::getAvaliacaoAssinatura()</full_name>
+        <docblock line="356">
+          <description>Retorna a tela avaliação de assinaturas</description>
+          <long-description></long-description>
+          <tag name="author" line="356" description="Lucas Alves"/>
+          <tag name="return" line="356" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="369" package="Default">
+        <name>cadastrarEndereco</name>
+        <full_name>\mine_apple\Http\Controllers\ConsumidorController::cadastrarEndereco()</full_name>
+        <docblock line="369">
+          <description>Cadastra um novo endereço</description>
+          <long-description></long-description>
+          <tag name="author" line="369" description="Lucas Alves"/>
+          <tag name="param" line="369" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="389" package="Default">
+        <name>getCarrinhoCompras</name>
+        <full_name>\mine_apple\Http\Controllers\ConsumidorController::getCarrinhoCompras()</full_name>
+        <docblock line="389">
+          <description>Retorna o carrinho de compras, inicialmente sem contar o frete</description>
+          <long-description></long-description>
+          <tag name="author" line="389" description="Lucas Alves"/>
+          <tag name="return" line="389" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="397" package="Default">
+        <name>carrinhoCompras</name>
+        <full_name>\mine_apple\Http\Controllers\ConsumidorController::carrinhoCompras()</full_name>
+        <docblock line="397">
+          <description></description>
+          <long-description></long-description>
+          <tag name="author" line="397" description="Sesaque Oliveira"/>
+          <tag name="return" line="397" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$frete</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="419" package="Default">
+        <name>atualizarCarrinho</name>
+        <full_name>\mine_apple\Http\Controllers\ConsumidorController::atualizarCarrinho()</full_name>
+        <docblock line="419">
+          <description>Atualiza o valor do frete de acordo com o cep digitado</description>
+          <long-description></long-description>
+          <tag name="author" line="419" description="Sesaque Oliveira"/>
+          <tag name="param" line="419" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+          <tag name="return" line="419" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="460" package="Default">
+        <name>minhasCompras</name>
+        <full_name>\mine_apple\Http\Controllers\ConsumidorController::minhasCompras()</full_name>
+        <docblock line="460">
+          <description>Retorna a tela minhas compras</description>
+          <long-description></long-description>
+          <tag name="author" line="460" description="Sesaque Oliveira"/>
+          <tag name="return" line="460" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="27" code="PPC:ERR-50005">No summary for class \mine_apple\Http\Controllers\ConsumidorController</error>
+      <error line="35" code="PPC:ERR-50008">No summary for method index()</error>
+      <error line="43" code="PPC:ERR-50008">No summary for method getForm()</error>
+      <error line="151" code="PPC:ERR-50008">No summary for method adicionarCarrinho()</error>
+      <error line="169" code="PPC:ERR-50008">No summary for method removerDoCarrinho()</error>
+      <error line="182" code="PPC:ERR-50008">No summary for method getCadastrarEndereco()</error>
+      <error line="194" code="PPC:ERR-50008">No summary for method validaCartao()</error>
+      <error line="287" code="PPC:ERR-50008">No summary for method getRealizacaoAssinatura()</error>
+      <error line="306" code="PPC:ERR-50008">No summary for method finalizaCompra()</error>
+      <error line="397" code="PPC:ERR-50015">Argument $frete is missing from the Docblock of carrinhoCompras</error>
+      <error line="397" code="PPC:ERR-50008">No summary for method carrinhoCompras()</error>
+    </parse_markers>
+    <source>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</source>
+  </file>
+  <file path="Controller.php" generated-path="Controller.html" hash="f981a5627bf5708b2c4cae76297a9ead" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="DispatchesJobs">\Illuminate\Foundation\Bus\DispatchesJobs</namespace-alias>
+    <namespace-alias name="BaseController">\Illuminate\Routing\Controller</namespace-alias>
+    <namespace-alias name="ValidatesRequests">\Illuminate\Foundation\Validation\ValidatesRequests</namespace-alias>
+    <namespace-alias name="AuthorizesRequests">\Illuminate\Foundation\Auth\Access\AuthorizesRequests</namespace-alias>
+    <class final="false" abstract="false" namespace="mine_apple\Http\Controllers" line="10" package="Default">
+      <extends>\Illuminate\Routing\Controller</extends>
+      <name>Controller</name>
+      <full_name>\mine_apple\Http\Controllers\Controller</full_name>
+      <docblock line="10">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="10" description="Default"/>
+      </docblock>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="10" code="PPC:ERR-50005">No summary for class \mine_apple\Http\Controllers\Controller</error>
+    </parse_markers>
+    <source>eJxtT0sKwjAQ3ecUcwBvoCCtIuqyC1cBGdPBBtIkdiYginc3ujFtndVjeN/VOnZRKY89cURD0FtPZ4zRkd6LRL0JXobgHA28VCoxwcG5lFkopHch+RbFBq/rxHprs4eYjvgYLpk+YTchifXXwhKQoUam32cmKiJO6OwYEjd0S8QyDyt0VZJOV8YQ8xeHwT5KpTIOmaGoRXch3067qaeCfJ+guc0CxusX8KfjS70Bky6K0g==</source>
+  </file>
+  <file path="Auth/ForgotPasswordController.php" generated-path="Auth.ForgotPasswordController.html" hash="9774e9ebc6f8df9021f3e6d687306310" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Controller">\mine_apple\Http\Controllers\Controller</namespace-alias>
+    <namespace-alias name="SendsPasswordResetEmails">\Illuminate\Foundation\Auth\SendsPasswordResetEmails</namespace-alias>
+    <class final="false" abstract="false" namespace="mine_apple\Http\Controllers\Auth" line="8" package="Default">
+      <extends>\mine_apple\Http\Controllers\Controller</extends>
+      <name>ForgotPasswordController</name>
+      <full_name>\mine_apple\Http\Controllers\Auth\ForgotPasswordController</full_name>
+      <docblock line="8">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="8" description="Default"/>
+        <tag name="inherited_from" description="\mine_apple\Http\Controllers\Controller" refers="\mine_apple\Http\Controllers\Controller" link="/classes/mine_apple.Http.Controllers.Controller.html"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers\Auth" line="28" package="Default">
+        <name>__construct</name>
+        <full_name>\mine_apple\Http\Controllers\Auth\ForgotPasswordController::__construct()</full_name>
+        <docblock line="28">
+          <description>Create a new controller instance.</description>
+          <long-description></long-description>
+          <tag name="return" line="28" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="8" code="PPC:ERR-50005">No summary for class \mine_apple\Http\Controllers\Auth\ForgotPasswordController</error>
+    </parse_markers>
+    <source>eJy1UsFOIzEMvecrfEACKtF+QNECqqjghoDjSFXIuJ1ImSSyHQra5d/Xk5mqcOEEvjixX579Yl9e5S4bE22PnK1D6H3Ejc05YHMnkptVikIpBCRubop0S2MKfw87npcVex9CUbwVbNapxNaKT7GSNU8YW36wzPtE7SMyym1vfWCt4oKGYZ1ol+SAODIDvsnwFo4h89eA2mJW3b+LH7ORDw5NQO3zc+FfqTdVfe48gzvq1hvpqFJk/xIQtomgs7ENPu4gHzqk2iHWrwTNTlw+ulBa1BAIWS+w77zrQF95FtY0sP7pwCSdMkBM4rfe1XkxbCn1E9F7KgTD9KckSBpjOm7iOawRg+IRhwS+5ZBIj4OSWnf+SeFsYaofFuWbbRgnO44WZrAi1HVSHRH3X34nstjocD4BD/hrQikU4TX5dootqs/lRUXAtkRXhWw2ysZCxcnZeUWMWzXYyaDg4k/v2zbg3hKene4KspyeLyvmw3yY/yqrAjs=</source>
+  </file>
+  <file path="Auth/RegisterController.php" generated-path="Auth.RegisterController.html" hash="7d3bc62e33cda4ded8189a26f9742b29" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="User">\mine_apple\User</namespace-alias>
+    <namespace-alias name="Controller">\mine_apple\Http\Controllers\Controller</namespace-alias>
+    <namespace-alias name="Hash">\Illuminate\Support\Facades\Hash</namespace-alias>
+    <namespace-alias name="Validator">\Illuminate\Support\Facades\Validator</namespace-alias>
+    <namespace-alias name="RegistersUsers">\Illuminate\Foundation\Auth\RegistersUsers</namespace-alias>
+    <class final="false" abstract="false" namespace="mine_apple\Http\Controllers\Auth" line="11" package="Default">
+      <extends>\mine_apple\Http\Controllers\Controller</extends>
+      <name>RegisterController</name>
+      <full_name>\mine_apple\Http\Controllers\Auth\RegisterController</full_name>
+      <docblock line="11">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="11" description="Default"/>
+        <tag name="inherited_from" description="\mine_apple\Http\Controllers\Controller" refers="\mine_apple\Http\Controllers\Controller" link="/classes/mine_apple.Http.Controllers.Controller.html"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="mine_apple\Http\Controllers\Auth" line="31" package="Default">
+        <name>$redirectTo</name>
+        <full_name>\mine_apple\Http\Controllers\Auth\RegisterController::redirectTo</full_name>
+        <default>'/tipo_cadastro'</default>
+        <docblock line="31">
+          <description>Where to redirect users after registration.</description>
+          <long-description></long-description>
+          <tag name="var" line="31" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers\Auth" line="38" package="Default">
+        <name>__construct</name>
+        <full_name>\mine_apple\Http\Controllers\Auth\RegisterController::__construct()</full_name>
+        <docblock line="38">
+          <description>Create a new controller instance.</description>
+          <long-description></long-description>
+          <tag name="return" line="38" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="mine_apple\Http\Controllers\Auth" line="49" package="Default">
+        <name>validator</name>
+        <full_name>\mine_apple\Http\Controllers\Auth\RegisterController::validator()</full_name>
+        <docblock line="49">
+          <description>Get a validator for an incoming registration request.</description>
+          <long-description></long-description>
+          <tag name="param" line="49" description="" type="array" variable="$data">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="49" description="" type="\Illuminate\Contracts\Validation\Validator">
+            <type>\Illuminate\Contracts\Validation\Validator</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="mine_apple\Http\Controllers\Auth" line="63" package="Default">
+        <name>create</name>
+        <full_name>\mine_apple\Http\Controllers\Auth\RegisterController::create()</full_name>
+        <docblock line="63">
+          <description>Create a new user instance after a valid registration.</description>
+          <long-description></long-description>
+          <tag name="param" line="63" description="" type="array" variable="$data">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="63" description="" type="\mine_apple\User">
+            <type>\mine_apple\User</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="11" code="PPC:ERR-50005">No summary for class \mine_apple\Http\Controllers\Auth\RegisterController</error>
+    </parse_markers>
+    <source>eJy1Vctu2zAQvOsr9lBATpDEQIEAhdOkjwBpem3T9hAFxlZcR0QlUuXDTlDn37ukZD3sJumhJWBQJpezszNL6fWbuqiTRGFFtsacoJKK5ljXJWWXztXZuVbO6LIkY7N33hUnSeLtKOyLJXOyvbhztn9uYj+Wped4dJR99nWtjcsuMEdBNrtEWzwb9BVLKdDpXbgL7RXvSK0i4ewT3UrrmEMgapl/XqK1sFnuiQHdOVLCQr+U/EqAx3Q/TuvDfzYavI7EMOV/ydTmuyqkhbyvuEAlSrLgCgITuZioHOgFKFqBD5IBWlhRWYaZA2VLEZaNBSGcYSA3FP8cwft7ELRAXzqOHydkQMYDTiN5U7dItdFLKaiJXniVBxxGd/ewkq7Q3jG7n14aqW451z2gELKJYXBBR4Mi96dJnENX7FjfmNm4CfvwrSDDWTWjC2kod5uCF8GToSBH7ZHNybdLNMCbTKhdmsaZK3GMQwJebDCvNJxCOnWy1nPuXeRTOt3lch7kI9Ym6D5QTCrrUOW0w8CQ80bBUksxpuC/lzLvZIT5nNE4qc/dZC9GNE0dxoug+OFZJQW3wQoNTdJbT9aleycx5mGH5gdyzHG5uX2w4B8qZpnrKrgz6qJgGqPtUK/RYAWAxuA9k2Ak3C4rG9zoeDkwd92tD3e7ewE8on9Xf8d10uSL6baFgDZthzqbVfiDJjH4AK77wDBSqlCWKZyeQdo0Jol10w3ruLWu8G728vh47ZVkCWbeejRSpwdbODW/iVbaiD9DcfmzV2t2byFNRWJ4+uZRg0Z9FNq566C2rVv3nm7vv3Fo6xvwnA/x/UBPmdACB7DZrA0fKz8QPiJctws3Y2HHuobvydDO6377Zq8/2Ev6kPwGSncjwQ==</source>
+  </file>
+  <file path="Auth/ResetPasswordController.php" generated-path="Auth.ResetPasswordController.html" hash="aecf5c2a37870510fc8cac327689480b" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Controller">\mine_apple\Http\Controllers\Controller</namespace-alias>
+    <namespace-alias name="ResetsPasswords">\Illuminate\Foundation\Auth\ResetsPasswords</namespace-alias>
+    <class final="false" abstract="false" namespace="mine_apple\Http\Controllers\Auth" line="8" package="Default">
+      <extends>\mine_apple\Http\Controllers\Controller</extends>
+      <name>ResetPasswordController</name>
+      <full_name>\mine_apple\Http\Controllers\Auth\ResetPasswordController</full_name>
+      <docblock line="8">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="8" description="Default"/>
+        <tag name="inherited_from" description="\mine_apple\Http\Controllers\Controller" refers="\mine_apple\Http\Controllers\Controller" link="/classes/mine_apple.Http.Controllers.Controller.html"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="mine_apple\Http\Controllers\Auth" line="28" package="Default">
+        <name>$redirectTo</name>
+        <full_name>\mine_apple\Http\Controllers\Auth\ResetPasswordController::redirectTo</full_name>
+        <default>'/home'</default>
+        <docblock line="28">
+          <description>Where to redirect users after resetting their password.</description>
+          <long-description></long-description>
+          <tag name="var" line="28" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers\Auth" line="35" package="Default">
+        <name>__construct</name>
+        <full_name>\mine_apple\Http\Controllers\Auth\ResetPasswordController::__construct()</full_name>
+        <docblock line="35">
+          <description>Create a new controller instance.</description>
+          <long-description></long-description>
+          <tag name="return" line="35" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="8" code="PPC:ERR-50005">No summary for class \mine_apple\Http\Controllers\Auth\ResetPasswordController</error>
+    </parse_markers>
+    <source>eJy1U9tqHDEMfZ+v0ENgkoXsfsD2SiC0b6UESmFg8Y61sYnHmsryTkKbf688l27CQp9avXisOT5H0rHfvO9dX1XRdJh60yJ0PuLO9H3A5pNI39xQFKYQkFPzMYvbVlVOf4edvrcj9nMIWfFGsLmlHK0RT3Eka75iQklfTEoDsU1K3gbdwJhf0ic+wEfBaBOcUtXPCjQ2q3H5df3PYuKDpYippJfC/0VvVr1zPkF76lt3rAZRTH4fEA7E4Ey0wcd76JcKeayQ8UfGJGlmUhSoCQkMJN+pXyBsvIAQ+NiGbDVRxPbozNETr+E75ZpVg1F/0UyDj30gnrETQ2GmIzJ75TDxCToUR2rOE2UYfHJFQwY0D+sXva021biWi3Hu/mTl5CWs4JvDoknalPWMrZRjrL0cRIcy9itlBOLQ859BrOfjC8uHo2FIwoqcU5tx7ZlEOdHCxcJ/R/AW6o2jDuvzcm4Y9RLrJCMOr9yJSUxs8UyYUTJHOJK3r5XzPvgWDjm25S3AbqdsWmFu5fJqREy3usRFGfn1u85bG3AwjJf1fTG4vtqOmOfqufoNWw4hjg==</source>
+  </file>
+  <file path="Auth/LoginController.php" generated-path="Auth.LoginController.html" hash="4b9e0ff4b96191fc72009de56af73519" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Consumidor">\mine_apple\Consumidor</namespace-alias>
+    <namespace-alias name="Estado">\mine_apple\Estado</namespace-alias>
+    <namespace-alias name="Controller">\mine_apple\Http\Controllers\Controller</namespace-alias>
+    <namespace-alias name="AuthenticatesUsers">\Illuminate\Foundation\Auth\AuthenticatesUsers</namespace-alias>
+    <namespace-alias name="Auth">\Illuminate\Support\Facades\Auth</namespace-alias>
+    <namespace-alias name="Socialite">\Laravel\Socialite\Facades\Socialite</namespace-alias>
+    <namespace-alias name="User">\mine_apple\User</namespace-alias>
+    <namespace-alias name="ConsumidorEndereco">\mine_apple\ConsumidorEndereco</namespace-alias>
+    <namespace-alias name="Endereco">\mine_apple\Endereco</namespace-alias>
+    <namespace-alias name="Cartao">\mine_apple\Cartao</namespace-alias>
+    <namespace-alias name="Hash">\Illuminate\Support\Facades\Hash</namespace-alias>
+    <namespace-alias name="Authenticable">\Illuminate\Contracts\Auth\Authenticable</namespace-alias>
+    <namespace-alias name="FormConsumidor">\mine_apple\Http\Requests\FormConsumidor</namespace-alias>
+    <class final="false" abstract="false" namespace="mine_apple\Http\Controllers\Auth" line="19" package="Default">
+      <extends>\mine_apple\Http\Controllers\Controller</extends>
+      <name>LoginController</name>
+      <full_name>\mine_apple\Http\Controllers\Auth\LoginController</full_name>
+      <docblock line="19">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="19" description="Default"/>
+        <tag name="inherited_from" description="\mine_apple\Http\Controllers\Controller" refers="\mine_apple\Http\Controllers\Controller" link="/classes/mine_apple.Http.Controllers.Controller.html"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers\Auth" line="39" package="Default">
+        <name>redirectTo</name>
+        <full_name>\mine_apple\Http\Controllers\Auth\LoginController::redirectTo()</full_name>
+        <docblock line="39">
+          <description>Where to redirect users after login.</description>
+          <long-description></long-description>
+          <tag name="return" line="39" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers\Auth" line="56" package="Default">
+        <name>__construct</name>
+        <full_name>\mine_apple\Http\Controllers\Auth\LoginController::__construct()</full_name>
+        <docblock line="56">
+          <description>Create a new controller instance.</description>
+          <long-description></long-description>
+          <tag name="return" line="56" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers\Auth" line="66" package="Default">
+        <name>redirectToProvider</name>
+        <full_name>\mine_apple\Http\Controllers\Auth\LoginController::redirectToProvider()</full_name>
+        <docblock line="66">
+          <description>Redireciona o usuário para a página de autenticação do Facebook</description>
+          <long-description></long-description>
+          <tag name="author" line="66" description="Bruno Claudino"/>
+          <tag name="return" line="66" description="" type="\Illuminate\Http\Response">
+            <type>\Illuminate\Http\Response</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers\Auth" line="76" package="Default">
+        <name>handleProviderCallback</name>
+        <full_name>\mine_apple\Http\Controllers\Auth\LoginController::handleProviderCallback()</full_name>
+        <docblock line="76">
+          <description>Obtem informações do Facebook</description>
+          <long-description></long-description>
+          <tag name="author" line="76" description="Bruno Claudino"/>
+          <tag name="return" line="76" description="" type="\Illuminate\Http\Response">
+            <type>\Illuminate\Http\Response</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers\Auth" line="112" package="Default">
+        <name>redirectToProvider1</name>
+        <full_name>\mine_apple\Http\Controllers\Auth\LoginController::redirectToProvider1()</full_name>
+        <docblock line="112">
+          <description>Redireciona o usuário para a página de autenticação do Google.</description>
+          <long-description></long-description>
+          <tag name="author" line="112" description="Bruno Claudino"/>
+          <tag name="return" line="112" description="" type="\Illuminate\Http\Response">
+            <type>\Illuminate\Http\Response</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers\Auth" line="122" package="Default">
+        <name>handleProviderCallback1</name>
+        <full_name>\mine_apple\Http\Controllers\Auth\LoginController::handleProviderCallback1()</full_name>
+        <docblock line="122">
+          <description>Obtem informações do Google</description>
+          <long-description></long-description>
+          <tag name="author" line="122" description="Bruno Claudino"/>
+          <tag name="return" line="122" description="" type="\Illuminate\Http\Response">
+            <type>\Illuminate\Http\Response</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="19" code="PPC:ERR-50005">No summary for class \mine_apple\Http\Controllers\Auth\LoginController</error>
+    </parse_markers>
+    <source>eJztVs1uGzcQvuspWMHArpzIaq6rSP0x4iZAgBRJjB6sQKCWI4kwl9ySXMlGq4cJeugT9An8Yh1yqf3RVnaLuunFPGhX3OHMfN8MP/LlN/k67/UkzcDkNAWScQlzmucCZq+tzWfnSlqthABtZt8Vdj3u9QrTMkMLU2ScKT0+/PTKWMpUZ7rjuH4vbd8IgR4ltTC7UIVk1HIlfXj/A9LyFD+aS4OrO0s+FHmutJ1d0JQy2KftjN5STTcgZh9Uyqngzn2wqWY6yboYncka8yvJQEPaBXn0wznVlqoHs35Nzbpj5ImiqTWHZCxEN3NP83v4uQCDCy6Uzpql6qWCGkPeqhWXNf8EbixIZkg91fulR3CMTv3j1+GjjdJfmUEz3n8SJgT7uOaGpDXcNZVMgCG0bisuV6RwjUWWShOcJo5O/0VJgvbBlQbGscDeHq0yYhW5VQX6VBkQk2oAeYYBoRkPHWMwgkXkNvjBZWiwAckxAXFLcq02nAHhFjMoZOrCuta8rQI08jFnDXino55/uj74q30S6lgWkpySn9bYoc7rHkrATZcWUxWuLmfBdr/kWw220JIQYzUCD9Mj/8yLBaZV5Vx5/ajiQdlDbvBl7HJLEhcrHgynadWU5KsJkYUQDWs3QshoFI2r+V31BgLRdpwiiaywD7vUgLHVyFWIHnV/ZO0K2ZMoGxnyrEaGGwtZ18muQ/u5BiwKdoGEbbM3uES5lCkc43yjOLuX8PnccWl1kdp44C3qzE8sdv5wijxjv2+phjhaOWGIkCy4SSG3cYQVVwXOjI8k/r4sqOtHorBXirvPmiuSo6oimvzuMzYMJdi6uJvK3rv7/e43RZgiqGqwUOq6wuQ2HJbne11IRc4FLRiX6hDxrCF9Qc1MjhDhb/bdj+VW0h02gv9K9ZOEab5Bw2gZEnW87B3FRxl5t8CaY+FQKTIH9g/c3V8Ybalge6TnVIgFTa+79Xc7g0weglzunyAVHuwoZOcdDKdLro2du/tC3egnNF3TS1NQ1w0T4tQmSbZOXOIItwQX0fP9cv93ENzseXWDL0nc9DMg7V1Xbm+vSZcGlecNa5kPp5w1vDVqvOGwjSOOp/GNA7jldh333WmDPZuCMZTRfmPlrhSUdnBMvg0u9Vs4vmpZuRHwksm0hfh51zDH03erNPO27rBPkoxeQ9zPck6x6IZuc5VrwaA/aC//dAA08ODLe4z7QNJR+u+n2OHo8HuyASewE7wy5EIxzJz0qzq7Bjm0l+5cnIR1V19/an92h23sbQwavRiT8P4SJbKQNi6XDfbzz54ddoiPYdQCRbkVqLQ/iLZrpwb+ouoCl1fWJMF9FF9FnCF9kXMQHbLeai+8slEUXjVnMK/PM1ybqgyv1aitIULlDp9Vru5PKFE0aG6+XXMf7qm16hpkW5BG/qJTnthOf1ZKrQQQf/t5RBH/wbs9+xKq1tXwF/9AxEv8/0rCS6z/n4B34d6j4DXejn4/aXM1nrT5SZsfU5vL313vT5N/Ipw=</source>
+  </file>
+  <file path="AssinaturaController.php" generated-path="AssinaturaController.html" hash="ecd183d345c9c61be95c0c99050481e1" package="Default">
+    <docblock line="0">
+      <description>Created by PhpStorm.</description>
+      <long-description>User: Victória Oliveira Gomes e Bruno Claudino Matias
+Date: 10/07/18
+Time: 12:21</long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Request">\Illuminate\Http\Request</namespace-alias>
+    <namespace-alias name="Cartao">\mine_apple\Cartao</namespace-alias>
+    <namespace-alias name="Financa">\mine_apple\Financa</namespace-alias>
+    <class final="false" abstract="false" namespace="mine_apple\Http\Controllers" line="15" package="Default">
+      <extends/>
+      <name>AssinaturaController</name>
+      <full_name>\mine_apple\Http\Controllers\AssinaturaController</full_name>
+      <docblock line="15">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="15" description="Default"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="31" package="Default">
+        <name>realizarAssinatura</name>
+        <full_name>\mine_apple\Http\Controllers\AssinaturaController::realizarAssinatura()</full_name>
+        <docblock line="31">
+          <description></description>
+          <long-description></long-description>
+          <tag name="author" line="31" description="Victória Gomes e Bruno Claudino"/>
+          <tag name="param" line="31" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+          <tag name="return" line="31" description="O request para completar a assinatura retorna o id do a ser utilizado no pagamento (em teoria).&#10;Procura-se no banco o cartão que corresponde a esse id e as informações referentes a ele são mandadas&#10;para o moduloTEF, que verificará as informações acerca do cartão e retornará se a compra pode ser processada ou&#10;não&#10;Caso a compra tenha sido autorizada, o valor referente a assinatura é repassado para o produtor responsável pelos&#10;produtos dela" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="69" package="Default">
+        <name>transferenciaValores</name>
+        <full_name>\mine_apple\Http\Controllers\AssinaturaController::transferenciaValores()</full_name>
+        <docblock line="69">
+          <description></description>
+          <long-description></long-description>
+          <tag name="author" line="69" description="Victória Gomes e Bruno Claudino"/>
+          <tag name="param" line="69" description="&lt;p&gt;Após a realização da assinatura, esse método é chamado e ele recebe um array contendo os produtos da assinatura&#10;que acabou de ser ativada. Pega-se o id do produtor contido em cada produto, com isso busca-se a finança do produtor e&#10;soma-se o valor do produtor ao saldo disponível do produtor&lt;/p&gt;&#10;&lt;p&gt;O que fazer com o frete?&lt;/p&gt;" type="" variable="$produtos"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$produtos</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="83" package="Default">
+        <name>verificarCartao</name>
+        <full_name>\mine_apple\Http\Controllers\AssinaturaController::verificarCartao()</full_name>
+        <docblock line="83">
+          <description>Verifica um cartão</description>
+          <long-description></long-description>
+          <tag name="author" line="83" description="Victória Gomes"/>
+          <tag name="param" line="83" description="" type="" variable="$infos"/>
+          <tag name="return" line="83" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$infos</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="15" code="PPC:ERR-50005">No summary for class \mine_apple\Http\Controllers\AssinaturaController</error>
+      <error line="31" code="PPC:ERR-50008">No summary for method realizarAssinatura()</error>
+      <error line="69" code="PPC:ERR-50008">No summary for method transferenciaValores()</error>
+    </parse_markers>
+    <source>eJytV9tuGzcQfddXDAIDWrmSL0GLFnbj1FXtJigSG7bqJwPCmEtZRHfJLcmV66T+mKAPQR76FPQL9GM93JtWl6RNUwHWrjjDM2eGc6G/fZpNs87u9naHtmloJXsZ0809nU+zS29suhPWf3bSHtCVEn7+3iqms0TNpLJMP5pUOpL0vc21oWHCeazw8oK9Yhd2/gC8A9rf2937enf/m7AyUmlYeXzweB8/dzsdzcDIWEhKlZZjzrJEXj/zPrseGu2tSRJp3WGnkztJz5MkhxZAS40L+WsunT8shK3tQ7aezdryKbZqwQATCTtHx84FsNzywlTndadD+BQhCZ9t+o5zPzW2FYDNfjf6GVtOqSJHW7Z8acRWwqSm65Y3hX0W3l1fKXl3fYpXY+9/b6sUgvBV4Sw/6IwqMxSskzApPPZsiYkbN6EDXM1kSMUUGwhxtJR7lahXjN/wJuNbnIj2hiKZkpcGDvd2ajPn1ggADRBY6N4gnAZgAvGe/2EIBGDZWhyo0bEEvHTQhC28O1J6gpTi+dv5XwiflRNpYQiv0EskuQCRso45DtlTGiy8wbKJ88SMTk77hZGZtGqiYHb+Zh0YuWQFB/dqXrJ2POi7wCvEB8CZAcsQggx+gSssk8lr2xp76/chO7PY56WeInYqhDAHcoge98FzxgkypXFtOfrzd5BkHMyY2jEYjgMClUFz8zczmVAmE7MIQaniKJYJV4u7xTPLbxIlaJJr4ZXRwOBwkHaR2NFqFvaKja9LGHy2RFEr9ITKojk4uJuCe9RVcbff7BocqbiU9w4XW0PY3bDeXyENjnSeSmvGFfAOPTp8hO9G7JXPEyTmmgCxUzh7WUsaQy2egyNhYnXbgm0YFqEflwfUIikQ1DzxHBj6qXJQrJOnpB61/Wi5pyZRs3kHRjgZmahbuavxJ39TzodT7vZ6r5fIVhU+Q7VG3epQBJtxjE7UHE23Nzi6U376IcwFk4fmTSahnDYSe4meFHK+Di9iwiiMohy9+VyKG9BRSi34T2SLwYAKDYWshSrbzRJh/lzCmw20OPMncx6WmVd0jFsY0/O3vB6IHn1eLvwrIx9kvmy7SniMFu2KjiQUX4UykS5aFE7dX1qo/4G4y0MDXeHWqR7/00jdqqnW6ytD8Dibvw/TpGKLeYDmH7d7cL+cSOn8nTdIZ3RkMeU09GNZzCArhbyRlKfE1vI9+j1qUUOM9rvow23E2nYYS4jPjcmpmim4Bc0wFnboXN4WE7Oeuk3PD+hhhmDQijB6KkE/jBlSiCbd5E4Ue5km4fYSsqGNIGvzzqSVjXIEtZXQVxwnWIlVmDHzP8OIaSmsXSWCLxN+JW1BxNAEuSCfLqttnkCbU63JsJXhg6ktWUxpoRGmef1jpQFsTcrrGxp5dZFrZlXucrbKjMuZVW1vEttifSW3a6zBURGYcRkYFeLyZMGmmik0oGh1bXt/b6+3+xWq/YuPgK2W6cNaIVxVsyhkXHVb+YcaWS2JYnit3i2dt0rffvSkNk/BtevB1ODy8ISknkXdZ2eXo3Z9b2XGNsLzs4vR8ZLUGfELpOEh/VgU/1xEx6fj5y9PRn26PBv+NL4cXZwcv+jTXmtfrW+0lsJHBUy/JNIvTa4r31kF7Fq18KQfgpBIXTvWZoZbWHK/oAZmcb15f+/xl5tUEdA0Kn+1xFW4y/XD6owfOn8DpK1Dmg==</source>
+  </file>
+  <file path="AdministradorController.php" generated-path="AdministradorController.html" hash="20dc89c767f8ab9b3c89508536a9a8ff" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Request">\Illuminate\Http\Request</namespace-alias>
+    <namespace-alias name="Auth">\Illuminate\Support\Facades\Auth</namespace-alias>
+    <namespace-alias name="Produtor">\mine_apple\Produtor</namespace-alias>
+    <namespace-alias name="Consumidor">\mine_apple\Consumidor</namespace-alias>
+    <namespace-alias name="User">\mine_apple\User</namespace-alias>
+    <namespace-alias name="Produto">\mine_apple\Produto</namespace-alias>
+    <namespace-alias name="ConsumidorEndereco">\mine_apple\ConsumidorEndereco</namespace-alias>
+    <namespace-alias name="Endereco">\mine_apple\Endereco</namespace-alias>
+    <namespace-alias name="Cidade">\mine_apple\Cidade</namespace-alias>
+    <namespace-alias name="Estado">\mine_apple\Estado</namespace-alias>
+    <namespace-alias name="Log">\mine_apple\Log</namespace-alias>
+    <namespace-alias name="Operacao">\mine_apple\Operacao</namespace-alias>
+    <namespace-alias name="Avaliacao">\mine_apple\Avaliacao</namespace-alias>
+    <namespace-alias name="Assinatura">\mine_apple\Assinatura</namespace-alias>
+    <namespace-alias name="PDF">\PDF</namespace-alias>
+    <namespace-alias name="Artisan">\Artisan</namespace-alias>
+    <namespace-alias name="Storage">\Storage</namespace-alias>
+    <namespace-alias name="Schedule">\Illuminate\Console\Scheduling\Schedule</namespace-alias>
+    <namespace-alias name="ConsoleKernel">\Illuminate\Foundation\Console\Kernel</namespace-alias>
+    <class final="false" abstract="false" namespace="mine_apple\Http\Controllers" line="25" package="Default">
+      <extends>\mine_apple\Http\Controllers\Controller</extends>
+      <name>AdministradorController</name>
+      <full_name>\mine_apple\Http\Controllers\AdministradorController</full_name>
+      <docblock line="25">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="25" description="Default"/>
+        <tag name="inherited_from" description="\mine_apple\Http\Controllers\Controller" refers="\mine_apple\Http\Controllers\Controller" link="/classes/mine_apple.Http.Controllers.Controller.html"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="36" package="Default">
+        <name>getGerenciamentoConsumidores</name>
+        <full_name>\mine_apple\Http\Controllers\AdministradorController::getGerenciamentoConsumidores()</full_name>
+        <docblock line="36">
+          <description>Retorna a tela gerenciamento consumidores com todos os dados</description>
+          <long-description></long-description>
+          <tag name="author" line="36" description="Lucas Alves"/>
+          <tag name="return" line="36" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="52" package="Default">
+        <name>getGerenciamentoProdutores</name>
+        <full_name>\mine_apple\Http\Controllers\AdministradorController::getGerenciamentoProdutores()</full_name>
+        <docblock line="52">
+          <description>Retorna a tela gerenciamento produtores com todos os dados</description>
+          <long-description></long-description>
+          <tag name="author" line="52" description="Lucas Alves"/>
+          <tag name="return" line="52" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="67" package="Default">
+        <name>getGerenciamentoSistema</name>
+        <full_name>\mine_apple\Http\Controllers\AdministradorController::getGerenciamentoSistema()</full_name>
+        <docblock line="67">
+          <description>Retorna a tela gerenciamento do sistema com os logs</description>
+          <long-description></long-description>
+          <tag name="author" line="67" description="Lucas Alves"/>
+          <tag name="return" line="67" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="81" package="Default">
+        <name>banirProdutor</name>
+        <full_name>\mine_apple\Http\Controllers\AdministradorController::banirProdutor()</full_name>
+        <docblock line="81">
+          <description>Realiza o banimento de um produtor através do id</description>
+          <long-description></long-description>
+          <tag name="author" line="81" description="Lucas Alves"/>
+          <tag name="param" line="81" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+          <tag name="return" line="81" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="95" package="Default">
+        <name>banirConsumidor</name>
+        <full_name>\mine_apple\Http\Controllers\AdministradorController::banirConsumidor()</full_name>
+        <docblock line="95">
+          <description>Realiza o banimento de um produtor através do id</description>
+          <long-description></long-description>
+          <tag name="author" line="95" description="Lucas Alves"/>
+          <tag name="param" line="95" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+          <tag name="return" line="95" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="108" package="Default">
+        <name>getRelatorioGeral</name>
+        <full_name>\mine_apple\Http\Controllers\AdministradorController::getRelatorioGeral()</full_name>
+        <docblock line="108">
+          <description>Gera o relatório geral para o administrador</description>
+          <long-description></long-description>
+          <tag name="author" line="108" description="Lucas Alves"/>
+          <tag name="return" line="108" description="" type="\mine_apple\Http\Controllers\Barryvdh\DomPDF\PDF">
+            <type>\mine_apple\Http\Controllers\Barryvdh\DomPDF\PDF</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="125" package="Default">
+        <name>dadosBackup</name>
+        <full_name>\mine_apple\Http\Controllers\AdministradorController::dadosBackup()</full_name>
+        <docblock line="125">
+          <description>Armazena os dados de frequencia e hora do backup em um arquivo</description>
+          <long-description></long-description>
+          <tag name="author" line="125" description="Rafael"/>
+          <tag name="param" line="125" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+          <tag name="return" line="125" description="" type="\Illuminate\Contracts\View\Factory|\Illuminate\View\View">
+            <type>\Illuminate\Contracts\View\Factory</type>
+            <type>\Illuminate\View\View</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="142" package="Default">
+        <name>iniciarBackup</name>
+        <full_name>\mine_apple\Http\Controllers\AdministradorController::iniciarBackup()</full_name>
+        <docblock line="142">
+          <description>Esse método não está sendo usado aqui, ele foi duplicado em outra
+classe que está em app/Console/Commands/AgendaBakup.php e quem executa
+o mesmo é um método existente no Kernel.php que chama um comando personalizado
+'verifica:backup'</description>
+          <long-description></long-description>
+          <tag name="author" line="142" description="Rafael"/>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="25" code="PPC:ERR-50005">No summary for class \mine_apple\Http\Controllers\AdministradorController</error>
+    </parse_markers>
+    <source>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</source>
+  </file>
+  <file path="CidadeController.php" generated-path="CidadeController.html" hash="76bb92d2aaafee7d0764c10b377779f9" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="DB">\Illuminate\Support\Facades\DB</namespace-alias>
+    <namespace-alias name="Request">\Illuminate\Http\Request</namespace-alias>
+    <namespace-alias name="Estado">\mine_apple\Estado</namespace-alias>
+    <namespace-alias name="Cidade">\mine_apple\Cidade</namespace-alias>
+    <class final="false" abstract="false" namespace="mine_apple\Http\Controllers" line="10" package="Default">
+      <extends>\mine_apple\Http\Controllers\Controller</extends>
+      <name>CidadeController</name>
+      <full_name>\mine_apple\Http\Controllers\CidadeController</full_name>
+      <docblock line="10">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="10" description="Default"/>
+        <tag name="inherited_from" description="\mine_apple\Http\Controllers\Controller" refers="\mine_apple\Http\Controllers\Controller" link="/classes/mine_apple.Http.Controllers.Controller.html"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="mine_apple\Http\Controllers" line="19" package="Default">
+        <name>retornaCidades</name>
+        <full_name>\mine_apple\Http\Controllers\CidadeController::retornaCidades()</full_name>
+        <docblock line="19">
+          <description>Retorna a lista de cidades pertencentes a determinado estado</description>
+          <long-description></long-description>
+          <tag name="author" line="19" description="Lucas Alves"/>
+          <tag name="param" line="19" description="" type="\Illuminate\Http\Request" variable="$request">
+            <type>\Illuminate\Http\Request</type>
+          </tag>
+          <tag name="return" line="19" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>\Illuminate\Http\Request</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="10" code="PPC:ERR-50005">No summary for class \mine_apple\Http\Controllers\CidadeController</error>
+    </parse_markers>
+    <source>eJxlUMtuwjAQPDdfsYqQkqAS7kDSB23VSj3RayTkOguJ5NiuH7RSxb/XxE5A1BfbM7szs7u6k42MIk461JJQhK7luCVSMqxejZHVWnCjBGOo9DKKrEZ4Y8y6KmKw+rBSCmWqF0JJjbp6elxel/QiG/yyqI0nLxyetSG1+Aev29rJOTvKiNbgv+cggD8Gee2IEYp+I3BnPp32N0xhg0YoToAAa50L1Ai019EgUbl+ity4z4kxqE5pawHYBxo0hvueWNMIBe+WEg0P7IB6pCRRpIMwIEyUf4y0QmMVB21Uy/cBnfe3tJ+spbCznJpWcFA+sB9Wp9eKmZ/wZtLWUIzorMSwwsB6FeFKuGVshIfRi7DMxeK7QYVp4tu3bZ3cgpPOZuUeTZoNjTuhkNAG0lHBLSC8MwiRzq55AfFKyH6eA2EWiyTOQ/msdMnzOCnhAuKiwzyG1dw3lfHSSx6Df1jfYBBiHaNj9Acpq9vu</source>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="global" full_name="global"/>
+  <namespace name="mine_apple" full_name="mine_apple">
+    <namespace name="Http" full_name="mine_apple\Http">
+      <namespace name="Controllers" full_name="mine_apple\Http\Controllers">
+        <namespace name="Auth" full_name="mine_apple\Http\Controllers\Auth"/>
+      </namespace>
+    </namespace>
+  </namespace>
+  <deprecated count="0"/>
+</project>
