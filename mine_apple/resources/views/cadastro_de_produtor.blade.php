@@ -185,7 +185,7 @@
                                         <div class="col-md-6">
                                             <label class="sr-only" for="dVerif">Dígito verificador</label>
                                             <input type="text" name="digito" placeholder="Dígito verificador"
-                                                   class="form-facebook form-control" required id="dVerif" maxlength="1" value="{{old('digitoConta')}}">
+                                                   class="form-facebook form-control" required id="dVerif" maxlength="1" value="{{old('digito')}}">
                                         </div>
                                     </div>
                                 </div>
