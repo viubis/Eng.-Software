@@ -47,7 +47,7 @@ class ConsumidorController extends Controller
 
     /**
      * Cadastrar um consumidor
-     * 
+     *
      * @author Rafael Brito e Lucas Alves
      * @param FormConsumidor $request
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
@@ -107,7 +107,7 @@ class ConsumidorController extends Controller
 
     /**
      * Altera dados do consumidor
-     * 
+     *
      * @author Rafael Brito
      * @param Request $request
      * @return string
@@ -128,10 +128,10 @@ class ConsumidorController extends Controller
 
     /**
      * Adiciona cartão
-     * 
+     *
      * @author Lucas Alves
      * @param Request $request
-     * 
+     *
      */
     public function adicionarCartao(Request $request) {
         $cartao = new Cartao();
@@ -294,7 +294,6 @@ class ConsumidorController extends Controller
         $fotos = Foto::all();
         $cartoes = Consumidor::find(Auth::user()->id)->cartoes;
         $consumidor_enderecos = ConsumidorEndereco::all();
-
         return view('realizacao_de_assinatura', compact('itens', 'embalagens', 'produtos', 'enderecos', 'consumidor_enderecos', 'cidades', 'estados', 'fotos', 'cartoes'));
     }
 
@@ -365,7 +364,7 @@ class ConsumidorController extends Controller
      * Cadastra um novo endereço
      * @author Lucas Alves
      * @param Request $request
-     * 
+     *
      */
     public function cadastrarEndereco(Request $request) {
         $consumidor_endereco = new ConsumidorEndereco;

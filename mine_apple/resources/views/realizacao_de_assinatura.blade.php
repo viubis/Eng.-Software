@@ -45,61 +45,6 @@
         @include('layouts.header_usuario')
     @endif
 
-    <!--<section>-->
-
-
-   <!-- <div class="top-content">
-            <div class="container">
-                <h1 class="h1 page-title" data-reactid="38">Frutas</h1>
-                <div class="pb-0" id="line"></div>
-                <div class="row">
-                    <div class="contact_form_title"></div>
-
-
-                </div>
-
-                    <div class= "containerProduto">
-
-                        <img src="images/banana.jpg" height="200" width="200" style="float:left">
-                        <div class="form-group col-md-6">
-                            <label for="nomeProduto">Nome produto</label>
-                            <input type="text" class="form-control" id="nomeProduto"
-                            placeholder="Nome produto">
-                        </div>
-
-                        <div class="form-group col-md-6">
-                        <div class="form-group">
-                                <label for="Descrição">Descrição</label>
-                                <input type="text" class="form-control" id="descricaoProduto"
-                                placeholder="Pequena descrição do produto">
-                        </div>
-                        </div>
-                        <div class="form-row" >
-                        <div class="form-group col-md-2">
-                        <div class="form-group">
-                                <label for="Preço">Preço</label>
-                                <input type="text" class="form-control" id="precoProduto"
-                                placeholder="R$ 10,00">
-                        </div>
-                        </div>
-                        <div class="form-group col-md-2">
-                                <div class="form-group">
-                                        <label for="Pacote">Pacote</label>
-                                        <input type="text" class="form-control" id="pacoteProduto"
-                                        placeholder="duzia">
-                                </div>
-                                </div>
-                        </div>
-                    </div>
-                <center>
-                    <button type="submit" class="btn btn-primary">Mostrar mais</button>
-                </center>
-            </div>
-
-
-        </div>
-
-        </body>-->
 
    <div class="top-content">
        <div class="container">
@@ -109,12 +54,9 @@
                    <h3 class="h2 page-title text-center" data-reactid="30" style="margin-top:15px">Definição de assinatura</h3>
                    <div class="pb-1 col-md-8 offset-md-2 col-xs-6" id="line"></div>
 
-
-
         @foreach($itens as $item)
-       <div class="container">
            <div class="row" id="backColor">
-               <div class="col-sm-4">
+               <div class="col-md-3">
                    <div class="subcontainerProduto1">
                     @php $foto = $fotos->where('produto_id', '=', $item->id)->first() @endphp
                        <div class="imagem">
@@ -122,9 +64,9 @@
                        </div>
                    </div>
                </div>
-               <div class="col-sm-8">
+               <div class="col-md-4">
                    <div class="subcontainerProduto2 ">
-                       <form role="form" method="post" action="/realizacao_assinatura">
+                       <form role="form" method="post" action="{{url('/realizacao_assinatura')}}">
                            <fieldset>
                             @csrf
                                <div class="form-row">
@@ -142,12 +84,6 @@
                                         </select>
 
                                    </div>
-                                   <!-- <div class="form-group col-md-">
-                                        <label for="qntProd1">Quantidade </label>
-                                        <input type="number" step="0" min="1" max="999" name="qntProd1"
-                                        placeholder="Valor..."
-                                        class="form-first-name form-control" id="qntProd1">
-                                    </div> -->
                                </div>
                                <div class="form-row" id="espac1">
                                    <div class="form-group col-md-6">
@@ -181,7 +117,7 @@
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" 
+                                            <input class="form-check-input" type="checkbox"
                                                    value="terca" name="terca[{{$item->id}}]" >
                                             <label class="form-check-label" type="lab1" style="margin-left:-22px;margin-right:+20px">
                                                 Terça-feira
@@ -195,28 +131,28 @@
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" 
+                                            <input class="form-check-input" type="checkbox"
                                                    value="option4" name="quinta[{{$item->id}}]" >
                                             <label class="form-check-label" type="lab1" style="margin-left:-22px;margin-right:+20px">
                                                 Quinta-feira
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" 
+                                            <input class="form-check-input" type="checkbox"
                                                    value="option5" name="sexta[{{$item->id}}]" >
                                             <label class="form-check-label" type="lab1" style="margin-left:-22px;margin-right:+20px">
                                                 Sexta-feira
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" 
+                                            <input class="form-check-input" type="checkbox"
                                                    value="option6" name="sabado[{{$item->id}}]" >
                                             <label class="form-check-label" type="lab1" style="margin-left:-22px;margin-right:+20px">
                                                 Sábado
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" 
+                                            <input class="form-check-input" type="checkbox"
                                                    value="option6" name="domingo[{{$item->id}}]" >
                                             <label class="form-check-label" type="lab1" style="margin-left:-22px;margin-right:+20px">
                                                 Domingo
@@ -232,62 +168,56 @@
                </div>
            </div>
                <div class="pb-0" id="line"></div>
-           </div>
-
    @endforeach
 
 
-   <div class="form-row" id="espac2">
-
-
+   <div class="form-row">
     @php $consumidor_enderecos_atuais =  $consumidor_enderecos->where('consumidor_id', '=', Auth::user()->id) @endphp
-    <div class="card col-md-6 offset-md-3 col-xs-3" >
-            <div class="card-body">
-              <h4 class="card-title">Endereço de entrega:</h4>
-              <div  class="pb-0" id="line"> </div>
-              <div class="form-group col-md-12 col-xs-8">
+    <div class="card col-md-4 mr-4">
+        <div class="card-body">
+            <h4 class="card-title">Endereço de entrega:</h4>
+            <div class="pb-0" id="line"> </div>
+            <div class="form-group col-md-12 col-xs-8">
                 <label for="listaEndereco">Meus endereços </label>
-                   <select multiple class="form-control" size="2" id="listaEndereco">
-                        @foreach($consumidor_enderecos_atuais as $i)
-                        @php $endereco = $enderecos->where('id', '=', $i->endereco_id)->first()@endphp
+                <select multiple class="form-control" size="2" id="listaEndereco">
+                @foreach($consumidor_enderecos_atuais as $i)
+                    @php $endereco = $enderecos->where('id', '=', $i->endereco_id)->first()@endphp
 
-                        @php $cidade = $cidades->where('id','=', $endereco->cidade_id)->first() @endphp
+                    @php $cidade = $cidades->where('id','=', $endereco->cidade_id)->first() @endphp
 
-                        @php $estado = $estados->where('id', '=', $cidade->estado_id)->first() @endphp
-                         <option >{{$endereco->rua}}, {{$endereco->bairro}}, {{$endereco->numero}}, {{$cidade->nome}}, {{$estado->nome}}.</option>
-                        @endforeach
-                 </select>
-
+                    @php $estado = $estados->where('id', '=', $cidade->estado_id)->first() @endphp
+                      <option >{{$endereco->rua}}, {{$endereco->bairro}}, {{$endereco->numero}}, {{$cidade->nome}}, {{$estado->nome}}.</option>
+                    @endforeach
+                </select>
             </div>
-            <a style="margin-left:10px" href="/consumidor/cadastrar_endereco">Adicionar endereço</a>
-            </div>
-            <div class="card-body">
-                <h4 class="card-title">Cartões:</h4>
-                <div  class="pb-0" id="line"> </div>
-                <div class="form-group col-md-12">
-                  <label for="listaCartao">Meus cartões </label>
-                    <select multiple class="form-control" size="2" id="listaCartao">
-                        @foreach($cartoes as $cartao)
-                            <option >VISA terminado em {{substr($cartao->numero, -3)}}.</option>
-                        @endforeach
-                    </select>
-
-                </div>
-                <div class="form-group col-md-5">
-                    <label for="codSeguranca">Código de segurança </label>
-                    <input type="text"
-                    placeholder="Valor..."
-                    class="form-first-name form-control" name="codSeguranca" id="codSeguranca">
-                </div>
-              <a style="margin-left:10px" href="/consumidor/adicionar_cartao">Adicionar cartão</a>
-              </div>
-        <div class="col-md-12 mb-3 text-center">
-            <button type="submit" class="btn btn-primary">Finalizar</button>
+            <a style="margin-left:10px" href="{{url('/consumidor/cadastrar_endereco')}}">Adicionar endereço</a>
         </div>
-          </div>
+    </div>
+    <div class="card col-md-4">
+        <div class="card-body">
+            <h4 class="card-title">Cartões:</h4>
+            <div  class="pb-0" id="line"></div>
+            <div class="form-group col-md-12">
+                <label for="listaCartao">Meus cartões</label>
+                <select multiple class="form-control" size="2" id="listaCartao">
+                    @foreach($cartoes as $cartao)
+                        <option >VISA terminado em {{substr($cartao->numero, -3)}}.</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form-group col-md-5">
+                <label for="codSeguranca">Código de segurança </label>
+                <input type="text" placeholder="Valor..."
+                    class="form-first-name form-control" name="codSeguranca" id="codSeguranca">
+            </div>
+            <a style="margin-left:10px" href="{{url('/consumidor/adicionar_cartao')}}">Adicionar cartão</a>
+        </div>
+    </div>
+  </div>
+</div>
 
-
-
+<div class="pt-3 text-center">
+   <button type="submit" class="btn btn-primary">Finalizar</button>
 </div>
 
 
@@ -311,11 +241,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-
                         <div
                             class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                             <div class="copyright_content">
-                                Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                                Copyright &copy;<script>document.write(new Date().getFullYear().toString());</script>
                                 Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
                                                                                           aria-hidden="true"></i> pela <a
                                     href="#" target="_blank">Weiche Technologie</a>

@@ -172,9 +172,11 @@
                             </div>
                         </div>
                         <div class="col-md-12 mb-3" align="center">
-                            <button type="submit" class="btn btn-primary" href="{{url('/realizacao_assinatura')}}">
-                                Finalizar
-                            </button>
+                            <form action="{{url('/realizacao_assinatura')}}" method="get">
+                                <button type="submit" class="btn btn-primary" href="{{url('/realizacao_assinatura')}}">
+                                    Finalizar
+                                </button>
+                            </form>
                         </div>
                     @else
                         <div class="container">

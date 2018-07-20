@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use mine_apple\Assinatura;
 use mine_apple\Assinatura_Produto;
+use mine_apple\Avaliacao;
 use mine_apple\Categoria;
 use mine_apple\Embalagem;
 use mine_apple\Financa;
@@ -297,7 +298,8 @@ class ProdutorController extends Controller
     }
 
     public function reputacaoProdutor(){
-        return view('reputacao');
+        $avaliacoes = Avaliacao::all();
+        return view('reputacao', compact('avaliacoes'));
     }
 
     public function resumoConta() {
