@@ -28,7 +28,6 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
-        $schedule->command('backup:clean') ->everyMinute();
         $schedule->command('verifica:backup')->everyMinute();
     }
 
