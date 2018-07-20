@@ -23,15 +23,20 @@ use mine_apple\Http\Requests\FormProdutor;
 
 class ProdutorController extends Controller
 {
-    //Métodos para manipular as views visíveis somente para produtores
 
+    /**
+    * Retorna index
+    * @author Rafael
+    * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+    */
     public function index(){
         return view('index');
     }
 
     /**
+     * Retorna o formulário de cadastro
      * @author Lucas Alves
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function getForm(){
             $bancos = Banco::all(['id', 'nome']);
@@ -40,9 +45,10 @@ class ProdutorController extends Controller
     }
 
     /**
+     * Cadastra um Produtor
      * @author Lucas Alves
      * @param Request $request
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function cadastrarProdutor(FormProdutor $request) {
 
@@ -97,7 +103,7 @@ class ProdutorController extends Controller
     /**
      * @author Bruno Claudino
      * @param Request $request
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function alterarProdutor(Request $request) {
 //        dd($request->all());
@@ -123,8 +129,9 @@ class ProdutorController extends Controller
     }
 
     /**
+     * Retorna a tela dados cadastrais com todos os dados
      * @author Lucas Alves
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function dadosCadastrais(){
         $produtor = Produtor::where('usuario_id', '=', Auth::user()->id)->first();
@@ -137,9 +144,10 @@ class ProdutorController extends Controller
     }
 
     /**
+     * Cadastra um produto
      * @author Sesaque Oliveira
      * @param Request $request
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function cadastrarProduto(Request $request) {
         //Busca dependências
@@ -229,9 +237,10 @@ class ProdutorController extends Controller
     }
 
     /**
+     * Edita as informações de um produto
      * @author Sesaque Oliveira
      * @param Request $request
-     * @return string
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function editarProduto(Request $request) {
         $produto = Produto::find($request->id);
@@ -242,6 +251,13 @@ class ProdutorController extends Controller
     }
 
 
+    /**
+     * Alterar as informações relacionadas a um produtor
+     * @author Bruno Claudino
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     *
+     */ 
     public function alterarInfoProduto(Request $request){
         $dados = $request->all();
         $produto = Produto::where('id', '=', $request->id)->first();
@@ -266,9 +282,10 @@ class ProdutorController extends Controller
     }
 
     /**
+     * Cadastra um endereço 
      * @author Lucas Alves
      * @param Request $request
-     * @return int
+     *
      */
     public function cadastrarEndereco(Request $request) {
         $endereco = new Endereco;
@@ -279,13 +296,12 @@ class ProdutorController extends Controller
         $endereco->bairro = $request->bairro;
         $endereco->numero_cep = $request->cep;
         $endereco->save();
-        return $endereco->id;
     }
 
     /**
      * @author Lucas Alves
      * @param Request $request
-     * @return string
+     * 
      */
     public function cadastrarConta(Request $request) {
         $conta = new Conta;
@@ -297,15 +313,30 @@ class ProdutorController extends Controller
         $conta->save();
     }
 
+    /**
+     * Retorna a tela reputação de produtor
+     * @author Lucas Alves
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function reputacaoProdutor(){
         $avaliacoes = Avaliacao::all();
         return view('reputacao', compact('avaliacoes'));
     }
 
+    /**
+     * Retorna a tela relacionada ao resumo do produtor 
+     * @author Lucas Alves
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function resumoConta() {
         return view('Resumo');
     }
 
+    /**
+     * Retorna os produtos relacionados a um determinado produtor
+     * @author Victória Gomes
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function meusProdutos() {
         $produtos = Produto::where('produtor_id', '=', Auth::user()->id)->get();
         $embalagens = Embalagem::all();
@@ -313,6 +344,12 @@ class ProdutorController extends Controller
         return view('produtos_cadastrados', compact('produtos', 'embalagens', 'categorias'));
     }
 
+
+    /**
+     * Retorna os assinaturas relacionados a um determinado produtor
+     * @author Victória Gomes
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function assinaturas() {
         $assinaturas = Assinatura::where('produtor_id', '=', Auth::user()->id)->get();
         $assProdutos = Assinatura_Produto::all();

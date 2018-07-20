@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Victória Gomes
- * Date: 08/07/2018
- * Time: 23:05
- */
 
 namespace mine_apple\Http\Controllers;
 use Illuminate\Http\Request;

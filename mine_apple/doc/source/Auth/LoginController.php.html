@@ -1,0 +1,192 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+
+namespace mine_apple\Http\Controllers\Auth;
+
+use mine_apple\Consumidor;
+use mine_apple\Estado;
+use mine_apple\Http\Controllers\Controller;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
+use Laravel\Socialite\Facades\Socialite;
+use mine_apple\User;
+use mine_apple\ConsumidorEndereco;
+use mine_apple\Endereco;
+use mine_apple\Cartao;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Contracts\Auth\Authenticable;
+use mine_apple\Http\Requests\FormConsumidor;
+
+class LoginController extends Controller
+{
+    /*
+    |--------------------------------------------------------------------------
+    | Login Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller handles authenticating users for the application and
+    | redirecting them to your home screen. The controller uses a trait
+    | to conveniently provide its functionality to your applications.
+    |
+    */
+
+    use AuthenticatesUsers;
+
+    /**
+     * Where to redirect users after login.
+     *
+     * @return  string
+     */
+    public function redirectTo(){
+        if(Auth::user()-&gt;consumidor != null){
+            return '/';
+        }
+        else if(Auth::user()-&gt;produtor != null){
+            return '/resumo/conta';
+        }
+        else{
+            return '/gerenciamento/sistema';
+        }
+    }
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this-&gt;middleware('guest')-&gt;except('logout');
+    }
+
+    /**
+     * Redireciona o usu&aacute;rio para a p&aacute;gina de autentica&ccedil;&atilde;o do Facebook
+     * @author Bruno Claudino
+     * @return \Illuminate\Http\Response
+     */
+    public function redirectToProvider()
+    {
+        return Socialite::driver('facebook')-&gt;redirect();
+    }
+
+    /**
+     * Obtem informa&ccedil;&otilde;es do Facebook
+     * @author Bruno Claudino
+     * @return \Illuminate\Http\Response
+     */
+    public function handleProviderCallback()
+    {
+        $user = Socialite::driver('facebook')-&gt;user();
+
+        //return $user-&gt;first_name;
+        $achaUsuario = User::where('email', $user-&gt;email)-&gt;first();
+        if ($achaUsuario) {
+            Auth::loginUsingId($achaUsuario-&gt;id);
+            return view('index')-&gt;with(&quot;Conta acessada&quot;);
+        } else {
+            $usuario = User::create([
+                'email' =&gt; $user-&gt;email,
+                'password' =&gt; Hash::make(&quot;mpiansesawpoprlde&quot;),
+            ]);
+            $achaUser = User::where('email', $usuario-&gt;email)-&gt;first();
+            Auth::loginUsingId($achaUser-&gt;id);
+            $vetor = explode(&quot; &quot;, $user-&gt;name);
+            $nome = $vetor[0];
+            for ($nomes = 1; $nomes &lt; count($vetor); $nomes++) {
+                $sobrenome = $vetor[$nomes];
+            }
+            $estados = Estado::all(['id', 'nome']);
+            return view('cadastro_de_consumidor', compact('estados', 'nome', 'sobrenome', 'usuario'));
+
+        }
+
+        // $user-&gt;token;
+    }
+
+    //----- login do google ----
+
+    /**
+     * Redireciona o usu&aacute;rio para a p&aacute;gina de autentica&ccedil;&atilde;o do Google.
+     * @author Bruno Claudino
+     * @return \Illuminate\Http\Response
+     */
+    public function redirectToProvider1()
+    {
+        return Socialite::driver('google')-&gt;redirect();
+    }
+
+    /**
+     * Obtem informa&ccedil;&otilde;es do Google
+     * @author Bruno Claudino
+     * @return \Illuminate\Http\Response
+     */
+    public function handleProviderCallback1()
+    {
+        $user = Socialite::driver('google')-&gt;user();
+
+        $achaUsuario = User::where('email', $user-&gt;email)-&gt;first();
+        if ($achaUsuario) {
+            Auth::loginUsingId($achaUsuario-&gt;id);
+            return view('index')-&gt;with(&quot;Conta acessada&quot;);
+        } else {
+            $usuario = User::create([
+                'email' =&gt; $user-&gt;email,
+                'password' =&gt; Hash::make(&quot;mpiansesawpoprlde&quot;),
+            ]);
+            $achaUser = User::where('email', $usuario-&gt;email)-&gt;first();
+            Auth::loginUsingId($achaUser-&gt;id);
+            $vetor = explode(&quot; &quot;, $user-&gt;name);
+            $nome = $vetor[0];
+            for ($nomes = 1; $nomes &lt; count($vetor); $nomes++) {
+                $sobrenome = $vetor[$nomes];
+            }
+            $estados = Estado::all(['id', 'nome']);
+            return view('cadastro_de_consumidor', compact('estados', 'nome', 'sobrenome', 'usuario'));
+
+        }
+    }
+}
+</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

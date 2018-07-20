@@ -646,8 +646,8 @@
 	}
 	.tabs ul li
 	{
-		font-size: 14px;
-		margin-right: 30px;
+		/*font-size: 14px;*/
+		/*margin-right: 30px;*/
 	}
 	.bestsellers_slider
 	{
@@ -764,7 +764,7 @@
 	}
 	.tabs_line span
 	{
-		display: none;
+		/*display: none;*/
 	}
 	.advert_content
 	{
@@ -819,6 +819,7 @@
 	.fonte25V{
 		font-size: 20px;
 	}
+
 }
 
 

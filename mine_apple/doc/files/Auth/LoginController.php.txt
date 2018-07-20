@@ -1,0 +1,148 @@
+<?php
+
+namespace mine_apple\Http\Controllers\Auth;
+
+use mine_apple\Consumidor;
+use mine_apple\Estado;
+use mine_apple\Http\Controllers\Controller;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
+use Laravel\Socialite\Facades\Socialite;
+use mine_apple\User;
+use mine_apple\ConsumidorEndereco;
+use mine_apple\Endereco;
+use mine_apple\Cartao;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Contracts\Auth\Authenticable;
+use mine_apple\Http\Requests\FormConsumidor;
+
+class LoginController extends Controller
+{
+    /*
+    |--------------------------------------------------------------------------
+    | Login Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller handles authenticating users for the application and
+    | redirecting them to your home screen. The controller uses a trait
+    | to conveniently provide its functionality to your applications.
+    |
+    */
+
+    use AuthenticatesUsers;
+
+    /**
+     * Where to redirect users after login.
+     *
+     * @return  string
+     */
+    public function redirectTo(){
+        if(Auth::user()->consumidor != null){
+            return '/';
+        }
+        else if(Auth::user()->produtor != null){
+            return '/resumo/conta';
+        }
+        else{
+            return '/gerenciamento/sistema';
+        }
+    }
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('guest')->except('logout');
+    }
+
+    /**
+     * Redireciona o usuário para a página de autenticação do Facebook
+     * @author Bruno Claudino
+     * @return \Illuminate\Http\Response
+     */
+    public function redirectToProvider()
+    {
+        return Socialite::driver('facebook')->redirect();
+    }
+
+    /**
+     * Obtem informações do Facebook
+     * @author Bruno Claudino
+     * @return \Illuminate\Http\Response
+     */
+    public function handleProviderCallback()
+    {
+        $user = Socialite::driver('facebook')->user();
+
+        //return $user->first_name;
+        $achaUsuario = User::where('email', $user->email)->first();
+        if ($achaUsuario) {
+            Auth::loginUsingId($achaUsuario->id);
+            return view('index')->with("Conta acessada");
+        } else {
+            $usuario = User::create([
+                'email' => $user->email,
+                'password' => Hash::make("mpiansesawpoprlde"),
+            ]);
+            $achaUser = User::where('email', $usuario->email)->first();
+            Auth::loginUsingId($achaUser->id);
+            $vetor = explode(" ", $user->name);
+            $nome = $vetor[0];
+            for ($nomes = 1; $nomes < count($vetor); $nomes++) {
+                $sobrenome = $vetor[$nomes];
+            }
+            $estados = Estado::all(['id', 'nome']);
+            return view('cadastro_de_consumidor', compact('estados', 'nome', 'sobrenome', 'usuario'));
+
+        }
+
+        // $user->token;
+    }
+
+    //----- login do google ----
+
+    /**
+     * Redireciona o usuário para a página de autenticação do Google.
+     * @author Bruno Claudino
+     * @return \Illuminate\Http\Response
+     */
+    public function redirectToProvider1()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+    /**
+     * Obtem informações do Google
+     * @author Bruno Claudino
+     * @return \Illuminate\Http\Response
+     */
+    public function handleProviderCallback1()
+    {
+        $user = Socialite::driver('google')->user();
+
+        $achaUsuario = User::where('email', $user->email)->first();
+        if ($achaUsuario) {
+            Auth::loginUsingId($achaUsuario->id);
+            return view('index')->with("Conta acessada");
+        } else {
+            $usuario = User::create([
+                'email' => $user->email,
+                'password' => Hash::make("mpiansesawpoprlde"),
+            ]);
+            $achaUser = User::where('email', $usuario->email)->first();
+            Auth::loginUsingId($achaUser->id);
+            $vetor = explode(" ", $user->name);
+            $nome = $vetor[0];
+            for ($nomes = 1; $nomes < count($vetor); $nomes++) {
+                $sobrenome = $vetor[$nomes];
+            }
+            $estados = Estado::all(['id', 'nome']);
+            return view('cadastro_de_consumidor', compact('estados', 'nome', 'sobrenome', 'usuario'));
+
+        }
+    }
+}
+

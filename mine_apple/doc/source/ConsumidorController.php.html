@@ -1,0 +1,508 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+
+namespace mine_apple\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use mine_apple\Estado;
+use mine_apple\Cidade;
+use mine_apple\Cartao;
+use mine_apple\ConsumidorEndereco;
+use mine_apple\Conta;
+use mine_apple\Compra;
+use mine_apple\Endereco;
+use mine_apple\Consumidor;
+use mine_apple\Log;
+use mine_apple\Produto;
+use mine_apple\Produtor;
+use mine_apple\Embalagem;
+use mine_apple\Foto;
+use Gloudemans\Shoppingcart\Facades\Cart;
+use Carbon\Carbon;
+use mine_apple\Http\Requests\FormConsumidor;
+use mine_apple\Assinatura;
+use mine_apple\Assinatura_Produto;
+
+
+class ConsumidorController extends Controller
+{
+    //M&eacute;todos para manipular as views vis&iacute;veis somente para consumidores
+
+    /**
+     * @author Rafael Brito
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function index(){
+        return view('index');
+    }
+
+    /**
+     * @author Lucas Alves
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function getForm(){
+        $estados = Estado::all(['id', 'nome']);
+        return view('cadastro_de_consumidor',compact('estados'));
+    }
+
+    /**
+     * Cadastrar um consumidor
+     *
+     * @author Rafael Brito e Lucas Alves
+     * @param FormConsumidor $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function cadastrarConsumidor(FormConsumidor $request) {
+        //dd($request-&gt;all());
+        $consumidor = new Consumidor;
+        $consumidor-&gt;usuario_id = Auth::user()-&gt;id;
+        $consumidor-&gt;nome = $request-&gt;nome;
+        $consumidor-&gt;sobrenome = $request-&gt;sobrenome;
+        $consumidor-&gt;sexo = $request-&gt;sexo;
+        $consumidor-&gt;cpf = $request-&gt;cpf;
+        $consumidor-&gt;telefone = $request-&gt;telefone;
+        $consumidor-&gt;acesso = 1;
+
+
+
+        //$this-&gt;adicionarCartao($request);
+        //$this-&gt;cadastrarEndereco($request);
+
+        $consumidor_endereco = new ConsumidorEndereco;
+        $endereco = new Endereco();
+        $endereco-&gt;rua = $request-&gt;rua;
+        $endereco-&gt;numero = $request-&gt;numero;
+        $endereco-&gt;complemento = $request-&gt;complemento;
+        $endereco-&gt;bairro = $request-&gt;bairro;
+        $endereco-&gt;numero_cep = $request-&gt;cep;
+        $endereco-&gt;cidade_id = $request-&gt;cidade;
+        $endereco-&gt;save();
+
+        $consumidor-&gt;save();
+
+        $consumidor_endereco-&gt;endereco_id = $endereco-&gt;id;
+        $consumidor_endereco-&gt;consumidor_id = Auth::user()-&gt;id;
+
+        $cartao = new Cartao;
+        $cartao-&gt;consumidor_id = Auth::user()-&gt;id;
+        $cartao-&gt;numero = $request-&gt;numero_cartao;
+        $cartao-&gt;titular = $request-&gt;titular;
+        $cartao-&gt;validade = $request-&gt;validade;
+        $cartao-&gt;codigo = $request-&gt;codigo;
+
+
+        $consumidor_endereco-&gt;save();
+
+        $cartao-&gt;save();
+
+        $log = new Log;
+        $log-&gt;usuario_id = Auth::user()-&gt;id;
+        $log-&gt;operacao_id = 1;
+        $log-&gt;data = $data-&gt;toDateString();
+        $log-&gt;hora = $data-&gt;toTimeString();
+        $log-&gt;save();
+
+        return redirect()-&gt;route('consumidor');
+    }
+
+    /**
+     * Altera dados do consumidor
+     *
+     * @author Rafael Brito
+     * @param Request $request
+     * @return string
+     */
+    public function alterarConsumidor(Request $request) {
+       $consumidor = Auth::user();//Recupera dados do usu&aacute;rio logado
+       $consumidor-&gt;fill($request-&gt;all()-&gt;save());//Salva os dados
+
+       /*return redirect()-&gt;route('alterar_consumidor', $consumidor-&gt;id)-&gt;with('info', 'Dados Alterados com sucesso');*/
+
+       $log = new Log;
+       $log-&gt;usuario_id = Auth::user()-&gt;id;
+       $log-&gt;operacao_id = 2;
+       $log-&gt;data = $data-&gt;toDateString();
+       $log-&gt;hora = $data-&gt;toTimeString();
+       $log-&gt;save();
+   }
+
+    /**
+     * Adiciona cart&atilde;o
+     *
+     * @author Lucas Alves
+     * @param Request $request
+     *
+     */
+    public function adicionarCartao(Request $request) {
+        $cartao = new Cartao();
+        $cartao-&gt;consumidor_id = Auth::user()-&gt;id;
+        $cartao-&gt;numero = $request-&gt;numero;
+        $cartao-&gt;titular = $request-&gt;titular;
+        $cartao-&gt;validade = $request-&gt;validade;
+        $cartao-&gt;codigo = $request-&gt;codigo;
+        $cartao-&gt;tipo = $request-&gt;tipo;
+    }
+
+    /**
+     * @author Lucas Alves e Sesaque Oliveira
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function adicionarCarrinho(Request $request) {
+        $item = Cart::content()-&gt;firstWhere('id', $request-&gt;id);
+
+        if(empty($item)) {
+            $produto = Produto::find($request-&gt;id);
+            Cart::add($request-&gt;id, $request-&gt;nome, 1, $request-&gt;preco,
+                ['embalagem' =&gt; $request-&gt;embalagem, 'freteMax' =&gt; $produto-&gt;freteMax, 'produtor' =&gt; $produto-&gt;produtor_id]);
+        } else
+            Cart::update($item-&gt;rowId, $item-&gt;qty+1);
+
+        return $this-&gt;getCarrinhoCompras();
+    }
+
+    /**
+     * @author Vict&oacute;ria Oliveira
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function removerDoCarrinho(Request $request) {
+        $item = Cart::content()-&gt;firstWhere('id', $request-&gt;id);
+
+        if(!empty($item))
+            Cart::remove($item-&gt;rowId);
+
+        return $this-&gt;getCarrinhoCompras();
+    }
+
+    /**
+     * @author Lucas Alves
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function getCadastrarEndereco(){
+        $estados = Estado::all(['id', 'nome']);
+        return view('adicionar_endereco',compact('estados'));
+    }
+
+    /**
+     * @author Felipe Braz
+     * @website https://www.braz.pro.br/blog
+     * @param Request $request
+     * @param bool $cvc
+     * @return array
+     */
+    function validaCartao(Request $request, $cvc=false){
+       $cartao = preg_replace(&quot;/[^0-9]/&quot;, &quot;&quot;, $cartao);
+       if($cvc) $cvc = preg_replace(&quot;/[^0-9]/&quot;, &quot;&quot;, $cvc);
+
+       $cartoes = array(
+        'Visa' =&gt; array('len' =&gt; array(13,16),    'cvc' =&gt; 3),
+           'Mastercard' =&gt; array('len' =&gt; array(16),       'cvc' =&gt; 3),
+           'Diners' =&gt; array('len' =&gt; array(14,16),    'cvc' =&gt; 3),
+           'Elo' =&gt; array('len' =&gt; array(16),       'cvc' =&gt; 3),
+           'Amex' =&gt; array('len' =&gt; array(15),       'cvc' =&gt; 4),
+           'Discover' =&gt; array('len' =&gt; array(16),       'cvc' =&gt; 4),
+           'Aura' =&gt; array('len' =&gt; array(16),       'cvc' =&gt; 3),
+           'Jcb' =&gt; array('len' =&gt; array(16),       'cvc' =&gt; 3),
+           'Hipercard'  =&gt; array('len' =&gt; array(13,16,19), 'cvc' =&gt; 3),
+       );
+
+       switch($cartao){
+           case (bool) preg_match('/^(636368|438935|504175|451416|636297)/', $request-&gt;cartao) :
+           $bandeira = 'elo';
+           break;
+
+           case (bool) preg_match('/^(606282)/', $request-&gt;cartao) :
+           $bandeira = 'hipercard';
+           break;
+
+           case (bool) preg_match('/^(5067|4576|4011)/', $request-&gt;cartao) :
+           $bandeira = 'elo';
+           break;
+
+           case (bool) preg_match('/^(3841)/', $request-&gt;cartao) :
+           $bandeira = 'hipercard';
+           break;
+
+           case (bool) preg_match('/^(6011)/', $request-&gt;cartao) :
+           $bandeira = 'discover';
+           break;
+
+           case (bool) preg_match('/^(622)/', $request-&gt;cartao) :
+           $bandeira = 'discover';
+           break;
+
+           case (bool) preg_match('/^(301|305)/', $request-&gt;cartao) :
+           $bandeira = 'diners';
+           break;
+
+           case (bool) preg_match('/^(34|37)/', $request-&gt;cartao) :
+           $bandeira = 'amex';
+           break;
+
+           case (bool) preg_match('/^(36,38)/', $request-&gt;cartao) :
+           $bandeira = 'diners';
+           break;
+
+           case (bool) preg_match('/^(64,65)/', $request-&gt;cartao) :
+           $bandeira = 'discover';
+           break;
+
+           case (bool) preg_match('/^(50)/', $request-&gt;cartao) :
+           $bandeira = 'aura';
+           break;
+
+           case (bool) preg_match('/^(35)/', $request-&gt;cartao) :
+           $bandeira = 'jcb';
+           break;
+
+           case (bool) preg_match('/^(60)/', $request-&gt;cartao) :
+           $bandeira = 'hipercard';
+           break;
+
+           case (bool) preg_match('/^(4)/', $request-&gt;cartao) :
+           $bandeira = 'visa';
+           break;
+
+           case (bool) preg_match('/^(5)/', $request-&gt;cartao) :
+           $bandeira = 'mastercard';
+           break;
+       }
+
+       $dados_cartao = $cartoes[$bandeira];
+       if(!is_array($dados_cartao)) return array(false, false, false);
+
+       $valid     = true;
+       $valid_cvc = false;
+
+       if(!in_array(strlen($request-&gt;cartao), $dados_cartao['len'])) $valid = false;
+       if($cvc AND strlen($cvc) &lt;= $dados_cartao['cvc'] AND strlen($cvc) !=0) $valid_cvc = true;
+       return array($bandeira, $valid, $valid_cvc);
+   }
+
+    /**
+     * @author Lucas Alves
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function getRealizacaoAssinatura(){
+        $itens = Cart::content();
+        $embalagens = Embalagem::all();
+        $produtos = Produto::all();
+        $enderecos = Endereco::all();
+        $cidades = Cidade::all();
+        $estados = Estado::all();
+        $fotos = Foto::all();
+        $cartoes = Consumidor::find(Auth::user()-&gt;id)-&gt;cartoes;
+        $consumidor_enderecos = ConsumidorEndereco::all();
+        return view('realizacao_de_assinatura', compact('itens', 'embalagens', 'produtos', 'enderecos', 'consumidor_enderecos', 'cidades', 'estados', 'fotos', 'cartoes'));
+    }
+
+
+    /**
+     * @author Lucas Alves
+     * @param Request $request
+     * @return string
+     */
+    public function finalizaCompra(Request $request){
+        //Pego o conteudo do carrinho
+        $itens = Cart::content();
+        $data = Carbon::now();
+
+        //contador
+
+        $assinatura = new Assinatura;
+
+        foreach($itens as $item){
+            $produto_assinatura = new Assinatura_Produto;
+            $produto = Produto::where('id', '=', $item-&gt;id);
+            $produto_assinatura-&gt;assinatura_id = $assinatura-&gt;id;
+            $produto_assinatura-&gt;produto_id = $produto-&gt;id;
+            $produto_assinatura-&gt;quantidade = $item-&gt;qty;
+            $produto_assinatura-&gt;produto_id = $produto-&gt;id;
+            $produto_assinatura-&gt;frequencia = $request-&gt;frequencia;
+            $produto_assinatura-&gt;seg = $request-&gt;seg[$item-&gt;id];
+            $produto_assinatura-&gt;ter = $request-&gt;ter[$item-&gt;id];
+            $produto_assinatura-&gt;qua = $request-&gt;qua[$item-&gt;id];
+            $produto_assinatura-&gt;qui = $request-&gt;qui[$item-&gt;id];
+            $produto_assinatura-&gt;sex = $request-&gt;sex[$item-&gt;id];
+            $produto_assinatura-&gt;sab = $request-&gt;sab[$item-&gt;id];
+            $produto_assinatura-&gt;dom = $request-&gt;dom[$item-&gt;id];
+            $produto_assinatura-&gt;save();
+        }
+
+        $compra = new Compra;
+        $compra-&gt;consumidor_endereco_id = $request-&gt;id;
+        $compra-&gt;valor = $subtotal = Cart::total();
+        $compra-&gt;data = $data-&gt;toDateString();
+        $compra-&gt;hora = $data-&gt;toTimeString();
+        $compra-&gt;frete = 10;
+        $compra-&gt;save();
+
+        $log = new Log;
+        $log-&gt;usuario_id = Auth::user()-&gt;id;
+        $log-&gt;operacao_id = 3;
+        $log-&gt;data = $data-&gt;toDateString();
+        $log-&gt;hora = $data-&gt;toTimeString();
+        $log-&gt;save();
+
+    }
+
+
+    /**
+     * Retorna a tela avalia&ccedil;&atilde;o de assinaturas
+     * @author Lucas Alves
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function getAvaliacaoAssinatura(){
+        $assinaturas = Assinatura::all();
+        $produtores = Produtor::all();
+        return view('avaliacao_assinatura', compact('assinaturas'));
+    }
+
+
+    /**
+     * Cadastra um novo endere&ccedil;o
+     * @author Lucas Alves
+     * @param Request $request
+     *
+     */
+    public function cadastrarEndereco(Request $request) {
+        $consumidor_endereco = new ConsumidorEndereco;
+        $endereco = new Endereco;
+        $endereco-&gt;rua = $request-&gt;rua;
+        $endereco-&gt;numero = $request-&gt;numero;
+        $endereco-&gt;complemento = $request-&gt;complemento;
+        $endereco-&gt;bairro = $request-&gt;bairro;
+        $endereco-&gt;numero_cep = $request-&gt;cep;
+        $endereco-&gt;cidade_id = $request-&gt;cidade;
+        $endereco-&gt;save();
+
+        $consumidor_endereco-&gt;endereco_id = $endereco-&gt;id;
+        $consumidor_endereco-&gt;consumidor_id = Auth::user()-&gt;id;
+    }
+
+    /**
+     * Retorna o carrinho de compras, inicialmente sem contar o frete
+     * @author Lucas Alves
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function getCarrinhoCompras(){
+        return $this-&gt;carrinhoCompras(0);
+    }
+
+    /**
+     * @author Sesaque Oliveira
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function carrinhoCompras($frete){
+       $itens = Cart::content();
+       $subtotal = 0;
+       $total = 0;
+
+       if(!empty($itens)) {
+           $subtotal = Cart::subtotal();
+           $total = $subtotal + $frete;
+       }
+
+       return view('carrinho_de_compras', compact('itens', 'subtotal', 'frete', 'total'));
+    }
+
+    /**
+     * Atualiza o valor do frete de acordo com o cep digitado
+     *
+     * @author Sesaque Oliveira
+     *
+     * @param Request $request
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function atualizarCarrinho(Request $request) {
+        if(Endereco::validarCep($request-&gt;cep) != null) {
+            $itens = Cart::content();
+            $produtores = [];
+            $frete = 0;
+
+            foreach($itens as $item) {
+                $id = $item-&gt;options-&gt;produtor.' ';
+                $freteMax = $item-&gt;options-&gt;freteMax;
+
+                if(!key_exists($id, $produtores)) {
+                    $produtores = array_merge($produtores, [$id =&gt; [$freteMax, 1]]);
+                }else {
+                    $produtores[$id][0] += $freteMax;
+                    $produtores[$id][1]++;
+                }
+            }
+
+            foreach($produtores as $id =&gt; $itens) {
+                $produtor = Produtor::find(trim($id));
+                $cepProdutor = $produtor-&gt;endereco-&gt;numero_cep;
+                $raioEntrega = $produtor-&gt;raioEntrega;
+                $freteMax = $itens[0] / $itens[1];
+                $distancia = Endereco::calcularDistancia($request-&gt;cep, $cepProdutor);
+
+                if($distancia &gt; -1)
+                    $frete += Produtor::frete($raioEntrega, $distancia, $freteMax);
+                else
+                    return ('Produto indispon&iacute;vel'); //teste
+            }
+
+            return $this-&gt;carrinhoCompras($frete);
+        } else
+            return ('Cep inv&aacute;lido'); //teste
+    }
+
+    /**
+     * Retorna a tela minhas compras
+     * @author Sesaque Oliveira
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function minhasCompras(){
+        return view('minhas_compras');
+    }
+}
+</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>
