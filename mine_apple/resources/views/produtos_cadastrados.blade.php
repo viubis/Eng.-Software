@@ -95,17 +95,23 @@
                                     <td id="DiasEntrega">
                                         @if($produto->seg==true)
                                             Segunda.
-                                        @elseif($produto->ter==true)
+                                        @endif
+                                        @if($produto->ter==true)
                                             Terça.
-                                        @elseif($produto->qua==true)
+                                        @endif
+                                        @if($produto->qua==true)
                                             Quarta.
-                                        @elseif($produto->qui==true)
+                                        @endif
+                                        @if($produto->qui==true)
                                             Quinta.
-                                        @elseif($produto->sex==true)
+                                        @endif
+                                        @if($produto->sex==true)
                                             Sexta.
-                                        @elseif($produto->sab==true)
+                                        @endif
+                                        @if($produto->sab==true)
                                             Sábado.
-                                        @elseif($produto->dom==true)
+                                        @endif
+                                        @if($produto->dom==true)
                                             Domingo.
                                         @endif
                                     </td>
@@ -143,7 +149,7 @@
                     <div
                         class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                         <div class="copyright_content">
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                            Copyright &copy;<script>document.write(new Date().getFullYear().toString());</script>
                             Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
                                                                                       aria-hidden="true"></i> pela <a
                             href="#" target="_blank">Weiche Technologie</a>

@@ -96,17 +96,23 @@
                                         @foreach($produtos as $produto)
                                             @if($produto->seg==true)
                                                 Segunda.
-                                            @elseif($produto->ter==true)
+                                            @endif
+                                            @if($produto->ter==true)
                                                 Terça.
-                                            @elseif($produto->qua==true)
+                                            @endif
+                                            @if($produto->qua==true)
                                                 Quarta.
-                                            @elseif($produto->qui==true)
+                                            @endif
+                                            @if($produto->qui==true)
                                                 Quinta.
-                                            @elseif($produto->sex==true)
+                                            @endif
+                                            @if($produto->sex==true)
                                                 Sexta.
-                                            @elseif($produto->sab==true)
+                                            @endif
+                                            @if($produto->sab==true)
                                                 Sábado.
-                                            @elseif($produto->dom==true)
+                                            @endif
+                                            @if($produto->dom==true)
                                                 Domingo.
                                             @endif
                                             @if($produto=!end($produtos))
