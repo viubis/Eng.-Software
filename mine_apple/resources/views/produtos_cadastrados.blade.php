@@ -53,13 +53,6 @@
                     <div class="col-lg-12 ">
                         <div class="contact_form_title">Meus Produtos</div>
                         <div class="row">
-                           <!-- <div class="col-md-1">
-                                <label>Razão Social</label>
-                            </div>-->
-                            <div class="col-md-7">
-                                <input type="text" class="form-control" id="razao"
-                                       placeholder="Razão Social" name="RazaoSocial" disabled>
-                            </div>
                         </div>
                         <div class="table-responsive">
                                 <table class="table" id="tabela">
@@ -71,54 +64,56 @@
                                     <th scope="col" class="corlinha">Qtd Produzida por dia</th>
                                     <th scope="col" class="corlinha">Valor</th>
                                     <th scope="col" class="corlinha">Frete Máximo</th>
-                                    <th scope="col" class="corlinha" >Dias de entrega</th>
-                                   <!-- <th scope="col"> </th>-->
+                                    <th scope="col" class="corlinha">Dias de entrega</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-
-                                <!--<tr>
-                                    <td rowspan="2">Banana</td>
-                                    <td rowspan="2">Dúzia</td>
-                                    <td rowspan="2">100</td>
-                                    <td rowspan="2">Frutas</td>
-                                    <td rowspan="2">R$ 20,00</td>
-                                    <td rowspan="2">R$ 10,00</td>
-                                    <td>Segunda-feira</td>
-                                    <th scope="row" rowspan="2"><a href=""><u>Editar</u></a></th>
-                                </tr>
-                                <tr><td>Terça- feira</td></tr>-->
-
+                            @foreach($produtos as $produto)
                                 <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <th scope="row"><a href=""><u>Editar</u></a></th>
+                                    <td id="Produto">
+                                        {{$produto->nome}}
+                                    </td>
+                                    <td id="TipoEmbalagem">
+                                        @php
+                                            $embalagem = $embalagens->where('id', '=', $produto->embalagem_id)->first();
+                                        @endphp
+                                        {{$embalagem->tipo}}
+                                    </td>
+                                    <td id="Categoria">
+                                        @php
+                                            $categoria = $categorias->where('id', '=', $produto->categoria_id)->first();
+                                        @endphp
+                                        {{$categoria->nome}}
+                                    </td>
+                                    <td id="QtdProdPordia">
+                                        {{$produto->maxPorDia}}
+                                    </td>
+                                    <td id="Valor">
+                                        {{$produto->valor}}
+                                    </td>
+                                    <td id="FreteMax">
+                                        {{$produto->freteMax}}
+                                    </td>
+                                    <td id="DiasEntrega">
+                                        @if($produto->seg==true)
+                                            Segunda.
+                                        @elseif($produto->ter==true)
+                                            Terça.
+                                        @elseif($produto->qua==true)
+                                            Quarta.
+                                        @elseif($produto->qui==true)
+                                            Quinta.
+                                        @elseif($produto->sex==true)
+                                            Sexta.
+                                        @elseif($produto->sab==true)
+                                            Sábado.
+                                        @elseif($produto->dom==true)
+                                            Domingo.
+                                        @endif
+                                    </td>
+                                    <th scope="row"><a href="{{url('/produtor/alterar_produto/'.$produto->id)}}"><u>Editar</u></a></th>
                                 </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <th scope="row"><a href=""><u>Editar</u></a></th>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <th scope="row"><a href=""><u>Editar</u></a></th>
-                                </tr>
+                            @endforeach
                                 </tbody>
                             </table>
                         </div>

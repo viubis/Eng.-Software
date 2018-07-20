@@ -76,11 +76,14 @@ class ProdutorController extends Controller
         $financas->produtor_id = $produtor->usuario_id;
         $financas->save();
 
+        date_default_timezone_set('America/Sao_Paulo');
+        $data = date('Y/m/d');
+        $hora = date('H:i');
         $log = new Log;
         $log->usuario_id = Auth::user()->id;
         $log->operacao_id = 1;
-        $log->data = $data->toDateString();
-        $log->hora = $data->toTimeString();
+        $log->data = $data;
+        $log->hora = $hora;
         $log->save();
 
 
@@ -105,11 +108,14 @@ class ProdutorController extends Controller
         $contas = Conta::where('produtor_id', '=', Auth::user()->id);
         $bancos = Banco::all();
 
+        date_default_timezone_set('America/Sao_Paulo');
+        $data = date('Y/m/d');
+        $hora = date('H:i');
         $log = new Log;
         $log->usuario_id = Auth::user()->id;
         $log->operacao_id = 2;
-        $log->data = $data->toDateString();
-        $log->hora = $data->toTimeString();
+        $log->data = $data;
+        $log->hora = $hora;
         $log->save();
 
         return view('dados_cadastrais_de_produtor', compact('endereco', 'contas','bancos', 'cidades', 'estados'));
@@ -174,11 +180,14 @@ class ProdutorController extends Controller
         $foto->path = "storage/produto_imagens/" . $nomeImagem;
         $foto->save();
 
+        date_default_timezone_set('America/Sao_Paulo');
+        $data = date('Y/m/d');
+        $hora = date('H:i');
         $log = new Log;
         $log->usuario_id = Auth::user()->id;
         $log->operacao_id = 6;
-        $log->data = $data->toDateString();
-        $log->hora = $data->toTimeString();
+        $log->data = $data;
+        $log->hora = $hora;
         $log->save();
 
 
@@ -192,22 +201,19 @@ class ProdutorController extends Controller
      */
     public function editarProduto(Request $request) {
         $produto = Produto::find($request->id);
-
         if($produto == null || $produto->produtor_id != Auth::user()->produtor->usuario_id)
             return redirect()->route('index');
 
+        date_default_timezone_set('America/Sao_Paulo');
+        $data = date('Y/m/d');
+        $hora = date('H:i');
         $log = new Log;
         $log->usuario_id = Auth::user()->id;
         $log->operacao_id = 7;
-        $log->data = $data->toDateString();
-        $log->hora = $data->toTimeString();
+        $log->data = $data;
+        $log->hora = $hora;
         $log->save();
-
-
-        return redirect()->route('produto.cadastrar');
-
-
-        return view('alterar_dados_produtos')->with('produto', $produto);
+        return view('alterar_dados_produtos', compact('produto'));
     }
 
     /**
@@ -251,14 +257,14 @@ class ProdutorController extends Controller
     }
 
     public function meusProdutos() {
-        return view('produtos_cadastrados');
+        $produtos = Produto::where('produtor_id', '=', Auth::user()->id)->get();
+        $embalagens = Embalagem::all();
+        $categorias = Categoria::all();
+        return view('produtos_cadastrados', compact('produtos', 'embalagens', 'categorias'));
     }
 
     public function assinaturas() {
         $assinaturas = Assinatura::where('produtor_id', '=', Auth::user()->id)->get();
-//        foreach ($assinaturas as $assinatura){
-//            dd($assinatura);
-//        }
         $assProdutos = Assinatura_Produto::all();
         $prodInfo = Produto::all();
         return view('assinaturas_produtor_deve_atender', compact('assinaturas', 'assProdutos', 'prodInfo'));
