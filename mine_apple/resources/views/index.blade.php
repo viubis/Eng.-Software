@@ -273,9 +273,9 @@
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 7,00<span>duzia</span></div>
                                                 <div class="product_name">
-                                                    <div><a href="#">Banana</a></div>
+                                                    <div><a href="{{url('/produto/35')}}">Banana</a></div>
                                                 </div>
-                                                <form method="post" action="/adicionar_carrinho">
+                                                <form method="post" action="{{url('/adicionar_carrinho')}}">
                                                     @csrf
                                                     @php
                                                         $item = \mine_apple\Produto::where('id', '=', '35')->first();
@@ -308,9 +308,9 @@
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 3,00<span>Kg</span></div>
                                                 <div class="product_name">
-                                                    <div><a href="#">Cenoura</a></div>
+                                                    <div><a href="{{url('/produto/33')}}">Cenoura</a></div>
                                                 </div>
-                                                <form method="post" action="/adicionar_carrinho">
+                                                <form method="post" action="{{url('/adicionar_carrinho')}}">
                                                     @csrf
                                                     @php
                                                         $item = \mine_apple\Produto::where('id', '=', '33')->first();
@@ -343,9 +343,9 @@
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 1,00<span>unid.</span></div>
                                                 <div class="product_name">
-                                                    <div><a href="#">Pêra</a></div>
+                                                    <div><a href="{{url('/produto/36')}}">Pêra</a></div>
                                                 </div>
-                                                <form method="post" action="/adicionar_carrinho">
+                                                <form method="post" action="{{url('/adicionar_carrinho')}}">
                                                     @csrf
                                                     @php
                                                         $item = \mine_apple\Produto::where('id', '=', '36')->first();
@@ -378,9 +378,9 @@
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 5,00<span>unid.</span></div>
                                                 <div class="product_name">
-                                                    <div><a href="#">Abóbora</a></div>
+                                                    <div><a href="{{url('/produto/11')}}">Abóbora</a></div>
                                                 </div>
-                                                <form method="post" action="/adicionar_carrinho">
+                                                <form method="post" action="{{url('/adicionar_carrinho')}}">
                                                     @csrf
                                                     @php
                                                         $item = \mine_apple\Produto::where('id', '=', '11')->first();
@@ -413,9 +413,9 @@
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 3,00<span>Kg</span></div>
                                                 <div class="product_name">
-                                                    <div><a href="#">Batata inglesa</a></div>
+                                                    <div><a href="{{url('/produto/31')}}">Batata inglesa</a></div>
                                                 </div>
-                                                <form method="post" action="/adicionar_carrinho">
+                                                <form method="post" action="{{url('/adicionar_carrinho')}}">
                                                     @csrf
                                                     @php
                                                         $item = \mine_apple\Produto::where('id', '=', '31')->first();
@@ -448,9 +448,9 @@
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 2,00<span>Kg</span></div>
                                                 <div class="product_name">
-                                                    <div><a href="#">Chuchu</a></div>
+                                                    <div><a href="{{url('/produto/14')}}">Chuchu</a></div>
                                                 </div>
-                                                <form method="post" action="/adicionar_carrinho">
+                                                <form method="post" action="{{url('/adicionar_carrinho')}}">
                                                     @csrf
                                                     @php
                                                         $item = \mine_apple\Produto::where('id', '=', '14')->first();
@@ -483,9 +483,9 @@
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 1,00<span>unid.</span></div>
                                                 <div class="product_name">
-                                                    <div><a href="#">Pimentão Vermelho</a></div>
+                                                    <div><a href="{{url('/produto/32')}}">Pimentão Vermelho</a></div>
                                                 </div>
-                                                <form method="post" action="/adicionar_carrinho">
+                                                <form method="post" action="{{url('/adicionar_carrinho')}}">
                                                     @csrf
                                                     @php
                                                         $item = \mine_apple\Produto::where('id', '=', '32')->first();
@@ -518,9 +518,9 @@
                                             <div class="product_content">
                                                 <div class="product_price discount">R$ 4,00<span>Kg</span></div>
                                                 <div class="product_name">
-                                                    <div><a href="#">Tomate</a></div>
+                                                    <div><a href="{{url('/produto/37')}}">Tomate</a></div>
                                                 </div>
-                                                <form method="post" action="/adicionar_carrinho">
+                                                <form method="post" action="{{url('/adicionar_carrinho')}}">
                                                     @csrf
                                                     @php
                                                         $item = \mine_apple\Produto::where('id', '=', '37')->first();
@@ -1704,7 +1704,7 @@
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Fruta</a></div>
                                             <div class="bestsellers_name">
-                                                <div><a href="#">Uva Verde</a></div>
+                                                <div><a href="{{url('/produto/38')}}">Uva Verde</a></div>
                                             </div>
                                             <div class="product_price discount">R$ 3,00<span>Kg</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
@@ -1728,7 +1728,7 @@
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Fruta</a></div>
                                             <div class="bestsellers_name">
-                                                <div><a href="#">Banana</a></div>
+                                                <div><a href="{{url('/produto/35')}}">Banana</a></div>
                                             </div>
                                             <div class="product_price discount">R$ 7,00<span>duzia</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
@@ -1751,7 +1751,7 @@
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Legume</a></div>
                                             <div class="bestsellers_name">
-                                                <div><a href="#">Abóbora</a></div>
+                                                <div><a href="{{url('/produto/11')}}">Abóbora</a></div>
                                             </div>
                                             <div class="product_price discount">R$ 5,00<span>unid</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
@@ -1775,7 +1775,7 @@
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Hortaliça</a></div>
                                             <div class="bestsellers_name">
-                                                <div><a href="#">Couve-Flor</a></div>
+                                                <div><a href="{{url('/produto/28')}}">Couve-Flor</a></div>
                                             </div>
                                             <div class="product_price discount">R$ 6,00<span>unid</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
@@ -1799,7 +1799,7 @@
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Verdura</a></div>
                                             <div class="bestsellers_name">
-                                                <div><a href="#">Chuchu</a></div>
+                                                <div><a href="{{url('/produto/14')}}">Chuchu</a></div>
                                             </div>
                                             <div class="product_price discount">R$ 2,00<span>Kg</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
@@ -1823,7 +1823,7 @@
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Fruta</a></div>
                                             <div class="bestsellers_name">
-                                                <div><a href="#">Amora</a></div>
+                                                <div><a href="{{url('/produto/41')}}">Amora</a></div>
                                             </div>
                                             <div class="product_price discount">R$ 10,00<span>Kg</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
@@ -1847,7 +1847,7 @@
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Legume</a></div>
                                             <div class="bestsellers_name">
-                                                <div><a href="#">Berinjela</a></div>
+                                                <div><a href="{{url('/produto/12')}}">Berinjela</a></div>
                                             </div>
                                             <div class="product_price discount">R$ 3,99<span>Kg</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
@@ -1871,7 +1871,7 @@
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Raiz</a></div>
                                             <div class="bestsellers_name">
-                                                <div><a href="#">Beterraba</a></div>
+                                                <div><a href="{{url('/produto/13')}}">Beterraba</a></div>
                                             </div>
                                             <div class="product_price discount">R$ 4,99<span>Kg</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
@@ -1895,7 +1895,7 @@
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Hortaliça</a></div>
                                             <div class="bestsellers_name">
-                                                <div><a href="#">Brócolis</a></div>
+                                                <div><a href="{{url('/produto/27')}}">Brócolis</a></div>
                                             </div>
                                             <div class="product_price discount">R$ 10,00<span>unid</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
@@ -1919,7 +1919,7 @@
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Raiz</a></div>
                                             <div class="bestsellers_name">
-                                                <div><a href="#">Inhame</a></div>
+                                                <div><a href="{{url('/produto/34')}}">Inhame</a></div>
                                             </div>
                                             <div class="product_price discount">R$ 5,00<span>Kg</span></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
@@ -1951,7 +1951,7 @@
                                                                             alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Frutas</a></div>
-                                            <div class="bestsellers_name"><a href="#">Morango</a></div>
+                                            <div class="bestsellers_name"><a href="{{url('/produto/40')}}">Morango</a></div>
                                             <div class="rating_r rating_r_4 bestsellers_rating">
                                                 <i></i><i></i><i></i><i></i><i></i></div>
                                             <div class="bestsellers_price discount">R$ 8,99<span>bandeja</span></div>
@@ -2517,7 +2517,7 @@
                                     <div class="viewed_content text-center">
                                         <div class="product_price discount">R$ 7,00<span>duzia</span></div>
                                        <!-- <div class="viewed_price">R$ 7,00<span>duzia</span></div>-->
-                                        <div class="viewed_name"><a href="#">Banana</a></div>
+                                        <div class="viewed_name"><a href="{{url('/produto/35')}}">Banana</a></div>
                                     </div>
                                     <ul class="item_marks">
                                         <li class="item_mark item_discount">-25%</li>
@@ -2533,7 +2533,7 @@
                                     <div class="viewed_image"><img src="{{asset('images/abacaxi.png')}}" alt=""></div>
                                     <div class="viewed_content text-center">
                                         <div class="product_price discount">R$ 3,00<span>unid</span></div>
-                                        <div class="viewed_name"><a href="#">Abacaxi</a></div>
+                                        <div class="viewed_name"><a href="{{url('/produto/6')}}">Abacaxi</a></div>
                                     </div>
                                     <ul class="item_marks">
                                         <li class="item_mark item_discount">-25%</li>
@@ -2549,7 +2549,7 @@
                                     <div class="viewed_image"><img src="{{asset('images/tomate.jpg')}}" alt=""></div>
                                     <div class="viewed_content text-center">
                                         <div class="product_price discount">R$ 4,00<span>Kg</span></div>
-                                        <div class="viewed_name"><a href="#">Tomate</a></div>
+                                        <div class="viewed_name"><a href="{{url('/produto/37')}}">Tomate</a></div>
                                     </div>
                                     <ul class="item_marks">
                                         <li class="item_mark item_discount">-25%</li>
@@ -2565,7 +2565,7 @@
                                     <div class="viewed_image"><img src="{{asset('images/pimentao.jpg')}}" alt=""></div>
                                     <div class="viewed_content text-center">
                                         <div class="product_price discount">R$ 1,00<span>unid</span></div>
-                                        <div class="viewed_name"><a href="#">Pimentão Vermelho</a></div>
+                                        <div class="viewed_name"><a href="{{url('/produto/32')}}">Pimentão Vermelho</a></div>
                                     </div>
                                     <ul class="item_marks">
                                         <li class="item_mark item_discount">-25%</li>
@@ -2581,7 +2581,7 @@
                                     <div class="viewed_image"><img src="{{asset('images/abobora.jpg')}}" alt=""></div>
                                     <div class="viewed_content text-center">
                                         <div class="product_price discount">R$ 5,00<span>unid</span></div>
-                                        <div class="viewed_name"><a href="#">Abóbora</a></div>
+                                        <div class="viewed_name"><a href="{{url('/produto/11')}}">Abóbora</a></div>
                                     </div>
                                     <ul class="item_marks">
                                         <li class="item_mark item_discount">-25%</li>
@@ -2597,7 +2597,7 @@
                                     <div class="viewed_image"><img src="{{asset('images/pera.png')}}" alt=""></div>
                                     <div class="viewed_content text-center">
                                         <div class="product_price discount">R$ 1,00<span>unid</span></div>
-                                        <div class="viewed_name"><a href="#">Pêra</a></div>
+                                        <div class="viewed_name"><a href="{{url('/produto/36')}}">Pêra</a></div>
                                     </div>
                                     <ul class="item_marks">
                                         <li class="item_mark item_discount">-25%</li>
@@ -2624,7 +2624,7 @@
                     <div
                         class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                         <div class="copyright_content">
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                            Copyright &copy;<script>document.write(new Date().getFullYear().toString());</script>
                             Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
                                                                                       aria-hidden="true"></i> pela <a
                                 href="#" target="_blank">Weiche Technologie</a>
