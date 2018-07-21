@@ -141,38 +141,41 @@ class FotoTableSeeder extends Seeder
             ['produto_id' => 32, 'path'=>'images/Legumes/Pimentao_vermelho/Pimentao_vermelho2.jpg'],
             ['produto_id' => 32, 'path'=>'images/Legumes/Pimentao_vermelho/Pimentao_vermelho3.jpg'],
 
-            ['produto_id' => 33, 'path'=>'images/Raízes/Inhame/Inhame1.jpg'],
-            ['produto_id' => 33, 'path'=>'images/Raízes/Inhame/Inhame2.jpg'],
-            ['produto_id' => 33, 'path'=>'images/Raízes/Inhame/Inhame3.jpg'],
+            ['produto_id' => 33, 'path'=>'images/Legumes/Cenoura/Cenoura1.jpg'],
+            ['produto_id' => 33, 'path'=>'images/Legumes/Cenoura/Cenoura2.jpg'],
+            ['produto_id' => 33, 'path'=>'images/Legumes/Cenoura/Cenoura3.jpg'],
 
-            ['produto_id' => 34, 'path'=>'images/Frutas/Banana/Banana1.jpg'],
-            ['produto_id' => 34, 'path'=>'images/Frutas/Banana/Banana2.jpg'],
-            ['produto_id' => 34, 'path'=>'images/Frutas/Banana/Banana3.jpg'],
+            ['produto_id' => 34, 'path'=>'images/Raízes/Inhame/Inhame1.jpg'],
+            ['produto_id' => 34, 'path'=>'images/Raízes/Inhame/Inhame2.jpg'],
+            ['produto_id' => 34, 'path'=>'images/Raízes/Inhame/Inhame3.jpg'],
 
-            ['produto_id' => 35, 'path'=>'images/Frutas/Pera/Pera1.jpg'],
-            ['produto_id' => 35, 'path'=>'images/Frutas/Pera/Pera2.jpg'],
-            ['produto_id' => 35, 'path'=>'images/Frutas/Pera/Pera3.jpg'],
+            ['produto_id' => 35, 'path'=>'images/Frutas/Banana/Banana1.jpg'],
+            ['produto_id' => 35, 'path'=>'images/Frutas/Banana/Banana2.jpg'],
+            ['produto_id' => 35, 'path'=>'images/Frutas/Banana/Banana3.jpg'],
 
-            ['produto_id' => 36, 'path'=>'images/Frutas/Tomate/Tomate1.jpg'],
-            ['produto_id' => 36, 'path'=>'images/Frutas/Tomate/Tomate2.jpg'],
-            ['produto_id' => 36, 'path'=>'images/Frutas/Tomate/Tomate3.jpg'],
+            ['produto_id' => 36, 'path'=>'images/Frutas/Pera/Pera1.jpg'],
+            ['produto_id' => 36, 'path'=>'images/Frutas/Pera/Pera2.jpg'],
+            ['produto_id' => 36, 'path'=>'images/Frutas/Pera/Pera3.jpg'],
 
-            ['produto_id' => 37, 'path'=>'images/Frutas/Uva_verde/Uva_verde1.jpg'],
-            ['produto_id' => 37, 'path'=>'images/Frutas/Uva_verde/Uva_verde2.jpg'],
-            ['produto_id' => 37, 'path'=>'images/Frutas/Uva_verde/Uva_verde3.jpg'],
+            ['produto_id' => 37, 'path'=>'images/Frutas/Tomate/Tomate1.jpg'],
+            ['produto_id' => 37, 'path'=>'images/Frutas/Tomate/Tomate2.jpg'],
+            ['produto_id' => 37, 'path'=>'images/Frutas/Tomate/Tomate3.jpg'],
 
-            ['produto_id' => 38, 'path'=>'images/Frutas/Abacate/Abacate1.png'],
-            ['produto_id' => 38, 'path'=>'images/Frutas/Abacate/Abacate2.jpg'],
-            ['produto_id' => 38, 'path'=>'images/Frutas/Abacate/Abacate3.jpg'],
+            ['produto_id' => 38, 'path'=>'images/Frutas/Uva_verde/Uva_verde1.jpg'],
+            ['produto_id' => 38, 'path'=>'images/Frutas/Uva_verde/Uva_verde2.jpg'],
+            ['produto_id' => 38, 'path'=>'images/Frutas/Uva_verde/Uva_verde3.jpg'],
 
-            ['produto_id' => 39, 'path'=>'images/Frutas/Morango/Morango1.jpg'],
-            ['produto_id' => 39, 'path'=>'images/Frutas/Morango/Morango2.jpg'],
-            ['produto_id' => 39, 'path'=>'images/Frutas/Morango/Morango3.jpg'],
+            ['produto_id' => 39, 'path'=>'images/Frutas/Abacate/Abacate1.png'],
+            ['produto_id' => 39, 'path'=>'images/Frutas/Abacate/Abacate2.jpg'],
+            ['produto_id' => 39, 'path'=>'images/Frutas/Abacate/Abacate3.jpg'],
 
-            ['produto_id' => 40, 'path'=>'images/Frutas/Amora/Amora1.jpg'],
-            ['produto_id' => 40, 'path'=>'images/Frutas/Amora/Amora2.jpg'],
-            ['produto_id' => 40, 'path'=>'images/Frutas/Amora/Amora3.jpg'],
+            ['produto_id' => 40, 'path'=>'images/Frutas/Morango/Morango1.jpg'],
+            ['produto_id' => 40, 'path'=>'images/Frutas/Morango/Morango2.jpg'],
+            ['produto_id' => 40, 'path'=>'images/Frutas/Morango/Morango3.jpg'],
 
+            ['produto_id' => 41, 'path'=>'images/Frutas/Amora/Amora1.jpg'],
+            ['produto_id' => 41, 'path'=>'images/Frutas/Amora/Amora2.jpg'],
+            ['produto_id' => 41, 'path'=>'images/Frutas/Amora/Amora3.jpg'],
 
         ]);
 
