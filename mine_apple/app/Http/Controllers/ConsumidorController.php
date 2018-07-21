@@ -347,6 +347,7 @@ class ConsumidorController extends Controller
                 $produto_assinatura[$dia] = true;
             }
             $produto_assinatura->save();
+            Cart::remove($item->rowId);
         }
 
         $log = new Log;
@@ -355,7 +356,6 @@ class ConsumidorController extends Controller
         $log->data = $data->toDateString();
         $log->hora = $data->toTimeString();
         $log->save();
-//        Cart::clearResolvedInstances();
     }
 
 
