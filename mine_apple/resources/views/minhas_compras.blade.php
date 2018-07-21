@@ -49,7 +49,7 @@
     <div class="top-content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 ">
+                <div class="col-lg-8 offset-lg-2 ">
                     <div class="contact_form_title">Minhas compras</div>
                 </div>
             </div>
@@ -57,10 +57,11 @@
     </div>
 
 
-    <div class="containerInfosProdutos">
-        <div class="container2">
+    <div class="col-lg-8 offset-lg-2 mb-3">
+        <div class="col-md-4 pt-0 pb-0 pl-0 pr-0" style="float: left;margin-bottom:20px;">
+        <div class="container2 col-md-4">
             <div class="row backColor">
-                <h1 style="font-size: 32px" >Compra 01</h1>
+                <h1 style="font-size: 32px;" >Compra 01</h1>
                 <div class="col-sm-8">
                     <div class="subcontainerProduto2 ">
                         <form>
@@ -73,15 +74,17 @@
                                 </div>
                             </fieldset>
                         </form>
-                        <A href="http://www.seulink.com.br" title="Pequena Descrição">Detalhes</A>
-                        <A href="{{url('/avaliação_assinatura')}}" title="Pequena Descrição">Avalie a assinatura</A>
+                        <div><A href="http://www.seulink.com.br" title="Pequena Descrição">Detalhes</A></div>
+                        <div><A href="{{url('/avaliação_assinatura')}}" title="Pequena Descrição">Avalie a assinatura</A></div>
                     </div>
                 </div>
             </div>
 
         </div>
+        </div>
 
-        <div class="container2">
+        <div class="col-md-4 pt-0 pb-0 pl-0 pr-0" style="float: left;margin-bottom:20px;">
+        <div class="container2 col-md-4">
                 <div class="row backColor">
                     <h1 style="font-size: 32px" >Compra 02</h1>
                     <div class="col-sm-8">
@@ -96,15 +99,15 @@
                                     </div>
                                 </fieldset>
                             </form>
-                            <A href="http://www.seulink.com.br" title="Pequena Descrição">Detalhes</A>
-                            <A href="{{url('/avaliação_assinatura')}}" title="Pequena Descrição">Avalie a assinatura</A>
+                            <div><A href="http://www.seulink.com.br" title="Pequena Descrição">Detalhes</A></div>
+                            <div><A href="{{url('/avaliação_assinatura')}}" title="Pequena Descrição">Avalie a assinatura</A></div>
                         </div>
                     </div>
                 </div>
-
             </div>
-
-            <div class="container2">
+        </div>
+        <div class="col-md-4 pt-0 pb-0 pl-0 pr-0" style="float: left;margin-bottom:20px;">
+            <div class="container2 col-md-4">
                     <div class="row backColor">
                         <h1 style="font-size: 32px" >Compra 03</h1>
                         <div class="col-sm-8">
@@ -119,17 +122,19 @@
                                         </div>
                                     </fieldset>
                                 </form>
-                                <A href="http://www.seulink.com.br" title="Pequena Descrição">Detalhes</A>
+                                <div><A href="http://www.seulink.com.br" title="Pequena Descrição">Detalhes</A></div>
+                                <div><A href="{{url('/avaliação_assinatura')}}" title="Pequena Descrição">Avalie a assinatura</A></div>
                             </div>
                         </div>
                     </div>
 
                 </div>
+        </div>
 
     </div>
 
 
-    <div class="col-md-12 mb-3" align="center">
+    <div class="col-md-12 mb-3" align="center" style="clear:both">
         <button type="submit" class="btn btn-primary">Mostrar mais</button>
     </div>
 
