@@ -59,7 +59,7 @@
 
         @foreach($itens as $item)
            <div class="row" id="backColor">
-               <div class="col-md-3">
+               <div class="col-md-4">
                    <div class="subcontainerProduto1">
                     @php $foto = $fotos->where('produto_id', '=', $item->id)->first();@endphp
                        <div class="imagem">
@@ -67,7 +67,7 @@
                        </div>
                    </div>
                </div>
-               <div class="col-md-4">
+               <div class="col-md-6">
                    <div class="subcontainerProduto2 ">
                            <fieldset>
                             @csrf

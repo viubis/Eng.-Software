@@ -5,6 +5,11 @@ Route::middleware(['auth.publico'])->group(function () {
     Route::get('/', 'PublicoController@index')->name('index');
     Route::post('/', 'PublicoController@getPesquisaCategoriasNome')->name('pesquisa');
 
+    Route::post('/adicionar_carrinho', 'ConsumidorController@adicionarCarrinho');
+    Route::post('/remover_carrinho', 'ConsumidorController@removerDoCarrinho')->name('remover_carrinho');
+    Route::get('/carrinho_de_compras','ConsumidorController@getCarrinhoCompras')->name('carrinho_compras');
+    Route::post('/carrinho_de_compras','ConsumidorController@atualizarCarrinho')->name('atualizar_carrinho');
+
     Route::get('/sobre', 'PublicoController@sobre');
 
     Route::get('/fale_conosco', 'PublicoController@faleConosco');
@@ -74,15 +79,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/consumidor/cadastrar_endereco', 'ConsumidorController@cadastrarEndereco');
 
         Route::post('/consumidor/cadastrar_endereco', 'ConsumidorController@cadastrarEndereco')->name('consumidor.cadastrar.endereco');
-
-        Route::get('/carrinho_de_compras','ConsumidorController@getCarrinhoCompras')->name('carrinho_compras');
-        Route::post('/carrinho_de_compras','ConsumidorController@atualizarCarrinho')->name('atualizar_carrinho');
-
         //Route::get('/consumidor/alterar', 'ConsumidorController@alterarConsumidor')->name('consumidor.alterar');
-
-        Route::post('/adicionar_carrinho', 'ConsumidorController@adicionarCarrinho');
-
-        Route::post('/remover_carrinho', 'ConsumidorController@removerDoCarrinho')->name('remover_carrinho');
 
         Route::get('/avaliacao_assinatura', 'ConsumidorController@getAvaliacaoAssinatura');
 

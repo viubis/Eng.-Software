@@ -313,10 +313,10 @@ class ConsumidorController extends Controller
         $compra = new Compra;
         $compra->consumidor_endereco_id = $idEnd->id;
         $compra->consumidor_id = Auth::user()->id;
-        $compra->valor = $subtotal = Cart::total();
         $compra->data = $data->toDateString();
         $compra->hora = $data->toTimeString();
-        $compra->frete = $this->calcularFrete($endCompleto->numero_cep);
+        $compra->frete = $frete = $this->calcularFrete($endCompleto->numero_cep);
+        $compra->valor = Cart::subtotal() + $frete;
         $compra->save();
 
         foreach($itens as $item){
