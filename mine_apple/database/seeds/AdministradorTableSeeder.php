@@ -13,7 +13,7 @@ class AdministradorTableSeeder extends Seeder
     public function run()
     {
         Administrador::create([
-        	'usuario_id' => 3,
+        	'usuario_id' => 4,
         	'nome' => 'Administrador'
         ]);
     }

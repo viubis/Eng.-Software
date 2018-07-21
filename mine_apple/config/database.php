@@ -52,6 +52,11 @@ return [
             'prefix' => '',
             'strict' => true,
             'engine' => null,
+            // 'dump' => [
+            // 'dump_binary_path' => '/path/para/o/bin' exemplo:'C:/xampp/mysql/bin',
+            // 'use_single_transaction',
+            // 'timeout' => 60 * 5, 
+            // ]
         ],
 
         'pgsql' => [
