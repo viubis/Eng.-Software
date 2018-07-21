@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/animate.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/slick-1.8.0/slick.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/minhas_compras_style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/produtos_cadastrados_style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/header_style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/responsive.css')}}">
 
@@ -45,104 +45,89 @@
     @endif
 
 
-    <!--<section>-->
-    <div class="top-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2 ">
-                    <div class="contact_form_title">Minhas compras</div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <main>
+
+        <div class="top-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1 ">
+                        <div class="contact_form_title text-center col-12">Minhas compras</div>
+                    @if(count($compras)>0)
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-hover" id="tabela">
+                                <thead><!--class="thead-light"-->
+                                <tr>
+                                    <th scope="col" class="corlinha">Número da compra</th>
+                                    <th scope="col" class="corlinha">Data</th>
+                                    <th scope="col" class="corlinha">Produtos</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @php $nCompra = 1; @endphp
+                                @foreach($compras as $compra)
+                                    <tr>
+                                        <td id="nCompra">
+                                            0{{$nCompra}}
+                                            @php $nCompra++; @endphp
+                                        </td>
+                                        <td id="Data">
+                                            {{$compra->data}} às {{$compra->hora}}
+                                        </td>
+                                        <td id="Produtos">
+                                            @php
+                                                $assinaturas = \mine_apple\Assinatura::where('compra_id', '=', $compra->id)->get();
+                                            @endphp
+
+                                            @foreach($assinaturas as $assinatura)
+                                                @php
+                                                    $assinaturaProdutos = \mine_apple\Assinatura_Produto::where('assinatura_id', '=', $assinatura->id)->get();
+                                                @endphp
+                                                @foreach($assinaturaProdutos as $assinaturaProduto)
+                                                    @php
+                                                        $produto = \mine_apple\Produto::where('id', '=', $assinaturaProduto->produto_id)->first();
+                                                    @endphp
+                                                    {{$produto->nome}}
+                                                    @if($assinaturaProduto=!end($assinaturaProdutos))
+                                                        <hr>
+                                                    @endif
+                                                @endforeach
+
+                                            @endforeach
+                                        </td>
+                                        <th scope="row"><a href="{{url('/')}}"><u>Detalhes</u></a></th>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        @else
+                            <div class="container">
+                                <div class="jumbotron">
+                                    <div class="text-center"><i class="far fa-frown fa-5x" style="color: #08c8b0;"></i></div>
+                                    <h1 class="text-center">Poxa vida!</h1>
+                                    <h1 class="text-center" style="font-size: 13px"> Parece que você ainda não fez nenhuma compra. </h1>
 
 
-    <div class="col-lg-8 offset-lg-2 mb-3">
-        <div class="col-md-4 pt-0 pb-0 pl-0 pr-0" style="float: left;margin-bottom:20px;">
-        <div class="container2 col-md-4">
-            <div class="row backColor">
-                <h1 style="font-size: 32px;" >Compra 01</h1>
-                <div class="col-sm-8">
-                    <div class="subcontainerProduto2 ">
-                        <form>
-                            <fieldset>
-                                <div class="form-row">
-                                    <div class="form-group col-md-12">
-                                        <input type="text" class="form-control" id="dataCompra"
-                                               placeholder="20/05/2018" disabled name="dataCompra">
-                                    </div>
+                                    <p class="text-center">Tente comprar algo e voltar novamente.</p>
+                                    <p class="text-center"><a class="btn btn-primary" style="background-color: #08c8b0; border: none;" href="{{url("/")}}"><i class="fa fa-home"></i>
+                                            Fazer compras</a></p>
                                 </div>
-                            </fieldset>
-                        </form>
-                        <div><A href="http://www.seulink.com.br" title="Pequena Descrição">Detalhes</A></div>
-                        <div><A href="{{url('/avaliação_assinatura')}}" title="Pequena Descrição">Avalie a assinatura</A></div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        </div>
-
-        <div class="col-md-4 pt-0 pb-0 pl-0 pr-0" style="float: left;margin-bottom:20px;">
-        <div class="container2 col-md-4">
-                <div class="row backColor">
-                    <h1 style="font-size: 32px" >Compra 02</h1>
-                    <div class="col-sm-8">
-                        <div class="subcontainerProduto2 ">
-                            <form>
-                                <fieldset>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-12">
-                                            <input type="text" class="form-control" id="dataCompra2"
-                                                   placeholder="23/02/2018" disabled name="dataCompra2">
-                                        </div>
-                                    </div>
-                                </fieldset>
-                            </form>
-                            <div><A href="http://www.seulink.com.br" title="Pequena Descrição">Detalhes</A></div>
-                            <div><A href="{{url('/avaliação_assinatura')}}" title="Pequena Descrição">Avalie a assinatura</A></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 pt-0 pb-0 pl-0 pr-0" style="float: left;margin-bottom:20px;">
-            <div class="container2 col-md-4">
-                    <div class="row backColor">
-                        <h1 style="font-size: 32px" >Compra 03</h1>
-                        <div class="col-sm-8">
-                            <div class="subcontainerProduto2 ">
-                                <form>
-                                    <fieldset>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-12">
-                                                <input type="text" class="form-control" id="data"
-                                                       placeholder="05/01/2018" disabled name="dataCompra3">
-                                            </div>
-                                        </div>
-                                    </fieldset>
-                                </form>
-                                <div><A href="http://www.seulink.com.br" title="Pequena Descrição">Detalhes</A></div>
-                                <div><A href="{{url('/avaliação_assinatura')}}" title="Pequena Descrição">Avalie a assinatura</A></div>
                             </div>
-                        </div>
+                    @endif
                     </div>
-
                 </div>
+            </div>
         </div>
 
-    </div>
-
-
-    <div class="col-md-12 mb-3" align="center" style="clear:both">
-        <button type="submit" class="btn btn-primary">Mostrar mais</button>
-    </div>
 
 
 
-    @include('layouts.footer')
+    </main>
 
-    <!-- Copyright -->
+
+
+@include('layouts.footer')
+<!-- Copyright -->
 
     <div class="copyright">
         <div class="container">
@@ -152,7 +137,7 @@
                     <div
                         class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                         <div class="copyright_content">
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                            Copyright &copy;<script>document.write(new Date().getFullYear().toString());</script>
                             Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
                                                                                       aria-hidden="true"></i> pela <a
                                 href="#" target="_blank">Weiche Technologie</a>

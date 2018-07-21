@@ -94,12 +94,14 @@ class ConsumidorController extends Controller
         $consumidor_endereco->save();
 
         $cartao->save();
-
+        date_default_timezone_set('America/Sao_Paulo');
+        $data = date('Y/m/d');
+        $hora = date('H:i');
         $log = new Log;
         $log->usuario_id = Auth::user()->id;
         $log->operacao_id = 1;
-        $log->data = $data->toDateString();
-        $log->hora = $data->toTimeString();
+        $log->data = $data;
+        $log->hora = $hora;
         $log->save();
 
         return redirect()->route('consumidor');
@@ -118,11 +120,14 @@ class ConsumidorController extends Controller
 
        /*return redirect()->route('alterar_consumidor', $consumidor->id)->with('info', 'Dados Alterados com sucesso');*/
 
+        date_default_timezone_set('America/Sao_Paulo');
+        $data = date('Y/m/d');
+        $hora = date('H:i');
        $log = new Log;
        $log->usuario_id = Auth::user()->id;
        $log->operacao_id = 2;
-       $log->data = $data->toDateString();
-       $log->hora = $data->toTimeString();
+       $log->data = $data;
+       $log->hora = $data;
        $log->save();
    }
 
@@ -306,16 +311,18 @@ class ConsumidorController extends Controller
      */
     public function finalizaCompra(Request $request){
         //Pego o conteudo do carrinho
+        date_default_timezone_set('America/Sao_Paulo');
+        $data = date('Y/m/d');
+        $hora = date('H:i');
         $itens = Cart::content();
-        $data = Carbon::now();
         $end = $request->idEndereco;
         $endCompleto = Endereco::where('id', '=', $end)->first();
         $idEnd = ConsumidorEndereco::where('endereco_id', '=', $end)->where('consumidor_id', '=', Auth::user()->id)->first();
         $compra = new Compra;
         $compra->consumidor_endereco_id = $idEnd->id;
         $compra->consumidor_id = Auth::user()->id;
-        $compra->data = $data->toDateString();
-        $compra->hora = $data->toTimeString();
+        $compra->data = $data;
+        $compra->hora = $data;
         $compra->frete = $frete = $this->calcularFrete($endCompleto->numero_cep);
         $compra->valor = Cart::subtotal() + $frete;
         $compra->save();
@@ -352,11 +359,12 @@ class ConsumidorController extends Controller
             $produto_assinatura->save();
             Cart::remove($item->rowId);
         }
+
         $log = new Log;
         $log->usuario_id = Auth::user()->id;
         $log->operacao_id = 3;
-        $log->data = $data->toDateString();
-        $log->hora = $data->toTimeString();
+        $log->data = $data;
+        $log->hora = $hora;
         $log->save();
         return view('sucesso_ao_realizar_compra', compact('compra'));
     }
@@ -511,6 +519,7 @@ class ConsumidorController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function minhasCompras(){
-        return view('minhas_compras');
+        $compras = Compra::where('consumidor_id', '=', Auth::user()->id)->get();
+        return view('minhas_compras', compact('compras'));
     }
 }
