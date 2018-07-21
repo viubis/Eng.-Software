@@ -50,15 +50,18 @@
        <div class="container">
            <div class="row">
                <div class="col-md-10 offset-md-1 col-xs-8 ">
+                   <form role="form" method="post" action="{{url('/realizacao_assinatura')}}">
                    <!--<div class="contact_form_title">Detalhes da Assinatura</div>-->
                    <h3 class="h2 page-title text-center" data-reactid="30" style="margin-top:15px">Definição de assinatura</h3>
                    <div class="pb-1 col-md-8 offset-md-2 col-xs-6" id="line"></div>
+
+
 
         @foreach($itens as $item)
            <div class="row" id="backColor">
                <div class="col-md-3">
                    <div class="subcontainerProduto1">
-                    @php $foto = $fotos->where('produto_id', '=', $item->id)->first() @endphp
+                    @php $foto = $fotos->where('produto_id', '=', $item->id)->first();@endphp
                        <div class="imagem">
                            <img src="{{asset($foto->path)}}" height="200" width="200" style="float:left">
                        </div>
@@ -66,7 +69,6 @@
                </div>
                <div class="col-md-4">
                    <div class="subcontainerProduto2 ">
-                       <form role="form" method="post" action="{{url('/realizacao_assinatura')}}">
                            <fieldset>
                             @csrf
                                <div class="form-row">
@@ -77,9 +79,9 @@
                                    </div>
                                    <div class="form-group col-md-12">
                                        <label for="freqProd1">Frequencia de entrega </label>
-                                          <select multiple class="form-control" size="2" id="freqProd1" name="freqProd1">
-                                             @for($i = 0; $i < 5; $i++)
-                                                <option>{{$i}} vez por semana</option>
+                                          <select multiple class="form-control" size="2" id="freqProd" name="freqProd{{$item->id}}">
+                                             @for($i = 1; $i < 5; $i++)
+                                                <option value="{{$i}}">{{$i}} vez por semana</option>
                                             @endfor
                                         </select>
 
@@ -111,50 +113,51 @@
                                     <div class="form-group">
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="checkbox"
-                                                   value="segunda" name="segunda[{{$item->id}}]" >
-                                            <label class="form-check-label" type="lab1" style="margin-left:-22px;margin-right:+20px">
+                                                   @php  $vetor = 'entrega'.$item->id @endphp
+                                                   value="true" id="segunda" name="{{$vetor}}[seg]" >
+                                            <label class="form-check-label" type="lab1" for="segunda" style="margin-left:-22px;margin-right:+20px">
                                                 Segunda-feira
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="checkbox"
-                                                   value="terca" name="terca[{{$item->id}}]" >
-                                            <label class="form-check-label" type="lab1" style="margin-left:-22px;margin-right:+20px">
+                                                   value="true" id="terca" name="{{$vetor}}[ter]" >
+                                            <label class="form-check-label" for="terca" type="lab1" style="margin-left:-22px;margin-right:+20px">
                                                 Terça-feira
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="checkbox"
-                                                   value="quarta" name="quarta[{{$item->id}}]" >
-                                            <label class="form-check-label" type="lab1" style="margin-left:-22px;margin-right:+20px">
+                                                   value="true" id="quarta" name="{{$vetor}}[qua]" >
+                                            <label class="form-check-label" for="quarta" type="lab1" style="margin-left:-22px;margin-right:+20px">
                                                 Quarta-feira
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="checkbox"
-                                                   value="option4" name="quinta[{{$item->id}}]" >
-                                            <label class="form-check-label" type="lab1" style="margin-left:-22px;margin-right:+20px">
+                                                   value="true" id="quinta" name="{{$vetor}}[qui]" >
+                                            <label class="form-check-label" for="quinta" type="lab1" style="margin-left:-22px;margin-right:+20px">
                                                 Quinta-feira
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="checkbox"
-                                                   value="option5" name="sexta[{{$item->id}}]" >
-                                            <label class="form-check-label" type="lab1" style="margin-left:-22px;margin-right:+20px">
+                                                   value="true" id="sexta" name="{{$vetor}}[sex]" >
+                                            <label class="form-check-label" for="sexta" type="lab1" style="margin-left:-22px;margin-right:+20px">
                                                 Sexta-feira
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="checkbox"
-                                                   value="option6" name="sabado[{{$item->id}}]" >
-                                            <label class="form-check-label" type="lab1" style="margin-left:-22px;margin-right:+20px">
+                                                   value="true" id="sabado" name="{{$vetor}}[sab]" >
+                                            <label class="form-check-label" for="sabado" type="lab1" style="margin-left:-22px;margin-right:+20px">
                                                 Sábado
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="checkbox"
-                                                   value="option6" name="domingo[{{$item->id}}]" >
-                                            <label class="form-check-label" type="lab1" style="margin-left:-22px;margin-right:+20px">
+                                                   value="true" id="domingo" name="{{$vetor}}[dom]" >
+                                            <label class="form-check-label" for="domingo" type="lab1" style="margin-left:-22px;margin-right:+20px">
                                                 Domingo
                                             </label>
                                         </div>
@@ -163,7 +166,6 @@
                             </div>
 
                            </fieldset>
-                       </form>
                    </div>
                </div>
            </div>
@@ -179,14 +181,14 @@
             <div class="pb-0" id="line"> </div>
             <div class="form-group col-md-12 col-xs-8">
                 <label for="listaEndereco">Meus endereços </label>
-                <select multiple class="form-control" size="2" id="listaEndereco">
+                <select multiple class="form-control" size="2" id="listaEndereco" name="idEndereco">
                 @foreach($consumidor_enderecos_atuais as $i)
                     @php $endereco = $enderecos->where('id', '=', $i->endereco_id)->first()@endphp
 
                     @php $cidade = $cidades->where('id','=', $endereco->cidade_id)->first() @endphp
 
                     @php $estado = $estados->where('id', '=', $cidade->estado_id)->first() @endphp
-                      <option >{{$endereco->rua}}, {{$endereco->bairro}}, {{$endereco->numero}}, {{$cidade->nome}}, {{$estado->nome}}.</option>
+                      <option value="{{$endereco->id}}">{{$endereco->rua}}, {{$endereco->bairro}}, {{$endereco->numero}}, {{$cidade->nome}}, {{$estado->nome}}.</option>
                     @endforeach
                 </select>
             </div>
@@ -214,18 +216,15 @@
         </div>
     </div>
   </div>
+   <div class="pt-3 text-center">
+       <button type="submit" class="btn btn-primary">Finalizar</button>
+   </div>
+</form>
 </div>
-
-<div class="pt-3 text-center">
-   <button type="submit" class="btn btn-primary">Finalizar</button>
-</div>
-
-
 </div>
            </div>
        </div>
    </div>
-</div>
 
 
 
@@ -262,7 +261,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
 
 <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
 <script src="{{asset('css/bootstrap4/popper.js')}}"></script>
