@@ -193,7 +193,7 @@
                     @endforeach
                 </select>
             </div>
-            <a style="margin-left:10px" href="{{url('/consumidor/cadastrar_endereco')}}">Adicionar endereço</a>
+            {{--<a style="margin-left:10px" href="{{url('/consumidor/cadastrar_endereco')}}">Adicionar endereço</a>--}}
         </div>
     </div>
     <div class="card col-md-12" style="margin-top: 40px;">
@@ -213,7 +213,7 @@
                 <input type="text" placeholder="Valor..."
                     class="form-first-name form-control" name="codSeguranca" id="codSeguranca">
             </div>
-            <a style="margin-left:10px" href="{{url('/consumidor/adicionar_cartao')}}">Adicionar cartão</a>
+            {{--<a style="margin-left:10px" href="{{url('/consumidor/adicionar_cartao')}}">Adicionar cartão</a>--}}
         </div>
     </div>
   </div>

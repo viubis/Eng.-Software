@@ -79,7 +79,10 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/consumidor/cadastrar_endereco', 'ConsumidorController@cadastrarEndereco');
 
         Route::post('/consumidor/cadastrar_endereco', 'ConsumidorController@cadastrarEndereco')->name('consumidor.cadastrar.endereco');
-        //Route::get('/consumidor/alterar', 'ConsumidorController@alterarConsumidor')->name('consumidor.alterar');
+
+        Route::get('/meusDados', 'ConsumidorController@viewAlterarDadosConsumidor');
+
+        Route::post('/consumidor/alterar', 'ConsumidorController@alterarConsumidor')->name('consumidor.alterar');
 
         Route::get('/avaliacao_assinatura', 'ConsumidorController@getAvaliacaoAssinatura');
 

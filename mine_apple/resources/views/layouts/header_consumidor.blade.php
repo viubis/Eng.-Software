@@ -14,7 +14,7 @@
                                 <div class="top_bar_user col-12">
                                     <div class="row col-12">
                                         <div class="">
-                                            <i style="color: #08c8b0;" class="fa fa-user-circle fa-2x"></i>
+                                            <a href="{{url('/meusDados')}}"><i style="color: #08c8b0;" class="fa fa-user-circle fa-2x"></i></a>
                                         </div>
                                         <div class="">
                                                 <a style="font-size: 13px" href="{{url("/minhascompras")}}">{{Auth::user()->consumidor->nome}} <span

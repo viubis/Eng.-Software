@@ -60,7 +60,7 @@
             <div class="row">
                 <div class="col-sm-6 offset-lg-3 form-box">
 
-                    <form role="form" action="{{route('')}}" method="post" class="registration-form">
+                    <form role="form" action="{{url('/consumidor/alterar')}}" method="post" class="registration-form">
 
                         <fieldset>
 
@@ -79,10 +79,8 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="nome">Nome</label>
                                     <input type="text" name="nome"
-                                           @if(isset($nome))
-                                           value="{{$nome}}"
-                                           @else
-                                           value="{{old('nome')}}"
+                                           @if(isset($consumidor->nome))
+                                                value="{{$consumidor->nome}}"
                                            @endif
                                            placeholder="Nome..."
                                            class="form-first-name form-control" id="nome">
@@ -90,30 +88,33 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="sobrenome">Sobrenome</label>
                                     <input type="text" name="sobrenome" placeholder="Sobrenome..."
-                                           @if(isset($sobrenome))
-                                           value = "{{$sobrenome}}"
-                                           @else
-                                           value="{{old('sobrenome')}}"
+                                           @if(isset($consumidor->sobrenome))
+                                           value = "{{$consumidor->sobrenome}}"
                                            @endif
                                            class="form-first-name form-control" id="sobrenome">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="cpf">CPF</label>
-                                    <input type="text" name="cpf" placeholder="CPF..."
-                                           class="form-last-name form-control" id="cpf" data-mask="000.000.000-00" value="{{old('cpf')}}">
+                                    <input type="text" name="cpf"
+                                           class="form-last-name form-control" id="cpf" data-mask="000.000.000-00" value="{{$consumidor->cpf}}">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="telefone">CPF</label>
                                     <input type="text" name="telefone" placeholder="Telefone..."
-                                           class="form-last-name form-control" id="telefone" data-mask="(00) 00000-0000" value="{{old('telefone')}}">
+                                           class="form-last-name form-control" id="telefone" data-mask="(00) 00000-0000" value="{{$consumidor->telefone}}">
                                 </div>
 
                                 <div class="form-group">
                                     <label class="sr-only" for="sexo">Sexo</label>
-                                    <select class="form-control" id="sexo" name="sexo" value="{{old('sexo')}}">
+                                    <select class="form-control" id="sexo" name="sexo">
                                         <option disabled selected value=""> Sexo</option>
-                                        <option value="f">Feminino</option>
-                                        <option value="m">Masculino</option>
+                                        @if($consumidor->sexo == 'm')
+                                            <option value="f">Feminino</option>
+                                            <option value="m" selected>Masculino</option>
+                                        @else
+                                            <option value="f" selected>Feminino</option>
+                                            <option value="m">Masculino</option>
+                                        @endif
                                     </select>
                                 </div>
 
@@ -235,10 +236,9 @@
                                     <label for="contrato">Li e aceito os <a data-toggle="modal" data-target="#exampleModalLong" style="color: #0d82d3">termos de uso</a>.</label>
                                 </div>
 
-                                
+
                                 <button type="button" class="btn btn-previous">Anterior</button>
-                                <button type="submit" class="btn">Alterar!</button>
-                                <button type="button" class="btn btn-next">Minhas Compras</button>
+                                <button type="submit" class="btn">Salvar dados!</button>
                             </div>
                         </fieldset>
 
@@ -259,7 +259,7 @@
                 <div
                     class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                     <div class="copyright_content">
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                        Copyright &copy;<script>document.write(new Date().getFullYear().toString());</script>
                         Todos os direitos reservados | Esse site foi feito com <i class="fa fa-heart"
                                                                                   aria-hidden="true"></i> pela <a
                             href="#" target="_blank">Weiche Technologie</a>
