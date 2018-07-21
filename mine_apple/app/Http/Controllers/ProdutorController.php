@@ -293,7 +293,7 @@ class ProdutorController extends Controller
      * @return int
      *
      */
-    public function cadastrarEndereco(Request $request) {
+    private function cadastrarEndereco(Request $request) {
         $endereco = new Endereco;
         $endereco->cidade_id = $request->cidade;
         $endereco->rua = $request->rua;
