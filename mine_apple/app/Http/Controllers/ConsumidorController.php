@@ -306,7 +306,7 @@ class ConsumidorController extends Controller
     public function finalizaCompra(Request $request){
         //Pego o conteudo do carrinho
         $itens = Cart::content();
-        $valorTotal = Cart::total();
+        $valorTotal = subtotal();
         $data = Carbon::now();
         $end = $request->idEndereco;
         $idEnd = ConsumidorEndereco::where('endereco_id', '=', $end)->where('consumidor_id', '=', Auth::user()->id)->first();
@@ -357,7 +357,7 @@ class ConsumidorController extends Controller
         $log->data = $data->toDateString();
         $log->hora = $data->toTimeString();
         $log->save();
-        return view('sucesso_ao_realizar_compra', compact('compra', 'itens', 'valorTotal', 'end'));
+        return view('sucesso_ao_realizar_compra', compact('compra'));
     }
 
 

@@ -66,7 +66,7 @@
                                 <label >Confirmação do pedido enviada para:</label>
                             </div>
                             <div class="email col-md-4">
-                                <label>{{Auth::user()->consumidor->email}}</label>
+                                <label>{{Auth::user()->email}}</label>
                             </div>
                         </div>
                     </div>
@@ -97,19 +97,27 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                @foreach($itens as $item)
+                                    @php
+                                        $assinaturas = \mine_apple\Assinatura::where('compra_id', '=', $compra->id)->get();
+                                    @endphp
+                                @foreach($assinaturas as $assinatura)
                                     <tr>
                                         @php
-                                            $produto = \mine_apple\Produto::where('id', '=', $item->id)->first();
+                                            $produtosAssinatura = \mine_apple\Assinatura_Produto::where('assinatura_id', '=', $assinatura->id)->get();
+                                        @endphp
+                                    @foreach($produtosAssinatura as $produtoAssinatura)
+                                        @php
+                                            $produto = \mine_apple\Produto::where('id', '=', $produtoAssinatura->produto_id)->first();
                                             $foto = \mine_apple\Foto::where('produto_id', '=', $produto->id)->first();
                                             $produtor = \mine_apple\Produtor::where('usuario_id', '=', $produto->produtor_id)->first();
                                         @endphp
                                         <td><img src="{{$foto->path}}" width="100" height="100"></td>
                                         <td id="produto">{{$produto->nome}}</td>
                                         <td id="produzidoPor">{{$produtor->nomeFantasia}}</td>
-                                        <td id="quantidade">{{$item->qty}}</td>
+                                        <td id="quantidade">{{$produtoAssinatura->quantidade}}</td>
                                         <td id="preco">R${{number_format($produto->valor, 2, ',', '.')}}</td>
                                     </tr>
+                                    @endforeach
                                 @endforeach
                                     </tbody>
                                     <thead >
@@ -118,7 +126,7 @@
                                             <th scope="col"></th>
                                             <th scope="col"></th>
                                             <th scope="col"></th>
-                                            <th>R$ 0,00</th>
+                                            <th>R$ {{number_format($compra->frete, 2, ',', '.')}}</th>
                                         </tr>
                                     </thead>
 
@@ -128,7 +136,7 @@
                                         <th scope="col"></th>
                                         <th scope="col"></th>
                                         <th scope="col"></th>
-                                        <th>R${{number_format($valorTotal, 2, ',', '.')}}</th>
+                                        <th>R${{number_format($compra->valor, 2, ',', '.')}}</th>
                                     </tr>
                                     </thead>
                                 </table>
@@ -142,7 +150,8 @@
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             @php
-                                                $endereco = \mine_apple\Endereco::where('id', '=', $end)->first();
+                                                $end = \mine_apple\ConsumidorEndereco::where('id', '=', $compra->consumidor_endereco_id)->first();
+                                                $endereco = \mine_apple\Endereco::where('id', '=', $end->endereco_id)->first();
                                                 $cidade = \mine_apple\Cidade::where('id', '=', $endereco->cidade_id)->first();
                                                 $estado = \mine_apple\Estado::where('id', '=', $cidade->estado_id)->first();
                                             @endphp

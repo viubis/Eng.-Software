@@ -128,9 +128,6 @@
                                 <aside class="col-sm-3" style="background-color:#f0f0f0;">
                                     <h4 class="pt-3">Resumo da compra</h4>
                                     <hr>
-                                    {{--<p class="alert alert-success">Add USD 5.00 of eligible items to your order to--}}
-                                    {{--qualify for FREE--}}
-                                    {{--Shipping. </p>--}}
                                     <dl class="dlist-align">
                                         <dt>Sub-total</dt>
                                         <dd class="text-right">R$ {{number_format($subtotal, 2, ',', '.')}}</dd>
@@ -173,6 +170,7 @@
                         </div>
                         <div class="col-md-12 mb-3" align="center">
                             <form action="{{url('/realizacao_assinatura')}}" method="get">
+                                <input type="hidden" name="frete" value="{{$frete}}">
                                 <button type="submit" class="btn btn-primary" href="{{url('/realizacao_assinatura')}}">
                                     Finalizar
                                 </button>
