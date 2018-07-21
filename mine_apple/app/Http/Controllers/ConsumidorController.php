@@ -529,7 +529,8 @@ class ConsumidorController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function detalheCompra(Request $request){
-        $compra = Compra::where('id', '=', $request->id)->get();
-        return view('detalhes_de_compra', compact('compra'));
+        $compra = Compra::where('id', '=', $request->id)->first();
+        $idCompra = $request->id;
+        return view('detalhes_de_compra', compact('compra', 'idCompra'));
     }
 }

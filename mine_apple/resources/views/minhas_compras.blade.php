@@ -94,7 +94,8 @@
 
                                             @endforeach
                                         </td>
-                                        <th scope="row"><a href="{{url('/')}}"><u>Detalhes</u></a></th>
+                                        <th scope="row"><a href="{{url('/minhasCompras/detalhesCompras/'.$compra->id)}}"><u>Detalhes</u></a></th>
+
                                     </tr>
                                 @endforeach
                                 </tbody>
