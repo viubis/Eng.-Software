@@ -310,10 +310,20 @@
                                                 <div class="product_name">
                                                     <div><a href="#">Cenoura</a></div>
                                                 </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button active">Adicionar ao carrinho
-                                                    </button>
-                                                </div>
+                                                <form method="post" action="/adicionar_carrinho">
+                                                    @csrf
+                                                    @php
+                                                        $item = \mine_apple\Produto::where('id', '=', '33')->first();
+                                                    @endphp
+                                                    <input type="hidden" value="{{$item->id}}" name="id">
+                                                    <input type="hidden" value="{{$item->nome}}" name="nome">
+                                                    <input type="hidden" value="{{$item->valor}}" name="preco">
+                                                    <input type="hidden" value="{{$item->embalagem_id}}" name="embalagem">
+                                                    <div class="product_extras">
+                                                        <button class="product_cart_button active" value="$item">Adicionar ao carrinho
+                                                        </button>
+                                                    </div>
+                                                </form>
                                             </div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
@@ -335,9 +345,20 @@
                                                 <div class="product_name">
                                                     <div><a href="#">Pêra</a></div>
                                                 </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Adicionar ao carrinho</button>
-                                                </div>
+                                                <form method="post" action="/adicionar_carrinho">
+                                                    @csrf
+                                                    @php
+                                                        $item = \mine_apple\Produto::where('id', '=', '36')->first();
+                                                    @endphp
+                                                    <input type="hidden" value="{{$item->id}}" name="id">
+                                                    <input type="hidden" value="{{$item->nome}}" name="nome">
+                                                    <input type="hidden" value="{{$item->valor}}" name="preco">
+                                                    <input type="hidden" value="{{$item->embalagem_id}}" name="embalagem">
+                                                    <div class="product_extras">
+                                                        <button class="product_cart_button active" value="$item">Adicionar ao carrinho
+                                                        </button>
+                                                    </div>
+                                                </form>
                                             </div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
@@ -359,9 +380,20 @@
                                                 <div class="product_name">
                                                     <div><a href="#">Abóbora</a></div>
                                                 </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Adicionar ao carrinho</button>
-                                                </div>
+                                                <form method="post" action="/adicionar_carrinho">
+                                                    @csrf
+                                                    @php
+                                                        $item = \mine_apple\Produto::where('id', '=', '11')->first();
+                                                    @endphp
+                                                    <input type="hidden" value="{{$item->id}}" name="id">
+                                                    <input type="hidden" value="{{$item->nome}}" name="nome">
+                                                    <input type="hidden" value="{{$item->valor}}" name="preco">
+                                                    <input type="hidden" value="{{$item->embalagem_id}}" name="embalagem">
+                                                    <div class="product_extras">
+                                                        <button class="product_cart_button active" value="$item">Adicionar ao carrinho
+                                                        </button>
+                                                    </div>
+                                                </form>
                                             </div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount">-25%</li>
@@ -383,9 +415,20 @@
                                                 <div class="product_name">
                                                     <div><a href="#">Batata inglesa</a></div>
                                                 </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Adicionar ao carrinho</button>
-                                                </div>
+                                                <form method="post" action="/adicionar_carrinho">
+                                                    @csrf
+                                                    @php
+                                                        $item = \mine_apple\Produto::where('id', '=', '31')->first();
+                                                    @endphp
+                                                    <input type="hidden" value="{{$item->id}}" name="id">
+                                                    <input type="hidden" value="{{$item->nome}}" name="nome">
+                                                    <input type="hidden" value="{{$item->valor}}" name="preco">
+                                                    <input type="hidden" value="{{$item->embalagem_id}}" name="embalagem">
+                                                    <div class="product_extras">
+                                                        <button class="product_cart_button active" value="$item">Adicionar ao carrinho
+                                                        </button>
+                                                    </div>
+                                                </form>
                                             </div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
@@ -407,9 +450,20 @@
                                                 <div class="product_name">
                                                     <div><a href="#">Chuchu</a></div>
                                                 </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Adicionar ao carrinho</button>
-                                                </div>
+                                                <form method="post" action="/adicionar_carrinho">
+                                                    @csrf
+                                                    @php
+                                                        $item = \mine_apple\Produto::where('id', '=', '14')->first();
+                                                    @endphp
+                                                    <input type="hidden" value="{{$item->id}}" name="id">
+                                                    <input type="hidden" value="{{$item->nome}}" name="nome">
+                                                    <input type="hidden" value="{{$item->valor}}" name="preco">
+                                                    <input type="hidden" value="{{$item->embalagem_id}}" name="embalagem">
+                                                    <div class="product_extras">
+                                                        <button class="product_cart_button active" value="$item">Adicionar ao carrinho
+                                                        </button>
+                                                    </div>
+                                                </form>
                                             </div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
@@ -431,9 +485,20 @@
                                                 <div class="product_name">
                                                     <div><a href="#">Pimentão Vermelho</a></div>
                                                 </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Adicionar ao carrinho</button>
-                                                </div>
+                                                <form method="post" action="/adicionar_carrinho">
+                                                    @csrf
+                                                    @php
+                                                        $item = \mine_apple\Produto::where('id', '=', '32')->first();
+                                                    @endphp
+                                                    <input type="hidden" value="{{$item->id}}" name="id">
+                                                    <input type="hidden" value="{{$item->nome}}" name="nome">
+                                                    <input type="hidden" value="{{$item->valor}}" name="preco">
+                                                    <input type="hidden" value="{{$item->embalagem_id}}" name="embalagem">
+                                                    <div class="product_extras">
+                                                        <button class="product_cart_button active" value="$item">Adicionar ao carrinho
+                                                        </button>
+                                                    </div>
+                                                </form>
                                             </div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount">-25%</li>
@@ -455,9 +520,20 @@
                                                 <div class="product_name">
                                                     <div><a href="#">Tomate</a></div>
                                                 </div>
-                                                <div class="product_extras">
-                                                    <button class="product_cart_button">Adicionar ao carrinho</button>
-                                                </div>
+                                                <form method="post" action="/adicionar_carrinho">
+                                                    @csrf
+                                                    @php
+                                                        $item = \mine_apple\Produto::where('id', '=', '37')->first();
+                                                    @endphp
+                                                    <input type="hidden" value="{{$item->id}}" name="id">
+                                                    <input type="hidden" value="{{$item->nome}}" name="nome">
+                                                    <input type="hidden" value="{{$item->valor}}" name="preco">
+                                                    <input type="hidden" value="{{$item->embalagem_id}}" name="embalagem">
+                                                    <div class="product_extras">
+                                                        <button class="product_cart_button active" value="$item">Adicionar ao carrinho
+                                                        </button>
+                                                    </div>
+                                                </form>
                                             </div>
                                             <ul class="product_marks">
                                                 <li class="product_mark product_discount"></li>
@@ -1514,7 +1590,7 @@
                             <!-- Popular Categories Item -->
                             <div class="owl-item">
                                 <div class="popular_category d-flex flex-column align-items-center justify-content-center">
-                                    <div class="popular_category_image"><a href="pesquisa_produtos/4"><img src="{{asset('images/popular_4.png')}}"
+                                    <div class="popular_category_image"><a href="{{url('pesquisa_produtos/4')}}"><img src="{{asset('images/popular_4.png')}}"
                                                                              class="img-fluid" alt=""></a></div>
                                     <div class="popular_category_text">Leguminosas</div>
                                 </div>
@@ -1612,7 +1688,7 @@
 
 
                                     </div>
-                                    <div class="bestsellers_fav"></i></div>
+                                    <div class="bestsellers_fav"></div>
                                     <ul class="bestsellers_marks">
                                         <li class="bestsellers_mark bestsellers_discount">-25%</li>
                                         <li class="bestsellers_mark bestsellers_new">new</li>
