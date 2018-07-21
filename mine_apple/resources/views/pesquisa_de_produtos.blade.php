@@ -92,7 +92,7 @@
                                                                 $produtor = \mine_apple\Produtor::where('usuario_id', '=', $produto->produtor_id)->first();
                                                                 $embalagem = \mine_apple\Embalagem::where('id', '=', $produto->embalagem_id)->first();
                                                             @endphp
-                                                            <h1>{{$produto->nome}}</h1>
+                                                            <h1><a style="color:#000000" href="{{url('/produto/'.$produto->id)}}">{{$produto->nome}}</a></h1>
                                                             <small class="text-muted">&nbsp ({{$embalagem->tipo}})</small>
                                                             <span class="price-new">R$ {{number_format($produto->valor, 2, ',', '.')}}</span>
                                                             <p class="details">Vendedor: {{$produtor->nomeFantasia}}</p>

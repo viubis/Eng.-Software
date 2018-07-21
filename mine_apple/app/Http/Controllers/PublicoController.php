@@ -16,7 +16,7 @@ use mine_apple\Estado;
 
 class PublicoController extends Controller
 {
-    
+
 
     /**
      * Retorna a página principal
@@ -99,7 +99,7 @@ class PublicoController extends Controller
         $fotos = Foto::where('produto_id', '=', $id)->get();
         $produtor = Produtor::where('usuario_id', '=' ,$produto->produtor_id)->first();
         $categoria = Categoria::where('id', '=', $produto->categoria_id)->first();
-        $endereco = Endereco::where('id', '=', $produtor->usuario_id)->first();
+        $endereco = Endereco::where('id', '=', $produtor->endereco_id)->first();
         $cidade = Cidade::where('id', '=', $endereco->cidade_id)->first();
         $estado = Estado::where('id', '=', $cidade->estado_id)->first();
         $embalagem = Embalagem::all();
