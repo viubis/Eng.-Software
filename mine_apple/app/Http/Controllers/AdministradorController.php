@@ -268,6 +268,7 @@ class AdministradorController extends Controller
      *
      * @author Rafael
      * @param $bytes e $decimal
+     * @return string
      * 
      */
     public function converterTamanho($bytes, $decimal = 2){

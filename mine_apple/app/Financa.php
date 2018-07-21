@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Financa extends Model
 {
-    protected $table = 'Financa';
+    protected $table = 'financa';
     protected $primaryKey = 'usuario_id';
     protected $fillable = ['usuario_id', 'saldo_disponivel', 'valor_a_receber'];
     public $timestamps = false;
