@@ -307,36 +307,47 @@ class ConsumidorController extends Controller
         //Pego o conteudo do carrinho
         $itens = Cart::content();
         $data = Carbon::now();
-
-        //contador
-
-        $assinatura = new Assinatura;
-
-        foreach($itens as $item){
-            $produto_assinatura = new Assinatura_Produto;
-            $produto = Produto::where('id', '=', $item->id);
-            $produto_assinatura->assinatura_id = $assinatura->id;
-            $produto_assinatura->produto_id = $produto->id;
-            $produto_assinatura->quantidade = $item->qty;
-            $produto_assinatura->produto_id = $produto->id;
-            $produto_assinatura->frequencia = $request->frequencia;
-            $produto_assinatura->seg = $request->seg[$item->id];
-            $produto_assinatura->ter = $request->ter[$item->id];
-            $produto_assinatura->qua = $request->qua[$item->id];
-            $produto_assinatura->qui = $request->qui[$item->id];
-            $produto_assinatura->sex = $request->sex[$item->id];
-            $produto_assinatura->sab = $request->sab[$item->id];
-            $produto_assinatura->dom = $request->dom[$item->id];
-            $produto_assinatura->save();
-        }
-
+        $idEnd = ConsumidorEndereco::where('endereco_id', '=', $request->idEndereco)->where('consumidor_id', '=', Auth::user()->id)->first();
         $compra = new Compra;
-        $compra->consumidor_endereco_id = $request->id;
+        $compra->consumidor_endereco_id = $idEnd->id;
+        $compra->consumidor_id = Auth::user()->id;
         $compra->valor = $subtotal = Cart::total();
         $compra->data = $data->toDateString();
         $compra->hora = $data->toTimeString();
         $compra->frete = 10;
         $compra->save();
+
+        foreach($itens as $item){
+            $produto = Produto::where('id', '=', $item->id)->first(); //pegando id do produto e procurando ele
+            $produtor = Produtor::where('usuario_id', '=', $produto->produtor_id)->first();
+            $assinatura = Assinatura::where('produtor_id', '=', $produtor->usuario_id)->where('compra_id', '=', $compra->id)->first();
+            if($assinatura==null){
+                $assinatura = new Assinatura;
+                $assinatura->compra_id = $compra->id;
+                $assinatura->produtor_id = $produtor->usuario_id;
+                $assinatura->valor = Cart::total();
+                $assinatura->frete = 10;
+                $assinatura->notaFiscal = 'ABC';
+                $assinatura->status = 1;
+                $assinatura->save();
+            }
+            $produto_assinatura = new Assinatura_Produto; //ok
+            $produto_assinatura->assinatura_id = $assinatura->id; //setando id da assinatura atual
+            $produto_assinatura->produto_id = $produto->id; //setando o id do produto
+            $produto_assinatura->quantidade = $item->qty; //setando a quantidade da assinatura
+            $produto_assinatura->frequencia = $request['freqProd'.$item->id]; //setando a frequencia p esse produto
+            $produto_assinatura->seg = false; //
+            $produto_assinatura->ter = false;
+            $produto_assinatura->qua = false;
+            $produto_assinatura->qui = false;
+            $produto_assinatura->sex = false;
+            $produto_assinatura->sab = false;
+            $produto_assinatura->dom = false;
+            foreach ($request['entrega'.$item->id] as $dia => $status) {
+                $produto_assinatura[$dia] = true;
+            }
+            $produto_assinatura->save();
+        }
 
         $log = new Log;
         $log->usuario_id = Auth::user()->id;
@@ -344,7 +355,7 @@ class ConsumidorController extends Controller
         $log->data = $data->toDateString();
         $log->hora = $data->toTimeString();
         $log->save();
-
+//        Cart::clearResolvedInstances();
     }
 
 

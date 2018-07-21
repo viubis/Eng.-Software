@@ -15,7 +15,7 @@ class EnderecoTableSeeder extends Seeder
         Endereco::create([
         	// Endereco para produtor teste, id é 1
         	'cidade_id' => 20,
-        	'numero_cep' => '4404336',
+        	'numero_cep' => '44004336',
         	'rua' => 'Rua',
         	'numero' => 42,
         	'complemento' => NULL,
