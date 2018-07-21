@@ -154,7 +154,6 @@ class ConsumidorController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function adicionarCarrinho(Request $request) {
-        DD($request->id);
         $item = Cart::content()->firstWhere('id', $request->id);
 
         if(empty($item)) {
@@ -521,5 +520,16 @@ class ConsumidorController extends Controller
     public function minhasCompras(){
         $compras = Compra::where('consumidor_id', '=', Auth::user()->id)->get();
         return view('minhas_compras', compact('compras'));
+    }
+
+    /**
+     * Retorna a tela de detalhes de uma compra
+     * @author Victória Gomes
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function detalheCompra(Request $request){
+        $compra = Compra::where('id', '=', $request->id)->get();
+        return view('detalhes_de_compra', compact('compra'));
     }
 }

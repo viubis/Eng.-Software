@@ -277,9 +277,13 @@
                                                 </div>
                                                 <form method="post" action="/adicionar_carrinho">
                                                     @csrf
-                                                    <?php $item = \mine_apple\Produto::where('id', '=', '35');
-
-                                                    ?>
+                                                    @php
+                                                        $item = \mine_apple\Produto::where('id', '=', '35')->first();
+                                                    @endphp
+                                                    <input type="hidden" value="{{$item->id}}" name="id">
+                                                    <input type="hidden" value="{{$item->nome}}" name="nome">
+                                                    <input type="hidden" value="{{$item->valor}}" name="preco">
+                                                    <input type="hidden" value="{{$item->embalagem_id}}" name="embalagem">
                                                 <div class="product_extras">
                                                     <button class="product_cart_button" value="$item">Adicionar ao Carrinho</button>
                                                 </div>

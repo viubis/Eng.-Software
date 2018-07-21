@@ -88,6 +88,8 @@ Route::middleware(['auth'])->group(function () {
 
         Route::post('/valida_cartao', 'ConsumidorController@validaCartao');
 
+        Route::get('/detalheCompra', 'ConsumidorController@detalheCompra');
+
         Route::get('/minhascompras', 'ConsumidorController@minhasCompras');
     });
 
