@@ -79,7 +79,7 @@
                                    </div>
                                    <div class="form-group col-md-12">
                                        <label for="freqProd1">Frequencia de entrega </label>
-                                          <select multiple class="form-control" size="2" id="freqProd" name="freqProd{{$item->id}}">
+                                          <select multiple class="form-control" size="2" id="freqProd" name="freqProd{{$item->id}}" required>
                                              @for($i = 1; $i < 5; $i++)
                                                 <option value="{{$i}}">{{$i}} vez por semana</option>
                                             @endfor
@@ -182,7 +182,7 @@
             <div class="pb-0" id="line"> </div>
             <div class="form-group col-md-12 col-xs-8">
                 <label for="listaEndereco">Meus endereços </label>
-                <select multiple class="form-control" size="2" id="listaEndereco" name="idEndereco">
+                <select multiple class="form-control" size="2" id="listaEndereco" name="idEndereco" required>
                 @foreach($consumidor_enderecos_atuais as $i)
                     @php $endereco = $enderecos->where('id', '=', $i->endereco_id)->first()@endphp
 
@@ -202,7 +202,7 @@
             <div  class="pb-0" id="line"></div>
             <div class="form-group col-md-12">
                 <label for="listaCartao">Meus cartões</label>
-                <select multiple class="form-control" size="2" id="listaCartao">
+                <select multiple class="form-control" size="2" id="listaCartao" required>
                     @foreach($cartoes as $cartao)
                         <option >VISA terminado em {{substr($cartao->numero, -3)}}.</option>
                     @endforeach
@@ -211,7 +211,7 @@
             <div class="form-group col-md-5">
                 <label for="codSeguranca">Código de segurança </label>
                 <input type="text" placeholder="Valor..."
-                    class="form-first-name form-control" name="codSeguranca" id="codSeguranca">
+                    class="form-first-name form-control" name="codSeguranca" id="codSeguranca" required>
             </div>
             {{--<a style="margin-left:10px" href="{{url('/consumidor/adicionar_cartao')}}">Adicionar cartão</a>--}}
         </div>

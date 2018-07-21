@@ -346,7 +346,7 @@ class ConsumidorController extends Controller
         $compra->consumidor_endereco_id = $idEnd->id;
         $compra->consumidor_id = Auth::user()->id;
         $compra->data = $data;
-        $compra->hora = $data;
+        $compra->hora = $hora;
         $compra->frete = $frete = $this->calcularFrete($endCompleto->numero_cep);
         $compra->valor = Cart::subtotal() + $frete;
         $compra->save();
