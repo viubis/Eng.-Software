@@ -84,7 +84,12 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/avaliacao_assinatura', 'ConsumidorController@getAvaliacaoAssinatura');
 
         Route::get('/realizacao_assinatura', 'ConsumidorController@getRealizacaoAssinatura');
+
         Route::post('/realizacao_assinatura', 'ConsumidorController@finalizaCompra');
+
+        Route::get('/desativar_assinatura/{id}', 'ConsumidorController@desativarAssinatura')->where('id', '[0-9]+');
+
+        Route::get('/ativar_assinatura/{id}', 'ConsumidorController@ativarAssinatura')->where('id', '[0-9]+');
 
         Route::post('/valida_cartao', 'ConsumidorController@validaCartao');
 

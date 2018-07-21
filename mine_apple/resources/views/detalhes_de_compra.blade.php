@@ -56,35 +56,21 @@
         @endphp
         @foreach($assinaturas as $assinatura)
                     <div style="font-size: 20px;">Assinatura nº 0{{$numAssinatura}}</div>
+                        <div class="form-group col-md-3">
+                            <h4>Adesão: {{$compra->data}} às {{$compra->hora}} </h4>
+                        </div>
                     @php $numAssinatura++;  @endphp
-                    <form>
-                        <fieldset>
-                            <div class="form-row" id="espac">
-                                <div class="form-group col-md-1">
-                                    <h4>Estado:</h4>
-                                </div>
-                                @if($assinatura->status==1)
-                                    <div class="form-group col-md-2" style="margin-top: -25px;">
-                                        <div class="anil_nepal">
-                                            <label class="switch_1 switch-left-right_1">
-                                                <input class="switch-input_1" type="checkbox" name="estado">
-                                                <span class="switch-label_1" data-on="Inativa" data-off="Ativa"></span> <span
-                                                    class="switch-handle_1"></span> </label>
-                                        </div>
-                                    </div>
-                                @else
-                                    <div class="form-group col-md-2" style="margin-top: -25px;">
-                                        <div class="anil_nepal">
-                                            <label class="switch switch-left-right">
-                                                <input class="switch-input" type="checkbox" name="estado">
-                                                <span class="switch-label" data-on="Inativa" data-off="Ativa"></span> <span
-                                                    class="switch-handle"></span> </label>
-                                        </div>
-                                    </div>
+                        @if($assinatura->status==1)
+                            <form action="{{url('/desativar_assinatura/'.$assinatura->id)}}" method="get">
+                                <fieldset>
+                                    <div class="form-row" id="espac">
+                                    <div class="pb-4"><button class="btn btn-primary" href="{{url('/desativar_assinatura/'.$assinatura->id)}}">Desativar assinatura</button></div>
+                        @else
+                            <form action="{{url('/ativar_assinatura/'.$assinatura->id)}}" method="get">
+                                <fieldset>
+                                    <div class="form-row" id="espac">
+                                    <div class="pb-4"><button class="btn btn-primary" href="{{url('/ativar_assinatura/'.$assinatura->id)}}">Ativar assinatura</button></div>
                                 @endif
-                                <div class="form-group col-md-3">
-                                    <h4>Adesão: {{$compra->data}} às {{$compra->hora}} </h4>
-                                </div>
                             </div>
                         </fieldset>
                     </form>
@@ -103,6 +89,7 @@
             $embalagem = \mine_apple\Embalagem::where('id', '=', $produto->embalagem_id)->first();
             $produtor = \mine_apple\Produtor::where('usuario_id', '=', $produto->produtor_id)->first();
         @endphp
+
     <div class="containerInfosProdutos">
         <div class="container">
             <div class="row" id="backColor">

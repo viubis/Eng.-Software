@@ -533,4 +533,28 @@ class ConsumidorController extends Controller
         $idCompra = $request->id;
         return view('detalhes_de_compra', compact('compra', 'idCompra'));
     }
+
+    /**
+     * Desativar assinatura
+     * @author Victória Gomes
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function desativarAssinatura(Request $request){
+        $assinatura = Assinatura::where('id', '=', $request->id)->first();
+        $assinatura->update(['status' => 0]);
+        return $this->minhasCompras();
+    }
+
+    /**
+     * Ativar assinatura
+     * @author Victória Gomes
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function ativarAssinatura(Request $request){
+        $assinatura = Assinatura::where('id', '=', $request->id)->first();
+        $assinatura->update(['status' => 1]);
+        return $this->minhasCompras();
+    }
 }
