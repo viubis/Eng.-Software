@@ -24,6 +24,11 @@ use mine_apple\Http\Requests\FormProdutor;
 class ProdutorController extends Controller
 {
 
+    /*const LOG_ID_CADASTRO = 1;
+    const LOG_ID_ALTERACAO_CADASTRO = 2;
+    const LOG_ID_CADASTRO_PRODUTO = 6;
+    const LOG_ID_ALTERACAO_PRODUTO = 7;*/
+
     /**
     * Retorna index
     * @author Rafael
@@ -80,7 +85,7 @@ class ProdutorController extends Controller
         $conta->save();
 
         $financas = new Financa();
-        $financas->produtor_id = $produtor->usuario_id;
+        $financas->usuario_id = Auth::user()->id;
         $financas->save();
 
         date_default_timezone_set('America/Sao_Paulo');
@@ -120,7 +125,7 @@ class ProdutorController extends Controller
         $hora = date('H:i');
         $log = new Log;
         $log->usuario_id = Auth::user()->id;
-        $log->operacao_id = 2;
+        $log->operacao_id = LOG_ID_ALTERACAO_CADASTRO;
         $log->data = $data;
         $log->hora = $hora;
         $log->save();
@@ -285,9 +290,10 @@ class ProdutorController extends Controller
      * Cadastra um endereço 
      * @author Lucas Alves
      * @param Request $request
+     * @return int
      *
      */
-    public function cadastrarEndereco(Request $request) {
+    private function cadastrarEndereco(Request $request) {
         $endereco = new Endereco;
         $endereco->cidade_id = $request->cidade;
         $endereco->rua = $request->rua;
@@ -296,6 +302,7 @@ class ProdutorController extends Controller
         $endereco->bairro = $request->bairro;
         $endereco->numero_cep = $request->cep;
         $endereco->save();
+        return $endereco->id;
     }
 
     /**

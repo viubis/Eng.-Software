@@ -67,7 +67,7 @@
                        </div>
                    </div>
                </div>
-               <div class="col-md-6">
+               <div class="col-7 offset-1">
                    <div class="subcontainerProduto2 ">
                            <fieldset>
                             @csrf

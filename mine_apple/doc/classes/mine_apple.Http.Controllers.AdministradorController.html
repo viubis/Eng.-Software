@@ -114,7 +114,7 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">37</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">43</span>
                                 </a>
                             </li>
                             <li>
@@ -144,46 +144,46 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1883521219"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-150375540"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-1883521219" class="accordion-body collapse in">
+            <div id="namespace-150375540" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-762571275"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-705364712"></a>
                                 <a href="../namespaces/mine_apple.html" style="margin-left: 30px; padding-left: 0">mine_apple</a>
             </div>
-            <div id="namespace-762571275" class="accordion-body collapse ">
+            <div id="namespace-705364712" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1734149901"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-996909822"></a>
                                 <a href="../namespaces/mine_apple.Http.html" style="margin-left: 30px; padding-left: 0">Http</a>
             </div>
-            <div id="namespace-1734149901" class="accordion-body collapse ">
+            <div id="namespace-996909822" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-111396287"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2133027098"></a>
                                 <a href="../namespaces/mine_apple.Http.Controllers.html" style="margin-left: 30px; padding-left: 0">Controllers</a>
             </div>
-            <div id="namespace-111396287" class="accordion-body collapse ">
+            <div id="namespace-2133027098" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1023632931"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1987740893"></a>
                                 <a href="../namespaces/mine_apple.Http.Controllers.Auth.html" style="margin-left: 30px; padding-left: 0">Auth</a>
             </div>
-            <div id="namespace-1023632931" class="accordion-body collapse ">
+            <div id="namespace-1987740893" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -277,6 +277,9 @@
                                                                     <a href="../classes/mine_apple.Http.Controllers.AdministradorController.html#method_getRelatorioGeral" class="">getRelatorioGeral()</a><br />
                                                                     <a href="../classes/mine_apple.Http.Controllers.AdministradorController.html#method_dadosBackup" class="">dadosBackup()</a><br />
                                                                     <a href="../classes/mine_apple.Http.Controllers.AdministradorController.html#method_iniciarBackup" class="">iniciarBackup()</a><br />
+                                                                    <a href="../classes/mine_apple.Http.Controllers.AdministradorController.html#method_deletarBackup" class="">deletarBackup()</a><br />
+                                                                    <a href="../classes/mine_apple.Http.Controllers.AdministradorController.html#method_converterTamanho" class="">converterTamanho()</a><br />
+                                                                    <a href="../classes/mine_apple.Http.Controllers.AdministradorController.html#method_converterData" class="">converterData()</a><br />
                                                             </section>
                             <section class="span4">
                                                                     <em>No public properties found</em>
@@ -651,6 +654,139 @@ o mesmo é um método existente no Kernel.php que chama um comando personalizado
         </aside>
     </div>
 
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_deletarBackup" name="method_deletarBackup" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">deletarBackup()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">deletarBackup(  <span class="argument">$nomeArquivo</span>) : \Illuminate\Contracts\View\Factory|\Illuminate\View\View</pre>
+                <p><em>Deleta arquivo de backup</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$nomeArquivo </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Rafael</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_converterTamanho" name="method_converterTamanho" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">converterTamanho()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">converterTamanho(  <span class="argument">$bytes</span>,   <span class="argument">$decimal = 2</span>) : string</pre>
+                <p><em>Converte o tamanho do arquivo de deimal para o formato
+convencional</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$bytes </td>
+                                <td><p>e $decimal</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$decimal </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Rafael</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_converterData" name="method_converterData" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">converterData()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">converterData(  <span class="argument">$data</span>) </pre>
+                <p><em>Converte valor decimal da data para o formato date</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$data </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Rafael</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
                                                                     </div>
     </section>
 
@@ -701,7 +837,7 @@ o mesmo é um método existente no Kernel.php que chama um comando personalizado
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on July 20th, 2018 at 19:47.
+                    on July 21st, 2018 at 15:19.
                 </section>
             </section>
         </section>
