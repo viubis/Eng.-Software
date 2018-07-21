@@ -17,7 +17,7 @@
                                             <i style="color: #08c8b0;" class="fa fa-user-circle fa-2x"></i>
                                         </div>
                                         <div class="">
-                                                <a style="font-size: 13px" href="{{url("")}}">{{Auth::user()->consumidor->nome}} <span
+                                                <a style="font-size: 13px" href="{{url("/minhascompras")}}">{{Auth::user()->consumidor->nome}} <span
                                                     ></span></a>
                                         </div>
                                         <div class="">

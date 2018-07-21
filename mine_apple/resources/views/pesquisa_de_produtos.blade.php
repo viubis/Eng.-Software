@@ -62,7 +62,7 @@
                             $foto = $fotos->where('produto_id', '=', $produto->id)->first();
                         @endphp
                         <div class="col-md-3 pt-0 pb-0 pl-0 pr-0" style="float: left;">
-                            <form role="form" method="post" action="/adicionar_carrinho">
+                            <form role="form" method="post" action="{{url('/adicionar_carrinho')}}">
                                 <fieldset>
                                     @csrf
                                     <div class="form-row">
