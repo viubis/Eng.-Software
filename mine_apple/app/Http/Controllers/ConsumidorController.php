@@ -306,9 +306,9 @@ class ConsumidorController extends Controller
     public function finalizaCompra(Request $request){
         //Pego o conteudo do carrinho
         $itens = Cart::content();
-        $valorTotal = subtotal();
         $data = Carbon::now();
         $end = $request->idEndereco;
+        $endCompleto = Endereco::where('id', '=', $end)->first();
         $idEnd = ConsumidorEndereco::where('endereco_id', '=', $end)->where('consumidor_id', '=', Auth::user()->id)->first();
         $compra = new Compra;
         $compra->consumidor_endereco_id = $idEnd->id;
@@ -316,7 +316,7 @@ class ConsumidorController extends Controller
         $compra->valor = $subtotal = Cart::total();
         $compra->data = $data->toDateString();
         $compra->hora = $data->toTimeString();
-        $compra->frete = 10;
+        $compra->frete = $this->calcularFrete($endCompleto->numero_cep);
         $compra->save();
 
         foreach($itens as $item){
@@ -405,16 +405,39 @@ class ConsumidorController extends Controller
 
     /**
      * @author Sesaque Oliveira
+     * @param $freteValue
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function carrinhoCompras($frete){
+    public function carrinhoCompras($freteValue){
        $itens = Cart::content();
        $subtotal = 0;
        $total = 0;
 
-       if(!empty($itens)) {
+       if(strcoll($freteValue,'Produto indisponivel')==0){
+           $erro = $freteValue;
            $subtotal = Cart::subtotal();
-           $total = $subtotal + $frete;
+           $total = $subtotal;
+           return view('carrinho_de_compras', compact('erro', 'itens', 'subtotal','total'));
+       }
+       else if(strcoll($freteValue,'Cep inválido')==0){
+           $erro2 = $freteValue;
+           $subtotal = Cart::subtotal();
+           $total = $subtotal;
+           return view('carrinho_de_compras', compact('erro2', 'itens', 'subtotal', 'total'));
+       }
+       else if(strcoll($freteValue, 'Erro no calculo')==0){
+           $erro3 = $freteValue;
+           $subtotal = Cart::subtotal();
+           $total = $subtotal;
+           return view('carrinho_de_compras', compact('erro3', 'itens', 'subtotal', 'total'));
+       }
+
+       else {
+           if (!empty($itens)) {
+               $subtotal = Cart::subtotal();
+               $total = $subtotal + $freteValue;
+               $frete = $freteValue;
+           }
        }
 
        return view('carrinho_de_compras', compact('itens', 'subtotal', 'frete', 'total'));
@@ -430,7 +453,12 @@ class ConsumidorController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function atualizarCarrinho(Request $request) {
-        if(Endereco::validarCep($request->cep) != null) {
+        $frete = $this->calcularFrete($request->cep);
+        return $this->carrinhoCompras($frete);
+    }
+
+    public function calcularFrete($cep){
+        if(Endereco::validarCep($cep) != null) {
             $itens = Cart::content();
             $produtores = [];
             $frete = 0;
@@ -452,17 +480,28 @@ class ConsumidorController extends Controller
                 $cepProdutor = $produtor->endereco->numero_cep;
                 $raioEntrega = $produtor->raioEntrega;
                 $freteMax = $itens[0] / $itens[1];
-                $distancia = Endereco::calcularDistancia($request->cep, $cepProdutor);
-
-                if($distancia > -1)
+                $distancia = Endereco::calcularDistancia($cep, $cepProdutor);
+                if($distancia > -1) {
                     $frete += Produtor::frete($raioEntrega, $distancia, $freteMax);
-                else
-                    return ('Produto indisponível'); //teste
+                }
+                else{
+                    return('Erro no calculo');
+                }
+                if ($frete == -1) {
+                    $itens = Cart::content();
+                    foreach ($itens as $itemRemove){
+                        if($itemRemove->options->produtor = $produtor->usuario_id) {
+                            Cart::remove($itemRemove->rowId);
+                        }
+                    }
+                    return ('Produto indisponivel');
+                }
             }
 
-            return $this->carrinhoCompras($frete);
-        } else
-            return ('Cep inválido'); //teste
+            return $frete;
+        } else {
+            return ('Cep inválido');
+        }
     }
 
     /**

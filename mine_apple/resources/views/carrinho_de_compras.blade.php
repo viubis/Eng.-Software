@@ -134,7 +134,11 @@
                                     </dl>
                                     <dl class="dlist-align">
                                         <dt>Frete:</dt>
-                                        <dd class="text-right">R$ {{number_format($frete, 2, ',', '.')}}</dd>
+                                        @if(isset($frete))
+                                            <dd class="text-right">R$ {{number_format($frete, 2, ',', '.')}}</dd>
+                                        @else
+                                            <dd class="text-right">R$ 00,00</dd>
+                                        @endif
                                     </dl>
                                     <dl class="dlist-align h4">
                                         <dt>Total:</dt>
@@ -170,7 +174,6 @@
                         </div>
                         <div class="col-md-12 mb-3" align="center">
                             <form action="{{url('/realizacao_assinatura')}}" method="get">
-                                <input type="hidden" name="frete" value="{{$frete}}">
                                 <button type="submit" class="btn btn-primary" href="{{url('/realizacao_assinatura')}}">
                                     Finalizar
                                 </button>
@@ -190,6 +193,16 @@
                                         Continuar comprando</a></p>
                             </div>
                         </div>
+                    @endif
+                    @if(isset($erro))
+                        <script>alert('Um dos produtores que você escolheu não entrega o produto em sua região :(. ' +
+                                'Removemos os produtos dele do seu carrinho. Continue comprando e tente calcular o frete novamente!')</script>
+                    @elseif(isset($erro2))
+                        <script>alert('Você informou um cep inválido. ' +
+                                'Corrija-o e tente calcular o frete novamente, por favor.')</script>
+                    @elseif(isset($erro3))
+                        <script>alert('Não conseguimos acessar nossos servidores ' +
+                                'para calcular o frete. Tente novamente, por favor.')</script>
                     @endif
                 </div>
             </div>
