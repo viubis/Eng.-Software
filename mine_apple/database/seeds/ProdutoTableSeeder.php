@@ -193,6 +193,72 @@ class ProdutoTableSeeder extends Seeder
                 'valor' => 2.50, 'minPorAssinatura' => 5, 'maxPorDia' => 10,
                 'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
                 'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
+
+            ['produtor_id' => 2, 'categoria_id' => 6, 'embalagem_id' =>3, 'nome' => 'Batata inglesa',
+                'descricao' => '-',
+                'valor' => 2.50, 'minPorAssinatura' => 5, 'maxPorDia' => 10,
+                'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
+                'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
+
+            ['produtor_id' => 2, 'categoria_id' => 7, 'embalagem_id' =>3, 'nome' => 'Pimentão vermelho',
+                'descricao' => '-',
+                'valor' => 2.50, 'minPorAssinatura' => 5, 'maxPorDia' => 10,
+                'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
+                'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
+
+            ['produtor_id' => 2, 'categoria_id' => 7, 'embalagem_id' =>3, 'nome' => 'Cenoura',
+                'descricao' => '-',
+                'valor' => 2.50, 'minPorAssinatura' => 5, 'maxPorDia' => 10,
+                'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
+                'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
+
+            ['produtor_id' => 2, 'categoria_id' => 5, 'embalagem_id' =>3, 'nome' => 'Inhame',
+                'descricao' => '-',
+                'valor' => 2.50, 'minPorAssinatura' => 5, 'maxPorDia' => 10,
+                'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
+                'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
+
+            ['produtor_id' => 2, 'categoria_id' => 2, 'embalagem_id' =>2, 'nome' => 'Banana',
+                'descricao' => 'Bem delícia.',
+                'valor' => 2.50, 'minPorAssinatura' => 13, 'maxPorDia' => 20,
+                'freteMax' => 9, 'seg' => false, 'ter' => false, 'qua' => true,
+                'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
+
+            ['produtor_id' => 2, 'categoria_id' => 2, 'embalagem_id' =>2, 'nome' => 'Pera',
+                'descricao' => 'Bem delícia e docinha hein.',
+                'valor' => 1.90, 'minPorAssinatura' => 13, 'maxPorDia' => 20,
+                'freteMax' => 9, 'seg' => false, 'ter' => false, 'qua' => true,
+                'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
+
+            ['produtor_id' => 2, 'categoria_id' => 2, 'embalagem_id' =>4, 'nome' => 'Tomate',
+                'descricao' => 'Fruta excelente para consumo, docinha e de qualidade.',
+                'valor' => 2.90, 'minPorAssinatura' => 1, 'maxPorDia' => 10,
+                'freteMax' => 10, 'seg' => false, 'ter' => false, 'qua' => true,
+                'qui' => true, 'sex' => true, 'sab' => true, 'dom' => false],
+
+            ['produtor_id' => 2, 'categoria_id' => 2, 'embalagem_id' =>4, 'nome' => 'Uva verde',
+                'descricao' => 'Abacaxi de qualidade, cultivado sem agrotóxicos.',
+                'valor' => 1.50, 'minPorAssinatura' => 4, 'maxPorDia' => 30,
+                'freteMax' => 8, 'seg' => false, 'ter' => true, 'qua' => true,
+                'qui' => false, 'sex' => true, 'sab' => true, 'dom' => false],
+
+            ['produtor_id' => 2, 'categoria_id' => 2, 'embalagem_id' =>4, 'nome' => 'Abacate',
+                'descricao' => 'Abacaxi de qualidade, cultivado sem agrotóxicos.',
+                'valor' => 1.50, 'minPorAssinatura' => 4, 'maxPorDia' => 30,
+                'freteMax' => 8, 'seg' => false, 'ter' => true, 'qua' => true,
+                'qui' => false, 'sex' => true, 'sab' => true, 'dom' => false],
+
+            ['produtor_id' => 2, 'categoria_id' => 2, 'embalagem_id' =>4, 'nome' => 'Morango',
+                'descricao' => 'Abacaxi de qualidade, cultivado sem agrotóxicos.',
+                'valor' => 1.50, 'minPorAssinatura' => 4, 'maxPorDia' => 30,
+                'freteMax' => 8, 'seg' => false, 'ter' => true, 'qua' => true,
+                'qui' => false, 'sex' => true, 'sab' => true, 'dom' => false],
+
+            ['produtor_id' => 2, 'categoria_id' => 2, 'embalagem_id' =>4, 'nome' => 'Amora',
+                'descricao' => 'Abacaxi de qualidade, cultivado sem agrotóxicos.',
+                'valor' => 1.50, 'minPorAssinatura' => 4, 'maxPorDia' => 30,
+                'freteMax' => 8, 'seg' => false, 'ter' => true, 'qua' => true,
+                'qui' => false, 'sex' => true, 'sab' => true, 'dom' => false],
         ]);
 
 
