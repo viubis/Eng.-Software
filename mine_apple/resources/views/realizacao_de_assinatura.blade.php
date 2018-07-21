@@ -49,7 +49,7 @@
    <div class="top-content">
        <div class="container">
            <div class="row">
-               <div class="col-md-10 offset-md-1 col-xs-8 ">
+               <div class="col-md-6 offset-md-3 col-xs-8 " style="margin-top:20px;margin-bottom: 20px;padding-bottom: 20px;background-color: rgba(252,252,252,0.8)">
                    <form role="form" method="post" action="{{url('/realizacao_assinatura')}}">
                    <!--<div class="contact_form_title">Detalhes da Assinatura</div>-->
                    <h3 class="h2 page-title text-center" data-reactid="30" style="margin-top:15px">Definição de assinatura</h3>
@@ -175,7 +175,8 @@
 
    <div class="form-row">
     @php $consumidor_enderecos_atuais =  $consumidor_enderecos->where('consumidor_id', '=', Auth::user()->id) @endphp
-    <div class="card col-md-4 mr-4">
+
+       <div class="card col-md-12 ">
         <div class="card-body">
             <h4 class="card-title">Endereço de entrega:</h4>
             <div class="pb-0" id="line"> </div>
@@ -195,7 +196,7 @@
             <a style="margin-left:10px" href="{{url('/consumidor/cadastrar_endereco')}}">Adicionar endereço</a>
         </div>
     </div>
-    <div class="card col-md-4">
+    <div class="card col-md-12" style="margin-top: 40px;">
         <div class="card-body">
             <h4 class="card-title">Cartões:</h4>
             <div  class="pb-0" id="line"></div>
