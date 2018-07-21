@@ -149,6 +149,7 @@ class ConsumidorController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function adicionarCarrinho(Request $request) {
+        DD($request->id);
         $item = Cart::content()->firstWhere('id', $request->id);
 
         if(empty($item)) {

@@ -275,9 +275,15 @@
                                                 <div class="product_name">
                                                     <div><a href="#">Banana</a></div>
                                                 </div>
+                                                <form method="post" action="/adicionar_carrinho">
+                                                    @csrf
+                                                    <?php $item = \mine_apple\Produto::where('id', '=', '35');
+
+                                                    ?>
                                                 <div class="product_extras">
-                                                    <button class="product_cart_button">Adicionar ao Carrinho</button>
+                                                    <button class="product_cart_button" value="$item">Adicionar ao Carrinho</button>
                                                 </div>
+                                                </form>
                                             </div>
 
                                             <ul class="product_marks">
