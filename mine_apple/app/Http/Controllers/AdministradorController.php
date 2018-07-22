@@ -145,9 +145,10 @@ class AdministradorController extends Controller
     public function dadosBackup(Request $request){
         date_default_timezone_set('America/Sao_Paulo');//configura fuso horário padrão
         $data = date('Y/m/d');//pega a data atual
+        $tiraSegundos = substr($request->horas, 0, 5); 
 
         $arquivo = fopen('backup_dados.txt','w');//Abre ou cria um arquivo para escrita
-        fwrite($arquivo, $request->horas.','.$request->frequencia.','.$data); //escreve os dados vindos da view no arquivo
+        fwrite($arquivo, $tiraSegundos.','.$request->frequencia.','.$data); //escreve os dados vindos da view no arquivo
         fclose($arquivo);//fecha o arquivo
         return redirect()->back();//redireciona para a mesma view
     }
@@ -175,11 +176,11 @@ class AdministradorController extends Controller
         if(strcmp($frequencia,'Uma vez por semana') == 0){
             $timestamp = strtotime($data . "+7 days"); //converte a data em um número e incrementa 7 a data armazenada (7 dias)
             $dataAtual = date('Y/m/d'); //recebe a data atual
-            $horaAtual = strtotime(date('H:i:s')); //recebe o horário atual, e converte para um número
+            $horaAtual = strtotime(date('H:i')); //recebe o horário atual, e converte para um número
             $horaConvertida = strtotime($hora); //converte a hora que estava no arquivo em um número
 
             //compara se passou 1 semana, e se o horário é maior ou igual ao que foi definido no backup
-            if($timestamp == $dataAtual && $horaConvertida >= $horaAtual){
+            if($timestamp == $dataAtual && $horaConvertida == $horaAtual){
                 try{
                     Artisan::call('backup:run', ['--only-db' => true]);// gera uma pasta com um arquivo .zip cque contem o bakup do banco de dados 
 
@@ -197,11 +198,11 @@ class AdministradorController extends Controller
         }elseif(strcmp($frequencia,'Uma vez por mês') == 0){
             $timestamp = strtotime($data . "+31 days"); //converte a data em um número e incrementa 31 a data armazenada (31 dias)
             $dataAtual = strtotime(date('Y/m/d')); //recebe a data atual
-            $horaAtual = strtotime(date('H:i:s')); //recebe o horário atual, e converte para um número
+            $horaAtual = strtotime(date('H:i')); //recebe o horário atual, e converte para um número
             $horaConvertida = strtotime($hora); //converte a hora que estava no arquivo em um número
 
             //compara se passou 1 mês, e se o horário é maior ou igual ao que foi definido no backup
-            if($timestamp == $dataAtual && $horaConvertida >= $horaAtual){
+            if($timestamp == $dataAtual && $horaConvertida == $horaAtual){
                 try{
                     Artisan::call('backup:run', ['--only-db' => true]); // gera uma pasta com um arquivo .zip cque contem o bakup do banco de dados 
 
@@ -219,11 +220,11 @@ class AdministradorController extends Controller
         }elseif(strcmp($frequencia,'Uma vez por ano') == 0){
             $timestamp = strtotime($data . "+365 days"); //converte a data em um número e incrementa 365 a data armazenada (365 dias)
             $dataAtual = strtotime(date('Y/m/d')); //recebe a data atual
-            $horaAtual = strtotime(date('H:i:s')); //recebe o horário atual, e converte para um número
+            $horaAtual = strtotime(date('H:i')); //recebe o horário atual, e converte para um número
             $horaConvertida = strtotime($hora); //converte a hora que estava no arquivo em um número
             
             //compara se passou 1 ano, e se o horário é maior ou igual ao que foi definido no backup
-            if($timestamp == $dataAtual && $horaConvertida >= $horaAtual){
+            if($timestamp == $dataAtual && $horaConvertida == $horaAtual){
                 try{
                     Artisan::call('backup:run', ['--only-db' => true]); // gera uma pasta com um arquivo .zip cque contem o bakup do banco de dados 
 

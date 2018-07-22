@@ -64,13 +64,12 @@ class AgendaBackup extends Command
         if(strcmp($frequencia,'Uma vez por semana') == 0){
             $timestamp = strtotime($data); //converte a data em um número
             $dataAtual = strtotime(date('Y/m/d')); //recebe a data atual
-            $horaAtual = strtotime(date('H:i:s')); //recebe o horário atual, e converte para um número
+            $horaAtual = strtotime(date('H:i')); //recebe o horário atual, e converte para um número
             $horaConvertida = strtotime($hora); //converte a hora que estava no arqquivo em um número
 
-            echo 'Entou no if Uma vez por semana';
-            echo $timestamp.' '.$dataAtual;
+        
             //compara se a das datas são iguais, e se o horário que foi definido no backup é menor ou igual ao atual
-            if($timestamp == $dataAtual && $horaAtual <= $horaConvertida){
+            if($timestamp == $dataAtual && $horaAtual == $horaConvertida){
                 try{
                     Artisan::call('backup:run', ['--only-db' => true]); // gera uma pasta com um arquivo .zip que contem o bakup do banco de dados 
 
@@ -88,11 +87,11 @@ class AgendaBackup extends Command
         }elseif(strcmp($frequencia,'Uma vez por mês') == 0){
             $timestamp = strtotime($data); //converte a data em um número
             $dataAtual = strtotime(date('Y/m/d')); //recebe a data atual
-            $horaAtual = strtotime(date('H:i:s')); //recebe o horário atual, e converte para um número
+            $horaAtual = strtotime(date('H:i')); //recebe o horário atual, e converte para um número
             $horaConvertida = strtotime($hora); //converte a hora que estava no arquivo em um número
 
             //compara se a das datas são iguais, e se o horário que foi definido no backup é menor ou igual ao atual
-            if($timestamp == $dataAtual && $horaAtual <= $horaConvertida){
+            if($timestamp == $dataAtual && $horaAtual == $horaConvertida){
                 try{
                     Artisan::call('backup:run', ['--only-db' => true]); //gera uma pasta com um arquivo .zip que contem o bakup do banco de dados 
 
@@ -110,11 +109,11 @@ class AgendaBackup extends Command
         }elseif(strcmp($frequencia,'Uma vez por ano') == 0){
             $timestamp = strtotime($data); //converte a data em um número
             $dataAtual = strtotime(date('Y/m/d')); //recebe a data atual
-            $horaAtual = strtotime(date('H:i:s')); //recebe o horário atual, e converte para um número
+            $horaAtual = strtotime(date('H:i')); //recebe o horário atual, e converte para um número
             $horaConvertida = strtotime($hora); //converte a hora que estava no arquivo em um número
 
             //compara se a das datas são iguais, e se o horário que foi definido no backup é menor ou igual ao atual
-            if($timestamp == $dataAtual && $horaAtual <= $horaConvertida){
+            if($timestamp == $dataAtual && $horaAtual == $horaConvertida){
                 try{
                     Artisan::call('backup:run', ['--only-db' => true]); //gera uma pasta com um arquivo .zip que contem o bakup do banco de dados
 
