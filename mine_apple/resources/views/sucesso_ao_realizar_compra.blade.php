@@ -85,7 +85,7 @@
                             </div>
                         </div>
                         <div class="container-titulo col-md-10 offset-lg-1">
-                            <div class="col-md-12">
+                            <div class="table-responsive col-md-12">
                                 <table class="table" id="tabela">
                                     <thead>
                                     <tr>

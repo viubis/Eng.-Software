@@ -819,6 +819,11 @@
 	.fonte25V{
 		font-size: 20px;
 	}
+	.confimacao{
+		margin-left:0;
+		margin-right:0;
+	}
+
 
 }
 
