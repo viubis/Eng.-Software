@@ -55,7 +55,7 @@
             $numAssinatura = 1;
         @endphp
         @foreach($assinaturas as $assinatura)
-                    <div style="font-size: 20px;">Assinatura nº 0{{$numAssinatura}}</div>
+                    <div style="font-size: 20px; padding-top: 20px">Assinatura nº 0{{$numAssinatura}}</div>
                         <div class="form-group col-md-3">
                             <h4>Adesão: {{$compra->data}} às {{$compra->hora}} </h4>
                         </div>
@@ -99,7 +99,7 @@
                             <div class="form-group col-md-6">
                             </div>
                         </div>
-                        <div class="imagem">
+                        <div class="imagem-fluid">
                             <div style="height: 300px; width: 300px;overflow: hidden">
                                 <img src="{{asset($foto->path)}}" class="img-thumbnail img-sm" alt="Responsive image"></div>
                         </div>

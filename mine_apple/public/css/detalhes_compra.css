@@ -1604,9 +1604,9 @@ input.form-control textarea {
 
 .containerInfosProdutos {
     width: 100%;
-    padding-left: 50px;
-    margin-left: 0;
-    padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+
 }
 
 .subcontainerProduto1 {
