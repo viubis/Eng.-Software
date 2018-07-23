@@ -363,4 +363,19 @@ class ProdutorController extends Controller
         $prodInfo = Produto::all();
         return view('assinaturas_produtor_deve_atender', compact('assinaturas', 'assProdutos', 'prodInfo'));
     }
+
+    /**
+     * Retorna os pagamentos relacionados a um determinado produtor
+     * @author Rafael
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function pagamentos() {
+       
+        return view('pagamentos_produtor_deve_receber');
+    }
+
+    public function recebimentos() {
+       
+        return view('recebimentos_do_produtor');
+    }
 }

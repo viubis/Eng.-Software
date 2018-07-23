@@ -57,7 +57,7 @@
                                 <div class="form-row">
                                     <div class="alinhamentosub col-12 text-justify">
                                         <label class="fonte25P col-6 ">Pagamentos</label>
-                                        <a href="" class="fonte25V col-3"><u>Ver todos</u></a>
+                                        <a href="{{url('/produtor/pagamentos')}}" class="fonte25V col-3"><u>Ver todos</u></a>
                                     </div>
 
                                     <div  class="pb-0" id="line"> </div>
@@ -71,7 +71,7 @@
                                 <div class="form-row">
                                     <div class="alinhamentosub col-12 text-justify">
                                         <label class="fonte25P col-6">Recebimentos</label>
-                                        <a href="" class="fonte25V col-3"><u>Ver todos</u></a>
+                                        <a href="{{url('/produtor/recebimentos')}}" class="fonte25V col-3"><u>Ver todos</u></a>
                                     </div>
                                     <div  class="pb-0" id="line"> </div>
                                     <div class="col-12 text-center" style="font-size: 15px;padding-top:10px;margin-bottom: 120px">

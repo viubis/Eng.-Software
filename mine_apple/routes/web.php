@@ -128,6 +128,10 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/assinaturas', 'ProdutorController@assinaturas');
 
         //Route::get('/produtor/cadastrar_endereco', 'ProdutorController@cadastrarEndereco')->name('produtor.endereco.cadastrar');
+
+        Route::get('/produtor/pagamentos', 'ProdutorController@pagamentos');
+
+        Route::get('/produtor/recebimentos', 'ProdutorController@recebimentos');
     });
 
 
