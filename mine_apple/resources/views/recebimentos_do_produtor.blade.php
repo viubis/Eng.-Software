@@ -49,12 +49,12 @@
         <div class="top-content">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-10 offset-lg-1">
                        <!-- <div class="contact_form_title">Recebimentos</div>-->
                         <h2 class="h2 page-title">Recebimentos</h2>
                         <div class="pb-0" id="line"></div>
                         <section class="voltar">
-                            <label class=" my-1 mr-sm-2" id="dois"><a href="">Voltar</a></label>
+                            <label class=" my-1 mr-sm-2" id="dois"><a href="{{url('/resumo/conta')}}">Voltar</a></label>
                         </section>
                         <section class="seletores-inicio">
                             <label class="my-1 mr-2" for="umum" id="um">Exibir </label>
@@ -69,7 +69,7 @@
 
                         <section>
                             <div class="table-responsive">
-                                <table class="table" id="tabela">
+                                <table class="table table-striped table-bordered table-hover" id="tabela">
                                     <thead><!--class="thead-light"-->
                                         <tr>
                                             <th scope="col" class="corlinha">Data</th>
@@ -81,18 +81,6 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-
-                                    <!--<tr>
-                                        <td rowspan="2">Banana</td>
-                                        <td rowspan="2">Dúzia</td>
-                                        <td rowspan="2">100</td>
-                                        <td rowspan="2">Frutas</td>
-                                        <td rowspan="2">R$ 20,00</td>
-                                        <td rowspan="2">R$ 10,00</td>
-                                        <td>Segunda-feira</td>
-                                        <th scope="row" rowspan="2"><a href=""><u>Editar</u></a></th>
-                                    </tr>
-                                    <tr><td>Terça- feira</td></tr>-->
 
                                     <tr>
                                         <td></td>
