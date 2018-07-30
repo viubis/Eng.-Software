@@ -57,7 +57,26 @@
       <tr>
         @php $assinatura = $assinaturas->avg('valor') @endphp
         <th scope="row">{{'Média Valor Por Assinatura'}}</th>
-        <td>{{$assinatura}}</td>
+        <td>{{$assinatura}} R$</td>
+        
+      </tr>
+    </tbody>
+
+    <tbody>
+      <tr>
+        @php $valor_total = DB::table('assinatura')->sum('valor') @endphp
+        <th scope="row">{{'Movimentação Financeira Total'}}</th>
+        <td>{{$valor_total}} R$</td>
+        
+      </tr>
+    </tbody>
+
+    <tbody>
+      <tr>
+        @php $valor_total = DB::table('assinatura')->sum('valor') @endphp
+        @php $lucro = $valor_total * 0.100 @endphp
+        <th scope="row">{{'Lucro (10 %)'}}</th>
+        <td>{{$lucro}} R$</td>
         
       </tr>
     </tbody>
